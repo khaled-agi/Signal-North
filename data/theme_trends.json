@@ -15,7 +15,7 @@
     "2023": 322,
     "2024": 328,
     "2025": 482,
-    "2026": 631
+    "2026": 632
   },
   "themes": [
     {
@@ -27,9 +27,9 @@
         "2023": 21,
         "2024": 27,
         "2025": 48,
-        "2026": 69
+        "2026": 70
       },
-      "total_headlines": 184,
+      "total_headlines": 185,
       "publisher_count": 52,
       "examples": [
         {
@@ -141,6 +141,17 @@
           "publisher": "Toronto Star",
           "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxOUmhubk9rYXNYbnJ4eTV5b0RWZkNsR3hxYmRpT21taWU0cE5HQXEyLUpQRFlSNUhhaGhyZ3NCVFZ3R2ZsRlIxeDZFYmJyd2xSQ1k0RVhrZ2tKWVBBeS1EVGU1OFZkUnpUbUp2VTluajNQNzJqaE1qcDNkdGdPS2dIUWlpU013N2FtWVNOc2pEZDdaVE9OMjl4M0JjNUhPU0RUeVF1VVF6WHo0WS16bzVyTThqdkQ3NEx3QnRaZXdHTGROMmwxSlpTbDczYTlkdDl2b1FhT0VCVXlrTkRXQ1dXY0VwS3RlWlhFbnlOVEJ3?oc=5",
           "geography": "Toronto, Ontario",
+          "source_channels": [
+            "recent"
+          ]
+        },
+        {
+          "id": "5dfb4e50c6134581c35e",
+          "title": "Investor who gave 'Crypto King' Aiden Pleterski $150K+ testifies at fraud trial — victims got back 7.5 cents per dollar - Yahoo! Finance Canada",
+          "date": "2026-10-08T07:00:00+00:00",
+          "publisher": "Yahoo! Finance Canada",
+          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNOWtpX2hMWUUyaHp5QVpWYkhrcFZZVnVHVTJrX3plN1ZXNkRmQTBLVVp2ZVhZZ0RyMXlLT1NENTJheGFKdkRBWW5McHpJUUtWTVFKQWdtOWRRX0o3OHZjc1pNZXRwQi1EOHdXNU0ybGxJVlhZeFBienBNbVEwQjVhek9sUW52elE?oc=5",
+          "geography": null,
           "source_channels": [
             "recent"
           ]
@@ -284,17 +295,6 @@
           "date": "2026-09-21T07:00:00+00:00",
           "publisher": "CTV News",
           "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNN3MwWmJudUJXTnYtTDZERE5mc2E4NVFIT21iVmhsSzVhcnh3T3JiaEh4OUJiY1psNlRERkpUbE9YVmdobk1XSkNHbWhzV2xNb1FIcTZfR3JGeTduQi1uTFZ2bVFzTTk2VnRHTm1BcVhtbmh0NW9INXNyTlktVGk5ZzZtd01uU0stdUZNSjJVRUpDUGlwdFhMSnpIV0czbnRuaGNqSQ?oc=5",
-          "geography": null,
-          "source_channels": [
-            "historical"
-          ]
-        },
-        {
-          "id": "70e667c6f578fa91b602",
-          "title": "A 78-year-old Barrie man has lost $200K in an online cryptocurrency investment scam - CTV News",
-          "date": "2026-09-21T07:00:00+00:00",
-          "publisher": "CTV News",
-          "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOT2VpS3NZVFdodDREVkU5cEhYODZSalpVT1IwM0JiSnZ1cEhPa1paU0M0NElteTlzTkdXN0tkRTRnLXI4QWhBbnFxRXp2a181LVBkVUtCcHpEQjZZWUFSOWJfOUx6MmhVMGY1UW9zaXhNTEpnV0tDQ24zclkzSVFqbHFYd0tBTWRzQmh0eTFVT2pVX2VLS3RnOWJucFlyZUh6Snk3S2s4V3YzQWtFVEFzWjRPTDZLb0dadm1OOHlXdm4zU3Zkd09CVDZB?oc=5",
           "geography": null,
           "source_channels": [
             "historical"
@@ -3137,8 +3137,8 @@
       }
     }
   ],
-  "generated_at": "2026-10-24T11:57:25+00:00",
-  "articles_analyzed": 2336,
+  "generated_at": "2026-10-24T12:29:08+00:00",
+  "articles_analyzed": 2337,
   "methodology": "MULTI-LABEL keyword classification of unique article TITLES by publication year; multiple theme counts can arise from one headline. Year-to-year article counts reflect discovery methods, changing news coverage, and archived source availability, NOT measured changes in fraud incidence. Bank/platform mentions are not accusations and never counted as confirmed enforcement.",
   "scope": "Canadian financial-crime news discovery",
   "data_quality": "Headlines only; no full-article automated fact checking. Counts can change as the archive expands."
