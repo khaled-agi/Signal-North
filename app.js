@@ -38,109 +38,154 @@ function renderMetrics(){
  $("#recent").innerHTML=e.length?e.slice(0,8).map(rowHTML).join(""):'<div class="empty">No enforcement records are published in this snapshot yet. Check Source monitoring for the collector status.</div>';
  $("#updated").textContent=state.status.last_completed_at?"Collected "+date(state.status.last_completed_at):"Public-source snapshot";
 }
+// One source record contributes exactly one count. A news article is not an
+// independently verified incident; unlocated articles remain in the list.
+function mapRecord(kind,e){
+ const news=kind==="news",reg=kind==="reg",dateValue=reg?e.published_at:news?e.published_at:e.reported_at;
+ const lat=news?e.map_latitude:e.latitude,lon=news?e.map_longitude:e.longitude;
+ const hasGeo=Number.isFinite(lat)&&Number.isFinite(lon)&&Math.abs(lat)<=90&&Math.abs(lon)<=180;
+ return {kind,id:String(e.id||""),date:dateValue||"",raw:e,
+  title:String(e.title||e.institution||"Untitled evidence"),publisher:String(e.publisher||e.source||e.institution||"Original source"),
+  lat:hasGeo?lat:null,lon:hasGeo?lon:null,province:news?e.map_province:e.province,
+  location:news?(e.map_location||"City mentioned in headline"):e.location||"Source-reported location",
+  sourceUrl:news?e.url:e.source_url};
+}
+function refreshMapList(){
+ const host=$("#mappedStories");if(!host)return;
+ let rows=state.mapRows||[];
+ const q=($("#mapStorySearch")?.value||"").trim().toLocaleLowerCase();
+ if(q)rows=rows.filter(x=>[x.title,x.publisher,x.province,x.location].some(t=>String(t||"").toLocaleLowerCase().includes(q)));
+ const scope=state.mapSideScope||"all";
+ if(scope==="mapped")rows=rows.filter(x=>x.lat!==null);
+ else if(scope==="unmapped")rows=rows.filter(x=>x.lat===null);
+ else if(scope==="selected")rows=rows.filter(x=>state.mapSelectedIds?.has(x.id));
+ const located=rows.filter(x=>x.lat!==null).length;
+ const total=rows.length;
+ $("#mapStorySummary").textContent=
+  total.toLocaleString("en-CA")+" matching records · "+located.toLocaleString("en-CA")+" have supported geography · "+
+  Math.min(state.mapSideVisible||100,total).toLocaleString("en-CA")+" shown";
+ $("#mapStoryScope").value=scope;
+ $("#mapStoryClear").hidden=scope!=="selected";
+ $("#mapStoryMore").hidden=total<=(state.mapSideVisible||100);
+ host.innerHTML=rows.length?rows.slice(0,state.mapSideVisible||100).map(x=>{
+  const located=x.lat!==null;
+  const label=x.kind==="reg"?"Regulatory notice":x.kind==="case"?"Reviewed case":"News headline";
+  return '<article class="map-story"><div class="map-story-meta">'+escapeHTML(date(x.date))+" · "+escapeHTML(label)+" · "+escapeHTML(x.publisher)+'</div>'+
+   '<div class="map-story-title">'+(located?
+    '<button data-mapfocus="'+escapeHTML(x.id)+'" type="button">'+escapeHTML(x.title)+'</button>':
+    '<a href="'+escapeHTML(/^https:\/\//.test(x.sourceUrl||"")?x.sourceUrl:"#")+'" target="_blank" rel="noopener noreferrer">'+escapeHTML(x.title)+' ↗</a>')+'</div>'+
+   '<div class="map-story-sub">'+(located?'<span class="map-geo-yes">◉ '+escapeHTML(x.location)+'</span>':'<span class="map-geo-no">Location not verified</span>')+
+   (located&&/^https:\/\//.test(x.sourceUrl||"")?' · <a href="'+escapeHTML(x.sourceUrl)+'" target="_blank" rel="noopener noreferrer">Source ↗</a>':"")+
+   '</div></article>';
+ }).join(""):'<div class="empty">No articles match this search, map layer or geographic coverage filter. Clear the filters or explore the full archive.</div>';
+}
+function renderMapClusters(){
+ if(!state.map||!state.layer)return;
+ state.layer.clearLayers();state.mapMarkers.clear();
+ const zoom=state.map.getZoom();
+ // Cluster nearby symbols in projected pixels at the current zoom. Each source
+ // is only counted once; marker AREA broadly tracks grouped record count.
+ const gridSize=84;
+ const clusters=new Map();
+ for(const x of state.mapRows||[]){
+  if(x.lat===null)continue;
+  const point=state.map.project(L.latLng(x.lat,x.lon),zoom);
+  const key=Math.floor(point.x/gridSize)+"/"+Math.floor(point.y/gridSize);
+  if(!clusters.has(key))clusters.set(key,{items:[],x:0,y:0,weights:{news:0,reg:0,case:0}});
+  const g=clusters.get(key);g.items.push(x);g.x+=point.x;g.y+=point.y;g.weights[x.kind]++;
+ }
+ for(const g of clusters.values()){
+  const n=g.items.length;
+  const centre=state.map.unproject(L.point(g.x/n,g.y/n),zoom);
+  const areaDiameter=Math.min(83,Math.max(28,22+Math.sqrt(n)*7));
+  const kind=Object.entries(g.weights).sort((a,b)=>b[1]-a[1])[0][0];
+  const accessibleLabel=n+" source-linked record"+(n===1?"":"s")+" near "+(g.items[0]?.location||"this location");
+  const marker=L.marker(centre,{
+   icon:L.divIcon({html:'<span class="count-pin-inner">'+escapeHTML(String(n))+'</span>',className:"count-map-pin count-"+kind,
+    iconSize:[areaDiameter,areaDiameter],iconAnchor:[areaDiameter/2,areaDiameter/2]}),
+   keyboard:true,title:accessibleLabel,alt:accessibleLabel,
+  }).addTo(state.layer);
+  const geoNames=[...new Set(g.items.map(x=>x.location).filter(Boolean))].slice(0,3).join(" · ");
+  const popup='<div class="map-pop"><div class="map-pop-heading">'+escapeHTML(n.toLocaleString("en-CA"))+' source records</div>'+
+    '<span class="map-pop-source">'+escapeHTML(geoNames||"Source-supported geography")+'</span>'+
+    '<p class="map-pop-notice">'+g.weights.news+' headlines · '+g.weights.reg+' regulator notices · '+g.weights.case+' reviewed cases. Record locations are not necessarily fraud locations.</p>'+
+    '<div class="map-popup-record">'+g.items.slice(0,4).map(x=>'<div><span class="map-popup-date">'+escapeHTML(date(x.date))+'</span> '+escapeHTML(x.title)+'</div>').join("")+
+    (n>4?'<div class="small">+'+(n-4)+' more; select this circle to explore them all.</div>':"")+'</div></div>';
+  marker.bindPopup(popup,{maxWidth:330,minWidth:230,maxHeight:350});
+  marker.on("click",()=>{
+   state.mapSelectedIds=new Set(g.items.map(x=>x.id));
+   state.mapSideScope="selected";state.mapSideVisible=100;
+   refreshMapList();
+   $("#mapStorySummary").scrollIntoView({behavior:"smooth",block:"nearest"});
+  });
+  for(const x of g.items)state.mapMarkers.set(x.id,marker);
+ }
+ $("#mapClusterCount").textContent=clusters.size.toLocaleString("en-CA")+" proportional circles at this zoom";
+}
 function initMap(){
  if(!window.L){
-  $("#mapCaption").textContent="Base map is loading; enforcement and news are still available in the lists.";
+  $("#mapCaption").textContent="Basemap unavailable. All indexed headlines remain accessible in the archive.";
   return;
  }
  if(!state.map){
   $("#map").replaceChildren();
   state.map=L.map("map",{zoomControl:false,minZoom:3,maxZoom:13,scrollWheelZoom:false,preferCanvas:true}).setView([55,-96],4);
   L.control.zoom({position:"bottomright"}).addTo(state.map);
-  const base=L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png",{
+  L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png",{
    maxZoom:19,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'
   }).addTo(state.map);
-  base.on("tileerror",()=>{$("#mapCaption").textContent="Base map tiles could not load. Points remain available in the linked event lists.";});
   state.layer=L.layerGroup().addTo(state.map);
+  state.map.on("zoomend",renderMapClusters);
   const provinceSelect=$("#mapProvince");
   provinceSelect.innerHTML='<option value="">All provinces</option>'+Object.entries(provinces).sort((a,b)=>a[1].localeCompare(b[1])).map(([code,name])=>'<option value="'+escapeHTML(code)+'">'+escapeHTML(name)+'</option>').join("");
  }
- state.layer.clearLayers();
- state.mapMarkers.clear();
- const mappedHits=[];
- const matchDate=e=>!state.mapMonth||String(e.published_at||e.reported_at||"").startsWith(state.mapMonth);
- const normName=v=>String(v||"").trim().toLowerCase();
- const focusNames=new Set([normName(state.clientFocus)]);
- const focusGraph=state.entityAliases.find(x=>normName(x.name)===normName(state.clientFocus)||(x.aliases||[]).some(a=>normName(a)===normName(state.clientFocus)));
- if(focusGraph){focusNames.add(normName(focusGraph.name));for(const a of focusGraph.aliases||[])focusNames.add(normName(a));}
- const matchClient=e=>!state.clientFocus||
-    focusNames.has(normName(e.institution))||
-    (e.banks_mentioned_in_headline||[]).some(n=>focusNames.has(normName(n)));
-
- const showEnforce=["all","enforcement","major"].includes(state.mapMode);
- const showNews=["all","news"].includes(state.mapMode);
- const showCases=["all","news"].includes(state.mapMode);
- const groups=new Map();
- let officialCount=0, newsCount=0, majorCount=0,caseCount=0;
- const add=(kind,lat,lon,entry,province)=>{
-  // One group per precisely matching coordinate and evidence type; never merge news and official cases.
-  const key=kind+"|"+Number(lat).toFixed(4)+"|"+Number(lon).toFixed(4);
-  if(!groups.has(key))groups.set(key,{kind,lat:Number(lat),lon:Number(lon),items:[],province});
-  groups.get(key).items.push(entry);
- };
- if(showEnforce)for(const e of state.events){
-  if(!Number.isFinite(e.latitude)||!Number.isFinite(e.longitude))continue;
-  if(state.mapProvince&&e.province!==state.mapProvince)continue;
-  if(!matchDate(e)||!matchClient(e))continue;
-  if(state.mapMode==="major"&&!(Number(e.penalty_cad)>=1000000))continue;
-  officialCount++;
-  if(Number(e.penalty_cad)>=1000000)majorCount++;
-  add("reg",e.latitude,e.longitude,e,e.province);
-  mappedHits.push({kind:"reg",item:e});
- }
- if(showCases)for(const e of state.incidents){
-   if(!Number.isFinite(e.latitude)||!Number.isFinite(e.longitude))continue;
-   if(state.mapProvince&&e.province!==state.mapProvince)continue;
-   if(!matchDate(e)||!matchClient(e))continue;
-   caseCount++;
-   add("case",e.latitude,e.longitude,e,e.province);
-   mappedHits.push({kind:"case",item:e});
- }
- if(showNews)for(const e of state.news){
-  if(!Number.isFinite(e.map_latitude)||!Number.isFinite(e.map_longitude))continue;
-  if(state.mapProvince&&e.map_province!==state.mapProvince)continue;
-  if(!matchDate(e)||!matchClient(e))continue;
-  newsCount++;
-  add("news",e.map_latitude,e.map_longitude,e,e.map_province);
-  mappedHits.push({kind:"news",item:e});
- }
- for(const cluster of groups.values()){
-  const reg=cluster.kind==="reg",curated=cluster.kind==="case",n=cluster.items.length;
-  const label=n>1?String(n):reg?"◆":"●";
-  const marker=L.marker([cluster.lat,cluster.lon],{
-   icon:L.divIcon({html:'<span>'+escapeHTML(label)+'</span>',className:'signal-map-pin '+(reg?'pin-enforcement':curated?'pin-case':'pin-news'),iconSize:[n>1?34:27,n>1?34:27],iconAnchor:[n>1?17:13.5,n>1?17:13.5]}),
-   keyboard:true,title:(reg?"Regulatory notices: ":curated?"Source-reviewed incidents: ":"News headline mentions: ")+n
-  }).addTo(state.layer);
-  const items=cluster.items.slice(0,7).map(e=>reg?
-    '<div class="map-popup-record"><span class="map-popup-date">'+escapeHTML(date(e.published_at))+'</span><strong>'+escapeHTML(e.institution||"Regulated institution")+'</strong><div>'+escapeHTML(currency(e.penalty_cad))+' · '+escapeHTML(e.source)+'</div><a href="#" data-popup="'+escapeHTML(e.id)+'">Examine case →</a></div>':
-    curated?'<div class="map-popup-record"><span class="map-popup-date">'+escapeHTML(date(e.reported_at))+'</span><strong>'+escapeHTML(e.institution||"Bank unnamed")+'</strong><div>'+escapeHTML(e.title)+' · '+escapeHTML(currency(e.amount_cad))+'</div><a href="'+escapeHTML(e.source_url)+'" rel="noopener noreferrer" target="_blank">Original source ↗</a></div>':
-    '<div class="map-popup-record"><span class="map-popup-date">'+escapeHTML(date(e.published_at))+'</span><strong>'+escapeHTML(e.publisher||"Syndicated publisher")+'</strong><div>'+escapeHTML(e.title||"News lead")+'</div><a href="'+escapeHTML(e.url)+'" rel="noopener noreferrer" target="_blank">Open original news link ↗</a></div>'
-  ).join("");
-  const first=cluster.items[0],where=reg?(first.location||"Source-supported institution location"):curated?(first.location||"Reported case location"):(first.map_location||"Canadian city mentioned");
-  const pop='<div class="map-pop"><div class="map-pop-heading">'+escapeHTML(where)+'</div><span class="map-pop-source">'+(reg?"REGULATORY / PRIMARY SOURCE":curated?"SOURCE-REVIEWED / REPORTED INCIDENT":"GOOGLE NEWS / UNVERIFIED HEADLINE")+'</span>'+items+(n>7?'<div class="small">+'+(n-7)+' more records in the full list</div>':"")+'<div class="map-pop-notice">'+(reg?"Pin marks an institution's location, not the site of alleged misconduct.":"City is explicitly mentioned in the headline; it may not be the scene of the incident.")+'</div></div>';
-  marker.bindPopup(pop,{maxWidth:340,minWidth:230,maxHeight:370});
-  for(const item of cluster.items)state.mapMarkers.set(item.id,marker);
- }
- mappedHits.sort((a,b)=>String(b.item.published_at||b.item.reported_at||"").localeCompare(String(a.item.published_at||a.item.reported_at||"")));
- $("#mappedStories").innerHTML=mappedHits.length?mappedHits.slice(0,110).map(({kind,item})=>{
-   const label=kind==="reg"?"Regulator":kind==="case"?"Reviewed case":"Unverified news";
-   const when=date(item.published_at||item.reported_at);
-   return '<div class="map-story"><div class="map-story-meta">'+escapeHTML(label)+' · '+escapeHTML(when)+' · '+escapeHTML(item.publisher||item.source||item.institution||"")+'</div><button type="button" data-mapfocus="'+escapeHTML(item.id)+'">'+escapeHTML(item.title||item.institution||"View source")+'</button></div>';
- }).join(""):'<div class="empty">No source-backed mapped stories match this layer, date, or client. Clear filters or browse all news articles in Fraud intelligence.</div>';
- const shown=officialCount+newsCount+caseCount;
- const description=state.mapMode==="major"?"Major penalties mapped: "+majorCount:state.mapMode==="news"?"Headline mentions: "+newsCount+" · Reviewed cases: "+caseCount:state.mapMode==="enforcement"?"Regulatory notices mapped: "+officialCount:"Regulatory notices: "+officialCount+" · Reviewed cases: "+caseCount+" · Headline mentions: "+newsCount;
- $("#mapCaption").textContent=description+" · "+(state.mapProvince?provinces[state.mapProvince]:"Canada")+(state.mapMonth?" · "+state.mapMonth:"")+(state.clientFocus?" · Client: "+state.clientFocus:"");
- if(state.mapProvince&&groups.size){
-  const bounds=L.latLngBounds([...groups.values()].map(g=>[g.lat,g.lon]));
-  state.map.fitBounds(bounds.pad(.3),{maxZoom:7,padding:[25,25]});
- }else if(!state.mapProvince&&state.mapMode!=="all"&&groups.size){
-  const bounds=L.latLngBounds([...groups.values()].map(g=>[g.lat,g.lon]));
-  state.map.fitBounds(bounds.pad(.3),{maxZoom:6,padding:[25,25]});
- }else if(!state.mapProvince&&state.mapMode==="all"){
+ const layers=state.mapMode;
+ const showReg=["all","enforcement","major"].includes(layers);
+ const showNews=["all","news"].includes(layers);
+ const showCases=["all","news"].includes(layers);
+ const norm=v=>String(v||"").trim().toLowerCase();
+ const focus=new Set([norm(state.clientFocus)]);
+ const found=state.entityAliases.find(x=>norm(x.name)===norm(state.clientFocus)||(x.aliases||[]).some(a=>norm(a)===norm(state.clientFocus)));
+ if(found)for(const name of [found.name,...(found.aliases||[])])focus.add(norm(name));
+ const matchesClient=e=>!state.clientFocus||focus.has(norm(e.institution))||
+  (e.banks_mentioned_in_headline||[]).some(n=>focus.has(norm(n)))||
+  (e.organizations_mentioned_in_headline||[]).some(n=>focus.has(norm(n)));
+ const inDate=e=>!state.mapMonth||String(e.published_at||e.reported_at||"").startsWith(state.mapMonth);
+ let records=[];
+ if(showNews)records.push(...state.news.filter(e=>inDate(e)&&matchesClient(e)).map(e=>mapRecord("news",e)));
+ if(showCases)records.push(...state.incidents.filter(e=>inDate(e)&&matchesClient(e)).map(e=>mapRecord("case",e)));
+ if(showReg)records.push(...state.events.filter(e=>inDate(e)&&matchesClient(e)&&
+  (layers!=="major"||Number(e.penalty_cad)>=1000000)).map(e=>mapRecord("reg",e)));
+ if(state.mapProvince)records=records.filter(x=>x.province===state.mapProvince);
+ const query=($("#mapStorySearch")?.value||"").trim().toLowerCase();
+ if(query)records=records.filter(x=>[x.title,x.publisher,x.location].some(y=>String(y||"").toLowerCase().includes(query)));
+ records.sort((x,y)=>String(y.date).localeCompare(String(x.date)));
+ state.mapRows=records;
+ const mapped=records.filter(x=>x.lat!==null).length,unmapped=records.length-mapped;
+ const headlineAll=state.news.length,geoNews=state.news.filter(x=>Number.isFinite(x.map_latitude)&&Number.isFinite(x.map_longitude)).length;
+ $("#mapCoverage").innerHTML=
+  '<div class="coverage-number"><strong>'+headlineAll.toLocaleString("en-CA")+'</strong><span>indexed headlines</span></div>'+
+  '<div class="coverage-number"><strong>'+geoNews.toLocaleString("en-CA")+'</strong><span>headline city mentions</span></div>'+
+  '<div class="coverage-number"><strong>'+Math.max(0,headlineAll-geoNews).toLocaleString("en-CA")+'</strong><span>not mapped (no supported city)</span></div>'+
+  '<p>Counts are records, not distinct fraud incidents. Map filters may narrow what is shown below.</p>';
+ $("#mapCaption").textContent=mapped.toLocaleString()+" mapped / "+records.length.toLocaleString()+" records in this view · "+
+  (state.mapProvince?provinces[state.mapProvince]+" · ":"")+
+  (state.mapMonth?state.mapMonth+" · ":"")+
+  (state.clientFocus?"Organization: "+state.clientFocus+" · ":"")+
+  "Source-linked geography, not fraud rate.";
+ if(state.mapSideScope==="selected")state.mapSideScope="all";
+ state.mapSelectedIds=null;
+ refreshMapList();
+ renderMapClusters();
+ if(state.mapProvince&&mapped){
+  const pts=records.filter(x=>x.lat!==null).map(x=>[x.lat,x.lon]);
+  state.map.fitBounds(L.latLngBounds(pts).pad(.25),{maxZoom:7,padding:[28,28]});
+ }else if(!state.mapProvince&&state.mapMode==="all"&&!state.clientFocus){
   state.map.setView([55,-96],4);
  }
- setTimeout(()=>state.map.invalidateSize(),50);
+ setTimeout(()=>state.map.invalidateSize(),60);
 }
+
 function renderEvents(){
  const e=state.events;
  const select=(id,vals,placeholder)=>{const el=$(id);const old=el.value;el.innerHTML='<option value="">'+placeholder+"</option>"+vals.map(x=>'<option value="'+escapeHTML(x)+'">'+escapeHTML(id==="#provinceFilter"?(provinces[x]||x):x)+"</option>").join("");el.value=old;};
@@ -205,10 +250,11 @@ document.addEventListener("click",e=>{
     initMap();
    }
    switchTab("overview");
-   const pin=state.mapMarkers.get(focus.dataset.mapfocus);
-   if(pin&&state.map){
-    state.map.setView(pin.getLatLng(),Math.max(state.map.getZoom(),7),{animate:true});
-    pin.openPopup();
+   const selected=state.mapRows?.find(x=>x.id===focus.dataset.mapfocus);
+   if(selected?.lat!==null&&selected){
+    state.map.setView([selected.lat,selected.lon],Math.max(state.map.getZoom(),8),{animate:false});
+    const pin=state.mapMarkers.get(selected.id);
+    if(pin){pin.openPopup();state.mapSideScope="selected";state.mapSelectedIds=new Set([selected.id]);refreshMapList();}
     $("#map").scrollIntoView({behavior:"smooth",block:"center"});
    }
    return;
@@ -237,6 +283,11 @@ $("#mapReset").addEventListener("click",()=>{state.mapProvince="";$("#mapProvinc
 $("#mapProvince").addEventListener("change",value=>{state.mapProvince=value.target.value;initMap();});
 $("#mapMonth").addEventListener("change",e=>{state.mapMonth=e.target.value;initMap();});
 $("#mapClearMonth").addEventListener("click",()=>{state.mapMonth="";$("#mapMonth").value="";initMap();});
+$("#mapStorySearch").addEventListener("input",()=>{state.mapSideVisible=100;initMap();});
+$("#mapStoryScope").addEventListener("change",e=>{state.mapSideScope=e.target.value;state.mapSideVisible=100;refreshMapList();});
+$("#mapStoryMore").addEventListener("click",()=>{state.mapSideVisible=(state.mapSideVisible||100)+100;refreshMapList();});
+$("#mapStoryClear").addEventListener("click",()=>{state.mapSelectedIds=null;state.mapSideScope="all";refreshMapList();});
+
 window.addEventListener("signalnorth:clientfocus",e=>{state.clientFocus=e.detail?.name||"";state.mapMode="all";document.querySelectorAll("[data-mapmode]").forEach(b=>b.classList.toggle("active",b.dataset.mapmode==="all"));initMap();});
 window.addEventListener("signalnorth:aliasesready",event=>{state.entityAliases=event.detail?.institutions||[];renderMetrics();initMap();});
 window.addEventListener("signalnorth:newsready",event=>{state.news=event.detail?.leads||[];renderMetrics();initMap();});
