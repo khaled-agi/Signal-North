@@ -169,11 +169,11 @@ function initMap(){
   $("#mapTopic").innerHTML='<option value="">All topics</option>'+newsTopics.map(x=>'<option value="'+escapeHTML(x)+'">'+escapeHTML(x)+'</option>').join("");
   if(newsTopics.includes(current))$("#mapTopic").value=current;
  }
- const allYears=[...new Set([...state.news,...state.events,...state.incidents]
+ const availableYears=[...new Set([...state.news,...state.events,...state.incidents]
     .map(x=>String(x.published_at||x.reported_at||"").slice(0,4))
     .filter(y=>/^20\d{2}$/.test(y)))].sort();
- if(allYears.length){
-  const yearOptions=allYears.map(y=>'<option value="'+y+'">'+y+'</option>').join("");
+ if(availableYears.length){
+  const yearOptions=availableYears.map(y=>'<option value="'+y+'">'+y+'</option>').join("");
   $("#mapYearFrom").innerHTML='<option value="">From any year</option>'+yearOptions;
   $("#mapYearTo").innerHTML='<option value="">Through latest</option>'+yearOptions;
   $("#mapYearFrom").value=state.mapYearFrom;
