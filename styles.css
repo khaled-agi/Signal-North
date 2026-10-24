@@ -106,3 +106,7 @@ footer{padding:20px 0 0;color:#7189a5;font-size:11px}
 
 .news-extracted{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
 .news-extracted span{font-size:10px;color:#c7e3e7;background:#1c3843;border:1px solid #315663;padding:3px 7px;border-radius:5px}
+
+/* Key-free dark cartography: affects raster tiles only, leaving markers and popups legible. */
+.leaflet-tile-pane{filter:grayscale(.35) invert(1) hue-rotate(180deg) brightness(.83) contrast(.95)!important}
+.map{background:#101d2c}
