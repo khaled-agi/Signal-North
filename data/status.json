@@ -1,8 +1,18 @@
 {
-  "last_completed_at": null,
+  "last_attempt_at": "2026-10-24T01:07:22+00:00",
   "sources": {
-    "FINTRAC": {"status": "awaiting first run"},
-    "FCAC": {"status": "awaiting first run"}
+    "FINTRAC": {
+      "status": "ok",
+      "scanned": 93,
+      "url": "https://fintrac-canafe.canada.ca/pen/4-eng"
+    },
+    "FCAC": {
+      "status": "ok",
+      "scanned": 5,
+      "url": "https://www.canada.ca/en/financial-consumer-agency/services/industry/commissioner-decisions.html"
+    }
   },
-  "stored_records": 0
+  "previous_records": 0,
+  "stored_records": 98,
+  "last_completed_at": "2026-10-24T01:07:26+00:00"
 }
