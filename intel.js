@@ -52,7 +52,11 @@
   const t=$i("newsCategory").value;
   const hits=news.filter(x=>(!t||x.category===t)&&(!q||[x.title,x.publisher,x.category,...(x.topics||[])].join(" ").toLowerCase().includes(q))).slice(0,100);
   $i("newsCount").textContent=news.length+" discovered headlines";
-  $i("newsRows").innerHTML=hits.length?hits.map(x=>'<div class="news-item"><div><div class="news-item-title">'+link(x.url,x.title)+'</div><div class="news-meta">'+esc(x.publisher||"News syndication")+" · "+esc((x.published_at||"").slice(0,10))+" · "+esc(x.category||"Financial crime watch")+'</div></div><span class="news-label">UNVERIFIED LEAD</span></div>').join(""):'<div class="empty">No news leads returned. The collector may be awaiting its first successful syndicated feed response, or no headlines match your filters.</div>';
+  $i("newsRows").innerHTML=hits.length?hits.map(x=>{
+ const bank=x.banks_mentioned_in_headline||[],amount=x.amount_strings_in_headline||[];
+ const notes=[bank.length?'Bank name in headline: '+bank.join(", "):"",amount.length?'Amount quoted: '+amount.join(", "):"",x.headline_case_candidate?"Possible individual victim story":""].filter(Boolean);
+ return '<div class="news-item"><div><div class="news-item-title">'+link(x.url,x.title)+'</div><div class="news-meta">'+esc(x.publisher||"News syndication")+" · "+esc((x.published_at||"").slice(0,10))+" · "+esc(x.category||"Financial crime watch")+'</div>'+(notes.length?'<div class="news-extracted">'+notes.map(note=>'<span>'+esc(note)+'</span>').join("")+'</div>':"")+'</div><span class="news-label">'+(x.content_kind==="research_report_lead"?"RESEARCH LEAD":"UNVERIFIED NEWS")+'</span></div>';
+ }).join(""):'<div class="empty">No news leads returned. The collector may be awaiting its first successful syndicated feed response, or no headlines match your filters.</div>';
  }
  function initNews(){
   const cats=[...new Set(news.map(x=>x.category).filter(Boolean))].sort();
