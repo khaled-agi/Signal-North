@@ -105,12 +105,26 @@ def fetch_rcmp(session):
     response = session.get(RCMP_URL, timeout=35)
     response.raise_for_status()
     root = ET.fromstring(response.content)
+    atom = "{http://www.w3.org/2005/Atom}"
     rows = root.findall(".//channel/item")
+    is_atom = not rows
+    if is_atom:
+        rows = root.findall(".//"+atom+"entry")
     accepted = []
     for item in rows[:200]:
-        title = normalize(item.findtext("title"))
-        link = normalize(item.findtext("link"))
-        published = parse_rcmp_date(item.findtext("pubDate"))
+        if is_atom:
+            title = normalize(item.findtext(atom+"title"))
+            link_tag = item.find(atom+"link")
+            link = normalize(link_tag.get("href","") if link_tag is not None else "")
+            raw_date = item.findtext(atom+"published") or item.findtext(atom+"updated")
+            try:
+                published = datetime.fromisoformat(raw_date.replace("Z","+00:00")).astimezone(timezone.utc).isoformat(timespec="seconds")
+            except (ValueError,TypeError,AttributeError):
+                published = None
+        else:
+            title = normalize(item.findtext("title"))
+            link = normalize(item.findtext("link"))
+            published = parse_rcmp_date(item.findtext("pubDate"))
         if not link.startswith("https://rcmp.ca/") and not link.startswith("https://www.rcmp-grc.gc.ca/"):
             continue
         r = record(title, link, "Royal Canadian Mounted Police", published,
@@ -153,6 +167,7 @@ def run():
     except (OSError, ValueError) as e:
         raise SystemExit("Refusing to modify unreadable prior history: " + str(e))
     saved = {r["id"]: r for r in old}
+    gdelt_limited=False
     health = {"started_at": stamp(), "collectors": {}, "coverage_note":
               "RSS and GDELT coverage are neither exhaustive nor verified incident data."}
     with requests.Session() as session:
@@ -160,6 +175,9 @@ def run():
         sources = [("RCMP official RSS", lambda: fetch_rcmp(session))]
         sources += [(name, (lambda query=q: fetch_gdelt(session, query))) for name,q in GDELT_QUERIES.items()]
         for name, fn in sources:
+            if gdelt_limited and name != "RCMP official RSS":
+                health["collectors"][name]={"status":"skipped_rate_limit","error":"GDELT requested backoff after HTTP 429"}
+                continue
             try:
                 entries, scanned = fn()
                 for e in entries:
@@ -169,6 +187,11 @@ def run():
                     saved[e["id"]] = {**old_entry, **e}
                 health["collectors"][name] = {"status":"ok" if scanned else "empty",
                                               "scanned":scanned,"accepted":len(entries)}
+            except requests.HTTPError as exc:
+                status_code=exc.response.status_code if exc.response is not None else 0
+                if status_code==429 and name!="RCMP official RSS":
+                    gdelt_limited=True
+                health["collectors"][name] = {"status":"rate_limited" if status_code==429 else "failed","error":str(exc)[:300]}
             except Exception as exc:
                 health["collectors"][name] = {"status":"failed","error":str(exc)[:300]}
             # GDELT recommends conservative request frequency; don't hammer its API.
