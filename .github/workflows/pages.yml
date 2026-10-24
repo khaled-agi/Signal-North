@@ -32,6 +32,10 @@ jobs:
           cache: pip
       - name: Install collector dependencies
         run: python -m pip install -r requirements.txt
+      - name: Validate application syntax
+        run: |
+          python -m py_compile scripts/collect.py
+          node --check app.js
       - name: Collect regulator publications
         env:
           TRACKER_USER_AGENT: "SignalNorthPublicResearch/0.1 (+https://github.com/khaled-agi/Signal-North)"
