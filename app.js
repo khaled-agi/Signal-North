@@ -172,10 +172,12 @@ function initMap(){
  const allYears=[...new Set([...state.news,...state.events,...state.incidents]
     .map(x=>String(x.published_at||x.reported_at||"").slice(0,4))
     .filter(y=>/^20\d{2}$/.test(y)))].sort();
- if(allYears.length&&!$("#mapYearFrom").options[1]){
+ if(allYears.length){
   const yearOptions=allYears.map(y=>'<option value="'+y+'">'+y+'</option>').join("");
   $("#mapYearFrom").innerHTML='<option value="">From any year</option>'+yearOptions;
   $("#mapYearTo").innerHTML='<option value="">Through latest</option>'+yearOptions;
+  $("#mapYearFrom").value=state.mapYearFrom;
+  $("#mapYearTo").value=state.mapYearTo;
  }
  if(!state.map){
   $("#map").replaceChildren();
