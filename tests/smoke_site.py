@@ -41,8 +41,8 @@ try:
             print("VISIBLE ERROR:", page.locator("#error").inner_text())
             print("BODY:", page.locator("body").inner_text()[:1800])
             raise
-        actual = page.locator(".metric .value").first.inner_text()
-        print("Expected event count:", EXPECTED, "Dashboard count:", actual)
+        actual = page.locator(".metric .value").nth(1).inner_text()
+        print("Expected official notice count:", EXPECTED, "Dashboard official notice count:", actual)
         print("Network responses:", resources)
         print("Runtime errors:", errors)
         assert actual == str(EXPECTED), f"Expected {EXPECTED}, got {actual}"
