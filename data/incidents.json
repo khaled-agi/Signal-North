@@ -1,7 +1,7 @@
 {
   "updated_at": "2026-10-23",
   "scope": "Canada",
-  "review_standard": "Editorially reviewed public-source case summaries. All customer statements are attributed to their reporting source; bank involvement is not a finding of fault. Cases are not an exhaustive list.",
+  "review_standard": "Editorially reviewed public-source case summaries. All customer statements are attributed to their reporting source; bank involvement is not a finding of fault. Cases are not an exhaustive list. Investigation sequences restate the attributed case summary; analyst questions are research prompts, not findings.",
   "incidents": [
     {
       "id": "ca-2026-10-23-tangerine-courier-scam",
@@ -26,7 +26,32 @@
       "source_url": "https://todayincanada.ca/same-scam-2-countries-why-canadians-dont-get-their-money-back/",
       "summary": "A Toronto customer reported a caller impersonating Tangerine's fraud team who arranged collection of a debit card by courier. Media coverage reports a C$7,200 loss and a later partial settlement; the fraud occurred months before publication.",
       "consulting_theme": "Spoofed bank calls, scam interventions, courier-card fraud, reimbursement and claims handling",
-      "disclaimer": "A customer-reported loss and reimbursement dispute, not an adjudicated finding of wrongdoing by Tangerine. Secondary reproduction of CBC reporting."
+      "disclaimer": "A customer-reported loss and reimbursement dispute, not an adjudicated finding of wrongdoing by Tangerine. Secondary reproduction of CBC reporting.",
+      "investigation": {
+        "stages": [
+          [
+            "Impersonation",
+            "A customer reported receiving a call from someone claiming to represent Tangerine's fraud team."
+          ],
+          [
+            "Collection",
+            "The caller arranged for a courier to collect a debit card."
+          ],
+          [
+            "Reported impact",
+            "The customer reported losing C$7,200."
+          ],
+          [
+            "Reported outcome",
+            "Coverage described a partial settlement, rather than full reimbursement."
+          ]
+        ],
+        "questions": [
+          "What communications and card-collection steps does the publication actually establish?",
+          "What reimbursement or recovery outcome is supported by the reporting?",
+          "Which controls could interrupt courier-assisted bank impersonation, without assuming this bank was at fault?"
+        ]
+      }
     },
     {
       "id": "ca-2026-10-22-vpd-bank-spoof",
@@ -51,7 +76,32 @@
       "source_url": "https://vpd.ca/news/2026/10/22/downtown-employee-loses-34000-in-bank-impersonation-scam/",
       "summary": "Vancouver police described a spoofed caller impersonating a bank representative. A victim was persuaded to provide information enabling withdrawals from two accounts.",
       "consulting_theme": "Bank impersonation, credential compromise, account access and customer education",
-      "disclaimer": "The police notice does not name the bank. No bank misconduct is implied."
+      "disclaimer": "The police notice does not name the bank. No bank misconduct is implied.",
+      "investigation": {
+        "stages": [
+          [
+            "Impersonation",
+            "Vancouver police described a caller impersonating a bank representative."
+          ],
+          [
+            "Information disclosure",
+            "Police reported that the victim was persuaded to provide information."
+          ],
+          [
+            "Account activity",
+            "The information reportedly enabled withdrawals from two accounts."
+          ],
+          [
+            "Reported impact",
+            "The police release described a C$34,000 loss."
+          ]
+        ],
+        "questions": [
+          "What exact customer information was requested, and what is not specified in the police release?",
+          "Which access and payment steps are confirmed versus unknown?",
+          "What intervention points might address spoofed-bank contact and account access?"
+        ]
+      }
     },
     {
       "id": "ca-2026-10-21-td-deepfake-investment",
@@ -76,7 +126,32 @@
       "source_url": "https://finance.yahoo.com/economy/policy/articles/88-old-loses-450-000-032700028.html",
       "summary": "A customer reported losing money over months after seeing a deepfake investment promotion. The article describes payments made through a TD account and disputes about protective interventions.",
       "consulting_theme": "Scam intervention, vulnerability identification, unusual transfer behavior",
-      "disclaimer": "This case is a reported customer loss, not a regulatory finding against TD."
+      "disclaimer": "This case is a reported customer loss, not a regulatory finding against TD.",
+      "investigation": {
+        "stages": [
+          [
+            "Promotion",
+            "A customer reported encountering a deepfake investment promotion."
+          ],
+          [
+            "Payment activity",
+            "The report describes payments through a TD account over a period spanning May 2025 to February 2026."
+          ],
+          [
+            "Reported impact",
+            "The customer reported an approximately C$450,000 loss."
+          ],
+          [
+            "Dispute",
+            "The coverage describes disagreement about protective interventions; reimbursement was not reported at publication."
+          ]
+        ],
+        "questions": [
+          "Which investment-promotion claims are confirmed by sources, and which remain customer allegations?",
+          "What payment sequence and time gaps are independently documented?",
+          "What indicators, if any, could distinguish coercive scam activity from legitimate investing?"
+        ]
+      }
     },
     {
       "id": "ca-2026-10-10-scotia-credit",
@@ -101,7 +176,32 @@
       "source_url": "https://money.ca/news/identity-theft-credit-fraud-canada-credit-freeze",
       "summary": "Customer said an unauthorized credit line was created at a Milton branch and exhausted; the article reported that the bank later refunded the amount.",
       "consulting_theme": "Identity verification, branch authentication, credit account opening",
-      "disclaimer": "Unauthorized credit exposure is not necessarily a realized loss borne by the bank."
+      "disclaimer": "Unauthorized credit exposure is not necessarily a realized loss borne by the bank.",
+      "investigation": {
+        "stages": [
+          [
+            "Identity misuse",
+            "The customer reported that a credit line was opened without authorization."
+          ],
+          [
+            "Branch reference",
+            "Coverage identified a Milton branch in connection with the reported opening."
+          ],
+          [
+            "Exposure",
+            "The reported unauthorized credit exposure was C$35,000."
+          ],
+          [
+            "Reported outcome",
+            "The article stated that the amount was later refunded."
+          ]
+        ],
+        "questions": [
+          "What evidence establishes the credit-opening channel and disputed identity-verification steps?",
+          "How should unauthorized credit exposure be distinguished from final victim loss?",
+          "Which outcome details and dates are corroborated by the original reporting?"
+        ]
+      }
     },
     {
       "id": "ca-2026-05-13-cafc-wire-recovery",
@@ -126,7 +226,28 @@
       "source_url": "https://antifraudcentre-centreantifraude.ca/news-nouvelles/2026/2026-05-13-eng.htm?wbdisable=true",
       "summary": "CAFC reported working with a financial institution to recover funds after a Québec business followed fraudulent payment instructions. The amount is recovered funds, not a bank loss.",
       "consulting_theme": "Payment instruction change, beneficiary validation, fraud recall and intervention",
-      "disclaimer": "C$3.5 million is a reported recovery amount, not a victim net loss and not a penalty."
+      "disclaimer": "C$3.5 million is a reported recovery amount, not a victim net loss and not a penalty.",
+      "investigation": {
+        "stages": [
+          [
+            "Payment redirection",
+            "A Québec business reportedly followed fraudulent payment instructions."
+          ],
+          [
+            "Recovery response",
+            "CAFC reported coordinating with a financial institution to recover the funds."
+          ],
+          [
+            "Reported outcome",
+            "Approximately C$3.5 million was recovered, according to CAFC."
+          ]
+        ],
+        "questions": [
+          "Which payment-instruction changes are described in the government release?",
+          "What roles did the reporting entity and assisting financial institution have?",
+          "What can and cannot be inferred from a recovered amount?"
+        ]
+      }
     },
     {
       "id": "ca-2026-02-24-rcmp-rbc-spoof",
@@ -151,7 +272,32 @@
       "source_url": "https://rcmp.ca/en/bc/nanaimo/news/2026/02/4350604",
       "summary": "RCMP described a local resident receiving calls and messages appearing to come from RBC; the victim reportedly gave personal details to scammers who accessed accounts.",
       "consulting_theme": "Spoofed communications, account takeover, high-risk transaction monitoring",
-      "disclaimer": "RBC is the impersonated institution, not an accused party."
+      "disclaimer": "RBC is the impersonated institution, not an accused party.",
+      "investigation": {
+        "stages": [
+          [
+            "Impersonation",
+            "RCMP described calls and messages that appeared to come from RBC."
+          ],
+          [
+            "Information disclosure",
+            "The resident reportedly shared personal information with the callers."
+          ],
+          [
+            "Account access",
+            "Scammers reportedly gained access to accounts."
+          ],
+          [
+            "Reported impact",
+            "A loss of approximately C$24,000 was reported."
+          ]
+        ],
+        "questions": [
+          "Which delivery channels were actually used by the impersonators?",
+          "What account-access steps were verified versus inferred?",
+          "How does identifying RBC as impersonated differ from alleging misconduct by RBC?"
+        ]
+      }
     }
   ]
 }
