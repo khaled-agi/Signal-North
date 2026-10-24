@@ -55,3 +55,22 @@
 
 /* The expanded research menu must scroll inside its sticky sidebar. */
 @media(min-width:801px){.sidebar{overflow-y:auto;overflow-x:hidden;scrollbar-width:thin;overscroll-behavior:contain}}
+
+/* Comparable normalized media-coverage trend: not fraud rates */
+.theme-compare{margin:4px 22px 18px;padding:16px 18px;background:#f8fbfb;border:1px solid #dbe7e8;border-radius:8px}
+.theme-compare-controls{display:grid;grid-template-columns:1fr 1fr auto;gap:8px;margin:10px 0 16px}
+.theme-compare-controls select{font:inherit;font-size:11px;background:#fff;border:1px solid #d2e0e5;border-radius:5px;color:#284f61;min-width:0;padding:9px}
+.theme-compare-chart{display:flex;flex-direction:column;gap:8px}
+.compare-labels{display:flex;gap:13px;flex-wrap:wrap;margin-bottom:6px;font-size:11px;color:#486978}
+.compare-labels span{display:flex;gap:6px;align-items:center}
+.compare-labels i{height:9px;width:9px;border-radius:2px;display:inline-block}
+.compare-a{background:#17656f}.compare-b{background:#bf9361}
+.compare-year{display:grid;grid-template-columns:110px 1fr;align-items:center;gap:10px}
+.compare-year-meta{display:flex;flex-direction:column;gap:3px}
+.compare-year-meta strong{font-size:12px;color:#28495e}.compare-year-meta span{font-size:10px;color:#8195a1}
+.compare-bars{display:flex;flex-direction:column;gap:4px}
+.compare-bars>div{display:flex;gap:10px;align-items:center;background:#ebf1f2;height:17px;border-radius:3px;overflow:hidden;position:relative}
+.compare-bars span{height:100%;min-width:0;display:block;border-radius:3px}
+.compare-bars b{position:absolute;right:8px;color:#28445a;font-size:10px;text-shadow:0 1px #fff}
+.theme-compare-note{font-size:10px;color:#6b8491;line-height:1.5;margin:12px 0 0}
+@media(max-width:750px){.theme-compare{margin:4px 14px 14px;padding:14px}.theme-compare-controls{grid-template-columns:1fr}.compare-year{grid-template-columns:80px 1fr}}
