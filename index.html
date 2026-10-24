@@ -16,6 +16,7 @@
 <link rel="stylesheet" href="./connections.css?v=__BUILD_SHA__">
 <link rel="stylesheet" href="./research.css?v=__BUILD_SHA__">
 <link rel="stylesheet" href="./network.css?v=__BUILD_SHA__">
+<link rel="stylesheet" href="./refine.css?v=__BUILD_SHA__">
 </head>
 <body>
 <div class="layout">
@@ -60,7 +61,7 @@
       <div class="map-list-controls"><input id="mapStorySearch" type="search" placeholder="Search every article title..." aria-label="Search mapped and unmapped articles"><select id="mapStoryScope" aria-label="Location coverage"><option value="all">All articles</option><option value="mapped">Located on map</option><option value="unmapped">No source-backed location</option><option value="selected">Selected map circle</option></select></div>
       <div class="map-story-summary" id="mapStorySummary">Loading source archive...</div>
       <div id="mappedStories" class="mapped-story-feed" aria-live="polite"><div class="empty">Connecting article locations...</div></div>
-      <div class="map-list-footer"><button id="mapStoryMore" type="button">Load 100 more titles ↓</button><button id="mapStoryAll" type="button">Display all matching titles</button><button id="mapStoryClear" type="button" hidden>Clear circle selection</button></div><div class="panel-heading"><div class="eyebrow">COVERAGE BY PROVINCE</div></div><div id="regions"></div><p class="small muted">Markers show locations mentioned in sources, not verified incident addresses. Click a story to open its map marker.</p></section>
+      <div class="map-list-footer"><button id="mapStoryMore" type="button">Load 100 more titles ↓</button><button id="mapStoryAll" type="button">Display all matching titles</button><button id="mapStoryClear" type="button" hidden>Clear circle selection</button></div><details class="region-advanced"><summary>Official regulator geocodes by province</summary><div id="regions"></div></details><p class="small muted">Markers show locations mentioned in sources, not verified incident addresses. Click a story to open its map marker.</p></section>
     </div>
     <details class="overview-deepdive overview-news">
       <summary><div><strong>Latest headlines</strong><span>Recent reporting and unverified news leads</span></div><span class="overview-expand">Expand ↓</span></summary>
