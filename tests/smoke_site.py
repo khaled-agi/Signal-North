@@ -74,6 +74,25 @@ try:
         assert "Reviewed cases:" in page.locator("#mapCaption").inner_text() or "Headline" in page.locator("#mapCaption").inner_text()
         assert page.locator("#mapProvince").count() == 1
         print("News, major orders, source-reviewed incidents, and map controls: PASS")
+        page.wait_for_function("document.querySelectorAll('#mappedStories .map-story').length > 0", timeout=10000)
+        assert page.locator("#mapMonth").count() == 1
+        assert page.locator('#mappedStories button[data-mapfocus]').count() > 0
+        page.locator("#mapMonth").fill("2026-03")
+        assert "2026-03" in page.locator("#mapCaption").inner_text()
+        page.locator("#mapClearMonth").click()
+        page.locator('[data-tab="fraud"]').click()
+        page.wait_for_function("document.querySelector('#newsYear').options.length > 1", timeout=15000)
+        print("News archive count:", page.locator("#archiveCount").inner_text())
+        page.locator("#newsYear").select_option("2026")
+        assert page.locator("#newsRows .news-item").count() > 0
+        page.locator('[data-tab="clients"]').click()
+        page.locator("#clientName").fill("Royal Bank of Canada")
+        page.locator("#clientAdd").click()
+        assert page.locator("#clientWatchlist .client-item").count() >= 1
+        assert "Royal Bank of Canada" in page.locator("#clientWatchlist").inner_text()
+        bg=page.evaluate("getComputedStyle(document.body).backgroundColor")
+        assert bg in ("rgb(243, 246, 250)","rgb(255, 255, 255)"),f"Expected light theme, got {bg}"
+        print("Client watchlists, historical filters, linked map, light theme: PASS")
         assert not errors, str(errors)
         print("Browser smoke test: PASS")
         browser.close()
