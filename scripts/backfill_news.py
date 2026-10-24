@@ -106,9 +106,9 @@ def main():
     diagnostics.append({"month":start.strftime("%Y-%m"),"topic":topic,"status":"failed","error":str(e)[:200]})
    time.sleep(.25)
     # Archive is an additive history; do not replace earlier backfill years.
- results=sorted(by_id.values(),key=lambda x:x.get("published_at") or "",reverse=True)[:4500]
+ results=sorted(by_id.values(),key=lambda x:x.get("published_at") or "",reverse=True)[:12000]
  ARCHIVE.write_text(json.dumps({"updated_at":now(),"leads":results,
-    "methodology":"Historical Google News RSS discovery by monthly after/before queries. Coverage is incomplete; publisher publication dates checked. Titles only, unverified."},ensure_ascii=False,indent=2)+"\n","utf-8")
+    "methodology":"Historical Google News RSS discovery by monthly after/before queries, including sector/scam terms. Google indexing is incomplete and publisher dates are checked. Titles only, unverified. Archived coverage is not a prevalence series."},ensure_ascii=False,indent=2)+"\n","utf-8")
  STATUS.write_text(json.dumps({"last_completed_at":now(),"year_scanned":YEAR,
     "record_count":len(results),"queries":diagnostics},indent=2)+"\n","utf-8")
  print(json.dumps({"year":YEAR,"archive_count":len(results),
