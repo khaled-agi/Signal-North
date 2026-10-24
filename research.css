@@ -35,3 +35,18 @@
 .library-fineprint{color:#698596;font-size:11px;margin:0;padding:0 22px 20px}
 @media(max-width:1080px){.workflow-steps,.library-results{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:760px){.workflow-steps,.library-results,.library-filters{grid-template-columns:1fr}.workflow-steps button{min-height:108px}.library-filters{padding:8px 15px 18px}.library-results{padding:0 15px 18px}.loss-trend-row{grid-template-columns:38px minmax(0,1fr) 106px;gap:8px}.library-trend{padding:3px 14px 16px}.library-intro{padding:0 15px}}
+
+/* Progressive detail: keep the command-center overview focused */
+.overview-deepdive{margin:18px 0;border:1px solid #d7e5ed;border-radius:9px;background:#fff;overflow:hidden}
+.overview-deepdive summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:10px;padding:20px 23px;cursor:pointer;color:#24485e}
+.overview-deepdive summary::-webkit-details-marker{display:none}
+.overview-deepdive summary>div{display:flex;flex-direction:column;gap:4px}
+.overview-deepdive summary strong{font-family:var(--serif,Georgia,serif);font-weight:500;font-size:20px}
+.overview-deepdive summary div span{color:#6a8295;font-size:11px}
+.overview-expand{white-space:nowrap;color:#0b777d;font-weight:750;font-size:11px}
+.overview-deepdive[open] .overview-expand{font-size:0}
+.overview-deepdive[open] .overview-expand:after{content:"Collapse ↑";font-size:11px}
+.overview-deepdive-content{border-top:1px solid #e2ebf0;padding:13px}
+.overview-deepdive-content>.panel{margin:0 0 14px}
+.overview-deepdive-content>.panel:last-child{margin-bottom:0}
+@media(max-width:750px){.overview-deepdive summary{padding:15px}.overview-deepdive summary strong{font-size:18px}}
