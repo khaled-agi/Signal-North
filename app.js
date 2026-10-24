@@ -115,7 +115,7 @@ document.addEventListener("keydown",e=>{
  if(e.key==="Escape")closeDrawer();
  if((e.key==="Enter"||e.key===" ")&&e.target.matches("[data-event], [data-institution]")){e.preventDefault();e.target.click();}
 });
-for(const id of ["search","sourceFilter","provinceFilter","statusFilter"]){$(id).addEventListener(id==="search"?"input":"change",filterEvents);}
+for(const id of ["search","sourceFilter","provinceFilter","statusFilter"]){$("#"+id).addEventListener(id==="search"?"input":"change",filterEvents);}
 $("#close").addEventListener("click",closeDrawer);
 $("#overlay").addEventListener("click",e=>{if(e.target.id==="overlay")closeDrawer();});
 $("#reload").addEventListener("click",load);
