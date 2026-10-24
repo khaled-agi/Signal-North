@@ -1,10 +1,10 @@
 {
-  "last_attempt_at": "2026-10-24T03:05:34+00:00",
+  "last_attempt_at": "2026-10-24T03:06:14+00:00",
   "sources": {
     "Bank and customer fraud": {
       "status": "ok",
-      "returned": 10,
-      "accepted": 7
+      "returned": 42,
+      "accepted": 15
     },
     "Scams and victims": {
       "status": "ok",
@@ -18,7 +18,7 @@
     },
     "Money laundering": {
       "status": "ok",
-      "returned": 16,
+      "returned": 11,
       "accepted": 1
     },
     "Investment schemes": {
@@ -33,7 +33,7 @@
     },
     "Credit unions and fintech": {
       "status": "ok",
-      "returned": 5,
+      "returned": 4,
       "accepted": 1
     },
     "Fraud research and reports": {
@@ -48,7 +48,7 @@
     },
     "Crypto investment and exchange": {
       "status": "ok",
-      "returned": 35,
+      "returned": 33,
       "accepted": 14
     },
     "Casino and iGaming AML": {
@@ -63,8 +63,8 @@
     },
     "Securities investigations": {
       "status": "ok",
-      "returned": 5,
-      "accepted": 0
+      "returned": 7,
+      "accepted": 2
     },
     "Social media scam reports": {
       "status": "ok",
@@ -73,5 +73,5 @@
     }
   },
   "stored_leads": 116,
-  "last_completed_at": "2026-10-24T03:05:39+00:00"
+  "last_completed_at": "2026-10-24T03:06:20+00:00"
 }
