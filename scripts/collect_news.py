@@ -99,7 +99,7 @@ def relevant(title: str, publisher: str) -> bool:
 def headline_location(title: str) -> dict:
  """City literally named in the headline — never inferred event location."""
  for (city, province), (lat, lon) in sorted(CITIES.items(), key=lambda item: -len(item[0][0])):
-  if re.search(r"(?<!\\w)"+re.escape(city)+r"(?!\\w)", title, re.I):
+  if re.search(r"(?<!\w)"+re.escape(city)+r"(?!\w)", title, re.I):
    return {"map_location": f"{city}, {province}",
            "map_latitude": lat, "map_longitude": lon,
            "map_province": PROVINCE_CODES[province],
