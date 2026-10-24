@@ -1,39 +1,47 @@
 {
-  "last_attempt_at": "2026-10-24T02:38:35+00:00",
+  "last_attempt_at": "2026-10-24T02:40:10+00:00",
   "sources": {
     "Bank and customer fraud": {
-      "status": "failed",
-      "error": "503 Server Error: Service Unavailable for url: https://news.google.com/rss/search?q=%22bank%22+%22fraud%22+%22Canada%22+when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen"
+      "status": "ok",
+      "returned": 42,
+      "accepted": 15
     },
     "Scams and victims": {
-      "status": "failed",
-      "error": "503 Server Error: Service Unavailable for url: https://news.google.com/rss/search?q=%22scam%22+%22victims%22+%22Canada%22+when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen"
+      "status": "ok",
+      "returned": 56,
+      "accepted": 23
     },
     "Police investigations": {
-      "status": "failed",
-      "error": "503 Server Error: Service Unavailable for url: https://news.google.com/rss/search?q=%22fraud%22+%22charged%22+%22Ontario%22+OR+%22Quebec%22+when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen"
+      "status": "ok",
+      "returned": 27,
+      "accepted": 19
     },
     "Money laundering": {
-      "status": "failed",
-      "error": "503 Server Error: Service Unavailable for url: https://news.google.com/rss/search?q=%22money+laundering%22+%22Canada%22+%22bank%22+when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen"
+      "status": "ok",
+      "returned": 16,
+      "accepted": 1
     },
     "Investment schemes": {
-      "status": "failed",
-      "error": "503 Server Error: Service Unavailable for url: https://news.google.com/rss/search?q=%22investment+scam%22+%22Canada%22+when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen"
+      "status": "ok",
+      "returned": 11,
+      "accepted": 2
     },
     "Qu\u00e9bec fraude": {
-      "status": "failed",
-      "error": "503 Server Error: Service Unavailable for url: https://news.google.com/rss/search?q=%22fraude%22+%22banque%22+%22Qu%C3%A9bec%22+when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen"
+      "status": "ok",
+      "returned": 1,
+      "accepted": 1
     },
     "Credit unions and fintech": {
-      "status": "failed",
-      "error": "503 Server Error: Service Unavailable for url: https://news.google.com/rss/search?q=%22credit+union%22+%22fraud%22+%22Canada%22+when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen"
+      "status": "ok",
+      "returned": 4,
+      "accepted": 0
     },
     "Fraud research and reports": {
-      "status": "failed",
-      "error": "503 Server Error: Service Unavailable for url: https://news.google.com/rss/search?q=%22fraud%22+%22Canada%22+%28%22report%22+OR+%22study%22+OR+%22research%22%29+when%3A30d&hl=en-CA&gl=CA&ceid=CA%3Aen"
+      "status": "ok",
+      "returned": 46,
+      "accepted": 31
     }
   },
   "stored_leads": 95,
-  "last_completed_at": "2026-10-24T02:39:38+00:00"
+  "last_completed_at": "2026-10-24T02:40:14+00:00"
 }
