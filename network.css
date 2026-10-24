@@ -52,3 +52,6 @@
 .community-process p{font-size:11px;color:#70889a;line-height:1.6}
 @media(max-width:1100px){.contribution-paths{grid-template-columns:1fr 1fr}.theme-examples,.sector-entries{grid-template-columns:1fr}.theme-coverage{grid-template-columns:repeat(4,1fr)}}
 @media(max-width:750px){.theme-controls,.sector-filters{grid-template-columns:1fr;padding:10px 14px}.theme-coverage{grid-template-columns:repeat(3,1fr);padding:0 14px 14px}.theme-grid{margin:0 14px 15px}.theme-examples,.sector-entries{padding:0 14px 18px}.contribution-paths,.community-process{grid-template-columns:1fr;padding:8px 14px 16px}.community-intro{padding:8px 14px 14px}}
+
+/* The expanded research menu must scroll inside its sticky sidebar. */
+@media(min-width:801px){.sidebar{overflow-y:auto;overflow-x:hidden;scrollbar-width:thin;overscroll-behavior:contain}}
