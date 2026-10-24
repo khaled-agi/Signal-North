@@ -83,6 +83,16 @@ try:
         page.locator('[data-tab="fraud"]').click()
         page.wait_for_function("document.querySelector('#newsYear').options.length > 1", timeout=15000)
         print("News archive count:", page.locator("#archiveCount").inner_text())
+        if (ROOT / "data" / "news_archive.json").exists():
+            archive = json.loads((ROOT / "data" / "news_archive.json").read_text())
+            assert len(archive["leads"]) >= 300
+            assert "historical headlines" in page.locator("#archiveCount").inner_text()
+            first_page = page.locator("#newsRows .news-item").count()
+            assert first_page == 100, f"Expected paginated 100 stories, got {first_page}"
+            page.locator("#newsMore").click()
+            assert page.locator("#newsRows .news-item").count() == 200
+            print("Historic archive pagination: PASS")
+
         page.locator("#newsYear").select_option("2026")
         assert page.locator("#newsRows .news-item").count() > 0
         page.locator('[data-tab="clients"]').click()
