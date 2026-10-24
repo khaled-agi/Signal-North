@@ -21,6 +21,14 @@ try:
         page.wait_for_function("document.querySelectorAll('#usMetrics .metric').length === 4",timeout=20000)
         assert not errors, errors
         assert page.locator("#usState option").count() == 52
+        assert page.locator("#usMapMode option").count() == 4
+        assert "1,008,597" in page.locator("#usMetrics").inner_text()
+        assert "$20.88B" in page.locator("#usMetrics").inner_text()
+        page.locator("#usMapMode").select_option("ic3_count")
+        assert page.locator("#usMapMode").input_value()=="ic3_count"
+        page.locator("#usMapMode").select_option("ic3_loss")
+        assert page.locator("#usMapMode").input_value()=="ic3_loss"
+        page.locator("#usMapMode").select_option("ic3_rate")
         assert page.locator('[data-usview="reporting"]').count() >= 1
         assert "FinCEN" in page.locator("#usLatest").inner_text() or "CFPB" in page.locator("#usLatest").inner_text()
         assert "United States" in page.title() or "U.S." in page.title()
@@ -34,6 +42,7 @@ try:
         page.locator("#usClose").click()
         page.locator("#usSearch").fill("")
         page.locator("#usState").select_option("AK")
+        assert "3,202" in page.locator("#usMetrics").inner_text()
         assert "Only headlines explicitly naming Alaska" in page.locator("#usReportExplain").inner_text()
         assert page.locator("#usRows .us-record").count() == 0
         page.locator("#usState").select_option("DC")
@@ -46,6 +55,7 @@ try:
         page.locator("button[data-usview='trends']").click()
         assert "FinCEN" in page.locator("#us-trends").inner_text()
         assert page.locator("#usOfficialTrend .us-chart-row").count() >= 3
+        assert page.locator("#usIC3Trend .us-ic3-row").count() >= 10
         page.locator("button[data-usview='organizations']").click()
         assert page.locator("#usOrgRows .us-org-entry").count() >= 10
         page.locator("#usOrgSearch").fill("Block")
@@ -54,6 +64,7 @@ try:
         assert "50 states + D.C." in page.locator("#usSourceHealth").inner_text()
         assert "REFERENCE ONLY" in page.locator("#usSourceDirectory").inner_text()
         assert "COLLECTION ENABLED" in page.locator("#usSourceDirectory").inner_text()
+        assert "CURATED OFFICIAL DATA" in page.locator("#usSourceDirectory").inner_text()
         assert page.locator("#usSourceDirectory a[href*='ic3.gov']").count() == 1
         page.goto(base+"index.html", wait_until="domcontentloaded", timeout=20000)
         assert page.locator('.us-country-switch a[href="./us.html"]').count() == 1
