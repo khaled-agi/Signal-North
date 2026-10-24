@@ -57,10 +57,11 @@
       <div class="metrics us-metrics" id="usMetrics" aria-live="polite"></div>
       <section class="us-brief panel"><div class="us-brief-title"><div><div class="eyebrow">01 / WHAT CHANGED?</div><h2>Evidence pulse</h2></div><span class="us-mini-label" id="usPulseDate">Source snapshot</span></div><div id="usPulse">Loading recent source developments...</div></section>
       <div class="us-two-cols">
-        <section class="panel us-map-card"><div class="panel-heading"><div><div class="eyebrow">02 / WHERE?</div><h2>State-referenced reporting</h2></div><button type="button" class="map-reset" id="usMapReset">⌖ U.S. view</button></div>
-          <div id="usMap" class="map" aria-label="U.S. state-referenced headline map"></div>
-          <div id="usMapCaption" class="us-map-caption">State markers show headline references, not actual crime locations.</div>
-          <div class="us-method-foot">Nationwide federal enforcement records are not allocated to a state. Unlocated reporting remains searchable; a state with no marker is not a low-fraud state.</div>
+        <section class="panel us-map-card"><div class="panel-heading"><div><div class="eyebrow">02 / WHERE?</div><h2>Across all 50 states + D.C.</h2></div><button type="button" class="map-reset" id="usMapReset">⌖ U.S. view</button></div>
+          <div class="us-map-toolbar"><label for="usMapMode">Map evidence</label><select id="usMapMode"><option value="ic3_rate">2025 IC3 complaints per 100K</option><option value="ic3_count">2025 IC3 complaints</option><option value="ic3_loss">2025 IC3 reported losses (USD)</option><option value="headlines">State-mentioned news headlines</option></select></div>
+          <div id="usMap" class="map" aria-label="U.S. state-level FBI IC3 reporting and headline mention map"></div>
+          <div id="usMapCaption" class="us-map-caption">2025 FBI IC3 complaint data by state, from the original annual report.</div>
+          <div class="us-method-foot">Official FBI IC3 figures are complaints, reported losses and population-normalized complaint rates, not proven crimes or bank-owned losses. News-map markers use approximate state-capital reference points and are not incident locations. <a href="https://www.ic3.gov/AnnualReport/Reports/2025_IC3Report.pdf" target="_blank" rel="noopener noreferrer">FBI source ↗</a></div>
         </section>
         <section class="panel us-evidence-card"><div class="panel-heading"><div><div class="eyebrow">03 / WHAT SUPPORTS IT?</div><h2>Latest source records</h2></div><button class="us-text-button" data-usview="reporting" type="button">Explore all →</button></div>
           <div id="usLatest" class="us-latest-list">Loading source-linked records...</div>
@@ -85,6 +86,7 @@
     <section id="us-trends" class="us-view hidden">
       <div class="us-section-intro"><div class="eyebrow">TREND ANALYSIS / EVIDENCE-AWARE</div><h2>Reporting patterns, not fraud rates.</h2><p>Compare source publication volumes and topic visibility over time. Changes in news collection, source availability and jurisdictional scope can create artificial trends.</p></div>
       <div class="panel"><div class="panel-heading"><div><h2>Annual federal enforcement index coverage</h2></div><span class="small">FinCEN and CFPB source records</span></div><div id="usOfficialTrend" class="us-trend-content"></div></div>
+      <div class="panel"><div class="panel-heading"><div><h2>2025 FBI IC3 state comparison</h2></div><span class="small">Primary-source complaints, not confirmed fraud events</span></div><div id="usIC3Trend" class="us-trend-content"></div></div>
       <div class="panel"><div class="panel-heading"><div><h2>Monthly reporting discovery</h2></div><span class="small">Unverified syndicated titles only</span></div><div id="usNewsTrend" class="us-trend-content"></div></div>
       <div class="panel"><div class="panel-heading"><div><h2>Common headline methods</h2></div></div><div id="usMethodList" class="us-trend-content"></div></div>
     </section>
@@ -104,6 +106,7 @@
       <div class="panel"><div class="panel-heading"><div><h2>What the data cannot say</h2></div></div>
         <div class="us-limits">
           <p><strong>Official action vs. final disposition.</strong> A case may be alleged, pending, settled, modified or dismissed. Open the original source for the latest procedural status; do not total financial measures across incompatible categories.</p>
+          <p><strong>FBI IC3 state statistics.</strong> The 2025 annual report provides complaint counts, reported losses in USD, and complaint counts per 100,000 population for the 50 states and D.C. IC3 complaints are not independently confirmed crimes; population-normalized rates still reflect reporting behavior and coverage. Territorial figures are in the original report but not plotted here.</p>
           <p><strong>State reference vs. incident location.</strong> A state named in a headline is a research clue. A marker is placed at an approximate state-capital reference point, not an event address, defendant headquarters or geographic rate.</p>
           <p><strong>Uneven news coverage.</strong> State searches are rotated, so zero displayed items never means zero fraud. Syndicated titles are not independently verified incidents.</p>
           <p><strong>Agency scope.</strong> Automated official index collection initially covers FinCEN and CFPB; SEC, DOJ, FTC, OCC, FDIC, FBI IC3, state attorneys general and local police require additional source-specific collection and quality review.</p>
