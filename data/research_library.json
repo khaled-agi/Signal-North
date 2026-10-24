@@ -1,0 +1,259 @@
+{
+  "updated_at": "2026-10-23",
+  "scope": "Canada",
+  "methodology": "Curated, directly linked public original sources. Report statistics come from different release vintages and are not institution fraud losses. Researchers should confirm source revisions and reporting periods. Not an exhaustive literature review.",
+  "reports": [
+    {
+      "id": "cafc-open",
+      "title": "CAFC Fraud Reporting System open dataset",
+      "publisher": "Canadian Anti-Fraud Centre / RCMP",
+      "year": 2025,
+      "type": "Open data",
+      "topic": "Victim-reported fraud",
+      "url": "https://open.canada.ca/data/dataset/6a09c998-cddb-4a22-beff-4dca67ab892f",
+      "coverage": "2021 through September 2025 in the currently linked CSV",
+      "why": "Province, fraud typology, reports, victim counts and monetary loss; analyze geographic and type trends",
+      "limitations": "Self-reported records; Q4 2025 delayed owing to a system transition; not institution-owned bank losses",
+      "source_tier": "official_data"
+    },
+    {
+      "id": "cafc-annual-2024",
+      "title": "2024 Annual Statistical Report",
+      "publisher": "Canadian Anti-Fraud Centre",
+      "year": 2024,
+      "type": "Annual report",
+      "topic": "Victim-reported fraud",
+      "url": "https://centreantifraude-antifraudcentre.ca/annual-reports-2024-rapports-annuels-eng.htm?wbdisable=true",
+      "coverage": "2024 reporting period",
+      "why": "Fraud types, province-level reporting, age breakdown and payment/solicitation methods",
+      "limitations": "Reports to the CAFC, not a census of incidents; figures may later be revised",
+      "source_tier": "official_report"
+    },
+    {
+      "id": "cafc-annual-2022",
+      "title": "2022 Annual Report",
+      "publisher": "Canadian Anti-Fraud Centre",
+      "year": 2022,
+      "type": "Annual report",
+      "topic": "Victim-reported fraud",
+      "url": "https://antifraudcentre.ca/annual-reports-2022-rapports-annuels-eng.htm",
+      "coverage": "2022 with historical comparisons",
+      "why": "Fraud typologies, victim loss changes, payment and solicitation patterns",
+      "limitations": "Reported losses and cases, not actual total prevalence",
+      "source_tier": "official_report"
+    },
+    {
+      "id": "cafc-annual-2021",
+      "title": "2021 Annual Report",
+      "publisher": "Canadian Anti-Fraud Centre",
+      "year": 2021,
+      "type": "Annual report",
+      "topic": "Victim-reported fraud",
+      "url": "https://centreantifraude.ca/annual-reports-2021-rapports-annuels-eng.htm",
+      "coverage": "2021 with comparisons to 2020",
+      "why": "Pre- and early-pandemic changes in scam tactics and reported losses",
+      "limitations": "Underreporting; figures may be adjusted in later publications",
+      "source_tier": "official_report"
+    },
+    {
+      "id": "csa-index-2024",
+      "title": "2024 CSA Investor Index",
+      "publisher": "Canadian Securities Administrators",
+      "year": 2024,
+      "type": "Research survey",
+      "topic": "Investment fraud",
+      "url": "https://www.securities-administrators.ca/csa-activities/research/",
+      "coverage": "Canadian adult survey conducted March 2024",
+      "why": "Investor behavior, exposure to investment scams, social-media and self-directed investment patterns",
+      "limitations": "Survey results, not recorded confirmed fraud incidents",
+      "source_tier": "official_research"
+    },
+    {
+      "id": "csa-risk-release",
+      "title": "2024 Investor Index: Investment fraud and social media trends",
+      "publisher": "Canadian Securities Administrators",
+      "year": 2024,
+      "type": "Research summary",
+      "topic": "Investment fraud",
+      "url": "https://www.securities-administrators.ca/news/2024-investor-index-reveals-canadas-shifting-investment-landscape/",
+      "coverage": "2024 national survey",
+      "why": "23% of Canadians surveyed reported encountering possible fraudulent investments",
+      "limitations": "Encountering a possible scam differs from being a victim or proving wrongdoing",
+      "source_tier": "official_research"
+    },
+    {
+      "id": "obsi-2025",
+      "title": "2025 Annual Report — Consumer banking fraud complaints",
+      "publisher": "Ombudsman for Banking Services and Investments",
+      "year": 2025,
+      "type": "Annual report",
+      "topic": "Banking complaints",
+      "url": "https://www.obsi.ca/en/news/posts/obsi-2025-annual-report-released/",
+      "coverage": "2025 consumer investigations",
+      "why": "1,815 fraud-related banking investigations, up from 966 in 2024; analyze disputes and resolution patterns",
+      "limitations": "Complaint investigations, not proven bank breaches or annual bank-owned fraud losses",
+      "source_tier": "official_report"
+    },
+    {
+      "id": "obsi-antifraud-2026",
+      "title": "OBSI response to National Anti-Fraud Strategy consultation",
+      "publisher": "Ombudsman for Banking Services and Investments",
+      "year": 2026,
+      "type": "Policy submission",
+      "topic": "Banking complaints",
+      "url": "https://www.obsi.ca/media/zqvh2ixo/obsi-comments-on-the-anti-fraud-strategy-consultation-may-2026.pdf",
+      "coverage": "2021–2026 experience and policy recommendations",
+      "why": "Links scam typologies, disputed e-transfers and customer redress into process-improvement questions",
+      "limitations": "Policy recommendations and service experience, not adjudicated bank misconduct",
+      "source_tier": "official_report"
+    },
+    {
+      "id": "fcac-fraud-2026",
+      "title": "Why speaking up about fraud matters",
+      "publisher": "Financial Consumer Agency of Canada",
+      "year": 2026,
+      "type": "Research summary",
+      "topic": "Consumer vulnerability",
+      "url": "https://fcac-research-recherche-acfc.canada.ca/en/canada-finance/data-story-histoire-donnees/?id=65ac7440-1363-f011-bec2-002248af7c26",
+      "coverage": "2019/2024 survey comparisons; updated 2026",
+      "why": "Consumer survey exposure to investment fraud, unauthorized card use and phishing",
+      "limitations": "Self-reported survey measures differ from CAFC case data",
+      "source_tier": "official_research"
+    },
+    {
+      "id": "fcac-committee-2026",
+      "title": "FCAC briefing to Senate Banking Committee",
+      "publisher": "Financial Consumer Agency of Canada",
+      "year": 2026,
+      "type": "Parliamentary briefing",
+      "topic": "Fraud policy",
+      "url": "https://www.canada.ca/en/financial-consumer-agency/corporate/transparency/briefing-packages-parliamentary-committee-appearances/standing-committee-banking-commerce-economy-february-4-2026.html",
+      "coverage": "2024 fraud reporting and consumer protections",
+      "why": "Reported loss figures, underreporting and digital fraud patterns",
+      "limitations": "Briefing data may reflect subsequent revisions",
+      "source_tier": "official_report"
+    },
+    {
+      "id": "statcan-fraud-2019",
+      "title": "Self-reported fraud in Canada, 2019",
+      "publisher": "Statistics Canada",
+      "year": 2019,
+      "type": "Population survey",
+      "topic": "Fraud prevalence",
+      "url": "https://www150.statcan.gc.ca/n1/pub/89-652-x/89-652-x2023001-eng.htm",
+      "coverage": "2019 self-reported experiences, publication 2023",
+      "why": "Population prevalence and underreporting beyond police-recorded cases",
+      "limitations": "Survey of 2019 experiences, not current fraud incidence",
+      "source_tier": "official_research"
+    },
+    {
+      "id": "statcan-police-2024",
+      "title": "Police-reported crime statistics in Canada, 2024",
+      "publisher": "Statistics Canada",
+      "year": 2024,
+      "type": "Official statistics",
+      "topic": "Police-reported fraud",
+      "url": "https://www150.statcan.gc.ca/n1/daily-quotidien/250722/dq250722a-eng.htm",
+      "coverage": "2024",
+      "why": "Police-reported fraud, identity theft, extortion and cyber components",
+      "limitations": "Not directly comparable to CAFC consumer self-reports; local police coverage differences",
+      "source_tier": "official_data"
+    },
+    {
+      "id": "statcan-police-2025",
+      "title": "Police-reported crime statistics in Canada, 2025",
+      "publisher": "Statistics Canada",
+      "year": 2025,
+      "type": "Official statistics",
+      "topic": "Police-reported fraud",
+      "url": "https://www150.statcan.gc.ca/n1/daily-quotidien/260722/dq260722a-eng.htm",
+      "coverage": "2025",
+      "why": "Fraud and extortion changes, police-reported rates and decade-long comparisons",
+      "limitations": "Police-reported rate is not a population victimization survey or a count of bank failures",
+      "source_tier": "official_data"
+    },
+    {
+      "id": "rcmp-fraud-2023",
+      "title": "Fraud Prevention Month 2024: 2023 Canadian reported-loss update",
+      "publisher": "RCMP / Canadian Anti-Fraud Centre",
+      "year": 2023,
+      "type": "Government release",
+      "topic": "Victim-reported fraud",
+      "url": "https://rcmp.ca/en/news/2024/02/fraud-prevention-month-2024-fighting-fraud-digital-era",
+      "coverage": "2023 CAFC fraud reports",
+      "why": "Source for roughly C$567 million in victim-reported losses for 2023",
+      "limitations": "Published in 2024 and can differ from later revised totals",
+      "source_tier": "official_report"
+    },
+    {
+      "id": "competition-fraud-2025",
+      "title": "Fraud Prevention Month: 2025 reported Canadian losses",
+      "publisher": "Competition Bureau Canada / CAFC",
+      "year": 2025,
+      "type": "Government release",
+      "topic": "Victim-reported fraud",
+      "url": "https://www.canada.ca/en/competition-bureau/news/2026/03/fraud-prevention-month-to-bring-hidden-crime-into-the-spotlight.html",
+      "coverage": "2025 CAFC figures",
+      "why": "C$704 million-plus reported victim losses and low reporting rates",
+      "limitations": "CAFC victim reports, not direct institutional losses",
+      "source_tier": "official_report"
+    },
+    {
+      "id": "finance-ml-2025",
+      "title": "2025 Assessment of Money Laundering and Terrorist Financing Risks in Canada",
+      "publisher": "Department of Finance Canada",
+      "year": 2025,
+      "type": "Government risk assessment",
+      "topic": "Money laundering",
+      "url": "https://publications.gc.ca/collections/collection_2025/fin/F2-218-2025-eng.pdf",
+      "coverage": "2025 national threat assessment",
+      "why": "FinCrime typology context linking fraud-generated proceeds to AML risk",
+      "limitations": "National assessment, not bank-specific wrongdoing or attributable individual losses",
+      "source_tier": "official_report"
+    }
+  ],
+  "victim_loss_series": [
+    {
+      "year": 2020,
+      "cad_millions": 165,
+      "approximate": true,
+      "source": "CAFC 2021 Annual Report",
+      "source_url": "https://centreantifraude.ca/annual-reports-2021-rapports-annuels-eng.htm"
+    },
+    {
+      "year": 2021,
+      "cad_millions": 379,
+      "approximate": true,
+      "source": "CAFC 2021 Annual Report",
+      "source_url": "https://centreantifraude.ca/annual-reports-2021-rapports-annuels-eng.htm"
+    },
+    {
+      "year": 2022,
+      "cad_millions": 530.4,
+      "approximate": true,
+      "source": "CAFC 2022 Annual Report",
+      "source_url": "https://antifraudcentre.ca/annual-reports-2022-rapports-annuels-eng.htm"
+    },
+    {
+      "year": 2023,
+      "cad_millions": 567,
+      "approximate": true,
+      "source": "RCMP Fraud Prevention Month 2024",
+      "source_url": "https://rcmp.ca/en/news/2024/02/fraud-prevention-month-2024-fighting-fraud-digital-era"
+    },
+    {
+      "year": 2024,
+      "cad_millions": 645,
+      "approximate": true,
+      "source": "FCAC June 2026 speech (revised 2024 figure)",
+      "source_url": "https://www.canada.ca/en/financial-consumer-agency/news/2026/06/moving-together-a-systemwide-response-to-financial-fraud.html"
+    },
+    {
+      "year": 2025,
+      "cad_millions": 704,
+      "approximate": true,
+      "source": "Competition Bureau / CAFC March 2026 release",
+      "source_url": "https://www.canada.ca/en/competition-bureau/news/2026/03/fraud-prevention-month-to-bring-hidden-crime-into-the-spotlight.html"
+    }
+  ]
+}
