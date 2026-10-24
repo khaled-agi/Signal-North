@@ -1,6 +1,6 @@
 "use strict";
 const $ = selector => document.querySelector(selector);
-const state = {events:[],news:[],status:{},map:null,layer:null,tab:"overview",mapMode:"all",mapProvince:"",mapMonth:"",clientFocus:"",mapMarkers:new Map(),incidents:[],entityAliases:[],rawHeadlineCount:0};
+const state = {events:[],news:[],status:{},map:null,layer:null,tab:"overview",mapMode:"all",mapCountMode:"groups",mapProvince:"",mapMonth:"",clientFocus:"",mapMarkers:new Map(),incidents:[],entityAliases:[],rawHeadlineCount:0};
 const provinces = {ON:"Ontario",QC:"Québec",BC:"British Columbia",AB:"Alberta",NB:"New Brunswick",NS:"Nova Scotia",MB:"Manitoba",SK:"Saskatchewan",NL:"Newfoundland & Labrador",PE:"Prince Edward Island"};
 function escapeHTML(value){return String(value??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
 function currency(value){if(value==null)return "Not reported";const x=Number(value);return x>=1e6?"$"+(x/1e6).toLocaleString("en-CA",{maximumFractionDigits:2})+"M":"$"+x.toLocaleString("en-CA",{maximumFractionDigits:0});}
@@ -105,22 +105,25 @@ function renderMapClusters(){
   const g=clusters.get(key);g.items.push(x);g.x+=point.x;g.y+=point.y;g.weights[x.kind]++;
  }
  for(const g of clusters.values()){
-  const n=g.items.length;
-  const centre=state.map.unproject(L.point(g.x/n,g.y/n),zoom);
+  const recordCount=g.items.length;
+  const n=state.mapCountMode==="headlines"?
+      g.items.reduce((sum,x)=>sum+(x.kind==="news"?Math.max(1,Number(x.reportCount||1)):1),0):recordCount;
+  const centre=state.map.unproject(L.point(g.x/recordCount,g.y/recordCount),zoom);
   const areaDiameter=Math.min(83,Math.max(28,22+Math.sqrt(n)*7));
   const kind=Object.entries(g.weights).sort((a,b)=>b[1]-a[1])[0][0];
-  const accessibleLabel=n+" source-linked record"+(n===1?"":"s")+" near "+(g.items[0]?.location||"this location");
+  const accessibleLabel=n+" "+(state.mapCountMode==="headlines"?"headline and notice units":"grouped records")+" near "+(g.items[0]?.location||"this location");
   const marker=L.marker(centre,{
    icon:L.divIcon({html:'<span class="count-pin-inner">'+escapeHTML(String(n))+'</span>',className:"count-map-pin count-"+kind,
     iconSize:[areaDiameter,areaDiameter],iconAnchor:[areaDiameter/2,areaDiameter/2]}),
    keyboard:true,title:accessibleLabel,alt:accessibleLabel,
   }).addTo(state.layer);
   const geoNames=[...new Set(g.items.map(x=>x.location).filter(Boolean))].slice(0,3).join(" · ");
-  const popup='<div class="map-pop"><div class="map-pop-heading">'+escapeHTML(n.toLocaleString("en-CA"))+' source records</div>'+
+  const popup='<div class="map-pop"><div class="map-pop-heading">'+escapeHTML(n.toLocaleString("en-CA"))+
+    (state.mapCountMode==="headlines"?' headline / evidence units':' grouped records')+'</div>'+
     '<span class="map-pop-source">'+escapeHTML(geoNames||"Source-supported geography")+'</span>'+
     '<p class="map-pop-notice">'+g.weights.news+' headlines · '+g.weights.reg+' regulator notices · '+g.weights.case+' reviewed cases. Record locations are not necessarily fraud locations.</p>'+
     '<div class="map-popup-record">'+g.items.slice(0,4).map(x=>'<div><span class="map-popup-date">'+escapeHTML(date(x.date))+'</span> '+(x.kind==="news"?'<button type="button" class="report-popup-open" data-story="'+escapeHTML(x.id)+'">'+escapeHTML(x.title)+'</button>':escapeHTML(x.title))+'</div>').join("")+
-    (n>4?'<div class="small">+'+(n-4)+' more; select this circle to explore them all.</div>':"")+'</div></div>';
+    (recordCount>4?'<div class="small">+'+(recordCount-4)+' additional groups; select this circle to explore them.</div>':"")+'</div></div>';
   marker.bindPopup(popup,{maxWidth:330,minWidth:230,maxHeight:350});
   marker.on("click",()=>{
    state.mapSelectedIds=new Set(g.items.map(x=>x.id));
@@ -323,6 +326,7 @@ $("#mapReset").addEventListener("click",()=>{state.mapProvince="";$("#mapProvinc
 $("#mapProvince").addEventListener("change",value=>{state.mapProvince=value.target.value;initMap();});
 $("#mapMonth").addEventListener("change",e=>{state.mapMonth=e.target.value;initMap();});
 $("#mapClearMonth").addEventListener("click",()=>{state.mapMonth="";$("#mapMonth").value="";initMap();});
+$("#mapCountMode").addEventListener("change",e=>{state.mapCountMode=e.target.value;renderMapClusters();});
 $("#mapStorySearch").addEventListener("input",()=>{state.mapSideVisible=100;initMap();});
 $("#mapStoryScope").addEventListener("change",e=>{state.mapSideScope=e.target.value;state.mapSideVisible=100;refreshMapList();});
 $("#mapStoryMore").addEventListener("click",()=>{state.mapSideVisible=(state.mapSideVisible||100)+100;refreshMapList();});
