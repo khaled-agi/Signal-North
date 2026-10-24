@@ -30,7 +30,7 @@
   {name:"Payment-system risk",value:"Planned",source:"Bank of Canada / Payments Canada",url:"https://www.bankofcanada.ca/",note:"Payment-system incidents and operational risk; distinguish from fraud"},
   {name:"Cyber incidents",value:"Planned",source:"Privacy Commissioner / Cyber Centre",url:"https://www.priv.gc.ca/en/opc-actions-and-decisions/investigations/",note:"Incident disclosures and privacy findings; differentiate alleged from confirmed"}
  ];
- let news=[],stats=[],bankDisclosure=[],events=[],incidents=[],newsWired=false,incidentsWired=false,archiveCount=0;
+ let news=[],stats=[],bankDisclosure=[],events=[],incidents=[],newsWired=false,incidentsWired=false,archiveCount=0,newsVisible=100;
  async function getJSON(path){
   const res=await fetch("./data/"+path+"?v="+Date.now(),{cache:"no-store"});
   if(!res.ok)throw Error(path+": HTTP "+res.status);
@@ -51,10 +51,14 @@
   const q=$i("newsSearch").value.trim().toLowerCase();
   const t=$i("newsCategory").value;
   const year=$i("newsYear").value;
+  const month=$i("newsMonth").value;
   const bank=$i("newsBank").value;
-  const hits=news.filter(x=>(!t||x.category===t)&&(!year||String(x.published_at||"").startsWith(year))&&(!bank||(x.banks_mentioned_in_headline||[]).includes(bank))&&(!q||[x.title,x.publisher,x.category,...(x.topics||[])].join(" ").toLowerCase().includes(q))).slice(0,250);
-  $i("newsCount").textContent=hits.length+" shown / "+news.length+" discovered headlines";
-  $i("newsRows").innerHTML=hits.length?hits.map(x=>{
+  const hits=news.filter(x=>(!t||x.category===t)&&(!year||String(x.published_at||"").startsWith(year))&&(!month||String(x.published_at||"").slice(5,7)===month)&&(!bank||(x.banks_mentioned_in_headline||[]).includes(bank))&&(!q||[x.title,x.publisher,x.category,...(x.topics||[])].join(" ").toLowerCase().includes(q)));
+  const visible=hits.slice(0,newsVisible);
+  $i("newsCount").textContent=hits.length+" matching / "+news.length+" unique headlines";
+  $i("newsPageCount").textContent="Showing "+visible.length+" of "+hits.length+" matching articles";
+  $i("newsMore").hidden=visible.length>=hits.length;
+  $i("newsRows").innerHTML=hits.length?visible.map(x=>{
  const bank=x.banks_mentioned_in_headline||[],amount=x.amount_strings_in_headline||[];
  const notes=[bank.length?'Bank name in headline: '+bank.join(", "):"",amount.length?'Amount quoted: '+amount.join(", "):"",x.headline_case_candidate?"Possible individual victim story":""].filter(Boolean);
  return '<div class="news-item"><div><div class="news-item-title">'+link(x.url,x.title)+'</div><div class="news-meta">'+esc(x.publisher||"News syndication")+" · "+esc((x.published_at||"").slice(0,10))+" · "+esc(x.category||"Financial crime watch")+'</div>'+(notes.length?'<div class="news-extracted">'+notes.map(note=>'<span>'+esc(note)+'</span>').join("")+'</div>':"")+'</div><span class="news-label">'+(x.content_kind==="research_report_lead"?"RESEARCH LEAD":"UNVERIFIED NEWS")+'</span></div>';
@@ -65,16 +69,20 @@
   $i("newsCategory").innerHTML='<option value="">All fraud types</option>'+cats.map(x=>'<option value="'+esc(x)+'">'+esc(x)+"</option>").join("");
   const years=[...new Set(news.map(x=>String(x.published_at||"").slice(0,4)).filter(y=>/^[0-9]{4}$/.test(y)))].sort().reverse();
   const banks=[...new Set(news.flatMap(x=>x.banks_mentioned_in_headline||[]))].sort();
-  const prevYear=$i("newsYear").value,prevBank=$i("newsBank").value;
+  const prevYear=$i("newsYear").value,prevBank=$i("newsBank").value,prevMonth=$i("newsMonth").value;
+  $i("newsMonth").innerHTML='<option value="">All months</option>'+Array.from({length:12},(_,i)=>{const m=String(i+1).padStart(2,"0");return '<option value="'+m+'">'+new Intl.DateTimeFormat("en-CA",{month:"long",timeZone:"UTC"}).format(new Date(Date.UTC(2026,i,1)))+"</option>"}).join("");
+  if(prevMonth)$i("newsMonth").value=prevMonth;
   $i("newsYear").innerHTML='<option value="">All years</option>'+years.map(y=>'<option value="'+esc(y)+'">'+esc(y)+'</option>').join("");
   $i("newsBank").innerHTML='<option value="">All named banks</option>'+banks.map(b=>'<option value="'+esc(b)+'">'+esc(b)+'</option>').join("");
   if(prevYear)$i("newsYear").value=prevYear;
   if(prevBank)$i("newsBank").value=prevBank;
   if(!newsWired){
-   $i("newsCategory").addEventListener("change",renderNews);
-   $i("newsYear").addEventListener("change",renderNews);
-   $i("newsBank").addEventListener("change",renderNews);
-   $i("newsSearch").addEventListener("input",renderNews);
+   $i("newsCategory").addEventListener("change",()=>{newsVisible=100;renderNews()});
+   $i("newsYear").addEventListener("change",()=>{newsVisible=100;renderNews()});
+   $i("newsMonth").addEventListener("change",()=>{newsVisible=100;renderNews()});
+   $i("newsBank").addEventListener("change",()=>{newsVisible=100;renderNews()});
+   $i("newsSearch").addEventListener("input",()=>{newsVisible=100;renderNews()});
+   $i("newsMore").addEventListener("click",()=>{newsVisible+=100;renderNews()});
    newsWired=true;
   }
   renderNews();
