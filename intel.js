@@ -55,7 +55,8 @@
   const year=$i("newsYear").value;
   const month=$i("newsMonth").value;
   const bank=$i("newsBank").value;
-  const hits=news.filter(x=>(!t||x.category===t)&&(!year||String(x.published_at||"").startsWith(year))&&(!month||String(x.published_at||"").slice(5,7)===month)&&(!bank||(x.banks_mentioned_in_headline||[]).includes(bank))&&(!q||[x.title,x.publisher,x.category,...(x.topics||[]),...(x.headline_variations||[]).map(v=>v.title)].join(" ").toLowerCase().includes(q)));
+  const geo=$i("newsGeo").value;
+  const hits=news.filter(x=>(!t||x.category===t)&&(!year||String(x.published_at||"").startsWith(year))&&(!month||String(x.published_at||"").slice(5,7)===month)&&(!bank||(x.banks_mentioned_in_headline||[]).includes(bank))&&(!geo||x.geographic_relevance===geo)&&(!q||[x.title,x.publisher,x.category,...(x.topics||[]),...(x.headline_variations||[]).map(v=>v.title)].join(" ").toLowerCase().includes(q)));
   const visible=hits.slice(0,newsVisible);
   $i("newsCount").textContent=hits.length+" reporting groups matching / "+news.length+" displayed groups";
   $i("newsPageCount").textContent="Showing "+visible.length+" of "+hits.length+" grouped reports from "+rawHeadlineCount.toLocaleString("en-CA")+" indexed headlines";
@@ -63,13 +64,14 @@
   $i("newsAll").hidden=visible.length>=hits.length;
   $i("newsRows").innerHTML=hits.length?visible.map(x=>{
    const banks=x.banks_mentioned_in_headline||[];
+   const geography=({canadian_location_or_reference:"Canadian geographic clue",canada_linked_international:"Canada-linked international",international_context_explicit:"International context",geography_unresolved:"Location unverified"})[x.geographic_relevance]||"Location unverified";
    const n=Math.max(1,Number(x.variation_count||1));
    const sources=Math.max(1,Number(x.source_count||x.number_of_article_links||1));
    const mapAction=Number.isFinite(x.map_latitude)&&Number.isFinite(x.map_longitude)?
      '<button class="news-mapaction" type="button" data-mapfocus="'+esc(x.id)+'">Locate mention on map →</button>':"";
    return '<article class="news-item news-group"><div class="news-group-content">'+
      '<div class="news-item-title"><button class="report-open" type="button" data-story="'+esc(x.id)+'">'+esc(x.title)+'</button></div>'+
-     '<div class="news-meta">'+esc((x.published_at||"").slice(0,10))+' · '+esc(x.category||"Financial crime research")+
+     '<div class="news-meta">'+esc((x.published_at||"").slice(0,10))+' · '+esc(x.category||"Financial crime research")+' · '+esc(geography)+
        (banks.length?' · Named: '+esc(banks.join(", ")):"")+'</div>'+
      '<div class="news-rowtools"><button class="report-variations" type="button" data-story="'+esc(x.id)+'">'+
       (sources>1?sources+' original source links':"View original source")+
@@ -92,7 +94,7 @@
   const heading='<div class="eyebrow">REPORTING GROUP / EDITORIAL COMPARISON</div>'+
     '<h2>'+esc(x.title)+'</h2>'+
     '<p class="report-detail-meta">'+esc((x.published_at||"").slice(0,10))+
-    ' · '+esc(x.category||"Financial crime")+
+    ' · '+esc(x.category||"Financial crime")+' · '+esc(x.geographic_relevance_basis||"Geography not independently verified")+
     ' · '+Math.max(1,x.underlying_headline_count||1)+' indexed headline'+((x.underlying_headline_count||1)===1?"":"s")+
     ' · '+unique.length+' original source link'+(unique.length===1?"":"s")+'</p>';
   const variations=unique.map((v,i)=>
@@ -129,6 +131,7 @@
    $i("newsYear").addEventListener("change",()=>{newsVisible=100;renderNews()});
    $i("newsMonth").addEventListener("change",()=>{newsVisible=100;renderNews()});
    $i("newsBank").addEventListener("change",()=>{newsVisible=100;renderNews()});
+   $i("newsGeo").addEventListener("change",()=>{newsVisible=100;renderNews()});
    $i("newsSearch").addEventListener("input",()=>{newsVisible=100;renderNews()});
    $i("newsMore").addEventListener("click",()=>{newsVisible+=100;renderNews()});
    $i("newsAll").addEventListener("click",()=>{newsVisible=Number.MAX_SAFE_INTEGER;renderNews()});
