@@ -16,6 +16,7 @@ from urllib.parse import urlencode
 from email.utils import parsedate_to_datetime
 
 import requests
+from collect import CITIES, PROVINCE_CODES
 
 ROOT=Path(__file__).resolve().parents[1]
 DATA=ROOT/"data"
@@ -95,6 +96,17 @@ def relevant(title: str, publisher: str) -> bool:
   return False
  return domestic or any(name in p for name in DOMESTIC_PUBLISHERS)
 
+def headline_location(title: str) -> dict:
+ """City literally named in the headline — never inferred event location."""
+ for (city, province), (lat, lon) in sorted(CITIES.items(), key=lambda item: -len(item[0][0])):
+  if re.search(r"(?<!\\w)"+re.escape(city)+r"(?!\\w)", title, re.I):
+   return {"map_location": f"{city}, {province}",
+           "map_latitude": lat, "map_longitude": lon,
+           "map_province": PROVINCE_CODES[province],
+           "map_role": "headline city mention only; incident location unverified"}
+ return {}
+
+
 def collect():
  DATA.mkdir(parents=True,exist_ok=True)
  try:
@@ -129,7 +141,8 @@ def collect():
       "published_at":published,"first_seen_at":oldlead.get("first_seen_at",stamp()),
       "last_observed_at":stamp(),"topics":sorted(set(oldlead.get("topics",[])+[topic])),
       "category":classify(title),"evidence_status":"unverified_news_lead",
-      "geographic_accuracy":"not_geocoded",
+      "geographic_accuracy":"headline_only" if headline_location(title) else "not_geocoded",
+      **headline_location(title),
       "institution":None,"reported_loss":None,
       "notice":"Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness."
     }
@@ -138,6 +151,11 @@ def collect():
    status["sources"][topic]={"status":"ok" if items else "empty_feed","returned":len(items),"accepted":count}
   except Exception as exc:
    status["sources"][topic]={"status":"failed","error":str(exc)[:250]}
+ for lead in by_id.values():
+  for field in ("map_location","map_latitude","map_longitude","map_province","map_role"):
+   lead.pop(field,None)
+  lead.update(headline_location(lead.get("title","")))
+  lead["geographic_accuracy"]="headline_only" if lead.get("map_location") else "not_geocoded"
  leadlist=sorted((item for item in by_id.values() if relevant(item.get("title",""),item.get("publisher",""))),key=lambda x:x.get("published_at") or "",reverse=True)[:400]
  FEED.write_text(json.dumps({"updated_at":stamp(),"leads":leadlist},ensure_ascii=False,indent=2)+"\n","utf-8")
  status["stored_leads"]=len(leadlist)
