@@ -15,7 +15,7 @@
     "2023": 322,
     "2024": 328,
     "2025": 482,
-    "2026": 620
+    "2026": 624
   },
   "themes": [
     {
@@ -874,11 +874,22 @@
         "2023": 28,
         "2024": 10,
         "2025": 7,
-        "2026": 15
+        "2026": 16
       },
-      "total_headlines": 77,
+      "total_headlines": 78,
       "publisher_count": 24,
       "examples": [
+        {
+          "id": "85287cd6a6f0c3d873cd",
+          "title": "Winnipeg police suspending use of Crime Stoppers after data breach uncovered - CBC",
+          "date": "2026-10-23T22:27:43+00:00",
+          "publisher": "CBC",
+          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPSHdGdjRKRS1mRG9QR0JQZF80d1ZhOUdkRTJtck9nM2QyUFY4RWF2anNHU2VOMEhwd3BhM3hqeHVLVFN0UDZkUFdVVnFhQ1RNQ0FqVzNYYlcwQWFkVzkyYWVvbU1hcmhYOUQ4cTluaEhRQ21sVmg3TmFfN1Y0UGlxWFJQcl8ySWM?oc=5",
+          "geography": "Winnipeg, Manitoba",
+          "source_channels": [
+            "recent"
+          ]
+        },
         {
           "id": "1585b887923f9474a203",
           "title": "Indian and Pakistani men join hands in Canada to defraud banks using AI-generated fake identities - India.com",
@@ -1128,17 +1139,6 @@
           "date": "2024-12-04T08:00:00+00:00",
           "publisher": "CTV News",
           "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNbjJNMklfZzlyXzkyTlRWbjFFdjdoQW53Q25ka1JqVW1BR3hqaGdnLUtFRC1rUGd1U3FNUnVyRm5lNHlDOFlDc2JoVWJucWxFdktqVmw1dkMwRmJDaGJFVHVKYU9sNGQ0SGVWbE44UXZEeFFQVlcxbDI5M0xKMmQwZG01Q1ZkRWVVUlZCYm1HWDRiSmpvZVVfUlpMZS1YakVUekwxeEJkNEZma0Q1eGRZUklwNzZ3Nkh0UlBqdGpxSTRFM1NlbmlHbVJrbnVUM2pUc3RWeFdPWQ?oc=5",
-          "geography": null,
-          "source_channels": [
-            "historical"
-          ]
-        },
-        {
-          "id": "2b67a83ab57c652d566d",
-          "title": "Tens of thousands of taxpayer accounts hacked as CRA repeatedly paid out millions in bogus refunds - CBC",
-          "date": "2024-10-28T07:00:00+00:00",
-          "publisher": "CBC",
-          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNaEpSSE5waE9FUnZVbXBDbGdNb3RrYmFFbHFJSnliUVVpeXJmRDl1YTh3c3Vybl9fc2JqX2Q4M1pRay1rb0hVc0JwMF80SHJJc043czVLZjlJckFVb2ZaTE4yMFhNaE1oUVlwLXZTTTVhdkF2VnIzd2RNeVgyeEh0YjBZWWVUOXY2TXRUTFdOYzI?oc=5",
           "geography": null,
           "source_channels": [
             "historical"
@@ -3136,8 +3136,8 @@
       }
     }
   ],
-  "generated_at": "2026-10-24T03:10:51+00:00",
-  "articles_analyzed": 2325,
+  "generated_at": "2026-10-24T03:16:55+00:00",
+  "articles_analyzed": 2329,
   "methodology": "MULTI-LABEL keyword classification of unique article TITLES by publication year; multiple theme counts can arise from one headline. Year-to-year article counts reflect discovery methods, changing news coverage, and archived source availability, NOT measured changes in fraud incidence. Bank/platform mentions are not accusations and never counted as confirmed enforcement.",
   "scope": "Canadian financial-crime news discovery",
   "data_quality": "Headlines only; no full-article automated fact checking. Counts can change as the archive expands."
