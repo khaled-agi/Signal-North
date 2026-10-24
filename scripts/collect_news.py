@@ -31,6 +31,13 @@ QUERIES={
  "Québec fraude":'"fraude" "banque" "Québec" when:14d',
  "Credit unions and fintech":'"credit union" "fraud" "Canada" when:14d',
  "Fraud research and reports":'"fraud" "Canada" ("report" OR "study" OR "research") when:30d',
+ "Digital banking and fintech":'"Wealthsimple" "fraud" OR "scam" when:30d',
+ "Crypto investment and exchange":'"crypto" "fraud" "Canada" when:30d',
+ "Casino and iGaming AML":'"casino" "money laundering" "Canada" when:30d',
+ "Online gambling fraud":'"online gambling" "scam" "Canada" when:30d',
+ "Securities investigations":'"securities" "enforcement" "crypto" "Canada" when:30d',
+ "Social media scam reports":'"social media" "fraud" "Canada" when:30d',
+
 }
 HEADERS={"User-Agent":"Mozilla/5.0 (compatible; SignalNorthResearch/0.2; public news discovery)"}
 
