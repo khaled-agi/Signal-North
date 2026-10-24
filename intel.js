@@ -30,7 +30,7 @@
   {name:"Payment-system risk",value:"Planned",source:"Bank of Canada / Payments Canada",url:"https://www.bankofcanada.ca/",note:"Payment-system incidents and operational risk; distinguish from fraud"},
   {name:"Cyber incidents",value:"Planned",source:"Privacy Commissioner / Cyber Centre",url:"https://www.priv.gc.ca/en/opc-actions-and-decisions/investigations/",note:"Incident disclosures and privacy findings; differentiate alleged from confirmed"}
  ];
- let news=[],stats=[],bankDisclosure=[],events=[],incidents=[],newsWired=false,incidentsWired=false;
+ let news=[],stats=[],bankDisclosure=[],events=[],incidents=[],newsWired=false,incidentsWired=false,archiveCount=0;
  async function getJSON(path){
   const res=await fetch("./data/"+path+"?v="+Date.now(),{cache:"no-store"});
   if(!res.ok)throw Error(path+": HTTP "+res.status);
@@ -50,8 +50,10 @@
  function renderNews(){
   const q=$i("newsSearch").value.trim().toLowerCase();
   const t=$i("newsCategory").value;
-  const hits=news.filter(x=>(!t||x.category===t)&&(!q||[x.title,x.publisher,x.category,...(x.topics||[])].join(" ").toLowerCase().includes(q))).slice(0,100);
-  $i("newsCount").textContent=news.length+" discovered headlines";
+  const year=$i("newsYear").value;
+  const bank=$i("newsBank").value;
+  const hits=news.filter(x=>(!t||x.category===t)&&(!year||String(x.published_at||"").startsWith(year))&&(!bank||(x.banks_mentioned_in_headline||[]).includes(bank))&&(!q||[x.title,x.publisher,x.category,...(x.topics||[])].join(" ").toLowerCase().includes(q))).slice(0,250);
+  $i("newsCount").textContent=hits.length+" shown / "+news.length+" discovered headlines";
   $i("newsRows").innerHTML=hits.length?hits.map(x=>{
  const bank=x.banks_mentioned_in_headline||[],amount=x.amount_strings_in_headline||[];
  const notes=[bank.length?'Bank name in headline: '+bank.join(", "):"",amount.length?'Amount quoted: '+amount.join(", "):"",x.headline_case_candidate?"Possible individual victim story":""].filter(Boolean);
@@ -61,8 +63,17 @@
  function initNews(){
   const cats=[...new Set(news.map(x=>x.category).filter(Boolean))].sort();
   $i("newsCategory").innerHTML='<option value="">All fraud types</option>'+cats.map(x=>'<option value="'+esc(x)+'">'+esc(x)+"</option>").join("");
+  const years=[...new Set(news.map(x=>String(x.published_at||"").slice(0,4)).filter(y=>/^[0-9]{4}$/.test(y)))].sort().reverse();
+  const banks=[...new Set(news.flatMap(x=>x.banks_mentioned_in_headline||[]))].sort();
+  const prevYear=$i("newsYear").value,prevBank=$i("newsBank").value;
+  $i("newsYear").innerHTML='<option value="">All years</option>'+years.map(y=>'<option value="'+esc(y)+'">'+esc(y)+'</option>').join("");
+  $i("newsBank").innerHTML='<option value="">All named banks</option>'+banks.map(b=>'<option value="'+esc(b)+'">'+esc(b)+'</option>').join("");
+  if(prevYear)$i("newsYear").value=prevYear;
+  if(prevBank)$i("newsBank").value=prevBank;
   if(!newsWired){
    $i("newsCategory").addEventListener("change",renderNews);
+   $i("newsYear").addEventListener("change",renderNews);
+   $i("newsBank").addEventListener("change",renderNews);
    $i("newsSearch").addEventListener("input",renderNews);
    newsWired=true;
   }
@@ -141,11 +152,15 @@
  }
  async function boot(){
   renderCatalog();
-  const names=["fraud_stats.json","news.json","bank_disclosures.json","events.json","news_status.json","incidents.json"];
+  const names=["fraud_stats.json","news.json","bank_disclosures.json","events.json","news_status.json","incidents.json","news_archive.json"];
   const fetched=await Promise.allSettled(names.map(getJSON));
   if(fetched[0].status==="fulfilled")stats=fetched[0].value.metrics||[];
   else $i("fraudNational").innerHTML='<div class="error">Fraud statistics unavailable: '+esc(String(fetched[0].reason))+'</div>';
-  if(fetched[1].status==="fulfilled")news=fetched[1].value.leads||[];
+  const recent=fetched[1].status==="fulfilled"?(fetched[1].value.leads||[]):[];
+  const history=fetched[6].status==="fulfilled"?(fetched[6].value.leads||[]):[];
+  archiveCount=history.length;
+  news=[...new Map([...recent,...history].map(x=>[x.id,x])).values()].sort((a,b)=>String(b.published_at||"").localeCompare(String(a.published_at||"")));
+  $i("archiveCount").textContent=archiveCount?archiveCount.toLocaleString()+" historical headlines indexed · "+news.length.toLocaleString()+" total unique headlines":"Historical archive awaiting initial backfill · "+recent.length+" recent headlines";
   const newsStatus=fetched[4].status==="fulfilled"?fetched[4].value:{};
   const lastUpdated=newsStatus.last_completed_at||(fetched[1].status==="fulfilled"?fetched[1].value.updated_at:null);
   renderHomeHeadlines(lastUpdated);
