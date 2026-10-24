@@ -9,6 +9,7 @@ on:
       - '*.css'
       - 'scripts/build_intelligence_graph.py'
       - 'scripts/build_article_index.py'
+      - 'scripts/build_theme_trends.py'
       - 'data/**'
       - 'tests/**'
       - '.github/workflows/browser-test.yml'
@@ -31,6 +32,7 @@ jobs:
           python -m pip install -r requirements.txt
           python scripts/build_article_index.py
           python scripts/build_intelligence_graph.py
+          python scripts/build_theme_trends.py
           python -m unittest discover -s tests -p 'test_logic.py'
       - name: Test actual rendered dashboard
         run: python tests/smoke_site.py
