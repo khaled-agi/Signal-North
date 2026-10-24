@@ -128,5 +128,26 @@ class GroupedReportingTests(unittest.TestCase):
   self.assertIn("not independently verified",group["grouping_disclaimer"])
   self.assertEqual(group["article_ids"],[row["id"]])
 
+class ReviewedCaseNarrativeTests(unittest.TestCase):
+ def test_reviewed_case_sequencing_is_attributed_and_nonempty(self):
+  # Schema guard, not independent verification of the underlying claims.
+  record=json.loads((Path(__file__).resolve().parents[1]/"data"/"incidents.json").read_text("utf-8"))
+  incidents=record["incidents"]
+  self.assertGreaterEqual(len(incidents),6)
+  self.assertEqual(len({x["id"] for x in incidents}),len(incidents))
+  for case in incidents:
+   with self.subTest(case=case["id"]):
+    self.assertTrue(case["source_url"].startswith("https://"))
+    self.assertIn(case["amount_type"],("victim_reported_loss","unauthorized_credit_exposure","recovered_amount"))
+    self.assertIn(case["institution_role"],(
+     "customer_financial_institution","institution_impersonated",
+     "bank_not_identified","unnamed_financial_institution_assisted_recovery"))
+    stages=case["investigation"]["stages"]
+    questions=case["investigation"]["questions"]
+    self.assertGreaterEqual(len(stages),2)
+    self.assertGreaterEqual(len(questions),2)
+    self.assertTrue(all(len(stage)==2 and all(isinstance(s,str) and s.strip() for s in stage) for stage in stages))
+    self.assertTrue(all(isinstance(q,str) and q.strip().endswith("?") for q in questions))
+
 if __name__=="__main__":
  unittest.main()

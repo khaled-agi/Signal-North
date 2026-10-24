@@ -217,7 +217,7 @@ function initMap(){
   (layers!=="major"||Number(e.penalty_cad)>=1000000)).map(e=>mapRecord("reg",e)));
  if(state.mapProvince)records=records.filter(x=>x.province===state.mapProvince);
  const query=($("#mapStorySearch")?.value||"").trim().toLowerCase();
- if(query)records=records.filter(x=>[x.title,x.publisher,x.location].some(y=>String(y||"").toLowerCase().includes(query)));
+ if(query)records=records.filter(x=>[x.searchText,x.publisher,x.location].some(y=>String(y||"").toLowerCase().includes(query)));
  records.sort((x,y)=>String(y.date).localeCompare(String(x.date)));
  state.mapRows=records;
  const byYear={};
@@ -320,9 +320,12 @@ document.addEventListener("click",e=>{
  if(focus){
    // From the News Explorer: clear conflicting filters and show the matching
    // marker rather than jumping to an invisible map.
-   if(state.mapProvince||state.mapMonth||state.clientFocus||state.mapMode!=="all"){
+   if(state.mapProvince||state.mapMonth||state.mapTopic||state.mapYearFrom||state.mapYearTo||state.clientFocus||state.mapMode!=="all"){
     state.mapProvince="";$("#mapProvince").value="";
     state.mapMonth="";$("#mapMonth").value="";
+    state.mapTopic="";$("#mapTopic").value="";
+    state.mapYearFrom="";$("#mapYearFrom").value="";
+    state.mapYearTo="";$("#mapYearTo").value="";
     state.clientFocus="";state.mapMode="all";
     document.querySelectorAll("[data-mapmode]").forEach(b=>b.classList.toggle("active",b.dataset.mapmode==="all"));
     initMap();

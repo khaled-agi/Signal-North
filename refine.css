@@ -158,3 +158,32 @@ a,.link-btn{color:#185f67}
 #fraud .filters{display:grid;grid-template-columns:minmax(150px,2fr) repeat(5,minmax(102px,1fr));gap:8px}
 @media(max-width:1050px){#fraud .filters{grid-template-columns:repeat(3,minmax(0,1fr))}#fraud .filters input{grid-column:span 3}}
 @media(max-width:700px){#fraud .filters{grid-template-columns:repeat(2,minmax(0,1fr))}#fraud .filters input{grid-column:span 2}.map-controls>select{flex:1 1 45%;max-width:none}.map-year-bars{grid-template-columns:repeat(7,minmax(0,1fr));gap:3px}}
+
+
+/* Source-attributed case research: one narrative with a clear evidence trail. */
+.case-research-intro{padding:0 2px 18px;max-width:880px}
+.case-research-intro h2{font-family:var(--serif,Georgia,serif);font-weight:500;font-size:29px;line-height:1.15;margin:5px 0 8px;color:#1c3b4a}
+.case-research-intro p{margin:0;color:#526f7e;font-size:13px;line-height:1.7}
+.case-actions{padding:8px 0 2px}
+.case-investigate{border:1px solid #b8d5d4;background:#e7f2f1;color:#165860;font-weight:750;border-radius:6px;cursor:pointer;padding:9px 13px;font-size:12px}
+.case-investigate:hover{background:#d5eae8}
+.case-investigation-intro{font-size:14px;line-height:1.75;color:#3b5868}
+.case-fact-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:18px 0 24px}
+.case-fact-grid>div{display:flex;flex-direction:column;gap:4px;padding:12px;background:#f5f9fa;border:1px solid #e0ebee;border-radius:7px;min-width:0}
+.case-fact-grid span{font-size:10px;letter-spacing:.5px;text-transform:uppercase;color:#54737f;font-weight:750}
+.case-fact-grid strong{font-size:14px;line-height:1.4;color:#183f4c;overflow-wrap:anywhere}
+.case-fact-grid small{font-size:11px;line-height:1.4;color:#58717c}
+.case-evidence-explainer{font-size:12px!important;color:#647d86!important;line-height:1.6}
+.case-steps{list-style:none;padding:0 0 0 6px;margin:14px 0 20px}
+.case-step{display:flex;align-items:start;gap:14px;position:relative;padding:0 0 22px}
+.case-step:not(:last-child):before{content:"";position:absolute;left:13px;top:30px;bottom:0;width:1px;background:#c7dadf}
+.case-step-num{width:27px;height:27px;flex:none;display:flex;align-items:center;justify-content:center;border:1px solid #c0dadb;background:#edf6f4;color:#165d63;border-radius:50%;font-size:11px;font-weight:800}
+.case-step strong{color:#214554;font-size:13px}
+.case-step p{font-size:12px;line-height:1.65;margin:4px 0 0!important;color:#425e6c}
+.case-evidence-list{display:grid;grid-template-columns:minmax(105px,.65fr) minmax(0,1.35fr);gap:7px 12px;font-size:12px;margin:14px 0}
+.case-evidence-list dt{margin:0!important;color:#587280;font-weight:650}
+.case-evidence-list dd{margin:0!important;color:#193c4d}
+.case-questions{padding-left:20px;color:#35596a;font-size:12px;line-height:1.7}
+.case-questions li{padding-bottom:9px}
+.case-primary-source{padding:17px 0;border-top:1px solid #dae5e8;margin-top:15px;font-size:12px}
+@media(max-width:520px){.case-fact-grid{grid-template-columns:1fr}.case-evidence-list{grid-template-columns:1fr}}
