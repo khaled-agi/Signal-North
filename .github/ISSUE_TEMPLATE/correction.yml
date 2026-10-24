@@ -1,0 +1,45 @@
+name: Record correction or source follow-up
+description: Correct source metadata, amounts, dates or attribution using public evidence. Not anonymous.
+title: "[Correction] "
+labels: ["correction", "needs-review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Corrections are publicly visible with your GitHub username.
+        Do not include confidential documents, account numbers, private persons' identities or unsupported accusations.
+  - type: input
+    id: record
+    attributes:
+      label: Existing Signal North record or page
+      placeholder: https://khaled-agi.github.io/Signal-North/
+    validations:
+      required: true
+  - type: dropdown
+    id: problem
+    attributes:
+      label: What needs correcting?
+      options:
+        - Source link or publication date
+        - Amount, currency or penalty status
+        - Duplicate story or case relationship
+        - Institution role or legal name
+        - Geographic attribution
+        - Outdated outcome, appeal or correction
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Public evidence for correction
+      description: Explain the specific change requested, with at least one original source URL.
+    validations:
+      required: true
+  - type: checkboxes
+    id: acknowledgement
+    attributes:
+      label: Safety
+      options:
+        - label: No private identifiers or confidential material are included; this will be publicly visible.
+          required: true
