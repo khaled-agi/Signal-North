@@ -70,6 +70,14 @@ try:
         assert page.locator("#incidentRows .case-item").count() >= 5
         page.locator("#incidentSearch").fill("Scotiabank")
         assert page.locator("#incidentRows .case-item").count() == 1
+        page.locator("#incidentRows [data-case-investigate]").first.click()
+        assert "Reported sequence" in page.locator("#drawerBody").inner_text()
+        assert "Credit exposure" in page.locator("#drawerBody").inner_text()
+        assert "Investigator research prompts" in page.locator("#drawerBody").inner_text()
+        assert page.locator("#drawerBody .case-step").count() >= 2
+        assert page.locator("#drawerBody .case-primary-source a").count() == 1
+        page.locator("#close").click()
+        print("Reviewed source-backed case investigation drawer: PASS")
         page.locator('[data-tab="overview"]').click()
         page.locator('[data-mapmode="news"]').click()
         assert "mapped" in page.locator("#mapCaption").inner_text()
@@ -97,6 +105,8 @@ try:
         page.locator("#mapStoryScope").select_option("mapped")
         assert page.locator('#mappedStories button[data-mapfocus]').count() > 0
         page.locator("#mapStoryScope").select_option("all")
+        known_location = page.locator("#mappedStories [data-mapfocus]").first.get_attribute("data-mapfocus")
+        assert known_location
         assert page.locator("#mapTopic option").count() >= 2
         page.locator("#mapYearFrom").select_option("2023")
         page.locator("#mapYearTo").select_option("2026")
@@ -107,13 +117,28 @@ try:
         page.locator("#mapMonth").fill("2026-03")
         assert "2026-03" in page.locator("#mapCaption").inner_text()
         page.locator("#mapClearMonth").click()
+        page.locator("#mapTopic").select_option(index=1)
+        page.locator("#mapYearFrom").select_option("2020")
+        page.locator("#mapYearTo").select_option("2020")
+        page.evaluate("""id => {
+            const control = document.createElement('button');
+            control.dataset.mapfocus = id;
+            document.body.appendChild(control);
+            control.click();
+            control.remove();
+        }""", known_location)
+        assert page.locator("#mapTopic").input_value() == ""
+        assert page.locator("#mapYearFrom").input_value() == ""
+        assert page.locator("#mapYearTo").input_value() == ""
+        assert page.locator("#mappedStories [data-mapfocus]").count() > 0
+        print("Article-to-map navigation clears conflicting filters: PASS")
         page.locator('[data-tab="fraud"]').click()
         page.wait_for_function("document.querySelector('#newsYear').options.length > 1", timeout=15000)
         print("News archive count:", page.locator("#archiveCount").inner_text())
         if (ROOT / "data" / "news_archive.json").exists():
             archive = json.loads((ROOT / "data" / "news_archive.json").read_text())
             assert len(archive["leads"]) >= 300
-            assert "historic discoveries" in page.locator("#archiveCount").inner_text()
+            assert "reporting groups" in page.locator("#archiveCount").inner_text()
             first_page = page.locator("#newsRows .news-item").count()
             assert first_page == 100, f"Expected paginated 100 stories, got {first_page}"
             page.locator("#newsMore").click()
