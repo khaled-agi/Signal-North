@@ -9,6 +9,15 @@
    try{const u=new URL(url);if(u.protocol!=="https:")return "";return '<a href="'+esc(u.href)+'" target="_blank" rel="noopener noreferrer">'+esc(label)+' ↗</a>'}catch{return ""}
  };
  const state={institutions:[],queue:[],selected:null,visible:35,reviewVisible:35};
+ const reviewStorageKey="signalnorth.article_review.v1";
+ function reviewMeta(){
+   try{const d=JSON.parse(localStorage.getItem(reviewStorageKey)||"{}");return d&&typeof d==="object"?d:{}}catch{return {}}
+ }
+ function persistReview(id,change){
+   const d=reviewMeta();d[id]={...(d[id]||{}),...change};
+   try{localStorage.setItem(reviewStorageKey,JSON.stringify(d))}catch(e){console.warn("Local review storage unavailable",e)}
+ }
+
  const kindName={enforcement:"Regulator decision",incident:"Source-reviewed reported case",headline:"Unverified headline"};
  const labels={subject_of_enforcement:"Subject of published regulatory action",
  customer_financial_institution:"Customer's reported bank",institution_impersonated:"Institution reportedly impersonated",
@@ -74,16 +83,36 @@
    '<p class="evidence-footnote">News links here are headline-level mentions and may not describe a fraud case or wrongdoing by this institution. Original articles require review before case-level conclusions.</p>';
  }
  function renderQueue(){
-   const f=el("reviewType").value,q=normalize(el("reviewSearch").value);
-   const items=state.queue.filter(x=>(f==="all"||(f==="bank"&&x.banks.length)||(f==="amount"&&x.amount_text.length)||(f==="victim"&&x.priority_basis.includes("possible victim story")))&&
+   const f=el("reviewType").value,q=normalize(el("reviewSearch").value),wanted=el("reviewState").value;
+   const saved=reviewMeta();
+   const items=state.queue.filter(x=>
+    (f==="all"||(f==="bank"&&x.banks.length)||(f==="amount"&&x.amount_text.length)||(f==="victim"&&x.priority_basis.includes("possible victim story")))&&
+    (wanted==="all"||(saved[x.article_id]?.status||"New")===wanted)&&
     (!q||normalize([x.headline,x.publisher,...x.banks].join(" ")).includes(q)));
-   el("reviewCount").textContent=items.length+" unverified leads to review";
-   el("reviewRows").innerHTML=items.slice(0,state.reviewVisible).map(x=>
-    '<article class="review-item"><div class="review-p"><span>REVIEW PRIORITY '+x.priority+'/9 · '+esc(date(x.date))+'</span><span>'+esc((x.banks||[]).join(", ")||"No bank named")+'</span></div>'+
+   el("reviewCount").textContent=items.length+" research leads matching filters";
+   el("reviewRows").innerHTML=items.slice(0,state.reviewVisible).map(x=>{
+    const info=saved[x.article_id]||{status:"New",note:""};
+    const options=["New","In review","Documented","Dismissed"];
+    const reviewControls='<div class="review-edit"><label>Analyst status<select data-review-status="'+esc(x.article_id)+'">'+options.map(x=>'<option value="'+esc(x)+'"'+(info.status===x?" selected":"")+'>'+esc(x)+'</option>').join("")+'</select></label><label>Research note<textarea rows="2" data-review-note="'+esc(x.article_id)+'" placeholder="What does the original source actually establish?">'+esc(info.note||"")+'</textarea></label></div>';
+    return '<article class="review-item"><div class="review-p"><span>REVIEW PRIORITY '+x.priority+'/9 · '+esc(date(x.date))+'</span><span>'+esc((x.banks||[]).join(", ")||"No bank named")+'</span></div>'+
     '<div class="review-title">'+safeLink(x.source_url,x.headline)+'</div><div class="small">'+esc(x.publisher||"Publisher")+" · "+esc((x.priority_basis||[]).join("; "))+'</div>'+
-    '<p class="review-next">Next step: '+esc(x.next_step)+'</p></article>').join("")+
+    '<p class="review-next">Next step: '+esc(x.next_step)+'</p>'+reviewControls+'</article>';
+   }).join("")+
     (items.length>state.reviewVisible?'<button id="reviewMore" type="button" class="connection-more">Show additional review leads ↓</button>':"")+
-    (!items.length?'<div class="empty">No matching unverified leads in this research queue.</div>':"");
+    (!items.length?'<div class="empty">No matching articles at this review status.</div>':"");
+ }
+ function exportReview(){
+   const saved=reviewMeta();
+   const rows=[["Article ID","Published","Title","Bank names (unverified)","Analyst status","Research notes","Source URL"]];
+   for(const x of state.queue){
+    const info=saved[x.article_id]||{status:"New",note:""};
+    if(info.status==="New"&&!info.note)continue;
+    rows.push([x.article_id,x.date,x.headline,(x.banks||[]).join(";"),info.status,info.note,x.source_url]);
+   }
+   const csv=rows.map(r=>r.map(v=>'"'+String(v??"").replace(/"/g,'""')+'"').join(",")).join("\r\n");
+   const url=URL.createObjectURL(new Blob([csv],{type:"text/csv;charset=utf-8"}));
+   const a=document.createElement("a");a.href=url;a.download="signal-north-reviewed-article-notes.csv";
+   document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(url);
  }
  function selectByName(name){
   const n=normalize(name);
@@ -125,12 +154,22 @@
   window.dispatchEvent(new CustomEvent("signalnorth:clientfocus",{detail:{name:x.name}}));
  });
  el("reviewType").addEventListener("change",()=>{state.reviewVisible=35;renderQueue()});
+ el("reviewState").addEventListener("change",()=>{state.reviewVisible=35;renderQueue()});
+ el("reviewExport").addEventListener("click",exportReview);
  el("reviewSearch").addEventListener("input",()=>{state.reviewVisible=35;renderQueue()});
+ document.addEventListener("change",e=>{
+  const control=e.target.closest("[data-review-status]");
+  if(control){persistReview(control.dataset.reviewStatus,{status:control.value});if(el("reviewState").value!=="all")renderQueue();}
+ });
+ document.addEventListener("input",e=>{
+  const note=e.target.closest("[data-review-note]");
+  if(note)persistReview(note.dataset.reviewNote,{note:note.value});
+ });
  document.addEventListener("click",event=>{
   if(event.target.closest("#connectionsMore")){state.visible+=35;renderInstitution()}
   if(event.target.closest("#reviewMore")){state.reviewVisible+=35;renderQueue()}
   const open=event.target.closest("[data-open-connection]");
-  if(open){document.querySelector('[data-tab="connections"]').click();selectByName(open.dataset.openConnection)}
+  if(open){if(typeof closeDrawer==="function")closeDrawer();document.querySelector('[data-tab="connections"]').click();selectByName(open.dataset.openConnection)}
  });
  window.addEventListener("signalnorth:selectinstitution",e=>{document.querySelector('[data-tab="connections"]').click();selectByName(e.detail?.name||"")});
  window.addEventListener("signalnorth:refresh",boot);
