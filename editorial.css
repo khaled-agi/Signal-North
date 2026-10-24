@@ -86,3 +86,7 @@ footer{color:#4b6477}
 .right-panel .mapped-story-feed{max-height:380px}.header-right #updated{display:none}
 }
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+/* Production-only adaptation: Replit preview notice removed. */
+.layout{min-height:100dvh}
+@media(min-width:801px){.sidebar{top:0;height:100dvh}}
