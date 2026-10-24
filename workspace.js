@@ -5,7 +5,7 @@
  const el=id=>document.getElementById(id);
  const key="signalnorth.watchlist.v1";
  const metaKey="signalnorth.clientnotes.v1";
- let institutions=[],records=[],cases=[],leads=[];
+ let institutions=[],records=[],cases=[],leads=[],graph=[];
  function read(){
   try{const a=JSON.parse(localStorage.getItem(key)||"[]");return Array.isArray(a)?a.filter(x=>typeof x==="string").slice(0,100):[]}
   catch{return []}
@@ -15,15 +15,24 @@
  function getMeta(){try{return JSON.parse(localStorage.getItem(metaKey)||"{}")||{}}catch{return {}}}
  function setMeta(value){try{localStorage.setItem(metaKey,JSON.stringify(value))}catch(e){console.warn("Client notes storage unavailable",e)}}
  function setNames(){
-  institutions=[...new Set([...records.map(x=>x.institution),...cases.map(x=>x.institution),...leads.flatMap(x=>x.banks_mentioned_in_headline||[])].filter(Boolean))].sort((a,b)=>a.localeCompare(b));
+  institutions=[...new Set([...graph.map(x=>x.name),...records.map(x=>x.institution),...cases.map(x=>x.institution),...leads.flatMap(x=>x.banks_mentioned_in_headline||[])].filter(Boolean))].sort((a,b)=>a.localeCompare(b));
   el("clientSuggestions").innerHTML=institutions.map(n=>'<option value="'+esc(n)+'"></option>').join("");
  }
+ function entity(name){const n=normalize(name);return graph.find(x=>normalize(x.name)===n||(x.aliases||[]).some(a=>normalize(a)===n));}
  function metrics(name){
+  const entry=entity(name);
+  if(entry){
+   const all=entry.evidence||[];
+   const r=all.filter(x=>x.kind==="enforcement").map(x=>({published_at:x.date,title:x.title,source_url:x.source_url}));
+   const c=all.filter(x=>x.kind==="incident").map(x=>({reported_at:x.date,title:x.title,source_url:x.source_url}));
+   const l=all.filter(x=>x.kind==="headline").map(x=>({published_at:x.date,title:x.title,url:x.source_url}));
+   return {r,c,l,totals:entry.counts};
+  }
   const n=normalize(name);
   const r=records.filter(x=>normalize(x.institution)===n);
   const c=cases.filter(x=>normalize(x.institution)===n);
   const l=leads.filter(x=>(x.banks_mentioned_in_headline||[]).some(z=>normalize(z)===n));
-  return {r,c,l};
+  return {r,c,l,totals:{enforcement:r.length,incidents:c.length,headlines:l.length}};
  }
  function render(){
   setNames();const names=read();
@@ -35,24 +44,29 @@
  }
  function add(){
   const name=el("clientName").value.trim();if(!name)return;
-  const known=institutions.find(x=>normalize(x)===normalize(name))||name;
+  const known=entity(name)?.name||institutions.find(x=>normalize(x)===normalize(name))||name;
   const next=read();if(!next.some(x=>normalize(x)===normalize(known))){next.unshift(known);save(next)}
   el("clientName").value="";render();
  }
  function exportCSV(){
-  const rows=[["Institution","Research stage","Private notes","Regulatory notices","Reported customer cases","Unverified headline mentions"],...read().map(name=>{const m=metrics(name),p=getMeta()[normalize(name)]||{};return [name,p.status||"Monitoring",p.note||"",m.r.length,m.c.length,m.l.length]})];
+  const rows=[["Institution","Research stage","Private notes","Regulatory notices","Reported customer cases","Unverified headline mentions"],...read().map(name=>{const m=metrics(name),p=getMeta()[normalize(name)]||{};return [name,p.status||"Monitoring",p.note||"",m.totals.enforcement,m.totals.incidents,m.totals.headlines]})];
   const csv=rows.map(row=>row.map(v=>'"'+String(v).replace(/"/g,'""')+'"').join(",")).join("\r\n");
   const blob=new Blob([csv],{type:"text/csv;charset=utf-8"});const url=URL.createObjectURL(blob);
   const a=document.createElement("a");a.href=url;a.download="signal-north-client-watchlist.csv";document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(url);
  }
  async function boot(){
   try{
-   const files=["events.json","incidents.json","news.json","news_archive.json","article_index.json"];
-   const results=await Promise.all(files.map(async file=>{const res=await fetch("./data/"+file+"?t="+Date.now(),{cache:"no-store"});return res.ok?res.json():{}}));
-   records=results[0].events||[];cases=results[1].incidents||[];
-   const combined=[...(results[2].leads||[]),...(results[3].leads||[])];
-   leads=(results[4].articles||[]).length?results[4].articles:[...new Map(combined.map(e=>[e.id,e])).values()];
-  }catch(e){console.warn("Client source load incomplete",e)}
+   const res=await fetch("./data/institution_intelligence.json?t="+Date.now(),{cache:"no-store"});
+   if(!res.ok)throw Error("Graph not published yet");
+   const d=await res.json();graph=d.institutions||[];
+  }catch(e){
+   console.warn("Source-linked graph unavailable, using legacy source snapshot",e);
+   try{
+    const files=["events.json","incidents.json","article_index.json"];
+    const results=await Promise.all(files.map(async file=>{const res=await fetch("./data/"+file+"?t="+Date.now());return res.ok?res.json():{}}));
+    records=results[0].events||[];cases=results[1].incidents||[];leads=results[2].articles||[];
+   }catch(err){console.warn("Source snapshot unavailable",err)}
+  }
   render();
  }
  document.addEventListener("change",e=>{
@@ -72,6 +86,14 @@
  el("clientAdd").addEventListener("click",add);
  el("clientName").addEventListener("keydown",e=>{if(e.key==="Enter")add()});
  el("exportWatchlist").addEventListener("click",exportCSV);
+ window.addEventListener("signalnorth:trackinstitution",e=>{
+  const name=e.detail?.name;
+  if(!name)return;
+  const chosen=entity(name)?.name||name;
+  const all=read();
+  if(!all.some(x=>normalize(x)===normalize(chosen))){all.unshift(chosen);save(all)}
+  render();
+ });
  window.addEventListener("signalnorth:refresh",boot);
  if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",boot);else boot();
 })();
