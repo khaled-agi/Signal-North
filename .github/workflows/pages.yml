@@ -43,6 +43,7 @@ jobs:
           node --check intel.js
           node --check workspace.js
           node --check connections.js
+          node --check research.js
           python -m unittest discover -s tests -p 'test_logic.py'
       - name: Collect regulator publications
         env:
@@ -89,7 +90,7 @@ jobs:
       - name: Assemble cache-busted static website
         run: |
           mkdir -p _site/data
-          cp index.html styles.css light.css editorial.css connections.css app.js intel.js workspace.js connections.js .nojekyll _site/
+          cp index.html styles.css light.css editorial.css connections.css research.css app.js intel.js workspace.js connections.js research.js .nojekyll _site/
           cp data/events.json data/status.json data/news.json data/news_status.json data/fraud_stats.json data/bank_disclosures.json data/incidents.json _site/data/
           if [ -f data/news_archive.json ]; then cp data/news_archive.json _site/data/; fi
           if [ -f data/archive_status.json ]; then cp data/archive_status.json _site/data/; fi
@@ -97,6 +98,7 @@ jobs:
           if [ -f data/external_source_status.json ]; then cp data/external_source_status.json _site/data/; fi
           if [ -f data/publisher_source_status.json ]; then cp data/publisher_source_status.json _site/data/; fi
           cp data/institution_intelligence.json data/review_queue.json _site/data/
+          cp data/research_library.json _site/data/
           sed -i "s/__BUILD_SHA__/${GITHUB_SHA}/g" _site/index.html
       - name: Configure Pages
         uses: actions/configure-pages@v5
