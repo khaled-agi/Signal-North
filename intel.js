@@ -55,7 +55,7 @@
   const year=$i("newsYear").value;
   const month=$i("newsMonth").value;
   const bank=$i("newsBank").value;
-  const hits=news.filter(x=>(!t||x.category===t)&&(!year||String(x.published_at||"").startsWith(year))&&(!month||String(x.published_at||"").slice(5,7)===month)&&(!bank||(x.banks_mentioned_in_headline||[]).includes(bank))&&(!q||[x.title,x.publisher,x.category,...(x.topics||[])].join(" ").toLowerCase().includes(q)));
+  const hits=news.filter(x=>(!t||x.category===t)&&(!year||String(x.published_at||"").startsWith(year))&&(!month||String(x.published_at||"").slice(5,7)===month)&&(!bank||(x.banks_mentioned_in_headline||[]).includes(bank))&&(!q||[x.title,x.publisher,x.category,...(x.topics||[]),...(x.headline_variations||[]).map(v=>v.title)].join(" ").toLowerCase().includes(q)));
   const visible=hits.slice(0,newsVisible);
   $i("newsCount").textContent=hits.length+" reporting groups matching / "+news.length+" displayed groups";
   $i("newsPageCount").textContent="Showing "+visible.length+" of "+hits.length+" grouped reports from "+rawHeadlineCount.toLocaleString("en-CA")+" indexed headlines";
@@ -234,7 +234,7 @@
       :'<div class="source-line"><span class="small">RCMP / GDELT source-health data will appear after the next successful collection.</span></div>';
   const lastUpdated=newsStatus.last_completed_at||(fetched[1].status==="fulfilled"?fetched[1].value.updated_at:null);
   renderHomeHeadlines(lastUpdated);
-  window.dispatchEvent(new CustomEvent("signalnorth:newsready",{detail:{leads:news}}));
+  window.dispatchEvent(new CustomEvent("signalnorth:newsready",{detail:{leads:news,rawHeadlineCount}}));
   if(fetched[2].status==="fulfilled")bankDisclosure=fetched[2].value.records||[];
   if(fetched[3].status==="fulfilled")events=fetched[3].value.events||[];
   if(fetched[5].status==="fulfilled")incidents=fetched[5].value.incidents||[];
