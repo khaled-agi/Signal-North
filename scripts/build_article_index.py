@@ -15,7 +15,7 @@ from urllib.parse import urlparse
 
 DATA=Path(__file__).resolve().parents[1]/"data"
 OUTPUT=DATA/"article_index.json"
-INPUTS=[("news.json","recent"),("news_archive.json","historical")]
+INPUTS=[("news.json","recent"),("news_archive.json","historical"),("publisher_news.json","publisher_rss")]
 SUFFIX=re.compile(r"\s+[-–—|]\s+(?:CBC(?: News)?|CTV(?: News)?|Global News|"
     r"CityNews|Yahoo (?:Finance|News)|BNN Bloomberg|Toronto Star|"
     r"The Globe and Mail|National Post|La Presse|Radio-Canada|RCMP|"
@@ -30,7 +30,7 @@ def norm_title(s):
 def score_source(x):
     url=x.get("url","")
     src=x.get("discovery_source","")
-    return (3 if src=="rcmp_official_rss" else 2 if src=="gdelt_doc_2" else 1, 0 if "news.google.com" in url else 1)
+    return (4 if src=="rcmp_official_rss" else 3 if src=="publisher_rss" else 2 if src=="gdelt_doc_2" else 1, 0 if "news.google.com" in url else 1)
 
 def group_key(item):
     title=norm_title(item.get("title"))
@@ -65,7 +65,11 @@ def build():
             links[link]={"url":link,"publisher":item.get("publisher"),
                          "discovery_channel":item.get("discovery_source") or channel,
                          "date_basis":item.get("date_basis","reported_source_date")}
-        all_pub_dates=[x.get("published_at") for x,_ in items if x.get("published_at")]
+        # Prefer actual publisher or RSS publication dates over discovery time
+        # (GDELT seendate is when GDELT first noticed the page, not publication).
+        reported_dates=[x.get("published_at") for x,_ in items
+            if x.get("published_at") and x.get("date_basis")!="gdelt_first_observed_not_event_date"]
+        all_pub_dates=reported_dates or [x.get("published_at") for x,_ in items if x.get("published_at")]
         out["id"]=hashlib.sha256(key.encode()).hexdigest()[:20]
         out["article_links"]=list(links.values())[:20]
         out["number_of_article_links"]=len(links)
