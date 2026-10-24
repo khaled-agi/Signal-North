@@ -1,9 +1,9 @@
 {
-  "last_attempt_at": "2026-10-24T03:41:10+00:00",
+  "last_attempt_at": "2026-10-24T07:05:23+00:00",
   "sources": {
     "FINTRAC": {
-      "status": "failed",
-      "error": "502 Server Error: Bad Gateway for url: https://fintrac-canafe.canada.ca/pen/4-eng",
+      "status": "ok",
+      "scanned": 93,
       "url": "https://fintrac-canafe.canada.ca/pen/4-eng"
     },
     "FCAC": {
@@ -14,5 +14,5 @@
   },
   "previous_records": 98,
   "stored_records": 98,
-  "last_completed_at": "2026-10-24T03:41:11+00:00"
+  "last_completed_at": "2026-10-24T07:05:27+00:00"
 }
