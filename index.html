@@ -15,6 +15,7 @@
   <div class="brand"><div class="brand-mark">✳</div><div>signal<span>north</span><small>FINANCIAL CRIME INTELLIGENCE</small></div></div>
   <div class="side-caption">WORKSPACE</div>
   <button class="nav active" data-tab="overview">◈ &nbsp; Intelligence overview</button>
+  <button class="nav" data-tab="incidents">◎ &nbsp; Reported fraud cases</button>
   <button class="nav" data-tab="fraud">⚑ &nbsp; Fraud intelligence</button>
   <button class="nav" data-tab="losses">◫ &nbsp; Losses &amp; penalties</button>
   <button class="nav" data-tab="events">▤ &nbsp; Event explorer</button>
@@ -33,6 +34,7 @@
   <section id="overview" class="tab">
     <div class="metrics" id="metrics"></div>
     <section class="panel breaking-panel"><div class="panel-heading"><div><div class="eyebrow">GOOGLE NEWS DISCOVERY · CANADA</div><h2>Newest fraud &amp; scam reports</h2></div><button class="link-btn" data-to="fraud">Open news intelligence →</button></div><div class="breaking-meta"><span id="newsFreshness">Checking latest syndication snapshot...</span><a href="https://news.google.com/search?q=fraud%20scam%20Canada&hl=en-CA&gl=CA&ceid=CA%3Aen" rel="noopener" target="_blank">Browse Google News directly ↗</a></div><div id="headlinesTop" class="breaking-list"><div class="empty">News headlines are loading...</div></div></section>
+    <section class="panel"><div class="panel-heading"><div><div class="eyebrow">CUSTOMER FRAUD CASES / SOURCE-REVIEWED</div><h2>Recent reporting on individual incidents</h2></div><button class="link-btn" data-to="incidents">Explore case tracker →</button></div><div id="featuredIncidents" class="case-featured"><div class="empty">Loading individual fraud cases...</div></div></section>
     <div class="cols">
       <section class="panel map-panel"><div class="panel-heading"><div><div class="eyebrow">GEOGRAPHIC INTELLIGENCE</div><h2>Canadian financial-crime activity</h2></div><button id="mapReset" class="map-reset" type="button">⌖ Canada view</button></div>
     <div class="map-controls"><div class="map-mode" role="group" aria-label="Map event layers"><button type="button" data-mapmode="all" class="active">Both layers</button><button type="button" data-mapmode="enforcement">Enforcement</button><button type="button" data-mapmode="major">Major C$1M+</button><button type="button" data-mapmode="news">News leads</button></div><select id="mapProvince" aria-label="Map province filter"><option value="">All provinces</option></select></div>
@@ -43,6 +45,7 @@
     <section class="panel"><div class="panel-heading"><div><div class="eyebrow">FRAUD THREAT PULSE</div><h2>Canadian losses and emerging reports</h2></div><button class="link-btn" data-to="fraud">Explore fraud news →</button></div><div id="overviewFraud" class="fraud-overview"><div class="empty">Loading Canadian fraud intelligence...</div></div></section>
     <section class="panel"><div class="panel-heading"><div><div class="eyebrow">RECENT REGULATORY DEVELOPMENTS</div><h2>Latest tracked cases</h2></div><button class="link-btn" data-to="events">Explore all →</button></div><div id="recent" class="events-list"></div></section>
   </section>
+  <section id="incidents" class="tab hidden"><div class="panel"><div class="panel-heading"><div><div class="eyebrow">CASE INTELLIGENCE / CANADA</div><h2>Victim incidents and linked institutions</h2></div><span class="small" id="incidentCount">Loading...</span></div><div class="notice"><strong>Bank involvement is not bank culpability.</strong> Cases include fraud victims, impersonated institutions, refunds, and payment recovery. Publication dates are not necessarily incident dates. Amounts are tagged as victim losses, exposure, or recovered funds.</div><div class="case-filters"><input id="incidentSearch" type="search" placeholder="Search bank, scam type or location..."><select id="incidentProvince"><option value="">All provinces</option></select><select id="incidentBank"><option value="">All banks / unnamed</option></select></div><div id="incidentRows" class="incident-rows"></div></div></section>
   <section id="fraud" class="tab hidden">
     <div class="panel">
       <div class="panel-heading"><div><div class="eyebrow">FRAUD INTELLIGENCE / CANADA</div><h2>Reported fraud losses &amp; typologies</h2></div><span class="small">CAFC primary-source statistics</span></div>
