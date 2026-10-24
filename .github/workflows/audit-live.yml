@@ -1,0 +1,23 @@
+name: Audit published site
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'tests/smoke_published.py'
+      - '.github/workflows/audit-live.yml'
+permissions:
+  contents: read
+jobs:
+  browser-live:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install browser
+        run: |
+          python -m pip install playwright
+          python -m playwright install chromium --with-deps
+      - name: Audit actual public deployment
+        run: python tests/smoke_published.py
