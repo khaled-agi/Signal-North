@@ -30,6 +30,7 @@ QUERIES={
  "Investment schemes":'"investment scam" "Canada" when:14d',
  "Québec fraude":'"fraude" "banque" "Québec" when:14d',
  "Credit unions and fintech":'"credit union" "fraud" "Canada" when:14d',
+ "Fraud research and reports":'"fraud" "Canada" ("report" OR "study" OR "research") when:30d',
 }
 HEADERS={"User-Agent":"Mozilla/5.0 (compatible; SignalNorthResearch/0.2; public news discovery)"}
 
@@ -107,6 +108,30 @@ def headline_location(title: str) -> dict:
  return {}
 
 
+BANK_ALIASES = (
+ ("TD", ("td bank", "td canada trust", "toronto-dominion")),
+ ("RBC", ("rbc", "royal bank of canada")),
+ ("Scotiabank", ("scotiabank", "bank of nova scotia")),
+ ("BMO", ("bmo", "bank of montreal")),
+ ("CIBC", ("cibc",)),
+ ("Tangerine", ("tangerine bank", "tangerine")),
+ ("National Bank", ("national bank of canada",)),
+ ("Desjardins", ("desjardins",)),
+ ("Simplii", ("simplii financial",)),
+)
+HEADLINE_CASE_HINTS=("customer","client","victim","resident","woman","man ","family","lost","loses","defrauded","stolen","unauthorized","identity stolen","scammed","scam victim","account drained")
+
+def headline_claims(title: str) -> dict:
+ """Non-verified headline-only cues, never finalized institutional attribution."""
+ t=title.casefold()
+ banks=[name for name,aliases in BANK_ALIASES if any(re.search(r"(?<!\w)"+re.escape(a)+r"(?!\w)",t) for a in aliases)]
+ matches=re.findall(r"(?:C\$|CAD\s*|\$)\s*[\d,]+(?:\.\d+)?\s*(?:million|billion|[mMkK])?\b",title,re.I)
+ is_case=any(w in t for w in HEADLINE_CASE_HINTS)
+ is_research=bool(re.search(r"\b(?:research|study|industry report|annual report|survey|whitepaper|white paper)\b",t))
+ return {"banks_mentioned_in_headline":banks,"amount_strings_in_headline":matches[:3],
+         "headline_case_candidate":is_case,"content_kind":"research_report_lead" if is_research else "news_lead",
+         "extraction_provenance":"headline only; bank role, incident date, amount type and currency not verified"}
+
 def collect():
  DATA.mkdir(parents=True,exist_ok=True)
  try:
@@ -143,6 +168,7 @@ def collect():
       "category":classify(title),"evidence_status":"unverified_news_lead",
       "geographic_accuracy":"headline_only" if headline_location(title) else "not_geocoded",
       **headline_location(title),
+      **headline_claims(title),
       "institution":None,"reported_loss":None,
       "notice":"Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness."
     }
@@ -156,6 +182,7 @@ def collect():
    lead.pop(field,None)
   lead.update(headline_location(lead.get("title","")))
   lead["geographic_accuracy"]="headline_only" if lead.get("map_location") else "not_geocoded"
+  lead.update(headline_claims(lead.get("title","")))
  leadlist=sorted((item for item in by_id.values() if relevant(item.get("title",""),item.get("publisher",""))),key=lambda x:x.get("published_at") or "",reverse=True)[:400]
  FEED.write_text(json.dumps({"updated_at":stamp(),"leads":leadlist},ensure_ascii=False,indent=2)+"\n","utf-8")
  status["stored_leads"]=len(leadlist)
