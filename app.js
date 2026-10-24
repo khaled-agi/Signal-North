@@ -25,7 +25,7 @@ function rowHTML(e){
 function renderMetrics(){
  const e=state.events;const fines=e.filter(x=>x.penalty_cad!=null);const total=fines.reduce((a,b)=>a+Number(b.penalty_cad),0);const mapped=e.filter(x=>Number.isFinite(x.latitude)&&Number.isFinite(x.longitude));
  const values=[
- ["Indexed headlines",state.news.length?state.news.length.toLocaleString("en-CA"):"Loading", "Source-linked discoveries; not verified fraud incidents"],
+ ["Reporting groups",state.news.length?state.news.length.toLocaleString("en-CA"):"Loading", (state.rawHeadlineCount||0).toLocaleString("en-CA")+" indexed headlines · grouped, unverified reporting"],
  ["Official notices",String(e.length),"Regulator-published enforcement actions"],
  ["Reported cases",String(state.incidents.length),"Individually source-reviewed reports"],
  ["Institutions monitored",String(state.entityAliases.length||eventsByInstitution().length),"Canonical institution groups, where known"]
