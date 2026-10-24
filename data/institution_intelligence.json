@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-24T03:30:16+00:00",
-  "methodology": "Exact official institution names are canonically grouped by listed aliases. Articles linked to banks only when the bank is explicitly named in a headline. This is an evidence research aid, not proof of wrongdoing.",
+  "generated_at": "2026-10-24T03:31:17+00:00",
+  "methodology": "Institution names are canonically grouped using explicit aliases. Headline entries are conservative reporting groups, not distinct or independently verified fraud incidents; multiple publisher headlines are retained under each group. An institution mention is not proof of wrongdoing.",
   "source_counts": {
     "enforcement": 98,
     "reviewed_incidents": 6,
-    "unverified_articles": 2329
+    "unverified_report_groups": 2322
   },
   "institutions": [
     {
@@ -41,7 +41,7 @@
         },
         {
           "kind": "headline",
-          "id": "504e2824be4695423ba2",
+          "id": "report-194a6f8a120316b73b31",
           "date": "2026-10-14T07:00:00+00:00",
           "title": "TD Bank Investors Advance Suit Over Money Laundering Issues - Bloomberg Law News",
           "source_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQSzV1bTYydlpNUWt6OEE2Q2diNzZWOXFYa0tOTUgwZE16NGhWZWd2aWxrRFB5VHJxUFJlQ081TkYyYTZGTzdCZW5FMnEtMG9EMUdwcWdjaWw2a3V6bDdmZzduX0V5SkJFYUtsNDd0aFBrRDdfT1luS0RPenlvRFRYSW4zVjhHSW5MbHdKUlNsWW9YMTR5XzBJSkdGUVFIUk9rYWtubGJxcw?oc=5",
@@ -51,6 +51,16 @@
           "source_channels": [
             "recent"
           ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "TD Bank Investors Advance Suit Over Money Laundering Issues - Bloomberg Law News",
+              "publisher": "Bloomberg Law News",
+              "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQSzV1bTYydlpNUWt6OEE2Q2diNzZWOXFYa0tOTUgwZE16NGhWZWd2aWxrRFB5VHJxUFJlQ081TkYyYTZGTzdCZW5FMnEtMG9EMUdwcWdjaWw2a3V6bDdmZzduX0V5SkJFYUtsNDd0aFBrRDdfT1luS0RPenlvRFRYSW4zVjhHSW5MbHdKUlNsWW9YMTR5XzBJSkdGUVFIUk9rYWtubGJxcw?oc=5",
+              "published_at": "2026-10-14T07:00:00+00:00",
+              "discovery_channel": "recent"
+            }
+          ],
           "amount_text": [],
           "location": null,
           "evidence": "unverified_headline",
@@ -58,7 +68,7 @@
         },
         {
           "kind": "headline",
-          "id": "e8142dc3d46e5e9fe775",
+          "id": "report-5831b04a2938a773c003",
           "date": "2026-07-20T07:00:00+00:00",
           "title": "NEWS: Former TD Bank employee sentenced for role in money laundering scheme - AML Intelligence",
           "source_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPbTJOMjM4djlBSF9jR0lZVGI3bHRNWVVObnBhd0x4VEd6c3NvN0RJQ3dIVG1WOWYyUmNVZnItUEhwTnlYZUdqQTdTUXBsanZBczlBdGtxMUZzc0h1MXpSVTdtc0NlVUtOUFlERmJMaktPVTFHb3p0QWsyS2lzcUI2TGlhaWhjTjc1Tks0MGdoeUQzdk1KQkkxbnlnMi1uSDNxMEZSZzZyaEl5Vzc0NXA0?oc=5",
@@ -68,6 +78,16 @@
           "source_channels": [
             "historical"
           ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "NEWS: Former TD Bank employee sentenced for role in money laundering scheme - AML Intelligence",
+              "publisher": "AML Intelligence",
+              "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPbTJOMjM4djlBSF9jR0lZVGI3bHRNWVVObnBhd0x4VEd6c3NvN0RJQ3dIVG1WOWYyUmNVZnItUEhwTnlYZUdqQTdTUXBsanZBczlBdGtxMUZzc0h1MXpSVTdtc0NlVUtOUFlERmJMaktPVTFHb3p0QWsyS2lzcUI2TGlhaWhjTjc1Tks0MGdoeUQzdk1KQkkxbnlnMi1uSDNxMEZSZzZyaEl5Vzc0NXA0?oc=5",
+              "published_at": "2026-07-20T07:00:00+00:00",
+              "discovery_channel": "historical"
+            }
+          ],
           "amount_text": [],
           "location": null,
           "evidence": "unverified_headline",
@@ -75,7 +95,7 @@
         },
         {
           "kind": "headline",
-          "id": "71b7c1c522182035c3fd",
+          "id": "report-bc3b3b9c4f4e9e392943",
           "date": "2026-07-20T07:00:00+00:00",
           "title": "Ex-TD Bank employees sentenced in money-laundering scheme - American Banker",
           "source_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOZTVRZnM5ekhKNVBPbHZwQ1JmTEtOaXRMMERDMjhuZXRFNjVsYnU1T2QyYU05eWs4d2pXSDg2MXQzbXFhQjFPdi1PTDlDMVlxZ3BDQnRGQmlqaUtPemE2OU14OHB4dXhTaTdqNlJnUThROE9hS3dFMVpSem5xcG50eUFJV2R5ellHNXpRN2tEcnhhWkVTZlZteQ?oc=5",
@@ -85,6 +105,16 @@
           "source_channels": [
             "historical"
           ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "Ex-TD Bank employees sentenced in money-laundering scheme - American Banker",
+              "publisher": "American Banker",
+              "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOZTVRZnM5ekhKNVBPbHZwQ1JmTEtOaXRMMERDMjhuZXRFNjVsYnU1T2QyYU05eWs4d2pXSDg2MXQzbXFhQjFPdi1PTDlDMVlxZ3BDQnRGQmlqaUtPemE2OU14OHB4dXhTaTdqNlJnUThROE9hS3dFMVpSem5xcG50eUFJV2R5ellHNXpRN2tEcnhhWkVTZlZteQ?oc=5",
+              "published_at": "2026-07-20T07:00:00+00:00",
+              "discovery_channel": "historical"
+            }
+          ],
           "amount_text": [],
           "location": null,
           "evidence": "unverified_headline",
@@ -92,7 +122,7 @@
         },
         {
           "kind": "headline",
-          "id": "f30a2b5483d2ea461f83",
+          "id": "report-d18ecc6ddc5684e4e27a",
           "date": "2026-06-14T07:00:00+00:00",
           "title": "TD Bank customer on the hook for $15K after account hacked: CBC's Marketplace Cheat Sheet - CBC",
           "source_url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPenRDNFFHYUttNXY4ZTZkMDR6ODh0cHYydVByOGxySTRTNUYwVDVNaE1faEZLeWFHNFpWVmw1VDhvMy0waWZJQnFVRVZUdGtKVmJ1eUhqbjE3Mmw0NFJvdDBTWDR1dkN6WGVJTThPN3l6MlBhSl9IQy1ocHRvZ0tGeGktcWlkYjBnd2c?oc=5",
@@ -101,6 +131,16 @@
           "source_count": 1,
           "source_channels": [
             "historical"
+          ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "TD Bank customer on the hook for $15K after account hacked: CBC's Marketplace Cheat Sheet - CBC",
+              "publisher": "CBC",
+              "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPenRDNFFHYUttNXY4ZTZkMDR6ODh0cHYydVByOGxySTRTNUYwVDVNaE1faEZLeWFHNFpWVmw1VDhvMy0waWZJQnFVRVZUdGtKVmJ1eUhqbjE3Mmw0NFJvdDBTWDR1dkN6WGVJTThPN3l6MlBhSl9IQy1ocHRvZ0tGeGktcWlkYjBnd2c?oc=5",
+              "published_at": "2026-06-14T07:00:00+00:00",
+              "discovery_channel": "historical"
+            }
           ],
           "amount_text": [
             "$15K"
@@ -126,7 +166,7 @@
         },
         {
           "kind": "headline",
-          "id": "a0eb96cb3cf07b8b1f69",
+          "id": "report-a108fff2cd19bbfa826d",
           "date": "2025-09-22T07:00:00+00:00",
           "title": "TD Bank joins Anti-Scam Coalition, but tells customer she’s responsible for $10,000 lost in phone scam - Radio-Canada",
           "source_url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxObEN3S091TkExWHp4V2tLU2dXOVpESWY4ZlhwSTlQOU4telQxVHJjN0ZPZUVncDJZam9GdHRZdWxDd2ZEZ2VZamxaN00xNTdtUHc2WldrbGFXSEIyUTktaGZMQWJUendEM3pvcmtGVkdORG1kOW1teTRxdGhaOGptMWtEem1IWkxpQ1ZKalRzUXd0NWZWZzZ4RzRqRm5hdTV0NXZZWE13TllaWGdyeXR0VkJ5V3ZidGlGUWFCTmM4cDJGbVVEVzY2STUxQXRkbGZVU3ZjRDBBcFNIdDUxNnBuTA?oc=5",
@@ -136,6 +176,16 @@
           "source_channels": [
             "historical"
           ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "TD Bank joins Anti-Scam Coalition, but tells customer she’s responsible for $10,000 lost in phone scam - Radio-Canada",
+              "publisher": "Radio-Canada",
+              "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxObEN3S091TkExWHp4V2tLU2dXOVpESWY4ZlhwSTlQOU4telQxVHJjN0ZPZUVncDJZam9GdHRZdWxDd2ZEZ2VZamxaN00xNTdtUHc2WldrbGFXSEIyUTktaGZMQWJUendEM3pvcmtGVkdORG1kOW1teTRxdGhaOGptMWtEem1IWkxpQ1ZKalRzUXd0NWZWZzZ4RzRqRm5hdTV0NXZZWE13TllaWGdyeXR0VkJ5V3ZidGlGUWFCTmM4cDJGbVVEVzY2STUxQXRkbGZVU3ZjRDBBcFNIdDUxNnBuTA?oc=5",
+              "published_at": "2025-09-22T07:00:00+00:00",
+              "discovery_channel": "historical"
+            }
+          ],
           "amount_text": [
             "$10,000 "
           ],
@@ -145,7 +195,7 @@
         },
         {
           "kind": "headline",
-          "id": "7a5e917fc36dbc6ba57d",
+          "id": "report-2d80ca87dc5b8308db9f",
           "date": "2025-08-26T07:00:00+00:00",
           "title": "ICYMI: Niagara man loses nearly $10,000 in TD Bank e-transfer scam - ThoroldToday.ca",
           "source_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOWllOR2t6NjRLUGlFdldjc1owN3J2eVNiNG1JNzZiZVhwMWZXTjBRblhmRk53ZWVWeXdvWTJnRFZpNEtYQmJmaVJOXzk4MzJUMU13dzZMUjRLQVBVVEV2TkxyTzhfbTNxX1JjVFBOeTd1Q3dDQWlQeUZtYWRmR0NvQ0R1bEw3N1o1VjVFQmQ2N0RWdGZFUjk5MTRkRVpEVDlvd0NMNFZQN2dWa014STg0cg?oc=5",
@@ -155,6 +205,16 @@
           "source_channels": [
             "historical"
           ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "ICYMI: Niagara man loses nearly $10,000 in TD Bank e-transfer scam - ThoroldToday.ca",
+              "publisher": "ThoroldToday.ca",
+              "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOWllOR2t6NjRLUGlFdldjc1owN3J2eVNiNG1JNzZiZVhwMWZXTjBRblhmRk53ZWVWeXdvWTJnRFZpNEtYQmJmaVJOXzk4MzJUMU13dzZMUjRLQVBVVEV2TkxyTzhfbTNxX1JjVFBOeTd1Q3dDQWlQeUZtYWRmR0NvQ0R1bEw3N1o1VjVFQmQ2N0RWdGZFUjk5MTRkRVpEVDlvd0NMNFZQN2dWa014STg0cg?oc=5",
+              "published_at": "2025-08-26T07:00:00+00:00",
+              "discovery_channel": "historical"
+            }
+          ],
           "amount_text": [
             "$10,000 "
           ],
@@ -164,7 +224,7 @@
         },
         {
           "kind": "headline",
-          "id": "6e74627d5c63b7066d24",
+          "id": "report-5f60d11033b1dca7beb6",
           "date": "2025-05-02T07:00:00+00:00",
           "title": "TD bank returns $2k to victim of Facebook Marketplace scam - CTV News",
           "source_url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQei1oeVJGWXFHRkVlNTdNcXBYTnd2T3J1R1NxTWM5Uzdwa0NFOTN5TVVLOXdLd1VkWlZvQkxyMk82aWVObjl2SjNQYzljMEZINEtfT25TWXo5Y04zSndCS2thVlRkdzU2WTJ4ZVlXX0NtVFpPek9Edmp0cFB3d0Y0bTZsUFVHc0ZubTZSRGtIVExfWjBkdmc?oc=5",
@@ -173,6 +233,16 @@
           "source_count": 1,
           "source_channels": [
             "historical"
+          ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "TD bank returns $2k to victim of Facebook Marketplace scam - CTV News",
+              "publisher": "CTV News",
+              "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQei1oeVJGWXFHRkVlNTdNcXBYTnd2T3J1R1NxTWM5Uzdwa0NFOTN5TVVLOXdLd1VkWlZvQkxyMk82aWVObjl2SjNQYzljMEZINEtfT25TWXo5Y04zSndCS2thVlRkdzU2WTJ4ZVlXX0NtVFpPek9Edmp0cFB3d0Y0bTZsUFVHc0ZubTZSRGtIVExfWjBkdmc?oc=5",
+              "published_at": "2025-05-02T07:00:00+00:00",
+              "discovery_channel": "historical"
+            }
           ],
           "amount_text": [
             "$2k"
@@ -198,7 +268,7 @@
         },
         {
           "kind": "headline",
-          "id": "71bbe399a2b35bbdd56e",
+          "id": "report-364d35087e558eecb398",
           "date": "2024-10-10T07:00:00+00:00",
           "title": "TD Bank fined $3bn in historic money laundering settlement - BBC",
           "source_url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9Fb2NISi1jU0FRUlRsZ1pvY3FRLVVReHU0WVE4N3NZbkVXam1DT3lYQUZEOUxUdnFfTzNrdG4tSUV5UmhORURPSjFoRDg1RmZFS0pkMm5VVXpRQQ?oc=5",
@@ -208,6 +278,16 @@
           "source_channels": [
             "historical"
           ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "TD Bank fined $3bn in historic money laundering settlement - BBC",
+              "publisher": "BBC",
+              "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9Fb2NISi1jU0FRUlRsZ1pvY3FRLVVReHU0WVE4N3NZbkVXam1DT3lYQUZEOUxUdnFfTzNrdG4tSUV5UmhORURPSjFoRDg1RmZFS0pkMm5VVXpRQQ?oc=5",
+              "published_at": "2024-10-10T07:00:00+00:00",
+              "discovery_channel": "historical"
+            }
+          ],
           "amount_text": [],
           "location": null,
           "evidence": "unverified_headline",
@@ -215,7 +295,7 @@
         },
         {
           "kind": "headline",
-          "id": "3b223495fba8cacd733f",
+          "id": "report-85b0f0634acbc76abf96",
           "date": "2024-05-24T07:00:00+00:00",
           "title": "TD Bank's failure to thwart money laundering in U.S. prompts calls for stronger regulation at home - CBC",
           "source_url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQVUtOQW82OUZGVHIyMFdNVXl6ck1WUi1ZZ2lPR1lkR3JUU3pFZThWQTl6YUlTdjZST2RrbjBnWUEwU245RmhONnRkWE1qd1UtamUxbTJrVWhrNXlnVDdzSHFlSldkUjJSY1piY2paNTlkTXVJaFpmMHhxUXh5YW1tNDgtQWNVbEhSVGppWjc0UzVhdw?oc=5",
@@ -224,6 +304,16 @@
           "source_count": 1,
           "source_channels": [
             "historical"
+          ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "TD Bank's failure to thwart money laundering in U.S. prompts calls for stronger regulation at home - CBC",
+              "publisher": "CBC",
+              "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQVUtOQW82OUZGVHIyMFdNVXl6ck1WUi1ZZ2lPR1lkR3JUU3pFZThWQTl6YUlTdjZST2RrbjBnWUEwU245RmhONnRkWE1qd1UtamUxbTJrVWhrNXlnVDdzSHFlSldkUjJSY1piY2paNTlkTXVJaFpmMHhxUXh5YW1tNDgtQWNVbEhSVGppWjc0UzVhdw?oc=5",
+              "published_at": "2024-05-24T07:00:00+00:00",
+              "discovery_channel": "historical"
+            }
           ],
           "amount_text": [],
           "location": null,
@@ -247,7 +337,7 @@
         },
         {
           "kind": "headline",
-          "id": "24f2304a06a3db805a55",
+          "id": "report-bb361362d51c3ba6b61b",
           "date": "2024-02-04T08:00:00+00:00",
           "title": "Ottawa couple out $13k after scammer posing as TD Bank steals credit card info - CTV News",
           "source_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNd3FJdnZIU2x6QTBta3R3anEyRVdWNnU4dmNwN3RSZS1LUlpobVBSSUZnd1RKeTJlU3pKZEZYV2pQN3Q5R2Jua1FlYURkRExWQjl3WFdQN2pOR3VqQ29fdFFDdkhod21PSjRFcGFKWDYxdE81QllWLWdFVWpGRzRLZkhwUm14cl83cUFpZGR5Tk44eGxfTmhQblVuZjQzbG1fc1JQaDFuQTF1bmh0TFRaSlRuWmRoNkk?oc=5",
@@ -256,6 +346,16 @@
           "source_count": 1,
           "source_channels": [
             "historical"
+          ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "Ottawa couple out $13k after scammer posing as TD Bank steals credit card info - CTV News",
+              "publisher": "CTV News",
+              "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNd3FJdnZIU2x6QTBta3R3anEyRVdWNnU4dmNwN3RSZS1LUlpobVBSSUZnd1RKeTJlU3pKZEZYV2pQN3Q5R2Jua1FlYURkRExWQjl3WFdQN2pOR3VqQ29fdFFDdkhod21PSjRFcGFKWDYxdE81QllWLWdFVWpGRzRLZkhwUm14cl83cUFpZGR5Tk44eGxfTmhQblVuZjQzbG1fc1JQaDFuQTF1bmh0TFRaSlRuWmRoNkk?oc=5",
+              "published_at": "2024-02-04T08:00:00+00:00",
+              "discovery_channel": "historical"
+            }
           ],
           "amount_text": [
             "$13k"
@@ -266,7 +366,7 @@
         },
         {
           "kind": "headline",
-          "id": "a12c7b63ea005d92cf33",
+          "id": "report-b8491b65608933ab57fe",
           "date": "2023-06-13T07:00:00+00:00",
           "title": "TD Bank customer loses $12K to elaborate vishing scam - CTV News",
           "source_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPNDhNSTBSV2Rjbk1veVBIYW9iN2tzMkJYTVZhUXZmb3A0Q1pQSkNpbllQNmppTG15OEZHR0wxc1J0eElmWHFhOUZScl94UjNxMi1mOTFLV21UcGtET09DN25kaXdqaEdhMU05MnRaOWpyeXBNcm5FelpxSmp1SV9VSU5sSjU3NHRHLXd3OUNPWXNPdWNiS2Rz?oc=5",
@@ -275,6 +375,16 @@
           "source_count": 1,
           "source_channels": [
             "historical"
+          ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "TD Bank customer loses $12K to elaborate vishing scam - CTV News",
+              "publisher": "CTV News",
+              "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPNDhNSTBSV2Rjbk1veVBIYW9iN2tzMkJYTVZhUXZmb3A0Q1pQSkNpbllQNmppTG15OEZHR0wxc1J0eElmWHFhOUZScl94UjNxMi1mOTFLV21UcGtET09DN25kaXdqaEdhMU05MnRaOWpyeXBNcm5FelpxSmp1SV9VSU5sSjU3NHRHLXd3OUNPWXNPdWNiS2Rz?oc=5",
+              "published_at": "2023-06-13T07:00:00+00:00",
+              "discovery_channel": "historical"
+            }
           ],
           "amount_text": [
             "$12K"
@@ -285,7 +395,7 @@
         },
         {
           "kind": "headline",
-          "id": "49ed7c0c2be405a933ed",
+          "id": "report-ce05459c958ab572d969",
           "date": "2022-06-26T07:00:00+00:00",
           "title": "TD bank “card locked” scam hits Mississauga and Brampton residents - insauga.com",
           "source_url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxORlJobncxbm1RS2EwbWNmclV5cEhDeGVZMXY4ajVIbkZRQnZpczItWF9DaWFPa2ZzTktNZWxRQzV5ajlpcVlDOUYxUXAzOEl0QVdHa3pJcTU3NGItZ0pKUzJHWnVSQW4tRzd5SmJFa1FtRTFXLUF4RWN5emZLWUlqVFlaVTVPQU9sVm81TkRfeUhRX0U?oc=5",
@@ -295,6 +405,16 @@
           "source_channels": [
             "historical"
           ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "TD bank “card locked” scam hits Mississauga and Brampton residents - insauga.com",
+              "publisher": "insauga.com",
+              "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxORlJobncxbm1RS2EwbWNmclV5cEhDeGVZMXY4ajVIbkZRQnZpczItWF9DaWFPa2ZzTktNZWxRQzV5ajlpcVlDOUYxUXAzOEl0QVdHa3pJcTU3NGItZ0pKUzJHWnVSQW4tRzd5SmJFa1FtRTFXLUF4RWN5emZLWUlqVFlaVTVPQU9sVm81TkRfeUhRX0U?oc=5",
+              "published_at": "2022-06-26T07:00:00+00:00",
+              "discovery_channel": "historical"
+            }
+          ],
           "amount_text": [],
           "location": "Mississauga, Ontario",
           "evidence": "unverified_headline",
@@ -302,7 +422,7 @@
         },
         {
           "kind": "headline",
-          "id": "c4d83b9d38844d95b66d",
+          "id": "report-3bc0f2fd5e5b323084bd",
           "date": "2021-04-09T07:00:00+00:00",
           "title": "TD Bank apologizes after customer hit by DoorDash fraud fails to get full reimbursement due to investigation time frame - Global News",
           "source_url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxOOFF0TWRtUkh6UUVCREl0QkdHNEFIQ0NKb1lZRVlsWmVaM3c2VVFlR1RJdEV4NnNFNEpuVVMyTnpIZ254dzMxM0h3WDBOVXRJb2RzZjZUalBfNFd3Z0pCcWpwWFh4cjhjRkZMZmcxMUtianFDVGg0djRCWHVqektiM0xhMXc2a2FIWGdYT1l3TUdxQXhtdjVYV1R6YWY5aEdEQUN6QmV2YjIzSkFDYXZQaldMWWxwel9tbHo1Tkg3RHBrSHh1dkJMOTZoNHM3WGRFdmNleDgtNlk1SVNpMC02czhqMjFpaTBsVVBz?oc=5",
@@ -312,6 +432,16 @@
           "source_channels": [
             "historical"
           ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "TD Bank apologizes after customer hit by DoorDash fraud fails to get full reimbursement due to investigation time frame - Global News",
+              "publisher": "Global News",
+              "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxOOFF0TWRtUkh6UUVCREl0QkdHNEFIQ0NKb1lZRVlsWmVaM3c2VVFlR1RJdEV4NnNFNEpuVVMyTnpIZ254dzMxM0h3WDBOVXRJb2RzZjZUalBfNFd3Z0pCcWpwWFh4cjhjRkZMZmcxMUtianFDVGg0djRCWHVqektiM0xhMXc2a2FIWGdYT1l3TUdxQXhtdjVYV1R6YWY5aEdEQUN6QmV2YjIzSkFDYXZQaldMWWxwel9tbHo1Tkg3RHBrSHh1dkJMOTZoNHM3WGRFdmNleDgtNlk1SVNpMC02czhqMjFpaTBsVVBz?oc=5",
+              "published_at": "2021-04-09T07:00:00+00:00",
+              "discovery_channel": "historical"
+            }
+          ],
           "amount_text": [],
           "location": null,
           "evidence": "unverified_headline",
@@ -319,7 +449,7 @@
         },
         {
           "kind": "headline",
-          "id": "60318ba5ffeec9679c1e",
+          "id": "report-efd4572d22bb8c2145a0",
           "date": "2020-04-25T07:00:00+00:00",
           "title": "TD bank considers clients 'guilty until proven innocent,' says victim of debit card theft - CBC",
           "source_url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQV3YzY3NKSFdJR3YtSVJjVWFQR1ZKVGRKREhZbU9La0JueE9NTWhrM2RWMGhkdUJKWnpwQ09FcXdwdkN0aTBmREt4V1ZYZGRFUDlobjlSN2hLRVVlNDg4ZmVDaF9aamtqYkp5eGNlSk5BMWVnbE9jNGJqOHRnMDFJQUlEQVVSMzh5RkxMVUo3N1cweGtSelhLOFpmRC1WT0FYbkpBaFJTYVVfOEU4MWxEQ2xDR29NQ3FuaXN2YzVHblUyeUxVOUlOclJEcDg3WGMtMXRsT0dJSWJjbUpq?oc=5",
@@ -328,6 +458,16 @@
           "source_count": 1,
           "source_channels": [
             "historical"
+          ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "TD bank considers clients 'guilty until proven innocent,' says victim of debit card theft - CBC",
+              "publisher": "CBC",
+              "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQV3YzY3NKSFdJR3YtSVJjVWFQR1ZKVGRKREhZbU9La0JueE9NTWhrM2RWMGhkdUJKWnpwQ09FcXdwdkN0aTBmREt4V1ZYZGRFUDlobjlSN2hLRVVlNDg4ZmVDaF9aamtqYkp5eGNlSk5BMWVnbE9jNGJqOHRnMDFJQUlEQVVSMzh5RkxMVUo3N1cweGtSelhLOFpmRC1WT0FYbkpBaFJTYVVfOEU4MWxEQ2xDR29NQ3FuaXN2YzVHblUyeUxVOUlOclJEcDg3WGMtMXRsT0dJSWJjbUpq?oc=5",
+              "published_at": "2020-04-25T07:00:00+00:00",
+              "discovery_channel": "historical"
+            }
           ],
           "amount_text": [],
           "location": null,
@@ -374,7 +514,7 @@
       "evidence": [
         {
           "kind": "headline",
-          "id": "194b73a8a3328f421e36",
+          "id": "report-681abb36d0d5c3c44d4d",
           "date": "2026-10-15T07:00:00+00:00",
           "title": "Plus d’une centaine de clients de la RBC victimes d’une fraude - TVA Nouvelles",
           "source_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPSE5RdC1xVXByc0EzeFZtc3haUkRxOUZCZFBUUkZnRWhmNS1lcmcyaVktOC1QcnJWNTFZcVpJTWo0bFo4dm1pWmZZaDhhOUJxNmJtRlJPYzIxYTd6VnNIZjFMUnpYdGpPemZHZkROZkhJeGJDTDVMTElrSWpBblp6MUVOdlNpTDlrSGpDaERnSEJpZEtSbnZveEo4REY?oc=5",
@@ -385,6 +525,16 @@
             "historical",
             "recent"
           ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "Plus d’une centaine de clients de la RBC victimes d’une fraude - TVA Nouvelles",
+              "publisher": "TVA Nouvelles",
+              "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPSE5RdC1xVXByc0EzeFZtc3haUkRxOUZCZFBUUkZnRWhmNS1lcmcyaVktOC1QcnJWNTFZcVpJTWo0bFo4dm1pWmZZaDhhOUJxNmJtRlJPYzIxYTd6VnNIZjFMUnpYdGpPemZHZkROZkhJeGJDTDVMTElrSWpBblp6MUVOdlNpTDlrSGpDaERnSEJpZEtSbnZveEo4REY?oc=5",
+              "published_at": "2026-10-15T07:00:00+00:00",
+              "discovery_channel": "historical"
+            }
+          ],
           "amount_text": [],
           "location": null,
           "evidence": "unverified_headline",
@@ -392,7 +542,7 @@
         },
         {
           "kind": "headline",
-          "id": "254e943409215e7aaa48",
+          "id": "report-c0f06d2f6276bcff5022",
           "date": "2026-06-26T07:00:00+00:00",
           "title": "RBC pays penalty after over 200K Canadians affected by \"inaccurate\" credit card statements | National - Daily Hive",
           "source_url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5jNDZBM201SlJPdGFUTXlxM0o2cDIxNGg3all0QkR5QTd0d3BlSWVBRk5haHVYcUhscl94MjdDYzlwb2dZM0IxN1FQSmRXZVRVY1RXSHRnWnc2YXdkNlB4ZHVFakFsOGQz?oc=5",
@@ -402,6 +552,16 @@
           "source_channels": [
             "historical"
           ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "RBC pays penalty after over 200K Canadians affected by \"inaccurate\" credit card statements | National - Daily Hive",
+              "publisher": "Daily Hive",
+              "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5jNDZBM201SlJPdGFUTXlxM0o2cDIxNGg3all0QkR5QTd0d3BlSWVBRk5haHVYcUhscl94MjdDYzlwb2dZM0IxN1FQSmRXZVRVY1RXSHRnWnc2YXdkNlB4ZHVFakFsOGQz?oc=5",
+              "published_at": "2026-06-26T07:00:00+00:00",
+              "discovery_channel": "historical"
+            }
+          ],
           "amount_text": [],
           "location": null,
           "evidence": "unverified_headline",
@@ -409,7 +569,7 @@
         },
         {
           "kind": "headline",
-          "id": "1d7f0a2a637f98eada97",
+          "id": "report-27862541184e9885781e",
           "date": "2026-06-25T07:00:00+00:00",
           "title": "Royal Bank of Canada ordered to pay $4.25M penalty for consumer violation - CTV News",
           "source_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNNi04LWpRa3JBcXpXZzR5OHA0ams4TWpfTWJVUDdHazBsLVNXX0M4Z1pKRHNHYURWSVVkYzdjc08zRU1pVkVfRDVXMkJfS21mbDhsRGtveEtRWnJpRTlYYjhHVzhaUVNzRGtpUXlZVnZhZ0RVMGxxZzcyRFBHY240Y1NQT0JZam1CV0VZaGpRbTc0TTJCQ0hKX1c3dExzMThKOTdic2lNTHQ2X21TNjZz?oc=5",
@@ -418,6 +578,16 @@
           "source_count": 1,
           "source_channels": [
             "historical"
+          ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "Royal Bank of Canada ordered to pay $4.25M penalty for consumer violation - CTV News",
+              "publisher": "CTV News",
+              "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNNi04LWpRa3JBcXpXZzR5OHA0ams4TWpfTWJVUDdHazBsLVNXX0M4Z1pKRHNHYURWSVVkYzdjc08zRU1pVkVfRDVXMkJfS21mbDhsRGtveEtRWnJpRTlYYjhHVzhaUVNzRGtpUXlZVnZhZ0RVMGxxZzcyRFBHY240Y1NQT0JZam1CV0VZaGpRbTc0TTJCQ0hKX1c3dExzMThKOTdic2lNTHQ2X21TNjZz?oc=5",
+              "published_at": "2026-06-25T07:00:00+00:00",
+              "discovery_channel": "historical"
+            }
           ],
           "amount_text": [
             "$4.25M"
@@ -459,7 +629,7 @@
         },
         {
           "kind": "headline",
-          "id": "f437205ad6c8c1600873",
+          "id": "report-bfd57c06adbb7c4d787e",
           "date": "2025-11-25T08:00:00+00:00",
           "title": "RBC poll finds Canadians are confident they can spot scams, but many still fall victim - CTV News",
           "source_url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOcFFDT21meVB5SkR4VzZNcDNHZVNEQVJtUlNBSy1xNlNJaURaWjV5SkktMGZBaU1JMDNYaFNCNTN3clN4RUxUb1ZPZzFVaVZPWlhCczJrSzJueTZ1dm5uU0VsSlhFLUh2R0lBLVU4WUcyMzVEWmJtcU1YMXA3Skl5U2h4R1VSOENWOXVBanN0V1gzNHc0bC13NW00TXNoa0tLZEg3ODhaSDFtRlZEUG84ZklWMjlFU3E0c29uSFIxYlJZQQ?oc=5",
@@ -469,6 +639,16 @@
           "source_channels": [
             "historical"
           ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "RBC poll finds Canadians are confident they can spot scams, but many still fall victim - CTV News",
+              "publisher": "CTV News",
+              "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOcFFDT21meVB5SkR4VzZNcDNHZVNEQVJtUlNBSy1xNlNJaURaWjV5SkktMGZBaU1JMDNYaFNCNTN3clN4RUxUb1ZPZzFVaVZPWlhCczJrSzJueTZ1dm5uU0VsSlhFLUh2R0lBLVU4WUcyMzVEWmJtcU1YMXA3Skl5U2h4R1VSOENWOXVBanN0V1gzNHc0bC13NW00TXNoa0tLZEg3ODhaSDFtRlZEUG84ZklWMjlFU3E0c29uSFIxYlJZQQ?oc=5",
+              "published_at": "2025-11-25T08:00:00+00:00",
+              "discovery_channel": "historical"
+            }
+          ],
           "amount_text": [],
           "location": null,
           "evidence": "unverified_headline",
@@ -476,7 +656,7 @@
         },
         {
           "kind": "headline",
-          "id": "e021eb9455bf679596da",
+          "id": "report-874800d24795df1691c0",
           "date": "2025-11-05T08:00:00+00:00",
           "title": "CIBC, RBC failed to stop $1.7M fraud on B.C. senior - Yahoo! Finance Canada",
           "source_url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9sQVM2ZUkwX1JJc29hN18wYmZlbVloc0pDclpjRE9EWGFfb1pjTWh6QUxBRkV4N3ZoVmdiMC1sdFViRDlWUzJWSmNTeHpYbVRBNW1OWFZFdkdHcGtqVFV0aGRaOG1TeUNZWHpzbnVtNmtjaHFteWVBU2VjRQ?oc=5",
@@ -486,6 +666,16 @@
           "source_channels": [
             "historical"
           ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "CIBC, RBC failed to stop $1.7M fraud on B.C. senior - Yahoo! Finance Canada",
+              "publisher": "Yahoo! Finance Canada",
+              "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9sQVM2ZUkwX1JJc29hN18wYmZlbVloc0pDclpjRE9EWGFfb1pjTWh6QUxBRkV4N3ZoVmdiMC1sdFViRDlWUzJWSmNTeHpYbVRBNW1OWFZFdkdHcGtqVFV0aGRaOG1TeUNZWHpzbnVtNmtjaHFteWVBU2VjRQ?oc=5",
+              "published_at": "2025-11-05T08:00:00+00:00",
+              "discovery_channel": "historical"
+            }
+          ],
           "amount_text": [
             "$1.7M"
           ],
@@ -495,7 +685,7 @@
         },
         {
           "kind": "headline",
-          "id": "619cfcc73a0488e55d50",
+          "id": "report-10f78dea8e7c2be5a809",
           "date": "2025-10-27T07:00:00+00:00",
           "title": "RBC and CIBC allow 89-year-old to drain life savings, lose $1.7M to scammers - CBC",
           "source_url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE13VFFVNG9IUi1GRVZHMmhzRkNqQ1JnM0g3Vl8tVVViQXdPcGx4SzBRbFBmZzlrVGJLNkV1SWg5QW01SHZ0YklqLWhPVS1QbVR6ZFNJSUFiTUFpZFFPVU9oSERYdmRsTlVCMVlzQUtTTGszclUtbFZrbmRvSQ?oc=5",
@@ -505,6 +695,16 @@
           "source_channels": [
             "historical"
           ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "RBC and CIBC allow 89-year-old to drain life savings, lose $1.7M to scammers - CBC",
+              "publisher": "CBC",
+              "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE13VFFVNG9IUi1GRVZHMmhzRkNqQ1JnM0g3Vl8tVVViQXdPcGx4SzBRbFBmZzlrVGJLNkV1SWg5QW01SHZ0YklqLWhPVS1QbVR6ZFNJSUFiTUFpZFFPVU9oSERYdmRsTlVCMVlzQUtTTGszclUtbFZrbmRvSQ?oc=5",
+              "published_at": "2025-10-27T07:00:00+00:00",
+              "discovery_channel": "historical"
+            }
+          ],
           "amount_text": [
             "$1.7M"
           ],
@@ -514,7 +714,7 @@
         },
         {
           "kind": "headline",
-          "id": "44fb420d80eaacaeb733",
+          "id": "report-021db9535ceaade798d6",
           "date": "2025-09-24T07:00:00+00:00",
           "title": "Former RBC employee charged with accessing Canada PM Carney's banking profile, fraud - Reuters",
           "source_url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNWXl5bDNLQmdkNm40eF9nMEo4NnNHUGh2cVoyWmJvS0E5dWF4eGZiU1VTdTNoaENvZHF2UWJIT3A5YjVjR2RSQmpSMjdKcG02bE9DbXpDaXlaTjRqdXpqRUtWLTNxczdWbHpQd2J6SVR1TnlmTG41UzZtZzRFYXByMER3RDVZRUhfNGthSldIdWxzbWYxUTNJZDNpanVLelN1bl95SXhIS2lmaXhVb2hQT0ZPVUh3ODFIcFllNUFfdV9Ec0lla2t5Rg?oc=5",
@@ -524,6 +724,16 @@
           "source_channels": [
             "historical"
           ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "Former RBC employee charged with accessing Canada PM Carney's banking profile, fraud - Reuters",
+              "publisher": "Reuters",
+              "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNWXl5bDNLQmdkNm40eF9nMEo4NnNHUGh2cVoyWmJvS0E5dWF4eGZiU1VTdTNoaENvZHF2UWJIT3A5YjVjR2RSQmpSMjdKcG02bE9DbXpDaXlaTjRqdXpqRUtWLTNxczdWbHpQd2J6SVR1TnlmTG41UzZtZzRFYXByMER3RDVZRUhfNGthSldIdWxzbWYxUTNJZDNpanVLelN1bl95SXhIS2lmaXhVb2hQT0ZPVUh3ODFIcFllNUFfdV9Ec0lla2t5Rg?oc=5",
+              "published_at": "2025-09-24T07:00:00+00:00",
+              "discovery_channel": "historical"
+            }
+          ],
           "amount_text": [],
           "location": null,
           "evidence": "unverified_headline",
@@ -531,7 +741,7 @@
         },
         {
           "kind": "headline",
-          "id": "a5776ad3d54620aa9052",
+          "id": "report-b79bb7d551ac4baa5b8b",
           "date": "2025-09-24T07:00:00+00:00",
           "title": "RBC employee charged for allegedly accessing Carney's banking information - CBC",
           "source_url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPeW5pWDBFYXdNOHBWQVlPakY2d2FaUHZOdlNkaHBFeEU5V2JNdF9pTERPckNXdlRIOEl1aXU3VkdLMVc2dFZ2NVJzVENIeGQ0eGdjZ0RfQ0tvWW9ORFVNRmtSYmoyV2wwcjlCTjY5T2VSc0RyT1I3cHAzalVrUXJzaQ?oc=5",
@@ -541,6 +751,16 @@
           "source_channels": [
             "historical"
           ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "RBC employee charged for allegedly accessing Carney's banking information - CBC",
+              "publisher": "CBC",
+              "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPeW5pWDBFYXdNOHBWQVlPakY2d2FaUHZOdlNkaHBFeEU5V2JNdF9pTERPckNXdlRIOEl1aXU3VkdLMVc2dFZ2NVJzVENIeGQ0eGdjZ0RfQ0tvWW9ORFVNRmtSYmoyV2wwcjlCTjY5T2VSc0RyT1I3cHAzalVrUXJzaQ?oc=5",
+              "published_at": "2025-09-24T07:00:00+00:00",
+              "discovery_channel": "historical"
+            }
+          ],
           "amount_text": [],
           "location": null,
           "evidence": "unverified_headline",
@@ -548,7 +768,7 @@
         },
         {
           "kind": "headline",
-          "id": "2ef411bf189736e2fe13",
+          "id": "report-38694fa2be55ee288d0f",
           "date": "2025-09-24T07:00:00+00:00",
           "title": "RBC employee charged for allegedly accessing Carney, Trudeau’s banking information | RCI - Radio-Canada",
           "source_url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQNmFlc3lhMFh6VUZWT2x5aUVzTWxCUWRNSURXMC1ZaWx4eHcwY0pzVy13NzBXZEJkRGJrVWl4WTE2dUpzX0gzU3Q4Mm42NEVGRFJ1eVlWRjJYS3JSbFpfMUpMai1ZbFI0ZVNIalFMeXdfOW9Da3Y3SGtkZFlGRHFSRGg3Rjc4M3g4TjZwbHZQNlQtdm5MRlJLNkpPY1Zwc0xTSndzaGpiOUlXblJOMmc3VUxqc0l0d3VMLWJ2dW11S0x4bFd1S1RF?oc=5",
@@ -558,6 +778,16 @@
           "source_channels": [
             "historical"
           ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "RBC employee charged for allegedly accessing Carney, Trudeau’s banking information | RCI - Radio-Canada",
+              "publisher": "Radio-Canada",
+              "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQNmFlc3lhMFh6VUZWT2x5aUVzTWxCUWRNSURXMC1ZaWx4eHcwY0pzVy13NzBXZEJkRGJrVWl4WTE2dUpzX0gzU3Q4Mm42NEVGRFJ1eVlWRjJYS3JSbFpfMUpMai1ZbFI0ZVNIalFMeXdfOW9Da3Y3SGtkZFlGRHFSRGg3Rjc4M3g4TjZwbHZQNlQtdm5MRlJLNkpPY1Zwc0xTSndzaGpiOUlXblJOMmc3VUxqc0l0d3VMLWJ2dW11S0x4bFd1S1RF?oc=5",
+              "published_at": "2025-09-24T07:00:00+00:00",
+              "discovery_channel": "historical"
+            }
+          ],
           "amount_text": [],
           "location": null,
           "evidence": "unverified_headline",
@@ -565,7 +795,7 @@
         },
         {
           "kind": "headline",
-          "id": "f619c01769c698101035",
+          "id": "report-d738f2054ad69508387b",
           "date": "2025-09-24T07:00:00+00:00",
           "title": "RBC employee charged for accessing PM Carney’s personal data - CTV News",
           "source_url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPOVVUd1BOZDhMUFVGSHBvcmdSS1hWRzB1M1AxN25Ib2lFaWVjQTljMmd3SnE1Q1Y0YXpvVTJZaTdkYnlVX0dRbm9zbHhQNHg1NExvclJkUDdsckVXRGliaWxWVFdybUZSdktBMmhjWjFILTZOQndLbk8xcHh2clF3TGdsN1ZRSjd1YVVqc3dHeU9YR0F6eTM3Um5aZDVqZTV5cy16emxHbVJyYjdvOFNVdjZndw?oc=5",
@@ -575,6 +805,16 @@
           "source_channels": [
             "historical"
           ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "RBC employee charged for accessing PM Carney’s personal data - CTV News",
+              "publisher": "CTV News",
+              "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPOVVUd1BOZDhMUFVGSHBvcmdSS1hWRzB1M1AxN25Ib2lFaWVjQTljMmd3SnE1Q1Y0YXpvVTJZaTdkYnlVX0dRbm9zbHhQNHg1NExvclJkUDdsckVXRGliaWxWVFdybUZSdktBMmhjWjFILTZOQndLbk8xcHh2clF3TGdsN1ZRSjd1YVVqc3dHeU9YR0F6eTM3Um5aZDVqZTV5cy16emxHbVJyYjdvOFNVdjZndw?oc=5",
+              "published_at": "2025-09-24T07:00:00+00:00",
+              "discovery_channel": "historical"
+            }
+          ],
           "amount_text": [],
           "location": null,
           "evidence": "unverified_headline",
@@ -582,7 +822,7 @@
         },
         {
           "kind": "headline",
-          "id": "46688f560c42331bf224",
+          "id": "report-8fdd0c4bc99491b70c08",
           "date": "2025-07-09T07:00:00+00:00",
           "title": "RBC tells customer she's responsible for $14K stolen from account in bank investigator scam - CBC",
           "source_url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFA5VUdwaEk1MmxRVTAtN2x6dkp6amhhWTNvUGZHdDdpR2M5NHRPMDVHMGRQVEg3RFhxaWtEZDB0ZDMzWWJHalN0LTBvSE5Pejd0cEstay0tV040VEhzX3Zrc3BJdTFPS1ZnNUl0dlAzMkFrX1hMU0p1dQ?oc=5",
@@ -591,6 +831,16 @@
           "source_count": 1,
           "source_channels": [
             "historical"
+          ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "RBC tells customer she's responsible for $14K stolen from account in bank investigator scam - CBC",
+              "publisher": "CBC",
+              "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFA5VUdwaEk1MmxRVTAtN2x6dkp6amhhWTNvUGZHdDdpR2M5NHRPMDVHMGRQVEg3RFhxaWtEZDB0ZDMzWWJHalN0LTBvSE5Pejd0cEstay0tV040VEhzX3Zrc3BJdTFPS1ZnNUl0dlAzMkFrX1hMU0p1dQ?oc=5",
+              "published_at": "2025-07-09T07:00:00+00:00",
+              "discovery_channel": "historical"
+            }
           ],
           "amount_text": [
             "$14K"
@@ -601,7 +851,7 @@
         },
         {
           "kind": "headline",
-          "id": "117c52a7af1d6c76a3c6",
+          "id": "report-979989f2efc666f974d1",
           "date": "2025-07-09T07:00:00+00:00",
           "title": "Quebec woman loses nearly $15,000 in sophisticated scam targeting RBC clients - CityNews Montreal",
           "source_url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE05ZGg5RmdydC1nbmVrUXltMklnczgwMjMtZF9ETHYxcVpodmxQZE1ONXdwMGU2emRRelpTNENXNUxJRWhYc1ZuM092YkVla2NkN1VGaDlDTXNhUGdCTXdnbHB1MUF6blJkWVdZaDVFQQ?oc=5",
@@ -610,6 +860,16 @@
           "source_count": 1,
           "source_channels": [
             "historical"
+          ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "Quebec woman loses nearly $15,000 in sophisticated scam targeting RBC clients - CityNews Montreal",
+              "publisher": "CityNews Montreal",
+              "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE05ZGg5RmdydC1nbmVrUXltMklnczgwMjMtZF9ETHYxcVpodmxQZE1ONXdwMGU2emRRelpTNENXNUxJRWhYc1ZuM092YkVla2NkN1VGaDlDTXNhUGdCTXdnbHB1MUF6blJkWVdZaDVFQQ?oc=5",
+              "published_at": "2025-07-09T07:00:00+00:00",
+              "discovery_channel": "historical"
+            }
           ],
           "amount_text": [
             "$15,000 "
@@ -620,7 +880,7 @@
         },
         {
           "kind": "headline",
-          "id": "5b0226a5c27bf07138ee",
+          "id": "report-8941a7a3b0993742544e",
           "date": "2025-07-08T07:00:00+00:00",
           "title": "Attempted bank fraud stopped by RBC and Lacombe Police - The Stettler Independent",
           "source_url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNWFlnT0dPVUxMSTEtcUR5anlzMGY1eVBSVXRBSE9JRkFiaDNuOVVWNGdtVmpZMlctaXhMT2FXQzN5SnRsTF9VRzNjU3BSSjY4X3FuVVNIVlg5cXc1cGE4ejd5Mm1RTmtCZjlPQnJ1WGJhQW02Y25EMVpOaWVlSlZoS3l4WFRhZ1M1V3hRcGFKalFQZlNXN19ZOHV6NF9iRWs?oc=5",
@@ -630,6 +890,16 @@
           "source_channels": [
             "historical"
           ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "Attempted bank fraud stopped by RBC and Lacombe Police - The Stettler Independent",
+              "publisher": "The Stettler Independent",
+              "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNWFlnT0dPVUxMSTEtcUR5anlzMGY1eVBSVXRBSE9JRkFiaDNuOVVWNGdtVmpZMlctaXhMT2FXQzN5SnRsTF9VRzNjU3BSSjY4X3FuVVNIVlg5cXc1cGE4ejd5Mm1RTmtCZjlPQnJ1WGJhQW02Y25EMVpOaWVlSlZoS3l4WFRhZ1M1V3hRcGFKalFQZlNXN19ZOHV6NF9iRWs?oc=5",
+              "published_at": "2025-07-08T07:00:00+00:00",
+              "discovery_channel": "historical"
+            }
+          ],
           "amount_text": [],
           "location": null,
           "evidence": "unverified_headline",
@@ -637,7 +907,7 @@
         },
         {
           "kind": "headline",
-          "id": "565402406af6357fc5f1",
+          "id": "report-56bd509519717802166e",
           "date": "2025-05-07T07:00:00+00:00",
           "title": "Ponzi victims sue RBC, BCFSA over Greg Martel's $300m mortgage fraud scheme - Mortgage Professional America",
           "source_url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOcHpQVVowSGlkU25QbUM3OGZ2UFUxa0Nsd1lhMmo2SFotQkpzWkliTGtLdzlnZTFleXhXaXlzLXpnN2xrRDJHLVNzNnlBbHpLT1RQZVNjT01faElmSldlUzhIMWhqVEt2eFlSaXl5VTdib0QzYU1lTXhHTFN5Yi16WmxCQXVMVUxicXdtSXA3czNsZkMyU0Z4X1hCS0pHOW1KaDhjX25KR0xwSnc3WWFzVUxUWWNLN2ZDT0E?oc=5",
@@ -646,6 +916,16 @@
           "source_count": 1,
           "source_channels": [
             "historical"
+          ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "Ponzi victims sue RBC, BCFSA over Greg Martel's $300m mortgage fraud scheme - Mortgage Professional America",
+              "publisher": "Mortgage Professional America",
+              "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOcHpQVVowSGlkU25QbUM3OGZ2UFUxa0Nsd1lhMmo2SFotQkpzWkliTGtLdzlnZTFleXhXaXlzLXpnN2xrRDJHLVNzNnlBbHpLT1RQZVNjT01faElmSldlUzhIMWhqVEt2eFlSaXl5VTdib0QzYU1lTXhHTFN5Yi16WmxCQXVMVUxicXdtSXA3czNsZkMyU0Z4X1hCS0pHOW1KaDhjX25KR0xwSnc3WWFzVUxUWWNLN2ZDT0E?oc=5",
+              "published_at": "2025-05-07T07:00:00+00:00",
+              "discovery_channel": "historical"
+            }
           ],
           "amount_text": [
             "$300m"
@@ -656,7 +936,7 @@
         },
         {
           "kind": "headline",
-          "id": "e7ba27fa87f8407d5221",
+          "id": "report-8de27928f28c9bf0aa08",
           "date": "2024-11-20T08:00:00+00:00",
           "title": "Defining Change: An AI-Driven Revolution in Fraud Technology - rbc.com",
           "source_url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQcHJJS25XVlFGNENNSl92TVVtRXY0V1ZzR1hyRTRmZE1tTFdNVkp1cDliUFA0MkR1dVZGXzdoaVBaVGxiNU42akZSalFKRjhEOGRjdkVGeXVoVXlaWmxhN2xrRGM5d3V1XzgwZlJ2dGJURG54S1M1MXR2ZnpJWk40N3VqRXo3NVhYTUFBdEdoTFhGR05RcUFMY3hsNHNYX3NpajRFNi1B?oc=5",
@@ -666,6 +946,16 @@
           "source_channels": [
             "historical"
           ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "Defining Change: An AI-Driven Revolution in Fraud Technology - rbc.com",
+              "publisher": "rbc.com",
+              "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQcHJJS25XVlFGNENNSl92TVVtRXY0V1ZzR1hyRTRmZE1tTFdNVkp1cDliUFA0MkR1dVZGXzdoaVBaVGxiNU42akZSalFKRjhEOGRjdkVGeXVoVXlaWmxhN2xrRGM5d3V1XzgwZlJ2dGJURG54S1M1MXR2ZnpJWk40N3VqRXo3NVhYTUFBdEdoTFhGR05RcUFMY3hsNHNYX3NpajRFNi1B?oc=5",
+              "published_at": "2024-11-20T08:00:00+00:00",
+              "discovery_channel": "historical"
+            }
+          ],
           "amount_text": [],
           "location": null,
           "evidence": "unverified_headline",
@@ -673,7 +963,7 @@
         },
         {
           "kind": "headline",
-          "id": "dc47343303cab3ed5ffa",
+          "id": "report-021b35aba5096440aa93",
           "date": "2024-09-09T07:00:00+00:00",
           "title": "RBC customers outraged over partial refund after unauthorized withdrawals - Global News",
           "source_url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOM0phUmF3c21XWVlKSDNQa0w3Q1JaWlNWbXp5NHBVeHRnRV9Ub190RnFZcFR0QUNnem0ta2VBOGQxU25xelZWUzRSWGZRamFPdWpuREloTTBtSjlQSHBmVndBTkFFdnliOUFnVEZ3VlRtcmlwQXg4ZEZMMGFqQUZqZDRncjJPeGZvanQxTU5YR0dNU2Ra?oc=5",
@@ -683,6 +973,16 @@
           "source_channels": [
             "historical"
           ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "RBC customers outraged over partial refund after unauthorized withdrawals - Global News",
+              "publisher": "Global News",
+              "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOM0phUmF3c21XWVlKSDNQa0w3Q1JaWlNWbXp5NHBVeHRnRV9Ub190RnFZcFR0QUNnem0ta2VBOGQxU25xelZWUzRSWGZRamFPdWpuREloTTBtSjlQSHBmVndBTkFFdnliOUFnVEZ3VlRtcmlwQXg4ZEZMMGFqQUZqZDRncjJPeGZvanQxTU5YR0dNU2Ra?oc=5",
+              "published_at": "2024-09-09T07:00:00+00:00",
+              "discovery_channel": "historical"
+            }
+          ],
           "amount_text": [],
           "location": null,
           "evidence": "unverified_headline",
@@ -690,7 +990,7 @@
         },
         {
           "kind": "headline",
-          "id": "99205de4f6eb55244b21",
+          "id": "report-b5dc759091345e131785",
           "date": "2024-07-18T07:00:00+00:00",
           "title": "Passive income scam falsely linked to Royal Bank of Canada - AFP Fact Check",
           "source_url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBjbmhpZjMyMVZNNkZGc1NleC04ZjloTmd5aGJVSWxWSFpJa3k4X1d5MjF0NW1WUzdlMEt3QnZPOHJMU3gtLUwtSTE3M1FOV3VZYWY1U1J0UUI?oc=5",
@@ -700,6 +1000,16 @@
           "source_channels": [
             "historical"
           ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "Passive income scam falsely linked to Royal Bank of Canada - AFP Fact Check",
+              "publisher": "AFP Fact Check",
+              "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBjbmhpZjMyMVZNNkZGc1NleC04ZjloTmd5aGJVSWxWSFpJa3k4X1d5MjF0NW1WUzdlMEt3QnZPOHJMU3gtLUwtSTE3M1FOV3VZYWY1U1J0UUI?oc=5",
+              "published_at": "2024-07-18T07:00:00+00:00",
+              "discovery_channel": "historical"
+            }
+          ],
           "amount_text": [],
           "location": null,
           "evidence": "unverified_headline",
@@ -707,7 +1017,7 @@
         },
         {
           "kind": "headline",
-          "id": "b25fa1598a6d4ae396a9",
+          "id": "report-1919e804df1b8d434d6b",
           "date": "2024-01-30T08:00:00+00:00",
           "title": "RBC customer loses $10,000 after falling victim to bank draft fraud - Global News",
           "source_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNYWFjXy1IQmRnQks1Q2VJY2hTQ1RnOU5fSjdBTDN5Z3dfU2tsLWVsRGdUZENrdk1VMm43RjhsYllTZUJTZUFqS2RBRl9scnhTVDVtckFXem9NLVI1Y0ZFUHNzdEdKUXFBMzN6ZVhNbUZ4blJPZ3o4b0dpbjlMWFRTTmJIVmMtLUVTdUFjelBZdHB5eWxBUHI1UA?oc=5",
@@ -716,6 +1026,16 @@
           "source_count": 1,
           "source_channels": [
             "historical"
+          ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "RBC customer loses $10,000 after falling victim to bank draft fraud - Global News",
+              "publisher": "Global News",
+              "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNYWFjXy1IQmRnQks1Q2VJY2hTQ1RnOU5fSjdBTDN5Z3dfU2tsLWVsRGdUZENrdk1VMm43RjhsYllTZUJTZUFqS2RBRl9scnhTVDVtckFXem9NLVI1Y0ZFUHNzdEdKUXFBMzN6ZVhNbUZ4blJPZ3o4b0dpbjlMWFRTTmJIVmMtLUVTdUFjelBZdHB5eWxBUHI1UA?oc=5",
+              "published_at": "2024-01-30T08:00:00+00:00",
+              "discovery_channel": "historical"
+            }
           ],
           "amount_text": [
             "$10,000 "
@@ -741,7 +1061,7 @@
         },
         {
           "kind": "headline",
-          "id": "43a422b9ea633d60e440",
+          "id": "report-37835b014f63b920e62e",
           "date": "2023-09-01T07:00:00+00:00",
           "title": "‘We don’t have that money’: Campbell River senior battles RBC over scam charges - CHEK News",
           "source_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPdGtwem13LWxfWHZERTVKQkdtY3RsdWFDTFVFVHZnLVFiSWVaX0VWYnJ4TVhOTEpDdVRkbkExTHJPZ2tzQWVZb1p4Z0tpemhkbVEyd0xjc0dreXJvTEZCV1ZvQWpSdmNpaktfWXFvOVVhNklPMlo5ZVNqNnF2TTBkVWVmcmpLVW5VR09RZzR5eTdaWERHa01ZTDdZV2hGV2dy?oc=5",
@@ -751,6 +1071,16 @@
           "source_channels": [
             "historical"
           ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "‘We don’t have that money’: Campbell River senior battles RBC over scam charges - CHEK News",
+              "publisher": "CHEK News",
+              "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPdGtwem13LWxfWHZERTVKQkdtY3RsdWFDTFVFVHZnLVFiSWVaX0VWYnJ4TVhOTEpDdVRkbkExTHJPZ2tzQWVZb1p4Z0tpemhkbVEyd0xjc0dreXJvTEZCV1ZvQWpSdmNpaktfWXFvOVVhNklPMlo5ZVNqNnF2TTBkVWVmcmpLVW5VR09RZzR5eTdaWERHa01ZTDdZV2hGV2dy?oc=5",
+              "published_at": "2023-09-01T07:00:00+00:00",
+              "discovery_channel": "historical"
+            }
+          ],
           "amount_text": [],
           "location": null,
           "evidence": "unverified_headline",
@@ -758,7 +1088,7 @@
         },
         {
           "kind": "headline",
-          "id": "e0e86c0a4fae6a2fce3a",
+          "id": "report-966741558f7ddfe32c58",
           "date": "2022-06-02T07:00:00+00:00",
           "title": "How RBC is using the PIN to poke at rising fraud - American Banker",
           "source_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQR21ocnBqS1RFZElJTXBBUGFTNFVXeFpDXzNuT3JZWEttVVF1LXlBR0k2SEdjcmU3bVBab2ZkTEdqaUs4TDh5eFh6alhSc1UtOENvckVjeXFyZWEzdWJ1ODZYOW9za3ZzQ1NYNV9udHVOMzRWb1N3RDdDSVp0THVTRUdyWjA4T01IMTBlMWpJai1SSVk2a2k5VA?oc=5",
@@ -768,6 +1098,16 @@
           "source_channels": [
             "historical"
           ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "How RBC is using the PIN to poke at rising fraud - American Banker",
+              "publisher": "American Banker",
+              "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQR21ocnBqS1RFZElJTXBBUGFTNFVXeFpDXzNuT3JZWEttVVF1LXlBR0k2SEdjcmU3bVBab2ZkTEdqaUs4TDh5eFh6alhSc1UtOENvckVjeXFyZWEzdWJ1ODZYOW9za3ZzQ1NYNV9udHVOMzRWb1N3RDdDSVp0THVTRUdyWjA4T01IMTBlMWpJai1SSVk2a2k5VA?oc=5",
+              "published_at": "2022-06-02T07:00:00+00:00",
+              "discovery_channel": "historical"
+            }
+          ],
           "amount_text": [],
           "location": null,
           "evidence": "unverified_headline",
@@ -775,7 +1115,7 @@
         },
         {
           "kind": "headline",
-          "id": "af9059c4556f52906400",
+          "id": "report-cbbcf1b388ef3275c6d3",
           "date": "2022-04-22T07:00:00+00:00",
           "title": "Former RBC business manager charged with fraud over falsified business loans - The Globe and Mail",
           "source_url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPLU1jc1BnZ1RGcTZvUzB0MW1BcU43OEJYYktSYVJob3NGNjJkTjJyWWtjZldsa29XNWF2UlE5WHRZYV9kTjJpSkpzZWV5d0xKbTdNMUNjZnQteF9JZ21EZjd6b09rS1BsdWxNcXUxdkgwQXJ2TVBCSV9sWkVrUnQzWDhQbjJNWlpCbUhCNmdxVk1vOER2YXdlX190TDJxREZSWEM0RXVWdWQtbjM5Qm1pN0ZkZkNPcEhYOVhRNA?oc=5",
@@ -785,6 +1125,16 @@
           "source_channels": [
             "historical"
           ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "Former RBC business manager charged with fraud over falsified business loans - The Globe and Mail",
+              "publisher": "The Globe and Mail",
+              "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPLU1jc1BnZ1RGcTZvUzB0MW1BcU43OEJYYktSYVJob3NGNjJkTjJyWWtjZldsa29XNWF2UlE5WHRZYV9kTjJpSkpzZWV5d0xKbTdNMUNjZnQteF9JZ21EZjd6b09rS1BsdWxNcXUxdkgwQXJ2TVBCSV9sWkVrUnQzWDhQbjJNWlpCbUhCNmdxVk1vOER2YXdlX190TDJxREZSWEM0RXVWdWQtbjM5Qm1pN0ZkZkNPcEhYOVhRNA?oc=5",
+              "published_at": "2022-04-22T07:00:00+00:00",
+              "discovery_channel": "historical"
+            }
+          ],
           "amount_text": [],
           "location": null,
           "evidence": "unverified_headline",
@@ -792,7 +1142,7 @@
         },
         {
           "kind": "headline",
-          "id": "5052b145d96860ef15a5",
+          "id": "report-3cd60ca7ce0cd092fe58",
           "date": "2022-04-22T07:00:00+00:00",
           "title": "Charges Laid In Lengthy, Multi-Million Dollar Fraud Investigation Involving Former Royal Bank Of Canada Bu ... - Kawartha 411",
           "source_url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxNdm9PMG9EVWZOOTEzZGJaelJPbVh0bTNpUGZhVVBQZlpSSWZWWlowaUl4dEE2OFV1dWtTdmVZc2JGSV8yRy1JV2RGdS1DVVhNeW9KakVzWndzeGx1aHVzTHAxTDVnZVBpekFoTDEtNG8xM19DMkYtc09MWkIwMTJIXzhVaXpIQk5ob1ROX3JGLVA3OW1acXNZYTREbXFTZmpHbEo3NTRPWnVxZmc3RXVZT2hCLVhaLTdhWEhuOFg4SzZpWXA5UmRoMWxVSkczY0VkYzFhRkNYVkpFN2traE9lczVlUng0RVZiaVRRMk5qMNIB9wFBVV95cUxOWGRENkxaTDIyVXZJVWFQYU9oeDZDcWM5cVc2dGJZUDJCN2x4cmF2SEFnd3FsMkNzMFpxdnJTdDJJaUdaMFhqVnJjYUR6YmMxanlDU3pYSnJNeHl4ZFY5Zl84UFhGSTlNZlBiYm9oeERBSjRIRVdRZGFQaTdPR2tKWFdKUnJCRFdyWDZLejh2dnBJVV9uTXc4dVAxZ3loVTFVWU5LQlV6TDh4RU5KSzgwcTJSdFVZR3h4dUxzU3NkZXF0SkFaekpQRGZ3ZzVmd1dud193UGZpV1pIMHlaWG1VNlJSYkNaTUtraDJCV05wY3NLbV9BZ01r?oc=5",
@@ -802,6 +1152,16 @@
           "source_channels": [
             "historical"
           ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "Charges Laid In Lengthy, Multi-Million Dollar Fraud Investigation Involving Former Royal Bank Of Canada Bu ... - Kawartha 411",
+              "publisher": "Kawartha 411",
+              "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxNdm9PMG9EVWZOOTEzZGJaelJPbVh0bTNpUGZhVVBQZlpSSWZWWlowaUl4dEE2OFV1dWtTdmVZc2JGSV8yRy1JV2RGdS1DVVhNeW9KakVzWndzeGx1aHVzTHAxTDVnZVBpekFoTDEtNG8xM19DMkYtc09MWkIwMTJIXzhVaXpIQk5ob1ROX3JGLVA3OW1acXNZYTREbXFTZmpHbEo3NTRPWnVxZmc3RXVZT2hCLVhaLTdhWEhuOFg4SzZpWXA5UmRoMWxVSkczY0VkYzFhRkNYVkpFN2traE9lczVlUng0RVZiaVRRMk5qMNIB9wFBVV95cUxOWGRENkxaTDIyVXZJVWFQYU9oeDZDcWM5cVc2dGJZUDJCN2x4cmF2SEFnd3FsMkNzMFpxdnJTdDJJaUdaMFhqVnJjYUR6YmMxanlDU3pYSnJNeHl4ZFY5Zl84UFhGSTlNZlBiYm9oeERBSjRIRVdRZGFQaTdPR2tKWFdKUnJCRFdyWDZLejh2dnBJVV9uTXc4dVAxZ3loVTFVWU5LQlV6TDh4RU5KSzgwcTJSdFVZR3h4dUxzU3NkZXF0SkFaekpQRGZ3ZzVmd1dud193UGZpV1pIMHlaWG1VNlJSYkNaTUtraDJCV05wY3NLbV9BZ01r?oc=5",
+              "published_at": "2022-04-22T07:00:00+00:00",
+              "discovery_channel": "historical"
+            }
+          ],
           "amount_text": [],
           "location": null,
           "evidence": "unverified_headline",
@@ -809,7 +1169,7 @@
         },
         {
           "kind": "headline",
-          "id": "d94b2406cb64c16b5315",
+          "id": "report-da11b73f28e1a3d8dad7",
           "date": "2022-02-25T08:00:00+00:00",
           "title": "RBC racing to replace card amid fraud fears - Tribune 242",
           "source_url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQcVg2c2o4X0xKNDdMZ1hIOGZhYTNtbUNkcnNKdnY2MVpmOTl3ckM2eVlPejBScmpzLXRBM3htSlJJZDNvRy03bEJfbkd0Y3BHV0hFNTZOWWtmYl9DSExRdElGMVpsTUUtbkstbTFpQ3pHQVpkWVhJNDZSS1lDTHVhV253dlcwYl9ydnZ6RG5R?oc=5",
@@ -819,6 +1179,16 @@
           "source_channels": [
             "historical"
           ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "RBC racing to replace card amid fraud fears - Tribune 242",
+              "publisher": "Tribune 242",
+              "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQcVg2c2o4X0xKNDdMZ1hIOGZhYTNtbUNkcnNKdnY2MVpmOTl3ckM2eVlPejBScmpzLXRBM3htSlJJZDNvRy03bEJfbkd0Y3BHV0hFNTZOWWtmYl9DSExRdElGMVpsTUUtbkstbTFpQ3pHQVpkWVhJNDZSS1lDTHVhV253dlcwYl9ydnZ6RG5R?oc=5",
+              "published_at": "2022-02-25T08:00:00+00:00",
+              "discovery_channel": "historical"
+            }
+          ],
           "amount_text": [],
           "location": null,
           "evidence": "unverified_headline",
@@ -826,7 +1196,7 @@
         },
         {
           "kind": "headline",
-          "id": "eb4927c79d3fd30be1a2",
+          "id": "report-fd901eac2c7b244798f0",
           "date": "2021-12-07T21:13:20+00:00",
           "title": "Fraud prevention: New scams to be aware of and how to protect yourself - RBC Wealth Management",
           "source_url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQSFdsOTN3OFlrWlpSYmw2eUQ4em5HWFJMY2pteURHLVRwVV83ODJiZmlHZE1pMl9PVjdSQnFPemVJMEItU0F6V2ZsTVNSMWFXeVQ2MXBybG9mZVQxcDN0NllVTk4yQlpyM2NNNGozYm1peHRPSHpzaGlUejd6TEM3WmhsTllNb1NtcWVZUno0OFpQUzRBYl92R2ZDeUh6SlpTMWViNmRrT0hNUXV2OHhHYVpZMFJZWFFzeTE3TzJ5QVhMVlFYTkNJ?oc=5",
@@ -836,6 +1206,16 @@
           "source_channels": [
             "historical"
           ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "Fraud prevention: New scams to be aware of and how to protect yourself - RBC Wealth Management",
+              "publisher": "RBC Wealth Management",
+              "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQSFdsOTN3OFlrWlpSYmw2eUQ4em5HWFJMY2pteURHLVRwVV83ODJiZmlHZE1pMl9PVjdSQnFPemVJMEItU0F6V2ZsTVNSMWFXeVQ2MXBybG9mZVQxcDN0NllVTk4yQlpyM2NNNGozYm1peHRPSHpzaGlUejd6TEM3WmhsTllNb1NtcWVZUno0OFpQUzRBYl92R2ZDeUh6SlpTMWViNmRrT0hNUXV2OHhHYVpZMFJZWFFzeTE3TzJ5QVhMVlFYTkNJ?oc=5",
+              "published_at": "2021-12-07T21:13:20+00:00",
+              "discovery_channel": "historical"
+            }
+          ],
           "amount_text": [],
           "location": null,
           "evidence": "unverified_headline",
@@ -843,7 +1223,7 @@
         },
         {
           "kind": "headline",
-          "id": "bdec8a89129867d38af7",
+          "id": "report-7a32a9c75e4ea13784dd",
           "date": "2020-11-19T08:00:00+00:00",
           "title": "90-year-old RBC client allegedly lost $60K to fraud by longtime advisor - National - Global News",
           "source_url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNNWpRT1dTd21PX1BEcHo3dFI3OWVZaFpiT2lpVWlNZXNZQUpFNDJrcGtRZTRGcWRXSHFKR1ZhaXFhRmVSVVRlb0c2UW1LWUxtcGlZNXZzOHZjY2M5dzdtS1lUUW1jZTBzUjE3RmxnWTdQUTBuSG04S281RDRPRUdrTFJn?oc=5",
@@ -852,6 +1232,16 @@
           "source_count": 1,
           "source_channels": [
             "historical"
+          ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "90-year-old RBC client allegedly lost $60K to fraud by longtime advisor - National - Global News",
+              "publisher": "Global News",
+              "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNNWpRT1dTd21PX1BEcHo3dFI3OWVZaFpiT2lpVWlNZXNZQUpFNDJrcGtRZTRGcWRXSHFKR1ZhaXFhRmVSVVRlb0c2UW1LWUxtcGlZNXZzOHZjY2M5dzdtS1lUUW1jZTBzUjE3RmxnWTdQUTBuSG04S281RDRPRUdrTFJn?oc=5",
+              "published_at": "2020-11-19T08:00:00+00:00",
+              "discovery_channel": "historical"
+            }
           ],
           "amount_text": [
             "$60K"
@@ -932,7 +1322,7 @@
         },
         {
           "kind": "headline",
-          "id": "ceeeef8044b5fe107845",
+          "id": "report-3aad008801a0d291c802",
           "date": "2026-04-03T07:00:00+00:00",
           "title": "Scammer poses as Scotiabank employee in Waterloo fraud - CTV News",
           "source_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPaWVQblRfRnRqWDdyZHZzN3NtV2Y1aUNBVWlDektRR0l4VTdjZENyUkxSRkdXbzF2UE1vT0l0MDNGbURWRndzR21UajQwWHV6S3R4WU9Ed29jS01vSm9XZHc0UnczR3FZaVo3QXFFWXdXR1puTmF4WndyZUgxV0JUM25MaDBmZEJEdzA3T1JabXlidnNaRS0zWTZScFE?oc=5",
@@ -942,6 +1332,16 @@
           "source_channels": [
             "historical"
           ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "Scammer poses as Scotiabank employee in Waterloo fraud - CTV News",
+              "publisher": "CTV News",
+              "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPaWVQblRfRnRqWDdyZHZzN3NtV2Y1aUNBVWlDektRR0l4VTdjZENyUkxSRkdXbzF2UE1vT0l0MDNGbURWRndzR21UajQwWHV6S3R4WU9Ed29jS01vSm9XZHc0UnczR3FZaVo3QXFFWXdXR1puTmF4WndyZUgxV0JUM25MaDBmZEJEdzA3T1JabXlidnNaRS0zWTZScFE?oc=5",
+              "published_at": "2026-04-03T07:00:00+00:00",
+              "discovery_channel": "historical"
+            }
+          ],
           "amount_text": [],
           "location": null,
           "evidence": "unverified_headline",
@@ -949,7 +1349,7 @@
         },
         {
           "kind": "headline",
-          "id": "851e75e4f8df79ae754e",
+          "id": "report-fb26ac51517c45354cf1",
           "date": "2026-03-06T08:00:00+00:00",
           "title": "Younger Canadians most confident in spotting AI-scams are also most likely to fall for fraud - scotiabank.investorroom.com",
           "source_url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNQXBGa2tGclg4WEs4RFRXdVh2bTZYaW5QTWNOTl9tZ0dnNkdCUFJmWlV3VmVQRHU1dVpXeDV4VUZJbW5IclRFRHVpZFdabjBfdmpxT0t0M1E4Z3BMWldVVUxYa1V0TnVqRF9PellFVFBVU1JrbWpFYVc4Vnp2WTMtSFdYamFnOHc1RTl3bE9NMEVSckdZcm9CZG4yUWdNbUtYV0pIYlNOR2Z3cVBIYmhjZXUteGZuMXUxeXQ0UjE5LUxZQnB1SnBNbDBLRlZfZjBlbkRMZGV3?oc=5",
@@ -959,6 +1359,16 @@
           "source_channels": [
             "historical"
           ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "Younger Canadians most confident in spotting AI-scams are also most likely to fall for fraud - scotiabank.investorroom.com",
+              "publisher": "scotiabank.investorroom.com",
+              "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNQXBGa2tGclg4WEs4RFRXdVh2bTZYaW5QTWNOTl9tZ0dnNkdCUFJmWlV3VmVQRHU1dVpXeDV4VUZJbW5IclRFRHVpZFdabjBfdmpxT0t0M1E4Z3BMWldVVUxYa1V0TnVqRF9PellFVFBVU1JrbWpFYVc4Vnp2WTMtSFdYamFnOHc1RTl3bE9NMEVSckdZcm9CZG4yUWdNbUtYV0pIYlNOR2Z3cVBIYmhjZXUteGZuMXUxeXQ0UjE5LUxZQnB1SnBNbDBLRlZfZjBlbkRMZGV3?oc=5",
+              "published_at": "2026-03-06T08:00:00+00:00",
+              "discovery_channel": "historical"
+            }
+          ],
           "amount_text": [],
           "location": null,
           "evidence": "unverified_headline",
@@ -966,7 +1376,7 @@
         },
         {
           "kind": "headline",
-          "id": "60c0fae446d14e9ba4cf",
+          "id": "report-97b2519d5b575a88e78b",
           "date": "2025-06-02T07:00:00+00:00",
           "title": "Scotiabank holds customer responsible for almost $20K in credit card fraud - Radio-Canada",
           "source_url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQVnVWQUhxRUVqMXlCQkFKblFmR3dlY3JUWWRPdEc1S3Uyclp5OUxFMTExbEVFZUYzdVBWdG9UQ085OWxuQXJPa25NVU1xNDNtVnVuQUFjOXVaV1V2d043bzVieDM2eVJ0T1dhRmRnaWhuaFp1c19vUWswaTM0WWx6ZjRRbmxvOXFudG5qZ0stb09DVUlNTmVvMURidGg3VV94MHlXS0hxZjByOFNySXFNQWR5S2JEZi0zRl91LVhR?oc=5",
@@ -975,6 +1385,16 @@
           "source_count": 1,
           "source_channels": [
             "historical"
+          ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "Scotiabank holds customer responsible for almost $20K in credit card fraud - Radio-Canada",
+              "publisher": "Radio-Canada",
+              "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQVnVWQUhxRUVqMXlCQkFKblFmR3dlY3JUWWRPdEc1S3Uyclp5OUxFMTExbEVFZUYzdVBWdG9UQ085OWxuQXJPa25NVU1xNDNtVnVuQUFjOXVaV1V2d043bzVieDM2eVJ0T1dhRmRnaWhuaFp1c19vUWswaTM0WWx6ZjRRbmxvOXFudG5qZ0stb09DVUlNTmVvMURidGg3VV94MHlXS0hxZjByOFNySXFNQWR5S2JEZi0zRl91LVhR?oc=5",
+              "published_at": "2025-06-02T07:00:00+00:00",
+              "discovery_channel": "historical"
+            }
           ],
           "amount_text": [
             "$20K"
@@ -985,7 +1405,7 @@
         },
         {
           "kind": "headline",
-          "id": "9f56bd50cc3d12317bb5",
+          "id": "report-333012e0225e00658347",
           "date": "2023-03-02T08:00:00+00:00",
           "title": "Majority of young Canadians are not educated on financial fraud, according to Scotiabank Youth Fraud Poll - scotiabank.investorroom.com",
           "source_url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxONVY4aVZIOW9XTkdTakI2X3hCTGE5a1dKbEZMMl9RVFFKY3p1RXV3SmVWbjVqX3RGRDMyUkJNa21LM3RWb0tTMFBRcVFzU2VhbGxWQ0hfOU1DcEE4YUZLMUZGeE9KTS1idGtMek5QaDJ6S0czSUV2Z0V6SHA4c3FqNHEwdlFGZFBNRHdETzdWSXlkVzVMVDl3S09McThZX0c1VHVYWXVmU1BCQTVFVVVhcGJEclV0aC1jdzM2OGgwYnNlRGFXZjctQ1pFdDItR2VHOFpYQllSbEVubk04LWc3SmZsUVVXbmc?oc=5",
@@ -995,6 +1415,16 @@
           "source_channels": [
             "historical"
           ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "Majority of young Canadians are not educated on financial fraud, according to Scotiabank Youth Fraud Poll - scotiabank.investorroom.com",
+              "publisher": "scotiabank.investorroom.com",
+              "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxONVY4aVZIOW9XTkdTakI2X3hCTGE5a1dKbEZMMl9RVFFKY3p1RXV3SmVWbjVqX3RGRDMyUkJNa21LM3RWb0tTMFBRcVFzU2VhbGxWQ0hfOU1DcEE4YUZLMUZGeE9KTS1idGtMek5QaDJ6S0czSUV2Z0V6SHA4c3FqNHEwdlFGZFBNRHdETzdWSXlkVzVMVDl3S09McThZX0c1VHVYWXVmU1BCQTVFVVVhcGJEclV0aC1jdzM2OGgwYnNlRGFXZjctQ1pFdDItR2VHOFpYQllSbEVubk04LWc3SmZsUVVXbmc?oc=5",
+              "published_at": "2023-03-02T08:00:00+00:00",
+              "discovery_channel": "historical"
+            }
+          ],
           "amount_text": [],
           "location": null,
           "evidence": "unverified_headline",
@@ -1002,7 +1432,7 @@
         },
         {
           "kind": "headline",
-          "id": "fa6c423b5a6408be552a",
+          "id": "report-13d4d0d3835f2b8780a5",
           "date": "2022-03-21T07:00:00+00:00",
           "title": "After Bridgewater was defrauded out of nearly $500K, it took Scotiabank to court - CBC",
           "source_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPRTJLZmlhWU04Vi1uVXk2SjFzcHgzZ2oyc3BsS2F2YUlOVHlGQWNJMGpYYUpfeDgwLXZsVG9aOTlJem5GbTYwenlmM09vWmw3b3RJdFlpcW4yZGVYcGE3VW8tUGdjVml5SkVXNlluZlhJNUhHWlFoNTFMblJPT1R1TFRQREh3MmdfRktTdTJsQ3ZHazl1LXYw?oc=5",
@@ -1011,6 +1441,16 @@
           "source_count": 1,
           "source_channels": [
             "historical"
+          ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "After Bridgewater was defrauded out of nearly $500K, it took Scotiabank to court - CBC",
+              "publisher": "CBC",
+              "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPRTJLZmlhWU04Vi1uVXk2SjFzcHgzZ2oyc3BsS2F2YUlOVHlGQWNJMGpYYUpfeDgwLXZsVG9aOTlJem5GbTYwenlmM09vWmw3b3RJdFlpcW4yZGVYcGE3VW8tUGdjVml5SkVXNlluZlhJNUhHWlFoNTFMblJPT1R1TFRQREh3MmdfRktTdTJsQ3ZHazl1LXYw?oc=5",
+              "published_at": "2022-03-21T07:00:00+00:00",
+              "discovery_channel": "historical"
+            }
           ],
           "amount_text": [
             "$500K"
@@ -1047,7 +1487,7 @@
       "evidence": [
         {
           "kind": "headline",
-          "id": "17e4a1843792771192c1",
+          "id": "report-949cc51dbf87e59e37ac",
           "date": "2026-08-12T07:00:00+00:00",
           "title": "BMO’s auto-pay policy may help limit fraud but could also lead to missed payments, experts warn - The Globe and Mail",
           "source_url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNMEVQLWhKUWdtamp6NHliVWhnSVpaR0U5TTAzRGdSUlpEYUNxN0ZTSWJCNlJNTDJiMjB5VU9nbGJvQkp0M1BIaE1CRlcwVXU5TUhWd2ZBM0EteXIxWFZVT0taaXV2SE40UUhqRjgtcXJWM2pOSEdMUHN6N1lyZnNWaENXaVJYX3ZMc2U5bmloVUFhRF9EMjhkeWpQLUZEeTBVYWwwLWFnRmotZzA0ZGNOSXVmT216RlpPeHA5dVBLUDA?oc=5",
@@ -1056,6 +1496,16 @@
           "source_count": 1,
           "source_channels": [
             "historical"
+          ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "BMO’s auto-pay policy may help limit fraud but could also lead to missed payments, experts warn - The Globe and Mail",
+              "publisher": "The Globe and Mail",
+              "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNMEVQLWhKUWdtamp6NHliVWhnSVpaR0U5TTAzRGdSUlpEYUNxN0ZTSWJCNlJNTDJiMjB5VU9nbGJvQkp0M1BIaE1CRlcwVXU5TUhWd2ZBM0EteXIxWFZVT0taaXV2SE40UUhqRjgtcXJWM2pOSEdMUHN6N1lyZnNWaENXaVJYX3ZMc2U5bmloVUFhRF9EMjhkeWpQLUZEeTBVYWwwLWFnRmotZzA0ZGNOSXVmT216RlpPeHA5dVBLUDA?oc=5",
+              "published_at": "2026-08-12T07:00:00+00:00",
+              "discovery_channel": "historical"
+            }
           ],
           "amount_text": [],
           "location": null,
@@ -1079,7 +1529,7 @@
         },
         {
           "kind": "headline",
-          "id": "2abe3984badc992a4e48",
+          "id": "report-1556ff6e00fe0b7061f9",
           "date": "2024-04-11T07:00:00+00:00",
           "title": "140 BMO customers say they lost $1.5M in transfer frauds, plan to sue bank - Radio-Canada",
           "source_url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOLUVHeHF6cWotS3RDb0pOLW5MdmRwWWxROGpMdVEtazgzRi1BTE5SR0YxWDhyMF85WVhsd1FyaWZKV0xqbkJpMm82c1JHd0ZydmN3eWR2U054ZDNYT0oydGs1UDk4bjFuSEpzUFhKN3RJOHdZTm1ERHExSnNmd1k5RFJfUWUtaXQ1Wlg1Z1ppUlV4UjJOSXhBUElVdHpqS3A5LWNrOUt6YjUxV3FOclJNMWVPWnNsY1NwQl9XbQ?oc=5",
@@ -1088,6 +1538,16 @@
           "source_count": 1,
           "source_channels": [
             "historical"
+          ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "140 BMO customers say they lost $1.5M in transfer frauds, plan to sue bank - Radio-Canada",
+              "publisher": "Radio-Canada",
+              "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOLUVHeHF6cWotS3RDb0pOLW5MdmRwWWxROGpMdVEtazgzRi1BTE5SR0YxWDhyMF85WVhsd1FyaWZKV0xqbkJpMm82c1JHd0ZydmN3eWR2U054ZDNYT0oydGs1UDk4bjFuSEpzUFhKN3RJOHdZTm1ERHExSnNmd1k5RFJfUWUtaXQ1Wlg1Z1ppUlV4UjJOSXhBUElVdHpqS3A5LWNrOUt6YjUxV3FOclJNMWVPWnNsY1NwQl9XbQ?oc=5",
+              "published_at": "2024-04-11T07:00:00+00:00",
+              "discovery_channel": "historical"
+            }
           ],
           "amount_text": [
             "$1.5M"
@@ -1098,7 +1558,7 @@
         },
         {
           "kind": "headline",
-          "id": "f907e02b2db828742236",
+          "id": "report-bb8a02c8a653f57831f9",
           "date": "2023-08-26T07:00:00+00:00",
           "title": "He was scammed $16K from his BMO line of credit. The bank is charging him interest anyway - CBC",
           "source_url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPTUlNOU5oYnhzclRfb2VKRzZ2aEM3T1lUWldjblV4OTgwM1VZa1RkbXpXOGEyUDRBaDZIZzRsb0UtZGF6UWhJNnVNRkEwbFBIMnF2cUZPb0ZjaGFLend6ejNUdWg1dUp2M21mN0hRb3NlRGtBTkhxQ2FQUUh5OWJyd2p1dkphTDRZREpN?oc=5",
@@ -1107,6 +1567,16 @@
           "source_count": 1,
           "source_channels": [
             "historical"
+          ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "He was scammed $16K from his BMO line of credit. The bank is charging him interest anyway - CBC",
+              "publisher": "CBC",
+              "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPTUlNOU5oYnhzclRfb2VKRzZ2aEM3T1lUWldjblV4OTgwM1VZa1RkbXpXOGEyUDRBaDZIZzRsb0UtZGF6UWhJNnVNRkEwbFBIMnF2cUZPb0ZjaGFLend6ejNUdWg1dUp2M21mN0hRb3NlRGtBTkhxQ2FQUUh5OWJyd2p1dkphTDRZREpN?oc=5",
+              "published_at": "2023-08-26T07:00:00+00:00",
+              "discovery_channel": "historical"
+            }
           ],
           "amount_text": [
             "$16K"
@@ -1117,7 +1587,7 @@
         },
         {
           "kind": "headline",
-          "id": "2f9c01ff71417f47b859",
+          "id": "report-5820ad8599e6c26101fe",
           "date": "2022-04-21T07:00:00+00:00",
           "title": "BMO customers out thousands of dollars unable to prove fraudulent e-transfers weren't their fault - CBC",
           "source_url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNdmZKd3lHeW1oM2c2dmlZRFpOWkk1OHU2UEYtbHBXQ0FxOE1NcUFFYko1b1RQSnB0b3RtZURJcWQzWlpkLVhqMUlxOTRDVURvbkZ0U3BGd1V3Yl9hNVFDVmdwS2lRTDQ4b1U3ZVZrZDdzTGNXd3JyZFVlNXBtS1VSY1diUmY1RU1OeEx0dFR1X3RzUQ?oc=5",
@@ -1126,6 +1596,16 @@
           "source_count": 1,
           "source_channels": [
             "historical"
+          ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "BMO customers out thousands of dollars unable to prove fraudulent e-transfers weren't their fault - CBC",
+              "publisher": "CBC",
+              "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNdmZKd3lHeW1oM2c2dmlZRFpOWkk1OHU2UEYtbHBXQ0FxOE1NcUFFYko1b1RQSnB0b3RtZURJcWQzWlpkLVhqMUlxOTRDVURvbkZ0U3BGd1V3Yl9hNVFDVmdwS2lRTDQ4b1U3ZVZrZDdzTGNXd3JyZFVlNXBtS1VSY1diUmY1RU1OeEx0dFR1X3RzUQ?oc=5",
+              "published_at": "2022-04-21T07:00:00+00:00",
+              "discovery_channel": "historical"
+            }
           ],
           "amount_text": [],
           "location": null,
@@ -1161,7 +1641,7 @@
       "evidence": [
         {
           "kind": "headline",
-          "id": "e021eb9455bf679596da",
+          "id": "report-874800d24795df1691c0",
           "date": "2025-11-05T08:00:00+00:00",
           "title": "CIBC, RBC failed to stop $1.7M fraud on B.C. senior - Yahoo! Finance Canada",
           "source_url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9sQVM2ZUkwX1JJc29hN18wYmZlbVloc0pDclpjRE9EWGFfb1pjTWh6QUxBRkV4N3ZoVmdiMC1sdFViRDlWUzJWSmNTeHpYbVRBNW1OWFZFdkdHcGtqVFV0aGRaOG1TeUNZWHpzbnVtNmtjaHFteWVBU2VjRQ?oc=5",
@@ -1170,6 +1650,16 @@
           "source_count": 1,
           "source_channels": [
             "historical"
+          ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "CIBC, RBC failed to stop $1.7M fraud on B.C. senior - Yahoo! Finance Canada",
+              "publisher": "Yahoo! Finance Canada",
+              "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9sQVM2ZUkwX1JJc29hN18wYmZlbVloc0pDclpjRE9EWGFfb1pjTWh6QUxBRkV4N3ZoVmdiMC1sdFViRDlWUzJWSmNTeHpYbVRBNW1OWFZFdkdHcGtqVFV0aGRaOG1TeUNZWHpzbnVtNmtjaHFteWVBU2VjRQ?oc=5",
+              "published_at": "2025-11-05T08:00:00+00:00",
+              "discovery_channel": "historical"
+            }
           ],
           "amount_text": [
             "$1.7M"
@@ -1180,7 +1670,7 @@
         },
         {
           "kind": "headline",
-          "id": "619cfcc73a0488e55d50",
+          "id": "report-10f78dea8e7c2be5a809",
           "date": "2025-10-27T07:00:00+00:00",
           "title": "RBC and CIBC allow 89-year-old to drain life savings, lose $1.7M to scammers - CBC",
           "source_url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE13VFFVNG9IUi1GRVZHMmhzRkNqQ1JnM0g3Vl8tVVViQXdPcGx4SzBRbFBmZzlrVGJLNkV1SWg5QW01SHZ0YklqLWhPVS1QbVR6ZFNJSUFiTUFpZFFPVU9oSERYdmRsTlVCMVlzQUtTTGszclUtbFZrbmRvSQ?oc=5",
@@ -1189,6 +1679,16 @@
           "source_count": 1,
           "source_channels": [
             "historical"
+          ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "RBC and CIBC allow 89-year-old to drain life savings, lose $1.7M to scammers - CBC",
+              "publisher": "CBC",
+              "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE13VFFVNG9IUi1GRVZHMmhzRkNqQ1JnM0g3Vl8tVVViQXdPcGx4SzBRbFBmZzlrVGJLNkV1SWg5QW01SHZ0YklqLWhPVS1QbVR6ZFNJSUFiTUFpZFFPVU9oSERYdmRsTlVCMVlzQUtTTGszclUtbFZrbmRvSQ?oc=5",
+              "published_at": "2025-10-27T07:00:00+00:00",
+              "discovery_channel": "historical"
+            }
           ],
           "amount_text": [
             "$1.7M"
@@ -1214,7 +1714,7 @@
         },
         {
           "kind": "headline",
-          "id": "cfd1ee4348b9ca909136",
+          "id": "report-1a7a6e87f6a76dac5ac9",
           "date": "2023-05-16T07:00:00+00:00",
           "title": "Former Merritt CIBC employee fined $300,000 for theft from senior client - Merritt Herald",
           "source_url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPNUxKeDZRbmEza2lnNUtEV2Q1Ui04UkFUR0c5aWZBZVpwSGMxOHljajNEUE9mNG0teWl4cXBteFFtNVBGaENmR29VanJub0s1d2tlS3VFZEdLd2RvYkl0Zi1lc2l6MVd2bXBwNHN5QXNITVBwbHVtRWNCNThvLURWX2xDM0lSR0VhTUZyYlRUYUpCU2tHd0dFcW1ZUTdRbzlZZlFZ?oc=5",
@@ -1223,6 +1723,16 @@
           "source_count": 1,
           "source_channels": [
             "historical"
+          ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "Former Merritt CIBC employee fined $300,000 for theft from senior client - Merritt Herald",
+              "publisher": "Merritt Herald",
+              "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPNUxKeDZRbmEza2lnNUtEV2Q1Ui04UkFUR0c5aWZBZVpwSGMxOHljajNEUE9mNG0teWl4cXBteFFtNVBGaENmR29VanJub0s1d2tlS3VFZEdLd2RvYkl0Zi1lc2l6MVd2bXBwNHN5QXNITVBwbHVtRWNCNThvLURWX2xDM0lSR0VhTUZyYlRUYUpCU2tHd0dFcW1ZUTdRbzlZZlFZ?oc=5",
+              "published_at": "2023-05-16T07:00:00+00:00",
+              "discovery_channel": "historical"
+            }
           ],
           "amount_text": [
             "$300,000 "
@@ -1233,7 +1743,7 @@
         },
         {
           "kind": "headline",
-          "id": "2222d4b97f94f68cf742",
+          "id": "report-a21ef3a79fc08621af18",
           "date": "2020-01-12T08:00:00+00:00",
           "title": "CIBC faces losing millions in alleged fraud by trucking firm - The Globe and Mail",
           "source_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQYi1GYjJQclFEU2pNZWZpS08ycXdNYWV6RHRUWHdIOTRXQzVVRUE3X0NKMkpjRjBsaVFqWXZBYW50T1hZX3EyQjJuc3lKcTBXdVA3QWMxUGt1aW81ZHBEZVVZZ1NMUURobTgzRGhTVlZpVTdMTk1FcUNUejFCbUtvUkY0Q21iSzRWZlZMOXBiQjFkNy1RMGxvMEZtQ1ZBRWE3R28xMEZIRGZxZUZmUHZR?oc=5",
@@ -1242,6 +1752,16 @@
           "source_count": 1,
           "source_channels": [
             "historical"
+          ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "CIBC faces losing millions in alleged fraud by trucking firm - The Globe and Mail",
+              "publisher": "The Globe and Mail",
+              "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQYi1GYjJQclFEU2pNZWZpS08ycXdNYWV6RHRUWHdIOTRXQzVVRUE3X0NKMkpjRjBsaVFqWXZBYW50T1hZX3EyQjJuc3lKcTBXdVA3QWMxUGt1aW81ZHBEZVVZZ1NMUURobTgzRGhTVlZpVTdMTk1FcUNUejFCbUtvUkY0Q21iSzRWZlZMOXBiQjFkNy1RMGxvMEZtQ1ZBRWE3R28xMEZIRGZxZUZmUHZR?oc=5",
+              "published_at": "2020-01-12T08:00:00+00:00",
+              "discovery_channel": "historical"
+            }
           ],
           "amount_text": [],
           "location": null,
@@ -1282,7 +1802,7 @@
       "evidence": [
         {
           "kind": "headline",
-          "id": "ea59d63ad49ac5fd3e5f",
+          "id": "report-daa89dadea3b315b20e1",
           "date": "2026-05-22T07:00:00+00:00",
           "title": "Sardine: National Bank Of Canada Partnership Expands Digital Banking Fraud Prevention Capabilities - Pulse 2.0",
           "source_url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQSDVzSktaWUFyOGN4TUhveWJKNW91MGppdlFDT1dXV2EzbENYY3NUaXdBOEZnaE5oclRYeU1hejVMMzFxV1hJbUcxY0ZNZTVOQS03WDVCVmp1bXlCYmwyVlNtVzZqNDhHenFJWndnb0NCV3drLTdEY0cxMzl4dWtXQmVrQm9CNHBDN1o3Q1Z5V0l0YUJodFktUGpnQlNjZU9uTVlZcnlVcGJsSm5QWjBMd29jQXZjaFZm0gG-AUFVX3lxTE9hVUdiOWd1d053eEpOTVFMS0FrUnhLREhYWGtwV3pMeTE5UjhlNzY4a1BucG1KUHRLQnpCb0YyUDFTY0hXMjR3SFBkZDJkTUdISTRZNzFPd1dTdnBpUHl2OUJpQ1VITm5idTZZdlRMeW0wLV9ZNWxjOGhGcHluRC0taUc1UWZVV1FxNmVtc1dPS1lpdUVSOEtRV21obXo3RkVYZzJtclBUSThGOHFRdzUxdlVQcWJuVFdub2ppenc?oc=5",
@@ -1292,6 +1812,16 @@
           "source_channels": [
             "historical"
           ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "Sardine: National Bank Of Canada Partnership Expands Digital Banking Fraud Prevention Capabilities - Pulse 2.0",
+              "publisher": "Pulse 2.0",
+              "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQSDVzSktaWUFyOGN4TUhveWJKNW91MGppdlFDT1dXV2EzbENYY3NUaXdBOEZnaE5oclRYeU1hejVMMzFxV1hJbUcxY0ZNZTVOQS03WDVCVmp1bXlCYmwyVlNtVzZqNDhHenFJWndnb0NCV3drLTdEY0cxMzl4dWtXQmVrQm9CNHBDN1o3Q1Z5V0l0YUJodFktUGpnQlNjZU9uTVlZcnlVcGJsSm5QWjBMd29jQXZjaFZm0gG-AUFVX3lxTE9hVUdiOWd1d053eEpOTVFMS0FrUnhLREhYWGtwV3pMeTE5UjhlNzY4a1BucG1KUHRLQnpCb0YyUDFTY0hXMjR3SFBkZDJkTUdISTRZNzFPd1dTdnBpUHl2OUJpQ1VITm5idTZZdlRMeW0wLV9ZNWxjOGhGcHluRC0taUc1UWZVV1FxNmVtc1dPS1lpdUVSOEtRV21obXo3RkVYZzJtclBUSThGOHFRdzUxdlVQcWJuVFdub2ppenc?oc=5",
+              "published_at": "2026-05-22T07:00:00+00:00",
+              "discovery_channel": "historical"
+            }
+          ],
           "amount_text": [],
           "location": null,
           "evidence": "unverified_headline",
@@ -1299,7 +1829,7 @@
         },
         {
           "kind": "headline",
-          "id": "e27794d5a221e2cd50fd",
+          "id": "report-77d93a748246d25fc95c",
           "date": "2026-05-20T07:00:00+00:00",
           "title": "National Bank of Canada Partners with Sardine to Strengthen Digital Banking Security and Fraud Operations Efficiency - Business Wire",
           "source_url": "https://news.google.com/rss/articles/CBMigwJBVV95cUxOLUxlQ053Q1QtSXpKeWExS0RTaGVtZ0M5S3V0TnVjSmZEQ1NJelY4RXBhTmVQWC1sa1VtbzZKc182NjBGVDZjMUxmdER6UnJDRWVoWmF0b1dIQ0VYZ2FJSWdBay13NUNxX2IzeUkxM0JpcTBta1M0OFJGMGZaQ2hEZkVEdFdRMzI5WHkxVks0cDZrc2dqM0RjcnVuUngzZ2E0eWF6bzRiRm1nUjhkVmp4bnZlMWVBZ1FHcF93a0UtLWIwQ3FZTDRkWkRQV1laM0F2OFlsVDlodzFENDFTWmEzc0hiZVMtSVRuTGtVUkhQSUpQNEdNUUhXcnB4ZlNvamFrOTBn?oc=5",
@@ -1308,6 +1838,16 @@
           "source_count": 1,
           "source_channels": [
             "historical"
+          ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "National Bank of Canada Partners with Sardine to Strengthen Digital Banking Security and Fraud Operations Efficiency - Business Wire",
+              "publisher": "Business Wire",
+              "url": "https://news.google.com/rss/articles/CBMigwJBVV95cUxOLUxlQ053Q1QtSXpKeWExS0RTaGVtZ0M5S3V0TnVjSmZEQ1NJelY4RXBhTmVQWC1sa1VtbzZKc182NjBGVDZjMUxmdER6UnJDRWVoWmF0b1dIQ0VYZ2FJSWdBay13NUNxX2IzeUkxM0JpcTBta1M0OFJGMGZaQ2hEZkVEdFdRMzI5WHkxVks0cDZrc2dqM0RjcnVuUngzZ2E0eWF6bzRiRm1nUjhkVmp4bnZlMWVBZ1FHcF93a0UtLWIwQ3FZTDRkWkRQV1laM0F2OFlsVDlodzFENDFTWmEzc0hiZVMtSVRuTGtVUkhQSUpQNEdNUUhXcnB4ZlNvamFrOTBn?oc=5",
+              "published_at": "2026-05-20T07:00:00+00:00",
+              "discovery_channel": "historical"
+            }
           ],
           "amount_text": [],
           "location": null,
@@ -1373,7 +1913,7 @@
         },
         {
           "kind": "headline",
-          "id": "6fcc75ea064a8f5d19fa",
+          "id": "report-92e05c5cbafb17732c81",
           "date": "2021-04-27T07:00:00+00:00",
           "title": "BCLC lawyer passes on Christy Clark at money laundering inquiry, grills David Eby - Business in Vancouver",
           "source_url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQVEpUaG01VWdVc0ctN3RVUlBjenpxSlFBdFNIVDFiMzg0VFhoSjNmWDRQZWJhRm05NC1sYWZJV09heDFFN1MxZV9pcl9CUkdkY2lzbjV2WkkwLWlDZEZNaGFLWFgtcUVLTmo2dkxpaElpbHJGUjRhMmFBcmVteGYxM0J6NUtKcV8tN3drY1g2eXVQR0VXN0hsVXlyRWNVY1ZRa1E4d01MNEFldHR3dGZibUlvaFN3elU0dHRJZDNfd0hMUGZVcUhn?oc=5",
@@ -1382,6 +1922,16 @@
           "source_count": 1,
           "source_channels": [
             "historical"
+          ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "BCLC lawyer passes on Christy Clark at money laundering inquiry, grills David Eby - Business in Vancouver",
+              "publisher": "Business in Vancouver",
+              "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQVEpUaG01VWdVc0ctN3RVUlBjenpxSlFBdFNIVDFiMzg0VFhoSjNmWDRQZWJhRm05NC1sYWZJV09heDFFN1MxZV9pcl9CUkdkY2lzbjV2WkkwLWlDZEZNaGFLWFgtcUVLTmo2dkxpaElpbHJGUjRhMmFBcmVteGYxM0J6NUtKcV8tN3drY1g2eXVQR0VXN0hsVXlyRWNVY1ZRa1E4d01MNEFldHR3dGZibUlvaFN3elU0dHRJZDNfd0hMUGZVcUhn?oc=5",
+              "published_at": "2021-04-27T07:00:00+00:00",
+              "discovery_channel": "historical"
+            }
           ],
           "amount_text": [],
           "location": "Vancouver, British Columbia",
@@ -5104,7 +5654,7 @@
       "evidence": [
         {
           "kind": "headline",
-          "id": "f6e1e8bd1681feb2f76f",
+          "id": "report-a1492b370ef50a08cfbd",
           "date": "2024-06-12T07:00:00+00:00",
           "title": "Quebec police arrest three in $8.9-million fraud, data theft case involving Desjardins - The Globe and Mail",
           "source_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPRENDaXlLZlp6MzJ0WEExMEVuUDVDajg3dDBKcVFWMFhza1BCaWlnYjVQRDgwZVJqZDdxVXBOXzBXZkNmS3BzMFBNX2ZnbzVPSUVLbW1yTGZFQ0FiZVFRQklfRkRxQjFLVExXZ3h3SDRZVFlJS3NCX3YxakVnMEpXSXBYdmNaazVrSEhqalQtcEI1ZEY4aWRUNnJNZXNQSXZ0UUFqZWU0NDdWZzRiSHZj?oc=5",
@@ -5113,6 +5663,16 @@
           "source_count": 1,
           "source_channels": [
             "historical"
+          ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "Quebec police arrest three in $8.9-million fraud, data theft case involving Desjardins - The Globe and Mail",
+              "publisher": "The Globe and Mail",
+              "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPRENDaXlLZlp6MzJ0WEExMEVuUDVDajg3dDBKcVFWMFhza1BCaWlnYjVQRDgwZVJqZDdxVXBOXzBXZkNmS3BzMFBNX2ZnbzVPSUVLbW1yTGZFQ0FiZVFRQklfRkRxQjFLVExXZ3h3SDRZVFlJS3NCX3YxakVnMEpXSXBYdmNaazVrSEhqalQtcEI1ZEY4aWRUNnJNZXNQSXZ0UUFqZWU0NDdWZzRiSHZj?oc=5",
+              "published_at": "2024-06-12T07:00:00+00:00",
+              "discovery_channel": "historical"
+            }
           ],
           "amount_text": [
             "$8.9"
@@ -5123,7 +5683,7 @@
         },
         {
           "kind": "headline",
-          "id": "3e7517d913f52dffdd33",
+          "id": "report-cf6424c64a720319db98",
           "date": "2024-06-12T07:00:00+00:00",
           "title": "Police arrest 3 in connection with massive Desjardins data breach - CBC",
           "source_url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOSVcxd0UzSVhsSmVBNmtSdkhJbjIwa1owZ1g1eThqU25VOGhtUVpSYkI2aUotdG9ILTh4dWp6LWN5Q3E0MklHM2xQRmtTX3NKV1ZBbFdzaFJOS0o2YnA4bUFQOHBiZWJEaEZzNWlNZUNoX1dsUUNncmEwOHcxY1EzTWtJT3BBT0U?oc=5",
@@ -5133,6 +5693,16 @@
           "source_channels": [
             "historical"
           ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "Police arrest 3 in connection with massive Desjardins data breach - CBC",
+              "publisher": "CBC",
+              "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOSVcxd0UzSVhsSmVBNmtSdkhJbjIwa1owZ1g1eThqU25VOGhtUVpSYkI2aUotdG9ILTh4dWp6LWN5Q3E0MklHM2xQRmtTX3NKV1ZBbFdzaFJOS0o2YnA4bUFQOHBiZWJEaEZzNWlNZUNoX1dsUUNncmEwOHcxY1EzTWtJT3BBT0U?oc=5",
+              "published_at": "2024-06-12T07:00:00+00:00",
+              "discovery_channel": "historical"
+            }
+          ],
           "amount_text": [],
           "location": null,
           "evidence": "unverified_headline",
@@ -5140,7 +5710,7 @@
         },
         {
           "kind": "headline",
-          "id": "567de2ef90ef00d03b4a",
+          "id": "report-d85d84e6b6ca06c12d8f",
           "date": "2024-06-12T07:00:00+00:00",
           "title": "Desjardins data breach: Laval police arrest 3 suspects, fourth one being sought - CTV News",
           "source_url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNdVdzbENWVlJia2lPc2dJQXUtRmVCakIzY0UzYndoREE1TmtjamtxOHFrOHJtMWZRWGo2NElncDUxVWtHTHl6MFZuN3loNUd4RVM4NW9PTExCcEotTmpvLUV2eDZGaWZGUkhPSHBwYzVDeEJEekg3TnJCRUNQQW1SM19FM253SndPRExiSG5Kay1aSXJpdGN2amxtNlM2VUNxaE1MTEVMOG43d2pJQm1qYXhNLTRCdWVzREE?oc=5",
@@ -5150,6 +5720,16 @@
           "source_channels": [
             "historical"
           ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "Desjardins data breach: Laval police arrest 3 suspects, fourth one being sought - CTV News",
+              "publisher": "CTV News",
+              "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNdVdzbENWVlJia2lPc2dJQXUtRmVCakIzY0UzYndoREE1TmtjamtxOHFrOHJtMWZRWGo2NElncDUxVWtHTHl6MFZuN3loNUd4RVM4NW9PTExCcEotTmpvLUV2eDZGaWZGUkhPSHBwYzVDeEJEekg3TnJCRUNQQW1SM19FM253SndPRExiSG5Kay1aSXJpdGN2amxtNlM2VUNxaE1MTEVMOG43d2pJQm1qYXhNLTRCdWVzREE?oc=5",
+              "published_at": "2024-06-12T07:00:00+00:00",
+              "discovery_channel": "historical"
+            }
+          ],
           "amount_text": [],
           "location": null,
           "evidence": "unverified_headline",
@@ -5157,7 +5737,7 @@
         },
         {
           "kind": "headline",
-          "id": "84c6a7a61b83a9a4f838",
+          "id": "report-3f109f5c36207d96a3e8",
           "date": "2022-06-17T07:00:00+00:00",
           "title": "Quebec court approves $200.9M settlement against Desjardins over data breach - CBC",
           "source_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOUHhsa05SN25zOGk4VGM3TkR5NGdxdUtGQUNNMjZKbFZOQVVIMUFveGZHOU1fZTBCUExBRTNQaEhGejhZblN3VHZ2MDUzSERhRE1sWVZOdVpKcG5NeEtNWmF6VjZxWjZWWExnV1pBYkM5WU1nQTUxYkdTMlE5TDdWQ3lLSEpfRzJ2LTYwU0hIWGhOZl9RTkliRldsTGk?oc=5",
@@ -5166,6 +5746,16 @@
           "source_count": 1,
           "source_channels": [
             "historical"
+          ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "Quebec court approves $200.9M settlement against Desjardins over data breach - CBC",
+              "publisher": "CBC",
+              "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOUHhsa05SN25zOGk4VGM3TkR5NGdxdUtGQUNNMjZKbFZOQVVIMUFveGZHOU1fZTBCUExBRTNQaEhGejhZblN3VHZ2MDUzSERhRE1sWVZOdVpKcG5NeEtNWmF6VjZxWjZWWExnV1pBYkM5WU1nQTUxYkdTMlE5TDdWQ3lLSEpfRzJ2LTYwU0hIWGhOZl9RTkliRldsTGk?oc=5",
+              "published_at": "2022-06-17T07:00:00+00:00",
+              "discovery_channel": "historical"
+            }
           ],
           "amount_text": [
             "$200.9M"
