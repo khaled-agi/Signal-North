@@ -168,8 +168,56 @@
    const {a,lbl}=caseAmount(x);
    const role=({"customer_financial_institution":"Customer bank","institution_impersonated":"Bank impersonated","bank_not_identified":"Bank unnamed","unnamed_financial_institution_assisted_recovery":"Bank helped recover funds"})[x.institution_role]||"Role unspecified";
    const text=featured?x.title:((x.summary||"")+" "+(x.consulting_theme||""));
-   return '<article class="case-item'+(featured?' case-mini':'')+'"><div class="case-head"><span class="case-tag">'+esc(x.fraud_type)+'</span><span class="small">'+esc(x.reported_at||"Date not reported")+'</span></div><h3>'+esc(x.title)+'</h3><div class="case-amount">'+esc(a)+' <span class="small">'+esc(lbl)+'</span></div><div class="case-entity"><strong>'+esc(x.institution||"Bank not named")+'</strong> · '+esc(role)+'</div>'+(featured?'':'<p class="case-summary">'+esc(text)+'</p><div class="small">Reported incident period: '+esc(x.incident_period||"Unknown")+' · '+esc(x.location||"Canada")+'</div><div class="case-disclaimer">'+esc(x.disclaimer||"Media-reported case, not a legal finding.")+'</div>')+'<div class="case-source">'+link(x.source_url,x.source_name)+'</div></article>';
+   return '<article class="case-item'+(featured?' case-mini':'')+'"><div class="case-head"><span class="case-tag">'+esc(x.fraud_type)+'</span><span class="small">'+esc(x.reported_at||"Date not reported")+'</span></div><h3>'+esc(x.title)+'</h3><div class="case-amount">'+esc(a)+' <span class="small">'+esc(lbl)+'</span></div><div class="case-entity"><strong>'+esc(x.institution||"Bank not named")+'</strong> · '+esc(role)+'</div>'+(featured?'':'<p class="case-summary">'+esc(text)+'</p><div class="small">Reported incident period: '+esc(x.incident_period||"Unknown")+' · '+esc(x.location||"Canada")+'</div><div class="case-disclaimer">'+esc(x.disclaimer||"Media-reported case, not a legal finding.")+'</div>')+'<div class="case-actions"><button type="button" class="case-investigate" data-case-investigate="'+esc(x.id)+'">View investigation →</button></div><div class="case-source">'+link(x.source_url,x.source_name)+'</div></article>';
  }
+ function openCaseInvestigation(x){
+   const {a,lbl}=caseAmount(x);
+   const stages=Array.isArray(x.investigation?.stages)?x.investigation.stages:[];
+   const questions=Array.isArray(x.investigation?.questions)?x.investigation.questions:[];
+   const role=({
+      customer_financial_institution:"Customer's financial institution",
+      institution_impersonated:"Institution impersonated by suspected fraudsters",
+      bank_not_identified:"Institution not identified in source",
+      unnamed_financial_institution_assisted_recovery:"Unnamed institution assisted recovery"
+   })[x.institution_role]||"Role not established";
+   const amountLabel=(x.amount_approximate?"Approximate ":"")+lbl.toLowerCase();
+   const sourceType=({police_release:"Police release",government_release:"Government release",reported_by_news:"Attributed news reporting"})[x.evidence_status]||"Source-attributed reporting";
+   const steps=stages.map((s,i)=>'<li class="case-step"><span class="case-step-num">'+(i+1)+'</span><div><strong>'+esc(s[0])+'</strong><p>'+esc(s[1])+'</p></div></li>').join("");
+   const research=questions.map(q=>'<li>'+esc(q)+'</li>').join("");
+   const content='<div class="eyebrow">SOURCE-REVIEWED CASE / INVESTIGATION WORKSPACE</div>'+
+     '<h2>'+esc(x.title)+'</h2>'+
+     '<p class="case-investigation-intro">'+esc(x.summary||"")+'</p>'+
+     '<div class="case-fact-grid">'+
+       '<div><span>Reported impact</span><strong>'+esc(a)+'</strong><small>'+esc(amountLabel)+'</small></div>'+
+       '<div><span>Incident period</span><strong>'+esc(x.incident_period||"Not established")+'</strong><small>Not necessarily the publication date</small></div>'+
+       '<div><span>Place reference</span><strong>'+esc(x.location||"Unlocated")+'</strong><small>'+esc(x.location_role||"Location accuracy not established")+'</small></div>'+
+       '<div><span>Institution role</span><strong>'+esc(x.institution||"Unnamed institution")+'</strong><small>'+esc(role)+'</small></div>'+
+     '</div>'+
+     '<h3>Reported sequence</h3>'+
+     '<p class="case-evidence-explainer">These stages restate source-attributed reporting, not a reconstructed transaction timeline or independently adjudicated facts. The original source is linked below.</p>'+
+     (steps?'<ol class="case-steps">'+steps+'</ol>':'<p>The original source has not yet been structured into a case sequence.</p>')+
+     '<h3>Outcome and evidence</h3>'+
+     '<dl class="case-evidence-list">'+
+       '<dt>Recovery or resolution</dt><dd>'+esc(x.recovery_status||"Not reported")+'</dd>'+
+       '<dt>Evidence type</dt><dd>'+esc(sourceType)+'</dd>'+
+       '<dt>Public report date</dt><dd>'+esc(x.reported_at||"Not reported")+'</dd>'+
+       '<dt>Reported financial measure</dt><dd>'+esc(lbl)+'</dd>'+
+     '</dl>'+
+     '<div class="warning">'+esc(x.disclaimer||"Institution mention is not proof of wrongdoing.")+'</div>'+
+     '<h3>Investigator research prompts</h3>'+
+     '<p class="case-evidence-explainer">Questions for further evidence review; not allegations, conclusions, or claims about missing controls.</p>'+
+     (research?'<ul class="case-questions">'+research+'</ul>':"")+
+     '<div class="case-primary-source">'+link(x.source_url,"Open original source: "+(x.source_name||"Public reporting"))+'</div>';
+   $i("drawerBody").innerHTML=content;
+   $i("overlay").classList.remove("hidden");
+   document.body.style.overflow="hidden";
+ }
+ document.addEventListener("click",e=>{
+   const control=e.target.closest("[data-case-investigate]");
+   if(!control)return;
+   const incident=incidents.find(x=>String(x.id)===control.dataset.caseInvestigate);
+   if(incident){e.preventDefault();openCaseInvestigation(incident);}
+ });
  function renderIncidents(){
    const q=$i("incidentSearch").value.trim().toLowerCase();
    const prov=$i("incidentProvince").value;
