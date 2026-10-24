@@ -1,5 +1,42 @@
 {
-  "last_completed_at": null,
-  "sources": {},
-  "stored_leads": 0
+  "last_attempt_at": "2026-10-24T01:27:41+00:00",
+  "sources": {
+    "Bank and customer fraud": {
+      "status": "ok",
+      "returned": 42,
+      "accepted": 42
+    },
+    "Scams and victims": {
+      "status": "ok",
+      "returned": 54,
+      "accepted": 50
+    },
+    "Police investigations": {
+      "status": "ok",
+      "returned": 28,
+      "accepted": 28
+    },
+    "Money laundering": {
+      "status": "ok",
+      "returned": 18,
+      "accepted": 18
+    },
+    "Investment schemes": {
+      "status": "ok",
+      "returned": 11,
+      "accepted": 11
+    },
+    "Qu\u00e9bec fraude": {
+      "status": "ok",
+      "returned": 1,
+      "accepted": 1
+    },
+    "Credit unions and fintech": {
+      "status": "ok",
+      "returned": 5,
+      "accepted": 5
+    }
+  },
+  "stored_leads": 139,
+  "last_completed_at": "2026-10-24T01:27:44+00:00"
 }
