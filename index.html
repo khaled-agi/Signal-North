@@ -7,7 +7,7 @@
 <meta name="description" content="Signal North: source-linked Canadian financial crime enforcement intelligence and geographic research dashboard.">
 <title>Signal North · Canadian Financial Crime Intelligence</title>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
-<link rel="stylesheet" href="./styles.css?v=20261024-02">
+<link rel="stylesheet" href="./styles.css?v=20261024-03">
 </head>
 <body>
 <div class="layout">
@@ -15,6 +15,8 @@
   <div class="brand"><div class="brand-mark">✳</div><div>signal<span>north</span><small>FINANCIAL CRIME INTELLIGENCE</small></div></div>
   <div class="side-caption">WORKSPACE</div>
   <button class="nav active" data-tab="overview">◈ &nbsp; Intelligence overview</button>
+  <button class="nav" data-tab="fraud">⚑ &nbsp; Fraud intelligence</button>
+  <button class="nav" data-tab="losses">◫ &nbsp; Losses &amp; penalties</button>
   <button class="nav" data-tab="events">▤ &nbsp; Event explorer</button>
   <button class="nav" data-tab="institutions">▥ &nbsp; Institution radar</button>
   <button class="nav" data-tab="sources">◉ &nbsp; Sources &amp; methodology</button>
@@ -34,7 +36,30 @@
       <section class="panel map-panel"><div class="panel-heading"><div><div class="eyebrow">GEOGRAPHIC INTELLIGENCE</div><h2>Canadian event map</h2></div><div class="map-legend"><i></i> Published regulatory notices</div></div><p class="small">Markers reflect locations explicitly associated with named institutions, <strong>not the location of the alleged incident</strong>.</p><div id="map" class="map"></div><div class="map-caption" id="mapCaption">Loading geocoded events</div></section>
       <section class="panel right-panel"><div class="panel-heading"><div><div class="eyebrow">WHERE WE HAVE EVIDENCE</div><h2>Regional coverage</h2></div></div><div id="regions"></div><p class="small muted">These are published notices detected by our limited source coverage, not provincial fraud rates.</p></section>
     </div>
+    <section class="panel"><div class="panel-heading"><div><div class="eyebrow">FRAUD THREAT PULSE</div><h2>Canadian losses and emerging reports</h2></div><button class="link-btn" data-to="fraud">Explore fraud news →</button></div><div id="overviewFraud" class="fraud-overview"><div class="empty">Loading Canadian fraud intelligence...</div></div></section>
     <section class="panel"><div class="panel-heading"><div><div class="eyebrow">RECENT REGULATORY DEVELOPMENTS</div><h2>Latest tracked cases</h2></div><button class="link-btn" data-to="events">Explore all →</button></div><div id="recent" class="events-list"></div></section>
+  </section>
+  <section id="fraud" class="tab hidden">
+    <div class="panel">
+      <div class="panel-heading"><div><div class="eyebrow">FRAUD INTELLIGENCE / CANADA</div><h2>Reported fraud losses &amp; typologies</h2></div><span class="small">CAFC primary-source statistics</span></div>
+      <div class="notice"><strong>Sector figures are not bank losses.</strong> These are amounts reported by victims to the Canadian Anti-Fraud Centre, not losses incurred by a particular financial institution. Data is incomplete and can be revised.</div>
+      <div id="fraudNational" class="fraud-national"></div>
+    </div>
+    <div class="panel">
+      <div class="panel-heading"><div><div class="eyebrow">NEWS DISCOVERY / NOT VERIFIED</div><h2>Emerging fraud reports</h2></div><span id="newsCount" class="small">Loading leads</span></div>
+      <div class="notice"><strong>Headlines are discovery leads, not adjudicated facts.</strong> Mentions of an institution do not imply institutional wrongdoing, a confirmed loss, or a need for consulting services. Open the publication for its full context.</div>
+      <div class="filters"><input id="newsSearch" type="search" placeholder="Find fraud headlines, publishers, typologies..."><select id="newsCategory"><option value="">All fraud types</option></select></div>
+      <div id="newsRows" class="news-rows"><div class="empty">Loading news discoveries...</div></div>
+    </div>
+  </section>
+  <section id="losses" class="tab hidden">
+    <div class="panel"><div class="panel-heading"><div><div class="eyebrow">FINANCIAL IMPACT / VERIFIED SOURCES</div><h2>Annual institution penalties versus fraud losses</h2></div><select id="lossYear" class="year-select" aria-label="Publication year"></select></div>
+      <div class="notice"><strong>Three different measures must not be combined:</strong> customer fraud losses, bank-owned fraud losses, and regulatory AML/consumer protection fines. The table below summarizes <strong>published enforcement penalties</strong>, not each bank's fraud losses. Year reflects the regulator's publication date when the event date is unavailable.</div>
+      <div id="institutionLossRows" class="institution-losses"></div>
+    </div>
+    <div class="panel"><div class="panel-heading"><div><div class="eyebrow">DISCLOSURE COVERAGE</div><h2>Bank-reported annual fraud losses</h2></div></div>
+      <div id="disclosedLossRows" class="method"><p>Loading disclosure records...</p></div>
+    </div>
   </section>
   <section id="events" class="tab hidden">
     <div class="panel"><div class="panel-heading"><div><div class="eyebrow">CASE EXPLORER</div><h2>Events and enforcement</h2></div><span class="small" id="resultCount">0 records</span></div><div class="filters"><input id="search" type="search" placeholder="Search institution, category or notice..."><select id="sourceFilter"><option value="">All regulators</option></select><select id="provinceFilter"><option value="">All provinces</option></select><select id="statusFilter"><option value="">All legal statuses</option></select></div><div id="eventRows" class="events-list"></div></div>
@@ -44,6 +69,7 @@
   </section>
   <section id="sources" class="tab hidden">
     <div class="panel"><div class="panel-heading"><div><div class="eyebrow">COLLECTION HEALTH</div><h2>Source monitoring</h2></div></div><div class="notice">Collectors run on a GitHub Actions schedule. The page displays the latest committed snapshot; clicking Refresh only reloads it, not the external source websites.</div><div id="sourceRows"></div></div>
+    <div class="panel"><div class="panel-heading"><div><div class="eyebrow">ADDITIONAL CANADIAN SOURCES</div><h2>Expansion priorities</h2></div></div><div id="sourceCatalog" class="source-catalog"></div></div>
     <div class="panel"><div class="panel-heading"><div><div class="eyebrow">RESEARCH METHOD</div><h2>What the data can and cannot tell you</h2></div></div><div class="method"><p><strong>Sources.</strong> FINTRAC public administrative monetary penalties and FCAC published proceedings. Records are source-linked and subject to the limitations of the originating regulator.</p><p><strong>Identity.</strong> Institutions are grouped by the explicitly named entity; subsidiaries and parents are not automatically merged.</p><p><strong>Geography.</strong> Only explicitly supported institution-location clauses get map markers. Missing locations remain in the list, not assigned to an inferred headquarters.</p><p><strong>Enforcement status.</strong> Imposed, paid, and appealed are distinguished. This dashboard does not publish unverified accusations from general news automatically.</p><p><strong>Coverage.</strong> Regulators can revise or remove notices. Parser changes and access failures can also result in incomplete or stale coverage. Missing records do not imply clean compliance.</p><p><strong>Consulting application.</strong> A publicly documented event may indicate a topic worth researching; it never establishes that a firm currently needs outside consultants.</p></div></div>
   </section>
   <footer>Signal North · Public-source research only · <a href="https://github.com/khaled-agi/Signal-North">Source code</a> · All dates and amounts originate from referenced publications.</footer>
@@ -51,6 +77,7 @@
 </div>
 </div>
 <div id="overlay" class="overlay hidden"><div class="drawer"><button id="close" class="close" aria-label="Close panel">×</button><div id="drawerBody"></div></div></div>
-<script src="./app.js?v=20261024-02" defer></script>
+<script src="./app.js?v=20261024-03" defer></script>
+<script src="./intel.js?v=20261024-03" defer></script>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" async crossorigin="" onload="window.dispatchEvent(new Event('signalnorth:mapready'))"></script>
 </body></html>
