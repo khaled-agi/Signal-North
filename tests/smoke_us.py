@@ -32,7 +32,7 @@ try:
         assert page.locator('[data-usview="reporting"]').count() >= 1
         assert "FinCEN" in page.locator("#usLatest").inner_text() or "CFPB" in page.locator("#usLatest").inner_text()
         assert "United States" in page.title() or "U.S." in page.title()
-        page.locator('button[data-usview="reporting"]').click()
+        page.locator('button.nav[data-usview="reporting"]').click()
         page.wait_for_function("document.querySelectorAll('#usRows .us-record').length >= 10")
         page.locator("#usSearch").fill("Early Warning Services")
         assert page.locator("#usRows .us-record").count() == 1
@@ -74,7 +74,7 @@ try:
         offline.goto(base+"us.html",wait_until="domcontentloaded",timeout=20000)
         offline.wait_for_function("document.querySelectorAll('#usMetrics .metric').length === 4",timeout=16000)
         assert "map library has not loaded" in offline.locator("#usMap").inner_text()
-        offline.locator('button[data-usview="reporting"]').click()
+        offline.locator('button.nav[data-usview="reporting"]').click()
         assert offline.locator("#usRows .us-record").count() >= 10
         offline.close()
         assert not errors, errors
