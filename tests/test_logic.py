@@ -113,6 +113,14 @@ class GroupedReportingTests(unittest.TestCase):
   self.assertGreaterEqual(len(groups),4)
   self.assertEqual(sum(x["underlying_headline_count"] for x in groups),len(rows))
 
+ def test_geographic_relevance_never_uses_publisher_location(self):
+  foreign=self.example("Argentinian crypto investor exposes alleged scam in Buenos Aires",url="https://yahoo.ca/report")
+  local=self.example("Toronto crypto investor reports account takeover",url="https://world.example/report")
+  uncertain=self.example("Investment platform issues new global market security warning",url="https://canadapublisher.ca/report")
+  self.assertEqual(reporting.geographic_relevance(foreign)[0],"international_context_explicit")
+  self.assertEqual(reporting.geographic_relevance(local)[0],"canadian_location_or_reference")
+  self.assertEqual(reporting.geographic_relevance(uncertain)[0],"geography_unresolved")
+
  def test_group_is_discovery_not_verified_incident(self):
   row=self.example("Winnipeg woman reports alleged online investment account scam while police investigate",url="https://a.example/1")
   group=reporting.display_groups([row])[0]
