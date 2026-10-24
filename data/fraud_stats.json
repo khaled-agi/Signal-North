@@ -1,0 +1,117 @@
+{
+  "updated_at": "2026-10-23",
+  "methodology": "Values are publicly reported losses or complaint counts, not individual bank losses. Reporting coverage is incomplete and data may be revised.",
+  "metrics": [
+    {
+      "id": "cafc-2025",
+      "year": 2025,
+      "period": "2025 calendar year",
+      "geography": "Canada",
+      "type": "victim_reported_fraud_losses",
+      "category": "All fraud reports",
+      "amount_cad": 704000000,
+      "approximate": true,
+      "source": "Canadian Anti-Fraud Centre",
+      "source_url": "https://centreantifraude-antifraudcentre.ca/features-vedette/2026/02/top-fraud-2025-fraudes-plus-courantes-eng.htm",
+      "note": "More than $704 million reported; approximate display floor, not an exact total."
+    },
+    {
+      "id": "cafc-h1-2026",
+      "year": 2026,
+      "period": "January–June 2026",
+      "geography": "Canada",
+      "type": "victim_reported_fraud_losses",
+      "category": "All fraud reports",
+      "amount_cad": 351000000,
+      "approximate": true,
+      "source": "Canadian Anti-Fraud Centre",
+      "source_url": "https://centreantifraude-antifraudcentre.ca/features-vedette/2026/08/fraud-trends-tendances-matiere-fraude-eng.htm",
+      "note": "Approximately $351 million; partial-year figure, not annualized."
+    },
+    {
+      "id": "cafc-investment-2025",
+      "year": 2025,
+      "period": "2025 calendar year",
+      "geography": "Canada",
+      "type": "victim_reported_fraud_losses",
+      "category": "Investment fraud",
+      "amount_cad": 351000000,
+      "approximate": true,
+      "source": "Canadian Anti-Fraud Centre",
+      "source_url": "https://centreantifraude-antifraudcentre.ca/features-vedette/2026/02/top-fraud-2025-fraudes-plus-courantes-eng.htm"
+    },
+    {
+      "id": "cafc-spear-2025",
+      "year": 2025,
+      "period": "2025 calendar year",
+      "geography": "Canada",
+      "type": "victim_reported_fraud_losses",
+      "category": "Spear phishing",
+      "amount_cad": 67900000,
+      "approximate": true,
+      "source": "Canadian Anti-Fraud Centre",
+      "source_url": "https://centreantifraude-antifraudcentre.ca/features-vedette/2026/02/top-fraud-2025-fraudes-plus-courantes-eng.htm"
+    },
+    {
+      "id": "cafc-relationship-2025",
+      "year": 2025,
+      "period": "2025 calendar year",
+      "geography": "Canada",
+      "type": "victim_reported_fraud_losses",
+      "category": "Relationship scams",
+      "amount_cad": 63300000,
+      "approximate": true,
+      "source": "Canadian Anti-Fraud Centre",
+      "source_url": "https://centreantifraude-antifraudcentre.ca/features-vedette/2026/02/top-fraud-2025-fraudes-plus-courantes-eng.htm"
+    },
+    {
+      "id": "cafc-investment-h1-2026",
+      "year": 2026,
+      "period": "January–June 2026",
+      "geography": "Canada",
+      "type": "victim_reported_fraud_losses",
+      "category": "Investment fraud",
+      "amount_cad": 139600000,
+      "approximate": true,
+      "source": "Canadian Anti-Fraud Centre",
+      "source_url": "https://centreantifraude-antifraudcentre.ca/features-vedette/2026/08/fraud-trends-tendances-matiere-fraude-eng.htm"
+    },
+    {
+      "id": "cafc-spear-h1-2026",
+      "year": 2026,
+      "period": "January–June 2026",
+      "geography": "Canada",
+      "type": "victim_reported_fraud_losses",
+      "category": "Spear phishing",
+      "amount_cad": 57700000,
+      "approximate": true,
+      "source": "Canadian Anti-Fraud Centre",
+      "source_url": "https://centreantifraude-antifraudcentre.ca/features-vedette/2026/08/fraud-trends-tendances-matiere-fraude-eng.htm"
+    },
+    {
+      "id": "cafc-bankinv-h1-2026",
+      "year": 2026,
+      "period": "January–June 2026",
+      "geography": "Canada",
+      "type": "victim_reported_fraud_losses",
+      "category": "Bank investigator impersonation",
+      "amount_cad": 28600000,
+      "approximate": true,
+      "source": "Canadian Anti-Fraud Centre",
+      "source_url": "https://centreantifraude-antifraudcentre.ca/features-vedette/2026/08/fraud-trends-tendances-matiere-fraude-eng.htm",
+      "note": "Losses from impersonation scams; not bank-owned losses."
+    },
+    {
+      "id": "obsi-fraud-2025",
+      "year": 2025,
+      "period": "2025 calendar year",
+      "geography": "Canada",
+      "type": "banking_fraud_complaints",
+      "category": "Fraud banking investigations opened",
+      "count": 1815,
+      "source": "Ombudsman for Banking Services and Investments",
+      "source_url": "https://www.obsi.ca/en/news/posts/obsi-2025-annual-report-released/",
+      "note": "Complaint cases opened; not independently proven bank fraud, not financial losses."
+    }
+  ]
+}
