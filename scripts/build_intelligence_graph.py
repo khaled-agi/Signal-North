@@ -31,6 +31,20 @@ BANKS={
  "laurentian":{"name":"Laurentian Bank of Canada","aliases":["Laurentian Bank of Canada","Laurentian Bank"]},
  "first-nations-bank":{"name":"First Nations Bank of Canada","aliases":["First Nations Bank of Canada"]},
  "versabank":{"name":"VersaBank","aliases":["VersaBank"]},
+ # Brand labels and licensed entities remain distinct. In particular, the
+ # Wealthsimple brand does not automatically equal any subsidiary legal entity.
+ "wealthsimple-brand":{"name":"Wealthsimple","aliases":["Wealthsimple"]},
+ "wealthsimple-investments":{"name":"Wealthsimple Investments Inc.","aliases":["Wealthsimple Investments Inc."]},
+ "wealthsimple-digital-assets":{"name":"Wealthsimple Digital Assets Inc.","aliases":["Wealthsimple Digital Assets Inc."]},
+ "shakepay":{"name":"Shakepay","aliases":["Shakepay","Shakepay Inc."]},
+ "coinbase":{"name":"Coinbase","aliases":["Coinbase"]},
+ "binance":{"name":"Binance","aliases":["Binance","Binance Holdings Limited"]},
+ "kucoin":{"name":"KuCoin","aliases":["KuCoin"]},
+ "cryptomus":{"name":"Cryptomus","aliases":["Cryptomus"]},
+ "bclc":{"name":"BCLC","aliases":["BCLC","British Columbia Lottery Corporation"]},
+ "atlantic-lottery":{"name":"Atlantic Lottery","aliases":["Atlantic Lottery","Atlantic Lottery Corporation"]},
+ "cne-casino":{"name":"CNE Casino","aliases":["CNE Casino"]},
+
 }
 def normalize(x):
  s=re.sub(r"[^a-z0-9]+"," ",str(x or "").casefold()).strip()
@@ -142,11 +156,11 @@ def generate():
  for art in articles:
   # Only explicit banks_mentioned_in_headline qualifies for a tentative link.
   keys=set()
-  for name in art.get("banks_mentioned_in_headline",[]):
+  for name in (art.get("banks_mentioned_in_headline",[])+art.get("organizations_mentioned_in_headline",[])):
    key=bank_key(name)
    if key:keys.add(key)
   for key in sorted(keys):
-   name=BANKS[key]["name"] if key in BANKS else next((a for a in art.get("banks_mentioned_in_headline",[]) if bank_key(a)==key),"")
+   name=BANKS[key]["name"] if key in BANKS else next((a for a in art.get("banks_mentioned_in_headline",[])+art.get("organizations_mentioned_in_headline",[]) if bank_key(a)==key),"")
    entry=ensure(name)
    if not entry:continue
    entry["counts"]["headlines"]+=1
