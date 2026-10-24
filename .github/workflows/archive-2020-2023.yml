@@ -33,15 +33,13 @@ jobs:
           ARCHIVE_YEAR=2022 python scripts/backfill_news.py
           ARCHIVE_YEAR=2021 python scripts/backfill_news.py
           ARCHIVE_YEAR=2020 python scripts/backfill_news.py
-      - name: Assemble deduplicated historical article index and institution links
-        run: |
-          python scripts/build_article_index.py
-          python scripts/build_intelligence_graph.py
       - name: Save and merge archives
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/news_archive.json data/archive_status.json data/article_index.json data/institution_intelligence.json data/review_queue.json
+          # Only upload primary collected history. The frequent Pages job owns
+          # article_index/review_queue/graph derived files, avoiding rebase conflicts.
+          git add data/news_archive.json data/archive_status.json
           if ! git diff --cached --quiet; then
             git commit -m "data: extend Canadian fraud article archive to 2020–2023 [skip ci]"
             for attempt in 1 2 3 4; do
