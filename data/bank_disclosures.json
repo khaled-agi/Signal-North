@@ -1,0 +1,18 @@
+{
+  "updated_at": "2026-10-23",
+  "records": [],
+  "methodology": "Institution-level fraud losses are not assumed from customer claims, sector totals, regulatory fines, loan-loss provisions or AML flow volumes. Add a record only when institution, entity, period, amount, currency, attribution and primary supporting source are verified. USD and CAD must not be summed without conversion and a dated FX assumption.",
+  "schema_fields": [
+    "institution",
+    "legal_entity",
+    "year",
+    "period",
+    "amount",
+    "currency",
+    "metric_type",
+    "source_url",
+    "source_title",
+    "verification_status",
+    "notes"
+  ]
+}
