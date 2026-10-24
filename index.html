@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0a1020">
+<meta name="description" content="Signal North: source-linked Canadian financial crime enforcement intelligence and geographic research dashboard.">
+<title>Signal North · Canadian Financial Crime Intelligence</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<div class="layout">
+<aside class="sidebar">
+  <div class="brand"><div class="brand-mark">✳</div><div>signal<span>north</span><small>FINANCIAL CRIME INTELLIGENCE</small></div></div>
+  <div class="side-caption">WORKSPACE</div>
+  <button class="nav active" data-tab="overview">◈ &nbsp; Intelligence overview</button>
+  <button class="nav" data-tab="events">▤ &nbsp; Event explorer</button>
+  <button class="nav" data-tab="institutions">▥ &nbsp; Institution radar</button>
+  <button class="nav" data-tab="sources">◉ &nbsp; Sources &amp; methodology</button>
+  <div class="sidebar-bottom"><div class="live-mark"><i></i><span>PUBLIC RESEARCH PREVIEW</span></div><p>Primary regulator information only. Not a fraud ranking or comprehensive census of incidents.</p><a href="https://github.com/khaled-agi/Signal-North" target="_blank" rel="noopener">View source on GitHub ↗</a></div>
+</aside>
+<div class="main">
+  <header class="header">
+    <span>CANADA / <strong id="crumb">INTELLIGENCE OVERVIEW</strong></span>
+    <div class="header-right"><span id="updated">Snapshot loading</span><button class="reload" id="reload" type="button">↻ Refresh</button></div>
+  </header>
+  <main class="content">
+  <div class="intro"><div><div class="eyebrow">CANADIAN FINANCIAL CRIME INTELLIGENCE</div><h1 id="headline">Know what changed.<br><em>Know where to look.</em></h1><p id="description">Monitor public enforcement developments and explore evidence-linked institutions across Canada.</p></div><span class="preview">✳ &nbsp; SOURCE-LINKED RESEARCH</span></div>
+  <div class="error hidden" id="error" role="status"></div>
+  <section id="overview" class="tab">
+    <div class="metrics" id="metrics"></div>
+    <div class="cols">
+      <section class="panel map-panel"><div class="panel-heading"><div><div class="eyebrow">GEOGRAPHIC INTELLIGENCE</div><h2>Canadian event map</h2></div><div class="map-legend"><i></i> Published regulatory notices</div></div><p class="small">Markers reflect locations explicitly associated with named institutions, <strong>not the location of the alleged incident</strong>.</p><div id="map" class="map"></div><div class="map-caption" id="mapCaption">Loading geocoded events</div></section>
+      <section class="panel right-panel"><div class="panel-heading"><div><div class="eyebrow">WHERE WE HAVE EVIDENCE</div><h2>Regional coverage</h2></div></div><div id="regions"></div><p class="small muted">These are published notices detected by our limited source coverage, not provincial fraud rates.</p></section>
+    </div>
+    <section class="panel"><div class="panel-heading"><div><div class="eyebrow">RECENT REGULATORY DEVELOPMENTS</div><h2>Latest tracked cases</h2></div><button class="link-btn" data-to="events">Explore all →</button></div><div id="recent" class="events-list"></div></section>
+  </section>
+  <section id="events" class="tab hidden">
+    <div class="panel"><div class="panel-heading"><div><div class="eyebrow">CASE EXPLORER</div><h2>Events and enforcement</h2></div><span class="small" id="resultCount">0 records</span></div><div class="filters"><input id="search" type="search" placeholder="Search institution, category or notice..."><select id="sourceFilter"><option value="">All regulators</option></select><select id="provinceFilter"><option value="">All provinces</option></select><select id="statusFilter"><option value="">All legal statuses</option></select></div><div id="eventRows" class="events-list"></div></div>
+  </section>
+  <section id="institutions" class="tab hidden">
+    <div class="panel"><div class="panel-heading"><div><div class="eyebrow">ORGANIZATION RESEARCH</div><h2>Institution radar</h2></div></div><div class="notice"><strong>Institutional involvement does not mean institutional fraud.</strong> Records here are published enforcement notices; a count of records does not measure culpability or actual demand for consulting services.</div><div id="institutionRows"></div></div>
+  </section>
+  <section id="sources" class="tab hidden">
+    <div class="panel"><div class="panel-heading"><div><div class="eyebrow">COLLECTION HEALTH</div><h2>Source monitoring</h2></div></div><div class="notice">Collectors run on a GitHub Actions schedule. The page displays the latest committed snapshot; clicking Refresh only reloads it, not the external source websites.</div><div id="sourceRows"></div></div>
+    <div class="panel"><div class="panel-heading"><div><div class="eyebrow">RESEARCH METHOD</div><h2>What the data can and cannot tell you</h2></div></div><div class="method"><p><strong>Sources.</strong> FINTRAC public administrative monetary penalties and FCAC published proceedings. Records are source-linked and subject to the limitations of the originating regulator.</p><p><strong>Identity.</strong> Institutions are grouped by the explicitly named entity; subsidiaries and parents are not automatically merged.</p><p><strong>Geography.</strong> Only explicitly supported institution-location clauses get map markers. Missing locations remain in the list, not assigned to an inferred headquarters.</p><p><strong>Enforcement status.</strong> Imposed, paid, and appealed are distinguished. This dashboard does not publish unverified accusations from general news automatically.</p><p><strong>Coverage.</strong> Regulators can revise or remove notices. Parser changes and access failures can also result in incomplete or stale coverage. Missing records do not imply clean compliance.</p><p><strong>Consulting application.</strong> A publicly documented event may indicate a topic worth researching; it never establishes that a firm currently needs outside consultants.</p></div></div>
+  </section>
+  <footer>Signal North · Public-source research only · <a href="https://github.com/khaled-agi/Signal-North">Source code</a> · All dates and amounts originate from referenced publications.</footer>
+  </main>
+</div>
+</div>
+<div id="overlay" class="overlay hidden"><div class="drawer"><button id="close" class="close" aria-label="Close panel">×</button><div id="drawerBody"></div></div></div>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<script src="./app.js"></script>
+</body></html>
