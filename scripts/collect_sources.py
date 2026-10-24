@@ -10,6 +10,7 @@ Sources:
 from __future__ import annotations
 
 import hashlib
+import os
 import json
 import re
 import sys
@@ -182,7 +183,13 @@ def run():
     with requests.Session() as session:
         session.headers.update(HEADERS)
         sources = [(name, (lambda url=url: fetch_rcmp(session,url))) for name,url in RCMP_URLS.items()]
-        sources += [(name, (lambda query=q: fetch_gdelt(session, query))) for name,q in GDELT_QUERIES.items()]
+        # GDELT enforces rate limits against shared CI addresses. Query it only
+        # once daily (or on a manual FORCE run), not at every half-hour poll.
+        scan_gdelt = os.environ.get("GDELT_FORCE")=="1" or datetime.now(timezone.utc).hour==6
+        if scan_gdelt:
+            sources += [(name,(lambda query=q: fetch_gdelt(session,query))) for name,q in GDELT_QUERIES.items()]
+        else:
+            health["collectors"]["GDELT DOC"]={"status":"scheduled_daily","message":"Will check at 06:00 UTC, unless manually forced; last GDELT calls were HTTP 429"}
         for name, fn in sources:
             if gdelt_limited and name not in RCMP_URLS:
                 health["collectors"][name]={"status":"skipped_rate_limit","error":"GDELT requested backoff after HTTP 429"}
