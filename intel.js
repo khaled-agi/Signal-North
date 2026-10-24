@@ -30,7 +30,7 @@
   {name:"Payment-system risk",value:"Planned",source:"Bank of Canada / Payments Canada",url:"https://www.bankofcanada.ca/",note:"Payment-system incidents and operational risk; distinguish from fraud"},
   {name:"Cyber incidents",value:"Planned",source:"Privacy Commissioner / Cyber Centre",url:"https://www.priv.gc.ca/en/opc-actions-and-decisions/investigations/",note:"Incident disclosures and privacy findings; differentiate alleged from confirmed"}
  ];
- let news=[],stats=[],bankDisclosure=[],events=[],newsWired=false;
+ let news=[],stats=[],bankDisclosure=[],events=[],incidents=[],newsWired=false,incidentsWired=false;
  async function getJSON(path){
   const res=await fetch("./data/"+path+"?v="+Date.now(),{cache:"no-store"});
   if(!res.ok)throw Error(path+": HTTP "+res.status);
@@ -75,6 +75,36 @@
    '<div class="breaking-story"><div class="breaking-story-head"><span class="breaking-type">'+esc(x.category||"News lead")+'</span><span>'+esc((x.published_at||"").slice(0,10))+'</span></div><div class="breaking-story-title">'+link(x.url,x.title)+'</div><div class="breaking-publisher">'+esc(x.publisher||"News syndication")+' · Unverified research lead</div></div>'
   ).join(""):'<div class="empty">No headlines in the latest snapshot. You can start a new scan from GitHub Actions.</div>';
  }
+ function caseAmount(x){
+   const a=x.amount_cad==null?"Unreported":money(x.amount_cad);
+   const lbl=({"victim_reported_loss":"Victim-reported loss","unauthorized_credit_exposure":"Credit exposure","recovered_amount":"Funds recovered"})[x.amount_type]||"Reported amount";
+   return {a,lbl};
+ }
+ function caseMarkup(x,featured=false){
+   const {a,lbl}=caseAmount(x);
+   const role=({"customer_financial_institution":"Customer bank","institution_impersonated":"Bank impersonated","bank_not_identified":"Bank unnamed","unnamed_financial_institution_assisted_recovery":"Bank helped recover funds"})[x.institution_role]||"Role unspecified";
+   const text=featured?x.title:((x.summary||"")+" "+(x.consulting_theme||""));
+   return '<article class="case-item'+(featured?' case-mini':'')+'"><div class="case-head"><span class="case-tag">'+esc(x.fraud_type)+'</span><span class="small">'+esc(x.reported_at||"Date not reported")+'</span></div><h3>'+esc(x.title)+'</h3><div class="case-amount">'+esc(a)+' <span class="small">'+esc(lbl)+'</span></div><div class="case-entity"><strong>'+esc(x.institution||"Bank not named")+'</strong> · '+esc(role)+'</div>'+(featured?'':'<p class="case-summary">'+esc(text)+'</p><div class="small">Reported incident period: '+esc(x.incident_period||"Unknown")+' · '+esc(x.location||"Canada")+'</div><div class="case-disclaimer">'+esc(x.disclaimer||"Media-reported case, not a legal finding.")+'</div>')+'<div class="case-source">'+link(x.source_url,x.source_name)+'</div></article>';
+ }
+ function renderIncidents(){
+   const q=$i("incidentSearch").value.trim().toLowerCase();
+   const prov=$i("incidentProvince").value;
+   const bank=$i("incidentBank").value;
+   const found=incidents.filter(x=>(!q||[x.title,x.institution,x.fraud_type,x.location,x.summary].join(" ").toLowerCase().includes(q))&&(!prov||x.province===prov)&&(!bank||(bank==="__unnamed__"?!x.institution:x.institution===bank)));
+   $i("incidentCount").textContent=incidents.length+" source-reviewed cases";
+   $i("incidentRows").innerHTML=found.length?found.map(x=>caseMarkup(x)).join(""):'<div class="empty">No incidents match this filter.</div>';
+ }
+ function initIncidents(){
+   $i("featuredIncidents").innerHTML=incidents.length?incidents.slice(0,3).map(x=>caseMarkup(x,true)).join(""):'<div class="empty">Source-reviewed case entries are not yet available.</div>';
+   $i("incidentProvince").innerHTML='<option value="">All provinces</option>'+[...new Set(incidents.map(x=>x.province).filter(Boolean))].sort().map(p=>'<option value="'+esc(p)+'">'+esc(p)+'</option>').join("");
+   $i("incidentBank").innerHTML='<option value="">All banks / unnamed</option><option value="__unnamed__">Bank unnamed</option>'+[...new Set(incidents.map(x=>x.institution).filter(Boolean))].sort().map(name=>'<option value="'+esc(name)+'">'+esc(name)+'</option>').join("");
+   if(!incidentsWired){
+    ["incidentProvince","incidentBank"].forEach(id=>$i(id).addEventListener("change",renderIncidents));
+    $i("incidentSearch").addEventListener("input",renderIncidents);
+    incidentsWired=true;
+   }
+   renderIncidents();
+ }
  function bankRows(){
   const years=[...new Set(events.map(x=>(x.published_at||"").slice(0,4)).filter(Boolean))].sort().reverse();
   const year=$i("lossYear");
@@ -107,7 +137,7 @@
  }
  async function boot(){
   renderCatalog();
-  const names=["fraud_stats.json","news.json","bank_disclosures.json","events.json","news_status.json"];
+  const names=["fraud_stats.json","news.json","bank_disclosures.json","events.json","news_status.json","incidents.json"];
   const fetched=await Promise.allSettled(names.map(getJSON));
   if(fetched[0].status==="fulfilled")stats=fetched[0].value.metrics||[];
   else $i("fraudNational").innerHTML='<div class="error">Fraud statistics unavailable: '+esc(String(fetched[0].reason))+'</div>';
@@ -118,6 +148,9 @@
   window.dispatchEvent(new CustomEvent("signalnorth:newsready",{detail:{leads:news}}));
   if(fetched[2].status==="fulfilled")bankDisclosure=fetched[2].value.records||[];
   if(fetched[3].status==="fulfilled")events=fetched[3].value.events||[];
+  if(fetched[5].status==="fulfilled")incidents=fetched[5].value.incidents||[];
+  initIncidents();
+  window.dispatchEvent(new CustomEvent("signalnorth:incidentsready",{detail:{incidents}}));
   if(stats.length)national();
   else $i("overviewFraud").innerHTML='<div class="empty">National loss metrics are not available.</div>';
   initNews();
