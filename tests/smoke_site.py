@@ -86,7 +86,7 @@ try:
         if (ROOT / "data" / "news_archive.json").exists():
             archive = json.loads((ROOT / "data" / "news_archive.json").read_text())
             assert len(archive["leads"]) >= 300
-            assert "historical headlines" in page.locator("#archiveCount").inner_text()
+            assert "historic discoveries" in page.locator("#archiveCount").inner_text()
             first_page = page.locator("#newsRows .news-item").count()
             assert first_page == 100, f"Expected paginated 100 stories, got {first_page}"
             page.locator("#newsMore").click()
