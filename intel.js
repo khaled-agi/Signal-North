@@ -19,6 +19,7 @@
   {name:"FINTRAC enforcement",value:"Live",source:"FINTRAC",url:"https://fintrac-canafe.canada.ca/pen/4-eng",note:"Public AML penalties and deficiencies; named legal entities"},
   {name:"FCAC decisions",value:"Live",source:"FCAC",url:"https://www.canada.ca/en/financial-consumer-agency/services/industry/commissioner-decisions.html",note:"Consumer protection violations and proceedings"},
   {name:"Canadian fraud reporting",value:"Curated",source:"CAFC / RCMP",url:"https://rcmp.ca/en/corporate-information/transparency-rcmp/enterprise-transparency/canadian-anti-fraud-centre-fraud-reporting",note:"Reported victim losses, fraud type, and eventual geographic trends"},
+  {name:"CAFC open fraud dataset",value:"Planned",source:"RCMP Open Government",url:"https://open.canada.ca/data/dataset/6a09c998-cddb-4a22-beff-4dca67ab892f",note:"Anonymized public reports with province, fraud category, number of victims, and reported losses; 2025 data currently partial"},
   {name:"Fraud victim disputes",value:"Research",source:"OBSI",url:"https://www.obsi.ca/en/news/posts/obsi-2025-annual-report-released/",note:"Complaints, fraud-related investigations, and outcomes; not proof of bank misconduct"},
   {name:"Investments / firm discipline",value:"Planned",source:"CIRO",url:"https://www.ciro.ca/rules-and-enforcement/enforcement",note:"Proceedings, orders, dealer discipline and investor protection"},
   {name:"Investment scams / warnings",value:"Planned",source:"CSA",url:"https://www.securities-administrators.ca/",note:"Securities warnings, enforcement and cross-province schemes"},
@@ -65,6 +66,7 @@
   const year=$i("lossYear");
   year.innerHTML=years.map(y=>'<option value="'+esc(y)+'">'+esc(y)+" publication year</option>").join("");
   year.addEventListener("change",renderAnnual);
+  $i("lossEntityType").addEventListener("change",renderAnnual);
   renderAnnual();
   if(bankDisclosure.length){
    $i("disclosedLossRows").innerHTML=bankDisclosure.map(x=>'<p><strong>'+esc(x.institution)+' · '+esc(x.year)+': '+money(x.amount)+'</strong> '+esc(x.currency||"CAD")+' · '+esc(x.metric_type)+' · '+link(x.source_url,"Verified disclosure")+'</p>').join("");
@@ -74,7 +76,8 @@
  }
  function renderAnnual(){
   const y=$i("lossYear").value;
-  const rows=events.filter(x=>(x.published_at||"").slice(0,4)===y && x.penalty_cad!=null);
+  const isFinancial = x => /\b(bank|banque|credit union|credit unions|caisse populaire|caisse financière|financial cooperative)\b/i.test((x.institution||"")+" "+(x.summary||"").slice(0,220));
+  const rows=events.filter(x=>(x.published_at||"").slice(0,4)===y && x.penalty_cad!=null && ($i("lossEntityType").value==="all"||isFinancial(x)));
   const groups=new Map();
   for(const x of rows){
     const key=x.institution||"Unknown institution";
