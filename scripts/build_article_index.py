@@ -63,7 +63,9 @@ def build():
             link=item.get("url","")
             if not link or not link.startswith("https://"):
                 continue
-            links[link]={"url":link,"publisher":item.get("publisher"),
+            links[link]={"url":link,"title":item.get("title"),
+                         "published_at":item.get("published_at"),
+                         "publisher":item.get("publisher"),
                          "discovery_channel":item.get("discovery_source") or channel,
                          "date_basis":item.get("date_basis","reported_source_date")}
         # Prefer actual publisher or RSS publication dates over discovery time
