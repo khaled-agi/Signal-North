@@ -92,6 +92,13 @@ try:
             page.locator("#newsMore").click()
             assert page.locator("#newsRows .news-item").count() == 200
             print("Historic archive pagination: PASS")
+        if (ROOT / "data" / "article_index.json").exists():
+            index = json.loads((ROOT / "data" / "article_index.json").read_text())
+            assert index["unique_headlines"] == len(index["articles"])
+            assert index["unique_headlines"] >= 500
+            assert "unique indexed headlines" in page.locator("#archiveCount").inner_text()
+            print("Unified multi-source article index:", index["unique_headlines"])
+
 
         page.locator("#newsYear").select_option("2026")
         assert page.locator("#newsRows .news-item").count() > 0
