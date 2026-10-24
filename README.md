@@ -74,3 +74,27 @@ Syndicated headlines must be reviewed against original publications before extra
 5. Confirmed regulatory actions remain in their own layer, and penalties of C$1 million or more appear in the Major Enforcement panel. These are not necessarily consent orders.
 
 A public GitHub Pages site cannot directly initiate authenticated workflow dispatch without exposing credentials. Use **Run source scan** to visit the GitHub Actions workflow and select **Run workflow** after signing in; **Refresh snapshot** reloads already published records.
+
+## Evidence connections and analyst workflow
+
+The **Evidence connections** tab joins three distinct categories by explicit institution identity, using aliases such as RBC/Royal Bank of Canada and TD/Toronto-Dominion Bank.
+
+**Regulatory enforcement:** FINTRAC and FCAC published decisions, penalties and dates; not fraud losses. FCAC "$4.25M" amounts are now parsed as millions.
+
+**Source-reviewed reported cases:** Customer/police/media reports with explicit institution roles, source links, amounts distinguished as customer losses, credit exposures or recovered funds. Bank involvement never automatically establishes bank fault.
+
+**Unverified headline leads:** Google News and historical archives, RCMP divisional Atom feeds and Canadian publisher RSS metadata. GDELT may return HTTP 429 and is not counted when rate-limited.
+
+At each collection, Python regenerates source-linked institution_intelligence.json and review_queue.json. Canonical bank names use exact known aliases, not misleading substring matching. Investigative topics are keyword-based research signals, never findings of wrongdoing.
+
+The analyst review queue supports local New / In review / Documented / Dismissed statuses, research notes and CSV export. Documented means the analyst has examined a story; it does not promote a headline to a verified case. Watchlist client stages and notes also remain browser-local, not team-synchronized.
+
+The unified multi-year article repository retains original publisher URLs and metadata, not copyrighted article bodies. Grouping near-identical titles within a month reduces repeated syndicated links, but independently worded stories about one underlying fraud event may still remain separate. Article publication date differs from incident date where known.
+
+## Deployment and quality assurance
+
+GitHub Pages remains the canonical website, using the Replit editorial white styling. The refresh button reloads published source snapshots; it never directly triggers a scan. The GitHub Actions collector checks sources on a best-effort schedule.
+
+The Python logic tests validate penalty scale and conservative evidence joins. The Chromium smoke suite checks article dates and pagination, map controls, source-reviewed cases, cross-source institution evidence, local client watchlist actions and source-review workflow. Source health is displayed in the website.
+
+Automatic full-article parsing requires lawful access and stronger verification before any client-ready conclusions can be stated. Shared team watchlists and outbound notifications need authentication and a backend. No public data source can guarantee complete Canadian fraud-news coverage.
