@@ -84,6 +84,9 @@ try:
         if page.locator("#mapStoryAll").is_visible():
             page.locator("#mapStoryAll").click()
             assert page.locator("#mappedStories .map-story").count() > 500
+            page.locator("#mappedStories .map-story button[data-story]").first.click()
+            assert "Original reporting and headline variations" in page.locator("#drawerBody").inner_text()
+            page.locator("#close").click()
             print("All map-adjacent article titles are accessible: PASS")
 
         page.locator("#mapStoryScope").select_option("mapped")
@@ -110,6 +113,23 @@ try:
             assert index["unique_headlines"] >= 500
             assert "indexed headlines" in page.locator("#archiveCount").inner_text()
             print("Unified multi-source article index:", index["unique_headlines"])
+            grouped_path = ROOT / "data" / "reporting_groups.json"
+            if grouped_path.exists():
+                groups = json.loads(grouped_path.read_text())
+                assert groups["original_index_headlines"] == index["unique_headlines"]
+                assert sum(x["underlying_headline_count"] for x in groups["groups"]) == index["unique_headlines"]
+                assert groups["reporting_groups"] <= groups["original_index_headlines"]
+                assert groups["multi_report_groups"] >= 1
+                assert page.locator("#newsRows .news-item").count() == 200
+                page.locator("#newsRows button[data-story]").first.click()
+                page.wait_for_function("!document.querySelector('#overlay').classList.contains('hidden')")
+                assert "Original reporting and headline variations" in page.locator("#drawerBody").inner_text()
+                assert page.locator("#drawerBody .report-version").count() >= 1
+                assert page.locator("#drawerBody .report-version a").first.get_attribute("href").startswith("https://")
+                page.locator("#close").click()
+                assert page.locator("#overlay").get_attribute("class").find("hidden")>=0
+                print("Reporting group click-to-compare and immutable original records: PASS")
+
 
 
         if page.locator("#newsAll").is_visible():
