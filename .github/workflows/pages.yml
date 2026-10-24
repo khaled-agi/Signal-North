@@ -48,7 +48,9 @@ jobs:
           git add data/events.json data/status.json
           if ! git diff --cached --quiet; then
             git commit -m "data: refresh regulator-sourced events [skip ci]"
-            git push
+            if ! git push; then
+              echo "::warning::Another commit changed main during collection. Proceeding with the freshly collected deployment snapshot; a later run will reconcile persisted history."
+            fi
           fi
       - name: Configure Pages
         uses: actions/configure-pages@v5
