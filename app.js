@@ -1,6 +1,6 @@
 "use strict";
 const $ = selector => document.querySelector(selector);
-const state = {events:[],news:[],status:{},map:null,layer:null,tab:"overview",mapMode:"all",mapProvince:""};
+const state = {events:[],news:[],status:{},map:null,layer:null,tab:"overview",mapMode:"all",mapProvince:"",incidents:[]};
 const provinces = {ON:"Ontario",QC:"Québec",BC:"British Columbia",AB:"Alberta",NB:"New Brunswick",NS:"Nova Scotia",MB:"Manitoba",SK:"Saskatchewan",NL:"Newfoundland & Labrador",PE:"Prince Edward Island"};
 function escapeHTML(value){return String(value??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
 function currency(value){if(value==null)return "Not reported";const x=Number(value);return x>=1e6?"$"+(x/1e6).toLocaleString("en-CA",{maximumFractionDigits:2})+"M":"$"+x.toLocaleString("en-CA",{maximumFractionDigits:0});}
@@ -11,8 +11,8 @@ function switchTab(tab){
  state.tab=tab;
  document.querySelectorAll(".tab").forEach(x=>x.classList.toggle("hidden",x.id!==tab));
  document.querySelectorAll(".nav").forEach(x=>x.classList.toggle("active",x.dataset.tab===tab));
- $("#crumb").textContent=({overview:"INTELLIGENCE OVERVIEW",events:"EVENT EXPLORER",institutions:"INSTITUTION RADAR",fraud:"FRAUD INTELLIGENCE",losses:"LOSSES & PENALTIES",sources:"SOURCES & METHODOLOGY"})[tab];
- const t={overview:["Know what changed.","Know where to look.","Monitor public enforcement developments and explore evidence-linked institutions across Canada."],events:["Explore the evidence.","Understand each case.","Search regulator-published actions by entity, location, and legal status."],institutions:["Organizations, not rankings.","Evidence before inference.","Institution profiles connect reported events without implying fraud or demand for consulting services."],fraud:["Follow the patterns.","Separate leads from findings.","Reported fraud losses, emerging incidents, and Canadian threat intelligence."],losses:["Follow the money.","Separate losses from penalties.","Compare reported enforcement penalties by publication year and see which institution fraud-loss figures remain undisclosed."],sources:["Trust the source.","Understand the gaps.","Track source availability, update times, and limitations of public regulatory data."]}[tab];
+ $("#crumb").textContent=({overview:"INTELLIGENCE OVERVIEW",events:"EVENT EXPLORER",incidents:"REPORTED FRAUD CASES",institutions:"INSTITUTION RADAR",fraud:"FRAUD INTELLIGENCE",losses:"LOSSES & PENALTIES",sources:"SOURCES & METHODOLOGY"})[tab];
+ const t={overview:["Know what changed.","Know where to look.","Monitor public enforcement developments and explore evidence-linked institutions across Canada."],events:["Explore the evidence.","Understand each case.","Search regulator-published actions by entity, location, and legal status."],incidents:["Follow individual cases.","Know what was reported.","Source-linked customer incidents, financial impact and bank relationships."],institutions:["Organizations, not rankings.","Evidence before inference.","Institution profiles connect reported events without implying fraud or demand for consulting services."],fraud:["Follow the patterns.","Separate leads from findings.","Reported fraud losses, emerging incidents, and Canadian threat intelligence."],losses:["Follow the money.","Separate losses from penalties.","Compare reported enforcement penalties by publication year and see which institution fraud-loss figures remain undisclosed."],sources:["Trust the source.","Understand the gaps.","Track source availability, update times, and limitations of public regulatory data."]}[tab];
  $("#headline").innerHTML=escapeHTML(t[0])+"<br><em>"+escapeHTML(t[1])+"</em>";
  $("#description").textContent=t[2];
  if(tab==="overview"&&state.map)setTimeout(()=>state.map.invalidateSize(),60);
@@ -58,8 +58,9 @@ function initMap(){
  state.layer.clearLayers();
  const showEnforce=["all","enforcement","major"].includes(state.mapMode);
  const showNews=["all","news"].includes(state.mapMode);
+ const showCases=["all","news"].includes(state.mapMode);
  const groups=new Map();
- let officialCount=0, newsCount=0, majorCount=0;
+ let officialCount=0, newsCount=0, majorCount=0,caseCount=0;
  const add=(kind,lat,lon,entry,province)=>{
   // One group per precisely matching coordinate and evidence type; never merge news and official cases.
   const key=kind+"|"+Number(lat).toFixed(4)+"|"+Number(lon).toFixed(4);
@@ -74,6 +75,12 @@ function initMap(){
   if(Number(e.penalty_cad)>=1000000)majorCount++;
   add("reg",e.latitude,e.longitude,e,e.province);
  }
+ if(showCases)for(const e of state.incidents){
+   if(!Number.isFinite(e.latitude)||!Number.isFinite(e.longitude))continue;
+   if(state.mapProvince&&e.province!==state.mapProvince)continue;
+   caseCount++;
+   add("case",e.latitude,e.longitude,e,e.province);
+ }
  if(showNews)for(const e of state.news){
   if(!Number.isFinite(e.map_latitude)||!Number.isFinite(e.map_longitude))continue;
   if(state.mapProvince&&e.map_province!==state.mapProvince)continue;
@@ -81,22 +88,23 @@ function initMap(){
   add("news",e.map_latitude,e.map_longitude,e,e.map_province);
  }
  for(const cluster of groups.values()){
-  const reg=cluster.kind==="reg",n=cluster.items.length;
+  const reg=cluster.kind==="reg",curated=cluster.kind==="case",n=cluster.items.length;
   const label=n>1?String(n):reg?"◆":"●";
   const marker=L.marker([cluster.lat,cluster.lon],{
-   icon:L.divIcon({html:'<span>'+escapeHTML(label)+'</span>',className:'signal-map-pin '+(reg?'pin-enforcement':'pin-news'),iconSize:[n>1?34:27,n>1?34:27],iconAnchor:[n>1?17:13.5,n>1?17:13.5]}),
-   keyboard:true,title:(reg?"Regulatory notices: ":"News headline mentions: ")+n
+   icon:L.divIcon({html:'<span>'+escapeHTML(label)+'</span>',className:'signal-map-pin '+(reg?'pin-enforcement':curated?'pin-case':'pin-news'),iconSize:[n>1?34:27,n>1?34:27],iconAnchor:[n>1?17:13.5,n>1?17:13.5]}),
+   keyboard:true,title:(reg?"Regulatory notices: ":curated?"Source-reviewed incidents: ":"News headline mentions: ")+n
   }).addTo(state.layer);
   const items=cluster.items.slice(0,7).map(e=>reg?
     '<div class="map-popup-record"><span class="map-popup-date">'+escapeHTML(date(e.published_at))+'</span><strong>'+escapeHTML(e.institution||"Regulated institution")+'</strong><div>'+escapeHTML(currency(e.penalty_cad))+' · '+escapeHTML(e.source)+'</div><a href="#" data-popup="'+escapeHTML(e.id)+'">Examine case →</a></div>':
+    curated?'<div class="map-popup-record"><span class="map-popup-date">'+escapeHTML(date(e.reported_at))+'</span><strong>'+escapeHTML(e.institution||"Bank unnamed")+'</strong><div>'+escapeHTML(e.title)+' · '+escapeHTML(currency(e.amount_cad))+'</div><a href="'+escapeHTML(e.source_url)+'" rel="noopener noreferrer" target="_blank">Original source ↗</a></div>':
     '<div class="map-popup-record"><span class="map-popup-date">'+escapeHTML(date(e.published_at))+'</span><strong>'+escapeHTML(e.publisher||"Syndicated publisher")+'</strong><div>'+escapeHTML(e.title||"News lead")+'</div><a href="'+escapeHTML(e.url)+'" rel="noopener noreferrer" target="_blank">Open original news link ↗</a></div>'
   ).join("");
-  const first=cluster.items[0],where=reg?(first.location||"Source-supported institution location"):(first.map_location||"Canadian city mentioned");
-  const pop='<div class="map-pop"><div class="map-pop-heading">'+escapeHTML(where)+'</div><span class="map-pop-source">'+(reg?"REGULATORY / PRIMARY SOURCE":"GOOGLE NEWS / UNVERIFIED HEADLINE")+'</span>'+items+(n>7?'<div class="small">+'+(n-7)+' more records in the full list</div>':"")+'<div class="map-pop-notice">'+(reg?"Pin marks an institution's location, not the site of alleged misconduct.":"City is explicitly mentioned in the headline; it may not be the scene of the incident.")+'</div></div>';
+  const first=cluster.items[0],where=reg?(first.location||"Source-supported institution location"):curated?(first.location||"Reported case location"):(first.map_location||"Canadian city mentioned");
+  const pop='<div class="map-pop"><div class="map-pop-heading">'+escapeHTML(where)+'</div><span class="map-pop-source">'+(reg?"REGULATORY / PRIMARY SOURCE":curated?"SOURCE-REVIEWED / REPORTED INCIDENT":"GOOGLE NEWS / UNVERIFIED HEADLINE")+'</span>'+items+(n>7?'<div class="small">+'+(n-7)+' more records in the full list</div>':"")+'<div class="map-pop-notice">'+(reg?"Pin marks an institution's location, not the site of alleged misconduct.":"City is explicitly mentioned in the headline; it may not be the scene of the incident.")+'</div></div>';
   marker.bindPopup(pop,{maxWidth:340,minWidth:230,maxHeight:370});
  }
- const shown=officialCount+newsCount;
- const description=state.mapMode==="major"?"Major penalties mapped: "+majorCount:state.mapMode==="news"?"Headline-city mentions: "+newsCount:state.mapMode==="enforcement"?"Regulatory notices mapped: "+officialCount:"Regulatory notices: "+officialCount+" · Headline-city mentions: "+newsCount;
+ const shown=officialCount+newsCount+caseCount;
+ const description=state.mapMode==="major"?"Major penalties mapped: "+majorCount:state.mapMode==="news"?"Headline mentions: "+newsCount+" · Reviewed cases: "+caseCount:state.mapMode==="enforcement"?"Regulatory notices mapped: "+officialCount:"Regulatory notices: "+officialCount+" · Reviewed cases: "+caseCount+" · Headline mentions: "+newsCount;
  $("#mapCaption").textContent=description+" · "+(state.mapProvince?provinces[state.mapProvince]:"Canada");
  if(state.mapProvince&&groups.size){
   const bounds=L.latLngBounds([...groups.values()].map(g=>[g.lat,g.lon]));
@@ -183,5 +191,6 @@ $("#reload").addEventListener("click",()=>{load(); window.dispatchEvent(new Even
 $("#mapReset").addEventListener("click",()=>{state.mapProvince="";$("#mapProvince").value="";state.mapMode="all";document.querySelectorAll("[data-mapmode]").forEach(b=>b.classList.toggle("active",b.dataset.mapmode==="all"));initMap();});
 $("#mapProvince").addEventListener("change",value=>{state.mapProvince=value.target.value;initMap();});
 window.addEventListener("signalnorth:newsready",event=>{state.news=event.detail?.leads||[];initMap();});
+window.addEventListener("signalnorth:incidentsready",event=>{state.incidents=event.detail?.incidents||[];initMap();});
 window.addEventListener("signalnorth:mapready", () => { if(state.events.length) initMap(); });
 load();
