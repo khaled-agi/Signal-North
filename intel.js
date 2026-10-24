@@ -60,6 +60,7 @@
   $i("newsCount").textContent=hits.length+" matching / "+news.length+" unique headlines";
   $i("newsPageCount").textContent="Showing "+visible.length+" of "+hits.length+" matching articles";
   $i("newsMore").hidden=visible.length>=hits.length;
+  $i("newsAll").hidden=visible.length>=hits.length;
   $i("newsRows").innerHTML=hits.length?visible.map(x=>{
  const bank=x.banks_mentioned_in_headline||[],amount=x.amount_strings_in_headline||[];
  const notes=[bank.length?'Bank name in headline: '+bank.join(", "):"",amount.length?'Amount quoted: '+amount.join(", "):"",x.headline_case_candidate?"Possible individual victim story":"",(x.number_of_article_links||0)>1?(x.number_of_article_links+' matching source links'):""].filter(Boolean);
@@ -88,6 +89,7 @@
    $i("newsBank").addEventListener("change",()=>{newsVisible=100;renderNews()});
    $i("newsSearch").addEventListener("input",()=>{newsVisible=100;renderNews()});
    $i("newsMore").addEventListener("click",()=>{newsVisible+=100;renderNews()});
+   $i("newsAll").addEventListener("click",()=>{newsVisible=Number.MAX_SAFE_INTEGER;renderNews()});
    newsWired=true;
   }
   renderNews();
