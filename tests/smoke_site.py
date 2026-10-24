@@ -51,6 +51,15 @@ try:
         assert page.locator("#eventRows .event").count() == EXPECTED
         page.locator("#search").fill("RBC Unlikelyterm")
         assert page.locator("#eventRows .event").count() == 0
+        page.locator('[data-tab="fraud"]').click()
+        page.wait_for_function("document.querySelectorAll('#fraudNational .fraud-amount').length >= 2", timeout=10000)
+        print("National fraud statistics:", page.locator("#fraudNational .fraud-amount").count())
+        page.locator('[data-tab="losses"]').click()
+        page.wait_for_function("document.querySelector('#lossYear').options.length > 0", timeout=10000)
+        assert page.locator("#institutionLossRows").inner_text().strip()
+        assert page.locator("#disclosedLossRows").inner_text().strip()
+        print("Yearly penalties and disclosure explanation: PASS")
+        assert not errors, str(errors)
         print("Browser smoke test: PASS")
         browser.close()
 finally:
