@@ -4,9 +4,11 @@ on:
   push:
     branches: [main]
     paths:
-      - 'app.js'
+      - '*.js'
       - 'index.html'
-      - 'styles.css'
+      - '*.css'
+      - 'scripts/build_intelligence_graph.py'
+      - 'scripts/build_article_index.py'
       - 'data/**'
       - 'tests/**'
       - '.github/workflows/browser-test.yml'
