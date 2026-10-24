@@ -1,0 +1,108 @@
+/* Signal North — cohesive editorial geographic research system
+   Single accent, neutral basemap, proportionally scaled and count-labelled circles.
+   This file intentionally loads last to resolve older dark and light layers. */
+:root{
+ --bg:#f5f7f8;--bg2:#f0f3f5;--panel:#fff;
+ --text:#172e3b;--ink:#172e3b;--ink2:#415b68;
+ --muted:#627681;--stroke:#dae3e8;--line:#dae3e8;
+ --teal:#175f67;--cyan:#175f67;--teal-bg:#e5f2f1;
+ --blue:#22596c;--amber:#a87843;--paper:#f5f7f8;
+ color-scheme:light;
+}
+html,body{background:#f5f7f8;color:var(--ink);font-family:var(--sans,"Figtree",system-ui,sans-serif)}
+.sidebar{background:#fff;border-right:1px solid #dae3e8}
+.header{background:#fff;border-bottom:1px solid #dae3e8}
+.content{padding-top:24px;max-width:1580px}
+.brand{margin-bottom:25px}
+.side-caption{margin:15px 12px 7px;font-size:9px;color:#768994}
+.nav{border-radius:6px;font-size:13px;margin:1px 0;padding:11px 12px;color:#415966}
+.nav:hover{background:#f0f5f5;transform:none;color:#174f57}
+.nav.active{background:#e6f2f1;color:#125a63;box-shadow:inset 3px 0 0 #185f67}
+.nav-datasets{margin-top:10px;border-top:1px solid #e0e7e9}
+.nav-datasets summary{padding:12px 14px;font-size:11px;color:#516a75}
+.nav-sub{padding:9px 12px 9px 22px!important;font-size:11px!important}
+.brand-mark{background:#175f67}
+.intro{margin:0 0 20px;align-items:center}
+.intro h1{font-size:34px;line-height:1.06;margin:8px 0}
+.intro em{color:#547580}
+.intro p{font-size:12px}
+.panel,.map-panel{border-radius:9px;border:1px solid #dbe4e9;box-shadow:none;margin-bottom:20px}
+.panel h2{color:#1b3845;font-size:23px}
+.panel-heading{padding:17px 21px;gap:10px}
+.metrics{gap:12px;margin-bottom:20px}
+.metric,.metrics .metric{border:1px solid #dce5e9;background:#fff;border-radius:9px}
+.metric .value{color:#173c49}
+.breaking-panel{background:#fff}
+.eyebrow{color:#326d72;letter-spacing:1.1px}
+a,.link-btn{color:#185f67}
+.map-panel{min-width:0}
+.cols{grid-template-columns:minmax(0,1.62fr) minmax(330px,.95fr);gap:15px;align-items:stretch;margin-bottom:18px}
+.cols>.panel{margin-bottom:0}
+.map{height:600px;background:#eff3f4}
+.map-controls{padding:0 18px 12px}
+.map-mode{background:#f0f4f5;border:1px solid #e0e7e9}
+.map-mode button{color:#496473;padding:8px 10px}
+.map-mode button.active{background:#1a5d67;color:#fff}
+.map-mode button:hover{background:#e4eded;color:#175661}
+.map-mode button.active:hover{background:#1a5d67;color:#fff}
+.map-mapfooter{border-top:1px solid #e1e9ed;padding:12px 18px;display:flex;flex-wrap:wrap;gap:10px}
+.map-caption{font-size:11px;color:#405d6c;flex-basis:100%;line-height:1.5}
+.map-cluster-meta{font-size:10px;color:#78909a}
+.map-key{color:#657f8b;font-size:11px}
+.map-size-legend{border-left:1px solid #cfdae0;padding-left:10px}
+.key-news{color:#1e6b78}.key-reg{color:#2c5560}.key-case{color:#ab8055}
+.map-disclaimer{background:#f8fafb;border-top:1px solid #e0e8eb;color:#667d87;padding:11px 18px}
+.signal-map-pin{display:none}
+/* Cluster AREA ~ number of source records (bounded to preserve readability). */
+.count-map-pin{background:transparent!important;border:none!important;outline:0}
+.count-pin-inner{display:flex;align-items:center;justify-content:center;box-sizing:border-box;width:100%;height:100%;border-radius:50%;
+ color:#fff;font-family:var(--sans,system-ui);font-size:13px;font-weight:800;letter-spacing:-.3px;
+ background:#1d6570;border:3px solid #fff;box-shadow:0 0 0 1px rgba(27,72,82,.13),0 4px 11px rgba(16,48,63,.22);
+ transition:transform .15s ease,box-shadow .15s ease}
+.count-map-pin:hover .count-pin-inner{transform:scale(1.07);box-shadow:0 3px 17px rgba(19,75,84,.33)}
+.count-reg .count-pin-inner{background:#385967}
+.count-case .count-pin-inner{background:#a4764a}
+.count-news .count-pin-inner{background:#1b6876}
+.count-map-pin:focus-visible .count-pin-inner{outline:3px solid #ffcf70;outline-offset:2px}
+.leaflet-container .leaflet-control-zoom a{background:#fff;color:#294e60;border-color:#e1e9ed}
+.leaflet-popup-content-wrapper,.leaflet-popup-tip{background:#fff;color:#193b4a;box-shadow:0 8px 28px #20405025}
+.right-panel .panel-heading{padding-bottom:12px}
+.map-coverage{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin:0 16px 12px;border:1px solid #e0e9ed;border-radius:8px;padding:10px;background:#f6f9fa}
+.coverage-number{display:flex;flex-direction:column;align-items:flex-start;gap:3px}
+.coverage-number strong{font-size:20px;color:#205566;letter-spacing:-.6px;line-height:1.15}
+.coverage-number span{font-size:10px;color:#69808e;line-height:1.3}
+.map-coverage>p{grid-column:1/-1;border-top:1px solid #e0e8ed;padding-top:7px;margin:2px 0 0;font-size:10px;color:#71848c}
+.map-list-controls{display:grid;grid-template-columns:minmax(0,1fr) 130px;gap:7px;padding:0 16px 10px}
+.map-list-controls input,.map-list-controls select{background:#fff;border:1px solid #d5e1e6;border-radius:6px;color:#2d5264;font-size:11px;min-width:0;padding:9px}
+.map-story-summary{padding:3px 17px 9px;color:#637d8b;font-size:10px}
+.right-panel .mapped-story-feed{padding:0 15px;flex:1;max-height:600px;overflow-y:auto;scrollbar-width:thin}
+.map-story{border-top:1px solid #e8eef1;border-bottom:0;border-left:2px solid transparent;padding:11px 7px}
+.map-story:hover{border-left-color:#1b6876;background:#f5f9fa}
+.map-story-title button,.map-story-title a{font-size:12px;line-height:1.48;font-weight:650;text-align:left;color:#1e4558;text-decoration:none}
+.map-story-title button{border:0;background:transparent;padding:2px 0;cursor:pointer}
+.map-story-title a:hover,.map-story-title button:hover{text-decoration:underline;color:#0d6571}
+.map-story-meta,.map-story-sub{font-size:10px;color:#728794}
+.map-story-sub{padding-top:4px}
+.map-geo-yes{color:#206671}.map-geo-no{color:#8b8f93}
+.map-list-footer{display:flex;gap:7px;flex-wrap:wrap;padding:12px 15px;border-top:1px solid #e1e9ee}
+.map-list-footer button,.archive-actions button{border:1px solid #c6dadc;background:#eff6f5;color:#155e65;font-size:11px;font-weight:700;padding:9px 11px;border-radius:6px;cursor:pointer}
+.map-list-footer button:hover,.archive-actions button:hover{background:#dcefeb}
+.map-list-footer button[hidden],.archive-actions button[hidden]{display:none}
+.right-panel #regions{max-height:270px;overflow:auto;padding:6px 15px}
+.right-panel>p{padding:6px 16px 12px}
+.news-load-footer{gap:10px;flex-wrap:wrap}
+.archive-actions{display:flex;gap:8px;flex-wrap:wrap}
+.news-rows{max-height:none;overflow:visible}
+.news-item{border-color:#e5ebef}
+.news-label{background:#f2f6f6;border:1px solid #dce7e8;color:#536d79}
+.news-mapaction{background:#ebf4f4;color:#135d66;border-color:#cbdfdd}
+.news-extracted span{background:#f3f6f7;color:#536d75;border-color:#e2e9ea}
+.overview-deepdive{border-color:#dce5e9;background:#fff}
+.overview-deepdive summary{padding:15px 18px}
+.overview-deepdive summary strong{font-size:18px}
+.breaking-type,.case-tag{background:#edf4f4;color:#21636d}
+.fraud-stat,.fraud-amount{background:#f6f8f9;border:1px solid #e0e9ed}
+.map-context{display:none}
+@media(max-width:1180px){.cols{grid-template-columns:1fr}.map{height:500px}.right-panel .mapped-story-feed{max-height:350px}}
+@media(max-width:750px){.content{padding:15px}.map{height:360px}.map-list-controls{grid-template-columns:1fr}.coverage-number strong{font-size:17px}.intro h1{font-size:28px}.cols{gap:13px}}
+@media(prefers-reduced-motion:reduce){.count-pin-inner{transition:none}}
