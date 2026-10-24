@@ -30,6 +30,14 @@ with sync_playwright() as p:
         print("Metric count:", page.locator(".metric").count())
         print("Event cards:", page.locator("#recent .event").count())
         print("Mapped caption:", page.locator("#mapCaption").inner_text())
+        page.wait_for_timeout(2000)
+        tiles = page.locator("#map .leaflet-tile").count()
+        loaded_tiles = page.locator("#map .leaflet-tile-loaded").count()
+        tile_urls = page.locator("#map .leaflet-tile").evaluate_all("(nodes) => nodes.slice(0,4).map(x => x.currentSrc || x.src)")
+        print("Map tile images:", tiles, "loaded:", loaded_tiles, "sample URLs:", tile_urls)
+        assert not any("basemaps.cartocdn.com" in url for url in tile_urls), "Restricted CARTO tiles still used"
+        if tiles and loaded_tiles == 0:
+            print("WARNING: Map tiles did not visibly load in this test browser.")
         print("Browser app.js resource:", page.evaluate("""() => Array.from(document.scripts).map(x => x.src)"""))
         if page.locator(".metric").count() != 4 or failures:
             sys.exit(1)
