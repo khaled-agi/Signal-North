@@ -126,16 +126,28 @@ BANK_ALIASES = (
  ("Desjardins", ("desjardins",)),
  ("Simplii", ("simplii financial",)),
 )
+PLATFORM_ALIASES = (
+ ("Wealthsimple", ("wealthsimple",)),
+ ("Shakepay", ("shakepay",)),
+ ("Coinbase", ("coinbase",)),
+ ("Binance", ("binance",)),
+ ("KuCoin", ("kucoin",)),
+ ("Cryptomus", ("cryptomus",)),
+ ("BCLC", ("bclc", "british columbia lottery")),
+ ("Atlantic Lottery", ("atlantic lottery",)),
+ ("CNE Casino", ("cne casino",)),
+)
 HEADLINE_CASE_HINTS=("customer","client","victim","resident","woman","man ","family","lost","loses","defrauded","stolen","unauthorized","identity stolen","scammed","scam victim","account drained")
 
 def headline_claims(title: str) -> dict:
  """Non-verified headline-only cues, never finalized institutional attribution."""
  t=title.casefold()
  banks=[name for name,aliases in BANK_ALIASES if any(re.search(r"(?<!\w)"+re.escape(a)+r"(?!\w)",t) for a in aliases)]
+ organizations=[name for name,aliases in PLATFORM_ALIASES if any(re.search(r"(?<!\\w)"+re.escape(a)+r"(?!\\w)",t) for a in aliases)]
  matches=re.findall(r"(?:C\$|CAD\s*|\$)\s*[\d,]+(?:\.\d+)?\s*(?:million|billion|[mMkK])?\b",title,re.I)
  is_case=any(w in t for w in HEADLINE_CASE_HINTS)
  is_research=bool(re.search(r"\b(?:research|study|industry report|annual report|survey|whitepaper|white paper)\b",t))
- return {"banks_mentioned_in_headline":banks,"amount_strings_in_headline":matches[:3],
+ return {"banks_mentioned_in_headline":banks,"organizations_mentioned_in_headline":organizations,"amount_strings_in_headline":matches[:3],
          "headline_case_candidate":is_case,"content_kind":"research_report_lead" if is_research else "news_lead",
          "extraction_provenance":"headline only; bank role, incident date, amount type and currency not verified"}
 
