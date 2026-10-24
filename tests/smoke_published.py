@@ -6,7 +6,8 @@ from playwright.sync_api import sync_playwright
 
 TARGET = os.environ.get("SIGNAL_NORTH_URL", "https://khaled-agi.github.io/Signal-North/")
 with sync_playwright() as p:
-    browser = p.chromium.launch(headless=True, args=["--no-sandbox"])
+    browser_type = p.webkit if os.environ.get("BROWSER_ENGINE") == "webkit" else p.chromium
+    browser = browser_type.launch(headless=True, args=["--no-sandbox"] if browser_type.name == "chromium" else [])
     page = browser.new_page()
     failures, responses = [], []
     page.on("pageerror", lambda err: failures.append("JS: " + str(err)))
