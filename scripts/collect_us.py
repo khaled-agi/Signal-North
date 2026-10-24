@@ -176,7 +176,7 @@ def category(title):
         if any(w in t for w in words): return value
     return "Financial-crime lead"
 
-CRIME_WORDS = re.compile(r"\b(?:fraud|scam|launder(?:ing)?|phish(?:ing)?|identity theft|ransomware|wire fraud|embezzl|ponzi|impersonat|defraud|cybercrime|financial crime)\b", re.I)
+CRIME_WORDS = re.compile(r"\b(?:frauds?|scams?|launder(?:ing)?|phish(?:ing)?|identity theft|ransomware|wire fraud|embezzl\w*|ponzi|impersonat\w*|defraud|cybercrime|financial crime)\b", re.I)
 US_WORDS = re.compile(r"\b(?:U\.?S\.?A?\.?|United States|American|FBI|DOJ|FinCEN|CFPB|FTC|SEC|federal prosecutors)\b", re.I)
 FOREIGN_WORDS = re.compile(r"\b(?:Canada|Canadian|Australia|Britain|British|United Kingdom|India|Nigeria|Brazil|Argentina)\b", re.I)
 
@@ -249,9 +249,17 @@ def update():
             source_health[source] = {"status":"error", "error":str(exc)[:180], "source_url":url}
 
     # Keep past official notices when upstream pages paginate or temporarily fail.
-    unique = {r["id"]:r for r in enforcement.get("events",[])}
+    unique = {(r.get("source"),r.get("source_url")):r for r in enforcement.get("events",[]) if r.get("source_url")}
     for record in new:
-        unique[record["id"]] = record
+        key = (record["source"],record["source_url"])
+        previous_record = unique.get(key, {})
+        if previous_record.get("review_status") == "source_reviewed":
+            # Preserve individually checked dispositions, which may have changed
+            # after the filing/listing date (withdrawn suits, modified orders).
+            for field in ("status","summary","review_status","financial_measure","outcome_at"):
+                if field in previous_record:
+                    record[field] = previous_record[field]
+        unique[key] = record
     events = sorted(unique.values(), key=lambda x:x.get("published_at") or "", reverse=True)
     write(ACTIONS, {"updated_at":now(), "country":"US",
                     "source_scope":"Official federal enforcement action indexes only; NOT all U.S. regulators.",
