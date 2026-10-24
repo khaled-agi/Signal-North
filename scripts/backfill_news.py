@@ -34,6 +34,19 @@ QUERIES = {
  "E-transfer losses": '"e-transfer" "scam" "Canada"',
  "Senior victimization": '"senior" "fraud" "Canada"',
  "Investment enforcement": '"investment fraud" "charged" "Canada"',
+ "Crypto platform fraud": '"crypto" "scam" "Canada"',
+ "Wealthsimple impersonation": '"Wealthsimple" "scam" OR "fraud"',
+ "Fintech account scams": '"fintech" "account" "fraud" "Canada"',
+ "Casino money laundering": '"casino" "money laundering" "Canada"',
+ "Online gambling compliance": '"online gambling" "fraud" "Ontario"',
+ "Virtual currency AML": '"virtual currency" "FINTRAC" "penalty"',
+ "Securities investor warnings": '"investor alert" "crypto" "Canada"',
+ "Romance investment": '"romance" "crypto" "Canada"',
+ "Job task scams": '"job scam" "Canada"',
+ "Student rental scams": '"rental scam" "Canada"',
+ "Recovery scams": '"recovery scam" "Canada"',
+ "Social media fraud reports": '"reddit" "scam" "bank" "Canada"',
+
 }
 HEADERS={"User-Agent":"Mozilla/5.0 (compatible; SignalNorthResearchHistorical/0.3; noncommercial research)"}
 def now():return datetime.now(timezone.utc).isoformat(timespec="seconds")
