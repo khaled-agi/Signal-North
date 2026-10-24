@@ -1,6 +1,6 @@
 "use strict";
 const $ = selector => document.querySelector(selector);
-const state = {events:[],news:[],status:{},map:null,layer:null,tab:"overview",mapMode:"all",mapProvince:"",mapMonth:"",clientFocus:"",mapMarkers:new Map(),incidents:[]};
+const state = {events:[],news:[],status:{},map:null,layer:null,tab:"overview",mapMode:"all",mapProvince:"",mapMonth:"",clientFocus:"",mapMarkers:new Map(),incidents:[],entityAliases:[]};
 const provinces = {ON:"Ontario",QC:"Québec",BC:"British Columbia",AB:"Alberta",NB:"New Brunswick",NS:"Nova Scotia",MB:"Manitoba",SK:"Saskatchewan",NL:"Newfoundland & Labrador",PE:"Prince Edward Island"};
 function escapeHTML(value){return String(value??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
 function currency(value){if(value==null)return "Not reported";const x=Number(value);return x>=1e6?"$"+(x/1e6).toLocaleString("en-CA",{maximumFractionDigits:2})+"M":"$"+x.toLocaleString("en-CA",{maximumFractionDigits:0});}
@@ -11,8 +11,8 @@ function switchTab(tab){
  state.tab=tab;
  document.querySelectorAll(".tab").forEach(x=>x.classList.toggle("hidden",x.id!==tab));
  document.querySelectorAll(".nav").forEach(x=>x.classList.toggle("active",x.dataset.tab===tab));
- $("#crumb").textContent=({overview:"INTELLIGENCE OVERVIEW",events:"EVENT EXPLORER",incidents:"REPORTED FRAUD CASES",clients:"CLIENT WATCHLISTS",institutions:"INSTITUTION RADAR",fraud:"FRAUD INTELLIGENCE",losses:"LOSSES & PENALTIES",sources:"SOURCES & METHODOLOGY"})[tab];
- const t={overview:["Know what changed.","Know where to look.","Monitor public enforcement developments and explore evidence-linked institutions across Canada."],events:["Explore the evidence.","Understand each case.","Search regulator-published actions by entity, location, and legal status."],incidents:["Follow individual cases.","Know what was reported.","Source-linked customer incidents, financial impact and bank relationships."],clients:["Know your clients.","Follow documented signals.","Track institution-specific enforcement, customer reports and preliminary news mentions."],institutions:["Organizations, not rankings.","Evidence before inference.","Institution profiles connect reported events without implying fraud or demand for consulting services."],fraud:["Follow the patterns.","Separate leads from findings.","Reported fraud losses, emerging incidents, and Canadian threat intelligence."],losses:["Follow the money.","Separate losses from penalties.","Compare reported enforcement penalties by publication year and see which institution fraud-loss figures remain undisclosed."],sources:["Trust the source.","Understand the gaps.","Track source availability, update times, and limitations of public regulatory data."]}[tab];
+ $("#crumb").textContent=({overview:"INTELLIGENCE OVERVIEW",events:"EVENT EXPLORER",incidents:"REPORTED FRAUD CASES",clients:"CLIENT WATCHLISTS",connections:"EVIDENCE CONNECTIONS",institutions:"INSTITUTION RADAR",fraud:"FRAUD INTELLIGENCE",losses:"LOSSES & PENALTIES",sources:"SOURCES & METHODOLOGY"})[tab];
+ const t={overview:["Know what changed.","Know where to look.","Monitor public enforcement developments and explore evidence-linked institutions across Canada."],events:["Explore the evidence.","Understand each case.","Search regulator-published actions by entity, location, and legal status."],incidents:["Follow individual cases.","Know what was reported.","Source-linked customer incidents, financial impact and bank relationships."],clients:["Know your clients.","Follow documented signals.","Track institution-specific enforcement, customer reports and preliminary news mentions."],connections:["Connect the dots.","Keep evidence distinct.","Follow an institution across enforcement decisions, reported customer incidents, and preliminary news leads."],institutions:["Organizations, not rankings.","Evidence before inference.","Institution profiles connect reported events without implying fraud or demand for consulting services."],fraud:["Follow the patterns.","Separate leads from findings.","Reported fraud losses, emerging incidents, and Canadian threat intelligence."],losses:["Follow the money.","Separate losses from penalties.","Compare reported enforcement penalties by publication year and see which institution fraud-loss figures remain undisclosed."],sources:["Trust the source.","Understand the gaps.","Track source availability, update times, and limitations of public regulatory data."]}[tab];
  $("#headline").innerHTML=escapeHTML(t[0])+"<br><em>"+escapeHTML(t[1])+"</em>";
  $("#description").textContent=t[2];
  if(tab==="overview"&&state.map)setTimeout(()=>state.map.invalidateSize(),60);
@@ -59,7 +59,13 @@ function initMap(){
  state.mapMarkers.clear();
  const mappedHits=[];
  const matchDate=e=>!state.mapMonth||String(e.published_at||e.reported_at||"").startsWith(state.mapMonth);
- const matchClient=e=>!state.clientFocus||String(e.institution||"").toLowerCase().includes(state.clientFocus.toLowerCase())||(e.banks_mentioned_in_headline||[]).some(n=>n.toLowerCase()===state.clientFocus.toLowerCase());
+ const normName=v=>String(v||"").trim().toLowerCase();
+ const focusNames=new Set([normName(state.clientFocus)]);
+ const focusGraph=state.entityAliases.find(x=>normName(x.name)===normName(state.clientFocus)||(x.aliases||[]).some(a=>normName(a)===normName(state.clientFocus)));
+ if(focusGraph){focusNames.add(normName(focusGraph.name));for(const a of focusGraph.aliases||[])focusNames.add(normName(a));}
+ const matchClient=e=>!state.clientFocus||
+    focusNames.has(normName(e.institution))||
+    (e.banks_mentioned_in_headline||[]).some(n=>focusNames.has(normName(n)));
 
  const showEnforce=["all","enforcement","major"].includes(state.mapMode);
  const showNews=["all","news"].includes(state.mapMode);
@@ -202,6 +208,7 @@ document.addEventListener("click",e=>{
  }
  const tab=e.target.closest("[data-tab],[data-to]");if(tab){switchTab(tab.dataset.tab||tab.dataset.to);return;}
  const event=e.target.closest("[data-event],[data-popup]");if(event){e.preventDefault();const record=state.events.find(x=>x.id===(event.dataset.event||event.dataset.popup));if(record)details(record);return;}
+ if(e.target.closest("[data-open-connection]"))return;
  const inst=e.target.closest("[data-institution]");if(inst)institutionDetail(inst.dataset.institution);
 });
 document.addEventListener("keydown",e=>{
@@ -217,6 +224,7 @@ $("#mapProvince").addEventListener("change",value=>{state.mapProvince=value.targ
 $("#mapMonth").addEventListener("change",e=>{state.mapMonth=e.target.value;initMap();});
 $("#mapClearMonth").addEventListener("click",()=>{state.mapMonth="";$("#mapMonth").value="";initMap();});
 window.addEventListener("signalnorth:clientfocus",e=>{state.clientFocus=e.detail?.name||"";state.mapMode="all";document.querySelectorAll("[data-mapmode]").forEach(b=>b.classList.toggle("active",b.dataset.mapmode==="all"));initMap();});
+window.addEventListener("signalnorth:aliasesready",event=>{state.entityAliases=event.detail?.institutions||[];initMap();});
 window.addEventListener("signalnorth:newsready",event=>{state.news=event.detail?.leads||[];initMap();});
 window.addEventListener("signalnorth:incidentsready",event=>{state.incidents=event.detail?.incidents||[];initMap();});
 window.addEventListener("signalnorth:mapready", () => { if(state.events.length) initMap(); });
