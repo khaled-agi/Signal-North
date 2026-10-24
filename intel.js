@@ -26,6 +26,8 @@
   {name:"Québec financial crime",value:"Planned",source:"AMF Québec",url:"https://lautorite.qc.ca/en/general-public",note:"Francophone alerts, insurer, broker and securities cases"},
   {name:"Investigations and charges",value:"Planned",source:"RCMP / OPP / local police",url:"https://rcmp.ca/en/news",note:"Victimization, organized crime, charges and seizures; legal-status tracking"},
   {name:"Fraud and banking news",value:"Headlines",source:"Syndicated news discovery",url:"https://news.google.com/",note:"Automated news leads. Requires verification before attributing wrongdoing or amounts"},
+  {name:"RCMP local fraud news",value:"Automated",source:"RCMP RSS",url:"https://rcmp.ca/en/news/web-feeds",note:"Independent official police release metadata, filtered for financial crime; allegations and charges retain legal-status caveats"},
+  {name:"GDELT Canadian fraud coverage",value:"Automated",source:"GDELT DOC",url:"https://www.gdeltproject.org/",note:"Canadian publisher articles discovered independently of Google News, including French media; observed date may differ from article publication"},
   {name:"Financial institution registry",value:"Planned",source:"OSFI",url:"https://www.osfi-bsif.gc.ca/en/data-forms/open-government-osfi-financial-data/working-open-government-data",note:"Licensing, correct legal entities, affiliates and institution metadata"},
   {name:"Payment-system risk",value:"Planned",source:"Bank of Canada / Payments Canada",url:"https://www.bankofcanada.ca/",note:"Payment-system incidents and operational risk; distinguish from fraud"},
   {name:"Cyber incidents",value:"Planned",source:"Privacy Commissioner / Cyber Centre",url:"https://www.priv.gc.ca/en/opc-actions-and-decisions/investigations/",note:"Incident disclosures and privacy findings; differentiate alleged from confirmed"}
@@ -60,7 +62,7 @@
   $i("newsMore").hidden=visible.length>=hits.length;
   $i("newsRows").innerHTML=hits.length?visible.map(x=>{
  const bank=x.banks_mentioned_in_headline||[],amount=x.amount_strings_in_headline||[];
- const notes=[bank.length?'Bank name in headline: '+bank.join(", "):"",amount.length?'Amount quoted: '+amount.join(", "):"",x.headline_case_candidate?"Possible individual victim story":""].filter(Boolean);
+ const notes=[bank.length?'Bank name in headline: '+bank.join(", "):"",amount.length?'Amount quoted: '+amount.join(", "):"",x.headline_case_candidate?"Possible individual victim story":"",(x.number_of_article_links||0)>1?(x.number_of_article_links+' matching source links'):""].filter(Boolean);
  return '<div class="news-item"><div><div class="news-item-title">'+link(x.url,x.title)+'</div><div class="news-meta">'+esc(x.publisher||"News syndication")+" · "+esc((x.published_at||"").slice(0,10))+" · "+esc(x.category||"Financial crime watch")+'</div>'+(notes.length?'<div class="news-extracted">'+notes.map(note=>'<span>'+esc(note)+'</span>').join("")+'</div>':"")+'</div><span class="news-label">'+(x.content_kind==="research_report_lead"?"RESEARCH LEAD":"UNVERIFIED NEWS")+'</span></div>';
  }).join(""):'<div class="empty">No news leads returned. The collector may be awaiting its first successful syndicated feed response, or no headlines match your filters.</div>';
  }
@@ -160,15 +162,16 @@
  }
  async function boot(){
   renderCatalog();
-  const names=["fraud_stats.json","news.json","bank_disclosures.json","events.json","news_status.json","incidents.json","news_archive.json"];
+  const names=["fraud_stats.json","news.json","bank_disclosures.json","events.json","news_status.json","incidents.json","news_archive.json","article_index.json","external_source_status.json"];
   const fetched=await Promise.allSettled(names.map(getJSON));
   if(fetched[0].status==="fulfilled")stats=fetched[0].value.metrics||[];
   else $i("fraudNational").innerHTML='<div class="error">Fraud statistics unavailable: '+esc(String(fetched[0].reason))+'</div>';
   const recent=fetched[1].status==="fulfilled"?(fetched[1].value.leads||[]):[];
   const history=fetched[6].status==="fulfilled"?(fetched[6].value.leads||[]):[];
   archiveCount=history.length;
-  news=[...new Map([...recent,...history].map(x=>[x.id,x])).values()].sort((a,b)=>String(b.published_at||"").localeCompare(String(a.published_at||"")));
-  $i("archiveCount").textContent=archiveCount?archiveCount.toLocaleString()+" historical headlines indexed · "+news.length.toLocaleString()+" total unique headlines":"Historical archive awaiting initial backfill · "+recent.length+" recent headlines";
+  const indexed=fetched[7].status==="fulfilled"?(fetched[7].value.articles||[]):[];
+  news=indexed.length?indexed:[...new Map([...recent,...history].map(x=>[x.id,x])).values()].sort((a,b)=>String(b.published_at||"").localeCompare(String(a.published_at||"")));
+  $i("archiveCount").textContent=archiveCount?archiveCount.toLocaleString()+" historic discoveries · "+news.length.toLocaleString()+" unique indexed headlines from multiple sources":"Archive awaiting initial backfill · "+news.length+" indexed headlines";
   const newsStatus=fetched[4].status==="fulfilled"?fetched[4].value:{};
   const lastUpdated=newsStatus.last_completed_at||(fetched[1].status==="fulfilled"?fetched[1].value.updated_at:null);
   renderHomeHeadlines(lastUpdated);
