@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-24T03:09:33+00:00",
+  "generated_at": "2026-10-24T03:10:13+00:00",
   "methodology": "Exact official institution names are canonically grouped by listed aliases. Articles linked to banks only when the bank is explicitly named in a headline. This is an evidence research aid, not proof of wrongdoing.",
   "source_counts": {
     "enforcement": 98,
     "reviewed_incidents": 6,
-    "unverified_articles": 2303
+    "unverified_articles": 2325
   },
   "institutions": [
     {
@@ -1342,6 +1342,65 @@
       },
       "recent_activity": "2026-05-22T07:00:00+00:00",
       "evidence_count_shown": 3
+    },
+    {
+      "id": "bclc",
+      "name": "BCLC",
+      "aliases": [
+        "BCLC",
+        "British Columbia Lottery Corporation"
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 1
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "2b988215b2d7c1fd88af",
+          "date": "2025-08-28",
+          "event_date": null,
+          "title": "British Columbia Lottery Corporation: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2025-08-28-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty appealed",
+          "penalty_cad": 1075000.0,
+          "location": "Kamloops, British Columbia",
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        },
+        {
+          "kind": "headline",
+          "id": "6fcc75ea064a8f5d19fa",
+          "date": "2021-04-27T07:00:00+00:00",
+          "title": "BCLC lawyer passes on Christy Clark at money laundering inquiry, grills David Eby - Business in Vancouver",
+          "source_url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQVEpUaG01VWdVc0ctN3RVUlBjenpxSlFBdFNIVDFiMzg0VFhoSjNmWDRQZWJhRm05NC1sYWZJV09heDFFN1MxZV9pcl9CUkdkY2lzbjV2WkkwLWlDZEZNaGFLWFgtcUVLTmo2dkxpaElpbHJGUjRhMmFBcmVteGYxM0J6NUtKcV8tN3drY1g2eXVQR0VXN0hsVXlyRWNVY1ZRa1E4d01MNEFldHR3dGZibUlvaFN3elU0dHRJZDNfd0hMUGZVcUhn?oc=5",
+          "source": "Business in Vancouver",
+          "category": "AML and laundering",
+          "source_count": 1,
+          "source_channels": [
+            "historical"
+          ],
+          "amount_text": [],
+          "location": "Vancouver, British Columbia",
+          "evidence": "unverified_headline",
+          "role": "mentioned_in_headline_only"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 2,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2025": 1075000.0
+      },
+      "recent_activity": "2025-08-28",
+      "evidence_count_shown": 2
     },
     {
       "id": "institution-c78ec1398450",
@@ -2817,48 +2876,6 @@
         "2025": 199000.0
       },
       "recent_activity": "2025-09-04",
-      "evidence_count_shown": 1
-    },
-    {
-      "id": "bclc",
-      "name": "BCLC",
-      "aliases": [
-        "BCLC",
-        "British Columbia Lottery Corporation"
-      ],
-      "counts": {
-        "enforcement": 1,
-        "incidents": 0,
-        "headlines": 0
-      },
-      "evidence": [
-        {
-          "kind": "enforcement",
-          "id": "2b988215b2d7c1fd88af",
-          "date": "2025-08-28",
-          "event_date": null,
-          "title": "British Columbia Lottery Corporation: FINTRAC administrative monetary penalty",
-          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2025-08-28-eng",
-          "source": "FINTRAC",
-          "category": "AML enforcement",
-          "status": "penalty appealed",
-          "penalty_cad": 1075000.0,
-          "location": "Kamloops, British Columbia",
-          "evidence": "regulator_published_action",
-          "role": "subject_of_enforcement"
-        }
-      ],
-      "themes": [
-        {
-          "name": "Money laundering controls",
-          "matching_records": 1,
-          "interpretation": "shared keyword, not established causation"
-        }
-      ],
-      "annual_penalties_cad": {
-        "2025": 1075000.0
-      },
-      "recent_activity": "2025-08-28",
       "evidence_count_shown": 1
     },
     {
