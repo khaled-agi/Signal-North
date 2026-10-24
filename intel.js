@@ -173,6 +173,12 @@
   news=indexed.length?indexed:[...new Map([...recent,...history].map(x=>[x.id,x])).values()].sort((a,b)=>String(b.published_at||"").localeCompare(String(a.published_at||"")));
   $i("archiveCount").textContent=archiveCount?archiveCount.toLocaleString()+" historic discoveries · "+news.length.toLocaleString()+" unique indexed headlines from multiple sources":"Archive awaiting initial backfill · "+news.length+" indexed headlines";
   const newsStatus=fetched[4].status==="fulfilled"?fetched[4].value:{};
+  const otherHealth=fetched[8].status==="fulfilled"?fetched[8].value:{};
+  const collectors=Object.entries(otherHealth.collectors||{});
+  $i("externalSourceHealth").innerHTML=collectors.length?
+      '<div class="source-line"><strong>Independent news discovery</strong><span class="small">Last scan: '+esc((otherHealth.completed_at||"").slice(0,19))+' UTC</span></div>'+
+      collectors.map(([name,info])=>'<div class="source-line"><div><strong>'+esc(name)+'</strong><p class="small">'+esc(info.status||"unknown")+' · '+Number(info.accepted||0)+' candidate records from '+Number(info.scanned||0)+' scanned articles</p></div></div>').join("")
+      :'<div class="source-line"><span class="small">RCMP / GDELT source-health data will appear after the next successful collection.</span></div>';
   const lastUpdated=newsStatus.last_completed_at||(fetched[1].status==="fulfilled"?fetched[1].value.updated_at:null);
   renderHomeHeadlines(lastUpdated);
   window.dispatchEvent(new CustomEvent("signalnorth:newsready",{detail:{leads:news}}));
