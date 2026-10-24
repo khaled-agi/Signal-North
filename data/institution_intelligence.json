@@ -1,0 +1,4847 @@
+{
+  "generated_at": "2026-10-24T02:34:39+00:00",
+  "methodology": "Exact official institution names are canonically grouped by listed aliases. Articles linked to banks only when the bank is explicitly named in a headline. This is an evidence research aid, not proof of wrongdoing.",
+  "source_counts": {
+    "enforcement": 98,
+    "reviewed_incidents": 6,
+    "unverified_articles": 1411
+  },
+  "institutions": [
+    {
+      "id": "td",
+      "name": "Toronto-Dominion Bank",
+      "aliases": [
+        "The Toronto-Dominion Bank",
+        "Toronto-Dominion Bank",
+        "TD Bank",
+        "TD Canada Trust",
+        "TD"
+      ],
+      "counts": {
+        "enforcement": 3,
+        "incidents": 1,
+        "headlines": 10
+      },
+      "evidence": [
+        {
+          "kind": "incident",
+          "id": "ca-2026-10-21-td-deepfake-investment",
+          "date": "2026-10-21",
+          "event_period": "May 2025–February 2026",
+          "title": "B.C. customer reports C$450,000 deepfake investment scam",
+          "source_url": "https://finance.yahoo.com/economy/policy/articles/88-old-loses-450-000-032700028.html",
+          "source": "Yahoo Finance (reporting on CBC Go Public)",
+          "category": "Investment scam / deepfake promotion",
+          "amount_cad": 450000,
+          "amount_type": "victim_reported_loss",
+          "recovery_status": "Reported as not reimbursed at publication",
+          "location": "Qualicum Beach, British Columbia",
+          "evidence": "reported_by_news",
+          "role": "customer_financial_institution"
+        },
+        {
+          "kind": "headline",
+          "id": "504e2824be4695423ba2",
+          "date": "2026-10-14T07:00:00+00:00",
+          "title": "TD Bank Investors Advance Suit Over Money Laundering Issues - Bloomberg Law News",
+          "source_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQSzV1bTYydlpNUWt6OEE2Q2diNzZWOXFYa0tOTUgwZE16NGhWZWd2aWxrRFB5VHJxUFJlQ081TkYyYTZGTzdCZW5FMnEtMG9EMUdwcWdjaWw2a3V6bDdmZzduX0V5SkJFYUtsNDd0aFBrRDdfT1luS0RPenlvRFRYSW4zVjhHSW5MbHdKUlNsWW9YMTR5XzBJSkdGUVFIUk9rYWtubGJxcw?oc=5",
+          "source": "Bloomberg Law News",
+          "category": "AML and laundering",
+          "source_count": 1,
+          "source_channels": [
+            "recent"
+          ],
+          "amount_text": [],
+          "location": null,
+          "evidence": "unverified_headline",
+          "role": "mentioned_in_headline_only"
+        },
+        {
+          "kind": "headline",
+          "id": "e8142dc3d46e5e9fe775",
+          "date": "2026-07-20T07:00:00+00:00",
+          "title": "NEWS: Former TD Bank employee sentenced for role in money laundering scheme - AML Intelligence",
+          "source_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPbTJOMjM4djlBSF9jR0lZVGI3bHRNWVVObnBhd0x4VEd6c3NvN0RJQ3dIVG1WOWYyUmNVZnItUEhwTnlYZUdqQTdTUXBsanZBczlBdGtxMUZzc0h1MXpSVTdtc0NlVUtOUFlERmJMaktPVTFHb3p0QWsyS2lzcUI2TGlhaWhjTjc1Tks0MGdoeUQzdk1KQkkxbnlnMi1uSDNxMEZSZzZyaEl5Vzc0NXA0?oc=5",
+          "source": "AML Intelligence",
+          "category": "AML and laundering",
+          "source_count": 1,
+          "source_channels": [
+            "historical"
+          ],
+          "amount_text": [],
+          "location": null,
+          "evidence": "unverified_headline",
+          "role": "mentioned_in_headline_only"
+        },
+        {
+          "kind": "headline",
+          "id": "71b7c1c522182035c3fd",
+          "date": "2026-07-20T07:00:00+00:00",
+          "title": "Ex-TD Bank employees sentenced in money-laundering scheme - American Banker",
+          "source_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOZTVRZnM5ekhKNVBPbHZwQ1JmTEtOaXRMMERDMjhuZXRFNjVsYnU1T2QyYU05eWs4d2pXSDg2MXQzbXFhQjFPdi1PTDlDMVlxZ3BDQnRGQmlqaUtPemE2OU14OHB4dXhTaTdqNlJnUThROE9hS3dFMVpSem5xcG50eUFJV2R5ellHNXpRN2tEcnhhWkVTZlZteQ?oc=5",
+          "source": "American Banker",
+          "category": "Financial crime watch",
+          "source_count": 1,
+          "source_channels": [
+            "historical"
+          ],
+          "amount_text": [],
+          "location": null,
+          "evidence": "unverified_headline",
+          "role": "mentioned_in_headline_only"
+        },
+        {
+          "kind": "headline",
+          "id": "f30a2b5483d2ea461f83",
+          "date": "2026-06-14T07:00:00+00:00",
+          "title": "TD Bank customer on the hook for $15K after account hacked: CBC's Marketplace Cheat Sheet - CBC",
+          "source_url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPenRDNFFHYUttNXY4ZTZkMDR6ODh0cHYydVByOGxySTRTNUYwVDVNaE1faEZLeWFHNFpWVmw1VDhvMy0waWZJQnFVRVZUdGtKVmJ1eUhqbjE3Mmw0NFJvdDBTWDR1dkN6WGVJTThPN3l6MlBhSl9IQy1ocHRvZ0tGeGktcWlkYjBnd2c?oc=5",
+          "source": "CBC",
+          "category": "Financial crime watch",
+          "source_count": 1,
+          "source_channels": [
+            "historical"
+          ],
+          "amount_text": [
+            "$15K"
+          ],
+          "location": null,
+          "evidence": "unverified_headline",
+          "role": "mentioned_in_headline_only"
+        },
+        {
+          "kind": "enforcement",
+          "id": "419a348fce684e397726",
+          "date": "2025-09-29",
+          "event_date": "2024-10-17",
+          "title": "Toronto-Dominion Bank: FCAC proceeding #3",
+          "source_url": "https://www.canada.ca/en/financial-consumer-agency/services/industry/commissioner-decisions/summary-proceeding-3.html",
+          "source": "FCAC",
+          "category": "Consumer protection enforcement",
+          "status": "penalty paid",
+          "penalty_cad": 5500000.0,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        },
+        {
+          "kind": "headline",
+          "id": "a0eb96cb3cf07b8b1f69",
+          "date": "2025-09-22T07:00:00+00:00",
+          "title": "TD Bank joins Anti-Scam Coalition, but tells customer she’s responsible for $10,000 lost in phone scam - Radio-Canada",
+          "source_url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxObEN3S091TkExWHp4V2tLU2dXOVpESWY4ZlhwSTlQOU4telQxVHJjN0ZPZUVncDJZam9GdHRZdWxDd2ZEZ2VZamxaN00xNTdtUHc2WldrbGFXSEIyUTktaGZMQWJUendEM3pvcmtGVkdORG1kOW1teTRxdGhaOGptMWtEem1IWkxpQ1ZKalRzUXd0NWZWZzZ4RzRqRm5hdTV0NXZZWE13TllaWGdyeXR0VkJ5V3ZidGlGUWFCTmM4cDJGbVVEVzY2STUxQXRkbGZVU3ZjRDBBcFNIdDUxNnBuTA?oc=5",
+          "source": "Radio-Canada",
+          "category": "Scam and victim reports",
+          "source_count": 1,
+          "source_channels": [
+            "historical"
+          ],
+          "amount_text": [
+            "$10,000 "
+          ],
+          "location": null,
+          "evidence": "unverified_headline",
+          "role": "mentioned_in_headline_only"
+        },
+        {
+          "kind": "headline",
+          "id": "7a5e917fc36dbc6ba57d",
+          "date": "2025-08-26T07:00:00+00:00",
+          "title": "ICYMI: Niagara man loses nearly $10,000 in TD Bank e-transfer scam - ThoroldToday.ca",
+          "source_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOWllOR2t6NjRLUGlFdldjc1owN3J2eVNiNG1JNzZiZVhwMWZXTjBRblhmRk53ZWVWeXdvWTJnRFZpNEtYQmJmaVJOXzk4MzJUMU13dzZMUjRLQVBVVEV2TkxyTzhfbTNxX1JjVFBOeTd1Q3dDQWlQeUZtYWRmR0NvQ0R1bEw3N1o1VjVFQmQ2N0RWdGZFUjk5MTRkRVpEVDlvd0NMNFZQN2dWa014STg0cg?oc=5",
+          "source": "ThoroldToday.ca",
+          "category": "Scam and victim reports",
+          "source_count": 1,
+          "source_channels": [
+            "historical"
+          ],
+          "amount_text": [
+            "$10,000 "
+          ],
+          "location": null,
+          "evidence": "unverified_headline",
+          "role": "mentioned_in_headline_only"
+        },
+        {
+          "kind": "headline",
+          "id": "6e74627d5c63b7066d24",
+          "date": "2025-05-02T07:00:00+00:00",
+          "title": "TD bank returns $2k to victim of Facebook Marketplace scam - CTV News",
+          "source_url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQei1oeVJGWXFHRkVlNTdNcXBYTnd2T3J1R1NxTWM5Uzdwa0NFOTN5TVVLOXdLd1VkWlZvQkxyMk82aWVObjl2SjNQYzljMEZINEtfT25TWXo5Y04zSndCS2thVlRkdzU2WTJ4ZVlXX0NtVFpPek9Edmp0cFB3d0Y0bTZsUFVHc0ZubTZSRGtIVExfWjBkdmc?oc=5",
+          "source": "CTV News",
+          "category": "Scam and victim reports",
+          "source_count": 1,
+          "source_channels": [
+            "historical"
+          ],
+          "amount_text": [
+            "$2k"
+          ],
+          "location": null,
+          "evidence": "unverified_headline",
+          "role": "mentioned_in_headline_only"
+        },
+        {
+          "kind": "enforcement",
+          "id": "0db6f3997be507fcb8c4",
+          "date": "2024-11-06",
+          "event_date": "2024-07-11",
+          "title": "Toronto-Dominion Bank: FCAC proceeding #2",
+          "source_url": "https://www.canada.ca/en/financial-consumer-agency/services/industry/commissioner-decisions/summary-proceeding-2.html",
+          "source": "FCAC",
+          "category": "Consumer protection enforcement",
+          "status": "penalty paid",
+          "penalty_cad": 6500000.0,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        },
+        {
+          "kind": "headline",
+          "id": "71bbe399a2b35bbdd56e",
+          "date": "2024-10-10T07:00:00+00:00",
+          "title": "TD Bank fined $3bn in historic money laundering settlement - BBC",
+          "source_url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9Fb2NISi1jU0FRUlRsZ1pvY3FRLVVReHU0WVE4N3NZbkVXam1DT3lYQUZEOUxUdnFfTzNrdG4tSUV5UmhORURPSjFoRDg1RmZFS0pkMm5VVXpRQQ?oc=5",
+          "source": "BBC",
+          "category": "AML and laundering",
+          "source_count": 1,
+          "source_channels": [
+            "historical"
+          ],
+          "amount_text": [],
+          "location": null,
+          "evidence": "unverified_headline",
+          "role": "mentioned_in_headline_only"
+        },
+        {
+          "kind": "headline",
+          "id": "3b223495fba8cacd733f",
+          "date": "2024-05-24T07:00:00+00:00",
+          "title": "TD Bank's failure to thwart money laundering in U.S. prompts calls for stronger regulation at home - CBC",
+          "source_url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQVUtOQW82OUZGVHIyMFdNVXl6ck1WUi1ZZ2lPR1lkR3JUU3pFZThWQTl6YUlTdjZST2RrbjBnWUEwU245RmhONnRkWE1qd1UtamUxbTJrVWhrNXlnVDdzSHFlSldkUjJSY1piY2paNTlkTXVJaFpmMHhxUXh5YW1tNDgtQWNVbEhSVGppWjc0UzVhdw?oc=5",
+          "source": "CBC",
+          "category": "AML and laundering",
+          "source_count": 1,
+          "source_channels": [
+            "historical"
+          ],
+          "amount_text": [],
+          "location": null,
+          "evidence": "unverified_headline",
+          "role": "mentioned_in_headline_only"
+        },
+        {
+          "kind": "enforcement",
+          "id": "1bae5757a6e6b846ee56",
+          "date": "2024-05-02",
+          "event_date": null,
+          "title": "The Toronto-Dominion Bank: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2024-05-02-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty paid",
+          "penalty_cad": 9185000.0,
+          "location": "Toronto, Ontario",
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        },
+        {
+          "kind": "headline",
+          "id": "24f2304a06a3db805a55",
+          "date": "2024-02-04T08:00:00+00:00",
+          "title": "Ottawa couple out $13k after scammer posing as TD Bank steals credit card info - CTV News",
+          "source_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNd3FJdnZIU2x6QTBta3R3anEyRVdWNnU4dmNwN3RSZS1LUlpobVBSSUZnd1RKeTJlU3pKZEZYV2pQN3Q5R2Jua1FlYURkRExWQjl3WFdQN2pOR3VqQ29fdFFDdkhod21PSjRFcGFKWDYxdE81QllWLWdFVWpGRzRLZkhwUm14cl83cUFpZGR5Tk44eGxfTmhQblVuZjQzbG1fc1JQaDFuQTF1bmh0TFRaSlRuWmRoNkk?oc=5",
+          "source": "CTV News",
+          "category": "Scam and victim reports",
+          "source_count": 1,
+          "source_channels": [
+            "historical"
+          ],
+          "amount_text": [
+            "$13k"
+          ],
+          "location": "Ottawa, Ontario",
+          "evidence": "unverified_headline",
+          "role": "mentioned_in_headline_only"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 5,
+          "interpretation": "shared keyword, not established causation"
+        },
+        {
+          "name": "Consumer protection",
+          "matching_records": 2,
+          "interpretation": "shared keyword, not established causation"
+        },
+        {
+          "name": "Investment and crypto scams",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2025": 5500000.0,
+        "2024": 15685000.0
+      },
+      "recent_activity": "2026-10-21",
+      "evidence_count_shown": 14
+    },
+    {
+      "id": "rbc",
+      "name": "Royal Bank of Canada",
+      "aliases": [
+        "Royal Bank of Canada",
+        "RBC"
+      ],
+      "counts": {
+        "enforcement": 2,
+        "incidents": 1,
+        "headlines": 18
+      },
+      "evidence": [
+        {
+          "kind": "headline",
+          "id": "194b73a8a3328f421e36",
+          "date": "2026-10-15T07:00:00+00:00",
+          "title": "Plus d’une centaine de clients de la RBC victimes d’une fraude - TVA Nouvelles",
+          "source_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPSE5RdC1xVXByc0EzeFZtc3haUkRxOUZCZFBUUkZnRWhmNS1lcmcyaVktOC1QcnJWNTFZcVpJTWo0bFo4dm1pWmZZaDhhOUJxNmJtRlJPYzIxYTd6VnNIZjFMUnpYdGpPemZHZkROZkhJeGJDTDVMTElrSWpBblp6MUVOdlNpTDlrSGpDaERnSEJpZEtSbnZveEo4REY?oc=5",
+          "source": "TVA Nouvelles",
+          "category": "Reported fraud",
+          "source_count": 1,
+          "source_channels": [
+            "historical",
+            "recent"
+          ],
+          "amount_text": [],
+          "location": null,
+          "evidence": "unverified_headline",
+          "role": "mentioned_in_headline_only"
+        },
+        {
+          "kind": "headline",
+          "id": "254e943409215e7aaa48",
+          "date": "2026-06-26T07:00:00+00:00",
+          "title": "RBC pays penalty after over 200K Canadians affected by \"inaccurate\" credit card statements | National - Daily Hive",
+          "source_url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5jNDZBM201SlJPdGFUTXlxM0o2cDIxNGg3all0QkR5QTd0d3BlSWVBRk5haHVYcUhscl94MjdDYzlwb2dZM0IxN1FQSmRXZVRVY1RXSHRnWnc2YXdkNlB4ZHVFakFsOGQz?oc=5",
+          "source": "Daily Hive",
+          "category": "Financial crime watch",
+          "source_count": 1,
+          "source_channels": [
+            "historical"
+          ],
+          "amount_text": [],
+          "location": null,
+          "evidence": "unverified_headline",
+          "role": "mentioned_in_headline_only"
+        },
+        {
+          "kind": "headline",
+          "id": "1d7f0a2a637f98eada97",
+          "date": "2026-06-25T07:00:00+00:00",
+          "title": "Royal Bank of Canada ordered to pay $4.25M penalty for consumer violation - CTV News",
+          "source_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNNi04LWpRa3JBcXpXZzR5OHA0ams4TWpfTWJVUDdHazBsLVNXX0M4Z1pKRHNHYURWSVVkYzdjc08zRU1pVkVfRDVXMkJfS21mbDhsRGtveEtRWnJpRTlYYjhHVzhaUVNzRGtpUXlZVnZhZ0RVMGxxZzcyRFBHY240Y1NQT0JZam1CV0VZaGpRbTc0TTJCQ0hKX1c3dExzMThKOTdic2lNTHQ2X21TNjZz?oc=5",
+          "source": "CTV News",
+          "category": "Financial crime watch",
+          "source_count": 1,
+          "source_channels": [
+            "historical"
+          ],
+          "amount_text": [
+            "$4.25M"
+          ],
+          "location": null,
+          "evidence": "unverified_headline",
+          "role": "mentioned_in_headline_only"
+        },
+        {
+          "kind": "enforcement",
+          "id": "d8198cd66476f188289f",
+          "date": "2026-06-25",
+          "event_date": "2026-04-17",
+          "title": "Royal Bank of Canada: FCAC proceeding #5",
+          "source_url": "https://www.canada.ca/en/financial-consumer-agency/services/industry/commissioner-decisions/summary-proceeding-5.html",
+          "source": "FCAC",
+          "category": "Consumer protection enforcement",
+          "status": "penalty paid",
+          "penalty_cad": 4250000.0,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        },
+        {
+          "kind": "incident",
+          "id": "ca-2026-02-24-rcmp-rbc-spoof",
+          "date": "2026-02-24",
+          "event_period": "Before February 24, 2026; exact day not stated",
+          "title": "Nanaimo resident reports C$24,000 bank impersonation loss",
+          "source_url": "https://rcmp.ca/en/bc/nanaimo/news/2026/02/4350604",
+          "source": "RCMP Nanaimo",
+          "category": "Bank impersonation / account takeover",
+          "amount_cad": 24000,
+          "amount_type": "victim_reported_loss",
+          "recovery_status": "Not reported",
+          "location": "Nanaimo, British Columbia",
+          "evidence": "police_release",
+          "role": "institution_impersonated"
+        },
+        {
+          "kind": "headline",
+          "id": "f437205ad6c8c1600873",
+          "date": "2025-11-25T08:00:00+00:00",
+          "title": "RBC poll finds Canadians are confident they can spot scams, but many still fall victim - CTV News",
+          "source_url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOcFFDT21meVB5SkR4VzZNcDNHZVNEQVJtUlNBSy1xNlNJaURaWjV5SkktMGZBaU1JMDNYaFNCNTN3clN4RUxUb1ZPZzFVaVZPWlhCczJrSzJueTZ1dm5uU0VsSlhFLUh2R0lBLVU4WUcyMzVEWmJtcU1YMXA3Skl5U2h4R1VSOENWOXVBanN0V1gzNHc0bC13NW00TXNoa0tLZEg3ODhaSDFtRlZEUG84ZklWMjlFU3E0c29uSFIxYlJZQQ?oc=5",
+          "source": "CTV News",
+          "category": "Scam and victim reports",
+          "source_count": 1,
+          "source_channels": [
+            "historical"
+          ],
+          "amount_text": [],
+          "location": null,
+          "evidence": "unverified_headline",
+          "role": "mentioned_in_headline_only"
+        },
+        {
+          "kind": "headline",
+          "id": "e021eb9455bf679596da",
+          "date": "2025-11-05T08:00:00+00:00",
+          "title": "CIBC, RBC failed to stop $1.7M fraud on B.C. senior - Yahoo! Finance Canada",
+          "source_url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9sQVM2ZUkwX1JJc29hN18wYmZlbVloc0pDclpjRE9EWGFfb1pjTWh6QUxBRkV4N3ZoVmdiMC1sdFViRDlWUzJWSmNTeHpYbVRBNW1OWFZFdkdHcGtqVFV0aGRaOG1TeUNZWHpzbnVtNmtjaHFteWVBU2VjRQ?oc=5",
+          "source": "Yahoo! Finance Canada",
+          "category": "Reported fraud",
+          "source_count": 1,
+          "source_channels": [
+            "historical"
+          ],
+          "amount_text": [
+            "$1.7M"
+          ],
+          "location": null,
+          "evidence": "unverified_headline",
+          "role": "mentioned_in_headline_only"
+        },
+        {
+          "kind": "headline",
+          "id": "619cfcc73a0488e55d50",
+          "date": "2025-10-27T07:00:00+00:00",
+          "title": "RBC and CIBC allow 89-year-old to drain life savings, lose $1.7M to scammers - CBC",
+          "source_url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE13VFFVNG9IUi1GRVZHMmhzRkNqQ1JnM0g3Vl8tVVViQXdPcGx4SzBRbFBmZzlrVGJLNkV1SWg5QW01SHZ0YklqLWhPVS1QbVR6ZFNJSUFiTUFpZFFPVU9oSERYdmRsTlVCMVlzQUtTTGszclUtbFZrbmRvSQ?oc=5",
+          "source": "CBC",
+          "category": "Scam and victim reports",
+          "source_count": 1,
+          "source_channels": [
+            "historical"
+          ],
+          "amount_text": [
+            "$1.7M"
+          ],
+          "location": null,
+          "evidence": "unverified_headline",
+          "role": "mentioned_in_headline_only"
+        },
+        {
+          "kind": "headline",
+          "id": "44fb420d80eaacaeb733",
+          "date": "2025-09-24T07:00:00+00:00",
+          "title": "Former RBC employee charged with accessing Canada PM Carney's banking profile, fraud - Reuters",
+          "source_url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNWXl5bDNLQmdkNm40eF9nMEo4NnNHUGh2cVoyWmJvS0E5dWF4eGZiU1VTdTNoaENvZHF2UWJIT3A5YjVjR2RSQmpSMjdKcG02bE9DbXpDaXlaTjRqdXpqRUtWLTNxczdWbHpQd2J6SVR1TnlmTG41UzZtZzRFYXByMER3RDVZRUhfNGthSldIdWxzbWYxUTNJZDNpanVLelN1bl95SXhIS2lmaXhVb2hQT0ZPVUh3ODFIcFllNUFfdV9Ec0lla2t5Rg?oc=5",
+          "source": "Reuters",
+          "category": "Reported fraud",
+          "source_count": 1,
+          "source_channels": [
+            "historical"
+          ],
+          "amount_text": [],
+          "location": null,
+          "evidence": "unverified_headline",
+          "role": "mentioned_in_headline_only"
+        },
+        {
+          "kind": "headline",
+          "id": "a5776ad3d54620aa9052",
+          "date": "2025-09-24T07:00:00+00:00",
+          "title": "RBC employee charged for allegedly accessing Carney's banking information - CBC",
+          "source_url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPeW5pWDBFYXdNOHBWQVlPakY2d2FaUHZOdlNkaHBFeEU5V2JNdF9pTERPckNXdlRIOEl1aXU3VkdLMVc2dFZ2NVJzVENIeGQ0eGdjZ0RfQ0tvWW9ORFVNRmtSYmoyV2wwcjlCTjY5T2VSc0RyT1I3cHAzalVrUXJzaQ?oc=5",
+          "source": "CBC",
+          "category": "Financial crime watch",
+          "source_count": 1,
+          "source_channels": [
+            "historical"
+          ],
+          "amount_text": [],
+          "location": null,
+          "evidence": "unverified_headline",
+          "role": "mentioned_in_headline_only"
+        },
+        {
+          "kind": "headline",
+          "id": "2ef411bf189736e2fe13",
+          "date": "2025-09-24T07:00:00+00:00",
+          "title": "RBC employee charged for allegedly accessing Carney, Trudeau’s banking information | RCI - Radio-Canada",
+          "source_url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQNmFlc3lhMFh6VUZWT2x5aUVzTWxCUWRNSURXMC1ZaWx4eHcwY0pzVy13NzBXZEJkRGJrVWl4WTE2dUpzX0gzU3Q4Mm42NEVGRFJ1eVlWRjJYS3JSbFpfMUpMai1ZbFI0ZVNIalFMeXdfOW9Da3Y3SGtkZFlGRHFSRGg3Rjc4M3g4TjZwbHZQNlQtdm5MRlJLNkpPY1Zwc0xTSndzaGpiOUlXblJOMmc3VUxqc0l0d3VMLWJ2dW11S0x4bFd1S1RF?oc=5",
+          "source": "Radio-Canada",
+          "category": "Financial crime watch",
+          "source_count": 1,
+          "source_channels": [
+            "historical"
+          ],
+          "amount_text": [],
+          "location": null,
+          "evidence": "unverified_headline",
+          "role": "mentioned_in_headline_only"
+        },
+        {
+          "kind": "headline",
+          "id": "f619c01769c698101035",
+          "date": "2025-09-24T07:00:00+00:00",
+          "title": "RBC employee charged for accessing PM Carney’s personal data - CTV News",
+          "source_url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPOVVUd1BOZDhMUFVGSHBvcmdSS1hWRzB1M1AxN25Ib2lFaWVjQTljMmd3SnE1Q1Y0YXpvVTJZaTdkYnlVX0dRbm9zbHhQNHg1NExvclJkUDdsckVXRGliaWxWVFdybUZSdktBMmhjWjFILTZOQndLbk8xcHh2clF3TGdsN1ZRSjd1YVVqc3dHeU9YR0F6eTM3Um5aZDVqZTV5cy16emxHbVJyYjdvOFNVdjZndw?oc=5",
+          "source": "CTV News",
+          "category": "Financial crime watch",
+          "source_count": 1,
+          "source_channels": [
+            "historical"
+          ],
+          "amount_text": [],
+          "location": null,
+          "evidence": "unverified_headline",
+          "role": "mentioned_in_headline_only"
+        },
+        {
+          "kind": "headline",
+          "id": "46688f560c42331bf224",
+          "date": "2025-07-09T07:00:00+00:00",
+          "title": "RBC tells customer she's responsible for $14K stolen from account in bank investigator scam - CBC",
+          "source_url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFA5VUdwaEk1MmxRVTAtN2x6dkp6amhhWTNvUGZHdDdpR2M5NHRPMDVHMGRQVEg3RFhxaWtEZDB0ZDMzWWJHalN0LTBvSE5Pejd0cEstay0tV040VEhzX3Zrc3BJdTFPS1ZnNUl0dlAzMkFrX1hMU0p1dQ?oc=5",
+          "source": "CBC",
+          "category": "Scam and victim reports",
+          "source_count": 1,
+          "source_channels": [
+            "historical"
+          ],
+          "amount_text": [
+            "$14K"
+          ],
+          "location": null,
+          "evidence": "unverified_headline",
+          "role": "mentioned_in_headline_only"
+        },
+        {
+          "kind": "headline",
+          "id": "117c52a7af1d6c76a3c6",
+          "date": "2025-07-09T07:00:00+00:00",
+          "title": "Quebec woman loses nearly $15,000 in sophisticated scam targeting RBC clients - CityNews Montreal",
+          "source_url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE05ZGg5RmdydC1nbmVrUXltMklnczgwMjMtZF9ETHYxcVpodmxQZE1ONXdwMGU2emRRelpTNENXNUxJRWhYc1ZuM092YkVla2NkN1VGaDlDTXNhUGdCTXdnbHB1MUF6blJkWVdZaDVFQQ?oc=5",
+          "source": "CityNews Montreal",
+          "category": "Scam and victim reports",
+          "source_count": 1,
+          "source_channels": [
+            "historical"
+          ],
+          "amount_text": [
+            "$15,000 "
+          ],
+          "location": "Montreal, Quebec",
+          "evidence": "unverified_headline",
+          "role": "mentioned_in_headline_only"
+        },
+        {
+          "kind": "headline",
+          "id": "5b0226a5c27bf07138ee",
+          "date": "2025-07-08T07:00:00+00:00",
+          "title": "Attempted bank fraud stopped by RBC and Lacombe Police - The Stettler Independent",
+          "source_url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNWFlnT0dPVUxMSTEtcUR5anlzMGY1eVBSVXRBSE9JRkFiaDNuOVVWNGdtVmpZMlctaXhMT2FXQzN5SnRsTF9VRzNjU3BSSjY4X3FuVVNIVlg5cXc1cGE4ejd5Mm1RTmtCZjlPQnJ1WGJhQW02Y25EMVpOaWVlSlZoS3l4WFRhZ1M1V3hRcGFKalFQZlNXN19ZOHV6NF9iRWs?oc=5",
+          "source": "The Stettler Independent",
+          "category": "Reported fraud",
+          "source_count": 1,
+          "source_channels": [
+            "historical"
+          ],
+          "amount_text": [],
+          "location": null,
+          "evidence": "unverified_headline",
+          "role": "mentioned_in_headline_only"
+        },
+        {
+          "kind": "headline",
+          "id": "565402406af6357fc5f1",
+          "date": "2025-05-07T07:00:00+00:00",
+          "title": "Ponzi victims sue RBC, BCFSA over Greg Martel's $300m mortgage fraud scheme - Mortgage Professional America",
+          "source_url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOcHpQVVowSGlkU25QbUM3OGZ2UFUxa0Nsd1lhMmo2SFotQkpzWkliTGtLdzlnZTFleXhXaXlzLXpnN2xrRDJHLVNzNnlBbHpLT1RQZVNjT01faElmSldlUzhIMWhqVEt2eFlSaXl5VTdib0QzYU1lTXhHTFN5Yi16WmxCQXVMVUxicXdtSXA3czNsZkMyU0Z4X1hCS0pHOW1KaDhjX25KR0xwSnc3WWFzVUxUWWNLN2ZDT0E?oc=5",
+          "source": "Mortgage Professional America",
+          "category": "Reported fraud",
+          "source_count": 1,
+          "source_channels": [
+            "historical"
+          ],
+          "amount_text": [
+            "$300m"
+          ],
+          "location": null,
+          "evidence": "unverified_headline",
+          "role": "mentioned_in_headline_only"
+        },
+        {
+          "kind": "headline",
+          "id": "e7ba27fa87f8407d5221",
+          "date": "2024-11-20T08:00:00+00:00",
+          "title": "Defining Change: An AI-Driven Revolution in Fraud Technology - rbc.com",
+          "source_url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQcHJJS25XVlFGNENNSl92TVVtRXY0V1ZzR1hyRTRmZE1tTFdNVkp1cDliUFA0MkR1dVZGXzdoaVBaVGxiNU42akZSalFKRjhEOGRjdkVGeXVoVXlaWmxhN2xrRGM5d3V1XzgwZlJ2dGJURG54S1M1MXR2ZnpJWk40N3VqRXo3NVhYTUFBdEdoTFhGR05RcUFMY3hsNHNYX3NpajRFNi1B?oc=5",
+          "source": "rbc.com",
+          "category": "Reported fraud",
+          "source_count": 1,
+          "source_channels": [
+            "historical"
+          ],
+          "amount_text": [],
+          "location": null,
+          "evidence": "unverified_headline",
+          "role": "mentioned_in_headline_only"
+        },
+        {
+          "kind": "headline",
+          "id": "dc47343303cab3ed5ffa",
+          "date": "2024-09-09T07:00:00+00:00",
+          "title": "RBC customers outraged over partial refund after unauthorized withdrawals - Global News",
+          "source_url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOM0phUmF3c21XWVlKSDNQa0w3Q1JaWlNWbXp5NHBVeHRnRV9Ub190RnFZcFR0QUNnem0ta2VBOGQxU25xelZWUzRSWGZRamFPdWpuREloTTBtSjlQSHBmVndBTkFFdnliOUFnVEZ3VlRtcmlwQXg4ZEZMMGFqQUZqZDRncjJPeGZvanQxTU5YR0dNU2Ra?oc=5",
+          "source": "Global News",
+          "category": "Financial crime watch",
+          "source_count": 1,
+          "source_channels": [
+            "historical"
+          ],
+          "amount_text": [],
+          "location": null,
+          "evidence": "unverified_headline",
+          "role": "mentioned_in_headline_only"
+        },
+        {
+          "kind": "headline",
+          "id": "99205de4f6eb55244b21",
+          "date": "2024-07-18T07:00:00+00:00",
+          "title": "Passive income scam falsely linked to Royal Bank of Canada - AFP Fact Check",
+          "source_url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBjbmhpZjMyMVZNNkZGc1NleC04ZjloTmd5aGJVSWxWSFpJa3k4X1d5MjF0NW1WUzdlMEt3QnZPOHJMU3gtLUwtSTE3M1FOV3VZYWY1U1J0UUI?oc=5",
+          "source": "AFP Fact Check",
+          "category": "Scam and victim reports",
+          "source_count": 1,
+          "source_channels": [
+            "historical"
+          ],
+          "amount_text": [],
+          "location": null,
+          "evidence": "unverified_headline",
+          "role": "mentioned_in_headline_only"
+        },
+        {
+          "kind": "headline",
+          "id": "b25fa1598a6d4ae396a9",
+          "date": "2024-01-30T08:00:00+00:00",
+          "title": "RBC customer loses $10,000 after falling victim to bank draft fraud - Global News",
+          "source_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNYWFjXy1IQmRnQks1Q2VJY2hTQ1RnOU5fSjdBTDN5Z3dfU2tsLWVsRGdUZENrdk1VMm43RjhsYllTZUJTZUFqS2RBRl9scnhTVDVtckFXem9NLVI1Y0ZFUHNzdEdKUXFBMzN6ZVhNbUZ4blJPZ3o4b0dpbjlMWFRTTmJIVmMtLUVTdUFjelBZdHB5eWxBUHI1UA?oc=5",
+          "source": "Global News",
+          "category": "Reported fraud",
+          "source_count": 1,
+          "source_channels": [
+            "historical"
+          ],
+          "amount_text": [
+            "$10,000 "
+          ],
+          "location": null,
+          "evidence": "unverified_headline",
+          "role": "mentioned_in_headline_only"
+        },
+        {
+          "kind": "enforcement",
+          "id": "c24844453e55b63bdb6e",
+          "date": "2023-12-05",
+          "event_date": null,
+          "title": "Royal Bank of Canada: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2023-12-05-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty paid",
+          "penalty_cad": 7475000.0,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Impersonation / social engineering",
+          "matching_records": 2,
+          "interpretation": "shared keyword, not established causation"
+        },
+        {
+          "name": "Identity / account takeover",
+          "matching_records": 2,
+          "interpretation": "shared keyword, not established causation"
+        },
+        {
+          "name": "Consumer protection",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        },
+        {
+          "name": "Vulnerable customer harm",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        },
+        {
+          "name": "Investment and crypto scams",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        },
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2026": 4250000.0,
+        "2023": 7475000.0
+      },
+      "recent_activity": "2026-10-15T07:00:00+00:00",
+      "evidence_count_shown": 21
+    },
+    {
+      "id": "scotiabank",
+      "name": "Scotiabank",
+      "aliases": [
+        "Bank of Nova Scotia",
+        "The Bank of Nova Scotia",
+        "Scotiabank"
+      ],
+      "counts": {
+        "enforcement": 0,
+        "incidents": 1,
+        "headlines": 3
+      },
+      "evidence": [
+        {
+          "kind": "incident",
+          "id": "ca-2026-10-10-scotia-credit",
+          "date": "2026-10-10",
+          "event_period": "November 2025 onward",
+          "title": "Ontario customer reports C$35,000 unauthorized credit line",
+          "source_url": "https://money.ca/news/identity-theft-credit-fraud-canada-credit-freeze",
+          "source": "Money.ca (citing CTV News)",
+          "category": "Identity theft / unauthorized credit",
+          "amount_cad": 35000,
+          "amount_type": "unauthorized_credit_exposure",
+          "recovery_status": "Reported fully refunded",
+          "location": "Brampton, Ontario",
+          "evidence": "reported_by_news",
+          "role": "customer_financial_institution"
+        },
+        {
+          "kind": "headline",
+          "id": "ceeeef8044b5fe107845",
+          "date": "2026-04-03T07:00:00+00:00",
+          "title": "Scammer poses as Scotiabank employee in Waterloo fraud - CTV News",
+          "source_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPaWVQblRfRnRqWDdyZHZzN3NtV2Y1aUNBVWlDektRR0l4VTdjZENyUkxSRkdXbzF2UE1vT0l0MDNGbURWRndzR21UajQwWHV6S3R4WU9Ed29jS01vSm9XZHc0UnczR3FZaVo3QXFFWXdXR1puTmF4WndyZUgxV0JUM25MaDBmZEJEdzA3T1JabXlidnNaRS0zWTZScFE?oc=5",
+          "source": "CTV News",
+          "category": "Scam and victim reports",
+          "source_count": 1,
+          "source_channels": [
+            "historical"
+          ],
+          "amount_text": [],
+          "location": null,
+          "evidence": "unverified_headline",
+          "role": "mentioned_in_headline_only"
+        },
+        {
+          "kind": "headline",
+          "id": "851e75e4f8df79ae754e",
+          "date": "2026-03-06T08:00:00+00:00",
+          "title": "Younger Canadians most confident in spotting AI-scams are also most likely to fall for fraud - scotiabank.investorroom.com",
+          "source_url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNQXBGa2tGclg4WEs4RFRXdVh2bTZYaW5QTWNOTl9tZ0dnNkdCUFJmWlV3VmVQRHU1dVpXeDV4VUZJbW5IclRFRHVpZFdabjBfdmpxT0t0M1E4Z3BMWldVVUxYa1V0TnVqRF9PellFVFBVU1JrbWpFYVc4Vnp2WTMtSFdYamFnOHc1RTl3bE9NMEVSckdZcm9CZG4yUWdNbUtYV0pIYlNOR2Z3cVBIYmhjZXUteGZuMXUxeXQ0UjE5LUxZQnB1SnBNbDBLRlZfZjBlbkRMZGV3?oc=5",
+          "source": "scotiabank.investorroom.com",
+          "category": "Scam and victim reports",
+          "source_count": 1,
+          "source_channels": [
+            "historical"
+          ],
+          "amount_text": [],
+          "location": null,
+          "evidence": "unverified_headline",
+          "role": "mentioned_in_headline_only"
+        },
+        {
+          "kind": "headline",
+          "id": "60c0fae446d14e9ba4cf",
+          "date": "2025-06-02T07:00:00+00:00",
+          "title": "Scotiabank holds customer responsible for almost $20K in credit card fraud - Radio-Canada",
+          "source_url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQVnVWQUhxRUVqMXlCQkFKblFmR3dlY3JUWWRPdEc1S3Uyclp5OUxFMTExbEVFZUYzdVBWdG9UQ085OWxuQXJPa25NVU1xNDNtVnVuQUFjOXVaV1V2d043bzVieDM2eVJ0T1dhRmRnaWhuaFp1c19vUWswaTM0WWx6ZjRRbmxvOXFudG5qZ0stb09DVUlNTmVvMURidGg3VV94MHlXS0hxZjByOFNySXFNQWR5S2JEZi0zRl91LVhR?oc=5",
+          "source": "Radio-Canada",
+          "category": "Reported fraud",
+          "source_count": 1,
+          "source_channels": [
+            "historical"
+          ],
+          "amount_text": [
+            "$20K"
+          ],
+          "location": null,
+          "evidence": "unverified_headline",
+          "role": "mentioned_in_headline_only"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Identity / account takeover",
+          "matching_records": 2,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {},
+      "recent_activity": "2026-10-10",
+      "evidence_count_shown": 4
+    },
+    {
+      "id": "bmo",
+      "name": "Bank of Montreal",
+      "aliases": [
+        "Bank of Montreal",
+        "BMO",
+        "BMO Bank of Montreal"
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 2
+      },
+      "evidence": [
+        {
+          "kind": "headline",
+          "id": "17e4a1843792771192c1",
+          "date": "2026-08-12T07:00:00+00:00",
+          "title": "BMO’s auto-pay policy may help limit fraud but could also lead to missed payments, experts warn - The Globe and Mail",
+          "source_url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNMEVQLWhKUWdtamp6NHliVWhnSVpaR0U5TTAzRGdSUlpEYUNxN0ZTSWJCNlJNTDJiMjB5VU9nbGJvQkp0M1BIaE1CRlcwVXU5TUhWd2ZBM0EteXIxWFZVT0taaXV2SE40UUhqRjgtcXJWM2pOSEdMUHN6N1lyZnNWaENXaVJYX3ZMc2U5bmloVUFhRF9EMjhkeWpQLUZEeTBVYWwwLWFnRmotZzA0ZGNOSXVmT216RlpPeHA5dVBLUDA?oc=5",
+          "source": "The Globe and Mail",
+          "category": "Reported fraud",
+          "source_count": 1,
+          "source_channels": [
+            "historical"
+          ],
+          "amount_text": [],
+          "location": null,
+          "evidence": "unverified_headline",
+          "role": "mentioned_in_headline_only"
+        },
+        {
+          "kind": "enforcement",
+          "id": "9c89d3f4902c6763fc21",
+          "date": "2026-02-02",
+          "event_date": "2025-04-22",
+          "title": "Bank of Montreal: FCAC proceeding #4",
+          "source_url": "https://www.canada.ca/en/financial-consumer-agency/services/industry/commissioner-decisions/summary-proceeding-4.html",
+          "source": "FCAC",
+          "category": "Consumer protection enforcement",
+          "status": "penalty paid",
+          "penalty_cad": 4000000.0,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        },
+        {
+          "kind": "headline",
+          "id": "2abe3984badc992a4e48",
+          "date": "2024-04-11T07:00:00+00:00",
+          "title": "140 BMO customers say they lost $1.5M in transfer frauds, plan to sue bank - Radio-Canada",
+          "source_url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOLUVHeHF6cWotS3RDb0pOLW5MdmRwWWxROGpMdVEtazgzRi1BTE5SR0YxWDhyMF85WVhsd1FyaWZKV0xqbkJpMm82c1JHd0ZydmN3eWR2U054ZDNYT0oydGs1UDk4bjFuSEpzUFhKN3RJOHdZTm1ERHExSnNmd1k5RFJfUWUtaXQ1Wlg1Z1ppUlV4UjJOSXhBUElVdHpqS3A5LWNrOUt6YjUxV3FOclJNMWVPWnNsY1NwQl9XbQ?oc=5",
+          "source": "Radio-Canada",
+          "category": "Reported fraud",
+          "source_count": 1,
+          "source_channels": [
+            "historical"
+          ],
+          "amount_text": [
+            "$1.5M"
+          ],
+          "location": null,
+          "evidence": "unverified_headline",
+          "role": "mentioned_in_headline_only"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Consumer protection",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2026": 4000000.0
+      },
+      "recent_activity": "2026-08-12T07:00:00+00:00",
+      "evidence_count_shown": 3
+    },
+    {
+      "id": "cibc",
+      "name": "Canadian Imperial Bank of Commerce",
+      "aliases": [
+        "Canadian Imperial Bank of Commerce",
+        "CIBC"
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 2
+      },
+      "evidence": [
+        {
+          "kind": "headline",
+          "id": "e021eb9455bf679596da",
+          "date": "2025-11-05T08:00:00+00:00",
+          "title": "CIBC, RBC failed to stop $1.7M fraud on B.C. senior - Yahoo! Finance Canada",
+          "source_url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9sQVM2ZUkwX1JJc29hN18wYmZlbVloc0pDclpjRE9EWGFfb1pjTWh6QUxBRkV4N3ZoVmdiMC1sdFViRDlWUzJWSmNTeHpYbVRBNW1OWFZFdkdHcGtqVFV0aGRaOG1TeUNZWHpzbnVtNmtjaHFteWVBU2VjRQ?oc=5",
+          "source": "Yahoo! Finance Canada",
+          "category": "Reported fraud",
+          "source_count": 1,
+          "source_channels": [
+            "historical"
+          ],
+          "amount_text": [
+            "$1.7M"
+          ],
+          "location": null,
+          "evidence": "unverified_headline",
+          "role": "mentioned_in_headline_only"
+        },
+        {
+          "kind": "headline",
+          "id": "619cfcc73a0488e55d50",
+          "date": "2025-10-27T07:00:00+00:00",
+          "title": "RBC and CIBC allow 89-year-old to drain life savings, lose $1.7M to scammers - CBC",
+          "source_url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE13VFFVNG9IUi1GRVZHMmhzRkNqQ1JnM0g3Vl8tVVViQXdPcGx4SzBRbFBmZzlrVGJLNkV1SWg5QW01SHZ0YklqLWhPVS1QbVR6ZFNJSUFiTUFpZFFPVU9oSERYdmRsTlVCMVlzQUtTTGszclUtbFZrbmRvSQ?oc=5",
+          "source": "CBC",
+          "category": "Scam and victim reports",
+          "source_count": 1,
+          "source_channels": [
+            "historical"
+          ],
+          "amount_text": [
+            "$1.7M"
+          ],
+          "location": null,
+          "evidence": "unverified_headline",
+          "role": "mentioned_in_headline_only"
+        },
+        {
+          "kind": "enforcement",
+          "id": "5ad478eba70715744896",
+          "date": "2023-12-07",
+          "event_date": null,
+          "title": "Canadian Imperial Bank of Commerce: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2023-12-07-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty paid",
+          "penalty_cad": 1329150.0,
+          "location": "Toronto, Ontario",
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Vulnerable customer harm",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        },
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2023": 1329150.0
+      },
+      "recent_activity": "2025-11-05T08:00:00+00:00",
+      "evidence_count_shown": 3
+    },
+    {
+      "id": "national-bank",
+      "name": "National Bank of Canada",
+      "aliases": [
+        "National Bank of Canada",
+        "National Bank"
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 2
+      },
+      "evidence": [
+        {
+          "kind": "headline",
+          "id": "ea59d63ad49ac5fd3e5f",
+          "date": "2026-05-22T07:00:00+00:00",
+          "title": "Sardine: National Bank Of Canada Partnership Expands Digital Banking Fraud Prevention Capabilities - Pulse 2.0",
+          "source_url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQSDVzSktaWUFyOGN4TUhveWJKNW91MGppdlFDT1dXV2EzbENYY3NUaXdBOEZnaE5oclRYeU1hejVMMzFxV1hJbUcxY0ZNZTVOQS03WDVCVmp1bXlCYmwyVlNtVzZqNDhHenFJWndnb0NCV3drLTdEY0cxMzl4dWtXQmVrQm9CNHBDN1o3Q1Z5V0l0YUJodFktUGpnQlNjZU9uTVlZcnlVcGJsSm5QWjBMd29jQXZjaFZm0gG-AUFVX3lxTE9hVUdiOWd1d053eEpOTVFMS0FrUnhLREhYWGtwV3pMeTE5UjhlNzY4a1BucG1KUHRLQnpCb0YyUDFTY0hXMjR3SFBkZDJkTUdISTRZNzFPd1dTdnBpUHl2OUJpQ1VITm5idTZZdlRMeW0wLV9ZNWxjOGhGcHluRC0taUc1UWZVV1FxNmVtc1dPS1lpdUVSOEtRV21obXo3RkVYZzJtclBUSThGOHFRdzUxdlVQcWJuVFdub2ppenc?oc=5",
+          "source": "Pulse 2.0",
+          "category": "Reported fraud",
+          "source_count": 1,
+          "source_channels": [
+            "historical"
+          ],
+          "amount_text": [],
+          "location": null,
+          "evidence": "unverified_headline",
+          "role": "mentioned_in_headline_only"
+        },
+        {
+          "kind": "headline",
+          "id": "e27794d5a221e2cd50fd",
+          "date": "2026-05-20T07:00:00+00:00",
+          "title": "National Bank of Canada Partners with Sardine to Strengthen Digital Banking Security and Fraud Operations Efficiency - Business Wire",
+          "source_url": "https://news.google.com/rss/articles/CBMigwJBVV95cUxOLUxlQ053Q1QtSXpKeWExS0RTaGVtZ0M5S3V0TnVjSmZEQ1NJelY4RXBhTmVQWC1sa1VtbzZKc182NjBGVDZjMUxmdER6UnJDRWVoWmF0b1dIQ0VYZ2FJSWdBay13NUNxX2IzeUkxM0JpcTBta1M0OFJGMGZaQ2hEZkVEdFdRMzI5WHkxVks0cDZrc2dqM0RjcnVuUngzZ2E0eWF6bzRiRm1nUjhkVmp4bnZlMWVBZ1FHcF93a0UtLWIwQ3FZTDRkWkRQV1laM0F2OFlsVDlodzFENDFTWmEzc0hiZVMtSVRuTGtVUkhQSUpQNEdNUUhXcnB4ZlNvamFrOTBn?oc=5",
+          "source": "Business Wire",
+          "category": "Reported fraud",
+          "source_count": 1,
+          "source_channels": [
+            "historical"
+          ],
+          "amount_text": [],
+          "location": null,
+          "evidence": "unverified_headline",
+          "role": "mentioned_in_headline_only"
+        },
+        {
+          "kind": "enforcement",
+          "id": "cb11b94adbb62baf02e6",
+          "date": "2023-06-22",
+          "event_date": "2023-04-11",
+          "title": "National Bank of Canada: FCAC proceeding #1",
+          "source_url": "https://www.canada.ca/en/financial-consumer-agency/services/industry/commissioner-decisions/summary-proceeding-1.html",
+          "source": "FCAC",
+          "category": "Consumer protection enforcement",
+          "status": "penalty paid",
+          "penalty_cad": 600000.0,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Consumer protection",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2023": 600000.0
+      },
+      "recent_activity": "2026-05-22T07:00:00+00:00",
+      "evidence_count_shown": 3
+    },
+    {
+      "id": "institution-c78ec1398450",
+      "name": "Your Neighbourhood Credit Union Limited",
+      "aliases": [
+        "Your Neighbourhood Credit Union Limited"
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "c9c7576d2ea5d9d38d49",
+          "date": "2026-09-24",
+          "event_date": null,
+          "title": "Your Neighbourhood Credit Union Limited: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2026-09-24-2-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty paid",
+          "penalty_cad": 16500.0,
+          "location": "Kitchener, Ontario",
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2026": 16500.0
+      },
+      "recent_activity": "2026-09-24",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-5a5fd12e5646",
+      "name": "Caisse populaire acadienne ltée",
+      "aliases": [
+        "Caisse populaire acadienne ltée"
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "721fbd25966d260876cf",
+          "date": "2026-09-24",
+          "event_date": null,
+          "title": "Caisse populaire acadienne ltée: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2026-09-24-4-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty paid",
+          "penalty_cad": 676500.0,
+          "location": "Caraquet, New Brunswick",
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2026": 676500.0
+      },
+      "recent_activity": "2026-09-24",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-ba43d4d366c4",
+      "name": "Caisse populaire Alliance limitée",
+      "aliases": [
+        "Caisse populaire Alliance limitée"
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "6894407eb0fd172ae02c",
+          "date": "2026-09-24",
+          "event_date": null,
+          "title": "Caisse populaire Alliance limitée: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2026-09-24-1-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty paid",
+          "penalty_cad": 82500.0,
+          "location": "North Bay, Ontario",
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2026": 82500.0
+      },
+      "recent_activity": "2026-09-24",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-ecce6603a772",
+      "name": "Pathwise Credit Union",
+      "aliases": [
+        "Pathwise Credit Union"
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "261ecb0cecf0a4ce10b7",
+          "date": "2026-09-24",
+          "event_date": null,
+          "title": "Pathwise Credit Union: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2026-09-24-3-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty paid",
+          "penalty_cad": 41250.0,
+          "location": "Oshawa, Ontario",
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2026": 41250.0
+      },
+      "recent_activity": "2026-09-24",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-7d56c7723223",
+      "name": "The New Brunswick Lotteries and Gaming Corporation",
+      "aliases": [
+        "The New Brunswick Lotteries and Gaming Corporation"
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "9402921c745704e1d8e7",
+          "date": "2026-09-03",
+          "event_date": null,
+          "title": "The New Brunswick Lotteries and Gaming Corporation: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2026-09-03-2-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty paid",
+          "penalty_cad": 399712.5,
+          "location": "Fredericton, New Brunswick",
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2026": 399712.5
+      },
+      "recent_activity": "2026-09-03",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-8ba0559f6c36",
+      "name": "Nova Scotia Gaming Corporation",
+      "aliases": [
+        "Nova Scotia Gaming Corporation"
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "2d5f71e3450b333df4dc",
+          "date": "2026-09-03",
+          "event_date": null,
+          "title": "Nova Scotia Gaming Corporation: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2026-09-03-1-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty paid",
+          "penalty_cad": 231826.0,
+          "location": "Halifax, Nova Scotia",
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2026": 231826.0
+      },
+      "recent_activity": "2026-09-03",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-d44e78620242",
+      "name": "Atlantic Lottery Corporation Inc.",
+      "aliases": [
+        "Atlantic Lottery Corporation Inc."
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "a76f548f709b5f2ec363",
+          "date": "2026-07-09",
+          "event_date": null,
+          "title": "Atlantic Lottery Corporation Inc.: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2026-07-09-1-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty paid",
+          "penalty_cad": 212025.0,
+          "location": "Moncton, New Brunswick",
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2026": 212025.0
+      },
+      "recent_activity": "2026-07-09",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-c2b14bb2ab86",
+      "name": "VIP Realty Inc.",
+      "aliases": [
+        "VIP Realty Inc."
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "a03a6157b979969472ce",
+          "date": "2026-07-09",
+          "event_date": null,
+          "title": "VIP Realty Inc.: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2026-07-09-2-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty paid",
+          "penalty_cad": 33000.0,
+          "location": "Ottawa, Ontario",
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2026": 33000.0
+      },
+      "recent_activity": "2026-07-09",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-99dab8fa3a42",
+      "name": "13010431 Canada Inc.",
+      "aliases": [
+        "13010431 Canada Inc."
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "953249950b694922a103",
+          "date": "2026-05-14",
+          "event_date": null,
+          "title": "13010431 Canada Inc.: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2026-05-14-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty imposed",
+          "penalty_cad": 693742.5,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2026": 693742.5
+      },
+      "recent_activity": "2026-05-14",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "versabank",
+      "name": "VersaBank",
+      "aliases": [
+        "VersaBank"
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "f5336b0e900b4d26f2ee",
+          "date": "2026-05-05",
+          "event_date": null,
+          "title": "VersaBank: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2026-05-05-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty paid",
+          "penalty_cad": 42075.0,
+          "location": "London, Ontario",
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2026": 42075.0
+      },
+      "recent_activity": "2026-05-05",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-001ed84b8005",
+      "name": "RE/MAX Twin City Realty Inc.",
+      "aliases": [
+        "RE/MAX Twin City Realty Inc."
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "d1a4be3fb8e77bc5e5cc",
+          "date": "2026-05-05",
+          "event_date": null,
+          "title": "RE/MAX Twin City Realty Inc.: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2026-05-05-1-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty paid",
+          "penalty_cad": 24750.0,
+          "location": "Kitchener, Ontario",
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2026": 24750.0
+      },
+      "recent_activity": "2026-05-05",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-df5c95e96c99",
+      "name": "Birks Group Inc.",
+      "aliases": [
+        "Birks Group Inc."
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "bb537d2632fbbddf7a5a",
+          "date": "2026-05-05",
+          "event_date": null,
+          "title": "Birks Group Inc.: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2026-05-05-2-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty appealed",
+          "penalty_cad": 51562.5,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2026": 51562.5
+      },
+      "recent_activity": "2026-05-05",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-27e26ff523b1",
+      "name": "Northern Isga Foundation",
+      "aliases": [
+        "Northern Isga Foundation"
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "39c15e05dbc92fddfb6f",
+          "date": "2026-03-26",
+          "event_date": null,
+          "title": "Northern Isga Foundation: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2026-03-26-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty appealed",
+          "penalty_cad": 91162.5,
+          "location": "Glenevis, Alberta",
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2026": 91162.5
+      },
+      "recent_activity": "2026-03-26",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-2b7e2fdb2808",
+      "name": "Manor Windsor Realty Ltd.",
+      "aliases": [
+        "Manor Windsor Realty Ltd."
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "b5a2978b2141570e49b7",
+          "date": "2026-02-12",
+          "event_date": null,
+          "title": "Manor Windsor Realty Ltd.: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2026-02-12-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty appealed",
+          "penalty_cad": 107250.0,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2026": 107250.0
+      },
+      "recent_activity": "2026-02-12",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-34bb22562b30",
+      "name": "Century 21 Heritage Group Ltd.",
+      "aliases": [
+        "Century 21 Heritage Group Ltd."
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "e39b480038f91f39a10a",
+          "date": "2026-02-10",
+          "event_date": null,
+          "title": "Century 21 Heritage Group Ltd.: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2026-02-10-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty appealed",
+          "penalty_cad": 148912.5,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2026": 148912.5
+      },
+      "recent_activity": "2026-02-10",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-4733e8757fab",
+      "name": "Commerciale I.C. - Pacific Inc.",
+      "aliases": [
+        "Commerciale I.C. - Pacific Inc."
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "bef83ef104b2f2d5b948",
+          "date": "2026-02-05",
+          "event_date": null,
+          "title": "Commerciale I.C. - Pacific Inc.: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2026-02-05-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty appealed",
+          "penalty_cad": 224235.0,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2026": 224235.0
+      },
+      "recent_activity": "2026-02-05",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-9cc4579f2501",
+      "name": "TreasureMeta Corporation",
+      "aliases": [
+        "TreasureMeta Corporation"
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "6824b1820b7a8c5c2a9f",
+          "date": "2026-02-05",
+          "event_date": null,
+          "title": "TreasureMeta Corporation: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2026-02-05-1-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty imposed",
+          "penalty_cad": 24750.0,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2026": 24750.0
+      },
+      "recent_activity": "2026-02-05",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-14d387115763",
+      "name": "MP Technology Services Ltd.",
+      "aliases": [
+        "MP Technology Services Ltd."
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "cc3108aefce9aa8a21de",
+          "date": "2025-12-18",
+          "event_date": null,
+          "title": "MP Technology Services Ltd.: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2025-12-18-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty appealed",
+          "penalty_cad": 536853.35,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2025": 536853.35
+      },
+      "recent_activity": "2025-12-18",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-9af187a9ee6e",
+      "name": "Juba Express Inc.",
+      "aliases": [
+        "Juba Express Inc."
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "f0f071604c5c84f06d3c",
+          "date": "2025-12-11",
+          "event_date": null,
+          "title": "Juba Express Inc.: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2025-12-11-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty appealed",
+          "penalty_cad": 67150.0,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2025": 67150.0
+      },
+      "recent_activity": "2025-12-11",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-074c0ee64579",
+      "name": "Griffin Jewellery Designs Inc.",
+      "aliases": [
+        "Griffin Jewellery Designs Inc."
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "e2dae34030f2c6307ee1",
+          "date": "2025-12-04",
+          "event_date": null,
+          "title": "Griffin Jewellery Designs Inc.: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2025-12-04-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty imposed",
+          "penalty_cad": 77137.5,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2025": 77137.5
+      },
+      "recent_activity": "2025-12-04",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-b33a2c6d26af",
+      "name": "2294235 Ontario Inc.",
+      "aliases": [
+        "2294235 Ontario Inc."
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "7f61e426e7d2d004565f",
+          "date": "2025-12-02",
+          "event_date": null,
+          "title": "2294235 Ontario Inc.: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2025-12-02-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty imposed",
+          "penalty_cad": 70537.5,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2025": 70537.5
+      },
+      "recent_activity": "2025-12-02",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-cb79bf373135",
+      "name": "Synergy Credit Union",
+      "aliases": [
+        "Synergy Credit Union"
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "d6ecafcf4f0a3aaef155",
+          "date": "2025-11-27",
+          "event_date": null,
+          "title": "Synergy Credit Union: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2025-11-27-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty paid",
+          "penalty_cad": 214500.0,
+          "location": "Lloydminster, Saskatchewan",
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2025": 214500.0
+      },
+      "recent_activity": "2025-11-27",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-381f7f02e907",
+      "name": "HomeLife New World Realty Inc.",
+      "aliases": [
+        "HomeLife New World Realty Inc."
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "fb3c0d39c4b21b0430f2",
+          "date": "2025-11-20",
+          "event_date": null,
+          "title": "HomeLife New World Realty Inc.: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2025-11-20-4-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty paid",
+          "penalty_cad": 36135.0,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2025": 36135.0
+      },
+      "recent_activity": "2025-11-20",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-e8ef80c297c0",
+      "name": "Houston & Associates Realty Ltd.",
+      "aliases": [
+        "Houston & Associates Realty Ltd."
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "bce41896432d50853bb0",
+          "date": "2025-11-20",
+          "event_date": null,
+          "title": "Houston & Associates Realty Ltd.: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2025-11-20-5-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty appealed",
+          "penalty_cad": 117975.0,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2025": 117975.0
+      },
+      "recent_activity": "2025-11-20",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-5492bd4bffdb",
+      "name": "9321-0599 Québec Inc.",
+      "aliases": [
+        "9321-0599 Québec Inc."
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "9c3369d6a822247460a1",
+          "date": "2025-11-20",
+          "event_date": null,
+          "title": "9321-0599 Québec Inc.: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2025-11-20-1-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty appealed",
+          "penalty_cad": 23100.0,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2025": 23100.0
+      },
+      "recent_activity": "2025-11-20",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-faabd9cc0cfb",
+      "name": "Pacesetter Marketing Ltd.",
+      "aliases": [
+        "Pacesetter Marketing Ltd."
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "99e12fedad00746f5d8a",
+          "date": "2025-11-20",
+          "event_date": null,
+          "title": "Pacesetter Marketing Ltd.: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2025-11-20-2-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty imposed",
+          "penalty_cad": 41085.0,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2025": 41085.0
+      },
+      "recent_activity": "2025-11-20",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-81e05f502d16",
+      "name": "1135233 B.C. Ltd.",
+      "aliases": [
+        "1135233 B.C. Ltd."
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "488e615e8af0be88beb0",
+          "date": "2025-11-20",
+          "event_date": null,
+          "title": "1135233 B.C. Ltd.: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2025-11-20-3-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty imposed",
+          "penalty_cad": 149886.0,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2025": 149886.0
+      },
+      "recent_activity": "2025-11-20",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-626f30d603c9",
+      "name": "Xeltox Enterprises Ltd.",
+      "aliases": [
+        "Xeltox Enterprises Ltd."
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "e83f4ba8f701a964bba7",
+          "date": "2025-10-22",
+          "event_date": null,
+          "title": "Xeltox Enterprises Ltd.: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2025-10-22-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty appealed",
+          "penalty_cad": 176960190.0,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2025": 176960190.0
+      },
+      "recent_activity": "2025-10-22",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "first-nations-bank",
+      "name": "First Nations Bank of Canada",
+      "aliases": [
+        "First Nations Bank of Canada"
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "cabdee67c6ce68920de9",
+          "date": "2025-10-16",
+          "event_date": null,
+          "title": "First Nations Bank of Canada: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2025-10-16-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty paid",
+          "penalty_cad": 601139.8,
+          "location": "Saskatoon, Saskatchewan",
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2025": 601139.8
+      },
+      "recent_activity": "2025-10-16",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-b55629bf8506",
+      "name": "DMCL Chartered Professional Accountants",
+      "aliases": [
+        "DMCL Chartered Professional Accountants"
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "108d30dcba8f51673f07",
+          "date": "2025-10-09",
+          "event_date": null,
+          "title": "DMCL Chartered Professional Accountants: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2025-10-09-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty paid",
+          "penalty_cad": 72750.0,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2025": 72750.0
+      },
+      "recent_activity": "2025-10-09",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-3c24813dc274",
+      "name": "HRA Group Holdings",
+      "aliases": [
+        "HRA Group Holdings"
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "f3e72b89412b2e013b19",
+          "date": "2025-10-02",
+          "event_date": null,
+          "title": "HRA Group Holdings: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2025-10-02-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty paid",
+          "penalty_cad": 132000.0,
+          "location": "Vancouver, British Columbia",
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2025": 132000.0
+      },
+      "recent_activity": "2025-10-02",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-ecbe1bc2bef0",
+      "name": "Peken Global Limited",
+      "aliases": [
+        "Peken Global Limited"
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "d9348530766a1ac3a15e",
+          "date": "2025-09-25",
+          "event_date": null,
+          "title": "Peken Global Limited: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2025-09-25-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty appealed",
+          "penalty_cad": 19552000.0,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2025": 19552000.0
+      },
+      "recent_activity": "2025-09-25",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-e2fe2e30bc6f",
+      "name": "Spence Diamonds Ltd.",
+      "aliases": [
+        "Spence Diamonds Ltd."
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "9632ccc069d742609c97",
+          "date": "2025-09-23",
+          "event_date": null,
+          "title": "Spence Diamonds Ltd.: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2025-09-23-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty imposed",
+          "penalty_cad": 264000.0,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2025": 264000.0
+      },
+      "recent_activity": "2025-09-23",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-c4de0f2ced7e",
+      "name": "Primary Capital Inc.",
+      "aliases": [
+        "Primary Capital Inc."
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "f750b990e2f6dc31325b",
+          "date": "2025-09-18",
+          "event_date": null,
+          "title": "Primary Capital Inc.: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2025-09-18-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty paid",
+          "penalty_cad": 93390.0,
+          "location": "Toronto, Ontario",
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2025": 93390.0
+      },
+      "recent_activity": "2025-09-18",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-b5855f707876",
+      "name": "Saskatchewan Indian Gaming Authority",
+      "aliases": [
+        "Saskatchewan Indian Gaming Authority"
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "9acd26fe8a5272a360de",
+          "date": "2025-09-12",
+          "event_date": null,
+          "title": "Saskatchewan Indian Gaming Authority: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2025-09-12-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty appealed",
+          "penalty_cad": 1175000.0,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2025": 1175000.0
+      },
+      "recent_activity": "2025-09-12",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-8d67e543531f",
+      "name": "Canadian National Exhibition Association",
+      "aliases": [
+        "Canadian National Exhibition Association"
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "d13a858d5987280e28f4",
+          "date": "2025-09-04",
+          "event_date": null,
+          "title": "Canadian National Exhibition Association: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2025-09-04-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty appealed",
+          "penalty_cad": 199000.0,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2025": 199000.0
+      },
+      "recent_activity": "2025-09-04",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-252d32e0edf9",
+      "name": "British Columbia Lottery Corporation",
+      "aliases": [
+        "British Columbia Lottery Corporation"
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "2b988215b2d7c1fd88af",
+          "date": "2025-08-28",
+          "event_date": null,
+          "title": "British Columbia Lottery Corporation: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2025-08-28-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty appealed",
+          "penalty_cad": 1075000.0,
+          "location": "Kamloops, British Columbia",
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2025": 1075000.0
+      },
+      "recent_activity": "2025-08-28",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-a2baf6e5ec6d",
+      "name": "Canaccord Genuity Corp.",
+      "aliases": [
+        "Canaccord Genuity Corp."
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "d438ec281725319bfa8b",
+          "date": "2025-07-03",
+          "event_date": null,
+          "title": "Canaccord Genuity Corp.: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2025-07-03-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty paid",
+          "penalty_cad": 544500.0,
+          "location": "Vancouver, British Columbia",
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2025": 544500.0
+      },
+      "recent_activity": "2025-07-03",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-914539128de2",
+      "name": "Hub Capital Inc.",
+      "aliases": [
+        "Hub Capital Inc."
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "e8a7d563c147c7134e3c",
+          "date": "2025-06-12",
+          "event_date": null,
+          "title": "Hub Capital Inc.: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2025-06-12-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty paid",
+          "penalty_cad": 99000.0,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2025": 99000.0
+      },
+      "recent_activity": "2025-06-12",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-caa3dafa5f94",
+      "name": "Cambrian Credit Union",
+      "aliases": [
+        "Cambrian Credit Union"
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "84531ff08eab165a3b23",
+          "date": "2025-06-10",
+          "event_date": null,
+          "title": "Cambrian Credit Union: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2025-06-10-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty paid",
+          "penalty_cad": 116160.0,
+          "location": "Winnipeg, Manitoba",
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2025": 116160.0
+      },
+      "recent_activity": "2025-06-10",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-44815ab111f6",
+      "name": "Crystal Currency Exchange Inc.",
+      "aliases": [
+        "Crystal Currency Exchange Inc."
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "c3dc2244f3d5555bf26c",
+          "date": "2025-05-29",
+          "event_date": null,
+          "title": "Crystal Currency Exchange Inc.: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2025-05-29-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty appealed",
+          "penalty_cad": 348067.5,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2025": 348067.5
+      },
+      "recent_activity": "2025-05-29",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-8d01e8e81f23",
+      "name": "Marouf Management Inc.",
+      "aliases": [
+        "Marouf Management Inc."
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "276c033ba92cd3618c5d",
+          "date": "2025-05-13",
+          "event_date": null,
+          "title": "Marouf Management Inc.: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2025-05-13-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty appealed",
+          "penalty_cad": 249480.5,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2025": 249480.5
+      },
+      "recent_activity": "2025-05-13",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-dcd46324de8a",
+      "name": "Immeubles Village Pointe-Claire Inc.",
+      "aliases": [
+        "Immeubles Village Pointe-Claire Inc."
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "1573530ff7637f146f48",
+          "date": "2025-05-06",
+          "event_date": null,
+          "title": "Immeubles Village Pointe-Claire Inc.: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2025-05-06-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty imposed",
+          "penalty_cad": 36360.0,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2025": 36360.0
+      },
+      "recent_activity": "2025-05-06",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-e9635c876180",
+      "name": "Immeubles Jack Sera, Inc.",
+      "aliases": [
+        "Immeubles Jack Sera, Inc."
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "dca2ffe4615cd9fea6c1",
+          "date": "2025-05-01",
+          "event_date": null,
+          "title": "Immeubles Jack Sera, Inc.: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2025-05-01-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty appealed",
+          "penalty_cad": 107250.0,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2025": 107250.0
+      },
+      "recent_activity": "2025-05-01",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-180dc866fec9",
+      "name": "MSBG International Holdings Ltd.",
+      "aliases": [
+        "MSBG International Holdings Ltd."
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "686970d4bb0846dcbac8",
+          "date": "2025-02-25",
+          "event_date": null,
+          "title": "MSBG International Holdings Ltd.: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2025-02-25-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty paid",
+          "penalty_cad": 24750.0,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2025": 24750.0
+      },
+      "recent_activity": "2025-02-25",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-a0d1c06a8289",
+      "name": "Argosy Securities Inc.",
+      "aliases": [
+        "Argosy Securities Inc."
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "b2303130a7525f971036",
+          "date": "2025-02-13",
+          "event_date": null,
+          "title": "Argosy Securities Inc.: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2025-02-13-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty paid",
+          "penalty_cad": 66000.0,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2025": 66000.0
+      },
+      "recent_activity": "2025-02-13",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-58fe18c0f955",
+      "name": "2147353 Ontario Inc.",
+      "aliases": [
+        "2147353 Ontario Inc."
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "ed0cd7f3be24ba714f5d",
+          "date": "2025-02-06",
+          "event_date": null,
+          "title": "2147353 Ontario Inc.: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2025-02-06-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty imposed",
+          "penalty_cad": 33000.0,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2025": 33000.0
+      },
+      "recent_activity": "2025-02-06",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-cf92dc1a791c",
+      "name": "Exchange Bank of Canada",
+      "aliases": [
+        "Exchange Bank of Canada"
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "f696180d1c1da078df40",
+          "date": "2024-12-11",
+          "event_date": null,
+          "title": "Exchange Bank of Canada: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2024-12-11-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty imposed",
+          "penalty_cad": 2457750.0,
+          "location": "Toronto, Ontario",
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2024": 2457750.0
+      },
+      "recent_activity": "2024-12-11",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-68ff2d8b6793",
+      "name": "1121920 B.C. Ltd",
+      "aliases": [
+        "1121920 B.C. Ltd"
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "0c3e01f3df25b62f134b",
+          "date": "2024-11-28",
+          "event_date": null,
+          "title": "1121920 B.C. Ltd: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2024-11-28-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty appealed",
+          "penalty_cad": 229350.0,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2024": 229350.0
+      },
+      "recent_activity": "2024-11-28",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-94aad5fcf5f1",
+      "name": "Jones Lang Lasalle Real Estate Services, Inc.",
+      "aliases": [
+        "Jones Lang Lasalle Real Estate Services, Inc."
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "a09d36a0dd1f3b802a0f",
+          "date": "2024-10-29",
+          "event_date": null,
+          "title": "Jones Lang Lasalle Real Estate Services, Inc.: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2024-10-29-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty paid",
+          "penalty_cad": 107827.5,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2024": 107827.5
+      },
+      "recent_activity": "2024-10-29",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-8c2baf14ee1b",
+      "name": "1000085532 Ontario Inc.",
+      "aliases": [
+        "1000085532 Ontario Inc."
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "1b4f12fa2dcc0e82163e",
+          "date": "2024-09-24",
+          "event_date": null,
+          "title": "1000085532 Ontario Inc.: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2024-09-24-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty paid",
+          "penalty_cad": 57750.0,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2024": 57750.0
+      },
+      "recent_activity": "2024-09-24",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-e24a9688fb93",
+      "name": "Coinseason Capital Inc.",
+      "aliases": [
+        "Coinseason Capital Inc."
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "7c6c24e8c919a3d9e456",
+          "date": "2024-09-19",
+          "event_date": null,
+          "title": "Coinseason Capital Inc.: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2024-09-19-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty paid",
+          "penalty_cad": 33000.0,
+          "location": "Richmond, British Columbia",
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2024": 33000.0
+      },
+      "recent_activity": "2024-09-19",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-5c172720e364",
+      "name": "Canada Changjiang Management Ltd.",
+      "aliases": [
+        "Canada Changjiang Management Ltd."
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "4d3cafe5295644ed7a5b",
+          "date": "2024-09-12",
+          "event_date": null,
+          "title": "Canada Changjiang Management Ltd.: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2024-09-12-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty paid",
+          "penalty_cad": 315282.0,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2024": 315282.0
+      },
+      "recent_activity": "2024-09-12",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-0e233c0888a7",
+      "name": "Gestion de Patrimoine Blue Bridge Inc.",
+      "aliases": [
+        "Gestion de Patrimoine Blue Bridge Inc."
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "7fd881f7889daac4f3c4",
+          "date": "2024-07-31",
+          "event_date": null,
+          "title": "Gestion de Patrimoine Blue Bridge Inc.: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2024-07-31-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty paid",
+          "penalty_cad": 49500.0,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2024": 49500.0
+      },
+      "recent_activity": "2024-07-31",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-1591f23d824a",
+      "name": "Masters Realty (2000) Ltd.",
+      "aliases": [
+        "Masters Realty (2000) Ltd."
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "6560881cf9a8aef34e30",
+          "date": "2024-07-16",
+          "event_date": null,
+          "title": "Masters Realty (2000) Ltd.: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2024-07-16-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty paid",
+          "penalty_cad": 83655.0,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2024": 83655.0
+      },
+      "recent_activity": "2024-07-16",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-e5b85aac2857",
+      "name": "Metna General Trading Inc.",
+      "aliases": [
+        "Metna General Trading Inc."
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "6b52b049b1dc02f3ad20",
+          "date": "2024-07-11",
+          "event_date": null,
+          "title": "Metna General Trading Inc.: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2024-07-11-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty imposed",
+          "penalty_cad": 252285.0,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2024": 252285.0
+      },
+      "recent_activity": "2024-07-11",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-0c198ef3444e",
+      "name": "Binance Holdings Limited",
+      "aliases": [
+        "Binance Holdings Limited"
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "99393fab1d720acfa37e",
+          "date": "2024-05-09",
+          "event_date": null,
+          "title": "Binance Holdings Limited: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2024-05-09-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty appealed",
+          "penalty_cad": 6002000.0,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2024": 6002000.0
+      },
+      "recent_activity": "2024-05-09",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-d672b0ec0b11",
+      "name": "Global West Realty Limited",
+      "aliases": [
+        "Global West Realty Limited"
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "82094132b575a836f22e",
+          "date": "2024-01-17",
+          "event_date": null,
+          "title": "Global West Realty Limited: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2024-01-17-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty appealed",
+          "penalty_cad": 132000.0,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2024": 132000.0
+      },
+      "recent_activity": "2024-01-17",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-a5e308fb5ede",
+      "name": "Austin Jewellers (General partnership: Frank Suppanz and Lisa Suppanz, partners)",
+      "aliases": [
+        "Austin Jewellers (General partnership: Frank Suppanz and Lisa Suppanz, partners)"
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "344eb645e691906cf915",
+          "date": "2023-10-31",
+          "event_date": null,
+          "title": "Austin Jewellers (General partnership: Frank Suppanz and Lisa Suppanz, partners): FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2023-10-31-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty appealed",
+          "penalty_cad": 66000.0,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2023": 66000.0
+      },
+      "recent_activity": "2023-10-31",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-abd8d889b1b8",
+      "name": "Norwich Real Estate Services Inc.",
+      "aliases": [
+        "Norwich Real Estate Services Inc."
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "f7e8394c7927b11bf04b",
+          "date": "2023-10-27",
+          "event_date": null,
+          "title": "Norwich Real Estate Services Inc.: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2023-10-27-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty appealed",
+          "penalty_cad": 156750.0,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2023": 156750.0
+      },
+      "recent_activity": "2023-10-27",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-c16a00b1dcd7",
+      "name": "857132 Ontario Limited",
+      "aliases": [
+        "857132 Ontario Limited"
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "a4a9fddeb9055318d1a5",
+          "date": "2023-08-24",
+          "event_date": null,
+          "title": "857132 Ontario Limited: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2023-08-24-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty imposed",
+          "penalty_cad": 99314.0,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2023": 99314.0
+      },
+      "recent_activity": "2023-08-24",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-c36bae75d5c5",
+      "name": "Deshi Foreign Exchange Inc.",
+      "aliases": [
+        "Deshi Foreign Exchange Inc."
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "75f1362bb60cd5fa0356",
+          "date": "2023-08-17",
+          "event_date": null,
+          "title": "Deshi Foreign Exchange Inc.: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2023-08-17-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty imposed",
+          "penalty_cad": 33000.0,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2023": 33000.0
+      },
+      "recent_activity": "2023-08-17",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-5de325700370",
+      "name": "The Centre Pacific Project Marketing Corp.",
+      "aliases": [
+        "The Centre Pacific Project Marketing Corp."
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "ee2e3e028a50ba6759f2",
+          "date": "2023-08-10",
+          "event_date": null,
+          "title": "The Centre Pacific Project Marketing Corp.: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2023-08-10-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty imposed",
+          "penalty_cad": 57915.0,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2023": 57915.0
+      },
+      "recent_activity": "2023-08-10",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-6c6384694941",
+      "name": "Niavaran Canada Inc.",
+      "aliases": [
+        "Niavaran Canada Inc."
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "e6782997e9c1cd403306",
+          "date": "2023-05-24",
+          "event_date": null,
+          "title": "Niavaran Canada Inc.: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2023-05-24-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty imposed",
+          "penalty_cad": 57255.0,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2023": 57255.0
+      },
+      "recent_activity": "2023-05-24",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-b0a62d0e6e70",
+      "name": "Vision Bank Ltd.",
+      "aliases": [
+        "Vision Bank Ltd."
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "4d86180bc771f3cd3619",
+          "date": "2023-03-24",
+          "event_date": null,
+          "title": "Vision Bank Ltd.: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2023-03-24-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty imposed",
+          "penalty_cad": 33000.0,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2023": 33000.0
+      },
+      "recent_activity": "2023-03-24",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-ab2f7a773a57",
+      "name": "Wealth One Bank of Canada",
+      "aliases": [
+        "Wealth One Bank of Canada"
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "07d366ecdd06ecb38ba8",
+          "date": "2023-03-06",
+          "event_date": null,
+          "title": "Wealth One Bank of Canada: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2023-03-06-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty paid",
+          "penalty_cad": 676500.0,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2023": 676500.0
+      },
+      "recent_activity": "2023-03-06",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-ab4506ecba99",
+      "name": "Cathay Pacific Realty Ltd.",
+      "aliases": [
+        "Cathay Pacific Realty Ltd."
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "156b58f873c4cc3da45c",
+          "date": "2022-10-18",
+          "event_date": null,
+          "title": "Cathay Pacific Realty Ltd.: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2022-10-18-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty appealed",
+          "penalty_cad": 206250.0,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2022": 206250.0
+      },
+      "recent_activity": "2022-10-18",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-1f3d0e5ebc70",
+      "name": "LaBoutique Realty Ltd.",
+      "aliases": [
+        "LaBoutique Realty Ltd."
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "c4f8cefbd017870f792c",
+          "date": "2022-10-13",
+          "event_date": null,
+          "title": "LaBoutique Realty Ltd.: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2022-10-13-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty appealed",
+          "penalty_cad": 275385.0,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2022": 275385.0
+      },
+      "recent_activity": "2022-10-13",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-cb1334748129",
+      "name": "Pan Pacific Platinum Real Estate Services Inc.",
+      "aliases": [
+        "Pan Pacific Platinum Real Estate Services Inc."
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "a6ba99f407015665edd9",
+          "date": "2022-10-06",
+          "event_date": null,
+          "title": "Pan Pacific Platinum Real Estate Services Inc.: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2022-10-06-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty appealed",
+          "penalty_cad": 282397.5,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2022": 282397.5
+      },
+      "recent_activity": "2022-10-06",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-129e18b44bd9",
+      "name": "Cheetah Consulting Ltd.",
+      "aliases": [
+        "Cheetah Consulting Ltd."
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "091871d4dbd1b69a0334",
+          "date": "2022-08-16",
+          "event_date": null,
+          "title": "Cheetah Consulting Ltd.: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2022-08-16-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty imposed",
+          "penalty_cad": 33000.0,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2022": 33000.0
+      },
+      "recent_activity": "2022-08-16",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-3cd1b2ff3c9e",
+      "name": "Thanh Hung Truong",
+      "aliases": [
+        "Thanh Hung Truong"
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "758941499214da1ba5c9",
+          "date": "2022-07-21",
+          "event_date": null,
+          "title": "Thanh Hung Truong: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2022-07-21-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty imposed",
+          "penalty_cad": 41250.0,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2022": 41250.0
+      },
+      "recent_activity": "2022-07-21",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-7f0d5dc3351e",
+      "name": "Nu Stream Realty Inc.",
+      "aliases": [
+        "Nu Stream Realty Inc."
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "317372022b8311230ca0",
+          "date": "2022-07-12",
+          "event_date": null,
+          "title": "Nu Stream Realty Inc.: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2022-07-12-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty imposed",
+          "penalty_cad": 230423.0,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2022": 230423.0
+      },
+      "recent_activity": "2022-07-12",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-7bf8c5c41ce6",
+      "name": "Sokhom Ung",
+      "aliases": [
+        "Sokhom Ung"
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "62e899eb784260c5b4ed",
+          "date": "2022-06-23",
+          "event_date": null,
+          "title": "Sokhom Ung: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2022-06-23-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty appealed",
+          "penalty_cad": 33000.0,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2022": 33000.0
+      },
+      "recent_activity": "2022-06-23",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-f14e5897d74c",
+      "name": "Montecristo Jewellers Inc.",
+      "aliases": [
+        "Montecristo Jewellers Inc."
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "20908e6095dc07ea95b7",
+          "date": "2022-05-12",
+          "event_date": null,
+          "title": "Montecristo Jewellers Inc.: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2022-05-12-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty appealed",
+          "penalty_cad": 222750.0,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2022": 222750.0
+      },
+      "recent_activity": "2022-05-12",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-fbccb51ef734",
+      "name": "9293-0809 Québec Inc.",
+      "aliases": [
+        "9293-0809 Québec Inc."
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "e9ed67cb1caa0219b24a",
+          "date": "2022-05-10",
+          "event_date": null,
+          "title": "9293-0809 Québec Inc.: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2022-05-10-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty appealed",
+          "penalty_cad": 101227.0,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2022": 101227.0
+      },
+      "recent_activity": "2022-05-10",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "laurentian",
+      "name": "Laurentian Bank of Canada",
+      "aliases": [
+        "Laurentian Bank of Canada",
+        "Laurentian Bank"
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "d9756095be19cf9f5207",
+          "date": "2022-04-29",
+          "event_date": null,
+          "title": "Laurentian Bank of Canada: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2022-04-29-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty paid",
+          "penalty_cad": 486750.0,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2022": 486750.0
+      },
+      "recent_activity": "2022-04-29",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-aae10b2500d7",
+      "name": "Forest Hill Real Estate Inc.",
+      "aliases": [
+        "Forest Hill Real Estate Inc."
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "42ee3cd79e63ff97f68b",
+          "date": "2022-03-22",
+          "event_date": null,
+          "title": "Forest Hill Real Estate Inc.: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2022-03-22-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty imposed",
+          "penalty_cad": 22770.0,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2022": 22770.0
+      },
+      "recent_activity": "2022-03-22",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-5dbaddfa5ff8",
+      "name": "Taiwanese Canadian Toronto Credit Union Limited",
+      "aliases": [
+        "Taiwanese Canadian Toronto Credit Union Limited"
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "7ce11b330f634e7f7855",
+          "date": "2022-03-15",
+          "event_date": null,
+          "title": "Taiwanese Canadian Toronto Credit Union Limited: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2022-03-15-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty imposed",
+          "penalty_cad": null,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {},
+      "recent_activity": "2022-03-15",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-5631f4313bf0",
+      "name": "Sino Financial Ltd",
+      "aliases": [
+        "Sino Financial Ltd"
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "5146376bd5cd12f02666",
+          "date": "2022-03-03",
+          "event_date": null,
+          "title": "Sino Financial Ltd: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2022-03-03-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty imposed",
+          "penalty_cad": 33000.0,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2022": 33000.0
+      },
+      "recent_activity": "2022-03-03",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-ef1e82159114",
+      "name": "Libro Credit Union Limited",
+      "aliases": [
+        "Libro Credit Union Limited"
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "3b1503f14a247a0e7666",
+          "date": "2022-01-13",
+          "event_date": null,
+          "title": "Libro Credit Union Limited: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2022-01-13-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty imposed",
+          "penalty_cad": 156750.0,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2022": 156750.0
+      },
+      "recent_activity": "2022-01-13",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-fb8dd445f937",
+      "name": "Industrial and Commercial Bank of China (Canada)",
+      "aliases": [
+        "Industrial and Commercial Bank of China (Canada)"
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "a13d66a58e7f069ecc72",
+          "date": "2021-12-23",
+          "event_date": null,
+          "title": "Industrial and Commercial Bank of China (Canada): FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2021-12-23-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty paid",
+          "penalty_cad": 701250.0,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2021": 701250.0
+      },
+      "recent_activity": "2021-12-23",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-d02e7114618f",
+      "name": "Pacific Place – Arc Realty Ltd.",
+      "aliases": [
+        "Pacific Place – Arc Realty Ltd."
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "03119cbfc28b45bc4232",
+          "date": "2021-11-04",
+          "event_date": null,
+          "title": "Pacific Place – Arc Realty Ltd.: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2021-11-04-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty imposed",
+          "penalty_cad": 255750.0,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2021": 255750.0
+      },
+      "recent_activity": "2021-11-04",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-f750347443ba",
+      "name": "Les Immeubles Diamant Diamant Inc.",
+      "aliases": [
+        "Les Immeubles Diamant Diamant Inc."
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "322434232ca2c13c9b00",
+          "date": "2021-06-25",
+          "event_date": null,
+          "title": "Les Immeubles Diamant Diamant Inc.: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2021-06-25-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty imposed",
+          "penalty_cad": null,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {},
+      "recent_activity": "2021-06-25",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-da4b3d2e5ded",
+      "name": "HomeLife Glenayre Realty Chilliwack Ltd.",
+      "aliases": [
+        "HomeLife Glenayre Realty Chilliwack Ltd."
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "7e5a1a2db65d68765be7",
+          "date": "2021-06-11",
+          "event_date": null,
+          "title": "HomeLife Glenayre Realty Chilliwack Ltd.: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2021-06-11-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty imposed",
+          "penalty_cad": 59235.0,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2021": 59235.0
+      },
+      "recent_activity": "2021-06-11",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-84a17f5edaf0",
+      "name": "Magasin Château D'Ivoire Inc.",
+      "aliases": [
+        "Magasin Château D'Ivoire Inc."
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "19dc9c3500cb231875fc",
+          "date": "2021-05-19",
+          "event_date": null,
+          "title": "Magasin Château D'Ivoire Inc.: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2021-05-19-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty appealed",
+          "penalty_cad": 206910.0,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2021": 206910.0
+      },
+      "recent_activity": "2021-05-19",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-cb5069322c9a",
+      "name": "Park Georgia Realty Ltd.",
+      "aliases": [
+        "Park Georgia Realty Ltd."
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "438e9a10aae5db2d8fdd",
+          "date": "2021-03-22",
+          "event_date": null,
+          "title": "Park Georgia Realty Ltd.: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2021-03-22-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty imposed",
+          "penalty_cad": null,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {},
+      "recent_activity": "2021-03-22",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-b0af472f46b1",
+      "name": "RE/MAX All-Stars Realty Inc.",
+      "aliases": [
+        "RE/MAX All-Stars Realty Inc."
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "3c6e22814895820cacf8",
+          "date": "2021-03-18",
+          "event_date": null,
+          "title": "RE/MAX All-Stars Realty Inc.: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2021-03-18-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty appealed",
+          "penalty_cad": 31350.0,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2021": 31350.0
+      },
+      "recent_activity": "2021-03-18",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-5ba9558e9144",
+      "name": "C&Z Holdings Ltd.",
+      "aliases": [
+        "C&Z Holdings Ltd."
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "35e932c0bd80c54ba69c",
+          "date": "2021-03-04",
+          "event_date": null,
+          "title": "C&Z Holdings Ltd.: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2021-03-04-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty imposed",
+          "penalty_cad": 101969.0,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2021": 101969.0
+      },
+      "recent_activity": "2021-03-04",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-aabdd248c5e7",
+      "name": "9197-9195 Québec Inc.",
+      "aliases": [
+        "9197-9195 Québec Inc."
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "d82835193a28ec146088",
+          "date": "2020-11-13",
+          "event_date": null,
+          "title": "9197-9195 Québec Inc.: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2020-11-13-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty imposed",
+          "penalty_cad": 206250.0,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2020": 206250.0
+      },
+      "recent_activity": "2020-11-13",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "institution-cdbfae0f120b",
+      "name": "Loto-Québec",
+      "aliases": [
+        "Loto-Québec"
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "e02823edf0da4a006416",
+          "date": "2020-11-06",
+          "event_date": null,
+          "title": "Loto-Québec: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2020-11-06-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty imposed",
+          "penalty_cad": 147015.0,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2020": 147015.0
+      },
+      "recent_activity": "2020-11-06",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "tangerine",
+      "name": "Tangerine Bank",
+      "aliases": [
+        "Tangerine Bank",
+        "Tangerine"
+      ],
+      "counts": {
+        "enforcement": 0,
+        "incidents": 1,
+        "headlines": 0
+      },
+      "evidence": [
+        {
+          "kind": "incident",
+          "id": "ca-2026-10-23-tangerine-courier-scam",
+          "date": "2026-10-23",
+          "event_period": "Spring 2026",
+          "title": "Tangerine customer reports C$7,200 courier bank-impersonation scam",
+          "source_url": "https://todayincanada.ca/same-scam-2-countries-why-canadians-dont-get-their-money-back/",
+          "source": "CBC Marketplace story (reproduced by Today in Canada)",
+          "category": "Bank impersonation / debit card collection scam",
+          "amount_cad": 7200,
+          "amount_type": "victim_reported_loss",
+          "recovery_status": "Customer reported a partial settlement, without full reimbursement",
+          "location": "Toronto, Ontario",
+          "evidence": "reported_by_news",
+          "role": "customer_financial_institution"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Impersonation / social engineering",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {},
+      "recent_activity": "2026-10-23",
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "desjardins",
+      "name": "Desjardins",
+      "aliases": [
+        "Desjardins Group",
+        "Desjardins",
+        "Fédération des caisses Desjardins du Québec"
+      ],
+      "counts": {
+        "enforcement": 0,
+        "incidents": 0,
+        "headlines": 3
+      },
+      "evidence": [
+        {
+          "kind": "headline",
+          "id": "f6e1e8bd1681feb2f76f",
+          "date": "2024-06-12T07:00:00+00:00",
+          "title": "Quebec police arrest three in $8.9-million fraud, data theft case involving Desjardins - The Globe and Mail",
+          "source_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPRENDaXlLZlp6MzJ0WEExMEVuUDVDajg3dDBKcVFWMFhza1BCaWlnYjVQRDgwZVJqZDdxVXBOXzBXZkNmS3BzMFBNX2ZnbzVPSUVLbW1yTGZFQ0FiZVFRQklfRkRxQjFLVExXZ3h3SDRZVFlJS3NCX3YxakVnMEpXSXBYdmNaazVrSEhqalQtcEI1ZEY4aWRUNnJNZXNQSXZ0UUFqZWU0NDdWZzRiSHZj?oc=5",
+          "source": "The Globe and Mail",
+          "category": "Reported fraud",
+          "source_count": 1,
+          "source_channels": [
+            "historical"
+          ],
+          "amount_text": [
+            "$8.9"
+          ],
+          "location": null,
+          "evidence": "unverified_headline",
+          "role": "mentioned_in_headline_only"
+        },
+        {
+          "kind": "headline",
+          "id": "3e7517d913f52dffdd33",
+          "date": "2024-06-12T07:00:00+00:00",
+          "title": "Police arrest 3 in connection with massive Desjardins data breach - CBC",
+          "source_url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOSVcxd0UzSVhsSmVBNmtSdkhJbjIwa1owZ1g1eThqU25VOGhtUVpSYkI2aUotdG9ILTh4dWp6LWN5Q3E0MklHM2xQRmtTX3NKV1ZBbFdzaFJOS0o2YnA4bUFQOHBiZWJEaEZzNWlNZUNoX1dsUUNncmEwOHcxY1EzTWtJT3BBT0U?oc=5",
+          "source": "CBC",
+          "category": "Cyber and account compromise",
+          "source_count": 1,
+          "source_channels": [
+            "historical"
+          ],
+          "amount_text": [],
+          "location": null,
+          "evidence": "unverified_headline",
+          "role": "mentioned_in_headline_only"
+        },
+        {
+          "kind": "headline",
+          "id": "567de2ef90ef00d03b4a",
+          "date": "2024-06-12T07:00:00+00:00",
+          "title": "Desjardins data breach: Laval police arrest 3 suspects, fourth one being sought - CTV News",
+          "source_url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNdVdzbENWVlJia2lPc2dJQXUtRmVCakIzY0UzYndoREE1TmtjamtxOHFrOHJtMWZRWGo2NElncDUxVWtHTHl6MFZuN3loNUd4RVM4NW9PTExCcEotTmpvLUV2eDZGaWZGUkhPSHBwYzVDeEJEekg3TnJCRUNQQW1SM19FM253SndPRExiSG5Kay1aSXJpdGN2amxtNlM2VUNxaE1MTEVMOG43d2pJQm1qYXhNLTRCdWVzREE?oc=5",
+          "source": "CTV News",
+          "category": "Cyber and account compromise",
+          "source_count": 1,
+          "source_channels": [
+            "historical"
+          ],
+          "amount_text": [],
+          "location": null,
+          "evidence": "unverified_headline",
+          "role": "mentioned_in_headline_only"
+        }
+      ],
+      "themes": [],
+      "annual_penalties_cad": {},
+      "recent_activity": "2024-06-12T07:00:00+00:00",
+      "evidence_count_shown": 3
+    }
+  ]
+}
