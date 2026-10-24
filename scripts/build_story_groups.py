@@ -161,7 +161,7 @@ def display_groups(articles):
         story["evidence_status"]="unverified_grouped_reporting"
         story["review_status"]="requires_source_review"
         story["grouping_basis"]="conservative_headline_similarity_within_10_days"
-        story["grouping_disclaimer"]="Grouped reporting about a likely shared publication/topic; does not prove the same underlying victim, incident, loss or misconduct."
+        story["grouping_disclaimer"]="Grouped reporting is not independently verified as one event; similarity does not prove the same underlying victim, incident, loss or misconduct."
         result.append(story)
     result.sort(key=lambda x:str(x.get("published_at") or ""),reverse=True)
     return result
