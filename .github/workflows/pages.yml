@@ -60,7 +60,7 @@ jobs:
         run: |
           mkdir -p _site/data
           cp index.html styles.css app.js intel.js .nojekyll _site/
-          cp data/events.json data/status.json data/news.json data/news_status.json data/fraud_stats.json data/bank_disclosures.json _site/data/
+          cp data/events.json data/status.json data/news.json data/news_status.json data/fraud_stats.json data/bank_disclosures.json data/incidents.json _site/data/
           sed -i "s/__BUILD_SHA__/${GITHUB_SHA}/g" _site/index.html
       - name: Configure Pages
         uses: actions/configure-pages@v5
