@@ -96,7 +96,7 @@
       <p class="library-fineprint">Fraud is underreported; figures are subject to revision and differing reporting dates. Hover or open each source to check its release and limitations.</p>
     </section>
   </section>
-  <section id="themes" class="tab hidden">
+  <section id="themes" class="tab hidden"><div id="northTrends" class="north-us-scope"></div><div class="north-ca-scope">
     <section class="panel">
       <div class="panel-heading"><div><div class="eyebrow">LONGITUDINAL INTELLIGENCE / 2020–2026</div><h2>How scam coverage changes over time</h2></div><span id="themeCount" class="small">Loading archive analysis...</span></div>
       <div class="notice"><strong>Headline coverage, not measured fraud incidence.</strong> Each article is categorized from its title and may match several themes. Changes in source collection, media attention, and language influence counts. Use official CAFC data to understand reported victim losses.</div>
@@ -109,7 +109,8 @@
       <div class="panel-heading"><div><div class="eyebrow">READ THE ACTUAL SOURCES</div><h2 id="themeExamplesTitle">Supporting news examples</h2></div><button class="link-btn" data-to="fraud">Full article archive →</button></div>
       <div id="themeExamples" class="theme-examples"><div class="empty">Choose a theme to see sourced headlines.</div></div>
     </section>
-  </section>
+  </div>
+</section>
   <section id="sectors" class="tab hidden">
     <section class="panel">
       <div class="panel-heading"><div><div class="eyebrow">SECTOR RADAR / ORIGINAL REGULATORY SOURCES</div><h2>Fintech, crypto, casinos &amp; securities</h2></div><span id="sectorCount" class="small">Loading sector evidence...</span></div>
@@ -192,11 +193,12 @@
     <div class="panel"><div class="panel-heading"><div><div class="eyebrow">ORGANIZATION RESEARCH</div><h2>Institution radar</h2></div></div><div class="notice"><strong>Institutional involvement does not mean institutional fraud.</strong> Records here are published enforcement notices; a count of records does not measure culpability or actual demand for consulting services.</div><div id="institutionRows"></div></div>
   </div>
   </section>
-  <section id="sources" class="tab hidden">
+  <section id="sources" class="tab hidden"><div id="northSources" class="north-us-scope"></div><div class="north-ca-scope">
     <div class="panel"><div class="panel-heading"><div><div class="eyebrow">COLLECTION HEALTH</div><h2>Source monitoring</h2></div></div><div class="notice">Collectors run on a GitHub Actions schedule. The page displays the latest committed snapshot. Refresh snapshot reloads it; a new collection requires GitHub Actions or the next scheduled scan. Google News items are unverified research leads.</div><div id="sourceRows"></div><div id="externalSourceHealth" aria-label="Additional source scan status"></div></div>
     <div class="panel"><div class="panel-heading"><div><div class="eyebrow">ADDITIONAL CANADIAN SOURCES</div><h2>Expansion priorities</h2></div></div><div id="sourceCatalog" class="source-catalog"></div></div>
     <div class="panel"><div class="panel-heading"><div><div class="eyebrow">RESEARCH METHOD</div><h2>What the data can and cannot tell you</h2></div></div><div class="method"><p><strong>Sources.</strong> FINTRAC public administrative monetary penalties and FCAC published proceedings. Records are source-linked and subject to the limitations of the originating regulator.</p><p><strong>Identity.</strong> Institutions are grouped by the explicitly named entity; subsidiaries and parents are not automatically merged.</p><p><strong>Geography.</strong> Only explicitly supported institution-location clauses get map markers. Missing locations remain in the list, not assigned to an inferred headquarters.</p><p><strong>Enforcement status.</strong> Imposed, paid, and appealed are distinguished. This dashboard does not publish unverified accusations from general news automatically.</p><p><strong>Coverage.</strong> Regulators can revise or remove notices. Parser changes and access failures can also result in incomplete or stale coverage. Missing records do not imply clean compliance.</p><p><strong>Consulting application.</strong> A publicly documented event may indicate a topic worth researching; it never establishes that a firm currently needs outside consultants.</p></div></div>
-  </section>
+  </div>
+</section>
   <footer>Signal North · Public-source research only · <a href="https://github.com/khaled-agi/Signal-North">Source code</a> · All dates and amounts originate from referenced publications.</footer>
   </main>
 </div>
