@@ -100,7 +100,7 @@ jobs:
         run: |
           mkdir -p _site/data
           cp index.html us.html styles.css light.css editorial.css connections.css research.css network.css refine.css us.css app.js intel.js workspace.js connections.js research.js network.js us.js .nojekyll _site/
-          cp data/events.json data/status.json data/news.json data/news_status.json data/fraud_stats.json data/bank_disclosures.json data/incidents.json data/us_states.json data/us_enforcement.json data/us_news.json data/us_status.json _site/data/
+          cp data/events.json data/status.json data/news.json data/news_status.json data/fraud_stats.json data/bank_disclosures.json data/incidents.json data/us_states.json data/us_enforcement.json data/us_news.json data/us_status.json data/us_ic3_2025.json _site/data/
           if [ -f data/news_archive.json ]; then cp data/news_archive.json _site/data/; fi
           if [ -f data/archive_status.json ]; then cp data/archive_status.json _site/data/; fi
           if [ -f data/article_index.json ]; then cp data/article_index.json _site/data/; fi
