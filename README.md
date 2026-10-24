@@ -8,14 +8,13 @@ Signal North now includes a separate, source-linked U.S. research interface for 
 
 - **Original federal enforcement:** `scripts/collect_us.py` reads publicly published **FinCEN** BSA/AML actions and **CFPB** consumer financial-law case listings. It preserves prior notices when source parsing fails. The initial snapshot is seeded with a small, directly sourced selection that distinguishes later dismissed, modified or terminated proceedings. **It is not an exhaustive catalog of U.S. federal, state, or local enforcement.**
 - **State-wide news discovery:** Rotates Google News U.S. RSS searches through eight U.S. states or D.C. each scan, plus national queries. All 51 jurisdictions appear in the geography selector immediately. A marker is created only when a state is literally supported by the headline; it uses an approximate state-capital reference position and **does not claim to show where an incident occurred**.
+- **All-state 2025 official statistics:** `data/us_ic3_2025.json` reproduces **FBI IC3's 2025 reported complaints, reported dollar losses (USD), and complaints per 100,000 residents** for all 50 states and D.C. from the original [2025 IC3 Annual Report](https://www.ic3.gov/AnnualReport/Reports/2025_IC3Report.pdf) (tables on pp. 28–30). The U.S. map defaults to per-capita complaint figures and lets users switch to raw counts, reported losses, or separately labeled syndicated state mentions. These are **complaints, not verified fraud incidences or proven losses**. The national total includes territories not mapped individually.
 - **Source types:** FinCEN/CFPB regulator-index records are official-source evidence of public enforcement listings, not necessarily final legal findings. Google News headlines are **unverified discovery leads**, not verified cases, fraud rates, or established losses.
 - **Research workflows:** Explore a U.S. reporting map, filter by jurisdiction/evidence/date, review original source documents and procedural case statuses, compare source publication coverage over time, and investigate separately named organizations.
 - **Other agencies:** The sources directory links to FTC Consumer Sentinel data, FBI IC3, DOJ, SEC, OCC, FDIC, FINRA, and all state attorneys general. Those appear as **reference only** unless a dedicated parser is introduced and validated. US coverage should not be marketed as complete until additional official and local sources are ingested.
 - **Pipeline:** `.github/workflows/pages.yml` collects U.S. evidence and publishes `data/us_enforcement.json`, `data/us_news.json`, `data/us_status.json`, and `data/us_states.json`. `tests/test_us_logic.py` and `tests/smoke_us.py` enforce geographic, legal-status and rendered-UX safeguards.
 
-## Canada community research network update
-
-(October 2026)
+## Canada community research network update (October 2026)
 
 Signal North now supports two audiences: financial-crime researchers investigating public evidence, and community members contributing **publicly sourced** stories and corrections. The old client watchlist is still available under specialized views for personal, browser-local research, but is no longer the platform's primary organizing concept.
 
