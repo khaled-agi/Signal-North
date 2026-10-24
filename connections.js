@@ -62,7 +62,7 @@
  }
  function renderInstitution(){
   const x=state.institutions.find(a=>a.id===state.selected);
-  el("connectTrack").disabled=el("connectMap").disabled=!x;
+  el("connectTrack").disabled=el("connectMap").disabled=el("connectExport").disabled=!x;
   if(!x){el("connectContent").innerHTML='<div class="empty">Choose a bank or credit union to explore its connected public evidence.</div>';return}
   const items=x.evidence||[];
   const shown=items.slice(0,state.visible);
@@ -114,6 +114,55 @@
    const a=document.createElement("a");a.href=url;a.download="signal-north-reviewed-article-notes.csv";
    document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(url);
  }
+ function exportInstitutionBrief(){
+   const x=state.institutions.find(y=>y.id===state.selected);
+   if(!x)return;
+   const lines=[
+    "# Signal North — Source-linked research brief",
+    "",
+    "**Institution:** "+x.name,
+    "**Generated:** "+new Date().toISOString().slice(0,10),
+    "**Status:** Research draft, NOT a legal conclusion or finding of bank wrongdoing",
+    "",
+    "## Evidence summary",
+    "Regulatory actions: "+x.counts.enforcement,
+    "Source-reviewed reported customer incidents: "+x.counts.incidents,
+    "Unverified media headline mentions: "+x.counts.headlines,
+    "",
+    "These three evidence categories must not be combined into one count of financial crime or misconduct.",
+    "A customer fraud loss is not necessarily a loss borne by the institution. A regulatory fine is not a customer fraud loss.",
+    "",
+    "## Potential research themes (keyword matches only)",
+    ...(x.themes||[]).slice(0,8).map(t=>"- "+t.name+" ("+t.matching_records+" matching records; no causation implied)"),
+    "",
+    "## Published regulatory penalties by notice publication year",
+    ...Object.entries(x.annual_penalties_cad||{}).sort((a,b)=>b[0].localeCompare(a[0])).map(([year,value])=>"- "+year+": C$"+Number(value).toLocaleString("en-CA",{maximumFractionDigits:2})+" in published penalties (not fraud losses)"),
+    "",
+    "## Official regulatory source notices",
+    ...(x.evidence||[]).filter(z=>z.kind==="enforcement").map(z=>"- "+(z.date||"Date not reported")+" | "+z.title+" | "+(z.source_url||"Source unavailable")),
+    "",
+    "## Individually source-reviewed reported cases",
+    ...(x.evidence||[]).filter(z=>z.kind==="incident").map(z=>"- "+(z.date||"Unknown")+" | "+z.title+" | institution role: "+(z.role||"not established")+" | impact type: "+(z.amount_type||"not reported")+" | "+(z.source_url||"Source unavailable")),
+    "",
+    "## Unverified headlines — open and verify before using in client materials",
+    ...(x.evidence||[]).filter(z=>z.kind==="headline").slice(0,35).map(z=>"- "+(z.date||"Unknown")+" | "+z.title+" | "+(z.source_url||"Source unavailable")),
+    "",
+    "## Consultant follow-up checklist",
+    "- Read each original article or regulator decision and confirm its latest legal status.",
+    "- Identify what happened, when, to whom, and the exact role of the named institution.",
+    "- Determine whether any quoted amount is a victim loss, bank-borne loss, credit exposure, recovery or regulatory penalty.",
+    "- Validate whether multiple reports concern the same underlying incident before adding them together.",
+    "- Look for substantiated themes; identify competing explanations and gaps in available evidence.",
+    "- Develop only evidence-backed hypotheses for potential KYC, fraud operations, AML or customer-protection engagements.",
+    "",
+    "Generated from public-source metadata. Reviewed customer reports are not findings against the institution.",
+   ];
+   const content=lines.join("\n")+"\n";
+   const blob=new Blob([content],{type:"text/markdown;charset=utf-8"});
+   const url=URL.createObjectURL(blob),a=document.createElement("a");
+   a.href=url;a.download="signal-north-"+String(x.id).replace(/[^a-z0-9-]/gi,"-")+"-research-brief.md";
+   document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(url);
+ }
  function selectByName(name){
   const n=normalize(name);
   const x=state.institutions.find(x=>x.id===name||normalize(x.name)===n||(x.aliases||[]).some(a=>normalize(a)===n));
@@ -147,6 +196,7 @@
   if(x)window.dispatchEvent(new CustomEvent("signalnorth:trackinstitution",{detail:{name:x.name}}));
   document.querySelector('[data-tab="clients"]').click();
  });
+ el("connectExport").addEventListener("click",exportInstitutionBrief);
  el("connectMap").addEventListener("click",()=>{
   const x=state.institutions.find(a=>a.id===state.selected);
   if(!x)return;
