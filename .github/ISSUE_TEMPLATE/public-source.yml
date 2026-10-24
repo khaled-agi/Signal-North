@@ -1,0 +1,70 @@
+name: Public-source fraud or AML intelligence
+description: Suggest an already-public article, police notice, regulatory action or research paper. A GitHub account is required; this is NOT anonymous.
+title: "[Source] "
+labels: ["community-source", "needs-review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping build a source-linked Canadian fraud knowledge base.
+        **Public submissions are visible to everyone, including your GitHub username.**
+        Do NOT share your personal identifying information, bank details, documents, account numbers, passwords, screenshots, private messages, alleged perpetrators' private identities, or confidential case information.
+        For a current crime or urgent loss, report to law enforcement or the CAFC directly. This form is not an emergency or private reporting channel.
+  - type: input
+    id: url
+    attributes:
+      label: Public source URL
+      description: Link to the original publicly accessible publication or regulator/police notice.
+      placeholder: https://
+    validations:
+      required: true
+  - type: dropdown
+    id: evidence_kind
+    attributes:
+      label: Evidence category
+      options:
+        - News reporting (unverified)
+        - Police or government release
+        - Regulatory decision or enforcement
+        - Official research, survey or statistics
+        - Publicly available social-media discussion (unverified)
+        - Other primary document
+    validations:
+      required: true
+  - type: input
+    id: published
+    attributes:
+      label: Publication date
+      placeholder: YYYY-MM-DD or unknown
+    validations:
+      required: true
+  - type: dropdown
+    id: typology
+    attributes:
+      label: Topic
+      options:
+        - Investment / crypto
+        - Gambling / casino / iGaming
+        - Banking and fintech
+        - Impersonation / phishing
+        - Payment and e-transfer fraud
+        - Romance / vulnerable victims
+        - AML / sanctions enforcement
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: What does this public source establish?
+      description: Short factual summary with no private individuals' identities or unsupported blame.
+      placeholder: "The original source reports..."
+    validations:
+      required: true
+  - type: checkboxes
+    id: acknowledgement
+    attributes:
+      label: Privacy and accuracy
+      options:
+        - label: I have linked public material, excluded personal/confidential information, and understand that editors review this before publication.
+          required: true
