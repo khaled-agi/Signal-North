@@ -270,15 +270,22 @@
  async function boot(){
   renderCatalog();
   const names=["fraud_stats.json","news.json","bank_disclosures.json","events.json","news_status.json","incidents.json","news_archive.json","article_index.json","external_source_status.json","reporting_groups.json"];
-  const fetched=await Promise.allSettled(names.map(getJSON));
+  // Grouped records are the primary archive. Avoid downloading the raw index
+  // and the historical feed on every visit; request them only if grouping fails.
+  const fetched=await Promise.allSettled(names.map((name,i)=>(i===6||i===7)?Promise.resolve({}):getJSON(name)));
   if(fetched[0].status==="fulfilled")stats=fetched[0].value.metrics||[];
   else $i("fraudNational").innerHTML='<div class="error">Fraud statistics unavailable: '+esc(String(fetched[0].reason))+'</div>';
   const recent=fetched[1].status==="fulfilled"?(fetched[1].value.leads||[]):[];
-  const history=fetched[6].status==="fulfilled"?(fetched[6].value.leads||[]):[];
-  archiveCount=history.length;
-  const indexed=fetched[7].status==="fulfilled"?(fetched[7].value.articles||[]):[];
   const grouped=fetched[9].status==="fulfilled"?(fetched[9].value.groups||[]):[];
-  rawHeadlineCount=indexed.length||(fetched[9].status==="fulfilled"?Number(fetched[9].value.original_index_headlines||0):0);
+  let history=[],indexed=[];
+  if(!grouped.length){
+    // Preserve the old archive as a graceful fallback for incomplete deployments.
+    const backup=await Promise.allSettled(["article_index.json","news_archive.json"].map(getJSON));
+    indexed=backup[0].status==="fulfilled"?(backup[0].value.articles||[]):[];
+    history=backup[1].status==="fulfilled"?(backup[1].value.leads||[]):[];
+  }
+  archiveCount=history.length;
+  rawHeadlineCount=(fetched[9].status==="fulfilled"?Number(fetched[9].value.original_index_headlines||0):0)||indexed.length;
   news=grouped.length?grouped:indexed.length?indexed:
     [...new Map([...recent,...history].map(x=>[x.id,x])).values()].sort((a,b)=>String(b.published_at||"").localeCompare(String(a.published_at||"")));
   if(!rawHeadlineCount)rawHeadlineCount=news.length;
