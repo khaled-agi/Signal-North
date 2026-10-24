@@ -29,6 +29,11 @@ QUERIES = {
  "Police cases": '"fraud" "police" "Ontario" OR "Vancouver"',
  "Investment scams": '"investment" "scam" "Canada"',
  "Québec reports": '"fraude" "banque" "Québec"',
+ "Identity theft accounts": '"identity theft" "bank" "Canada"',
+ "Ransomware and banking": '"ransomware" "financial" "Canada"',
+ "E-transfer losses": '"e-transfer" "scam" "Canada"',
+ "Senior victimization": '"senior" "fraud" "Canada"',
+ "Investment enforcement": '"investment fraud" "charged" "Canada"',
 }
 HEADERS={"User-Agent":"Mozilla/5.0 (compatible; SignalNorthResearchHistorical/0.3; noncommercial research)"}
 def now():return datetime.now(timezone.utc).isoformat(timespec="seconds")
