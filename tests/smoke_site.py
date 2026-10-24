@@ -47,6 +47,7 @@ try:
         print("Runtime errors:", errors)
         assert actual == str(EXPECTED), f"Expected {EXPECTED}, got {actual}"
         assert not errors, str(errors)
+        page.locator("details.nav-datasets summary").click()
         page.locator('[data-tab="events"]').click()
         assert page.locator("#eventRows .event").count() == EXPECTED
         page.locator("#search").fill("RBC Unlikelyterm")
@@ -71,12 +72,16 @@ try:
         assert page.locator("#incidentRows .case-item").count() == 1
         page.locator('[data-tab="overview"]').click()
         page.locator('[data-mapmode="news"]').click()
-        assert "Reviewed cases:" in page.locator("#mapCaption").inner_text() or "Headline" in page.locator("#mapCaption").inner_text()
+        assert "mapped" in page.locator("#mapCaption").inner_text()
         assert page.locator("#mapProvince").count() == 1
         print("News, major orders, source-reviewed incidents, and map controls: PASS")
         page.wait_for_function("document.querySelectorAll('#mappedStories .map-story').length > 0", timeout=10000)
         assert page.locator("#mapMonth").count() == 1
+        assert page.locator("#mapCoverage").inner_text().lower().find("indexed headlines") >= 0
+        assert page.locator(".count-map-pin").count() > 0
+        page.locator("#mapStoryScope").select_option("mapped")
         assert page.locator('#mappedStories button[data-mapfocus]').count() > 0
+        page.locator("#mapStoryScope").select_option("all")
         page.locator("#mapMonth").fill("2026-03")
         assert "2026-03" in page.locator("#mapCaption").inner_text()
         page.locator("#mapClearMonth").click()
@@ -100,6 +105,10 @@ try:
             print("Unified multi-source article index:", index["unique_headlines"])
 
 
+        if page.locator("#newsAll").is_visible():
+            page.locator("#newsAll").click()
+            assert page.locator("#newsRows .news-item").count() >= 200
+            print("Full headline list: PASS")
         page.locator("#newsYear").select_option("2026")
         assert page.locator("#newsRows .news-item").count() > 0
         page.locator('[data-tab="clients"]').click()
@@ -108,7 +117,7 @@ try:
         assert page.locator("#clientWatchlist .client-item").count() >= 1
         assert "Royal Bank of Canada" in page.locator("#clientWatchlist").inner_text()
         bg=page.evaluate("getComputedStyle(document.body).backgroundColor")
-        assert bg in ("rgb(243, 246, 250)","rgb(255, 255, 255)","rgb(251, 252, 253)"),f"Expected light theme, got {bg}"
+        assert bg in ("rgb(243, 246, 250)","rgb(255, 255, 255)","rgb(251, 252, 253)","rgb(245, 247, 248)"),f"Expected light theme, got {bg}"
         if (ROOT / "data" / "institution_intelligence.json").exists():
             page.locator('[data-tab="connections"]').click()
             page.wait_for_function("document.querySelectorAll('#connectInstitution option').length > 5", timeout=20000)
@@ -131,7 +140,7 @@ try:
             page.locator('[data-tab="connections"]').click()
             page.locator("#connectInstitution").select_option("rbc")
             page.locator("#connectMap").click()
-            assert "Client: Royal Bank of Canada" in page.locator("#mapCaption").inner_text()
+            assert "Organization: Royal Bank of Canada" in page.locator("#mapCaption").inner_text()
             print("Institution graph, evidence provenance, triage, watchlist, alias-aware map: PASS")
         page.locator('[data-tab="reports"]').click()
         page.wait_for_function("document.querySelectorAll('#libraryRows .library-record').length >= 10", timeout=12000)
@@ -141,7 +150,7 @@ try:
         page.locator("#librarySearch").fill("")
         assert page.locator("#libraryCount").inner_text()
         page.locator('[data-tab="overview"]').click()
-        assert page.locator(".workflow-steps button").count() == 3
+        assert page.locator(".sidebar > .nav").count() == 5
         assert page.locator("#metrics .metric").count() == 4
         page.locator('[data-tab="themes"]').click()
         page.wait_for_function("document.querySelectorAll('#themeGrid .theme-matrix-row').length >= 8", timeout=12000)
@@ -160,7 +169,7 @@ try:
         assert "not anonymous" in page.locator("#community").inner_text().lower()
         assert page.locator('a[href*="template=public-source.yml"]').count() == 1
         page.locator('[data-tab="overview"]').click()
-        assert page.locator('[data-to="community"]').count() >= 1
+        assert page.locator('[data-tab="community"]').count() >= 1
         print("Themes, Wealthsimple, gaming, community safety and navigation: PASS")
         print("Research reports, CAFC historical trend, and simplified consultant workflow: PASS")
         print("Client watchlists, historical filters, linked map, light theme: PASS")
