@@ -120,6 +120,11 @@ try:
             assert page.locator("#reviewRows [data-review-status]").count() > 0
             page.locator("#reviewRows [data-review-status]").first.select_option("In review")
             assert page.locator("#reviewRows [data-review-status]").first.input_value() == "In review"
+            with page.expect_download() as download_info:
+                page.locator("#connectExport").click()
+            download = download_info.value
+            assert "rbc" in download.suggested_filename
+            print("Source-linked research brief export: PASS")
             page.locator("#connectTrack").click()
             assert "Royal Bank of Canada" in page.locator("#clientWatchlist").inner_text()
             assert page.locator('#clientWatchlist button[data-open-connection]').count() > 0
