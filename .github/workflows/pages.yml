@@ -59,8 +59,18 @@ jobs:
           if [ -f data/external_source_status.json ]; then git add data/external_source_status.json; fi
           if ! git diff --cached --quiet; then
             git commit -m "data: refresh regulator-sourced events [skip ci]"
-            if ! git push; then
-              echo "::warning::Another commit changed main during collection. Proceeding with the freshly collected deployment snapshot; a later run will reconcile persisted history."
+            uploaded=false
+            for attempt in 1 2 3 4; do
+              if git push; then uploaded=true; break; fi
+              git fetch origin main
+              if ! git rebase origin/main; then
+                git rebase --abort || true
+                echo "::warning::Collection history changed concurrently. Deployment will use its freshly built snapshot; next scan will retry persistence."
+                break
+              fi
+            done
+            if [ "$uploaded" != "true" ]; then
+              echo "::warning::Latest data could not be committed back to main. Inspect collector logs."
             fi
           fi
       - name: Assemble cache-busted static website
