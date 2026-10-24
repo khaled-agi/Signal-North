@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f5f7f8">
+<meta name="description" content="Signal North U.S.: source-linked federal financial-crime enforcement and nationwide state-reference research.">
+<title>Signal North · U.S. Financial Crime Research</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="./styles.css?v=__BUILD_SHA__">
+<link rel="stylesheet" href="./light.css?v=__BUILD_SHA__">
+<link rel="stylesheet" href="./editorial.css?v=__BUILD_SHA__">
+<link rel="stylesheet" href="./refine.css?v=__BUILD_SHA__">
+<link rel="stylesheet" href="./us.css?v=__BUILD_SHA__">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+</head>
+<body class="us-app">
+<div class="layout">
+<aside class="sidebar us-sidebar">
+  <a class="brand us-brand" href="./index.html" aria-label="Signal North home"><div class="brand-mark">✳</div><div>signal<span>north</span><small>FINANCIAL CRIME INTELLIGENCE</small></div></a>
+  <div class="side-caption">COUNTRY COVERAGE</div>
+  <div class="us-country-switch" role="group" aria-label="Select a country">
+    <a href="./index.html">Canada ↗</a><a class="current" href="./us.html" aria-current="page">United States</a>
+  </div>
+  <div class="side-caption">UNITED STATES / RESEARCH</div>
+  <button class="nav active" data-usview="overview" type="button">◈ &nbsp; Explore U.S.</button>
+  <button class="nav" data-usview="reporting" type="button">⚑ &nbsp; Reports &amp; enforcement</button>
+  <button class="nav" data-usview="trends" type="button">◫ &nbsp; Trends &amp; methods</button>
+  <button class="nav" data-usview="organizations" type="button">✧ &nbsp; Organizations</button>
+  <button class="nav" data-usview="sources" type="button">▦ &nbsp; Sources &amp; methodology</button>
+  <div class="sidebar-bottom"><div class="live-mark"><i></i><span>PUBLIC RESEARCH PREVIEW</span></div>
+    <p>Official U.S. enforcement actions and unverified reporting leads. State markers mean a state is named in a headline, never the proven location of a crime.</p>
+    <a href="https://github.com/khaled-agi/Signal-North" target="_blank" rel="noopener noreferrer">Method and source code ↗</a>
+  </div>
+</aside>
+<div class="main">
+  <header class="header">
+    <span>UNITED STATES / <strong id="usCrumb">RESEARCH OVERVIEW</strong></span>
+    <div class="header-right"><span id="usUpdated">Loading U.S. snapshot</span><a class="us-header-country" href="./index.html">View Canada ↗</a><button class="reload" id="usReload" type="button">↻ Refresh snapshot</button></div>
+  </header>
+  <main class="content">
+    <div class="intro us-intro"><div><div class="eyebrow">SIGNAL NORTH / UNITED STATES / FEDERAL + ALL 50 STATES &amp; D.C.</div>
+      <h1>Track U.S. financial crime.<br><em>Follow the original evidence.</em></h1>
+      <p>What happened, which agency documented it, and where does reporting actually mention a state?</p>
+    </div><span class="preview">✳ SOURCE-LINKED RESEARCH</span></div>
+    <div id="usError" class="error hidden" role="status"></div>
+    <section class="us-global-controls" aria-label="Nationwide research filters">
+      <div class="us-filter-unit us-state-filter"><label for="usState">Geography</label><select id="usState"><option value="">Nationwide / all 50 states + D.C.</option></select></div>
+      <div class="us-filter-unit"><label for="usType">Evidence layer</label><select id="usType"><option value="all">All sourced records</option><option value="official">Official enforcement only</option><option value="leads">Unverified headlines only</option></select></div>
+      <div class="us-filter-unit"><label for="usPeriod">Publication period</label><select id="usPeriod"><option value="">All available years</option><option value="2026">2026</option><option value="2025">2025</option><option value="2024">2024</option><option value="2023">2023</option><option value="2022">2022</option><option value="2021">2021</option><option value="2020">2020</option></select></div>
+      <button id="usClear" type="button" class="us-clear">Clear filters</button>
+    </section>
+
+    <section id="us-overview" class="us-view">
+      <div class="metrics us-metrics" id="usMetrics" aria-live="polite"></div>
+      <section class="us-brief panel"><div class="us-brief-title"><div><div class="eyebrow">01 / WHAT CHANGED?</div><h2>Evidence pulse</h2></div><span class="us-mini-label" id="usPulseDate">Source snapshot</span></div><div id="usPulse">Loading recent source developments...</div></section>
+      <div class="us-two-cols">
+        <section class="panel us-map-card"><div class="panel-heading"><div><div class="eyebrow">02 / WHERE?</div><h2>State-referenced reporting</h2></div><button type="button" class="map-reset" id="usMapReset">⌖ U.S. view</button></div>
+          <div id="usMap" class="map" aria-label="U.S. state-referenced headline map"></div>
+          <div id="usMapCaption" class="us-map-caption">State markers show headline references, not actual crime locations.</div>
+          <div class="us-method-foot">Nationwide federal enforcement records are not allocated to a state. Unlocated reporting remains searchable; a state with no marker is not a low-fraud state.</div>
+        </section>
+        <section class="panel us-evidence-card"><div class="panel-heading"><div><div class="eyebrow">03 / WHAT SUPPORTS IT?</div><h2>Latest source records</h2></div><button class="us-text-button" data-usview="reporting" type="button">Explore all →</button></div>
+          <div id="usLatest" class="us-latest-list">Loading source-linked records...</div>
+          <div class="us-evidence-bottom" id="usCoverageMessage">Coverage information loading...</div>
+        </section>
+      </div>
+      <section class="panel us-guide-panel"><div class="panel-heading"><div><div class="eyebrow">RESEARCH WORKFLOW</div><h2>From source to an investigative lead</h2></div></div>
+        <div class="us-guide-grid"><div><strong>1 · Discover</strong><p>Filter official actions or news leads by date, state and topic.</p></div><div><strong>2 · Verify</strong><p>Open the original regulator action or reporting, and review outcome changes.</p></div><div><strong>3 · Connect</strong><p>Compare institutions, agencies and recurring methods without implying causality.</p></div></div>
+      </section>
+    </section>
+
+    <section id="us-reporting" class="us-view hidden">
+      <div class="us-section-intro"><div class="eyebrow">EVIDENCE EXPLORER</div><h2>One record. A clear source trail.</h2><p>Official filings and unverified news are displayed separately by evidence level. A complaint is not a judgment, and a bank mention is not evidence of bank misconduct.</p></div>
+      <div class="panel us-report-panel"><div class="panel-heading"><div><h2>Explore public reporting and enforcement</h2></div><span class="small" id="usResultCount">Loading...</span></div>
+        <div class="us-searchbar"><input id="usSearch" type="search" placeholder="Search title, institution, regulator or scam method..." aria-label="Search U.S. evidence"><select id="usAgency" aria-label="Filter agency"><option value="">All source agencies</option></select><select id="usTopic" aria-label="Filter topic"><option value="">All subjects</option></select></div>
+        <p class="us-search-explain" id="usReportExplain">Filters apply to source publications, not independently verified dates when crime occurred.</p>
+        <div id="usRows" class="us-records">Loading records...</div>
+        <div class="us-pagination"><button type="button" id="usMore" class="us-secondary-button">Load more records ↓</button><span id="usPageCount" class="small"></span></div>
+      </div>
+    </section>
+
+    <section id="us-trends" class="us-view hidden">
+      <div class="us-section-intro"><div class="eyebrow">TREND ANALYSIS / EVIDENCE-AWARE</div><h2>Reporting patterns, not fraud rates.</h2><p>Compare source publication volumes and topic visibility over time. Changes in news collection, source availability and jurisdictional scope can create artificial trends.</p></div>
+      <div class="panel"><div class="panel-heading"><div><h2>Annual federal enforcement index coverage</h2></div><span class="small">FinCEN and CFPB source records</span></div><div id="usOfficialTrend" class="us-trend-content"></div></div>
+      <div class="panel"><div class="panel-heading"><div><h2>Monthly reporting discovery</h2></div><span class="small">Unverified syndicated titles only</span></div><div id="usNewsTrend" class="us-trend-content"></div></div>
+      <div class="panel"><div class="panel-heading"><div><h2>Common headline methods</h2></div></div><div id="usMethodList" class="us-trend-content"></div></div>
+    </section>
+
+    <section id="us-organizations" class="us-view hidden">
+      <div class="us-section-intro"><div class="eyebrow">ORGANIZATION RESEARCH</div><h2>Entities named in official actions.</h2><p>Counts reflect original regulator-index entries. They are not rankings of wrongdoing, fraud incidence or institutional risk. Distinct legal entities aren't automatically combined.</p></div>
+      <section class="panel"><div class="panel-heading"><div><h2>Enforcement subject directory</h2></div><span id="usOrgCount" class="small"></span></div>
+        <div class="us-searchbar"><input id="usOrgSearch" type="search" placeholder="Find a bank, fintech, credit union or other entity..." aria-label="Search subjects"></div>
+        <div id="usOrgRows" class="us-org-list">Loading organizations...</div>
+      </section>
+    </section>
+
+    <section id="us-sources" class="us-view hidden">
+      <div class="us-section-intro"><div class="eyebrow">DATA PROVENANCE</div><h2>Sources, coverage and limitations.</h2><p>There is no single public database that records every U.S. fraud incident. Signal North distinguishes live feeds from reference directories and documents its known gaps.</p></div>
+      <div class="panel"><div class="panel-heading"><div><h2>Collection and geographic coverage</h2></div><span id="usSourceAsOf" class="small"></span></div><div id="usSourceHealth" class="us-trend-content"></div></div>
+      <div class="panel"><div class="panel-heading"><div><h2>U.S. source directory</h2></div></div><div id="usSourceDirectory" class="us-source-list"></div></div>
+      <div class="panel"><div class="panel-heading"><div><h2>What the data cannot say</h2></div></div>
+        <div class="us-limits">
+          <p><strong>Official action vs. final disposition.</strong> A case may be alleged, pending, settled, modified or dismissed. Open the original source for the latest procedural status; do not total financial measures across incompatible categories.</p>
+          <p><strong>State reference vs. incident location.</strong> A state named in a headline is a research clue. A marker is placed at an approximate state-capital reference point, not an event address, defendant headquarters or geographic rate.</p>
+          <p><strong>Uneven news coverage.</strong> State searches are rotated, so zero displayed items never means zero fraud. Syndicated titles are not independently verified incidents.</p>
+          <p><strong>Agency scope.</strong> Automated official index collection initially covers FinCEN and CFPB; SEC, DOJ, FTC, OCC, FDIC, FBI IC3, state attorneys general and local police require additional source-specific collection and quality review.</p>
+        </div>
+      </div>
+    </section>
+    <footer>Signal North · United States · Public-source research only · <a href="./index.html">Canada research</a> · <a href="https://github.com/khaled-agi/Signal-North">Method and code ↗</a></footer>
+  </main>
+</div>
+</div>
+<div id="usOverlay" class="overlay hidden"><div class="drawer us-drawer" role="dialog" aria-modal="true" aria-label="Source record details"><button type="button" id="usClose" class="close" aria-label="Close details">×</button><div id="usDrawerBody"></div></div></div>
+<script src="./us.js?v=__BUILD_SHA__" defer></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" async crossorigin="" onload="window.dispatchEvent(new Event('signalnorth:usmapready'))"></script>
+</body>
+</html>
