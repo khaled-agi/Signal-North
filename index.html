@@ -51,6 +51,6 @@
 </div>
 </div>
 <div id="overlay" class="overlay hidden"><div class="drawer"><button id="close" class="close" aria-label="Close panel">×</button><div id="drawerBody"></div></div></div>
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
-<script src="./app.js"></script>
+<script src="./app.js" defer></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" async crossorigin="" onload="window.dispatchEvent(new Event('signalnorth:mapready'))"></script>
 </body></html>
