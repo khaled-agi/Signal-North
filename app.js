@@ -67,6 +67,7 @@ function refreshMapList(){
  $("#mapStoryScope").value=scope;
  $("#mapStoryClear").hidden=scope!=="selected";
  $("#mapStoryMore").hidden=total<=(state.mapSideVisible||100);
+ $("#mapStoryAll").hidden=total<=(state.mapSideVisible||100);
  host.innerHTML=rows.length?rows.slice(0,state.mapSideVisible||100).map(x=>{
   const located=x.lat!==null;
   const label=x.kind==="reg"?"Regulatory notice":x.kind==="case"?"Reviewed case":"News headline";
@@ -286,6 +287,7 @@ $("#mapClearMonth").addEventListener("click",()=>{state.mapMonth="";$("#mapMonth
 $("#mapStorySearch").addEventListener("input",()=>{state.mapSideVisible=100;initMap();});
 $("#mapStoryScope").addEventListener("change",e=>{state.mapSideScope=e.target.value;state.mapSideVisible=100;refreshMapList();});
 $("#mapStoryMore").addEventListener("click",()=>{state.mapSideVisible=(state.mapSideVisible||100)+100;refreshMapList();});
+$("#mapStoryAll").addEventListener("click",()=>{state.mapSideVisible=Number.MAX_SAFE_INTEGER;refreshMapList();});
 $("#mapStoryClear").addEventListener("click",()=>{state.mapSelectedIds=null;state.mapSideScope="all";refreshMapList();});
 
 window.addEventListener("signalnorth:clientfocus",e=>{state.clientFocus=e.detail?.name||"";state.mapMode="all";document.querySelectorAll("[data-mapmode]").forEach(b=>b.classList.toggle("active",b.dataset.mapmode==="all"));initMap();});
