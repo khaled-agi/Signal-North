@@ -46,7 +46,7 @@ jobs:
           node --check research.js
           node --check network.js
           node --check us.js
-          python -m unittest discover -s tests -p 'test_logic.py'
+          python -m unittest discover -s tests -p 'test_*.py'
       - name: Collect regulator publications
         env:
           TRACKER_USER_AGENT: "SignalNorthPublicResearch/0.1 (+https://github.com/khaled-agi/Signal-North)"
