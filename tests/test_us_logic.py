@@ -34,6 +34,19 @@ class USCoverageTests(unittest.TestCase):
         self.assertEqual(len(s["states"]), 51)
         self.assertIn("not incident locations",s["coordinate_role"])
 
+    def test_original_ic3_state_data_is_complete_and_not_an_incidence_rate(self):
+        report=json.loads((ROOT/"data"/"us_ic3_2025.json").read_text("utf-8"))
+        self.assertEqual(report["year"],2025)
+        self.assertEqual(report["source_url"],"https://www.ic3.gov/AnnualReport/Reports/2025_IC3Report.pdf")
+        self.assertEqual(set(report["states"]),set(us.STATES))
+        self.assertEqual(len(report["states"]),51)
+        self.assertEqual(report["states"]["CA"]["complaints"],116414)
+        self.assertEqual(report["states"]["DC"]["complaints_per_100k"],448.8)
+        self.assertEqual(report["national"]["all_complaints"],1008597)
+        self.assertTrue(sum(x["complaints"] for x in report["states"].values()) <= report["national"]["all_complaints"])
+        self.assertTrue(all(v["complaints"]>0 and v["reported_loss_usd"]>0 and v["complaints_per_100k"]>0 for v in report["states"].values()))
+        self.assertIn("not verified unique crimes",report["definition"])
+
     def test_fincen_official_parsing_without_false_state_or_amount(self):
         html='''<table><tr><th>Enforcement</th><th>Date</th><th>Matter Number</th><th>Financial Institution</th></tr>
           <tr><td><a href="/system/files/2026-10/case.pdf">In the Matter of Example Bank</a></td>
