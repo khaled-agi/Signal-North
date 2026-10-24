@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-24T01:43:23+00:00",
+  "updated_at": "2026-10-24T01:47:46+00:00",
   "leads": [
     {
       "id": "06d83affb0a8922b3a76",
@@ -8,13 +8,18 @@
       "publisher": "CTV News",
       "published_at": "2026-10-23T20:20:42+00:00",
       "first_seen_at": "2026-10-24T01:27:42+00:00",
-      "last_observed_at": "2026-10-24T01:43:21+00:00",
+      "last_observed_at": "2026-10-24T01:47:44+00:00",
       "topics": [
         "Scams and victims"
       ],
       "category": "Scam and victim reports",
       "evidence_status": "unverified_news_lead",
       "geographic_accuracy": "headline_only",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "institution": null,
       "reported_loss": null,
       "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness.",
@@ -31,13 +36,18 @@
       "publisher": "Pragativadi",
       "published_at": "2026-10-23T17:14:36+00:00",
       "first_seen_at": "2026-10-24T01:27:42+00:00",
-      "last_observed_at": "2026-10-24T01:43:21+00:00",
+      "last_observed_at": "2026-10-24T01:47:43+00:00",
       "topics": [
         "Bank and customer fraud"
       ],
       "category": "Reported fraud",
       "evidence_status": "unverified_news_lead",
       "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "institution": null,
       "reported_loss": null,
       "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness."
@@ -49,13 +59,19 @@
       "publisher": "insauga.com",
       "published_at": "2026-10-23T14:55:26+00:00",
       "first_seen_at": "2026-10-24T01:27:42+00:00",
-      "last_observed_at": "2026-10-24T01:43:21+00:00",
+      "last_observed_at": "2026-10-24T01:47:46+00:00",
       "topics": [
+        "Fraud research and reports",
         "Scams and victims"
       ],
       "category": "Scam and victim reports",
       "evidence_status": "unverified_news_lead",
       "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "institution": null,
       "reported_loss": null,
       "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness."
@@ -67,7 +83,7 @@
       "publisher": "CBC",
       "published_at": "2026-10-23T08:00:00+00:00",
       "first_seen_at": "2026-10-24T01:27:42+00:00",
-      "last_observed_at": "2026-10-24T01:43:21+00:00",
+      "last_observed_at": "2026-10-24T01:47:44+00:00",
       "topics": [
         "Bank and customer fraud",
         "Scams and victims"
@@ -75,6 +91,11 @@
       "category": "Scam and victim reports",
       "evidence_status": "unverified_news_lead",
       "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "institution": null,
       "reported_loss": null,
       "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness."
@@ -86,13 +107,18 @@
       "publisher": "insauga.com",
       "published_at": "2026-10-22T21:24:41+00:00",
       "first_seen_at": "2026-10-24T01:27:43+00:00",
-      "last_observed_at": "2026-10-24T01:43:22+00:00",
+      "last_observed_at": "2026-10-24T01:47:44+00:00",
       "topics": [
         "Police investigations"
       ],
       "category": "Reported fraud",
       "evidence_status": "unverified_news_lead",
       "geographic_accuracy": "headline_only",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": true,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "institution": null,
       "reported_loss": null,
       "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness.",
@@ -109,13 +135,64 @@
       "publisher": "Modern Ghana",
       "published_at": "2026-10-22T14:00:36+00:00",
       "first_seen_at": "2026-10-24T01:27:42+00:00",
-      "last_observed_at": "2026-10-24T01:43:21+00:00",
+      "last_observed_at": "2026-10-24T01:47:44+00:00",
       "topics": [
         "Scams and victims"
       ],
       "category": "Scam and victim reports",
       "evidence_status": "unverified_news_lead",
       "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
+      "institution": null,
+      "reported_loss": null,
+      "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness."
+    },
+    {
+      "id": "140273738325984ad312",
+      "title": "Canadians caught up in Trump voter fraud crackdown as U.S. accuses Canada of election interference - Radio-Canada",
+      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNZG5OWEl1eWdJMkQxem9zTmZzWGZLeXNqcDg2cDEybjFlUkl5VVZKdlJRSUxEYldHcVBoOF9lcUEyVkF1ZndORFJJZklJY2E2SG5ER0dQTzVNQkZXbjJTNnZpRkVVZ3RzdEZoVGVucGlNM1RrNDVFWGY4ODFsOTZZOW9ablJuNHVOVWVEUkJsWVBKV1g0NzFJdk02aGtPRWt0NVJUX09hc3BIWmIyLTVUZWgyUExwWERUaU5FR0dILThwTmpfVjRVWTJPRWVaZEZkWjROU1hJclRBMGdYbUE?oc=5",
+      "publisher": "Radio-Canada",
+      "published_at": "2026-10-22T13:55:47+00:00",
+      "first_seen_at": "2026-10-24T01:47:46+00:00",
+      "last_observed_at": "2026-10-24T01:47:46+00:00",
+      "topics": [
+        "Fraud research and reports"
+      ],
+      "category": "Reported fraud",
+      "evidence_status": "unverified_news_lead",
+      "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
+      "institution": null,
+      "reported_loss": null,
+      "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness."
+    },
+    {
+      "id": "7d645475672e7087f437",
+      "title": "Canadians caught up in Trump voter fraud crackdown as U.S. accuses Canada of election interference - CBC",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQd0JyNThBNGpxdUxOSTJtOG9HZFpqTnRuTUZQdmd1UUlad2l5OWhFM2I4anF1TXNwTUk3aXpSbXdfTVY2VG1vSTZDVVNVQnpXdWNrUHZmLWtMejNndENIUWJ3ZV8tckh3M3czbWNEZW5obXNkaU5OMHJSTUJyZUxVUnctT0JSelRRcWtacXNHdWl5U0Z4aDdLOV9rWEx4NXRwaDFfWHNMNzdDbEZhcnc?oc=5",
+      "publisher": "CBC",
+      "published_at": "2026-10-22T08:00:00+00:00",
+      "first_seen_at": "2026-10-24T01:47:46+00:00",
+      "last_observed_at": "2026-10-24T01:47:46+00:00",
+      "topics": [
+        "Fraud research and reports"
+      ],
+      "category": "Reported fraud",
+      "evidence_status": "unverified_news_lead",
+      "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "institution": null,
       "reported_loss": null,
       "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness."
@@ -127,13 +204,18 @@
       "publisher": "NTV News",
       "published_at": "2026-10-21T23:13:27+00:00",
       "first_seen_at": "2026-10-24T01:27:42+00:00",
-      "last_observed_at": "2026-10-24T01:43:21+00:00",
+      "last_observed_at": "2026-10-24T01:47:44+00:00",
       "topics": [
         "Scams and victims"
       ],
       "category": "Scam and victim reports",
       "evidence_status": "unverified_news_lead",
       "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "institution": null,
       "reported_loss": null,
       "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness."
@@ -145,13 +227,42 @@
       "publisher": "India.com",
       "published_at": "2026-10-21T17:44:37+00:00",
       "first_seen_at": "2026-10-24T01:27:42+00:00",
-      "last_observed_at": "2026-10-24T01:43:21+00:00",
+      "last_observed_at": "2026-10-24T01:47:46+00:00",
       "topics": [
-        "Bank and customer fraud"
+        "Bank and customer fraud",
+        "Fraud research and reports"
       ],
       "category": "Reported fraud",
       "evidence_status": "unverified_news_lead",
       "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
+      "institution": null,
+      "reported_loss": null,
+      "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness."
+    },
+    {
+      "id": "bd3e5932ee75c479f501",
+      "title": "Trump DOJ’s Fraud Whistleblower Scheme Instantly Backfires - Yahoo News Canada",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNZlBWRFJFekdyVmdiZnpZQWFoeHFkdHhsR1dLbmxIZHJsT1dVRm9HTEk4aGNHbzMxVXlVRUVTa05Wb1UwcHJsMGtzOVpfVDdFUjhEeFMyVms4eXpXUUF1U0s5WEwzUnZXUFFGRG1La251b1BYZTBfN3o5dFI3cEV6X0c2bw?oc=5",
+      "publisher": "Yahoo News Canada",
+      "published_at": "2026-10-21T15:48:21+00:00",
+      "first_seen_at": "2026-10-24T01:47:46+00:00",
+      "last_observed_at": "2026-10-24T01:47:46+00:00",
+      "topics": [
+        "Fraud research and reports"
+      ],
+      "category": "Reported fraud",
+      "evidence_status": "unverified_news_lead",
+      "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "institution": null,
       "reported_loss": null,
       "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness."
@@ -163,7 +274,7 @@
       "publisher": "Bhaskar English",
       "published_at": "2026-10-21T15:02:28+00:00",
       "first_seen_at": "2026-10-24T01:27:42+00:00",
-      "last_observed_at": "2026-10-24T01:43:21+00:00",
+      "last_observed_at": "2026-10-24T01:47:44+00:00",
       "topics": [
         "Bank and customer fraud",
         "Scams and victims"
@@ -171,6 +282,11 @@
       "category": "Scam and victim reports",
       "evidence_status": "unverified_news_lead",
       "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "institution": null,
       "reported_loss": null,
       "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness."
@@ -182,13 +298,18 @@
       "publisher": "Crime Fighters",
       "published_at": "2026-10-21T14:00:45+00:00",
       "first_seen_at": "2026-10-24T01:27:42+00:00",
-      "last_observed_at": "2026-10-24T01:43:21+00:00",
+      "last_observed_at": "2026-10-24T01:47:44+00:00",
       "topics": [
         "Scams and victims"
       ],
       "category": "Scam and victim reports",
       "evidence_status": "unverified_news_lead",
       "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "institution": null,
       "reported_loss": null,
       "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness."
@@ -200,13 +321,18 @@
       "publisher": "Tribune Online",
       "published_at": "2026-10-21T10:47:57+00:00",
       "first_seen_at": "2026-10-24T01:27:42+00:00",
-      "last_observed_at": "2026-10-24T01:43:21+00:00",
+      "last_observed_at": "2026-10-24T01:47:44+00:00",
       "topics": [
         "Scams and victims"
       ],
       "category": "Scam and victim reports",
       "evidence_status": "unverified_news_lead",
       "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "institution": null,
       "reported_loss": null,
       "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness."
@@ -218,13 +344,18 @@
       "publisher": "UL Lawyers",
       "published_at": "2026-10-21T01:12:27+00:00",
       "first_seen_at": "2026-10-24T01:27:43+00:00",
-      "last_observed_at": "2026-10-24T01:43:22+00:00",
+      "last_observed_at": "2026-10-24T01:47:44+00:00",
       "topics": [
         "Police investigations"
       ],
       "category": "Reported fraud",
       "evidence_status": "unverified_news_lead",
       "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "institution": null,
       "reported_loss": null,
       "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness."
@@ -236,13 +367,18 @@
       "publisher": "The Globe and Mail",
       "published_at": "2026-10-21T00:23:47+00:00",
       "first_seen_at": "2026-10-24T01:27:43+00:00",
-      "last_observed_at": "2026-10-24T01:43:22+00:00",
+      "last_observed_at": "2026-10-24T01:47:44+00:00",
       "topics": [
         "Police investigations"
       ],
       "category": "Reported fraud",
       "evidence_status": "unverified_news_lead",
       "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "institution": null,
       "reported_loss": null,
       "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness."
@@ -254,13 +390,41 @@
       "publisher": "Global News",
       "published_at": "2026-10-20T22:17:59+00:00",
       "first_seen_at": "2026-10-24T01:27:43+00:00",
-      "last_observed_at": "2026-10-24T01:43:22+00:00",
+      "last_observed_at": "2026-10-24T01:47:44+00:00",
       "topics": [
         "Police investigations"
       ],
       "category": "Reported fraud",
       "evidence_status": "unverified_news_lead",
       "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
+      "institution": null,
+      "reported_loss": null,
+      "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness."
+    },
+    {
+      "id": "c5e73dbe3e65a209de42",
+      "title": "Ontario begins probe of eight private career colleges over alleged OSAP ‘fraud’ - Global News",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNUUx1blZrVnJRUUJoM2pxeW5TajFLaFROZUp2VXNPYURaRlB2XzhPY01Ub0NwR0FxRDBDWHdGcE9xdFg2UXk4a3dURUJtdzRhWVJhRF9pak56bFIwMWg4QUcyckJRbE1wOWhsS2FRbnVyQnFpdGtSOW1jMFBNNlpvTnJidTNScU00ZnhjVXVYRXBpT2JPMy1pYTJtZWx4Rlh3cUhrWkJnY1lyNnVrdEJfYmptelU?oc=5",
+      "publisher": "Global News",
+      "published_at": "2026-10-20T21:34:07+00:00",
+      "first_seen_at": "2026-10-24T01:47:46+00:00",
+      "last_observed_at": "2026-10-24T01:47:46+00:00",
+      "topics": [
+        "Fraud research and reports"
+      ],
+      "category": "Reported fraud",
+      "evidence_status": "unverified_news_lead",
+      "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "institution": null,
       "reported_loss": null,
       "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness."
@@ -272,13 +436,20 @@
       "publisher": "thecanadianpressnews.ca",
       "published_at": "2026-10-20T21:11:14+00:00",
       "first_seen_at": "2026-10-24T01:40:22+00:00",
-      "last_observed_at": "2026-10-24T01:40:46+00:00",
+      "last_observed_at": "2026-10-24T01:47:45+00:00",
       "topics": [
         "Credit unions and fintech"
       ],
       "category": "Reported fraud",
       "evidence_status": "unverified_news_lead",
       "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [
+        "$25M"
+      ],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "institution": null,
       "reported_loss": null,
       "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness."
@@ -290,13 +461,18 @@
       "publisher": "iPhone in Canada",
       "published_at": "2026-10-20T16:59:35+00:00",
       "first_seen_at": "2026-10-24T01:27:42+00:00",
-      "last_observed_at": "2026-10-24T01:43:21+00:00",
+      "last_observed_at": "2026-10-24T01:47:44+00:00",
       "topics": [
         "Scams and victims"
       ],
       "category": "Scam and victim reports",
       "evidence_status": "unverified_news_lead",
       "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "institution": null,
       "reported_loss": null,
       "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness."
@@ -308,13 +484,18 @@
       "publisher": "blogTO",
       "published_at": "2026-10-20T15:48:11+00:00",
       "first_seen_at": "2026-10-24T01:27:43+00:00",
-      "last_observed_at": "2026-10-24T01:43:22+00:00",
+      "last_observed_at": "2026-10-24T01:47:44+00:00",
       "topics": [
         "Police investigations"
       ],
       "category": "Scam and victim reports",
       "evidence_status": "unverified_news_lead",
       "geographic_accuracy": "headline_only",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "institution": null,
       "reported_loss": null,
       "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness.",
@@ -331,13 +512,18 @@
       "publisher": "Toronto Sun",
       "published_at": "2026-10-20T15:10:43+00:00",
       "first_seen_at": "2026-10-24T01:27:43+00:00",
-      "last_observed_at": "2026-10-24T01:43:22+00:00",
+      "last_observed_at": "2026-10-24T01:47:44+00:00",
       "topics": [
         "Police investigations"
       ],
       "category": "Reported fraud",
       "evidence_status": "unverified_news_lead",
       "geographic_accuracy": "headline_only",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "institution": null,
       "reported_loss": null,
       "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness.",
@@ -354,13 +540,44 @@
       "publisher": "CBC",
       "published_at": "2026-10-20T14:50:00+00:00",
       "first_seen_at": "2026-10-24T01:27:43+00:00",
-      "last_observed_at": "2026-10-24T01:43:22+00:00",
+      "last_observed_at": "2026-10-24T01:47:46+00:00",
       "topics": [
+        "Fraud research and reports",
         "Police investigations"
       ],
       "category": "Reported fraud",
       "evidence_status": "unverified_news_lead",
       "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
+      "institution": null,
+      "reported_loss": null,
+      "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness."
+    },
+    {
+      "id": "65ec5942d3df0b53e484",
+      "title": "Trump and Vance to announce a US$25M whistleblower program to encourage public to report alleged fraud - BNN Bloomberg",
+      "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxPc1Y3SEZ1VlMtZTljYkVMblEtRmVYdDVvRWVsM29CbmxZQUx3bUpYeW8wV1ROY21EQnNEblh1RmxuY3JPSUtqOXNnZ3RlUDZsWGp5Q1g0c05uOVlGYS1DQ0tJdVdmbDZmMFJZYXRqYXlXWDFwMmZRUmpYQ0F3SDQ3ZHpybzJFa0IyY2FvbGdLU3BnN1M5aGZ2NVktZWpQekFzWkhIZlR0TzQySXNxb1NPdlVKdjR1X3ZNd25FSmhYN0pYZVAwTURRdTF1MDFMdzdTT1JyeXhFNUQtNkloTkxUT3NHazVrQXhfa3dUWnhUSk9EazNDNlRN?oc=5",
+      "publisher": "BNN Bloomberg",
+      "published_at": "2026-10-20T14:47:49+00:00",
+      "first_seen_at": "2026-10-24T01:47:46+00:00",
+      "last_observed_at": "2026-10-24T01:47:46+00:00",
+      "topics": [
+        "Fraud research and reports"
+      ],
+      "category": "Reported fraud",
+      "evidence_status": "unverified_news_lead",
+      "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [
+        "$25M"
+      ],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "institution": null,
       "reported_loss": null,
       "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness."
@@ -372,13 +589,20 @@
       "publisher": "CTV News",
       "published_at": "2026-10-20T14:44:08+00:00",
       "first_seen_at": "2026-10-24T01:27:43+00:00",
-      "last_observed_at": "2026-10-24T01:43:22+00:00",
+      "last_observed_at": "2026-10-24T01:47:44+00:00",
       "topics": [
         "Police investigations"
       ],
       "category": "Reported fraud",
       "evidence_status": "unverified_news_lead",
       "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [
+        "$60K"
+      ],
+      "headline_case_candidate": true,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "institution": null,
       "reported_loss": null,
       "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness."
@@ -390,13 +614,20 @@
       "publisher": "CTV News",
       "published_at": "2026-10-20T14:44:08+00:00",
       "first_seen_at": "2026-10-24T01:27:43+00:00",
-      "last_observed_at": "2026-10-24T01:43:22+00:00",
+      "last_observed_at": "2026-10-24T01:47:44+00:00",
       "topics": [
         "Police investigations"
       ],
       "category": "Reported fraud",
       "evidence_status": "unverified_news_lead",
       "geographic_accuracy": "headline_only",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [
+        "$60K"
+      ],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "institution": null,
       "reported_loss": null,
       "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness.",
@@ -413,13 +644,18 @@
       "publisher": "TSN",
       "published_at": "2026-10-20T14:27:12+00:00",
       "first_seen_at": "2026-10-24T01:27:43+00:00",
-      "last_observed_at": "2026-10-24T01:43:22+00:00",
+      "last_observed_at": "2026-10-24T01:47:44+00:00",
       "topics": [
         "Police investigations"
       ],
       "category": "Reported fraud",
       "evidence_status": "unverified_news_lead",
       "geographic_accuracy": "headline_only",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "institution": null,
       "reported_loss": null,
       "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness.",
@@ -450,7 +686,14 @@
       "map_latitude": 43.6532,
       "map_longitude": -79.3832,
       "map_province": "ON",
-      "map_role": "headline city mention only; incident location unverified"
+      "map_role": "headline city mention only; incident location unverified",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [
+        "$25M"
+      ],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified"
     },
     {
       "id": "4e9bbe0e465eaf1dfdab",
@@ -459,13 +702,18 @@
       "publisher": "UL Lawyers",
       "published_at": "2026-10-20T13:42:03+00:00",
       "first_seen_at": "2026-10-24T01:27:43+00:00",
-      "last_observed_at": "2026-10-24T01:43:22+00:00",
+      "last_observed_at": "2026-10-24T01:47:44+00:00",
       "topics": [
         "Police investigations"
       ],
       "category": "Reported fraud",
       "evidence_status": "unverified_news_lead",
       "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "institution": null,
       "reported_loss": null,
       "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness."
@@ -477,13 +725,18 @@
       "publisher": "insauga.com",
       "published_at": "2026-10-20T13:20:27+00:00",
       "first_seen_at": "2026-10-24T01:27:43+00:00",
-      "last_observed_at": "2026-10-24T01:43:22+00:00",
+      "last_observed_at": "2026-10-24T01:47:44+00:00",
       "topics": [
         "Police investigations"
       ],
       "category": "Reported fraud",
       "evidence_status": "unverified_news_lead",
       "geographic_accuracy": "headline_only",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "institution": null,
       "reported_loss": null,
       "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness.",
@@ -500,13 +753,20 @@
       "publisher": "CityNews Toronto",
       "published_at": "2026-10-20T13:02:00+00:00",
       "first_seen_at": "2026-10-24T01:27:43+00:00",
-      "last_observed_at": "2026-10-24T01:43:22+00:00",
+      "last_observed_at": "2026-10-24T01:47:44+00:00",
       "topics": [
         "Police investigations"
       ],
       "category": "Reported fraud",
       "evidence_status": "unverified_news_lead",
       "geographic_accuracy": "headline_only",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [
+        "$60K"
+      ],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "institution": null,
       "reported_loss": null,
       "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness.",
@@ -517,19 +777,47 @@
       "map_role": "headline city mention only; incident location unverified"
     },
     {
+      "id": "a1819681856ae2a37ed5",
+      "title": "One in four fraud losses in Canada now involves AI-generated techniques - Wealth Professional",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQVFhQZ2RCQ1NoN3dmamxTZWdyMFVvVGVxbGlpZVVIM0xxaENSelVpdzBLV1BZVHVfLVVNcDUxdFdmVUZBSHRiTUk0ZkVveDhWeUJwa1JGT0VhRHo3enc0bFZNdUtyLUZNaTY5bDdUaEJJT3VobUtIMmotTzdRdTJfSVlkWlRNY0JDMkRmZmt5OHJWRkt4TWs0ZlRScTBqMk5NcjM5TWJ0NzRreFNNcFJKRk1iYjNfYmpZQjNOVmsyS25PcEJXQV96QWEwNA?oc=5",
+      "publisher": "Wealth Professional",
+      "published_at": "2026-10-20T10:42:24+00:00",
+      "first_seen_at": "2026-10-24T01:47:46+00:00",
+      "last_observed_at": "2026-10-24T01:47:46+00:00",
+      "topics": [
+        "Fraud research and reports"
+      ],
+      "category": "Reported fraud",
+      "evidence_status": "unverified_news_lead",
+      "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
+      "institution": null,
+      "reported_loss": null,
+      "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness."
+    },
+    {
       "id": "acce1a5c79df66ef503a",
       "title": "U.S., U.K., Canada Target Crypto Phishing in Joint Operation - CoinMarketCap",
       "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQMWhYMkJkbWYyT1ZoaTNoY3dwTmRYbTNheVNla0NCNnZtb3FDempfekNpRGpzQVZIQndaQW42b0lxSTB2SWdIYW02VU95a0lUWEJjQ0lxNzUtVzZsd3ExajdGY09La1h1dG9YRUV3bVRMVE1yS2hfY0dldkE4dXR1SHByY1p0dEY3Y3hLTlZqeGlwSURpcTl3eW5yOTc?oc=5",
       "publisher": "CoinMarketCap",
       "published_at": "2026-10-19T22:04:01+00:00",
       "first_seen_at": "2026-10-24T01:27:42+00:00",
-      "last_observed_at": "2026-10-24T01:43:21+00:00",
+      "last_observed_at": "2026-10-24T01:47:44+00:00",
       "topics": [
         "Scams and victims"
       ],
       "category": "Investment fraud",
       "evidence_status": "unverified_news_lead",
       "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "institution": null,
       "reported_loss": null,
       "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness."
@@ -541,13 +829,20 @@
       "publisher": "CBC",
       "published_at": "2026-10-19T18:35:36+00:00",
       "first_seen_at": "2026-10-24T01:27:43+00:00",
-      "last_observed_at": "2026-10-24T01:43:22+00:00",
+      "last_observed_at": "2026-10-24T01:47:44+00:00",
       "topics": [
         "Police investigations"
       ],
       "category": "Relationship scam",
       "evidence_status": "unverified_news_lead",
       "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [
+        "$1M"
+      ],
+      "headline_case_candidate": true,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "institution": null,
       "reported_loss": null,
       "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness."
@@ -559,13 +854,20 @@
       "publisher": "insauga.com",
       "published_at": "2026-10-19T15:11:15+00:00",
       "first_seen_at": "2026-10-24T01:27:42+00:00",
-      "last_observed_at": "2026-10-24T01:43:21+00:00",
+      "last_observed_at": "2026-10-24T01:47:44+00:00",
       "topics": [
         "Scams and victims"
       ],
       "category": "Relationship scam",
       "evidence_status": "unverified_news_lead",
       "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [
+        "$1 million"
+      ],
+      "headline_case_candidate": true,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "institution": null,
       "reported_loss": null,
       "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness."
@@ -577,7 +879,7 @@
       "publisher": "CBC",
       "published_at": "2026-10-19T15:02:35+00:00",
       "first_seen_at": "2026-10-24T01:27:42+00:00",
-      "last_observed_at": "2026-10-24T01:43:22+00:00",
+      "last_observed_at": "2026-10-24T01:47:45+00:00",
       "topics": [
         "Bank and customer fraud",
         "Investment schemes",
@@ -586,6 +888,11 @@
       "category": "Reported fraud",
       "evidence_status": "unverified_news_lead",
       "geographic_accuracy": "headline_only",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": true,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "institution": null,
       "reported_loss": null,
       "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness.",
@@ -602,13 +909,18 @@
       "publisher": "CityNews Toronto",
       "published_at": "2026-10-19T15:01:00+00:00",
       "first_seen_at": "2026-10-24T01:27:43+00:00",
-      "last_observed_at": "2026-10-24T01:43:22+00:00",
+      "last_observed_at": "2026-10-24T01:47:44+00:00",
       "topics": [
         "Police investigations"
       ],
       "category": "Relationship scam",
       "evidence_status": "unverified_news_lead",
       "geographic_accuracy": "headline_only",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": true,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "institution": null,
       "reported_loss": null,
       "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness.",
@@ -621,17 +933,23 @@
     {
       "id": "aff73b8d11653cae797b",
       "title": "Canada Credit Card Fraud | Pakistani Suspects | NCCIA Lahore | Online Betting - Aaj English TV",
-      "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE1yTWcxdXhXR3JrRXVJNEo0bmt0YU1YRVJ0cEF2dm9rTFB6bEF4eXpCVkJrRmVBTFBXbnBwMzQwaHhoNVdSSXIxMk52Z0J0QQ?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5VMEplZ3ZPYk1vNDhjallIMndWc2xHeWpZZVJNMGU3Q1F5WTB4S3I4R1JsWU1hMDM2ZTZLVW8wOFdOWEo0eXUza2FZUHQ?oc=5",
       "publisher": "Aaj English TV",
       "published_at": "2026-10-19T14:25:12+00:00",
       "first_seen_at": "2026-10-24T01:27:42+00:00",
-      "last_observed_at": "2026-10-24T01:43:21+00:00",
+      "last_observed_at": "2026-10-24T01:47:46+00:00",
       "topics": [
-        "Bank and customer fraud"
+        "Bank and customer fraud",
+        "Fraud research and reports"
       ],
       "category": "Reported fraud",
       "evidence_status": "unverified_news_lead",
       "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "institution": null,
       "reported_loss": null,
       "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness."
@@ -643,13 +961,20 @@
       "publisher": "CBC",
       "published_at": "2026-10-19T08:05:59+00:00",
       "first_seen_at": "2026-10-24T01:27:42+00:00",
-      "last_observed_at": "2026-10-24T01:43:21+00:00",
+      "last_observed_at": "2026-10-24T01:47:43+00:00",
       "topics": [
         "Bank and customer fraud"
       ],
       "category": "Reported fraud",
       "evidence_status": "unverified_news_lead",
       "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [
+        "$450K"
+      ],
+      "headline_case_candidate": true,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "institution": null,
       "reported_loss": null,
       "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness."
@@ -661,13 +986,18 @@
       "publisher": "NOW Toronto",
       "published_at": "2026-10-19T07:00:00+00:00",
       "first_seen_at": "2026-10-24T01:27:43+00:00",
-      "last_observed_at": "2026-10-24T01:43:22+00:00",
+      "last_observed_at": "2026-10-24T01:47:45+00:00",
       "topics": [
         "Investment schemes"
       ],
       "category": "Investment fraud",
       "evidence_status": "unverified_news_lead",
       "geographic_accuracy": "headline_only",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "institution": null,
       "reported_loss": null,
       "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness.",
@@ -678,19 +1008,70 @@
       "map_role": "headline city mention only; incident location unverified"
     },
     {
+      "id": "49d132e1d51ea18d1f87",
+      "title": "Fact File: Elections Alberta has measures to prevent voter fraud in referendum - CTV News",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPRHhQbEt0M3VabTlYb3JxNHBjUE1hWWFER08wWnYyQVZWc09YOV9MMW0wd2ZHQkVsbEk1ODZOeDl2TDJvakM4TElWTVBGZ3BOcVNYMWo3d1NVN0tkbHNQbDZ5UUZYOXZxWHc2Qk84VGU3RnducmFyYy1tX2hBbFBVVWlSYnpXcWpLSzRXYjRZbTZOYlEzWFJwZmZ6b1ROQVZhZmc2b2hwaGVzWmY0cFVsTEdsS0ljN2VCeEE?oc=5",
+      "publisher": "CTV News",
+      "published_at": "2026-10-17T14:37:26+00:00",
+      "first_seen_at": "2026-10-24T01:47:46+00:00",
+      "last_observed_at": "2026-10-24T01:47:46+00:00",
+      "topics": [
+        "Fraud research and reports"
+      ],
+      "category": "Reported fraud",
+      "evidence_status": "unverified_news_lead",
+      "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
+      "institution": null,
+      "reported_loss": null,
+      "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness."
+    },
+    {
       "id": "9f31e490a56588850b7a",
       "title": "Finland-Canada scholarship scam victims threaten Mashujaa Day protests - Citizen Digital",
       "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNQ3MyVm1kUjdKNk5vQTdCNjJlODRUUVR1dXQ2QXVLMGtPWGNmeVpYb3U3Qi0td3lId05aRU0yTFpKaGlabzNGNTFHSXhkdFp3VXFvUEZ0ZUMzYXJWN2pVQnMweUJVWHdCcmlObE92U3FTMGZtamRrWlZjRlZnMEJVNzQ0dHd5VmwxMnVFU3RJclVRZFFxcHZsYzliQjYxWDhjanMwdkduWUY4ejdnZ0dF?oc=5",
       "publisher": "Citizen Digital",
       "published_at": "2026-10-16T19:30:17+00:00",
       "first_seen_at": "2026-10-24T01:27:42+00:00",
-      "last_observed_at": "2026-10-24T01:43:21+00:00",
+      "last_observed_at": "2026-10-24T01:47:44+00:00",
       "topics": [
         "Scams and victims"
       ],
       "category": "Scam and victim reports",
       "evidence_status": "unverified_news_lead",
       "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": true,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
+      "institution": null,
+      "reported_loss": null,
+      "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness."
+    },
+    {
+      "id": "dce7931051af1268c482",
+      "title": "Ex-Manitoba law dean wanted on fraud charges opposes extradition from France - CTV News",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNaXFfWVdHVTJnNExZc0JFLTRkV2JmSGR3MWNsQUFWWFExMTF3OFJBaktneU5MR2Y5Tml2UnRneXQ4SjNRS1p1Mzl0eHN4bmNteDFpWm5zOHlqNHNBd2xjbWlvd1lRS0JKbFhKdHhJZGIxMldEb1hjY25nMFFsY1N2VlRvZUtocnNveXo4M2tQWS1BUHJZRzVzOXBOZ21DSW1NazlZLUh5b3lsQkRMOW91WlVrQzJ2dw?oc=5",
+      "publisher": "CTV News",
+      "published_at": "2026-10-16T17:53:05+00:00",
+      "first_seen_at": "2026-10-24T01:47:46+00:00",
+      "last_observed_at": "2026-10-24T01:47:46+00:00",
+      "topics": [
+        "Fraud research and reports"
+      ],
+      "category": "Reported fraud",
+      "evidence_status": "unverified_news_lead",
+      "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "institution": null,
       "reported_loss": null,
       "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness."
@@ -702,13 +1083,20 @@
       "publisher": "CTV News",
       "published_at": "2026-10-16T03:31:00+00:00",
       "first_seen_at": "2026-10-24T01:27:43+00:00",
-      "last_observed_at": "2026-10-24T01:43:22+00:00",
+      "last_observed_at": "2026-10-24T01:47:44+00:00",
       "topics": [
         "Police investigations"
       ],
       "category": "Reported fraud",
       "evidence_status": "unverified_news_lead",
       "geographic_accuracy": "headline_only",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [
+        "$142K"
+      ],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "institution": null,
       "reported_loss": null,
       "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness.",
@@ -725,13 +1113,18 @@
       "publisher": "https://www.readthepeak.com/",
       "published_at": "2026-10-15T07:00:00+00:00",
       "first_seen_at": "2026-10-24T01:27:42+00:00",
-      "last_observed_at": "2026-10-24T01:43:21+00:00",
+      "last_observed_at": "2026-10-24T01:47:44+00:00",
       "topics": [
         "Scams and victims"
       ],
       "category": "Scam and victim reports",
       "evidence_status": "unverified_news_lead",
       "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "institution": null,
       "reported_loss": null,
       "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness."
@@ -743,13 +1136,20 @@
       "publisher": "TVA Nouvelles",
       "published_at": "2026-10-15T07:00:00+00:00",
       "first_seen_at": "2026-10-24T01:27:44+00:00",
-      "last_observed_at": "2026-10-24T01:43:23+00:00",
+      "last_observed_at": "2026-10-24T01:47:45+00:00",
       "topics": [
         "Québec fraude"
       ],
       "category": "Reported fraud",
       "evidence_status": "unverified_news_lead",
       "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [
+        "RBC"
+      ],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": true,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "institution": null,
       "reported_loss": null,
       "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness."
@@ -761,13 +1161,41 @@
       "publisher": "NetNewsLedger",
       "published_at": "2026-10-14T19:04:26+00:00",
       "first_seen_at": "2026-10-24T01:27:43+00:00",
-      "last_observed_at": "2026-10-24T01:43:22+00:00",
+      "last_observed_at": "2026-10-24T01:47:44+00:00",
       "topics": [
         "Police investigations"
       ],
       "category": "Scam and victim reports",
       "evidence_status": "unverified_news_lead",
       "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": true,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
+      "institution": null,
+      "reported_loss": null,
+      "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness."
+    },
+    {
+      "id": "603da7f1a25191864b11",
+      "title": "Business Matters: Canadian banks, telecom companies launch fraud detection platform - Global News",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQRGNkdmZkS0FudDZPZXhZY3hXc2lUeTcxbUZKNzloNlYzaVhqS3Z4U2Z6aG02WU1YWUtlR29BRnFaUmVlZXlWQS1SMGIxTEdIV2FjSFNTb09uT0c2SFFSNHR2NmxWWU1NczFlQkNuYzRrR3FtOG1WSG9TTjFiOW90eXQwOWlCWWFHTjJEVE1kT3VLNWpCT3FwbXE4U1VaMXNGVVM5MEdpZkpmdklWMkJGODNqTzZ4elNFLVE?oc=5",
+      "publisher": "Global News",
+      "published_at": "2026-10-14T17:13:02+00:00",
+      "first_seen_at": "2026-10-24T01:47:46+00:00",
+      "last_observed_at": "2026-10-24T01:47:46+00:00",
+      "topics": [
+        "Fraud research and reports"
+      ],
+      "category": "Reported fraud",
+      "evidence_status": "unverified_news_lead",
+      "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "institution": null,
       "reported_loss": null,
       "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness."
@@ -779,13 +1207,18 @@
       "publisher": "Newsmakers",
       "published_at": "2026-10-14T16:58:59+00:00",
       "first_seen_at": "2026-10-24T01:27:42+00:00",
-      "last_observed_at": "2026-10-24T01:43:21+00:00",
+      "last_observed_at": "2026-10-24T01:47:44+00:00",
       "topics": [
         "Scams and victims"
       ],
       "category": "Scam and victim reports",
       "evidence_status": "unverified_news_lead",
       "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": true,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "institution": null,
       "reported_loss": null,
       "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness."
@@ -797,13 +1230,18 @@
       "publisher": "YouTube",
       "published_at": "2026-10-14T16:00:21+00:00",
       "first_seen_at": "2026-10-24T01:27:42+00:00",
-      "last_observed_at": "2026-10-24T01:43:21+00:00",
+      "last_observed_at": "2026-10-24T01:47:44+00:00",
       "topics": [
         "Scams and victims"
       ],
       "category": "Scam and victim reports",
       "evidence_status": "unverified_news_lead",
       "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "institution": null,
       "reported_loss": null,
       "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness."
@@ -815,13 +1253,21 @@
       "publisher": "Money.ca",
       "published_at": "2026-10-14T13:30:58+00:00",
       "first_seen_at": "2026-10-24T01:27:42+00:00",
-      "last_observed_at": "2026-10-24T01:43:21+00:00",
+      "last_observed_at": "2026-10-24T01:47:44+00:00",
       "topics": [
         "Scams and victims"
       ],
       "category": "Scam and victim reports",
       "evidence_status": "unverified_news_lead",
       "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [
+        "$17,000 ",
+        "$33,000"
+      ],
+      "headline_case_candidate": true,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "institution": null,
       "reported_loss": null,
       "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness."
@@ -833,13 +1279,18 @@
       "publisher": "Finimize",
       "published_at": "2026-10-14T12:10:04+00:00",
       "first_seen_at": "2026-10-24T01:27:42+00:00",
-      "last_observed_at": "2026-10-24T01:43:21+00:00",
+      "last_observed_at": "2026-10-24T01:47:43+00:00",
       "topics": [
         "Bank and customer fraud"
       ],
       "category": "Reported fraud",
       "evidence_status": "unverified_news_lead",
       "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "institution": null,
       "reported_loss": null,
       "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness."
@@ -851,7 +1302,7 @@
       "publisher": "Financial Post",
       "published_at": "2026-10-14T07:00:00+00:00",
       "first_seen_at": "2026-10-24T01:27:42+00:00",
-      "last_observed_at": "2026-10-24T01:43:21+00:00",
+      "last_observed_at": "2026-10-24T01:47:44+00:00",
       "topics": [
         "Bank and customer fraud",
         "Scams and victims"
@@ -859,6 +1310,11 @@
       "category": "Reported fraud",
       "evidence_status": "unverified_news_lead",
       "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "institution": null,
       "reported_loss": null,
       "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness."
@@ -870,13 +1326,18 @@
       "publisher": "PR Newswire Canada",
       "published_at": "2026-10-14T07:00:00+00:00",
       "first_seen_at": "2026-10-24T01:27:42+00:00",
-      "last_observed_at": "2026-10-24T01:43:21+00:00",
+      "last_observed_at": "2026-10-24T01:47:43+00:00",
       "topics": [
         "Bank and customer fraud"
       ],
       "category": "Reported fraud",
       "evidence_status": "unverified_news_lead",
       "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "institution": null,
       "reported_loss": null,
       "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness."
@@ -888,13 +1349,18 @@
       "publisher": "iPhone in Canada",
       "published_at": "2026-10-14T07:00:00+00:00",
       "first_seen_at": "2026-10-24T01:27:42+00:00",
-      "last_observed_at": "2026-10-24T01:43:21+00:00",
+      "last_observed_at": "2026-10-24T01:47:43+00:00",
       "topics": [
         "Bank and customer fraud"
       ],
       "category": "Scam and victim reports",
       "evidence_status": "unverified_news_lead",
       "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "institution": null,
       "reported_loss": null,
       "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness."
@@ -906,13 +1372,18 @@
       "publisher": "The Globe and Mail",
       "published_at": "2026-10-14T07:00:00+00:00",
       "first_seen_at": "2026-10-24T01:27:42+00:00",
-      "last_observed_at": "2026-10-24T01:43:21+00:00",
+      "last_observed_at": "2026-10-24T01:47:43+00:00",
       "topics": [
         "Bank and customer fraud"
       ],
       "category": "Reported fraud",
       "evidence_status": "unverified_news_lead",
       "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "institution": null,
       "reported_loss": null,
       "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness."
@@ -924,13 +1395,18 @@
       "publisher": "The Globe and Mail",
       "published_at": "2026-10-14T07:00:00+00:00",
       "first_seen_at": "2026-10-24T01:27:42+00:00",
-      "last_observed_at": "2026-10-24T01:43:21+00:00",
+      "last_observed_at": "2026-10-24T01:47:43+00:00",
       "topics": [
         "Bank and customer fraud"
       ],
       "category": "Reported fraud",
       "evidence_status": "unverified_news_lead",
       "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "institution": null,
       "reported_loss": null,
       "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness."
@@ -942,13 +1418,19 @@
       "publisher": "Yahoo Finance",
       "published_at": "2026-10-14T07:00:00+00:00",
       "first_seen_at": "2026-10-24T01:27:42+00:00",
-      "last_observed_at": "2026-10-24T01:43:21+00:00",
+      "last_observed_at": "2026-10-24T01:47:46+00:00",
       "topics": [
-        "Bank and customer fraud"
+        "Bank and customer fraud",
+        "Fraud research and reports"
       ],
       "category": "Reported fraud",
       "evidence_status": "unverified_news_lead",
       "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "institution": null,
       "reported_loss": null,
       "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness."
@@ -960,13 +1442,18 @@
       "publisher": "CTV News",
       "published_at": "2026-10-14T07:00:00+00:00",
       "first_seen_at": "2026-10-24T01:27:42+00:00",
-      "last_observed_at": "2026-10-24T01:43:21+00:00",
+      "last_observed_at": "2026-10-24T01:47:44+00:00",
       "topics": [
         "Scams and victims"
       ],
       "category": "Scam and victim reports",
       "evidence_status": "unverified_news_lead",
       "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": true,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "institution": null,
       "reported_loss": null,
       "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness."
@@ -978,13 +1465,43 @@
       "publisher": "Bloomberg Law News",
       "published_at": "2026-10-14T07:00:00+00:00",
       "first_seen_at": "2026-10-24T01:28:40+00:00",
-      "last_observed_at": "2026-10-24T01:41:55+00:00",
+      "last_observed_at": "2026-10-24T01:47:44+00:00",
       "topics": [
         "Money laundering"
       ],
       "category": "AML and laundering",
       "evidence_status": "unverified_news_lead",
       "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [
+        "TD"
+      ],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
+      "institution": null,
+      "reported_loss": null,
+      "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness."
+    },
+    {
+      "id": "e7340ac78f50bcff55ed",
+      "title": "Canada Reveals How to Spot Visa Application Fraud - ProPakistani",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNUFdiSHRRdGs5QkttT1VIa0s0SjNoWjlTS0hsb2xWNzZZdjU1NDM5TzB6MHVTLTdaR05ibjJzRF84eHRiVXU4VEw4RlZOVE5kRVg1RkJFZm9wdXBjNGRxYlV2RmxoWFZORnJJcllJUGNGNmI2WENreExncVdTYkRYYlE3RkRYOHdWQ21qN0ZR0gGTAUFVX3lxTE8wZzRvNUJ5RFl5Sm1Vc2RreTJDVk9EM3hrUHBTcFEzVkd1VXh1bDk4eEFrcjJhWWc1UEVLaVMzVkpINkowcU5yUHFEelpnWmx5X1haR3NoRE5IclVMR2s4cjZYejJuci0taElVYUgzWXc3WlRNV0FZYllGSEphVlJzN1RzZ0FDNnF6cDllSE5TVWVFdw?oc=5",
+      "publisher": "ProPakistani",
+      "published_at": "2026-10-13T10:09:50+00:00",
+      "first_seen_at": "2026-10-24T01:47:46+00:00",
+      "last_observed_at": "2026-10-24T01:47:46+00:00",
+      "topics": [
+        "Fraud research and reports"
+      ],
+      "category": "Reported fraud",
+      "evidence_status": "unverified_news_lead",
+      "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "institution": null,
       "reported_loss": null,
       "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness."
@@ -996,13 +1513,18 @@
       "publisher": "cotidianul.md",
       "published_at": "2026-10-13T08:43:28+00:00",
       "first_seen_at": "2026-10-24T01:27:42+00:00",
-      "last_observed_at": "2026-10-24T01:43:21+00:00",
+      "last_observed_at": "2026-10-24T01:47:44+00:00",
       "topics": [
         "Scams and victims"
       ],
       "category": "Investment fraud",
       "evidence_status": "unverified_news_lead",
       "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": true,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "institution": null,
       "reported_loss": null,
       "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness."
@@ -1014,13 +1536,18 @@
       "publisher": "National Post",
       "published_at": "2026-10-13T07:00:00+00:00",
       "first_seen_at": "2026-10-24T01:27:43+00:00",
-      "last_observed_at": "2026-10-24T01:43:22+00:00",
+      "last_observed_at": "2026-10-24T01:47:44+00:00",
       "topics": [
         "Police investigations"
       ],
       "category": "Reported fraud",
       "evidence_status": "unverified_news_lead",
       "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": true,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "institution": null,
       "reported_loss": null,
       "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness."
@@ -1032,13 +1559,20 @@
       "publisher": "iPhone in Canada",
       "published_at": "2026-10-12T19:16:12+00:00",
       "first_seen_at": "2026-10-24T01:27:42+00:00",
-      "last_observed_at": "2026-10-24T01:43:21+00:00",
+      "last_observed_at": "2026-10-24T01:47:44+00:00",
       "topics": [
         "Scams and victims"
       ],
       "category": "Scam and victim reports",
       "evidence_status": "unverified_news_lead",
       "geographic_accuracy": "headline_only",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [
+        "$33,000"
+      ],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "institution": null,
       "reported_loss": null,
       "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness.",
@@ -1055,13 +1589,18 @@
       "publisher": "CBC",
       "published_at": "2026-10-11T07:00:00+00:00",
       "first_seen_at": "2026-10-24T01:27:42+00:00",
-      "last_observed_at": "2026-10-24T01:43:21+00:00",
+      "last_observed_at": "2026-10-24T01:47:44+00:00",
       "topics": [
         "Scams and victims"
       ],
       "category": "Scam and victim reports",
       "evidence_status": "unverified_news_lead",
       "geographic_accuracy": "headline_only",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": true,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "institution": null,
       "reported_loss": null,
       "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness.",
@@ -1078,13 +1617,20 @@
       "publisher": "CoinMarketCap",
       "published_at": "2026-10-10T12:55:44+00:00",
       "first_seen_at": "2026-10-24T01:27:42+00:00",
-      "last_observed_at": "2026-10-24T01:43:21+00:00",
+      "last_observed_at": "2026-10-24T01:47:44+00:00",
       "topics": [
         "Scams and victims"
       ],
       "category": "Investment fraud",
       "evidence_status": "unverified_news_lead",
       "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [
+        "$12M"
+      ],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "institution": null,
       "reported_loss": null,
       "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness."
@@ -1096,13 +1642,18 @@
       "publisher": "CTV News",
       "published_at": "2026-10-10T07:00:00+00:00",
       "first_seen_at": "2026-10-24T01:27:42+00:00",
-      "last_observed_at": "2026-10-24T01:43:21+00:00",
+      "last_observed_at": "2026-10-24T01:47:43+00:00",
       "topics": [
         "Bank and customer fraud"
       ],
       "category": "Reported fraud",
       "evidence_status": "unverified_news_lead",
       "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "institution": null,
       "reported_loss": null,
       "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness."
@@ -1114,13 +1665,18 @@
       "publisher": "Yahoo News Canada",
       "published_at": "2026-10-10T07:00:00+00:00",
       "first_seen_at": "2026-10-24T01:27:42+00:00",
-      "last_observed_at": "2026-10-24T01:43:21+00:00",
+      "last_observed_at": "2026-10-24T01:47:44+00:00",
       "topics": [
         "Scams and victims"
       ],
       "category": "Scam and victim reports",
       "evidence_status": "unverified_news_lead",
       "geographic_accuracy": "headline_only",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": true,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "institution": null,
       "reported_loss": null,
       "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness.",
@@ -1129,6 +1685,342 @@
       "map_longitude": -64.7782,
       "map_province": "NB",
       "map_role": "headline city mention only; incident location unverified"
+    },
+    {
+      "id": "4d51155163b2d137faf9",
+      "title": "SGI tackling insurance fraud after staged collision investigation in Regina - CBC",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNMXM0N2lxWEVCbFNxWk5OaHotSDYxMXBDRnFfNW5QcnJxdmVUQTJYTHdSYXZxY055SE50R3lFUlFaNlhuOFZncC05QzRwRHF2VlR0M0xYdElsNGVqWTZvb1lZM2tuQndsSWJQZEtrRDFIejFWNldYUWtTazU3SHQ5YnpDd19IY0E3dXhvdGJYOVQyRGEwTmIwVU9QWXEwamxXdWYzZGs4YWFIZ3M4Tm9qSnVVd19WRjZXTUJnMksxSTRlQlFNb2Ywcg?oc=5",
+      "publisher": "CBC",
+      "published_at": "2026-10-09T07:00:00+00:00",
+      "first_seen_at": "2026-10-24T01:47:46+00:00",
+      "last_observed_at": "2026-10-24T01:47:46+00:00",
+      "topics": [
+        "Fraud research and reports"
+      ],
+      "category": "Reported fraud",
+      "evidence_status": "unverified_news_lead",
+      "geographic_accuracy": "headline_only",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
+      "institution": null,
+      "reported_loss": null,
+      "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness.",
+      "map_location": "Regina, Saskatchewan",
+      "map_latitude": 50.4452,
+      "map_longitude": -104.6189,
+      "map_province": "SK",
+      "map_role": "headline city mention only; incident location unverified"
+    },
+    {
+      "id": "248dac4d261b6b5927e4",
+      "title": "Canada Court Overturns 5-Year Immigration Ban Over Fraud Allegation - INC News",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNb1NSd1MyLW4yVW1iTXRtUU43YXdrVUpfMkhnZUZTM1liMkFEVG04VkhPVmtDMk9tdGxhbnZRNGlRckRDZWwzenQyQUVuRWlHTmJwT1JVdXVQZnR4cUFQTEQtZjZtRzNIVzFKUXZ4ZU1IdWtxQjR5NDNsM01vbTBjb3NEbVRpZw?oc=5",
+      "publisher": "INC News",
+      "published_at": "2026-10-07T07:00:00+00:00",
+      "first_seen_at": "2026-10-24T01:47:46+00:00",
+      "last_observed_at": "2026-10-24T01:47:46+00:00",
+      "topics": [
+        "Fraud research and reports"
+      ],
+      "category": "Reported fraud",
+      "evidence_status": "unverified_news_lead",
+      "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
+      "institution": null,
+      "reported_loss": null,
+      "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness."
+    },
+    {
+      "id": "dc16227a48f3c3f3ff77",
+      "title": "Canada warns newcomers of AI-powered immigration scams, fake officials and job offers - The New Indian Express",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPYW1CZ2tmT01lN0FjdXZlaUV3UTVtNFVYNzQ1c21YbFlrRUVPbjNTazMtcTYwM0hHYmU3V2dET2tZWW40X3ZiZHhGZUhKWHBENWxiYjdMWXJ4ZGtxT0pCazVDalZydHBfTDUweWVPQXZvOTkta1VNekdKYVF5OUpzSXBsYjNPb2ZSaGVTTDFvU3hiWXhySDdkZUZwTW0xV1pPOUl1RkZJLXVWNGNRVUsxTWFkV2hvRzhOT2FDUW1fdWhIZ2ZWN0I3MVVrd2V4VUFh0gHeAUFVX3lxTFBFWktzM3plYkFEYjVDLTMwSlIzRVg2SGRKVFlOb28tcWhuN0JkdHVQcXg2V1JZd0VqR3JNWGpmMF84b0Z1SUZHS3BIdGE3NUZVRUM4RF9OQ3VmMm5oejEzOEZybjZUSDJheWxuOWgxWnQ4Qy0wUmN6NVl4X0EwWjd3cTBIdkJTdHhHM1FpS21lWTZvMzkwZlIyd3RtUFp2dzBUMzc0amZBVDZNbVJUbUVQd28yNGVXMFFqTnN3d3BVU0FJN083SUd3TG5kZkFaWGVnWUlYMFZKUjZCRldjdw?oc=5",
+      "publisher": "The New Indian Express",
+      "published_at": "2026-10-06T07:00:00+00:00",
+      "first_seen_at": "2026-10-24T01:47:46+00:00",
+      "last_observed_at": "2026-10-24T01:47:46+00:00",
+      "topics": [
+        "Fraud research and reports"
+      ],
+      "category": "Scam and victim reports",
+      "evidence_status": "unverified_news_lead",
+      "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
+      "institution": null,
+      "reported_loss": null,
+      "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness."
+    },
+    {
+      "id": "cca0a0c935e28cd504a4",
+      "title": "Canada immigration fraud warning: Check these new scam tactics - True Scoop",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNN3lwY29Vb29jblNfSk9XUXhzd3VxbURVY1Nfdlh3MGdVUmxLN19TdVlNSkpSWEFmZlZrZEx6bW56aXBuOHlCaFFISnJtY1J1ejAyMUpFM2JqYzdFenN3NXkwZkp4MEdyYWUteE1zcDVBeEUybXU0WWIwWlkwYUhzdk1qcnh2dDZCVGYxb0lzSUpfNVd3QnhnSTZnSmt4Q2_SAawBQVVfeXFMTVk3R0xxQWNVU0lKVTRqTHZ1RnBiNkJJb20wOGZPM0JJc09YcWlYTjYzWkMxMEZKLUlFTXh6cEs1clhQSGRjQ0kzR0F6ZGZzNXdheW1hZUc5S0F1TGNvVkIxVEcycjZQLWp4aG5Scm9haG12UjN0MUJJTFZXZU00ZDY5UWdvU1N5dlRtZjczWXkzenlTMF92czllSWpENFhielZWc3kwSzNkd0FaTA?oc=5",
+      "publisher": "True Scoop",
+      "published_at": "2026-10-06T06:59:32+00:00",
+      "first_seen_at": "2026-10-24T01:47:46+00:00",
+      "last_observed_at": "2026-10-24T01:47:46+00:00",
+      "topics": [
+        "Fraud research and reports"
+      ],
+      "category": "Scam and victim reports",
+      "evidence_status": "unverified_news_lead",
+      "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
+      "institution": null,
+      "reported_loss": null,
+      "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness."
+    },
+    {
+      "id": "ee0cb7fa17dbd26f7be1",
+      "title": "Hamilton man faces charges in alleged $490K fraud involving Wellington County non-profit - CBC",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxONVctbEtfLWlLLVBoNWxQbmhGM1NRTUFJTlNZRjlJNG92OHFyajFMMlgwaFBVYkJ1eWlfMXV2VTFMeC0yTmtLRnRVM3A0T1JSbWI2QlpoQmp6UWVDbzZxN0tvbUp5cjVGRWd3cVZFb3ZsWkVhZS0yUS0yWDF3OXBsRE1OREJ3WEJYVU1WaWtPd3l2LVRNbnVWc1lvbGFJVFBfMVFDektOMGM?oc=5",
+      "publisher": "CBC",
+      "published_at": "2026-10-05T07:00:00+00:00",
+      "first_seen_at": "2026-10-24T01:47:46+00:00",
+      "last_observed_at": "2026-10-24T01:47:46+00:00",
+      "topics": [
+        "Fraud research and reports"
+      ],
+      "category": "Reported fraud",
+      "evidence_status": "unverified_news_lead",
+      "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [
+        "$490K"
+      ],
+      "headline_case_candidate": true,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
+      "institution": null,
+      "reported_loss": null,
+      "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness."
+    },
+    {
+      "id": "007fe8b1fa6ead1fe621",
+      "title": "This group of Canadians is the most targeted for credit card fraud due to their higher credit limits - Inside Halton",
+      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQY1RNNFB0M2hvbW04bEEtdWhLOVozd0VnenBwVFY1WWNkeDZTNWZlSE52d052dkFCWkNiZ0hNOEJESWRWVV91cm1qc3NiOU4tV25QSnlIOHh4U1dnSDZ0cGJBQkpoYV82REd6M2FTaWFzLUpLV3hNU3hPNTVzVmFmUG10am1qTEdFTHdDajZ3MmpLZGxuRzJGd0ZTdGl4eWR3RnE4SVI3UjNVcU9fbVZ6a3RLaEJVYU1aQlZyamU5bGtOTmxaWE1PUnVFWklfUmEyTldSMkVvLUswUUlXX1R0TkNB?oc=5",
+      "publisher": "Inside Halton",
+      "published_at": "2026-10-01T07:00:00+00:00",
+      "first_seen_at": "2026-10-24T01:47:46+00:00",
+      "last_observed_at": "2026-10-24T01:47:46+00:00",
+      "topics": [
+        "Fraud research and reports"
+      ],
+      "category": "Reported fraud",
+      "evidence_status": "unverified_news_lead",
+      "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
+      "institution": null,
+      "reported_loss": null,
+      "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness."
+    },
+    {
+      "id": "2625c3ccc815b2b48f46",
+      "title": "This sneaky used car scam showed up in over 20,600 CARFAX Canada reports last year - Narcity",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5WbUZkaGNUODhJcTk4cmRxN1J2dUdzcHB4WUdLemlBbElRREFRSUxIbEJUaWdfOEpYZDdyRGdlaF9BN1doSlpVZEh3SExHUWhQMW1nY1UzZV9LY2xIcnpKaTFMTDI?oc=5",
+      "publisher": "Narcity",
+      "published_at": "2026-10-01T07:00:00+00:00",
+      "first_seen_at": "2026-10-24T01:47:46+00:00",
+      "last_observed_at": "2026-10-24T01:47:46+00:00",
+      "topics": [
+        "Fraud research and reports"
+      ],
+      "category": "Scam and victim reports",
+      "evidence_status": "unverified_news_lead",
+      "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
+      "institution": null,
+      "reported_loss": null,
+      "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness."
+    },
+    {
+      "id": "ba8e43c1247c7b0d5530",
+      "title": "Auto application fraud declines, but misrepresentation persists - Canadian Auto Dealer",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOVjZLem83Z0RpQnM4ZzhTNkcwWkJyeFRNTUJwaUxrOUhMVkY3N1VYY2xkcmFfb0YybVN3aC13aXFuaFZsQnB4STg0d0hDajZITXNnbXNUQWkwZGE0VEs1V2xOOWdYa0VndTlRVnJqYnllU3BQT3dud3B4cHdiOEw0dkNLYlE3S2xoaGxFVlBhdnFNbnozblB5aktScmdZaHp0NUZF?oc=5",
+      "publisher": "Canadian Auto Dealer",
+      "published_at": "2026-09-30T07:00:00+00:00",
+      "first_seen_at": "2026-10-24T01:47:46+00:00",
+      "last_observed_at": "2026-10-24T01:47:46+00:00",
+      "topics": [
+        "Fraud research and reports"
+      ],
+      "category": "Reported fraud",
+      "evidence_status": "unverified_news_lead",
+      "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
+      "institution": null,
+      "reported_loss": null,
+      "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness."
+    },
+    {
+      "id": "81664c6451cf1ff59796",
+      "title": "Credit card application fraud targets Canadians aged 56 to 65 - Wealth Professional",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOU1g4ajFxWkRKdEgyQ3AzZ0k3eUpuNWpfNm9xcWY2eVRydnM2Wno5NmxFa215aHRENWVUMDMyM3dlN2gyd2Z2RGNNUGtyTENtTFdjb1FqdEM5OHptLW5lRTg5QlBCSzIwX3dJaGhzSEhhbmlWeTRIZWFteG1uekc2NDlnV2RMVkJKclVvbHd4aVdBckNMRVkwSmRZa2k4dDM5ZXhHNTVST3BFbndPaGZTN01YeHVBbllYM2hRU3ZB?oc=5",
+      "publisher": "Wealth Professional",
+      "published_at": "2026-09-30T07:00:00+00:00",
+      "first_seen_at": "2026-10-24T01:47:46+00:00",
+      "last_observed_at": "2026-10-24T01:47:46+00:00",
+      "topics": [
+        "Fraud research and reports"
+      ],
+      "category": "Reported fraud",
+      "evidence_status": "unverified_news_lead",
+      "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
+      "institution": null,
+      "reported_loss": null,
+      "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness."
+    },
+    {
+      "id": "cb928fbf726a9a1096df",
+      "title": "Canada can do more to prosecute sophisticated money laundering cases: watchdog report - CFJC Today Kamloops",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOZHpIMksybERTNEw0ZHlZTGtXemQxQWhjX1pWLXJQSzFrZU5UaXVYYm5kRXpfa0RJbjlVRXNSUGJ6ZU5xQnVxUW9XWHBlMHdZYktzb3VVVkVBb2g2RVQ2aGo1d1JOWnlfYm5RLVZhTHBLQ0k0czh3RlJaTGNsQzhJNVBYeXJGT19USnFmOGN5R3lQWVltTTUtYzNhcEwwdWJVM0p5bzJqVWMtdUo5WVlia1dpdW9SM19YS2c?oc=5",
+      "publisher": "CFJC Today Kamloops",
+      "published_at": "2026-09-29T07:00:00+00:00",
+      "first_seen_at": "2026-10-24T01:47:46+00:00",
+      "last_observed_at": "2026-10-24T01:47:46+00:00",
+      "topics": [
+        "Fraud research and reports"
+      ],
+      "category": "AML and laundering",
+      "evidence_status": "unverified_news_lead",
+      "geographic_accuracy": "headline_only",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
+      "institution": null,
+      "reported_loss": null,
+      "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness.",
+      "map_location": "Kamloops, British Columbia",
+      "map_latitude": 50.6745,
+      "map_longitude": -120.3273,
+      "map_province": "BC",
+      "map_role": "headline city mention only; incident location unverified"
+    },
+    {
+      "id": "329556776cf1f2f539bf",
+      "title": "Equifax Canada Reports Rising Credit Card Application Fraud Amid Continued Consumer Financial Pressure - Quiver Quantitative",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPNGYzVmVUektDSnZnNWhLdlRHaldwZTBsVjFCZlk3LWFCbUctdkZHVjBPcDZDS0ZFai1xcXQwM1FqTW1WWVNyTTlNcGVUV2pHVE9zaU5TUXF0TWN2aFVrYlhTVDNNaVVNdTNqUGhrZ29iVkNWV1UyMDZ0NUU2UDhLNlRISi1IenBISTU4ZzVlNW81dzlYY0FfUVdzamcyQk9NS0JGZnVXdFZBd1pGUnRPaW1OOEpiNi1TdG1hUDRKYVFCSE9EZHpNVjhySVJFUUxs?oc=5",
+      "publisher": "Quiver Quantitative",
+      "published_at": "2026-09-29T07:00:00+00:00",
+      "first_seen_at": "2026-10-24T01:47:46+00:00",
+      "last_observed_at": "2026-10-24T01:47:46+00:00",
+      "topics": [
+        "Fraud research and reports"
+      ],
+      "category": "Reported fraud",
+      "evidence_status": "unverified_news_lead",
+      "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
+      "institution": null,
+      "reported_loss": null,
+      "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness."
+    },
+    {
+      "id": "fc53829595f9c0781c22",
+      "title": "'Crypto King' Aiden Pleterski will represent himself at his fraud trial next week - CBC",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxObFB2RnFUYi1xbUJjRzYzSmhUX2N0U3g0MXRHRzJUTFdqTi15WXQ4dzB1TjNDa0FJdnpkVUF2TVgwd3BwWUJQM3R1MHg5V1gyREIyMEs1WEJzbUhueWllcjJ4c3JfMXBPMlVwTUJKVGRKZTBOSU11MWZOM3dPeDB3aFJZMEJDME95QVZsN3RUMTV3ZGVXMlhKaS1YWDdfeEVSbUdkOEZKcU1KOXpQaWw4T290SHNHbWZySmM3bVhaNE9EM2RKMmk0?oc=5",
+      "publisher": "CBC",
+      "published_at": "2026-09-28T07:00:00+00:00",
+      "first_seen_at": "2026-10-24T01:47:46+00:00",
+      "last_observed_at": "2026-10-24T01:47:46+00:00",
+      "topics": [
+        "Fraud research and reports"
+      ],
+      "category": "Investment fraud",
+      "evidence_status": "unverified_news_lead",
+      "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
+      "institution": null,
+      "reported_loss": null,
+      "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness."
+    },
+    {
+      "id": "0a729b2970df0b2cc5da",
+      "title": "Canadian charged with voting fraud in the U.S. for casting ballot in 3 elections - CTV News",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQNzY5NFUwbFNkbHN1OTN2VGdGR1lqMnlLdklaNG5Db3czTGdBQW44d1ZTcjJYSEhRel9sZHVaOFhCdnVpWlY4M1BNb2o2LUFoMmRMV05ZSHBnRFZXQ3RQYTMtRjR0VjZTVlE0a0daZWc1QkVPWExyQlNTdGNvdUxGZ0ZtVmpEdDl6cC1EQ1hadlQtc3pkSWtKd0YtN1dleUo4S2pBUVUwWWR0eDRZZUNRbWl0MC1qNUFa?oc=5",
+      "publisher": "CTV News",
+      "published_at": "2026-09-25T07:00:00+00:00",
+      "first_seen_at": "2026-10-24T01:47:46+00:00",
+      "last_observed_at": "2026-10-24T01:47:46+00:00",
+      "topics": [
+        "Fraud research and reports"
+      ],
+      "category": "Reported fraud",
+      "evidence_status": "unverified_news_lead",
+      "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
+      "institution": null,
+      "reported_loss": null,
+      "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness."
+    },
+    {
+      "id": "b75a11b0b0d856aa245e",
+      "title": "Fraud probe launched after Kingsville couple loses over $200K - CTV News",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQWUlzZmpuWUZxeUVrb29MV1hzLWhUU05zbDNhTUo4WUM1Um92NTZsWjY3bVUwYVVDTkxGdmNNeFB2WnhfbnBhekxDd3Q4V1NhNWREZVNSbEV1UU1sOU5VQ2ZJN1I4MDlZWnZfcEJaNDd2ZS1rWE0wUVFnd2xieENRSnRKSklnZW9zeUltY2JlS0dQWUtLS2dnRl9hdWNIWGx1dWc?oc=5",
+      "publisher": "CTV News",
+      "published_at": "2026-09-24T07:00:00+00:00",
+      "first_seen_at": "2026-10-24T01:47:46+00:00",
+      "last_observed_at": "2026-10-24T01:47:46+00:00",
+      "topics": [
+        "Fraud research and reports"
+      ],
+      "category": "Reported fraud",
+      "evidence_status": "unverified_news_lead",
+      "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "amount_strings_in_headline": [
+        "$200K"
+      ],
+      "headline_case_candidate": true,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
+      "institution": null,
+      "reported_loss": null,
+      "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness."
     }
   ]
 }
