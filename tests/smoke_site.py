@@ -79,6 +79,13 @@ try:
         assert page.locator("#mapMonth").count() == 1
         assert page.locator("#mapCoverage").inner_text().lower().find("indexed headlines") >= 0
         assert page.locator(".count-map-pin").count() > 0
+        print("Geographic data coverage:", page.locator("#mapCoverage").inner_text())
+        assert page.locator(".count-map-pin .count-pin-inner").first.inner_text().strip().isdigit()
+        if page.locator("#mapStoryAll").is_visible():
+            page.locator("#mapStoryAll").click()
+            assert page.locator("#mappedStories .map-story").count() > 500
+            print("All map-adjacent article titles are accessible: PASS")
+
         page.locator("#mapStoryScope").select_option("mapped")
         assert page.locator('#mappedStories button[data-mapfocus]').count() > 0
         page.locator("#mapStoryScope").select_option("all")
@@ -173,6 +180,15 @@ try:
         print("Themes, Wealthsimple, gaming, community safety and navigation: PASS")
         print("Research reports, CAFC historical trend, and simplified consultant workflow: PASS")
         print("Client watchlists, historical filters, linked map, light theme: PASS")
+        # CDN failure may remove the basemap, but must not erase the archive.
+        offline = browser.new_page()
+        offline.route("**/leaflet@1.9.4/dist/leaflet.js", lambda route: route.abort())
+        offline.goto(url, wait_until="domcontentloaded", timeout=20000)
+        offline.wait_for_function("document.querySelector('#mapCoverage').textContent.includes('indexed headlines')", timeout=15000)
+        assert offline.locator("#mappedStories .map-story").count() > 0
+        assert "Map library unavailable" in offline.locator("#mapCaption").inner_text()
+        offline.close()
+        print("Map-CDN outage preserves the article archive: PASS")
         assert not errors, str(errors)
         print("Browser smoke test: PASS")
         browser.close()
