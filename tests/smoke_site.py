@@ -133,6 +133,17 @@ try:
             page.locator("#connectMap").click()
             assert "Client: Royal Bank of Canada" in page.locator("#mapCaption").inner_text()
             print("Institution graph, evidence provenance, triage, watchlist, alias-aware map: PASS")
+        page.locator('[data-tab="reports"]').click()
+        page.wait_for_function("document.querySelectorAll('#libraryRows .library-record').length >= 10", timeout=12000)
+        assert page.locator("#lossTrend .loss-trend-row").count() >= 6
+        page.locator("#librarySearch").fill("ombudsman")
+        assert page.locator("#libraryRows .library-record").count() >= 1
+        page.locator("#librarySearch").fill("")
+        assert page.locator("#libraryCount").inner_text()
+        page.locator('[data-tab="overview"]').click()
+        assert page.locator(".workflow-steps button").count() == 3
+        assert page.locator("#metrics .metric").count() == 4
+        print("Research reports, CAFC historical trend, and simplified consultant workflow: PASS")
         print("Client watchlists, historical filters, linked map, light theme: PASS")
         assert not errors, str(errors)
         print("Browser smoke test: PASS")
