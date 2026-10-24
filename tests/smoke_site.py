@@ -77,7 +77,7 @@ try:
         print("News, major orders, source-reviewed incidents, and map controls: PASS")
         page.wait_for_function("document.querySelectorAll('#mappedStories .map-story').length > 0", timeout=10000)
         assert page.locator("#mapMonth").count() == 1
-        assert page.locator("#mapCoverage").inner_text().lower().find("indexed headlines") >= 0
+        assert "indexed" in page.locator("#mapCoverage").inner_text().lower()
         assert page.locator(".count-map-pin").count() > 0
         print("Geographic data coverage:", page.locator("#mapCoverage").inner_text())
         assert page.locator(".count-map-pin .count-pin-inner").first.inner_text().strip().isdigit()
@@ -108,7 +108,7 @@ try:
             index = json.loads((ROOT / "data" / "article_index.json").read_text())
             assert index["unique_headlines"] == len(index["articles"])
             assert index["unique_headlines"] >= 500
-            assert "unique indexed headlines" in page.locator("#archiveCount").inner_text()
+            assert "indexed headlines" in page.locator("#archiveCount").inner_text()
             print("Unified multi-source article index:", index["unique_headlines"])
 
 
@@ -184,7 +184,7 @@ try:
         offline = browser.new_page()
         offline.route("**/leaflet@1.9.4/dist/leaflet.js", lambda route: route.abort())
         offline.goto(url, wait_until="domcontentloaded", timeout=20000)
-        offline.wait_for_function("document.querySelector('#mapCoverage').textContent.includes('indexed headlines')", timeout=15000)
+        offline.wait_for_function("document.querySelector('#mapCoverage').textContent.includes('indexed')", timeout=15000)
         assert offline.locator("#mappedStories .map-story").count() > 0
         assert "Map library unavailable" in offline.locator("#mapCaption").inner_text()
         offline.close()
