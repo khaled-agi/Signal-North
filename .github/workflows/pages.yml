@@ -56,11 +56,17 @@ jobs:
               echo "::warning::Another commit changed main during collection. Proceeding with the freshly collected deployment snapshot; a later run will reconcile persisted history."
             fi
           fi
+      - name: Assemble cache-busted static website
+        run: |
+          mkdir -p _site/data
+          cp index.html styles.css app.js intel.js .nojekyll _site/
+          cp data/events.json data/status.json data/news.json data/news_status.json data/fraud_stats.json data/bank_disclosures.json _site/data/
+          sed -i "s/__BUILD_SHA__/${GITHUB_SHA}/g" _site/index.html
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload static site
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: _site
       - name: Deploy GitHub Pages
         uses: actions/deploy-pages@v4
