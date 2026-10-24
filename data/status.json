@@ -1,9 +1,9 @@
 {
-  "last_attempt_at": "2026-10-24T03:33:56+00:00",
+  "last_attempt_at": "2026-10-24T03:35:17+00:00",
   "sources": {
     "FINTRAC": {
       "status": "failed",
-      "error": "HTTPSConnectionPool(host='fintrac-canafe.canada.ca', port=443): Read timed out. (read timeout=35)",
+      "error": "502 Server Error: Bad Gateway for url: https://fintrac-canafe.canada.ca/pen/4-eng",
       "url": "https://fintrac-canafe.canada.ca/pen/4-eng"
     },
     "FCAC": {
@@ -14,5 +14,5 @@
   },
   "previous_records": 98,
   "stored_records": 98,
-  "last_completed_at": "2026-10-24T03:34:34+00:00"
+  "last_completed_at": "2026-10-24T03:35:37+00:00"
 }
