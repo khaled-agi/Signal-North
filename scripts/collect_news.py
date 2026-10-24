@@ -54,6 +54,47 @@ def classify(title):
   (["fraud","fraude"],"Reported fraud")]:
   if any(w in t for w in words):return category
  return "Financial crime watch"
+DOMESTIC_PUBLISHERS = (
+ "cbc", "ctv", "global news", "toronto star", "financial post", "the globe and mail",
+ "citynews", "montreal gazette", "ottawa citizen", "vancouver sun", "la presse",
+ "radio-canada", "tva nouvelles", "le devoir", "national post", "canadian press",
+ "the canadian press", "bnnbloomberg", "bnn bloomberg", "calgary herald",
+ "edmonton journal", "winnipeg free press", "halifax examiner", "sasktoday",
+ "canada newswire", "the record", "the tyee", "saltwire", "the logic",
+)
+DOMESTIC_MARKERS = (
+ "canada", "canadian", "ontario", "toronto", "ottawa", "québec", "quebec",
+ "montreal", "montréal", "alberta", "calgary", "edmonton", "manitoba",
+ "winnipeg", "british columbia", "vancouver", "surrey", "saskatchewan",
+ "regina", "saskatoon", "nova scotia", "halifax", "new brunswick",
+ "newfoundland", "pei", "prince edward island", "rcmp", "opp", "fintrac",
+ "fcac", "bmo", "cibc", "scotiabank", "rbc", "td bank", "interac",
+ "fraude bancaire", "gendarmerie royale", "police provinciale",
+)
+CRIME_MARKERS = (
+ "fraud", "fraude", "scam", "escroquerie", "arnaque", "money laundering",
+ "blanchiment", "phishing", "charged", "arrested", "investment scheme",
+ "cyberattack", "ransomware", "data breach", "stolen", "theft",
+ "extortion", "identity theft", "fraudulent", "deceptive marketing",
+ "sanction", "amende", "penalty", "illicit", "money mule",
+ "forged", "impersonation", "hacked", "unauthorized", "laundering",
+)
+FOREIGN_MARKERS = (
+ "mumbai", "sharjah", "dubai", "pakistan", "new delhi", "bengaluru",
+ "india", "bangladesh", "lagos", "nigeria", "philippines", "kenya",
+ "london uk", "south africa", "united kingdom", "australia",
+)
+
+def relevant(title: str, publisher: str) -> bool:
+ t=title.casefold()
+ p=publisher.casefold()
+ if not any(word in t for word in CRIME_MARKERS):
+  return False
+ domestic=any(word in t for word in DOMESTIC_MARKERS)
+ if any(word in t for word in FOREIGN_MARKERS) and not domestic:
+  return False
+ return domestic or any(name in p for name in DOMESTIC_PUBLISHERS)
+
 def collect():
  DATA.mkdir(parents=True,exist_ok=True)
  try:
@@ -77,7 +118,7 @@ def collect():
     published=parse_date(item.findtext("pubDate"))
     source=item.find("source")
     publisher=normalize(source.text) if source is not None else "Syndicated news"
-    if not title or not link.startswith("https://"):continue
+    if not title or not link.startswith("https://") or not relevant(title,publisher):continue
     if published:
      age=datetime.now(timezone.utc)-datetime.fromisoformat(published)
      if age>timedelta(days=90):continue
@@ -97,7 +138,7 @@ def collect():
    status["sources"][topic]={"status":"ok" if items else "empty_feed","returned":len(items),"accepted":count}
   except Exception as exc:
    status["sources"][topic]={"status":"failed","error":str(exc)[:250]}
- leadlist=sorted(by_id.values(),key=lambda x:x.get("published_at") or "",reverse=True)[:400]
+ leadlist=sorted((item for item in by_id.values() if relevant(item.get("title",""),item.get("publisher",""))),key=lambda x:x.get("published_at") or "",reverse=True)[:400]
  FEED.write_text(json.dumps({"updated_at":stamp(),"leads":leadlist},ensure_ascii=False,indent=2)+"\n","utf-8")
  status["stored_leads"]=len(leadlist)
  status["last_completed_at"]=stamp()
