@@ -1,6 +1,6 @@
 "use strict";
 const $ = selector => document.querySelector(selector);
-const state = {events:[],news:[],status:{},map:null,layer:null,tab:"overview",mapMode:"all",mapProvince:"",mapMonth:"",clientFocus:"",mapMarkers:new Map(),incidents:[],entityAliases:[]};
+const state = {events:[],news:[],status:{},map:null,layer:null,tab:"overview",mapMode:"all",mapProvince:"",mapMonth:"",clientFocus:"",mapMarkers:new Map(),incidents:[],entityAliases:[],rawHeadlineCount:0};
 const provinces = {ON:"Ontario",QC:"Québec",BC:"British Columbia",AB:"Alberta",NB:"New Brunswick",NS:"Nova Scotia",MB:"Manitoba",SK:"Saskatchewan",NL:"Newfoundland & Labrador",PE:"Prince Edward Island"};
 function escapeHTML(value){return String(value??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
 function currency(value){if(value==null)return "Not reported";const x=Number(value);return x>=1e6?"$"+(x/1e6).toLocaleString("en-CA",{maximumFractionDigits:2})+"M":"$"+x.toLocaleString("en-CA",{maximumFractionDigits:0});}
@@ -47,7 +47,11 @@ function mapRecord(kind,e){
  const lat=news?e.map_latitude:e.latitude,lon=news?e.map_longitude:e.longitude;
  const hasGeo=Number.isFinite(lat)&&Number.isFinite(lon)&&Math.abs(lat)<=90&&Math.abs(lon)<=180;
  return {kind,id:String(e.id||""),date:dateValue||"",raw:e,
-  title:String(e.title||e.institution||"Untitled evidence"),publisher:String(e.publisher||e.source||e.institution||"Original source"),
+  title:String(e.title||e.institution||"Untitled evidence"),
+  searchText:[e.title,...(e.headline_variations||[]).map(v=>v.title)].join(" ").toLowerCase(),
+  reportCount:e.underlying_headline_count||1,
+  sourceCount:e.source_count||e.number_of_article_links||1,
+  publisher:String(e.publisher||e.source||e.institution||"Original source"),
   lat:hasGeo?lat:null,lon:hasGeo?lon:null,province:news?e.map_province:e.province,
   location:news?(e.map_location||"City mentioned in headline"):e.location||"Source-reported location",
   sourceUrl:news?e.url:e.source_url};
@@ -56,7 +60,7 @@ function refreshMapList(){
  const host=$("#mappedStories");if(!host)return;
  let rows=state.mapRows||[];
  const q=($("#mapStorySearch")?.value||"").trim().toLocaleLowerCase();
- if(q)rows=rows.filter(x=>[x.title,x.publisher,x.province,x.location].some(t=>String(t||"").toLocaleLowerCase().includes(q)));
+ if(q)rows=rows.filter(x=>[x.searchText,x.publisher,x.province,x.location].some(t=>String(t||"").toLocaleLowerCase().includes(q)));
  const scope=state.mapSideScope||"all";
  if(scope==="mapped")rows=rows.filter(x=>x.lat!==null);
  else if(scope==="unmapped")rows=rows.filter(x=>x.lat===null);
@@ -74,11 +78,14 @@ function refreshMapList(){
   const located=x.lat!==null;
   const label=x.kind==="reg"?"Regulatory notice":x.kind==="case"?"Reviewed case":"News headline";
   return '<article class="map-story"><div class="map-story-meta">'+escapeHTML(date(x.date))+" · "+escapeHTML(label)+" · "+escapeHTML(x.publisher)+'</div>'+
-   '<div class="map-story-title">'+(located?
-    '<button data-mapfocus="'+escapeHTML(x.id)+'" type="button">'+escapeHTML(x.title)+'</button>':
+   '<div class="map-story-title">'+(x.kind==="news"?
+    '<button data-story="'+escapeHTML(x.id)+'" type="button">'+escapeHTML(x.title)+'</button>':
     '<a href="'+escapeHTML(/^https:\/\//.test(x.sourceUrl||"")?x.sourceUrl:"#")+'" target="_blank" rel="noopener noreferrer">'+escapeHTML(x.title)+' ↗</a>')+'</div>'+
-   '<div class="map-story-sub">'+(located?'<span class="map-geo-yes">◉ '+escapeHTML(x.location)+'</span>':'<span class="map-geo-no">Location not verified</span>')+
-   (located&&/^https:\/\//.test(x.sourceUrl||"")?' · <a href="'+escapeHTML(x.sourceUrl)+'" target="_blank" rel="noopener noreferrer">Source ↗</a>':"")+
+   '<div class="map-story-sub">'+
+    (x.kind==="news"&&x.sourceCount>1?x.sourceCount+' source links · ':"")+
+    (located?'<span class="map-geo-yes">◉ '+escapeHTML(x.location)+'</span>':'<span class="map-geo-no">Location not verified</span>')+
+    (located? ' · <button data-mapfocus="'+escapeHTML(x.id)+'" type="button" class="map-locate">Locate →</button>':"")+
+    (x.kind!=="news"&&/^https:\/\//.test(x.sourceUrl||"")?' · <a href="'+escapeHTML(x.sourceUrl)+'" target="_blank" rel="noopener noreferrer">Source ↗</a>':"")+
    '</div></article>';
  }).join(""):'<div class="empty">No articles match this search, map layer or geographic coverage filter. Clear the filters or explore the full archive.</div>';
 }
@@ -112,7 +119,7 @@ function renderMapClusters(){
   const popup='<div class="map-pop"><div class="map-pop-heading">'+escapeHTML(n.toLocaleString("en-CA"))+' source records</div>'+
     '<span class="map-pop-source">'+escapeHTML(geoNames||"Source-supported geography")+'</span>'+
     '<p class="map-pop-notice">'+g.weights.news+' headlines · '+g.weights.reg+' regulator notices · '+g.weights.case+' reviewed cases. Record locations are not necessarily fraud locations.</p>'+
-    '<div class="map-popup-record">'+g.items.slice(0,4).map(x=>'<div><span class="map-popup-date">'+escapeHTML(date(x.date))+'</span> '+escapeHTML(x.title)+'</div>').join("")+
+    '<div class="map-popup-record">'+g.items.slice(0,4).map(x=>'<div><span class="map-popup-date">'+escapeHTML(date(x.date))+'</span> '+(x.kind==="news"?'<button type="button" class="report-popup-open" data-story="'+escapeHTML(x.id)+'">'+escapeHTML(x.title)+'</button>':escapeHTML(x.title))+'</div>').join("")+
     (n>4?'<div class="small">+'+(n-4)+' more; select this circle to explore them all.</div>':"")+'</div></div>';
   marker.bindPopup(popup,{maxWidth:330,minWidth:230,maxHeight:350});
   marker.on("click",()=>{
@@ -138,10 +145,11 @@ function initMap(){
   if(state.mapProvince)rows=rows.filter(e=>e.province===state.mapProvince);
   if(state.mapMonth)rows=rows.filter(e=>String(e.date).startsWith(state.mapMonth));
   state.mapRows=rows.sort((a,b)=>String(b.date).localeCompare(String(a.date)));
-  const newsCount=state.news.length,located=state.news.filter(e=>Number.isFinite(e.map_latitude)&&Number.isFinite(e.map_longitude)).length;
-  $("#mapCoverage").innerHTML='<div class="coverage-number"><strong>'+newsCount.toLocaleString()+'</strong><span>indexed headlines</span></div>'+
-   '<div class="coverage-number"><strong>'+located.toLocaleString()+'</strong><span>headline city mentions</span></div>'+
-   '<div class="coverage-number"><strong>'+Math.max(0,newsCount-located).toLocaleString()+'</strong><span>unlocated headlines</span></div>'+
+  const newsCount=state.news.length,originalCount=state.rawHeadlineCount||newsCount,
+        located=state.news.filter(e=>Number.isFinite(e.map_latitude)&&Number.isFinite(e.map_longitude)).length;
+  $("#mapCoverage").innerHTML='<div class="coverage-number"><strong>'+originalCount.toLocaleString()+'</strong><span>indexed headlines</span></div>'+
+   '<div class="coverage-number"><strong>'+newsCount.toLocaleString()+'</strong><span>reporting groups</span></div>'+
+   '<div class="coverage-number"><strong>'+located.toLocaleString()+'</strong><span>groups with city mentions</span></div>'+
    '<p>The archive remains available even when the basemap cannot load.</p>';
   $("#mapCaption").textContent="Map library unavailable. Research titles and original links remain available.";
   $("#mapClusterCount").textContent="Map unavailable; use the article browser.";
@@ -184,12 +192,13 @@ function initMap(){
  records.sort((x,y)=>String(y.date).localeCompare(String(x.date)));
  state.mapRows=records;
  const mapped=records.filter(x=>x.lat!==null).length,unmapped=records.length-mapped;
- const headlineAll=state.news.length,geoNews=state.news.filter(x=>Number.isFinite(x.map_latitude)&&Number.isFinite(x.map_longitude)).length;
+ const headlineAll=state.news.length,rawHeadlineTotal=state.rawHeadlineCount||headlineAll,
+       geoNews=state.news.filter(x=>Number.isFinite(x.map_latitude)&&Number.isFinite(x.map_longitude)).length;
  $("#mapCoverage").innerHTML=
-  '<div class="coverage-number"><strong>'+headlineAll.toLocaleString("en-CA")+'</strong><span>indexed headlines</span></div>'+
-  '<div class="coverage-number"><strong>'+geoNews.toLocaleString("en-CA")+'</strong><span>headline city mentions</span></div>'+
-  '<div class="coverage-number"><strong>'+Math.max(0,headlineAll-geoNews).toLocaleString("en-CA")+'</strong><span>not mapped (no supported city)</span></div>'+
-  '<p>Counts are records, not distinct fraud incidents. Map filters may narrow what is shown below.</p>';
+  '<div class="coverage-number"><strong>'+rawHeadlineTotal.toLocaleString("en-CA")+'</strong><span>indexed article headlines</span></div>'+
+  '<div class="coverage-number"><strong>'+headlineAll.toLocaleString("en-CA")+'</strong><span>collapsed reporting groups</span></div>'+
+  '<div class="coverage-number"><strong>'+geoNews.toLocaleString("en-CA")+'</strong><span>groups with city mentions</span></div>'+
+  '<p>'+Math.max(0,headlineAll-geoNews).toLocaleString("en-CA")+' groups lack supported locations. Grouping is provisional, not a verified incident match.</p>';
  $("#mapCaption").textContent=mapped.toLocaleString()+" mapped / "+records.length.toLocaleString()+" records in this view · "+
   (state.mapProvince?provinces[state.mapProvince]+" · ":"")+
   (state.mapMonth?state.mapMonth+" · ":"")+
@@ -260,6 +269,12 @@ async function load(){
  }catch(err){$("#error").classList.remove("hidden");$("#error").textContent="Unable to load published data: "+err.message;}
 }
 document.addEventListener("click",e=>{
+ const story=e.target.closest("[data-story]");
+ if(story){
+  e.preventDefault();
+  window.dispatchEvent(new CustomEvent("signalnorth:openstory",{detail:{id:story.dataset.story}}));
+  return;
+ }
  const focus=e.target.closest("[data-mapfocus]");
  if(focus){
    // From the News Explorer: clear conflicting filters and show the matching
@@ -316,7 +331,7 @@ $("#mapStoryClear").addEventListener("click",()=>{state.mapSelectedIds=null;stat
 
 window.addEventListener("signalnorth:clientfocus",e=>{state.clientFocus=e.detail?.name||"";state.mapMode="all";document.querySelectorAll("[data-mapmode]").forEach(b=>b.classList.toggle("active",b.dataset.mapmode==="all"));initMap();});
 window.addEventListener("signalnorth:aliasesready",event=>{state.entityAliases=event.detail?.institutions||[];renderMetrics();initMap();});
-window.addEventListener("signalnorth:newsready",event=>{state.news=event.detail?.leads||[];renderMetrics();initMap();});
+window.addEventListener("signalnorth:newsready",event=>{state.news=event.detail?.leads||[];state.rawHeadlineCount=Number(event.detail?.rawHeadlineCount||state.news.length);renderMetrics();initMap();});
 window.addEventListener("signalnorth:incidentsready",event=>{state.incidents=event.detail?.incidents||[];renderMetrics();initMap();});
 window.addEventListener("signalnorth:mapready", () => { if(state.events.length) initMap(); });
 load();
