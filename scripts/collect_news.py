@@ -143,7 +143,7 @@ def headline_claims(title: str) -> dict:
  """Non-verified headline-only cues, never finalized institutional attribution."""
  t=title.casefold()
  banks=[name for name,aliases in BANK_ALIASES if any(re.search(r"(?<!\w)"+re.escape(a)+r"(?!\w)",t) for a in aliases)]
- organizations=[name for name,aliases in PLATFORM_ALIASES if any(re.search(r"(?<!\\w)"+re.escape(a)+r"(?!\\w)",t) for a in aliases)]
+ organizations=[name for name,aliases in PLATFORM_ALIASES if any(re.search(r"(?<!\w)"+re.escape(a)+r"(?!\w)",t) for a in aliases)]
  matches=re.findall(r"(?:C\$|CAD\s*|\$)\s*[\d,]+(?:\.\d+)?\s*(?:million|billion|[mMkK])?\b",title,re.I)
  is_case=any(w in t for w in HEADLINE_CASE_HINTS)
  is_research=bool(re.search(r"\b(?:research|study|industry report|annual report|survey|whitepaper|white paper)\b",t))
