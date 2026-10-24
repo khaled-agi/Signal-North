@@ -33,6 +33,26 @@
     (x.geography?" · City mentioned: "+esc(x.geography):"")+'</div><strong>'+safeLink(x.url,x.title)+'</strong></article>').join(""):
    '<div class="empty">No featured headlines for this theme and year. Use the full article archive to inspect all titles.</div>';
  }
+ function renderCompare(){
+  const a=state.themes.find(x=>x.name===el("themeCompareA").value);
+  const b=state.themes.find(x=>x.name===el("themeCompareB").value);
+  if(!a||!b)return;
+  const share=el("themeCompareMode").value==="share";
+  const rows=state.years.map(y=>{
+   const total=Number(state.byYear[y]||0);
+   return {year:y,total,
+    a:share?(total?100*Number(a.year_counts?.[y]||0)/total:0):Number(a.year_counts?.[y]||0),
+    b:share?(total?100*Number(b.year_counts?.[y]||0)/total:0):Number(b.year_counts?.[y]||0)
+   };
+  });
+  const max=Math.max(1,...rows.flatMap(r=>[r.a,r.b]));
+  const fmt=x=>share?x.toFixed(1)+"%":number(x);
+  el("themeCompareChart").innerHTML='<div class="compare-labels"><span><i class="compare-a"></i>'+esc(a.name)+'</span><span><i class="compare-b"></i>'+esc(b.name)+'</span></div>'+
+   rows.map(r=>'<div class="compare-year"><div class="compare-year-meta"><strong>'+esc(r.year)+(r.year==="2026"?" YTD":"")+'</strong><span>'+
+      number(r.total)+' indexed headlines</span></div>'+
+    '<div class="compare-bars"><div><span class="compare-a" style="width:'+(100*r.a/max).toFixed(1)+'%"></span><b>'+fmt(r.a)+'</b></div>'+
+    '<div><span class="compare-b" style="width:'+(100*r.b/max).toFixed(1)+'%"></span><b>'+fmt(r.b)+'</b></div></div></div>').join("");
+ }
  function renderSectors(){
   const q=el("sectorSearch").value.toLowerCase().trim(),sector=el("sectorFilter").value,type=el("sectorType").value;
   const found=state.sectors.filter(x=>(!sector||x.sector===sector)&&(!type||x.kind===type)&&
@@ -59,7 +79,14 @@
    const prev=state.selected;state.selected=(state.themes.find(x=>x.name===prev)||state.themes[0]||{}).name||"";
    el("themeChoose").innerHTML=state.themes.map(x=>'<option value="'+esc(x.name)+'">'+esc(x.name)+'</option>').join("");
    el("themeYear").innerHTML='<option value="">All publication years</option>'+state.years.map(x=>'<option value="'+esc(x)+'">'+esc(x)+'</option>').join("");
-   renderThemes();
+   const opts=state.themes.map(x=>'<option value="'+esc(x.name)+'">'+esc(x.name)+'</option>').join("");
+   for(const id of ["themeCompareA","themeCompareB"]){
+     const previous=el(id).value;
+     el(id).innerHTML=opts;
+     if(previous&&state.themes.some(x=>x.name===previous))el(id).value=previous;
+   }
+   if(state.themes.length>1&&el("themeCompareA").value===el("themeCompareB").value)el("themeCompareB").selectedIndex=1;
+   renderThemes();renderCompare();
   }else{
    el("themeCount").textContent="Theme analysis unavailable";
    el("themeGrid").innerHTML='<div class="empty">Theme data will appear after the next successful source scan.</div>';
@@ -77,6 +104,7 @@
   if(!wired){
    el("themeChoose").addEventListener("change",e=>{state.selected=e.target.value;renderThemes()});
    el("themeYear").addEventListener("change",renderThemes);
+   for(const id of ["themeCompareA","themeCompareB","themeCompareMode"])el(id).addEventListener("change",renderCompare);
    el("themeSourceLink").addEventListener("click",()=>document.querySelector('[data-tab="reports"]').click());
    el("sectorSearch").addEventListener("input",renderSectors);
    el("sectorFilter").addEventListener("change",renderSectors);
