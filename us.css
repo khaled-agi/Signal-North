@@ -108,3 +108,13 @@
 @media(max-width:900px){.us-two-cols{grid-template-columns:1fr}.us-pulse-grid{grid-template-columns:1fr 1fr}.us-guide-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:800px){.us-country-switch{display:flex;padding:0 7px;gap:4px}.us-country-switch a{padding:6px 9px;font-size:11px}.us-intro h1{font-size:34px}.us-guide-grid{grid-template-columns:1fr}.us-global-controls{gap:8px}.us-searchbar select{max-width:none}.us-sidebar .side-caption{display:none}}
 @media(max-width:530px){.us-metrics,.us-pulse-grid{grid-template-columns:1fr 1fr}.us-chart-row{grid-template-columns:70px minmax(0,1fr) 45px}.us-header-country{display:none}.us-record{flex-direction:column}.us-section-intro h2{font-size:29px}#usMap{height:370px}}
+
+
+/* Official 2025 FBI IC3 state evidence options and legible state comparators. */
+.us-map-toolbar{display:flex;align-items:center;gap:9px;padding:0 18px 14px;flex-wrap:wrap}
+.us-map-toolbar label{font-size:10px;color:#5e7987;font-weight:800;text-transform:uppercase}
+.us-map-toolbar select{background:#fff;border:1px solid #d3e1e5;border-radius:6px;color:#274b59;font-size:11px;padding:9px;max-width:100%}
+.us-ic3-row{grid-template-columns:155px minmax(0,1fr) 80px}
+.us-ic3-row .label{font-size:11px}
+.us-pin-inner{font-size:11px;letter-spacing:-.3px}
+@media(max-width:530px){.us-ic3-row{grid-template-columns:100px minmax(0,1fr) 65px}}
