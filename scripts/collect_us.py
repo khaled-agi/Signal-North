@@ -55,7 +55,7 @@ def stable(source, url):
 def verified_link(href, expected):
     url = urljoin(expected, href or "")
     p = urlsplit(url)
-    return url if p.scheme == "https" and p.hostname in expected else ""
+    return url if p.scheme == "https" and p.hostname == urlsplit(expected).hostname else ""
 
 def fetch(url, timeout=25):
     r = requests.get(url, headers=HEADERS, timeout=timeout)
@@ -154,7 +154,7 @@ def headline_state(title):
         if abbr == "WA":
             expression = r"\bWashington\s+(?:state|State)\b"
         elif abbr == "GA":
-            expression = r"\bGeorgia\s+(?:state|State)\b|\bAtlanta\b"
+            expression = r"\bGeorgia\s+(?:state|State)\b"
         else:
             expression = r"(?<!\w)" + re.escape(name) + r"(?!\w)"
         if re.search(expression, title, re.I):
