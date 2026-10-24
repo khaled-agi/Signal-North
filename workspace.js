@@ -47,11 +47,11 @@
  }
  async function boot(){
   try{
-   const files=["events.json","incidents.json","news.json","news_archive.json"];
+   const files=["events.json","incidents.json","news.json","news_archive.json","article_index.json"];
    const results=await Promise.all(files.map(async file=>{const res=await fetch("./data/"+file+"?t="+Date.now(),{cache:"no-store"});return res.ok?res.json():{}}));
    records=results[0].events||[];cases=results[1].incidents||[];
    const combined=[...(results[2].leads||[]),...(results[3].leads||[])];
-   leads=[...new Map(combined.map(e=>[e.id,e])).values()];
+   leads=(results[4].articles||[]).length?results[4].articles:[...new Map(combined.map(e=>[e.id,e])).values()];
   }catch(e){console.warn("Client source load incomplete",e)}
   render();
  }
