@@ -1,0 +1,51 @@
+/* Shared Canada + U.S. UI — one domain, one explorer, one map */
+.us-country-switch{display:grid;gap:6px;padding:5px 8px 13px}
+.us-country-switch label{font-size:10px;letter-spacing:.4px;color:#587682;font-weight:850;text-transform:uppercase}
+.us-country-switch select{border:1px solid #cddfdf;border-radius:7px;background:#edf6f5;padding:11px;color:#145965;font-size:12px;font-weight:750;width:100%}
+.us-country-switch small{font-size:10px;color:#6f8992;line-height:1.45}
+#mapMeasure{max-width:240px!important}
+#mapMeasure option[disabled]{color:#9caeae}
+.north-insight{margin:0 0 17px;padding:12px 17px;border:1px solid #d6e6e5;background:#f2f8f7;border-radius:8px}
+.north-insight>div{display:flex;flex-direction:column;gap:6px}
+.north-insight strong{color:#244e58;font-size:16px;line-height:1.3}
+.north-insight span{color:#21616c;font-size:12px;font-weight:700}
+.north-insight p{margin:0;font-size:11px;line-height:1.65;color:#5b777e}
+.north-ic3-context{border-top:1px solid #d9e9e9;background:#f5f9f9;padding:10px 17px;color:#5a7882;line-height:1.6;font-size:11px}
+.north-ic3-context strong{color:#256b72}
+.north-section-heading{padding:8px 2px 20px}
+.north-section-heading h2{font-family:var(--serif,Georgia,serif);font-weight:500;font-size:30px;line-height:1.2;margin:5px 0 8px;color:#1d404e}
+.north-section-heading p{font-size:12px;line-height:1.7;max-width:920px;color:#5d7a86;margin:0}
+.north-source-record{padding:14px 20px;border-top:1px solid #e3eaed}
+.north-source-record:first-child{border-top:0}
+.north-source-meta{color:#687f8d;font-size:10px}
+.north-source-meta b{color:#1b6569;font-size:9px;letter-spacing:.35px}
+.north-source-meta b.north-unverified{color:#99763b}
+.north-source-title{background:transparent;border:0;cursor:pointer;padding:6px 0;text-align:left;font-size:13px;font-weight:700;line-height:1.45;color:#1c4554}
+.north-source-title:hover{text-decoration:underline}
+.north-source-record p{color:#607b87;margin:0;font-size:11px;line-height:1.65}
+.north-report-controls{padding:0 18px 12px}
+.north-report-controls input{width:100%;padding:11px;border:1px solid #d2e0e4;border-radius:6px;color:#2b5260;background:#fff}
+.north-report-footer{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:17px 19px}
+.north-report-footer button{border:1px solid #c5dedc;background:#eff7f6;color:#23656a;border-radius:6px;padding:9px 12px;font-size:11px;cursor:pointer}
+.north-report-footer small{color:#607e87;font-size:11px}
+.north-empty{font-size:12px;color:#6c828b;padding:18px}
+.north-org-row{padding:14px 21px;border-top:1px solid #e3edef;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.north-org-row strong{font-size:12px;color:#254d5c}
+.north-org-row span{font-size:11px;color:#718894}
+.north-bars{padding:10px 20px;display:grid;gap:12px}
+.north-bar{display:grid;grid-template-columns:160px minmax(0,1fr) 55px;gap:12px;align-items:center}
+.north-bar span{color:#4c6d7a;font-size:11px}
+.north-bar strong{color:#235665;font-size:12px;text-align:right}
+.north-bar-track{background:#edf4f5;height:14px;border-radius:3px;overflow:hidden}
+.north-bar-track i{display:block;height:100%;background:#226e74;border-radius:3px}
+.north-evidence-caution{padding:8px 20px 20px;font-size:11px;color:#718894;line-height:1.6}
+.north-source-entry{border-top:1px solid #e0e8e9;padding:13px 20px;display:flex;align-items:center;justify-content:space-between;gap:15px}
+.north-source-entry strong{color:#214c5b;font-size:12px}
+.north-source-entry span{padding:3px 8px;background:#eef6f4;color:#4a7374;border-radius:5px;font-size:10px;margin-left:8px}
+.north-source-entry p{margin:5px 0 0;color:#6e838d;font-size:11px}
+.north-source-entry a{font-size:11px;white-space:nowrap}
+.north-ca-scope[hidden],.north-us-scope[hidden],.north-insight[hidden],.north-ic3-context[hidden]{display:none!important}
+body[data-country="us"] [data-mapmode="major"]{display:none}
+body[data-country="us"] .map-size-legend{display:none}
+@media(max-width:800px){.us-country-switch{padding:0 7px}.us-country-switch select{font-size:11px;padding:8px}.north-org-row,.north-source-entry{flex-direction:column;align-items:start}.north-bar{grid-template-columns:110px minmax(0,1fr) 45px;gap:7px}.north-insight strong{font-size:14px}}
+@media(max-width:480px){#mapMeasure{min-width:155px!important}.north-bar{grid-template-columns:90px minmax(0,1fr) 45px}}

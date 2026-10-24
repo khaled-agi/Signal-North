@@ -38,14 +38,15 @@ jobs:
         run: python -m pip install -r requirements.txt
       - name: Validate application syntax
         run: |
-          python -m py_compile scripts/collect.py scripts/collect_news.py scripts/collect_sources.py scripts/build_article_index.py scripts/build_story_groups.py scripts/build_intelligence_graph.py scripts/collect_publishers.py scripts/build_theme_trends.py
+          python -m py_compile scripts/collect.py scripts/collect_news.py scripts/collect_sources.py scripts/build_article_index.py scripts/build_story_groups.py scripts/build_intelligence_graph.py scripts/collect_publishers.py scripts/build_theme_trends.py scripts/collect_us.py
           node --check app.js
           node --check intel.js
           node --check workspace.js
           node --check connections.js
           node --check research.js
           node --check network.js
-          python -m unittest discover -s tests -p 'test_logic.py'
+          node --check north_america.js
+          python -m unittest discover -s tests -p 'test_*.py'
       - name: Collect regulator publications
         env:
           TRACKER_USER_AGENT: "SignalNorthPublicResearch/0.1 (+https://github.com/khaled-agi/Signal-North)"
@@ -59,6 +60,9 @@ jobs:
       - name: Discover Canadian publisher fraud articles
         continue-on-error: true
         run: python scripts/collect_publishers.py
+      - name: Discover US federal enforcement and rotate state-level reporting searches
+        continue-on-error: true
+        run: python scripts/collect_us.py
       - name: Assemble deduplicated source-linked article archive
         run: python scripts/build_article_index.py
       - name: Build grouped reporting with original variants
@@ -72,7 +76,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/events.json data/status.json data/news.json data/news_status.json data/article_index.json data/reporting_groups.json data/institution_intelligence.json data/review_queue.json data/theme_trends.json
+          git add data/events.json data/status.json data/news.json data/news_status.json data/article_index.json data/reporting_groups.json data/institution_intelligence.json data/review_queue.json data/theme_trends.json data/us_enforcement.json data/us_news.json data/us_status.json
           if [ -f data/publisher_news.json ]; then git add data/publisher_news.json; fi
           if [ -f data/publisher_source_status.json ]; then git add data/publisher_source_status.json; fi
           if [ -f data/external_source_status.json ]; then git add data/external_source_status.json; fi
@@ -95,8 +99,8 @@ jobs:
       - name: Assemble cache-busted static website
         run: |
           mkdir -p _site/data
-          cp index.html styles.css light.css editorial.css connections.css research.css network.css refine.css app.js intel.js workspace.js connections.js research.js network.js .nojekyll _site/
-          cp data/events.json data/status.json data/news.json data/news_status.json data/fraud_stats.json data/bank_disclosures.json data/incidents.json _site/data/
+          cp index.html styles.css light.css editorial.css connections.css research.css network.css refine.css north_america.css app.js intel.js workspace.js connections.js research.js network.js north_america.js .nojekyll _site/
+          cp data/events.json data/status.json data/news.json data/news_status.json data/fraud_stats.json data/bank_disclosures.json data/incidents.json data/us_states.json data/us_enforcement.json data/us_news.json data/us_status.json data/us_ic3_2025.json _site/data/
           if [ -f data/news_archive.json ]; then cp data/news_archive.json _site/data/; fi
           if [ -f data/archive_status.json ]; then cp data/archive_status.json _site/data/; fi
           if [ -f data/article_index.json ]; then cp data/article_index.json _site/data/; fi

@@ -17,11 +17,14 @@
 <link rel="stylesheet" href="./research.css?v=__BUILD_SHA__">
 <link rel="stylesheet" href="./network.css?v=__BUILD_SHA__">
 <link rel="stylesheet" href="./refine.css?v=__BUILD_SHA__">
+<link rel="stylesheet" href="./north_america.css?v=__BUILD_SHA__">
 </head>
 <body>
 <div class="layout">
 <aside class="sidebar">
   <div class="brand"><div class="brand-mark">✳</div><div>signal<span>north</span><small>FINANCIAL CRIME INTELLIGENCE</small></div></div>
+  <div class="side-caption">NORTH AMERICA</div>
+  <div class="us-country-switch"><label for="countryScope">Research coverage</label><select id="countryScope" aria-label="Select country for research"><option value="all">Canada + United States</option><option value="ca">Canada only</option><option value="us">United States only</option></select><small id="countryLabel">North America · Canada + United States</small></div>
   <div class="side-caption">RESEARCH WORKSPACE</div>
   <button class="nav active" data-tab="overview">◈ &nbsp; Explore</button>
   <button class="nav" data-tab="fraud">⚑ &nbsp; Reporting events</button>
@@ -43,20 +46,20 @@
 </aside>
 <div class="main">
   <header class="header">
-    <span>CANADA / <strong id="crumb">INTELLIGENCE OVERVIEW</strong></span>
+    <span>NORTH AMERICA / <strong id="crumb">INTELLIGENCE OVERVIEW</strong></span>
     <div class="header-right"><span id="updated">Snapshot loading</span><a class="scan-link" target="_blank" rel="noopener" title="Start a new source scan from GitHub Actions" href="https://github.com/khaled-agi/Signal-North/actions/workflows/pages.yml">Run source scan ↗</a><button class="reload" id="reload" type="button" title="Reload the latest already-published snapshot">↻ Refresh snapshot</button></div>
   </header>
   <main class="content">
-  <div class="intro"><div><div class="eyebrow">SOURCE-LINKED FINANCIAL CRIME INTELLIGENCE / CANADA</div><h1 id="headline">Explore financial crime.<br><em>Connect the evidence.</em></h1><p id="description">What is happening, where is it reported, and which organizations or scam methods connect the evidence?</p></div><span class="preview">✳ &nbsp; SOURCE-LINKED RESEARCH</span></div>
+  <div class="intro"><div><div class="eyebrow">SOURCE-LINKED FINANCIAL CRIME INTELLIGENCE / CANADA + UNITED STATES</div><h1 id="headline">Explore financial crime.<br><em>Connect the evidence.</em></h1><p id="description">What is happening, where is it reported, and which organizations or scam methods connect the evidence?</p></div><span class="preview">✳ &nbsp; SOURCE-LINKED RESEARCH</span></div>
   <div class="error hidden" id="error" role="status"></div>
   <section id="overview" class="tab">
-    <div class="metrics" id="metrics"></div>
+    <div class="metrics" id="metrics"></div><section id="northInsight" class="north-insight" aria-live="polite"></section>
 
 
     <div class="cols">
-      <section class="panel map-panel"><div class="panel-heading"><div><div class="eyebrow">02 / WHERE AND HOW?</div><h2>Explore reporting by place and time</h2></div><button id="mapReset" class="map-reset" type="button">⌖ Canada view</button></div>
-    <div class="map-controls"><div class="map-mode" role="group" aria-label="Map event layers"><button type="button" data-mapmode="all" class="active">All located</button><button type="button" data-mapmode="enforcement">Enforcement</button><button type="button" data-mapmode="major">Major C$1M+</button><button type="button" data-mapmode="news">News leads</button></div><select id="mapCountMode" aria-label="Map count meaning"><option value="groups">Count reporting groups</option><option value="headlines">Count underlying headlines</option></select><select id="mapTopic" aria-label="Filter map scam topic"><option value="">All topics</option></select><select id="mapYearFrom" aria-label="From publication year"><option value="">From any year</option></select><select id="mapYearTo" aria-label="Through publication year"><option value="">Through latest</option></select><select id="mapProvince" aria-label="Map province filter"><option value="">All provinces</option></select><input id="mapMonth" type="month" aria-label="Publication month"><button id="mapClearMonth" type="button" class="map-reset">All dates</button></div>
-    <div id="map" class="map"></div><div class="map-mapfooter"><div class="map-key"><span class="key-news">●</span> Headline mentions <span class="key-reg">●</span> Regulator locations <span class="key-case">●</span> Reviewed cases <span class="map-size-legend">◉ Circle number = grouped records</span></div><div class="map-caption" id="mapCaption">Loading map layers...</div><div id="mapClusterCount" class="map-cluster-meta" aria-live="polite">Calculating circles...</div></div><p class="map-disclaimer">Circles aggregate source-linked records at the current zoom. Their number reflects available <strong>mapped records</strong>, not incidents or verified fraud rates. Unlocated titles remain searchable in the article list; none are assigned invented coordinates.</p></section>
+      <section class="panel map-panel"><div class="panel-heading"><div><div class="eyebrow">02 / WHERE AND HOW?</div><h2>Explore reporting by place and time</h2></div><button id="mapReset" class="map-reset" type="button">⌖ North America view</button></div>
+    <div class="map-controls"><div class="map-mode" role="group" aria-label="Map event layers"><button type="button" data-mapmode="all" class="active">All located</button><button type="button" data-mapmode="enforcement">Enforcement</button><button type="button" data-mapmode="major">Major C$1M+</button><button type="button" data-mapmode="news">News leads</button></div><select id="mapMeasure" aria-label="Map evidence measure"><option value="records">Source records on map</option><option value="ic3_rate">U.S. IC3 complaints per 100K (2025)</option><option value="ic3_count">U.S. IC3 complaint counts (2025)</option><option value="ic3_loss">U.S. IC3 reported losses USD (2025)</option></select><select id="mapCountMode" aria-label="Map count meaning"><option value="groups">Count reporting groups</option><option value="headlines">Count underlying headlines</option></select><select id="mapTopic" aria-label="Filter map scam topic"><option value="">All topics</option></select><select id="mapYearFrom" aria-label="From publication year"><option value="">From any year</option></select><select id="mapYearTo" aria-label="Through publication year"><option value="">Through latest</option></select><select id="mapProvince" aria-label="Map province filter"><option value="">All provinces</option></select><input id="mapMonth" type="month" aria-label="Publication month"><button id="mapClearMonth" type="button" class="map-reset">All dates</button></div>
+    <div id="map" class="map"></div><div id="northIC3Context" class="north-ic3-context" aria-live="polite"></div><div class="map-mapfooter"><div class="map-key"><span class="key-news">●</span> Headline mentions <span class="key-reg">●</span> Regulator locations <span class="key-case">●</span> Reviewed cases <span class="map-size-legend">◉ Circle number = grouped records</span></div><div class="map-caption" id="mapCaption">Loading map layers...</div><div id="mapClusterCount" class="map-cluster-meta" aria-live="polite">Calculating circles...</div></div><p class="map-disclaimer">Circles aggregate source-linked records at the current zoom. Their number reflects available <strong>mapped records</strong>, not incidents or verified fraud rates. Unlocated titles remain searchable in the article list; none are assigned invented coordinates.</p></section>
       <section class="panel right-panel"><div class="panel-heading"><div><div class="eyebrow">01 / WHAT IS HAPPENING?</div><h2>Grouped reporting events</h2></div></div><div class="map-coverage" id="mapCoverage" aria-live="polite">Calculating geographic coverage...</div>
       <div class="map-list-controls"><input id="mapStorySearch" type="search" placeholder="Search every article title..." aria-label="Search mapped and unmapped articles"><select id="mapStoryScope" aria-label="Location coverage"><option value="all">All articles</option><option value="mapped">Located on map</option><option value="unmapped">No source-backed location</option><option value="selected">Selected map circle</option></select></div>
       <div class="map-story-summary" id="mapStorySummary">Loading source archive...</div>
@@ -93,7 +96,7 @@
       <p class="library-fineprint">Fraud is underreported; figures are subject to revision and differing reporting dates. Hover or open each source to check its release and limitations.</p>
     </section>
   </section>
-  <section id="themes" class="tab hidden">
+  <section id="themes" class="tab hidden"><div id="northTrends" class="north-us-scope"></div><div class="north-ca-scope">
     <section class="panel">
       <div class="panel-heading"><div><div class="eyebrow">LONGITUDINAL INTELLIGENCE / 2020–2026</div><h2>How scam coverage changes over time</h2></div><span id="themeCount" class="small">Loading archive analysis...</span></div>
       <div class="notice"><strong>Headline coverage, not measured fraud incidence.</strong> Each article is categorized from its title and may match several themes. Changes in source collection, media attention, and language influence counts. Use official CAFC data to understand reported victim losses.</div>
@@ -106,7 +109,8 @@
       <div class="panel-heading"><div><div class="eyebrow">READ THE ACTUAL SOURCES</div><h2 id="themeExamplesTitle">Supporting news examples</h2></div><button class="link-btn" data-to="fraud">Full article archive →</button></div>
       <div id="themeExamples" class="theme-examples"><div class="empty">Choose a theme to see sourced headlines.</div></div>
     </section>
-  </section>
+  </div>
+</section>
   <section id="sectors" class="tab hidden">
     <section class="panel">
       <div class="panel-heading"><div><div class="eyebrow">SECTOR RADAR / ORIGINAL REGULATORY SOURCES</div><h2>Fintech, crypto, casinos &amp; securities</h2></div><span id="sectorCount" class="small">Loading sector evidence...</span></div>
@@ -132,7 +136,7 @@
     </section>
   </section>
   <section id="incidents" class="tab hidden"><div class="case-research-intro"><div class="eyebrow">REVIEWED CASE INTELLIGENCE</div><h2>How the reported fraud unfolded</h2><p>Explore source-attributed sequences, financial impact, institution roles and investigative questions. These cases are drawn from reviewed public reporting; source claims are not independent findings about an institution. Open <strong>View investigation</strong> for the evidence trail.</p></div><div class="panel"><div class="panel-heading"><div><div class="eyebrow">CASE INTELLIGENCE / CANADA</div><h2>Victim incidents and linked institutions</h2></div><span class="small" id="incidentCount">Loading...</span></div><div class="notice"><strong>Bank involvement is not bank culpability.</strong> Cases include fraud victims, impersonated institutions, refunds, and payment recovery. Publication dates are not necessarily incident dates. Amounts are tagged as victim losses, exposure, or recovered funds.</div><div class="case-filters"><input id="incidentSearch" type="search" placeholder="Search bank, scam type or location..."><select id="incidentProvince"><option value="">All provinces</option></select><select id="incidentBank"><option value="">All banks / unnamed</option></select></div><div id="incidentRows" class="incident-rows"></div></div></section>
-  <section id="fraud" class="tab hidden">
+  <section id="fraud" class="tab hidden"><div id="northReporting" class="north-us-scope"></div><div class="north-ca-scope">
     <div class="explorer-intro"><div class="eyebrow">01 / WHAT'S HAPPENING?</div><h2>One story. All its reporting.</h2><p>Discover grouped public reporting; open a record to compare each original publisher's headline and source. These are provisional groupings, not independently verified single fraud incidents.</p></div>
     <div class="panel">
       <div class="panel-heading"><div><div class="eyebrow">GROUPED REPORTING / PRIMARY SOURCES</div><h2>Reporting event explorer</h2></div><span id="newsCount" class="small">Loading leads</span></div>
@@ -147,6 +151,7 @@
       <div id="fraudNational" class="fraud-national"></div>
     </div>
 </div></details>
+  </div>
   </section>
   <section id="losses" class="tab hidden">
     <div class="panel"><div class="panel-heading"><div><div class="eyebrow">FINANCIAL IMPACT / VERIFIED SOURCES</div><h2>Annual institution penalties versus fraud losses</h2></div><div class="year-tools"><select id="lossEntityType" class="year-select" aria-label="Institution category"><option value="financial">Banks &amp; credit unions</option><option value="all">All regulated entities</option></select><select id="lossYear" class="year-select" aria-label="Publication year"></select></div></div>
@@ -157,8 +162,9 @@
       <div id="disclosedLossRows" class="method"><p>Loading disclosure records...</p></div>
     </div>
   </section>
-  <section id="events" class="tab hidden">
+  <section id="events" class="tab hidden"><div id="northEnforcement" class="north-us-scope"></div><div class="north-ca-scope">
     <div class="panel"><div class="panel-heading"><div><div class="eyebrow">CASE EXPLORER</div><h2>Events and enforcement</h2></div><span class="small" id="resultCount">0 records</span></div><div class="filters"><input id="search" type="search" placeholder="Search institution, category or notice..."><select id="sourceFilter"><option value="">All regulators</option></select><select id="provinceFilter"><option value="">All provinces</option></select><select id="statusFilter"><option value="">All legal statuses</option></select></div><div id="eventRows" class="events-list"></div></div>
+  </div>
   </section>
   <section id="clients" class="tab hidden">
     <section class="panel client-panel">
@@ -183,14 +189,16 @@
       <div id="reviewRows" class="review-inbox"><div class="empty">Loading evidence review queue...</div></div>
     </section>
   </section>
-  <section id="institutions" class="tab hidden">
+  <section id="institutions" class="tab hidden"><div id="northInstitutions" class="north-us-scope"></div><div class="north-ca-scope">
     <div class="panel"><div class="panel-heading"><div><div class="eyebrow">ORGANIZATION RESEARCH</div><h2>Institution radar</h2></div></div><div class="notice"><strong>Institutional involvement does not mean institutional fraud.</strong> Records here are published enforcement notices; a count of records does not measure culpability or actual demand for consulting services.</div><div id="institutionRows"></div></div>
+  </div>
   </section>
-  <section id="sources" class="tab hidden">
+  <section id="sources" class="tab hidden"><div id="northSources" class="north-us-scope"></div><div class="north-ca-scope">
     <div class="panel"><div class="panel-heading"><div><div class="eyebrow">COLLECTION HEALTH</div><h2>Source monitoring</h2></div></div><div class="notice">Collectors run on a GitHub Actions schedule. The page displays the latest committed snapshot. Refresh snapshot reloads it; a new collection requires GitHub Actions or the next scheduled scan. Google News items are unverified research leads.</div><div id="sourceRows"></div><div id="externalSourceHealth" aria-label="Additional source scan status"></div></div>
     <div class="panel"><div class="panel-heading"><div><div class="eyebrow">ADDITIONAL CANADIAN SOURCES</div><h2>Expansion priorities</h2></div></div><div id="sourceCatalog" class="source-catalog"></div></div>
     <div class="panel"><div class="panel-heading"><div><div class="eyebrow">RESEARCH METHOD</div><h2>What the data can and cannot tell you</h2></div></div><div class="method"><p><strong>Sources.</strong> FINTRAC public administrative monetary penalties and FCAC published proceedings. Records are source-linked and subject to the limitations of the originating regulator.</p><p><strong>Identity.</strong> Institutions are grouped by the explicitly named entity; subsidiaries and parents are not automatically merged.</p><p><strong>Geography.</strong> Only explicitly supported institution-location clauses get map markers. Missing locations remain in the list, not assigned to an inferred headquarters.</p><p><strong>Enforcement status.</strong> Imposed, paid, and appealed are distinguished. This dashboard does not publish unverified accusations from general news automatically.</p><p><strong>Coverage.</strong> Regulators can revise or remove notices. Parser changes and access failures can also result in incomplete or stale coverage. Missing records do not imply clean compliance.</p><p><strong>Consulting application.</strong> A publicly documented event may indicate a topic worth researching; it never establishes that a firm currently needs outside consultants.</p></div></div>
-  </section>
+  </div>
+</section>
   <footer>Signal North · Public-source research only · <a href="https://github.com/khaled-agi/Signal-North">Source code</a> · All dates and amounts originate from referenced publications.</footer>
   </main>
 </div>
@@ -202,5 +210,6 @@
 <script src="./connections.js?v=__BUILD_SHA__" defer></script>
 <script src="./research.js?v=__BUILD_SHA__" defer></script>
 <script src="./network.js?v=__BUILD_SHA__" defer></script>
+<script src="./north_america.js?v=__BUILD_SHA__" defer></script>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" async crossorigin="" onload="window.dispatchEvent(new Event('signalnorth:mapready'))"></script>
 </body></html>

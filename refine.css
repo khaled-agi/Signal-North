@@ -187,3 +187,12 @@ a,.link-btn{color:#185f67}
 .case-questions li{padding-bottom:9px}
 .case-primary-source{padding:17px 0;border-top:1px solid #dae5e8;margin-top:15px;font-size:12px}
 @media(max-width:520px){.case-fact-grid{grid-template-columns:1fr}.case-evidence-list{grid-template-columns:1fr}}
+
+/* Country switch shared with the United States research workspace. */
+.us-country-switch{display:grid;gap:5px;padding:3px 5px 14px}
+.us-country-switch a{font-size:12px;display:block;padding:10px 12px;color:#315869;border:1px solid transparent;border-radius:7px;text-decoration:none}
+.us-country-switch a:hover{background:#f0f6f6}
+.us-country-switch a.current{background:#e8f3f1;color:#115e66;font-weight:750;border-color:#d4e8e4}
+.us-header-country{font-size:11px;font-weight:700;color:#23646d;text-decoration:none}
+.us-header-country:hover{text-decoration:underline}
+@media(max-width:800px){.us-country-switch{display:flex;padding:0 7px;gap:4px}.us-country-switch a{padding:6px 9px;font-size:11px}.us-header-country{display:none}}
