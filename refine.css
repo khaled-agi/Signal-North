@@ -106,3 +106,9 @@ a,.link-btn{color:#185f67}
 @media(max-width:1180px){.cols{grid-template-columns:1fr}.map{height:500px}.right-panel .mapped-story-feed{max-height:350px}}
 @media(max-width:750px){.content{padding:15px}.map{height:360px}.map-list-controls{grid-template-columns:1fr}.coverage-number strong{font-size:17px}.intro h1{font-size:28px}.cols{gap:13px}}
 @media(prefers-reduced-motion:reduce){.count-pin-inner{transition:none}}
+
+/* Quiet cartography keeps the source circles readable against the streets. */
+.leaflet-tile-pane{filter:grayscale(.18) saturate(.74) contrast(.98)!important}
+.region-advanced{padding:6px 15px 10px;border-top:1px solid #e0e9ed}
+.region-advanced summary{cursor:pointer;color:#607b86;font-size:11px;padding:10px 1px;font-weight:650}
+.region-advanced #regions{max-height:260px;overflow:auto}
