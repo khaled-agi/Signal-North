@@ -41,7 +41,13 @@ function initMap(){
   $("#map").replaceChildren();
   state.map=L.map("map",{zoomControl:false,minZoom:3}).setView([55,-95],4);
   L.control.zoom({position:"bottomright"}).addTo(state.map);
-  L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",{maxZoom:18,attribution:'&copy; OpenStreetMap &copy; CARTO'}).addTo(state.map);
+  const base = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png",{
+   maxZoom:19, attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'
+  }).addTo(state.map);
+  let fallback=false;
+  base.on("tileerror",()=>{if(fallback)return;fallback=true;state.map.removeLayer(base);
+    L.tileLayer("https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png",{maxZoom:19,
+     attribution:'&copy; OpenStreetMap contributors, HOT'}).addTo(state.map);});
   state.layer=L.layerGroup().addTo(state.map);
  }
  state.layer.clearLayers();
