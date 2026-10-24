@@ -26,6 +26,33 @@ fraud scam scams frauds police warning warns investigation investigations
 WORD = re.compile(r"[a-z0-9]+")
 AMOUNT = re.compile(r"(?<!\w)\$?\d+(?:[.,]\d+)*(?:k|m|million|billion)?(?!\w)", re.I)
 DATE_LIMIT = 10
+CANADIAN_CUE = re.compile(
+ r"\b(?:canada|canadian|canadien|canadienne|ontario|qu[ée]bec|alberta|"
+ r"british columbia|manitoba|saskatchewan|nova scotia|new brunswick|"
+ r"newfoundland|prince edward island|toronto|montreal|montr[ée]al|"
+ r"vancouver|calgary|edmonton|ottawa|winnipeg|halifax|regina|"
+ r"victoria|saskatoon|hamilton|london ontario|surrey|mississauga)\b",re.I)
+FOREIGN_CUE = re.compile(
+ r"\b(?:argentina|argentinian|buenos aires|australia|australian|"
+ r"united states|u\.s\.|american|united kingdom|britain|british|"
+ r"england|indian|india|nigeria|nigerian|mexico|mexican|brazil|brazilian|"
+ r"russia|russian|dubai|uae|hong kong|singapore|japan|japanese|"
+ r"france|french|spain|spanish|germany|german|south korea|"
+ r"switzerland)\b",re.I)
+def geographic_relevance(item):
+    title=str(item.get("title") or "")
+    canada=bool(CANADIAN_CUE.search(title))
+    foreign=bool(FOREIGN_CUE.search(title))
+    location=bool(item.get("map_location")) and isinstance(item.get("map_latitude"),(int,float))
+    if canada or location:
+        return ("canada_linked_international" if foreign else "canadian_location_or_reference",
+                "Canadian geographic clue in title or curated headline city reference; not verified incident location.")
+    if foreign:
+        return ("international_context_explicit",
+                "Foreign country or locality in headline with no explicit Canadian link; publisher location alone is not an event location.")
+    return ("geography_unresolved",
+            "Headline alone does not establish incident geography. No inference from publisher domain.")
+
 
 def normalized(title):
     s = unicodedata.normalize("NFKD", str(title or "").casefold())
@@ -158,6 +185,9 @@ def display_groups(articles):
             match=next(x for x in group if isinstance(x.get("map_latitude"),(float,int)) and isinstance(x.get("map_longitude"),(float,int)))
             for k in ("map_latitude","map_longitude","map_location","map_province","map_role"):
                 if k in match:story[k]=match[k]
+        relevance,basis=geographic_relevance(story)
+        story["geographic_relevance"]=relevance
+        story["geographic_relevance_basis"]=basis
         story["evidence_status"]="unverified_grouped_reporting"
         story["review_status"]="requires_source_review"
         story["grouping_basis"]="conservative_headline_similarity_within_10_days"
@@ -177,6 +207,8 @@ def build():
       "original_index_headlines":len(articles),
       "reporting_groups":len(groups),
       "multi_report_groups":sum(x["underlying_headline_count"]>1 for x in groups),
+      "groups_with_multiple_sources":sum(x["source_count"]>1 for x in groups),
+      "headline_variation_groups":sum(x["variation_count"]>1 for x in groups),
       "methodology":"Display-only high-similarity headline grouping within ten days; original article index preserved. Publisher-specific title wording and original links are retained in each detail view. Groups are not independently verified fraud incidents.",
       "groups":groups
     }
