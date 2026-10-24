@@ -60,7 +60,7 @@ jobs:
       - name: Assemble cache-busted static website
         run: |
           mkdir -p _site/data
-          cp index.html styles.css light.css app.js intel.js workspace.js .nojekyll _site/
+          cp index.html styles.css light.css editorial.css app.js intel.js workspace.js .nojekyll _site/
           cp data/events.json data/status.json data/news.json data/news_status.json data/fraud_stats.json data/bank_disclosures.json data/incidents.json _site/data/
           if [ -f data/news_archive.json ]; then cp data/news_archive.json _site/data/; fi
           if [ -f data/archive_status.json ]; then cp data/archive_status.json _site/data/; fi
