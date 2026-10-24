@@ -2,6 +2,21 @@
 
 [Open the live dashboard](https://khaled-agi.github.io/Signal-North/)
 
+## Community research network update (October 2026)
+
+Signal North now supports two audiences: financial-crime researchers investigating public evidence, and community members contributing **publicly sourced** stories and corrections. The old client watchlist is still available under specialized views for personal, browser-local research, but is no longer the platform's primary organizing concept.
+
+The main workflow is **Discover → Study scam themes → Investigate institutions/sectors → Contribute evidence**.
+
+- **Scam themes:** `scripts/build_theme_trends.py` derives a year-by-year multi-label article-headline taxonomy in `data/theme_trends.json`. Chart counts measure **discovered headline coverage, not fraud incidence**; articles may match multiple topics.
+- **Sector intelligence:** `data/sector_watch.json` curates source-linked regulator decisions, crypto-platform authorization, institutional fraud warnings, casinos/lotteries, and AML administrative penalties. **Being authorized or impersonated is not wrongdoing.**
+- **Community:** `.github/ISSUE_TEMPLATE/public-source.yml` and `correction.yml` accept public source suggestions and corrections for moderator review. Nothing from GitHub Issues auto-publishes. This is **not anonymous** and not a confidential crime-reporting channel. See `CONTRIBUTING.md`.
+- **Historical discovery:** Rolling GitHub Actions searches rotate among 2020–2026 and expand to fintech, Wealthsimple, crypto, gambling, iGaming, identity theft, recovery scams and other typologies.
+- **Social signals:** Public social-media links may be suggested as unverified source leads through the community form. There is **no unauthorized direct Reddit scraping or automatic social-media ingestion**. API approval, privacy review and platform terms are prerequisites.
+- **True anonymous/private reporting:** Not yet offered. A static public site cannot safely store sensitive submissions. A separate server-side moderation, privacy, retention and abuse-prevention system is required before launch.
+
+
+
 Source-linked research tool for Canadian regulatory enforcement, individual victim fraud cases, fraud trends and Google News discovery.
 
 ## What's available
