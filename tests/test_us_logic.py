@@ -23,7 +23,7 @@ class USCoverageTests(unittest.TestCase):
         self.assertEqual(us.headline_state("Fraud charges filed in New York"), "NY")
         self.assertEqual(us.headline_state("Florida cryptocurrency scam leads to charges"), "FL")
         self.assertIsNone(us.headline_state("FBI says nationwide fraud cases rise"))
-        self.assertIsNone(us.headline_state("Bank in Washington DC reports fraud"))
+        self.assertEqual(us.headline_state("Bank in Washington DC reports fraud"), "DC")
         self.assertIsNone(us.headline_state("Atlanta company accused in wire fraud"))
         self.assertIsNone(us.headline_state("Fraud report published by Dallas media"))
         self.assertIsNone(us.headline_state("Georgia country cryptocurrency case"))
