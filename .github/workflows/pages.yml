@@ -6,7 +6,7 @@ on:
     paths-ignore:
       - 'data/**'
   schedule:
-    - cron: '17 10 * * *'
+    - cron: '17 * * * *'
 permissions:
   contents: write
   pages: write
