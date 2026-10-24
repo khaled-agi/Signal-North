@@ -29,7 +29,16 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
 FEED = DATA / "news.json"
 HEALTH = DATA / "external_source_status.json"
-RCMP_URL = "https://rcmp.ca/en/feed-flux/news-nouvelles"
+RCMP_URLS = {
+    "RCMP national news": "https://rcmp.ca/en/feed-flux/news-nouvelles",
+    "RCMP British Columbia": "https://rcmp.ca/en/feed-flux/news-nouvelles/division/e",
+    "RCMP Alberta": "https://rcmp.ca/en/feed-flux/news-nouvelles/division/k",
+    "RCMP Manitoba": "https://rcmp.ca/en/feed-flux/news-nouvelles/division/d",
+    "RCMP Saskatchewan": "https://rcmp.ca/en/feed-flux/news-nouvelles/division/f",
+    "RCMP Nova Scotia": "https://rcmp.ca/en/feed-flux/news-nouvelles/division/h",
+    "RCMP New Brunswick": "https://rcmp.ca/en/feed-flux/news-nouvelles/division/j",
+    "RCMP Federal Central": "https://rcmp.ca/en/feed-flux/news-nouvelles/region/central",
+}
 GDELT_URL = "https://api.gdeltproject.org/api/v2/doc/doc"
 # Conservative, narrowly targeted query slices to reduce irrelevant stories.
 GDELT_QUERIES = {
@@ -101,8 +110,8 @@ def record(title, url, publisher, date_seen, channel, topic, **extra):
         "notice": "Article metadata / headline discovery only. Any mentioned bank, sum or location is not independently corroborated.",
     }
 
-def fetch_rcmp(session):
-    response = session.get(RCMP_URL, timeout=35)
+def fetch_rcmp(session, url):
+    response = session.get(url, timeout=35)
     response.raise_for_status()
     root = ET.fromstring(response.content)
     atom = "{http://www.w3.org/2005/Atom}"
@@ -172,10 +181,10 @@ def run():
               "RSS and GDELT coverage are neither exhaustive nor verified incident data."}
     with requests.Session() as session:
         session.headers.update(HEADERS)
-        sources = [("RCMP official RSS", lambda: fetch_rcmp(session))]
+        sources = [(name, (lambda url=url: fetch_rcmp(session,url))) for name,url in RCMP_URLS.items()]
         sources += [(name, (lambda query=q: fetch_gdelt(session, query))) for name,q in GDELT_QUERIES.items()]
         for name, fn in sources:
-            if gdelt_limited and name != "RCMP official RSS":
+            if gdelt_limited and name not in RCMP_URLS:
                 health["collectors"][name]={"status":"skipped_rate_limit","error":"GDELT requested backoff after HTTP 429"}
                 continue
             try:
@@ -189,13 +198,13 @@ def run():
                                               "scanned":scanned,"accepted":len(entries)}
             except requests.HTTPError as exc:
                 status_code=exc.response.status_code if exc.response is not None else 0
-                if status_code==429 and name!="RCMP official RSS":
+                if status_code==429 and name not in RCMP_URLS:
                     gdelt_limited=True
                 health["collectors"][name] = {"status":"rate_limited" if status_code==429 else "failed","error":str(exc)[:300]}
             except Exception as exc:
                 health["collectors"][name] = {"status":"failed","error":str(exc)[:300]}
             # GDELT recommends conservative request frequency; don't hammer its API.
-            time.sleep(5.2 if name!="RCMP official RSS" else .4)
+            time.sleep(5.2 if name not in RCMP_URLS else .4)
     # Do not cap to 400; prior Google-only collector may cap on its own later.
     leads = sorted(saved.values(), key=lambda e:e.get("published_at") or "", reverse=True)
     FEED.write_text(json.dumps({"updated_at":stamp(),"leads":leads},
