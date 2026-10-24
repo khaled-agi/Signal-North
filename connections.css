@@ -64,3 +64,19 @@
 .evidence-penalties{margin:0 15px 15px}
 .review-inbox{margin:0 15px 15px}
 }
+
+/* Source-review actions and bank-to-source navigation. */
+.connection-review-note{padding:0 24px;color:#668092;font-size:11px;line-height:1.6;margin:0 0 16px}
+.review-edit{margin:10px 0 0;display:grid;grid-template-columns:160px minmax(0,1fr);gap:12px}
+.review-edit label{font-size:10px;font-weight:700;color:#5b768a;display:flex;flex-direction:column;gap:5px}
+.review-edit select,.review-edit textarea{background:#fff;color:#214058;border:1px solid #c6d8e2;border-radius:6px;padding:8px;font:inherit;font-size:11px;min-width:0}
+.review-edit textarea{resize:vertical;min-height:62px}
+.client-actions{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.news-rowtools{display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin-top:10px}
+.news-mapaction{border:1px solid #a9d8d5;border-radius:5px;color:#0c747a;background:#edf8f6;padding:6px 9px;font-size:10px;font-weight:700;cursor:pointer}
+.news-mapaction:hover{background:#daf1ed}
+.news-sources{font-size:11px;color:#406e7b}
+.news-sources summary{cursor:pointer;font-weight:600}
+.news-sources div{padding:4px 0 0 8px}
+.news-sources a{color:#0b7681}
+@media(max-width:760px){.review-edit{grid-template-columns:1fr}.connection-review-note{padding:0 15px}}
