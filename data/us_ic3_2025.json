@@ -1,0 +1,326 @@
+{
+  "year": 2025,
+  "source_name": "FBI Internet Crime Complaint Center (IC3) — 2025 Annual Report",
+  "source_url": "https://www.ic3.gov/AnnualReport/Reports/2025_IC3Report.pdf",
+  "source_pages": {
+    "complaints_by_state": 28,
+    "reported_losses_by_state": 29,
+    "complaints_per_100k": 30
+  },
+  "definition": "FBI IC3 complaints filed or reported to IC3, not verified unique crimes, victim counts, bank-owned losses, or a full measure of fraud prevalence.",
+  "scope": "50 states and District of Columbia; U.S. territories omitted from this map layer, although the report separately lists them.",
+  "national": {
+    "all_complaints": 1008597,
+    "reported_loss_usd": 20877000000,
+    "reported_loss_approximate": true,
+    "notes": "2025 IC3 nationwide figures include jurisdictions outside the 50 states and DC. National total is not the sum of these 51 states. Rounded $20.877 billion report total."
+  },
+  "states": {
+    "AK": {
+      "name": "Alaska",
+      "complaints": 3202,
+      "reported_loss_usd": 39972438,
+      "complaints_per_100k": 434.3
+    },
+    "AL": {
+      "name": "Alabama",
+      "complaints": 9936,
+      "reported_loss_usd": 167212658,
+      "complaints_per_100k": 191.3
+    },
+    "AR": {
+      "name": "Arkansas",
+      "complaints": 6161,
+      "reported_loss_usd": 102541947,
+      "complaints_per_100k": 197.8
+    },
+    "AZ": {
+      "name": "Arizona",
+      "complaints": 28868,
+      "reported_loss_usd": 630700609,
+      "complaints_per_100k": 378.7
+    },
+    "CA": {
+      "name": "California",
+      "complaints": 116414,
+      "reported_loss_usd": 3674716305,
+      "complaints_per_100k": 295.8
+    },
+    "CO": {
+      "name": "Colorado",
+      "complaints": 18847,
+      "reported_loss_usd": 355049719,
+      "complaints_per_100k": 313.5
+    },
+    "CT": {
+      "name": "Connecticut",
+      "complaints": 9714,
+      "reported_loss_usd": 219500212,
+      "complaints_per_100k": 263.4
+    },
+    "DC": {
+      "name": "District of Columbia",
+      "complaints": 3113,
+      "reported_loss_usd": 97368097,
+      "complaints_per_100k": 448.8
+    },
+    "DE": {
+      "name": "Delaware",
+      "complaints": 3089,
+      "reported_loss_usd": 62012494,
+      "complaints_per_100k": 291.4
+    },
+    "FL": {
+      "name": "Florida",
+      "complaints": 71843,
+      "reported_loss_usd": 1596138595,
+      "complaints_per_100k": 306.2
+    },
+    "GA": {
+      "name": "Georgia",
+      "complaints": 25936,
+      "reported_loss_usd": 534581965,
+      "complaints_per_100k": 229.5
+    },
+    "HI": {
+      "name": "Hawaii",
+      "complaints": 3328,
+      "reported_loss_usd": 106447375,
+      "complaints_per_100k": 232.3
+    },
+    "IA": {
+      "name": "Iowa",
+      "complaints": 5436,
+      "reported_loss_usd": 95520131,
+      "complaints_per_100k": 167.9
+    },
+    "ID": {
+      "name": "Idaho",
+      "complaints": 4479,
+      "reported_loss_usd": 88725284,
+      "complaints_per_100k": 220.7
+    },
+    "IL": {
+      "name": "Illinois",
+      "complaints": 32977,
+      "reported_loss_usd": 535255201,
+      "complaints_per_100k": 259.3
+    },
+    "IN": {
+      "name": "Indiana",
+      "complaints": 20777,
+      "reported_loss_usd": 233016771,
+      "complaints_per_100k": 297.9
+    },
+    "KS": {
+      "name": "Kansas",
+      "complaints": 7927,
+      "reported_loss_usd": 147337101,
+      "complaints_per_100k": 266.3
+    },
+    "KY": {
+      "name": "Kentucky",
+      "complaints": 9414,
+      "reported_loss_usd": 119685861,
+      "complaints_per_100k": 204.3
+    },
+    "LA": {
+      "name": "Louisiana",
+      "complaints": 8623,
+      "reported_loss_usd": 105440238,
+      "complaints_per_100k": 186.7
+    },
+    "MA": {
+      "name": "Massachusetts",
+      "complaints": 22936,
+      "reported_loss_usd": 410924066,
+      "complaints_per_100k": 320.6
+    },
+    "MD": {
+      "name": "Maryland",
+      "complaints": 19430,
+      "reported_loss_usd": 390242821,
+      "complaints_per_100k": 310.1
+    },
+    "ME": {
+      "name": "Maine",
+      "complaints": 2888,
+      "reported_loss_usd": 56536020,
+      "complaints_per_100k": 204.1
+    },
+    "MI": {
+      "name": "Michigan",
+      "complaints": 22191,
+      "reported_loss_usd": 381068131,
+      "complaints_per_100k": 219.1
+    },
+    "MN": {
+      "name": "Minnesota",
+      "complaints": 13595,
+      "reported_loss_usd": 248892986,
+      "complaints_per_100k": 233.2
+    },
+    "MO": {
+      "name": "Missouri",
+      "complaints": 14087,
+      "reported_loss_usd": 233933401,
+      "complaints_per_100k": 224.7
+    },
+    "MS": {
+      "name": "Mississippi",
+      "complaints": 5084,
+      "reported_loss_usd": 77360761,
+      "complaints_per_100k": 172.1
+    },
+    "MT": {
+      "name": "Montana",
+      "complaints": 2618,
+      "reported_loss_usd": 53192859,
+      "complaints_per_100k": 228.7
+    },
+    "NC": {
+      "name": "North Carolina",
+      "complaints": 25940,
+      "reported_loss_usd": 431561716,
+      "complaints_per_100k": 231.6
+    },
+    "ND": {
+      "name": "North Dakota",
+      "complaints": 1418,
+      "reported_loss_usd": 37865442,
+      "complaints_per_100k": 177.4
+    },
+    "NE": {
+      "name": "Nebraska",
+      "complaints": 3724,
+      "reported_loss_usd": 71844724,
+      "complaints_per_100k": 184.5
+    },
+    "NH": {
+      "name": "New Hampshire",
+      "complaints": 4374,
+      "reported_loss_usd": 59283023,
+      "complaints_per_100k": 309
+    },
+    "NJ": {
+      "name": "New Jersey",
+      "complaints": 20648,
+      "reported_loss_usd": 660411901,
+      "complaints_per_100k": 216.2
+    },
+    "NM": {
+      "name": "New Mexico",
+      "complaints": 5688,
+      "reported_loss_usd": 85571285,
+      "complaints_per_100k": 267.6
+    },
+    "NV": {
+      "name": "Nevada",
+      "complaints": 13366,
+      "reported_loss_usd": 302235247,
+      "complaints_per_100k": 407.2
+    },
+    "NY": {
+      "name": "New York",
+      "complaints": 45255,
+      "reported_loss_usd": 1226307877,
+      "complaints_per_100k": 226.2
+    },
+    "OH": {
+      "name": "Ohio",
+      "complaints": 27626,
+      "reported_loss_usd": 421289526,
+      "complaints_per_100k": 232.1
+    },
+    "OK": {
+      "name": "Oklahoma",
+      "complaints": 11964,
+      "reported_loss_usd": 131921776,
+      "complaints_per_100k": 290.2
+    },
+    "OR": {
+      "name": "Oregon",
+      "complaints": 12477,
+      "reported_loss_usd": 193196479,
+      "complaints_per_100k": 292
+    },
+    "PA": {
+      "name": "Pennsylvania",
+      "complaints": 31154,
+      "reported_loss_usd": 537787231,
+      "complaints_per_100k": 238.6
+    },
+    "RI": {
+      "name": "Rhode Island",
+      "complaints": 2700,
+      "reported_loss_usd": 71960439,
+      "complaints_per_100k": 242.3
+    },
+    "SC": {
+      "name": "South Carolina",
+      "complaints": 14699,
+      "reported_loss_usd": 264083026,
+      "complaints_per_100k": 263.9
+    },
+    "SD": {
+      "name": "South Dakota",
+      "complaints": 2514,
+      "reported_loss_usd": 51452806,
+      "complaints_per_100k": 268.8
+    },
+    "TN": {
+      "name": "Tennessee",
+      "complaints": 16261,
+      "reported_loss_usd": 269214519,
+      "complaints_per_100k": 222.3
+    },
+    "TX": {
+      "name": "Texas",
+      "complaints": 97912,
+      "reported_loss_usd": 1825636181,
+      "complaints_per_100k": 308.8
+    },
+    "UT": {
+      "name": "Utah",
+      "complaints": 9903,
+      "reported_loss_usd": 195417205,
+      "complaints_per_100k": 279.8
+    },
+    "VA": {
+      "name": "Virginia",
+      "complaints": 25314,
+      "reported_loss_usd": 476120025,
+      "complaints_per_100k": 285.1
+    },
+    "VT": {
+      "name": "Vermont",
+      "complaints": 1580,
+      "reported_loss_usd": 26567033,
+      "complaints_per_100k": 245.1
+    },
+    "WA": {
+      "name": "Washington",
+      "complaints": 25619,
+      "reported_loss_usd": 458165375,
+      "complaints_per_100k": 320.2
+    },
+    "WI": {
+      "name": "Wisconsin",
+      "complaints": 16680,
+      "reported_loss_usd": 194227722,
+      "complaints_per_100k": 279.3
+    },
+    "WV": {
+      "name": "West Virginia",
+      "complaints": 4209,
+      "reported_loss_usd": 92648544,
+      "complaints_per_100k": 238.3
+    },
+    "WY": {
+      "name": "Wyoming",
+      "complaints": 1552,
+      "reported_loss_usd": 25826205,
+      "complaints_per_100k": 263.6
+    }
+  }
+}
