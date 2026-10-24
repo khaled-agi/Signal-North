@@ -81,6 +81,11 @@ try:
         assert page.locator(".count-map-pin").count() > 0
         print("Geographic data coverage:", page.locator("#mapCoverage").inner_text())
         assert page.locator(".count-map-pin .count-pin-inner").first.inner_text().strip().isdigit()
+        page.locator("#mapCountMode").select_option("headlines")
+        assert page.locator("#mapCountMode").input_value() == "headlines"
+        assert page.locator(".count-map-pin").count() > 0
+        page.locator("#mapCountMode").select_option("groups")
+        print("Map count modes for reporting groups vs underlying headlines: PASS")
         if page.locator("#mapStoryAll").is_visible():
             page.locator("#mapStoryAll").click()
             assert page.locator("#mappedStories .map-story").count() > 500
