@@ -13,6 +13,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./editorial.css?v=__BUILD_SHA__">
+<link rel="stylesheet" href="./connections.css?v=__BUILD_SHA__">
 </head>
 <body>
 <div class="layout">
@@ -25,6 +26,7 @@
   <button class="nav" data-tab="losses">◫ &nbsp; Losses &amp; penalties</button>
   <button class="nav" data-tab="events">▤ &nbsp; Event explorer</button>
   <button class="nav" data-tab="clients">▧ &nbsp; Client watchlists</button>
+  <button class="nav" data-tab="connections">✧ &nbsp; Evidence connections</button>
   <button class="nav" data-tab="institutions">▥ &nbsp; Institution radar</button>
   <button class="nav" data-tab="sources">◉ &nbsp; Sources &amp; methodology</button>
   <div class="sidebar-bottom"><div class="live-mark"><i></i><span>PUBLIC RESEARCH PREVIEW</span></div><p>Regulatory orders and Google News research leads. Different verification levels; not a fraud ranking.</p><a href="https://github.com/khaled-agi/Signal-North" target="_blank" rel="noopener">View source on GitHub ↗</a></div>
@@ -39,6 +41,7 @@
   <div class="error hidden" id="error" role="status"></div>
   <section id="overview" class="tab">
     <div class="metrics" id="metrics"></div>
+    <div class="connection-shortcut"><span>Researching a client? Connect regulatory findings, customer reports and recent headlines on one timeline.</span><button class="link-btn" data-to="connections">Open evidence connections →</button></div>
     <div class="cols">
       <section class="panel map-panel"><div class="panel-heading"><div><div class="eyebrow">GEOGRAPHIC INTELLIGENCE</div><h2>Canadian financial-crime activity</h2></div><button id="mapReset" class="map-reset" type="button">⌖ Canada view</button></div>
     <div class="map-controls"><div class="map-mode" role="group" aria-label="Map event layers"><button type="button" data-mapmode="all" class="active">All evidence</button><button type="button" data-mapmode="enforcement">Enforcement</button><button type="button" data-mapmode="major">Major C$1M+</button><button type="button" data-mapmode="news">News leads</button></div><select id="mapProvince" aria-label="Map province filter"><option value="">All provinces</option></select><input id="mapMonth" type="month" aria-label="Publication month"><button id="mapClearMonth" type="button" class="map-reset">All dates</button></div>
@@ -86,6 +89,20 @@
       <div id="clientWatchlist" class="client-watchlist"><div class="empty">No tracked institutions yet.</div></div>
     </section>
   </section>
+  <section id="connections" class="tab hidden">
+    <section class="panel connections-shell">
+      <div class="panel-heading"><div><div class="eyebrow">CROSS-SOURCE INTELLIGENCE / INSTITUTION LEVEL</div><h2>Connect the evidence</h2></div><span class="small" id="connectionUpdated">Loading intelligence graph...</span></div>
+      <div class="notice"><strong>Three evidence levels, never conflated:</strong> published regulator decisions, source-reviewed reports involving a customer or institution, and preliminary headline-only mentions. Shared topics are research leads, not proof of causation or institutional wrongdoing.</div>
+      <div class="connection-picker"><input id="connectSearch" type="search" placeholder="Find a bank or credit union..." aria-label="Search institutions"><select id="connectInstitution" aria-label="Choose institution"><option value="">Choose an institution</option></select><button id="connectTrack" type="button" disabled>+ Add to watchlist</button><button id="connectMap" type="button" disabled>View on map</button></div>
+      <div id="connectContent"><div class="empty">Select an institution to see its evidence timeline and potential investigation topics.</div></div>
+    </section>
+    <section class="panel">
+      <div class="panel-heading"><div><div class="eyebrow">ANALYST INBOX / TRIAGE</div><h2>Stories worth verifying</h2></div><span id="reviewCount" class="small">Checking priority queue...</span></div>
+      <div class="notice">This queue is prioritized for research based on headline clues (named bank, victim wording, quoted amount or police source). <strong>Priority is not a fraud-risk score and is not evidence of guilt.</strong></div>
+      <div class="connection-picker"><select id="reviewType" aria-label="Review queue filter"><option value="all">All leads</option><option value="bank">Named bank</option><option value="amount">Quoted amount</option><option value="victim">Possible victim story</option></select><input id="reviewSearch" placeholder="Search review leads..." type="search" aria-label="Search review leads"></div>
+      <div id="reviewRows" class="review-inbox"><div class="empty">Loading evidence review queue...</div></div>
+    </section>
+  </section>
   <section id="institutions" class="tab hidden">
     <div class="panel"><div class="panel-heading"><div><div class="eyebrow">ORGANIZATION RESEARCH</div><h2>Institution radar</h2></div></div><div class="notice"><strong>Institutional involvement does not mean institutional fraud.</strong> Records here are published enforcement notices; a count of records does not measure culpability or actual demand for consulting services.</div><div id="institutionRows"></div></div>
   </section>
@@ -102,5 +119,6 @@
 <script src="./app.js?v=__BUILD_SHA__" defer></script>
 <script src="./intel.js?v=__BUILD_SHA__" defer></script>
 <script src="./workspace.js?v=__BUILD_SHA__" defer></script>
+<script src="./connections.js?v=__BUILD_SHA__" defer></script>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" async crossorigin="" onload="window.dispatchEvent(new Event('signalnorth:mapready'))"></script>
 </body></html>
