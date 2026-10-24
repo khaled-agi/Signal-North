@@ -87,12 +87,21 @@ def clean(s: str) -> str:
 
 
 def amount(raw: str) -> float | None:
-    m = re.search(r"\$\s*([\d,]+(?:\.\d+)?)\s*(million|billion|thousand)?", raw, re.I)
+    # FINTRAC/FCAC may abbreviate million as "$4.25M" rather than "million".
+    # Always capture the units alongside the number before calculating CAD.
+    m = re.search(
+        r"(?:C\s*)?\$\s*([\d,]+(?:\.\d+)?)\s*(billion|million|thousand|bn|mm|m|k)?\b",
+        raw, re.I,
+    )
     if not m:
         return None
-    multiplier = {"million": 1_000_000, "billion": 1_000_000_000,
-                  "thousand": 1_000}.get((m.group(2) or "").lower(), 1)
-    return float(m.group(1).replace(",", "")) * multiplier
+    unit = (m.group(2) or "").lower()
+    multiplier = {
+        "billion": 1_000_000_000, "bn": 1_000_000_000,
+        "million": 1_000_000, "mm": 1_000_000, "m": 1_000_000,
+        "thousand": 1_000, "k": 1_000,
+    }.get(unit, 1)
+    return round(float(m.group(1).replace(",", "")) * multiplier, 2)
 
 
 def supported_location(text: str) -> dict:
