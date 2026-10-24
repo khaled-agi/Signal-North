@@ -97,6 +97,13 @@ try:
         page.locator("#mapStoryScope").select_option("mapped")
         assert page.locator('#mappedStories button[data-mapfocus]').count() > 0
         page.locator("#mapStoryScope").select_option("all")
+        assert page.locator("#mapTopic option").count() >= 2
+        page.locator("#mapYearFrom").select_option("2023")
+        page.locator("#mapYearTo").select_option("2026")
+        assert "2023–2026" in page.locator("#mapCaption").inner_text()
+        assert page.locator("#mapFilteredTrend .map-year-unit").count() >= 5
+        page.locator("#mapYearFrom").select_option("")
+        page.locator("#mapYearTo").select_option("")
         page.locator("#mapMonth").fill("2026-03")
         assert "2026-03" in page.locator("#mapCaption").inner_text()
         page.locator("#mapClearMonth").click()
