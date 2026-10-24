@@ -8,6 +8,7 @@ function date(x){return x?String(x).slice(0,10):"Date not reported";}
 function sourceLink(url){try{const u=new URL(url);return u.protocol==="https:"?'<a class="source-link" href="'+escapeHTML(u.href)+'" target="_blank" rel="noopener noreferrer">Read original regulator notice ↗</a>':"";}catch{return "";}}
 function eventsByInstitution(){const groups=new Map();for(const e of state.events){if(!e.institution)continue;const key=e.institution.trim();if(!groups.has(key))groups.set(key,[]);groups.get(key).push(e);}return [...groups].map(([name,events])=>({name,events})).sort((a,b)=>b.events.length-a.events.length);}
 function switchTab(tab){
+ const changing=state.tab!==tab;
  state.tab=tab;
  document.querySelectorAll(".tab").forEach(x=>x.classList.toggle("hidden",x.id!==tab));
  document.querySelectorAll(".nav").forEach(x=>x.classList.toggle("active",x.dataset.tab===tab));
@@ -16,6 +17,7 @@ function switchTab(tab){
  $("#headline").innerHTML=escapeHTML(t[0])+"<br><em>"+escapeHTML(t[1])+"</em>";
  $("#description").textContent=t[2];
  if(tab==="overview"&&state.map)setTimeout(()=>state.map.invalidateSize(),60);
+ if(changing)window.scrollTo(0,0);
 }
 function rowHTML(e){
  return '<div class="event" role="button" tabindex="0" data-event="'+escapeHTML(e.id)+'"><div class="event-date">'+escapeHTML(date(e.published_at))+'</div><div><div class="event-title">'+escapeHTML(e.title)+'</div><div class="event-meta"><span>'+escapeHTML(e.source)+'</span><span>'+escapeHTML(e.category)+'</span>'+(e.province?"<span>"+escapeHTML(provinces[e.province]||e.province)+"</span>":"")+'</div></div><div class="event-right">'+(e.penalty_cad==null?"":'<div class="event-amount">'+escapeHTML(currency(e.penalty_cad))+'</div>')+'<span class="pill">'+escapeHTML(e.status||"Published notice")+'</span></div></div>';
@@ -197,12 +199,12 @@ function initMap(){
  state.mapSelectedIds=null;
  refreshMapList();
  renderMapClusters();
- if(state.mapProvince&&mapped){
+ if((state.mapProvince||state.clientFocus)&&mapped){
   const pts=records.filter(x=>x.lat!==null).map(x=>[x.lat,x.lon]);
   state.map.fitBounds(L.latLngBounds(pts).pad(.25),{maxZoom:7,padding:[28,28]});
- }else if(!state.mapProvince&&state.mapMode==="all"&&!state.clientFocus){
-  state.map.setView([55,-96],4);
  }
+ // Otherwise preserve the analyst's zoom and location. Only Reset moves
+ // back to a national view; reloading/filtering must not unexpectedly jump.
  setTimeout(()=>state.map.invalidateSize(),60);
 }
 
@@ -269,6 +271,9 @@ document.addEventListener("click",e=>{
     document.querySelectorAll("[data-mapmode]").forEach(b=>b.classList.toggle("active",b.dataset.mapmode==="all"));
     initMap();
    }
+   $("#mapStorySearch").value="";
+   state.mapSideScope="all";
+   initMap();
    switchTab("overview");
    const selected=state.mapRows?.find(x=>x.id===focus.dataset.mapfocus);
    if(selected?.lat!==null&&selected){
@@ -299,7 +304,7 @@ for(const id of ["search","sourceFilter","provinceFilter","statusFilter"]){$("#"
 $("#close").addEventListener("click",closeDrawer);
 $("#overlay").addEventListener("click",e=>{if(e.target.id==="overlay")closeDrawer();});
 $("#reload").addEventListener("click",()=>{load(); window.dispatchEvent(new Event("signalnorth:refresh"));});
-$("#mapReset").addEventListener("click",()=>{state.mapProvince="";$("#mapProvince").value="";state.mapMonth="";$("#mapMonth").value="";state.clientFocus="";state.mapMode="all";document.querySelectorAll("[data-mapmode]").forEach(b=>b.classList.toggle("active",b.dataset.mapmode==="all"));initMap();});
+$("#mapReset").addEventListener("click",()=>{state.mapProvince="";$("#mapProvince").value="";state.mapMonth="";$("#mapMonth").value="";state.clientFocus="";state.mapMode="all";document.querySelectorAll("[data-mapmode]").forEach(b=>b.classList.toggle("active",b.dataset.mapmode==="all"));$("#mapStorySearch").value="";state.mapSideVisible=100;initMap();if(state.map)state.map.setView([55,-96],4);});
 $("#mapProvince").addEventListener("change",value=>{state.mapProvince=value.target.value;initMap();});
 $("#mapMonth").addEventListener("change",e=>{state.mapMonth=e.target.value;initMap();});
 $("#mapClearMonth").addEventListener("click",()=>{state.mapMonth="";$("#mapMonth").value="";initMap();});
