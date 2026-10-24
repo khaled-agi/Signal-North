@@ -195,8 +195,22 @@ async function load(){
 document.addEventListener("click",e=>{
  const focus=e.target.closest("[data-mapfocus]");
  if(focus){
+   // From the News Explorer: clear conflicting filters and show the matching
+   // marker rather than jumping to an invisible map.
+   if(state.mapProvince||state.mapMonth||state.clientFocus||state.mapMode!=="all"){
+    state.mapProvince="";$("#mapProvince").value="";
+    state.mapMonth="";$("#mapMonth").value="";
+    state.clientFocus="";state.mapMode="all";
+    document.querySelectorAll("[data-mapmode]").forEach(b=>b.classList.toggle("active",b.dataset.mapmode==="all"));
+    initMap();
+   }
+   switchTab("overview");
    const pin=state.mapMarkers.get(focus.dataset.mapfocus);
-   if(pin&&state.map){state.map.setView(pin.getLatLng(),Math.max(state.map.getZoom(),7),{animate:true});pin.openPopup();}
+   if(pin&&state.map){
+    state.map.setView(pin.getLatLng(),Math.max(state.map.getZoom(),7),{animate:true});
+    pin.openPopup();
+    $("#map").scrollIntoView({behavior:"smooth",block:"center"});
+   }
    return;
  }
  const layer=e.target.closest("[data-mapmode]");
