@@ -59,6 +59,21 @@ try:
         assert page.locator("#institutionLossRows").inner_text().strip()
         assert page.locator("#disclosedLossRows").inner_text().strip()
         print("Yearly penalties and disclosure explanation: PASS")
+        page.locator('[data-tab="overview"]').click()
+        page.wait_for_function("document.querySelectorAll('#featuredIncidents .case-item').length > 0", timeout=15000)
+        assert page.locator("#majorOrders .event").count() > 0
+        assert page.locator("#headlinesTop .breaking-story").count() > 0
+        print("Featured reviewed incidents:", page.locator("#featuredIncidents .case-item").count())
+        page.locator('[data-tab="incidents"]').click()
+        page.wait_for_function("document.querySelectorAll('#incidentRows .case-item').length > 0", timeout=10000)
+        assert page.locator("#incidentRows .case-item").count() >= 5
+        page.locator("#incidentSearch").fill("Scotiabank")
+        assert page.locator("#incidentRows .case-item").count() == 1
+        page.locator('[data-tab="overview"]').click()
+        page.locator('[data-mapmode="news"]').click()
+        assert "Reviewed cases:" in page.locator("#mapCaption").inner_text() or "Headline" in page.locator("#mapCaption").inner_text()
+        assert page.locator("#mapProvince").count() == 1
+        print("News, major orders, source-reviewed incidents, and map controls: PASS")
         assert not errors, str(errors)
         print("Browser smoke test: PASS")
         browser.close()
