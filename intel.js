@@ -30,7 +30,7 @@
   {name:"Payment-system risk",value:"Planned",source:"Bank of Canada / Payments Canada",url:"https://www.bankofcanada.ca/",note:"Payment-system incidents and operational risk; distinguish from fraud"},
   {name:"Cyber incidents",value:"Planned",source:"Privacy Commissioner / Cyber Centre",url:"https://www.priv.gc.ca/en/opc-actions-and-decisions/investigations/",note:"Incident disclosures and privacy findings; differentiate alleged from confirmed"}
  ];
- let news=[],stats=[],bankDisclosure=[],events=[];
+ let news=[],stats=[],bankDisclosure=[],events=[],newsWired=false;
  async function getJSON(path){
   const res=await fetch("./data/"+path+"?v="+Date.now(),{cache:"no-store"});
   if(!res.ok)throw Error(path+": HTTP "+res.status);
@@ -57,9 +57,23 @@
  function initNews(){
   const cats=[...new Set(news.map(x=>x.category).filter(Boolean))].sort();
   $i("newsCategory").innerHTML='<option value="">All fraud types</option>'+cats.map(x=>'<option value="'+esc(x)+'">'+esc(x)+"</option>").join("");
-  $i("newsCategory").addEventListener("change",renderNews);
-  $i("newsSearch").addEventListener("input",renderNews);
+  if(!newsWired){
+   $i("newsCategory").addEventListener("change",renderNews);
+   $i("newsSearch").addEventListener("input",renderNews);
+   newsWired=true;
+  }
   renderNews();
+ }
+ function renderHomeHeadlines(updatedAt){
+  const hits=news.slice(0,6);
+  const last=updatedAt?new Date(updatedAt):null;
+  const stamp=last&&!Number.isNaN(last.getTime())?new Intl.DateTimeFormat("en-CA",{month:"short",day:"numeric",hour:"numeric",minute:"2-digit",timeZone:"America/Toronto",timeZoneName:"short"}).format(last):"Not yet collected";
+  const freshness="Google News RSS · "+news.length+" screened leads · Last scan: "+stamp;
+  $i("newsFreshness").textContent=freshness;
+  $i("newsFreshnessDetail").textContent=freshness+" · Scheduled every 30 minutes (best effort)";
+  $i("headlinesTop").innerHTML=hits.length?hits.map(x=>
+   '<div class="breaking-story"><div class="breaking-story-head"><span class="breaking-type">'+esc(x.category||"News lead")+'</span><span>'+esc((x.published_at||"").slice(0,10))+'</span></div><div class="breaking-story-title">'+link(x.url,x.title)+'</div><div class="breaking-publisher">'+esc(x.publisher||"News syndication")+' · Unverified research lead</div></div>'
+  ).join(""):'<div class="empty">No headlines in the latest snapshot. You can start a new scan from GitHub Actions.</div>';
  }
  function bankRows(){
   const years=[...new Set(events.map(x=>(x.published_at||"").slice(0,4)).filter(Boolean))].sort().reverse();
@@ -93,11 +107,15 @@
  }
  async function boot(){
   renderCatalog();
-  const names=["fraud_stats.json","news.json","bank_disclosures.json","events.json"];
+  const names=["fraud_stats.json","news.json","bank_disclosures.json","events.json","news_status.json"];
   const fetched=await Promise.allSettled(names.map(getJSON));
   if(fetched[0].status==="fulfilled")stats=fetched[0].value.metrics||[];
   else $i("fraudNational").innerHTML='<div class="error">Fraud statistics unavailable: '+esc(String(fetched[0].reason))+'</div>';
   if(fetched[1].status==="fulfilled")news=fetched[1].value.leads||[];
+  const newsStatus=fetched[4].status==="fulfilled"?fetched[4].value:{};
+  const lastUpdated=newsStatus.last_completed_at||(fetched[1].status==="fulfilled"?fetched[1].value.updated_at:null);
+  renderHomeHeadlines(lastUpdated);
+  window.dispatchEvent(new CustomEvent("signalnorth:newsready",{detail:{leads:news}}));
   if(fetched[2].status==="fulfilled")bankDisclosure=fetched[2].value.records||[];
   if(fetched[3].status==="fulfilled")events=fetched[3].value.events||[];
   if(stats.length)national();
@@ -105,6 +123,7 @@
   initNews();
   bankRows();
  }
+ window.addEventListener("signalnorth:refresh",boot);
  if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",boot);
  else boot();
 })();
