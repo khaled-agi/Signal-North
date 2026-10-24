@@ -7,14 +7,15 @@
  const url=v=>{try{const u=new URL(v);return u.protocol==="https:"?u.href:""}catch{return ""}};
  const link=(raw,label)=>{const u=url(raw);return u?'<a href="'+esc(u)+'" target="_blank" rel="noopener noreferrer">'+esc(label)+' ↗</a>':""};
  const n=x=>Number(x||0).toLocaleString("en-US");
+ const usd=x=>x>=1e9?"$"+(x/1e9).toFixed(2)+"B":x>=1e6?"$"+(x/1e6).toFixed(1)+"M":"$"+n(x);
  const day=v=>String(v||"").slice(0,10)||"Date not established";
- const st={states:{},enforcement:[],leads:[],status:{},country:"US",
+ const st={states:{},enforcement:[],leads:[],status:{},ic3:null,mapMode:"ic3_rate",country:"US",
   view:"overview",state:"",layer:"all",year:"",agency:"",topic:"",q:"",limit:30,map:null,pins:null};
  const directory=[
   {name:"Financial Crimes Enforcement Network (FinCEN)",source:"FinCEN",url:"https://www.fincen.gov/news/enforcement-actions",desc:"Bank Secrecy Act / AML administrative enforcement; indexed official actions",monitored:true},
   {name:"Consumer Financial Protection Bureau (CFPB)",source:"CFPB",url:"https://www.consumerfinance.gov/enforcement/actions/",desc:"Consumer financial enforcement; complaints, orders, terminations and dismissals must be distinguished",monitored:true},
   {name:"Google News (United States)",source:"Google News RSS",url:"https://news.google.com/search?q=fraud%20United%20States&hl=en-US&gl=US&ceid=US%3Aen",desc:"Rotating syndicated headline discovery, not independently confirmed incident reporting",monitored:true},
-  {name:"FBI Internet Crime Complaint Center (IC3)",source:"FBI IC3",url:"https://www.ic3.gov/annualreport/reports",desc:"Annual internet-crime reporting and separate geographic complaint statistics",monitored:false},
+  {name:"FBI Internet Crime Complaint Center (IC3)",source:"FBI IC3",url:"https://www.ic3.gov/AnnualReport/Reports/2025_IC3Report.pdf",desc:"2025 annual report: audited transcription of complaints, reported losses and rates for 50 states + D.C.",curated:true,monitored:false},
   {name:"Federal Trade Commission (FTC)",source:"FTC",url:"https://www.ftc.gov/news-events/explore-data",desc:"Consumer Sentinel reports and state/metro fraud reporting statistics",monitored:false},
   {name:"Department of Justice (DOJ)",source:"DOJ",url:"https://www.justice.gov/news",desc:"Federal prosecutions and press releases; allegations and dispositions require case review",monitored:false},
   {name:"Securities and Exchange Commission (SEC)",source:"SEC",url:"https://www.sec.gov/enforcement-litigation",desc:"Civil securities enforcement, litigation releases and administrative proceedings",monitored:false},
@@ -42,36 +43,36 @@
   return '<div class="metric"><span class="label">'+esc(label)+'</span><span class="value">'+esc(value)+'</span><span class="foot">'+esc(foot)+'</span></div>';
  }
  function renderMetrics(){
-  const located=st.leads.filter(e=>e.state&&st.states[e.state]).length;
-  const states=new Set(st.leads.map(e=>e.state).filter(Boolean));
-  const official=st.enforcement.length;
+  const picked=st.state?st.ic3?.states?.[st.state]:null;
+  const national=st.ic3?.national||{};
   $("usMetrics").innerHTML=[
-   metric("Official federal cases",n(official),"FinCEN / CFPB indexed source records"),
-   metric("Unverified news leads",n(st.leads.length),"Google News discovery · not reviewed incidents"),
-   metric("States named in headlines",n(states.size)+" / 51", "All 50 states + D.C. searchable"),
-   metric("Federal agencies indexed",n(new Set(st.enforcement.map(e=>e.source)).size),"Other regulators in source directory")
+   metric("2025 FBI IC3 complaints",n(picked?picked.complaints:national.all_complaints),picked?"Reported from "+picked.name:"Nationwide IC3 report · not proven crimes"),
+   metric("2025 IC3 reported losses",picked?usd(picked.reported_loss_usd):usd(national.reported_loss_usd||0),picked?"USD · reported by complainants in "+picked.name:"USD · FBI IC3 only, not bank-owned losses"),
+   metric("Official federal cases",n(st.enforcement.length),"FinCEN / CFPB original source listings · nationwide"),
+   metric("Unverified news leads",n(st.leads.length),"Headline-only discoveries, not distinct incidents")
   ].join("");
   const scanned=Number(st.status.states_ever_scanned||0);
   $("usCoverageMessage").textContent=st.state?
-   "State "+st.states[st.state]?.name+": "+located+" located titles nationwide. Nationwide federal cases are not attributed to this state.":
-   scanned+" of 51 jurisdictions have been queried by the rotating news scan. A missing title or state marker says nothing about actual fraud incidence.";
+    picked.name+": "+n(picked.complaints)+" IC3 complaints in 2025, separate from "+n(st.leads.filter(x=>x.state===st.state).length)+" collected news headlines. Federal enforcement actions are not allocated by state.":
+    scanned+" of 51 jurisdictions queried by rotating headline scans; 2025 FBI IC3 provides separately sourced statistics for all 51. Neither dataset measures every fraud incident.";
  }
  function narrative(){
-  const rows=displayed();
-  const official=rows.filter(e=>!isLead(e));
-  const leads=rows.filter(isLead);
-  const last=official[0]||null;
-  const topics=new Map(); for(const r of leads)topics.set(r.category,(topics.get(r.category)||0)+1);
-  const leadTopic=[...topics].sort((a,b)=>b[1]-a[1])[0];
-  const scope=st.state?st.states[st.state]?.name||"Selected state":"U.S. public-source";
-  $("usPulseDate").textContent=scope+" · source publications";
-  const stateNotice=st.state?"State filters use literal title mentions. Federal cases remain available in Nationwide view.":
-    "Only original federal listings are counted as official actions; news is unverified.";
+  const rows=displayed(),official=rows.filter(e=>!isLead(e)),leads=rows.filter(isLead);
+  const picked=st.state?st.ic3?.states?.[st.state]:null;
+  const nat=st.ic3?.national||{};
+  const scope=picked?picked.name:"United States";
+  $("usPulseDate").textContent=scope+" · FBI IC3 2025 + public sources";
+  const best=Object.entries(st.ic3?.states||{}).sort((a,b)=>b[1].complaints-a[1].complaints)[0];
+  const nationalNote=best?best[1].name+" reported "+n(best[1].complaints)+" complaints; raw totals are affected by population and reporting.":"National report unavailable.";
+  const selectedRate=picked?picked.complaints_per_100k:null;
   $("usPulse").innerHTML='<div class="us-pulse-grid">'+
-   '<div class="us-pulse-item"><div class="us-pulse-label">Official source record</div><strong>'+esc(n(official.length))+'</strong><small>'+esc(last?"Latest selected: "+last.institution+" ("+day(last.published_at)+").":stateNotice)+'</small></div>'+
-   '<div class="us-pulse-item"><div class="us-pulse-label">Reporting leads</div><strong>'+esc(n(leads.length))+'</strong><small>News title matches in this view. Not unique crimes, victims or proven losses.</small></div>'+
-   '<div class="us-pulse-item"><div class="us-pulse-label">Most frequent headline topic</div><strong>'+esc(leadTopic?leadTopic[0]:"Not established")+'</strong><small>'+esc(leadTopic?leadTopic[1]+" collected title(s) in this view.": "No classified headlines in this view yet.")+'</small></div>'+
-   '</div>';
+    '<div class="us-pulse-item"><span class="us-pulse-label">2025 IC3 complaint context</span><strong>'+esc(picked?selectedRate.toFixed(1)+" / 100K":n(nat.all_complaints||0))+'</strong><small>'+
+      esc(picked?"Population-normalized IC3 complaints reported from "+picked.name+". This is not the confirmed incidence of fraud.":"Nationwide cybercrime complaints received by FBI IC3; does not represent unique proven crimes.")+'</small></div>'+
+    '<div class="us-pulse-item"><span class="us-pulse-label">2025 reported loss context</span><strong>'+esc(picked?usd(picked.reported_loss_usd):usd(nat.reported_loss_usd||0))+'</strong><small>'+
+      esc("Reported USD losses to IC3, not institutional losses or sums of regulatory penalties. Figures cannot be added to CFPB fines.")+'</small></div>'+
+    '<div class="us-pulse-item"><span class="us-pulse-label">Where to investigate next</span><strong>'+esc(n(official.length)+" official · "+n(leads.length)+" news")+'</strong><small>'+
+      esc(picked?"Federal notices have no assigned state; review original sources alongside state reporting.":nationalNote)+'</small></div>'+
+    '</div>';
  }
  function latest(){
   const rows=displayed().slice(0,9);
@@ -86,36 +87,57 @@
  function renderMap(){
   const host=$("usMap");
   if(!window.L){
-   host.innerHTML='<p class="us-map-empty">The external map library has not loaded. All 50 states and D.C. remain accessible in the geography menu, and original evidence records stay searchable.</p>';
-   $("usMapCaption").textContent="Map unavailable; all reporting and enforcement records remain accessible.";
-   return;
+    host.innerHTML='<p class="us-map-empty">The external map library has not loaded. All 50 states and D.C. remain accessible in the geography menu, and original evidence records stay searchable.</p>';
+    $("usMapCaption").textContent="Map unavailable; all original FBI IC3 state statistics and reporting remain accessible from the filters and trend view.";
+    return;
   }
   if(!st.map){
-   host.replaceChildren();
-   st.map=L.map(host,{minZoom:3,maxZoom:11,scrollWheelZoom:false}).setView([39,-98],4);
-   L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png",{
-    maxZoom:19,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-   }).addTo(st.map);
-   L.control.zoom({position:"bottomright"}).addTo(st.map);
-   st.pins=L.layerGroup().addTo(st.map);
+    host.replaceChildren();
+    st.map=L.map(host,{minZoom:3,maxZoom:11,scrollWheelZoom:false}).setView([39,-98],4);
+    L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png",{
+      maxZoom:19,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(st.map);
+    L.control.zoom({position:"bottomright"}).addTo(st.map);
+    st.pins=L.layerGroup().addTo(st.map);
   }
   st.pins.clearLayers();
-  // Only title-based state references count as map observations.
-  const permitted = displayed().filter(isLead).filter(e=>e.state&&st.states[e.state]);
-  const counts=new Map();
-  permitted.forEach(e=>counts.set(e.state,(counts.get(e.state)||0)+1));
-  counts.forEach((count,code)=>{
-    const loc=st.states[code],diameter=Math.max(29,Math.min(65,24+Math.sqrt(count)*7));
+  const mode=st.mapMode;
+  const headlineCounts=new Map();
+  if(mode==="headlines")displayed().filter(e=>isLead(e)&&e.state&&st.states[e.state]).forEach(e=>
+    headlineCounts.set(e.state,(headlineCounts.get(e.state)||0)+1));
+  const records=mode==="headlines"?[...headlineCounts].map(([code,value])=>({code,value})):
+    Object.entries(st.ic3?.states||{}).filter(([code])=>!st.state||code===st.state).map(([code,row])=>({
+      code,value:mode==="ic3_loss"?row.reported_loss_usd:mode==="ic3_count"?row.complaints:row.complaints_per_100k
+    }));
+  const max=Math.max(1,...records.map(r=>r.value));
+  const min=Math.min(...records.map(r=>r.value));
+  const label=value=>mode==="ic3_loss"?usd(value):mode==="ic3_rate"?Number(value).toFixed(1):n(value);
+  const title={headlines:"Headline state mentions",ic3_rate:"FBI IC3 complaints per 100K people (2025)",
+    ic3_count:"FBI IC3 complaint filings (2025)",ic3_loss:"FBI IC3 reported losses in USD (2025)"}[mode];
+  records.forEach(({code,value})=>{
+    const loc=st.states[code];if(!loc)return;
+    // Bounded log sizing prevents very large states from hiding other markers.
+    const diameter=Math.max(29,Math.min(66,29+33*(Math.log1p(value)-Math.log1p(min))/(Math.log1p(max)-Math.log1p(min)||1)));
+    const sourceRow=st.ic3?.states?.[code];
+    const details=sourceRow?"2025 IC3: "+n(sourceRow.complaints)+" complaints · "+usd(sourceRow.reported_loss_usd)+
+      " reported losses · "+sourceRow.complaints_per_100k.toFixed(1)+" per 100K.":"News-only reporting.";
     const pin=L.marker([loc.latitude,loc.longitude],{
-      icon:L.divIcon({className:"us-pin",html:'<span class="us-pin-inner">'+esc(n(count))+'</span>',
+      icon:L.divIcon({className:"us-pin",html:'<span class="us-pin-inner">'+esc(label(value))+'</span>',
                      iconSize:[diameter,diameter],iconAnchor:[diameter/2,diameter/2]}),
-      title:n(count)+" title reference(s) to "+loc.name+" (state-capital reference, not incidents)"
+      title:loc.name+" · "+title+": "+label(value)+"; marker at state capital, not incident site"
     }).addTo(st.pins);
-    pin.bindPopup('<div class="us-state-popup"><strong>'+esc(loc.name)+'</strong><div>'+n(count)+' headline reference(s)</div><div>Marker at approximate state capital, not a crime scene. Click to filter by state.</div></div>');
+    pin.bindPopup('<div class="us-state-popup"><strong>'+esc(loc.name)+'</strong><div>'+esc(title)+': '+esc(label(value))+'</div><div>'+
+      esc(details)+'</div><div>Map marker is at an approximate state-capital reference point. Select it to filter.</div></div>');
     pin.on("click",()=>{st.state=code;$("usState").value=code;st.limit=30;refresh();});
   });
-  $("usMapCaption").textContent=n(permitted.length)+" headlines explicitly name "+
-    counts.size+" state(s) in this selection. Markers represent state-capital references, not incident sites or fraud rates.";
+  const selected=st.state?st.ic3?.states?.[st.state]:null;
+  const note=mode==="headlines"?
+   n(records.reduce((sum,r)=>sum+r.value,0))+" unverified headlines explicitly name "+n(records.length)+" state(s) in this view. Not a fraud heatmap or incident addresses.":
+   (selected?selected.name+": "+n(selected.complaints)+" FBI IC3 complaints and "+usd(selected.reported_loss_usd)+
+     " reported losses in 2025. ":
+     "2025 FBI IC3 state figures across 50 states + D.C. ")+
+   "Original-source "+title.toLowerCase()+". Statistics are separate from headline search filters and regulator actions.";
+  $("usMapCaption").innerHTML=esc(note)+" "+link(st.ic3?.source_url,"FBI report (pp. 28–30)");
   if(st.state&&st.states[st.state]){
     const loc=st.states[st.state];st.map.setView([loc.latitude,loc.longitude],st.state==="AK"||st.state==="HI"?5:6,{animate:false});
   }
@@ -157,7 +179,23 @@
   $("usOfficialTrend").innerHTML=bars([...officialByYear].sort((a,b)=>a[0].localeCompare(b[0])),
    "Number of tracked FinCEN/CFPB source records by filing/publication year. Not comparable to fraud cases, prosecution rates, penalties, or losses.",
    "Official federal source publications");
-  const monthly=new Map();
+  const ic3Mode=st.mapMode.startsWith("ic3_")?st.mapMode:"ic3_rate";
+  const ic3Label=ic3Mode==="ic3_loss"?"Reported IC3 loss (USD)":ic3Mode==="ic3_count"?"IC3 complaint counts":"IC3 complaints per 100K";
+  const ic3=Object.entries(st.ic3?.states||{}).map(([code,value])=>({
+    code,label:value.name,value:ic3Mode==="ic3_loss"?value.reported_loss_usd:ic3Mode==="ic3_count"?value.complaints:value.complaints_per_100k
+  })).sort((a,b)=>b.value-a.value);
+  const top=ic3.slice(0,10);
+  if(st.state&&!top.some(x=>x.code===st.state)){
+    const selected=ic3.find(x=>x.code===st.state);if(selected)top.push(selected);
+  }
+  const peak=Math.max(1,...top.map(x=>x.value));
+  $("usIC3Trend").innerHTML=top.length?
+    '<div class="us-chart-rows">'+top.map(x=>'<div class="us-chart-row us-ic3-row"><span class="label">'+esc(x.label)+'</span><div class="us-bar-track"><div class="us-bar-fill" style="width:'+
+       (100*x.value/peak).toFixed(1)+'%"></div></div><strong>'+(ic3Mode==="ic3_loss"?usd(x.value):ic3Mode==="ic3_count"?n(x.value):x.value.toFixed(1))+'</strong></div>').join("")+'</div>'+
+    '<p class="us-chart-foot">'+esc(ic3Label)+
+    '. Top 10 jurisdictions plus a selected state, if different. Source: FBI IC3 2025 annual report, pp. 28–30. Complaint counts and reported losses are not confirmed crime rates. For other metrics, change the map evidence selector.</p>':
+    '<div class="us-map-empty">FBI IC3 state data unavailable.</div>';
+   const monthly=new Map();
   for(const e of leads){const month=day(e.published_at).slice(0,7);if(/^20\d\d-\d\d$/.test(month))monthly.set(month,(monthly.get(month)||0)+1);}
   $("usNewsTrend").innerHTML=bars([...monthly].sort((a,b)=>a[0].localeCompare(b[0])).slice(-12),
    "Headline discoveries, subject to rotating state scans and changes in Google News indexing. Not a measure of fraud prevalence or growth.",
@@ -196,7 +234,7 @@
    '<div class="us-chart-foot">Federal source fetch status: '+esc(Object.entries(st.status.source_health||{}).filter(([k])=>k==="FinCEN"||k==="CFPB").map(([k,v])=>k+": "+(v.status||"unknown")).join(" · ")||"Not scanned yet")+'</div>';
   $("usSourceDirectory").innerHTML=directory.map(d=>
    '<div class="us-source-entry"><div><strong>'+esc(d.name)+'</strong><span class="us-source-state '+(d.monitored?"monitored":"")+'">'+
-   (d.monitored?"COLLECTION ENABLED":"REFERENCE ONLY")+'</span><p>'+esc(d.desc)+'</p></div>'+
+   (d.monitored?"COLLECTION ENABLED":d.curated?"CURATED OFFICIAL DATA":"REFERENCE ONLY")+'</span><p>'+esc(d.desc)+'</p></div>'+
    link(d.url,"Original source")+'</div>').join("");
  }
  function openRecord(id){
@@ -270,7 +308,7 @@
  }
  async function getJSON(path){const r=await fetch("./data/"+path+"?v="+Date.now(),{cache:"no-store"});if(!r.ok)throw Error(path+": "+r.status);return r.json();}
  async function load(){
-  const paths=["us_states.json","us_enforcement.json","us_news.json","us_status.json"];
+  const paths=["us_states.json","us_enforcement.json","us_news.json","us_status.json","us_ic3_2025.json"];
   const results=await Promise.allSettled(paths.map(getJSON));
   if(results[0].status!=="fulfilled"||results[1].status!=="fulfilled"){
     $("usError").textContent="U.S. geographic or primary-source data is temporarily unavailable. The source directory remains accessible.";
@@ -280,11 +318,13 @@
   st.enforcement=results[1].status==="fulfilled"?(results[1].value.events||[]):[];
   st.leads=results[2].status==="fulfilled"?(results[2].value.leads||[]):[];
   st.status=results[3].status==="fulfilled"?results[3].value:{};
+  st.ic3=results[4].status==="fulfilled"?results[4].value:null;
   $("usUpdated").textContent="Sources "+day(st.status.updated_at||results[1].value?.updated_at);
   prepareFilters();refresh();
  }
  function wire(){
   $("usReload").addEventListener("click",load);
+  $("usMapMode").addEventListener("change",e=>{st.mapMode=e.target.value;renderMap();renderTrends();});
   $("usState").addEventListener("change",e=>{st.state=e.target.value;st.limit=30;refresh();});
   $("usType").addEventListener("change",e=>{st.layer=e.target.value;st.limit=30;refresh();});
   $("usPeriod").addEventListener("change",e=>{st.year=e.target.value;st.limit=30;refresh();});
