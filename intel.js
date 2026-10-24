@@ -63,7 +63,10 @@
   $i("newsRows").innerHTML=hits.length?visible.map(x=>{
  const bank=x.banks_mentioned_in_headline||[],amount=x.amount_strings_in_headline||[];
  const notes=[bank.length?'Bank name in headline: '+bank.join(", "):"",amount.length?'Amount quoted: '+amount.join(", "):"",x.headline_case_candidate?"Possible individual victim story":"",(x.number_of_article_links||0)>1?(x.number_of_article_links+' matching source links'):""].filter(Boolean);
- return '<div class="news-item"><div><div class="news-item-title">'+link(x.url,x.title)+'</div><div class="news-meta">'+esc(x.publisher||"News syndication")+" · "+esc((x.published_at||"").slice(0,10))+" · "+esc(x.category||"Financial crime watch")+'</div>'+(notes.length?'<div class="news-extracted">'+notes.map(note=>'<span>'+esc(note)+'</span>').join("")+'</div>':"")+'</div><span class="news-label">'+(x.content_kind==="research_report_lead"?"RESEARCH LEAD":"UNVERIFIED NEWS")+'</span></div>';
+ const mapAction=Number.isFinite(x.map_latitude)&&Number.isFinite(x.map_longitude)?'<button class="news-mapaction" type="button" data-mapfocus="'+esc(x.id)+'">View source-mentioned city on map →</button>':"";
+ const sourceRefs=(x.article_links||[]).filter(a=>a.url&&a.url!==x.url);
+ const linkedSources=sourceRefs.length?'<details class="news-sources"><summary>'+sourceRefs.length+' additional indexed source link(s)</summary>'+sourceRefs.slice(0,12).map(a=>'<div>'+link(a.url,a.publisher||a.discovery_channel||"Source")+'</div>').join("")+'</details>':"";
+ return '<div class="news-item"><div><div class="news-item-title">'+link(x.url,x.title)+'</div><div class="news-meta">'+esc(x.publisher||"News syndication")+" · "+esc((x.published_at||"").slice(0,10))+" · "+esc(x.category||"Financial crime watch")+'</div>'+(notes.length?'<div class="news-extracted">'+notes.map(note=>'<span>'+esc(note)+'</span>').join("")+'</div>':"")+'<div class="news-rowtools">'+mapAction+linkedSources+'</div></div><span class="news-label">'+(x.content_kind==="research_report_lead"?"RESEARCH LEAD":"UNVERIFIED NEWS")+'</span></div>';
  }).join(""):'<div class="empty">No news leads returned. The collector may be awaiting its first successful syndicated feed response, or no headlines match your filters.</div>';
  }
  function initNews(){
