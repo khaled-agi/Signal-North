@@ -143,6 +143,25 @@ try:
         page.locator('[data-tab="overview"]').click()
         assert page.locator(".workflow-steps button").count() == 3
         assert page.locator("#metrics .metric").count() == 4
+        page.locator('[data-tab="themes"]').click()
+        page.wait_for_function("document.querySelectorAll('#themeGrid .theme-matrix-row').length >= 8", timeout=12000)
+        assert page.locator("#themeYearCoverage > div").count() == 7
+        page.locator("#themeChoose").select_option("Investment & crypto scams")
+        assert "Investment & crypto" in page.locator("#themeExamplesTitle").inner_text()
+        page.locator('[data-tab="sectors"]').click()
+        page.wait_for_function("document.querySelectorAll('#sectorEntries .sector-item').length >= 10", timeout=12000)
+        page.locator("#sectorSearch").fill("Wealthsimple")
+        assert page.locator("#sectorEntries .sector-item").count() >= 2
+        page.locator("#sectorSearch").fill("")
+        page.locator("#sectorFilter").select_option("Casinos & gaming")
+        assert page.locator("#sectorEntries .sector-item").count() >= 4
+        page.locator('[data-tab="community"]').click()
+        assert page.locator(".contribution-card").count() == 3
+        assert "not anonymous" in page.locator("#community").inner_text().lower()
+        assert page.locator('a[href*="template=public-source.yml"]').count() == 1
+        page.locator('[data-tab="overview"]').click()
+        assert page.locator('[data-to="community"]').count() >= 1
+        print("Themes, Wealthsimple, gaming, community safety and navigation: PASS")
         print("Research reports, CAFC historical trend, and simplified consultant workflow: PASS")
         print("Client watchlists, historical filters, linked map, light theme: PASS")
         assert not errors, str(errors)
