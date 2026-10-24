@@ -27,3 +27,58 @@ footer{padding:20px 0 0;color:#7189a5;font-size:11px}
 .fraud-national{padding-bottom:18px}.fraud-highlights{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;padding:12px 20px}.fraud-amount{background:#0d2d3b;border:1px solid #285569;border-radius:10px;padding:18px}.fraud-amount .fraud-figure{font-size:29px}.fraud-separator{letter-spacing:1px;font-size:10px;font-weight:750;color:#80adbe;padding:10px 20px}.fraud-stat-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;padding:0 20px}.fraud-stat{border:1px solid var(--stroke);background:#0b1b2c;padding:14px;border-radius:9px;display:grid;gap:5px}.fraud-stat strong{font-size:15px}.fraud-stat a{font-size:11px}.news-rows{max-height:750px;overflow:auto}.news-item{padding:15px 22px;border-top:1px solid var(--stroke);display:flex;justify-content:space-between;gap:20px;align-items:center}.news-item-title{font-weight:650}.news-item-title a{color:#deedf9}.news-meta{font-size:11px;margin-top:5px;color:#829ab4}.news-label{font-size:9px;letter-spacing:.4px;border:1px solid #75673d;color:#f6d389;padding:4px 6px;border-radius:5px;white-space:nowrap}
 .year-select{color:#d9f6f2;background:#112e38;border:1px solid #3d656a;border-radius:8px;padding:10px;max-width:200px}.annual-head{padding:19px 22px;background:#0d2936;display:flex;justify-content:space-between;align-items:center}.annual-head strong{font-size:27px}.annual-table{max-height:650px;overflow:auto}.annual-line{display:grid;grid-template-columns:minmax(0,2fr) 130px 100px;align-items:center;gap:12px;padding:15px 20px;border-top:1px solid var(--stroke)}.annual-line strong{font-size:13px}.annual-line a{text-align:right;font-size:11px}.source-line{padding:14px 22px;border-top:1px solid var(--stroke);display:flex;justify-content:space-between;gap:14px}.source-line p{margin:4px 0 0}.source-end{display:flex;align-items:center;gap:16px;white-space:nowrap}.source-tag{font-size:10px;color:#9fe9d8;border:1px solid #35677a;border-radius:20px;padding:3px 8px}
 @media(max-width:800px){.fraud-highlightline{grid-template-columns:1fr}.fraud-split{border-left:0;padding-left:0}.fraud-stat-grid,.fraud-highlights{grid-template-columns:1fr}.news-item{align-items:flex-start;flex-direction:column;gap:7px}.annual-line{grid-template-columns:1fr 1fr}.annual-line a{grid-column:span 2;text-align:left}.source-line{flex-direction:column}.fraud-figure{font-size:24px}}
+
+/* Signal North v0.3: geographic intelligence / editorial news radar */
+.header-right .scan-link{font-size:11px;letter-spacing:0;color:#75ddce;border-bottom:1px dotted #488c89;white-space:nowrap}
+.metrics{grid-template-columns:repeat(4,minmax(0,1fr))}
+.breaking-panel{border-color:#2b6570;background:linear-gradient(155deg,#122939 0%,#102032 45%,#111e31 100%)}
+.breaking-panel .panel-heading{padding-bottom:5px}
+.breaking-meta{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:4px 22px 15px;color:#97bcc7;font-size:11px}
+.breaking-meta a,.news-refreshline a{color:#6adacf;white-space:nowrap}
+.breaking-list{padding:0 15px 15px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.breaking-story{border:1px solid #294253;background:#0d1d2e;border-radius:10px;padding:14px 15px;min-width:0;display:flex;flex-direction:column;gap:7px}
+.breaking-story-head{display:flex;justify-content:space-between;align-items:center;gap:5px;color:#7f9bb1;font-size:10px}
+.breaking-type{background:#143a40;color:#9ce9dd;padding:2px 7px;border-radius:12px;max-width:75%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.breaking-story-title{font-weight:650;font-size:13px;line-height:1.4}
+.breaking-story-title a{color:#e2f3ff}
+.breaking-publisher{font-size:10px;color:#91abc0;margin-top:auto}
+.news-refreshline{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:0 22px 15px;color:#9ab3c9;font-size:11px}
+.map-panel{background:#112237}
+.map-panel>.panel-heading{padding-bottom:12px}
+.map-controls{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:0 18px 14px;flex-wrap:wrap}
+.map-mode{display:flex;gap:4px;background:#0a1625;padding:4px;border-radius:9px;border:1px solid #2b4256}
+.map-mode button{background:transparent;color:#9ab1c8;border:0;padding:7px 10px;border-radius:6px;font-size:11px;white-space:nowrap}
+.map-mode button:hover{background:#243950;color:#fff}
+.map-mode button.active{background:#2c6464;color:#e5fff9;font-weight:700}
+#mapProvince{background:#102338;color:#dceefb;border:1px solid #385069;border-radius:8px;padding:9px 12px;font-size:11px}
+.map-reset{background:transparent;border:1px solid #3b556d;border-radius:8px;color:#bce6e7;padding:7px 11px;font-size:11px}
+.map{height:490px;background:#e8f1f5}
+.leaflet-tile-pane{filter:saturate(.72) brightness(1.025)}
+.signal-map-pin{border:0!important;background:transparent!important}
+.signal-map-pin span{border:3px solid #fff;box-shadow:0 3px 13px #00101aa8;display:flex;align-items:center;justify-content:center;border-radius:50%;width:100%;height:100%;font-size:12px;font-weight:800}
+.pin-enforcement span{background:#08756e;color:#fff}
+.pin-news span{background:#d58a25;color:#fff}
+.map-mapfooter{padding:12px 17px;display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.map-key{font-size:11px;color:#a9c4d7;display:flex;align-items:center;gap:7px;flex-wrap:wrap}
+.key-reg{color:#59dbcb;font-size:18px}.key-news{color:#ffb64b;font-size:18px}.key-major{color:#b8e6e0;font-size:15px}
+.map-caption{padding:0;font-size:10px;color:#b7cbdc}
+.map-disclaimer{background:#0d1c2d;color:#9db5c8;font-size:11px;padding:11px 17px;margin:0;border-top:1px solid #273c53;line-height:1.45}
+.map-pop{font-family:Inter,system-ui,sans-serif}.map-pop-heading{font-size:15px;font-weight:750;color:#f1faff;margin:4px 0 6px}
+.map-pop-source{color:#83dfd0;font-size:9px;letter-spacing:.8px;font-weight:750}
+.map-popup-record{border-top:1px solid #2f4860;padding:9px 0;color:#d9e8f5;font-size:11px}
+.map-popup-record strong{display:block;color:#fff;font-size:12px}
+.map-popup-record a{display:inline-block;margin-top:5px;color:#76ecd5}
+.map-popup-date{font-size:9px;color:#9ab4c9;float:right}
+.map-pop-notice{border-top:1px solid #2f4860;padding-top:8px;color:#9eb2c7;font-size:10px}
+.leaflet-popup-content{max-height:330px;overflow:auto}
+.leaflet-container a.leaflet-popup-close-button{color:#c6dfea!important}
+@media(max-width:1320px){.breaking-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:1100px){.breaking-meta,.news-refreshline{flex-wrap:wrap}.header-right .scan-link{display:none}}
+@media(max-width:800px){
+.breaking-list{grid-template-columns:1fr}
+.map{height:410px}.map-controls{padding:0 12px 10px}
+.map-mode{width:100%;overflow:auto}.map-mode button{flex:1;min-width:max-content;padding:7px}
+.map-reset{font-size:10px}
+.breaking-meta,.news-refreshline{padding:0 16px 14px;font-size:10px}
+.map-mapfooter{align-items:flex-start;flex-direction:column}
+}
