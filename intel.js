@@ -92,21 +92,29 @@
    if(!url.startsWith("https://")||seen.has(key))continue;
    seen.add(key);unique.push(v);
   }
+  const meaningful=title=>new Set(String(title||"").toLowerCase()
+    .replace(/[^a-z0-9 ]/g," ").split(/\s+/).filter(w=>w.length>3&&!new Set(["this","that","with","from","into","after","reported","reports","says","canada","fraud","scams"]).has(w)));
+  const titleTokens=unique.map(v=>meaningful(v.title||x.title));
+  const shared=titleTokens.length>1?[...titleTokens[0]].filter(w=>titleTokens.every(t=>t.has(w))):[];
   const heading='<div class="eyebrow">REPORTING GROUP / EDITORIAL COMPARISON</div>'+
     '<h2>'+esc(x.title)+'</h2>'+
     '<p class="report-detail-meta">'+esc((x.published_at||"").slice(0,10))+
     ' · '+esc(x.category||"Financial crime")+' · '+esc(x.geographic_relevance_basis||"Geography not independently verified")+
     ' · '+Math.max(1,x.underlying_headline_count||1)+' indexed headline'+((x.underlying_headline_count||1)===1?"":"s")+
     ' · '+unique.length+' original source link'+(unique.length===1?"":"s")+'</p>';
-  const variations=unique.map((v,i)=>
-    '<article class="report-version"><div class="report-version-index">SOURCE '+(i+1)+' · '+esc(v.publisher||"Publisher")+
+  const variations=unique.map((v,i)=>{
+    const different=[...titleTokens[i]].filter(w=>!titleTokens.some((other,j)=>j!==i&&other.has(w))).slice(0,8);
+    return '<article class="report-version"><div class="report-version-index">SOURCE '+(i+1)+' · '+esc(v.publisher||"Publisher")+
     ' · '+esc(String(v.published_at||x.published_at||"").slice(0,10))+'</div>'+
     '<h3>'+esc(v.title||x.title)+'</h3>'+
-    '<p>'+link(v.url,"Open original reporting")+'</p></article>').join("");
+    (unique.length>1?'<p class="report-wording">Distinct words in this headline: '+esc(different.join(", ")||"No clearly distinct terms")+'</p>':"")+
+    '<p>'+link(v.url,"Open original reporting")+'</p></article>';
+  }).join("");
   const notice='<div class="warning">These publications have been grouped using closely matching headlines and dates. This is a discovery aid, not an independently verified single victim, incident, fraud loss, or finding against any institution. Compare the sources before using this reporting in research.</div>';
   $i("drawerBody").innerHTML=heading+notice+
      '<h3 class="report-versions-heading">Original reporting and headline variations</h3>'+
-     '<p class="report-detail-meta">Review how publishers described this report. Links open their original publications.</p>'+
+     '<p class="report-detail-meta">Compare the publication date and headline wording from each indexed source. This does not analyze the full article text.</p>'+
+     (shared.length&&unique.length>1?'<p class="report-shared">Shared headline terms: '+esc(shared.slice(0,12).join(" · "))+'</p>':"")+
      '<div class="report-versions">'+(variations||'<p>No source links retained.</p>')+'</div>';
   $i("overlay").classList.remove("hidden");
   document.body.style.overflow="hidden";
