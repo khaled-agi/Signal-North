@@ -9,6 +9,7 @@ from unittest.mock import patch
 from scripts.collect import amount
 from scripts import build_intelligence_graph as graph
 from scripts import build_theme_trends as theme_trends
+from scripts import build_story_groups as reporting
 
 class FinancialAmountTests(unittest.TestCase):
  def test_large_abbreviated_penalties(self):
@@ -78,6 +79,46 @@ class HistoricalThemeTests(unittest.TestCase):
   self.assertNotEqual(graph.bank_key("Wealthsimple"),graph.bank_key("Wealthsimple Investments Inc."))
   self.assertNotEqual(graph.bank_key("Wealthsimple"),graph.bank_key("Royal Bank of Canada"))
   self.assertNotEqual(graph.bank_key("Binance"),graph.bank_key("BCLC"))
+
+class GroupedReportingTests(unittest.TestCase):
+ def example(self,title,date="2025-04-11",url="https://source.example/a",**extra):
+  return {"id":url.replace("/","_"),"title":title,"published_at":date,
+    "publisher":"Sample press","url":url,
+    "article_links":[{"title":title,"url":url,"published_at":date,"publisher":"Sample press"}],**extra}
+
+ def test_group_near_identical_reports_and_preserve_headline_variants(self):
+  docs=[
+   self.example("Toronto investor loses $50,000 in elaborate crypto romance scam involving fake trading app",url="https://a.example/1"),
+   self.example("Toronto investor loses $50,000 in elaborate crypto romance scam involving a fake trading app",date="2025-04-13",url="https://b.example/2"),
+   self.example("Toronto investor loses $50,000 in elaborate crypto romance scam involving fake trading app",date="2025-04-12",url="https://c.example/3"),
+  ]
+  grouped=reporting.display_groups(docs)
+  self.assertEqual(len(grouped),1)
+  self.assertEqual(grouped[0]["underlying_headline_count"],3)
+  self.assertEqual(grouped[0]["source_count"],3)
+  self.assertEqual(grouped[0]["variation_count"],2)
+  self.assertEqual(len(grouped[0]["headline_variations"]),3)
+  self.assertTrue(all(v["url"].startswith("https://") for v in grouped[0]["headline_variations"]))
+
+ def test_do_not_merge_materially_distinct_reporting(self):
+  base="Toronto investor loses $50,000 in elaborate crypto romance scam involving fake trading app"
+  rows=[
+   self.example(base,url="https://a.example/1"),
+   self.example("Toronto investor loses $500,000 in elaborate crypto romance scam involving fake trading app",url="https://a.example/2"),
+   self.example(base,date="2025-08-11",url="https://a.example/3"),
+   self.example(base,url="https://a.example/4",map_latitude=49.2,map_longitude=-123.2),
+   self.example(base,url="https://a.example/5",map_latitude=45.5,map_longitude=-73.5),
+  ]
+  groups=reporting.display_groups(rows)
+  self.assertGreaterEqual(len(groups),4)
+  self.assertEqual(sum(x["underlying_headline_count"] for x in groups),len(rows))
+
+ def test_group_is_discovery_not_verified_incident(self):
+  row=self.example("Winnipeg woman reports alleged online investment account scam while police investigate",url="https://a.example/1")
+  group=reporting.display_groups([row])[0]
+  self.assertEqual(group["evidence_status"],"unverified_grouped_reporting")
+  self.assertIn("not independently verified",group["grouping_disclaimer"])
+  self.assertEqual(group["article_ids"],[row["id"]])
 
 if __name__=="__main__":
  unittest.main()
