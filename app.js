@@ -125,7 +125,26 @@ function renderMapClusters(){
 }
 function initMap(){
  if(!window.L){
-  $("#mapCaption").textContent="Basemap unavailable. All indexed headlines remain accessible in the archive.";
+  // A CDN outage must not disable the research list. The list never depends
+  // on Leaflet: preserve all headline titles and source links independently.
+  let rows=[...state.news.map(e=>mapRecord("news",e)),
+            ...state.events.map(e=>mapRecord("reg",e)),
+            ...state.incidents.map(e=>mapRecord("case",e))];
+  if(state.mapMode==="news")rows=rows.filter(e=>e.kind!=="reg");
+  else if(state.mapMode==="enforcement")rows=rows.filter(e=>e.kind==="reg");
+  else if(state.mapMode==="major")rows=rows.filter(e=>e.kind==="reg"&&Number(e.raw.penalty_cad)>=1000000);
+  if(state.mapProvince)rows=rows.filter(e=>e.province===state.mapProvince);
+  if(state.mapMonth)rows=rows.filter(e=>String(e.date).startsWith(state.mapMonth));
+  state.mapRows=rows.sort((a,b)=>String(b.date).localeCompare(String(a.date)));
+  const newsCount=state.news.length,located=state.news.filter(e=>Number.isFinite(e.map_latitude)&&Number.isFinite(e.map_longitude)).length;
+  $("#mapCoverage").innerHTML='<div class="coverage-number"><strong>'+newsCount.toLocaleString()+'</strong><span>indexed headlines</span></div>'+
+   '<div class="coverage-number"><strong>'+located.toLocaleString()+'</strong><span>headline city mentions</span></div>'+
+   '<div class="coverage-number"><strong>'+Math.max(0,newsCount-located).toLocaleString()+'</strong><span>unlocated headlines</span></div>'+
+   '<p>The archive remains available even when the basemap cannot load.</p>';
+  $("#mapCaption").textContent="Map library unavailable. Research titles and original links remain available.";
+  $("#mapClusterCount").textContent="Map unavailable; use the article browser.";
+  $("#map").textContent="Map tiles unavailable. Browse and filter every article on the right.";
+  refreshMapList();
   return;
  }
  if(!state.map){
