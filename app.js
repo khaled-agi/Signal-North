@@ -1,6 +1,6 @@
 "use strict";
 const $ = selector => document.querySelector(selector);
-const state = {events:[],status:{},map:null,layer:null,tab:"overview"};
+const state = {events:[],news:[],status:{},map:null,layer:null,tab:"overview",mapMode:"all",mapProvince:""};
 const provinces = {ON:"Ontario",QC:"Québec",BC:"British Columbia",AB:"Alberta",NB:"New Brunswick",NS:"Nova Scotia",MB:"Manitoba",SK:"Saskatchewan",NL:"Newfoundland & Labrador",PE:"Prince Edward Island"};
 function escapeHTML(value){return String(value??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
 function currency(value){if(value==null)return "Not reported";const x=Number(value);return x>=1e6?"$"+(x/1e6).toLocaleString("en-CA",{maximumFractionDigits:2})+"M":"$"+x.toLocaleString("en-CA",{maximumFractionDigits:0});}
@@ -32,34 +32,82 @@ function renderMetrics(){
  const counts={};for(const x of mapped){counts[x.province||"Other"]=(counts[x.province||"Other"]||0)+1;}
  const sorted=Object.entries(counts).sort((a,b)=>b[1]-a[1]);const max=Math.max(1,...sorted.map(x=>x[1]));
  $("#regions").innerHTML=sorted.length?sorted.map(x=>'<div class="region"><div class="region-head"><span>'+escapeHTML(provinces[x[0]]||x[0])+'</span><strong>'+x[1]+'</strong></div><div class="track"><div style="width:'+Math.round(x[1]/max*100)+'%"></div></div></div>').join(""):'<div class="empty">No mapped institutions in the current source snapshot.</div>';
+
+ const major=e.filter(x=>Number(x.penalty_cad)>=1000000).sort((x,y)=>Number(y.penalty_cad)-Number(x.penalty_cad));
+ $("#majorOrders").innerHTML=major.length?major.slice(0,6).map(rowHTML).join(""):'<div class="empty">No major penalties have been identified in the current source snapshot.</div>';
  $("#recent").innerHTML=e.length?e.slice(0,8).map(rowHTML).join(""):'<div class="empty">No enforcement records are published in this snapshot yet. Check Source monitoring for the collector status.</div>';
  $("#updated").textContent=state.status.last_completed_at?"Collected "+date(state.status.last_completed_at):"Public-source snapshot";
 }
 function initMap(){
- if(!window.L){$("#map").innerHTML='<div class="empty">Map tiles unavailable. Events remain accessible in the explorer.</div>';return;}
+ if(!window.L){
+  $("#mapCaption").textContent="Base map is loading; enforcement and news are still available in the lists.";
+  return;
+ }
  if(!state.map){
   $("#map").replaceChildren();
-  state.map=L.map("map",{zoomControl:false,minZoom:3}).setView([55,-95],4);
+  state.map=L.map("map",{zoomControl:false,minZoom:3,maxZoom:13,scrollWheelZoom:false,preferCanvas:true}).setView([55,-96],4);
   L.control.zoom({position:"bottomright"}).addTo(state.map);
-  const base = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png",{
-   maxZoom:19, attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'
+  const base=L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png",{
+   maxZoom:19,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'
   }).addTo(state.map);
-  let fallback=false;
-  base.on("tileerror",()=>{if(fallback)return;fallback=true;state.map.removeLayer(base);
-    L.tileLayer("https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png",{maxZoom:19,
-     attribution:'&copy; OpenStreetMap contributors, HOT'}).addTo(state.map);});
+  base.on("tileerror",()=>{$("#mapCaption").textContent="Base map tiles could not load. Points remain available in the linked event lists.";});
   state.layer=L.layerGroup().addTo(state.map);
+  const provinceSelect=$("#mapProvince");
+  provinceSelect.innerHTML='<option value="">All provinces</option>'+Object.entries(provinces).sort((a,b)=>a[1].localeCompare(b[1])).map(([code,name])=>'<option value="'+escapeHTML(code)+'">'+escapeHTML(name)+'</option>').join("");
  }
  state.layer.clearLayers();
- let count=0;
- for(const e of state.events){
+ const showEnforce=["all","enforcement","major"].includes(state.mapMode);
+ const showNews=["all","news"].includes(state.mapMode);
+ const groups=new Map();
+ let officialCount=0, newsCount=0, majorCount=0;
+ const add=(kind,lat,lon,entry,province)=>{
+  // One group per precisely matching coordinate and evidence type; never merge news and official cases.
+  const key=kind+"|"+Number(lat).toFixed(4)+"|"+Number(lon).toFixed(4);
+  if(!groups.has(key))groups.set(key,{kind,lat:Number(lat),lon:Number(lon),items:[],province});
+  groups.get(key).items.push(entry);
+ };
+ if(showEnforce)for(const e of state.events){
   if(!Number.isFinite(e.latitude)||!Number.isFinite(e.longitude))continue;
-  count++;
-  const dot=L.circleMarker([e.latitude,e.longitude],{radius:8,color:"#0d2831",weight:2,fillColor:"#58dccc",fillOpacity:.9}).addTo(state.layer);
-  const html='<div style="min-width:180px"><strong>'+escapeHTML(e.institution||e.title)+'</strong><div style="font-size:12px;margin:4px 0">'+escapeHTML(e.category)+'</div><div style="font-size:11px">'+escapeHTML(e.location||"Reported institution location")+'</div><a href="#" data-popup="'+escapeHTML(e.id)+'">View case ↗</a></div>';
-  dot.bindPopup(html);
+  if(state.mapProvince&&e.province!==state.mapProvince)continue;
+  if(state.mapMode==="major"&&!(Number(e.penalty_cad)>=1000000))continue;
+  officialCount++;
+  if(Number(e.penalty_cad)>=1000000)majorCount++;
+  add("reg",e.latitude,e.longitude,e,e.province);
  }
- $("#mapCaption").textContent=count+" of "+state.events.length+" notices have explicitly supported institution locations";
+ if(showNews)for(const e of state.news){
+  if(!Number.isFinite(e.map_latitude)||!Number.isFinite(e.map_longitude))continue;
+  if(state.mapProvince&&e.map_province!==state.mapProvince)continue;
+  newsCount++;
+  add("news",e.map_latitude,e.map_longitude,e,e.map_province);
+ }
+ for(const cluster of groups.values()){
+  const reg=cluster.kind==="reg",n=cluster.items.length;
+  const label=n>1?String(n):reg?"◆":"●";
+  const marker=L.marker([cluster.lat,cluster.lon],{
+   icon:L.divIcon({html:'<span>'+escapeHTML(label)+'</span>',className:'signal-map-pin '+(reg?'pin-enforcement':'pin-news'),iconSize:[n>1?34:27,n>1?34:27],iconAnchor:[n>1?17:13.5,n>1?17:13.5]}),
+   keyboard:true,title:(reg?"Regulatory notices: ":"News headline mentions: ")+n
+  }).addTo(state.layer);
+  const items=cluster.items.slice(0,7).map(e=>reg?
+    '<div class="map-popup-record"><span class="map-popup-date">'+escapeHTML(date(e.published_at))+'</span><strong>'+escapeHTML(e.institution||"Regulated institution")+'</strong><div>'+escapeHTML(currency(e.penalty_cad))+' · '+escapeHTML(e.source)+'</div><a href="#" data-popup="'+escapeHTML(e.id)+'">Examine case →</a></div>':
+    '<div class="map-popup-record"><span class="map-popup-date">'+escapeHTML(date(e.published_at))+'</span><strong>'+escapeHTML(e.publisher||"Syndicated publisher")+'</strong><div>'+escapeHTML(e.title||"News lead")+'</div><a href="'+escapeHTML(e.url)+'" rel="noopener noreferrer" target="_blank">Open original news link ↗</a></div>'
+  ).join("");
+  const first=cluster.items[0],where=reg?(first.location||"Source-supported institution location"):(first.map_location||"Canadian city mentioned");
+  const pop='<div class="map-pop"><div class="map-pop-heading">'+escapeHTML(where)+'</div><span class="map-pop-source">'+(reg?"REGULATORY / PRIMARY SOURCE":"GOOGLE NEWS / UNVERIFIED HEADLINE")+'</span>'+items+(n>7?'<div class="small">+'+(n-7)+' more records in the full list</div>':"")+'<div class="map-pop-notice">'+(reg?"Pin marks an institution's location, not the site of alleged misconduct.":"City is explicitly mentioned in the headline; it may not be the scene of the incident.")+'</div></div>';
+  marker.bindPopup(pop,{maxWidth:340,minWidth:230,maxHeight:370});
+ }
+ const shown=officialCount+newsCount;
+ const description=state.mapMode==="major"?"Major penalties mapped: "+majorCount:state.mapMode==="news"?"Headline-city mentions: "+newsCount:state.mapMode==="enforcement"?"Regulatory notices mapped: "+officialCount:"Regulatory notices: "+officialCount+" · Headline-city mentions: "+newsCount;
+ $("#mapCaption").textContent=description+" · "+(state.mapProvince?provinces[state.mapProvince]:"Canada");
+ if(state.mapProvince&&groups.size){
+  const bounds=L.latLngBounds([...groups.values()].map(g=>[g.lat,g.lon]));
+  state.map.fitBounds(bounds.pad(.3),{maxZoom:7,padding:[25,25]});
+ }else if(!state.mapProvince&&state.mapMode!=="all"&&groups.size){
+  const bounds=L.latLngBounds([...groups.values()].map(g=>[g.lat,g.lon]));
+  state.map.fitBounds(bounds.pad(.3),{maxZoom:6,padding:[25,25]});
+ }else if(!state.mapProvince&&state.mapMode==="all"){
+  state.map.setView([55,-96],4);
+ }
+ setTimeout(()=>state.map.invalidateSize(),50);
 }
 function renderEvents(){
  const e=state.events;
@@ -113,6 +161,13 @@ async function load(){
  }catch(err){$("#error").classList.remove("hidden");$("#error").textContent="Unable to load published data: "+err.message;}
 }
 document.addEventListener("click",e=>{
+ const layer=e.target.closest("[data-mapmode]");
+ if(layer){
+  state.mapMode=layer.dataset.mapmode;
+  document.querySelectorAll("[data-mapmode]").forEach(b=>b.classList.toggle("active",b.dataset.mapmode===state.mapMode));
+  initMap();
+  return;
+ }
  const tab=e.target.closest("[data-tab],[data-to]");if(tab){switchTab(tab.dataset.tab||tab.dataset.to);return;}
  const event=e.target.closest("[data-event],[data-popup]");if(event){e.preventDefault();const record=state.events.find(x=>x.id===(event.dataset.event||event.dataset.popup));if(record)details(record);return;}
  const inst=e.target.closest("[data-institution]");if(inst)institutionDetail(inst.dataset.institution);
@@ -124,6 +179,9 @@ document.addEventListener("keydown",e=>{
 for(const id of ["search","sourceFilter","provinceFilter","statusFilter"]){$("#"+id).addEventListener(id==="search"?"input":"change",filterEvents);}
 $("#close").addEventListener("click",closeDrawer);
 $("#overlay").addEventListener("click",e=>{if(e.target.id==="overlay")closeDrawer();});
-$("#reload").addEventListener("click",load);
+$("#reload").addEventListener("click",()=>{load(); window.dispatchEvent(new Event("signalnorth:refresh"));});
+$("#mapReset").addEventListener("click",()=>{state.mapProvince="";$("#mapProvince").value="";state.mapMode="all";document.querySelectorAll("[data-mapmode]").forEach(b=>b.classList.toggle("active",b.dataset.mapmode==="all"));initMap();});
+$("#mapProvince").addEventListener("change",value=>{state.mapProvince=value.target.value;initMap();});
+window.addEventListener("signalnorth:newsready",event=>{state.news=event.detail?.leads||[];initMap();});
 window.addEventListener("signalnorth:mapready", () => { if(state.events.length) initMap(); });
 load();
