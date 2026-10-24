@@ -11,8 +11,8 @@ function switchTab(tab){
  state.tab=tab;
  document.querySelectorAll(".tab").forEach(x=>x.classList.toggle("hidden",x.id!==tab));
  document.querySelectorAll(".nav").forEach(x=>x.classList.toggle("active",x.dataset.tab===tab));
- $("#crumb").textContent=({overview:"INTELLIGENCE OVERVIEW",events:"EVENT EXPLORER",incidents:"REPORTED FRAUD CASES",clients:"CLIENT WATCHLISTS",connections:"EVIDENCE CONNECTIONS",institutions:"INSTITUTION RADAR",fraud:"FRAUD INTELLIGENCE",losses:"LOSSES & PENALTIES",sources:"SOURCES & METHODOLOGY"})[tab];
- const t={overview:["Know what changed.","Know where to look.","Monitor public enforcement developments and explore evidence-linked institutions across Canada."],events:["Explore the evidence.","Understand each case.","Search regulator-published actions by entity, location, and legal status."],incidents:["Follow individual cases.","Know what was reported.","Source-linked customer incidents, financial impact and bank relationships."],clients:["Know your clients.","Follow documented signals.","Track institution-specific enforcement, customer reports and preliminary news mentions."],connections:["Connect the dots.","Keep evidence distinct.","Follow an institution across enforcement decisions, reported customer incidents, and preliminary news leads."],institutions:["Organizations, not rankings.","Evidence before inference.","Institution profiles connect reported events without implying fraud or demand for consulting services."],fraud:["Follow the patterns.","Separate leads from findings.","Reported fraud losses, emerging incidents, and Canadian threat intelligence."],losses:["Follow the money.","Separate losses from penalties.","Compare reported enforcement penalties by publication year and see which institution fraud-loss figures remain undisclosed."],sources:["Trust the source.","Understand the gaps.","Track source availability, update times, and limitations of public regulatory data."]}[tab];
+ $("#crumb").textContent=({overview:"INTELLIGENCE OVERVIEW",events:"EVENT EXPLORER",incidents:"REPORTED FRAUD CASES",clients:"CLIENT WORKSPACE",connections:"INSTITUTION INTELLIGENCE",reports:"RESEARCH LIBRARY",institutions:"INSTITUTION RADAR",fraud:"FRAUD INTELLIGENCE",losses:"LOSSES & PENALTIES",sources:"SOURCES & METHODOLOGY"})[tab];
+ const t={overview:["Know what changed.","Know where to look.","Monitor public enforcement developments and explore evidence-linked institutions across Canada."],events:["Explore the evidence.","Understand each case.","Search regulator-published actions by entity, location, and legal status."],incidents:["Follow individual cases.","Know what was reported.","Source-linked customer incidents, financial impact and bank relationships."],clients:["Track client priorities.","Act on evidence.","Manage research notes, institution timelines and sourced briefs."],reports:["Understand the bigger picture.","Stay grounded in research.","Official studies, national fraud statistics and evidence limitations."],connections:["Connect the dots.","Keep evidence distinct.","Follow an institution across enforcement decisions, reported customer incidents, and preliminary news leads."],institutions:["Organizations, not rankings.","Evidence before inference.","Institution profiles connect reported events without implying fraud or demand for consulting services."],fraud:["Follow the patterns.","Separate leads from findings.","Reported fraud losses, emerging incidents, and Canadian threat intelligence."],losses:["Follow the money.","Separate losses from penalties.","Compare reported enforcement penalties by publication year and see which institution fraud-loss figures remain undisclosed."],sources:["Trust the source.","Understand the gaps.","Track source availability, update times, and limitations of public regulatory data."]}[tab];
  $("#headline").innerHTML=escapeHTML(t[0])+"<br><em>"+escapeHTML(t[1])+"</em>";
  $("#description").textContent=t[2];
  if(tab==="overview"&&state.map)setTimeout(()=>state.map.invalidateSize(),60);
@@ -23,10 +23,10 @@ function rowHTML(e){
 function renderMetrics(){
  const e=state.events;const fines=e.filter(x=>x.penalty_cad!=null);const total=fines.reduce((a,b)=>a+Number(b.penalty_cad),0);const mapped=e.filter(x=>Number.isFinite(x.latitude)&&Number.isFinite(x.longitude));
  const values=[
- ["Tracked notices",String(e.length),"Observed in monitored public sources"],
- ["Named institutions",String(eventsByInstitution().length),"Name-matched, not corporate-family merged"],
- ["Published penalties",currency(total),"Sum of tracked notices; not fraud losses"],
- ["Mapped events",String(mapped.length),"Only source-supported locations"]
+ ["Indexed headlines",state.news.length?state.news.length.toLocaleString("en-CA"):"Loading", "Source-linked discoveries; not verified fraud incidents"],
+ ["Official notices",String(e.length),"Regulator-published enforcement actions"],
+ ["Reported cases",String(state.incidents.length),"Individually source-reviewed reports"],
+ ["Institutions monitored",String(state.entityAliases.length||eventsByInstitution().length),"Canonical institution groups, where known"]
  ];
  $("#metrics").innerHTML=values.map(v=>'<div class="metric"><span class="label">'+escapeHTML(v[0])+'</span><span class="value">'+escapeHTML(v[1])+'</span><span class="foot">'+escapeHTML(v[2])+'</span></div>').join("");
  const counts={};for(const x of mapped){counts[x.province||"Other"]=(counts[x.province||"Other"]||0)+1;}
@@ -238,8 +238,8 @@ $("#mapProvince").addEventListener("change",value=>{state.mapProvince=value.targ
 $("#mapMonth").addEventListener("change",e=>{state.mapMonth=e.target.value;initMap();});
 $("#mapClearMonth").addEventListener("click",()=>{state.mapMonth="";$("#mapMonth").value="";initMap();});
 window.addEventListener("signalnorth:clientfocus",e=>{state.clientFocus=e.detail?.name||"";state.mapMode="all";document.querySelectorAll("[data-mapmode]").forEach(b=>b.classList.toggle("active",b.dataset.mapmode==="all"));initMap();});
-window.addEventListener("signalnorth:aliasesready",event=>{state.entityAliases=event.detail?.institutions||[];initMap();});
-window.addEventListener("signalnorth:newsready",event=>{state.news=event.detail?.leads||[];initMap();});
-window.addEventListener("signalnorth:incidentsready",event=>{state.incidents=event.detail?.incidents||[];initMap();});
+window.addEventListener("signalnorth:aliasesready",event=>{state.entityAliases=event.detail?.institutions||[];renderMetrics();initMap();});
+window.addEventListener("signalnorth:newsready",event=>{state.news=event.detail?.leads||[];renderMetrics();initMap();});
+window.addEventListener("signalnorth:incidentsready",event=>{state.incidents=event.detail?.incidents||[];renderMetrics();initMap();});
 window.addEventListener("signalnorth:mapready", () => { if(state.events.length) initMap(); });
 load();
