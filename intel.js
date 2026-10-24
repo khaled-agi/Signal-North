@@ -88,8 +88,9 @@
   const seen=new Set();
   for(const v of variants){
    const url=String(v.url||"");
-   if(!url.startsWith("https://")||seen.has(url))continue;
-   seen.add(url);unique.push(v);
+   const key=url+"|"+String(v.title||x.title||"").trim().toLowerCase();
+   if(!url.startsWith("https://")||seen.has(key))continue;
+   seen.add(key);unique.push(v);
   }
   const heading='<div class="eyebrow">REPORTING GROUP / EDITORIAL COMPARISON</div>'+
     '<h2>'+esc(x.title)+'</h2>'+
