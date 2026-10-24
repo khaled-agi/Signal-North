@@ -112,3 +112,26 @@ a,.link-btn{color:#185f67}
 .region-advanced{padding:6px 15px 10px;border-top:1px solid #e0e9ed}
 .region-advanced summary{cursor:pointer;color:#607b86;font-size:11px;padding:10px 1px;font-weight:650}
 .region-advanced #regions{max-height:260px;overflow:auto}
+
+
+/* One reporting group in the list; original publisher variations in detail. */
+.news-group{align-items:flex-start;min-height:80px}
+.news-group-content{min-width:0;flex:1}
+.report-open,.report-variations,.report-popup-open{display:inline;text-align:left;border:0;background:transparent;padding:0;font:inherit;cursor:pointer}
+.report-open{color:#183e50;font-size:14px;font-weight:650;line-height:1.55}
+.report-open:hover,.map-story-title button:hover,.report-popup-open:hover{text-decoration:underline;color:#126d70}
+.report-open:focus-visible,.report-variations:focus-visible,.report-popup-open:focus-visible{outline:2px solid #1b6970;outline-offset:3px;border-radius:3px}
+.report-variations{font-size:11px;color:#17616a;font-weight:750}
+.report-variations:hover{text-decoration:underline}
+.news-group .news-label{white-space:nowrap;font-size:10px;margin-top:2px}
+.breaking-story-title .report-open{font-weight:650;font-size:14px}
+.report-popup-open{font-weight:650;color:#164e60;font-size:11px}
+.map-story-title button[data-story]{color:#183d4f;font-weight:650}
+.map-locate{background:#e9f3f2;color:#145e68;border:1px solid #c4dada;border-radius:4px;padding:2px 5px;font-size:10px;cursor:pointer}
+.report-detail-meta{font-size:12px;color:#647b89;line-height:1.6;margin:8px 0 17px}
+.report-versions-heading{font-family:var(--serif,Georgia,serif);color:#193c4e;font-size:21px;margin:25px 0 10px}
+.report-versions{display:grid;grid-template-columns:1fr;gap:11px;margin:12px 0 20px}
+.report-version{background:#fbfcfd;border:1px solid #dce7e9;border-left:3px solid #1b6870;border-radius:7px;padding:15px 17px}
+.report-version-index{font-size:10px;font-weight:750;letter-spacing:.05em;text-transform:uppercase;color:#63808b}
+.report-version h3{font-size:14px;color:#1b3e52;margin:9px 0 8px;line-height:1.5;font-weight:650}
+.report-version p{margin:0;font-size:11px;font-weight:750}
