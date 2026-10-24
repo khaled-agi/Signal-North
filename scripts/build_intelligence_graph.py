@@ -95,6 +95,9 @@ def reference(kind,item):
   "source":item.get("publisher"),"category":item.get("category"),
   "source_count":item.get("number_of_article_links",1),
   "source_channels":item.get("source_channels",[]),
+  "source_count":item.get("source_count",item.get("number_of_article_links",1)),
+  "variation_count":item.get("variation_count",1),
+  "headline_variations":item.get("headline_variations",[]),
   "amount_text":item.get("amount_strings_in_headline",[]),
   "location":item.get("map_location"),"evidence":"unverified_headline",
   "role":"mentioned_in_headline_only"}
@@ -125,7 +128,8 @@ def research_priority(article):
 def generate():
  events=load("events.json","events")
  incidents=load("incidents.json","incidents")
- articles=load("article_index.json","articles")
+ articles=load("reporting_groups.json","groups")
+ if not articles:articles=load("article_index.json","articles")
  if not articles:articles=load("news.json","leads")+load("news_archive.json","leads")
  by_key={}
  def ensure(name):
@@ -163,7 +167,7 @@ def generate():
    name=BANKS[key]["name"] if key in BANKS else next((a for a in art.get("banks_mentioned_in_headline",[])+art.get("organizations_mentioned_in_headline",[]) if bank_key(a)==key),"")
    entry=ensure(name)
    if not entry:continue
-   entry["counts"]["headlines"]+=1
+   entry["counts"]["headlines"]+=1  # One grouped report; not one incident or source
    entry["evidence"].append(reference("headline",art))
  for entry in by_key.values():
   entry["evidence"].sort(key=lambda e:str(e.get("date") or ""),reverse=True)
@@ -186,8 +190,8 @@ def generate():
  DATA.mkdir(parents=True,exist_ok=True)
  graph={
   "generated_at":datetime.now(timezone.utc).isoformat(timespec="seconds"),
-  "methodology":"Exact official institution names are canonically grouped by listed aliases. Articles linked to banks only when the bank is explicitly named in a headline. This is an evidence research aid, not proof of wrongdoing.",
-  "source_counts":{"enforcement":len(events),"reviewed_incidents":len(incidents),"unverified_articles":len(articles)},
+  "methodology":"Institution names are canonically grouped using explicit aliases. Headline entries are conservative reporting groups, not distinct or independently verified fraud incidents; multiple publisher headlines are retained under each group. An institution mention is not proof of wrongdoing.",
+  "source_counts":{"enforcement":len(events),"reviewed_incidents":len(incidents),"unverified_report_groups":len(articles)},
   "institutions":ranked
  }
  (DATA/"institution_intelligence.json").write_text(json.dumps(graph,ensure_ascii=False,indent=2)+"\n","utf-8")
