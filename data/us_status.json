@@ -1,0 +1,22 @@
+{
+  "updated_at": "2026-10-24",
+  "country": "US",
+  "enforcement_records": 13,
+  "unverified_news_leads": 0,
+  "state_directory_count": 51,
+  "states_scanned_this_run": [],
+  "states_ever_scanned": 0,
+  "states_last_scanned": {},
+  "next_state_offset": 0,
+  "source_health": {
+    "FinCEN": {
+      "status": "seed_reviewed",
+      "source_url": "https://www.fincen.gov/news/enforcement-actions"
+    },
+    "CFPB": {
+      "status": "seed_reviewed",
+      "source_url": "https://www.consumerfinance.gov/enforcement/actions/"
+    }
+  },
+  "source_limits": "Initial primary-source snapshot. Not all agencies or state police departments are monitored; a state without stories is missing coverage, not fraud-free."
+}
