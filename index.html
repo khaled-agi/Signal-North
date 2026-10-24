@@ -15,6 +15,7 @@
 <link rel="stylesheet" href="./editorial.css?v=__BUILD_SHA__">
 <link rel="stylesheet" href="./connections.css?v=__BUILD_SHA__">
 <link rel="stylesheet" href="./research.css?v=__BUILD_SHA__">
+<link rel="stylesheet" href="./network.css?v=__BUILD_SHA__">
 </head>
 <body>
 <div class="layout">
@@ -23,8 +24,10 @@
   <div class="side-caption">YOUR WORKFLOW</div>
   <button class="nav active" data-tab="overview">◈ &nbsp; Command center</button>
   <button class="nav" data-tab="fraud">⚑ &nbsp; Discover stories</button>
+  <button class="nav" data-tab="themes">◫ &nbsp; Scam themes &amp; trends</button>
   <button class="nav" data-tab="connections">✧ &nbsp; Investigate institutions</button>
-  <button class="nav" data-tab="clients">▧ &nbsp; Client workspace</button>
+  <button class="nav" data-tab="sectors">◇ &nbsp; Crypto, fintech &amp; gaming</button>
+  <button class="nav" data-tab="community">♧ &nbsp; Community contributions</button>
   <div class="side-caption">RESEARCH</div>
   <button class="nav" data-tab="reports">▦ &nbsp; Research library</button>
   <details class="nav-datasets" open>
@@ -33,6 +36,7 @@
     <button class="nav nav-sub" data-tab="events">▤ &nbsp; Enforcement decisions</button>
     <button class="nav nav-sub" data-tab="losses">◫ &nbsp; Losses &amp; penalties</button>
     <button class="nav nav-sub" data-tab="institutions">▥ &nbsp; Institution directory</button>
+    <button class="nav nav-sub" data-tab="clients">▧ &nbsp; My local research</button>
     <button class="nav nav-sub" data-tab="sources">◉ &nbsp; Source monitoring</button>
   </details>
   <div class="sidebar-bottom"><div class="live-mark"><i></i><span>PUBLIC RESEARCH PREVIEW</span></div><p>Regulatory orders and Google News research leads. Different verification levels; not a fraud ranking.</p><a href="https://github.com/khaled-agi/Signal-North" target="_blank" rel="noopener">View source on GitHub ↗</a></div>
@@ -50,7 +54,7 @@
     <div class="workflow-steps">
       <button type="button" data-to="fraud"><span class="workflow-step-num">01 / DISCOVER</span><strong>What's happening?</strong><span>Search the multi-year article archive, police reports and fraud patterns</span><span class="workflow-step-link">Explore stories →</span></button>
       <button type="button" data-to="connections"><span class="workflow-step-num">02 / INVESTIGATE</span><strong>Who is connected?</strong><span>Follow an institution across regulator actions, reported cases and news leads</span><span class="workflow-step-link">Investigate an institution →</span></button>
-      <button type="button" data-to="clients"><span class="workflow-step-num">03 / ACT</span><strong>What should we track?</strong><span>Build a client watchlist, log research and export sourced briefs</span><span class="workflow-step-link">Open workspace →</span></button>
+      <button type="button" data-to="community"><span class="workflow-step-num">03 / CONTRIBUTE</span><strong>What can we add?</strong><span>Submit publicly documented incidents, corrections or source links for review</span><span class="workflow-step-link">Help grow the network →</span></button>
     </div>
     <div class="metrics" id="metrics"></div>
 
@@ -82,6 +86,43 @@
       <p class="library-intro">Yearly victim-reported losses to the CAFC, rounded and drawn from original public releases. These are <strong>not bank-owned losses</strong>. Do not add them to fines or complaint counts.</p>
       <div id="lossTrend" class="library-trend"><div class="empty">Loading historical trends...</div></div>
       <p class="library-fineprint">Fraud is underreported; figures are subject to revision and differing reporting dates. Hover or open each source to check its release and limitations.</p>
+    </section>
+  </section>
+  <section id="themes" class="tab hidden">
+    <section class="panel">
+      <div class="panel-heading"><div><div class="eyebrow">LONGITUDINAL INTELLIGENCE / 2020–2026</div><h2>How scam coverage changes over time</h2></div><span id="themeCount" class="small">Loading archive analysis...</span></div>
+      <div class="notice"><strong>Headline coverage, not measured fraud incidence.</strong> Each article is categorized from its title and may match several themes. Changes in source collection, media attention, and language influence counts. Use official CAFC data to understand reported victim losses.</div>
+      <div class="theme-controls"><select id="themeChoose" aria-label="Explore fraud theme"><option value="">Choose a scam theme</option></select><select id="themeYear" aria-label="Filter example publication year"><option value="">All publication years</option></select><button type="button" id="themeSourceLink">Research and statistics →</button></div>
+      <div id="themeYearCoverage" class="theme-coverage"></div>
+      <div id="themeGrid" class="theme-grid"><div class="empty">Loading theme coverage...</div></div>
+    </section>
+    <section class="panel">
+      <div class="panel-heading"><div><div class="eyebrow">READ THE ACTUAL SOURCES</div><h2 id="themeExamplesTitle">Supporting news examples</h2></div><button class="link-btn" data-to="fraud">Full article archive →</button></div>
+      <div id="themeExamples" class="theme-examples"><div class="empty">Choose a theme to see sourced headlines.</div></div>
+    </section>
+  </section>
+  <section id="sectors" class="tab hidden">
+    <section class="panel">
+      <div class="panel-heading"><div><div class="eyebrow">SECTOR RADAR / ORIGINAL REGULATORY SOURCES</div><h2>Fintech, crypto, casinos &amp; securities</h2></div><span id="sectorCount" class="small">Loading sector evidence...</span></div>
+      <div class="notice"><strong>Authorization is not enforcement.</strong> The sector view separates authorized trading-platform decisions, institutional scam warnings, regulator directories and AML penalties. Brand impersonation does not imply wrongdoing by the impersonated platform.</div>
+      <div class="sector-filters"><input id="sectorSearch" type="search" placeholder="Find Wealthsimple, gambling, crypto, operator or regulator..."><select id="sectorFilter"><option value="">All sectors</option></select><select id="sectorType"><option value="">All evidence types</option></select></div>
+      <div id="sectorEntries" class="sector-entries"><div class="empty">Loading source-linked sector intelligence...</div></div>
+    </section>
+  </section>
+  <section id="community" class="tab hidden">
+    <section class="panel">
+      <div class="panel-heading"><div><div class="eyebrow">GROW THE EVIDENCE NETWORK</div><h2>Help document Canadian fraud</h2></div><span class="small">Contributions reviewed before publication</span></div>
+      <p class="community-intro">Have a news report, police alert, published ruling or credible correction that we missed? Contribute the <strong>public source link</strong> and context. Every contribution goes into an evidence review process, not directly onto the public map.</p>
+      <div class="contribution-paths">
+        <div class="contribution-card"><span class="eyebrow">PUBLIC SOURCE SUBMISSIONS</span><h3>Share a documented story</h3><p>Point us to an original article, regulator release, police notice or official research report. A GitHub account is required; your GitHub username is publicly visible.</p><a rel="noopener noreferrer" target="_blank" href="https://github.com/khaled-agi/Signal-North/issues/new?template=public-source.yml">Submit public source ↗</a></div>
+        <div class="contribution-card"><span class="eyebrow">IMPROVE AN EXISTING RECORD</span><h3>Suggest a correction</h3><p>Report an outdated penalty status, duplicate news item, incorrect amount, broken source link or inaccurate institution relationship.</p><a rel="noopener noreferrer" target="_blank" href="https://github.com/khaled-agi/Signal-North/issues/new?template=correction.yml">Propose correction ↗</a></div>
+        <div class="contribution-card"><span class="eyebrow">PRIVATE OR ANONYMOUS REPORTS</span><h3>Not yet available</h3><p>A genuine private channel requires secure storage, anti-spam controls, moderation and a privacy policy. Please do not post names, account numbers, screenshots or confidential allegations to GitHub.</p><span class="community-pending">Secure intake is not enabled</span></div>
+      </div>
+    </section>
+    <section class="panel"><div class="panel-heading"><div><div class="eyebrow">COMMUNITY STANDARDS</div><h2>How evidence becomes useful intelligence</h2></div>
+      <div class="community-process"><div><strong>1. Source submitted</strong><p>A contributor links to public reporting; nothing is treated as verified at this stage.</p></div><div><strong>2. Independent review</strong><p>Check original reporting, dates, location, amount type, duplicates and the institution's actual role.</p></div><div><strong>3. Clearly labeled publication</strong><p>Only supported facts enter case profiles. Unverified claims are not presented as proven wrongdoing.</p></div></div>
+      <p class="community-intro">Social posts can identify emerging concerns, but individual anecdotes are not confirmed cases. Do not identify or contact private persons, publicly name alleged fraudsters without verified public evidence, or submit sensitive account information. Report an ongoing crime to law enforcement or the Canadian Anti-Fraud Centre; this website is not an emergency reporting service.</p>
+      <p class="community-intro"><a href="https://github.com/khaled-agi/Signal-North/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener">Read the contribution and moderation policy ↗</a></p>
     </section>
   </section>
   <section id="incidents" class="tab hidden"><div class="panel"><div class="panel-heading"><div><div class="eyebrow">CASE INTELLIGENCE / CANADA</div><h2>Victim incidents and linked institutions</h2></div><span class="small" id="incidentCount">Loading...</span></div><div class="notice"><strong>Bank involvement is not bank culpability.</strong> Cases include fraud victims, impersonated institutions, refunds, and payment recovery. Publication dates are not necessarily incident dates. Amounts are tagged as victim losses, exposure, or recovered funds.</div><div class="case-filters"><input id="incidentSearch" type="search" placeholder="Search bank, scam type or location..."><select id="incidentProvince"><option value="">All provinces</option></select><select id="incidentBank"><option value="">All banks / unnamed</option></select></div><div id="incidentRows" class="incident-rows"></div></div></section>
@@ -151,5 +192,6 @@
 <script src="./workspace.js?v=__BUILD_SHA__" defer></script>
 <script src="./connections.js?v=__BUILD_SHA__" defer></script>
 <script src="./research.js?v=__BUILD_SHA__" defer></script>
+<script src="./network.js?v=__BUILD_SHA__" defer></script>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" async crossorigin="" onload="window.dispatchEvent(new Event('signalnorth:mapready'))"></script>
 </body></html>
