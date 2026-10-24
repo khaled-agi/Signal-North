@@ -182,6 +182,12 @@ try:
         page.locator('[data-tab="themes"]').click()
         page.wait_for_function("document.querySelectorAll('#themeGrid .theme-matrix-row').length >= 8", timeout=12000)
         assert page.locator("#themeYearCoverage > div").count() == 7
+        assert page.locator("#themeCompareChart .compare-year").count() == 7
+        page.locator("#themeCompareMode").select_option("count")
+        assert "indexed headlines" in page.locator("#themeCompareChart").inner_text()
+        page.locator("#themeCompareMode").select_option("share")
+        assert "%" in page.locator("#themeCompareChart").inner_text()
+        print("Theme comparisons use coverage share or raw counts, and flag 2026 YTD: PASS")
         page.locator("#themeChoose").select_option("Investment & crypto scams")
         assert "Investment & crypto" in page.locator("#themeExamplesTitle").inner_text()
         page.locator('[data-tab="sectors"]').click()
