@@ -12,6 +12,7 @@ import unicodedata
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urlparse
+from collect_news import headline_claims
 
 DATA=Path(__file__).resolve().parents[1]/"data"
 OUTPUT=DATA/"article_index.json"
@@ -82,6 +83,14 @@ def build():
         out["banks_mentioned_in_headline"]=sorted(set(
             bank for x,_ in items for bank in x.get("banks_mentioned_in_headline",[])
         ))
+        # Re-extract names for older archive rows collected before coverage
+        # for platforms was introduced. Platform names aren't bank names.
+        guessed=headline_claims(out.get("title",""))
+        out["organizations_mentioned_in_headline"]=sorted(set(
+            org for x,_ in items for org in x.get("organizations_mentioned_in_headline",[])
+        )|set(guessed.get("organizations_mentioned_in_headline",[])))
+        out["banks_mentioned_in_headline"]=sorted(set(
+            out["banks_mentioned_in_headline"])|set(guessed.get("banks_mentioned_in_headline",[])))
         out["amount_strings_in_headline"]=list(dict.fromkeys(
             amount for x,_ in items for amount in x.get("amount_strings_in_headline",[])
         ))[:5]
