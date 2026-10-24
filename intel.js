@@ -32,7 +32,7 @@
   {name:"Payment-system risk",value:"Planned",source:"Bank of Canada / Payments Canada",url:"https://www.bankofcanada.ca/",note:"Payment-system incidents and operational risk; distinguish from fraud"},
   {name:"Cyber incidents",value:"Planned",source:"Privacy Commissioner / Cyber Centre",url:"https://www.priv.gc.ca/en/opc-actions-and-decisions/investigations/",note:"Incident disclosures and privacy findings; differentiate alleged from confirmed"}
  ];
- let news=[],stats=[],bankDisclosure=[],events=[],incidents=[],newsWired=false,incidentsWired=false,archiveCount=0,newsVisible=100;
+ let news=[],stats=[],bankDisclosure=[],events=[],incidents=[],newsWired=false,incidentsWired=false,archiveCount=0,newsVisible=100,rawHeadlineCount=0;
  async function getJSON(path){
   const res=await fetch("./data/"+path+"?v="+Date.now(),{cache:"no-store"});
   if(!res.ok)throw Error(path+": HTTP "+res.status);
@@ -57,19 +57,61 @@
   const bank=$i("newsBank").value;
   const hits=news.filter(x=>(!t||x.category===t)&&(!year||String(x.published_at||"").startsWith(year))&&(!month||String(x.published_at||"").slice(5,7)===month)&&(!bank||(x.banks_mentioned_in_headline||[]).includes(bank))&&(!q||[x.title,x.publisher,x.category,...(x.topics||[])].join(" ").toLowerCase().includes(q)));
   const visible=hits.slice(0,newsVisible);
-  $i("newsCount").textContent=hits.length+" matching / "+news.length+" unique headlines";
-  $i("newsPageCount").textContent="Showing "+visible.length+" of "+hits.length+" matching articles";
+  $i("newsCount").textContent=hits.length+" reporting groups matching / "+news.length+" displayed groups";
+  $i("newsPageCount").textContent="Showing "+visible.length+" of "+hits.length+" grouped reports from "+rawHeadlineCount.toLocaleString("en-CA")+" indexed headlines";
   $i("newsMore").hidden=visible.length>=hits.length;
   $i("newsAll").hidden=visible.length>=hits.length;
   $i("newsRows").innerHTML=hits.length?visible.map(x=>{
- const bank=x.banks_mentioned_in_headline||[],amount=x.amount_strings_in_headline||[];
- const notes=[bank.length?'Bank name in headline: '+bank.join(", "):"",amount.length?'Amount quoted: '+amount.join(", "):"",x.headline_case_candidate?"Possible individual victim story":"",(x.number_of_article_links||0)>1?(x.number_of_article_links+' matching source links'):""].filter(Boolean);
- const mapAction=Number.isFinite(x.map_latitude)&&Number.isFinite(x.map_longitude)?'<button class="news-mapaction" type="button" data-mapfocus="'+esc(x.id)+'">View source-mentioned city on map →</button>':"";
- const sourceRefs=(x.article_links||[]).filter(a=>a.url&&a.url!==x.url);
- const linkedSources=sourceRefs.length?'<details class="news-sources"><summary>'+sourceRefs.length+' additional indexed source link(s)</summary>'+sourceRefs.slice(0,12).map(a=>'<div>'+link(a.url,a.publisher||a.discovery_channel||"Source")+'</div>').join("")+'</details>':"";
- return '<div class="news-item"><div><div class="news-item-title">'+link(x.url,x.title)+'</div><div class="news-meta">'+esc(x.publisher||"News syndication")+" · "+esc((x.published_at||"").slice(0,10))+" · "+esc(x.category||"Financial crime watch")+'</div>'+(notes.length?'<div class="news-extracted">'+notes.map(note=>'<span>'+esc(note)+'</span>').join("")+'</div>':"")+'<div class="news-rowtools">'+mapAction+linkedSources+'</div></div><span class="news-label">'+(x.content_kind==="research_report_lead"?"RESEARCH LEAD":"UNVERIFIED NEWS")+'</span></div>';
- }).join(""):'<div class="empty">No news leads returned. The collector may be awaiting its first successful syndicated feed response, or no headlines match your filters.</div>';
+   const banks=x.banks_mentioned_in_headline||[];
+   const n=Math.max(1,Number(x.variation_count||1));
+   const sources=Math.max(1,Number(x.source_count||x.number_of_article_links||1));
+   const mapAction=Number.isFinite(x.map_latitude)&&Number.isFinite(x.map_longitude)?
+     '<button class="news-mapaction" type="button" data-mapfocus="'+esc(x.id)+'">Locate mention on map →</button>':"";
+   return '<article class="news-item news-group"><div class="news-group-content">'+
+     '<div class="news-item-title"><button class="report-open" type="button" data-story="'+esc(x.id)+'">'+esc(x.title)+'</button></div>'+
+     '<div class="news-meta">'+esc((x.published_at||"").slice(0,10))+' · '+esc(x.category||"Financial crime research")+
+       (banks.length?' · Named: '+esc(banks.join(", ")):"")+'</div>'+
+     '<div class="news-rowtools"><button class="report-variations" type="button" data-story="'+esc(x.id)+'">'+
+      (sources>1?sources+' original source links':"View original source")+
+      (n>1?' · '+n+' headline variations':"")+' →</button>'+mapAction+'</div>'+
+     '</div><span class="news-label">UNVERIFIED REPORTING</span></article>';
+  }).join(""):'<div class="empty">No reporting groups match the filters. Clear the search or try a different year.</div>';
  }
+ function openReportingDetail(x){
+  if(!x)return;
+  const variants=(x.headline_variations?.length?x.headline_variations:
+    x.article_links?.length?x.article_links:
+    [{title:x.title,url:x.url,publisher:x.publisher,published_at:x.published_at}]);
+  const unique=[];
+  const seen=new Set();
+  for(const v of variants){
+   const url=String(v.url||"");
+   if(!url.startsWith("https://")||seen.has(url))continue;
+   seen.add(url);unique.push(v);
+  }
+  const heading='<div class="eyebrow">REPORTING GROUP / EDITORIAL COMPARISON</div>'+
+    '<h2>'+esc(x.title)+'</h2>'+
+    '<p class="report-detail-meta">'+esc((x.published_at||"").slice(0,10))+
+    ' · '+esc(x.category||"Financial crime")+
+    ' · '+Math.max(1,x.underlying_headline_count||1)+' indexed headline'+((x.underlying_headline_count||1)===1?"":"s")+
+    ' · '+unique.length+' original source link'+(unique.length===1?"":"s")+'</p>';
+  const variations=unique.map((v,i)=>
+    '<article class="report-version"><div class="report-version-index">SOURCE '+(i+1)+' · '+esc(v.publisher||"Publisher")+
+    ' · '+esc(String(v.published_at||x.published_at||"").slice(0,10))+'</div>'+
+    '<h3>'+esc(v.title||x.title)+'</h3>'+
+    '<p>'+link(v.url,"Open original reporting")+'</p></article>').join("");
+  const notice='<div class="warning">These publications have been grouped using closely matching headlines and dates. This is a discovery aid, not an independently verified single victim, incident, fraud loss, or finding against any institution. Compare the sources before using this reporting in research.</div>';
+  $i("drawerBody").innerHTML=heading+notice+
+     '<h3 class="report-versions-heading">Original reporting and headline variations</h3>'+
+     '<p class="report-detail-meta">Review how publishers described this report. Links open their original publications.</p>'+
+     '<div class="report-versions">'+(variations||'<p>No source links retained.</p>')+'</div>';
+  $i("overlay").classList.remove("hidden");
+  document.body.style.overflow="hidden";
+ }
+ window.addEventListener("signalnorth:openstory",e=>{
+  const report=news.find(x=>String(x.id)===String(e.detail?.id));
+  if(report)openReportingDetail(report);
+ });
  function initNews(){
   const cats=[...new Set(news.map(x=>x.category).filter(Boolean))].sort();
   $i("newsCategory").innerHTML='<option value="">All fraud types</option>'+cats.map(x=>'<option value="'+esc(x)+'">'+esc(x)+"</option>").join("");
@@ -102,7 +144,7 @@
   $i("newsFreshness").textContent=freshness;
   $i("newsFreshnessDetail").textContent=freshness+" · Scheduled every 30 minutes (best effort)";
   $i("headlinesTop").innerHTML=hits.length?hits.map(x=>
-   '<div class="breaking-story"><div class="breaking-story-head"><span class="breaking-type">'+esc(x.category||"News lead")+'</span><span>'+esc((x.published_at||"").slice(0,10))+'</span></div><div class="breaking-story-title">'+link(x.url,x.title)+'</div><div class="breaking-publisher">'+esc(x.publisher||"News syndication")+' · Unverified research lead</div></div>'
+   '<div class="breaking-story"><div class="breaking-story-head"><span class="breaking-type">'+esc(x.category||"News lead")+'</span><span>'+esc((x.published_at||"").slice(0,10))+'</span></div><div class="breaking-story-title"><button type="button" class="report-open" data-story="'+esc(x.id)+'">'+esc(x.title)+'</button></div><div class="breaking-publisher">'+Math.max(1,Number(x.source_count||1))+' source link(s) · Grouped, unverified reporting</div></div>'
   ).join(""):'<div class="empty">No headlines in the latest snapshot. You can start a new scan from GitHub Actions.</div>';
  }
  function caseAmount(x){
@@ -167,7 +209,7 @@
  }
  async function boot(){
   renderCatalog();
-  const names=["fraud_stats.json","news.json","bank_disclosures.json","events.json","news_status.json","incidents.json","news_archive.json","article_index.json","external_source_status.json"];
+  const names=["fraud_stats.json","news.json","bank_disclosures.json","events.json","news_status.json","incidents.json","news_archive.json","article_index.json","external_source_status.json","reporting_groups.json"];
   const fetched=await Promise.allSettled(names.map(getJSON));
   if(fetched[0].status==="fulfilled")stats=fetched[0].value.metrics||[];
   else $i("fraudNational").innerHTML='<div class="error">Fraud statistics unavailable: '+esc(String(fetched[0].reason))+'</div>';
@@ -175,8 +217,14 @@
   const history=fetched[6].status==="fulfilled"?(fetched[6].value.leads||[]):[];
   archiveCount=history.length;
   const indexed=fetched[7].status==="fulfilled"?(fetched[7].value.articles||[]):[];
-  news=indexed.length?indexed:[...new Map([...recent,...history].map(x=>[x.id,x])).values()].sort((a,b)=>String(b.published_at||"").localeCompare(String(a.published_at||"")));
-  $i("archiveCount").textContent=archiveCount?archiveCount.toLocaleString()+" historic discoveries · "+news.length.toLocaleString()+" unique indexed headlines from multiple sources":"Archive awaiting initial backfill · "+news.length+" indexed headlines";
+  const grouped=fetched[9].status==="fulfilled"?(fetched[9].value.groups||[]):[];
+  rawHeadlineCount=indexed.length||(fetched[9].status==="fulfilled"?Number(fetched[9].value.original_index_headlines||0):0);
+  news=grouped.length?grouped:indexed.length?indexed:
+    [...new Map([...recent,...history].map(x=>[x.id,x])).values()].sort((a,b)=>String(b.published_at||"").localeCompare(String(a.published_at||"")));
+  if(!rawHeadlineCount)rawHeadlineCount=news.length;
+  $i("archiveCount").textContent=archiveCount?
+    rawHeadlineCount.toLocaleString()+" indexed headlines consolidated into "+news.length.toLocaleString()+" reporting groups · "+archiveCount.toLocaleString()+" historic discoveries":
+    rawHeadlineCount.toLocaleString()+" indexed headlines · "+news.length.toLocaleString()+" reporting groups";
   const newsStatus=fetched[4].status==="fulfilled"?fetched[4].value:{};
   const otherHealth=fetched[8].status==="fulfilled"?fetched[8].value:{};
   const collectors=Object.entries(otherHealth.collectors||{});
