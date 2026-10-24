@@ -8,6 +8,7 @@ from unittest.mock import patch
 
 from scripts.collect import amount
 from scripts import build_intelligence_graph as graph
+from scripts import build_theme_trends as theme_trends
 
 class FinancialAmountTests(unittest.TestCase):
  def test_large_abbreviated_penalties(self):
@@ -55,6 +56,28 @@ class FinancialAmountTests(unittest.TestCase):
    self.assertEqual(case["amount_type"],"victim_reported_loss")
    review=json.loads((p/"review_queue.json").read_text())
    self.assertEqual(review["items"][0]["review_status"],"unreviewed_headline_only")
+
+class HistoricalThemeTests(unittest.TestCase):
+ def test_yearly_headline_topics_not_incidents(self):
+  documents=[
+   {"id":"a","title":"Crypto investment scam reported in Toronto","published_at":"2021-05-01","publisher":"Original source"},
+   {"id":"b","title":"Bank impersonation phishing scam in Ontario","published_at":"2024-09-01","publisher":"Other source"},
+   {"id":"c","title":"Casinos investigated over money laundering","published_at":"2026-03-10","publisher":"Regulatory release"},
+  ]
+  data=theme_trends.classify_articles(documents)
+  self.assertEqual(data["articles_by_year"]["2021"],1)
+  self.assertEqual(data["articles_by_year"]["2024"],1)
+  self.assertEqual(data["articles_by_year"]["2026"],1)
+  lookup={x["name"]:x for x in data["themes"]}
+  self.assertEqual(lookup["Investment & crypto scams"]["year_counts"]["2021"],1)
+  self.assertEqual(lookup["Bank impersonation & phishing"]["year_counts"]["2024"],1)
+  self.assertEqual(lookup["Gambling, gaming & casino"]["year_counts"]["2026"],1)
+  self.assertEqual(lookup["Money mules & laundering"]["year_counts"]["2026"],1)
+
+ def test_platform_mentions_are_not_bank_penalties(self):
+  self.assertNotEqual(graph.bank_key("Wealthsimple"),graph.bank_key("Wealthsimple Investments Inc."))
+  self.assertNotEqual(graph.bank_key("Wealthsimple"),graph.bank_key("Royal Bank of Canada"))
+  self.assertNotEqual(graph.bank_key("Binance"),graph.bank_key("BCLC"))
 
 if __name__=="__main__":
  unittest.main()
