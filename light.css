@@ -1,0 +1,96 @@
+/* SIGNAL NORTH — Editorial analyst light theme, October 2026 */
+:root{color-scheme:light;--bg:#f3f6fa;--bg2:#eef3f8;--panel:#fff;--stroke:#dce5ee;--text:#183247;--muted:#627b91;--cyan:#087d83;--blue:#125e9c;--amber:#ad741b}
+html,body{background:#f3f6fa;color:#1d364a}
+body{background:#f3f6fa;color:#193347}
+.sidebar{background:#fff;border-color:#e1e8ef}
+.brand{color:#1a3551}.brand span{color:#078987}.brand-mark{color:#048c8c}
+.brand small,.side-caption{color:#72889b}
+.nav{color:#476175}.nav.active{background:#e6f5f4;color:#066d71}.nav:hover{background:#eef5f9}
+.sidebar-bottom{border-color:#e0e8ef;color:#6f8496}.sidebar-bottom p{color:#658093}
+.live-mark{color:#496f7d}
+.header{background:#fff;border-color:#dce6f0;color:#698195}.header strong{color:#087d85}
+.header-right .scan-link{color:#117b81}
+.reload,.map-reset{background:#fff;border:1px solid #cedce7;color:#28566b}
+.reload:hover,.map-reset:hover{background:#eef6fa;color:#104f69}
+.content{color:#193347}
+.intro h1{color:#183249}.intro em{color:#608097}.intro p{color:#59768a}
+.preview{color:#648498}.eyebrow{color:#0c888c}
+.metrics .metric,.metric{background:#fff;border:1px solid #e1e8ef;box-shadow:0 3px 18px rgba(31,66,90,.045)}
+.metric .label{color:#526f83}.metric .value{color:#17344d}.metric .foot{color:#70899a}
+.panel,.map-panel{background:#fff;border-color:#dae5ed;box-shadow:0 5px 25px rgba(27,56,88,.035)}
+.panel h2{color:#1d3c52}.panel-heading{color:#1d3d52}
+.small{color:#6a8295}.muted{color:#8194a3}
+.breaking-panel{background:#fff;border-color:#c9e3e3}
+.breaking-meta{color:#5d808a}.breaking-meta a,.news-refreshline a{color:#0d7f89}
+.breaking-story{background:#f7fbfc;border-color:#dce8ee}.breaking-story-title a{color:#1d425d}
+.breaking-story-head{color:#70889b}.breaking-type{background:#e4f5f3;color:#087e7a}.breaking-publisher{color:#688394}
+.case-mini{background:#f8fbfd;border-color:#d9e5ee}.case-item{color:#536e83;border-color:#e2e9ef}
+.case-item h3{color:#24465c}.case-tag{background:#e4f2f5;color:#18767e}.case-amount{color:#153e55}
+.case-entity{color:#4e7d8a}.case-summary,.case-disclaimer{color:#678397}.case-source a{color:#0f7d82}
+.event{border-color:#e5ebf0}.event:hover,.institution:hover{background:#f1f7fa}
+.event-date,.event-meta{color:#718a9a}.event-title{color:#243f57}.event-amount{color:#193a53}
+.pill{background:#e4f5ee;color:#11794e}
+.filters input,.filters select,.case-filters input,.case-filters select,.year-select,#mapProvince{background:#fff;color:#204457;border:1px solid #cddce7}
+.filters input::placeholder,.case-filters input::placeholder{color:#8fa2b1}
+.notice{background:#f0f8fc;border-color:#d5e8f1;color:#486b83}
+.notice strong,.method strong{color:#274b62}.fraud-amount{background:#eff9f8;border-color:#d2e8e6}
+.fraud-figure{color:#134358}.fraud-stat{background:#fafcfe;border-color:#e0e9f0}
+.fraud-stat strong,.fraud-stat div{color:#31536a}.fraud-separator{color:#608b94}
+.news-item,.source-row,.source-line,.institution,.annual-line{border-color:#e2e9ef}
+.news-item-title a,.mini-lead a{color:#25506c}.news-meta{color:#8195a7}
+.news-label{background:#fff9e9;color:#a46b12;border-color:#e9d5a0}
+.news-extracted span{background:#edf6f6;color:#23797f;border-color:#cee8e5}
+.source-tag{background:#eaf5f4;color:#147a79;border-color:#d6e8e7}
+.annual-head{background:#edf7fa}.annual-head strong{color:#28526b}
+.fraud-highlightline .fraud-split{border-color:#dfebf1}
+.year-select:focus,.filters input:focus{outline-color:#0a8c91}
+.institution h3{color:#254761}.institution p{color:#668299}
+.score{background:#ebf6f4;color:#137e76}.score small{color:#618e89}
+.method{color:#536f83}.method p{color:#5b768b}
+.empty{color:#8294a4}
+.map-panel{background:#fff}
+.map-controls{background:#fff}
+.map-mode{background:#f1f6f9;border-color:#dce7ee}
+.map-mode button{color:#527088}
+.map-mode button.active{background:#d9f0ee;color:#076d73}
+.map-mode button:hover{background:#deebf1;color:#24506b}
+.map{background:#eaf1f6}
+.leaflet-tile-pane{filter:none!important}
+.leaflet-container{background:#eaf1f6!important}
+.map-mapfooter{background:#fbfcfe}.map-key{color:#657e91}
+.map-caption,.map-disclaimer{color:#6c8698}
+.map-disclaimer{background:#f8fafc;border-color:#e1e9ef}
+.leaflet-popup-content-wrapper,.leaflet-popup-tip{background:#fff!important;color:#223e54!important}
+.map-pop-heading{color:#25465c}.map-pop-source{color:#0a7777}
+.map-popup-record{border-color:#e0e8ee;color:#59778a}
+.map-popup-record strong{color:#27475b}.map-popup-record a{color:#087d83}
+.map-popup-date,.map-pop-notice{color:#758d9d}
+.leaflet-container a.leaflet-popup-close-button{color:#597e92!important}
+.leaflet-control-attribution{background:#ffffffd9!important;color:#71869a!important}
+.leaflet-control-attribution a{color:#176a90!important}
+.drawer{background:#fff;border-color:#dfe9ef}.drawer h2{color:#1e3b52}.drawer h3{color:#35647c}
+.drawer p,.drawer dd{color:#58778b}.drawer dt{color:#7d96a5}.close{color:#587990}
+.source-link{background:#e6f6f4;color:#087a77}.source-link:hover{background:#d7eeee}
+.warning{background:#fffbf1;border-color:#eedca4;color:#815b1c}
+.error{background:#ffeded;color:#a73f3f;border-color:#edc4c4}
+footer{color:#8297a5}
+.mapped-story-feed{padding:0 15px;max-height:400px;overflow-y:auto;border-bottom:1px solid #e2eaf0}
+.map-story{padding:11px 5px;border-bottom:1px solid #edf1f5;display:flex;flex-direction:column;gap:4px}
+.map-story button{border:0;background:none;padding:0;color:#214e69;text-align:left;font-size:12px;cursor:pointer;font-weight:650}
+.map-story button:hover{text-decoration:underline}.map-story-meta{color:#698599;font-size:10px}
+#mapMonth{border:1px solid #cddce7;background:#fff;color:#28556b;border-radius:8px;padding:8px;font:inherit;font-size:11px}
+.news-hist-toolbar{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;padding:8px 20px 16px;color:#668397;font-size:11px}
+.news-hist-toolbar strong{color:#27757a}
+.client-panel .client-explainer{padding:0 22px;color:#5a788e}
+.client-builder{display:flex;gap:8px;padding:9px 22px 6px}.client-builder input{flex:1;min-width:0;background:#fff;border:1px solid #c9d9e5;border-radius:8px;padding:11px;color:#234358}
+.client-builder button{border:0;border-radius:8px;background:#087e83;color:#fff;padding:11px 17px;cursor:pointer}
+.local-note{padding:0 22px 15px;color:#8095a4;font-size:11px}
+.client-watchlist{padding:0 20px 18px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.client-item{background:#f8fbfd;border:1px solid #dce9f0;border-radius:10px;padding:18px}
+.client-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}.client-head h3{margin:5px 0 10px;color:#24445d}
+.client-metrics{display:flex;flex-wrap:wrap;gap:8px;font-size:11px;color:#537486}.client-metrics span{background:#e7f3f6;border-radius:6px;padding:6px 8px}
+.client-metrics b{color:#066d78}
+.client-timeline{padding:10px 0}.watch-result{display:flex;flex-direction:column;gap:3px;padding:8px 0;border-bottom:1px solid #e3edf3;font-size:11px}.watch-result span{color:#8398a7}
+.client-map-link{margin-top:12px;background:none;border:0;color:#087f85;font-weight:700;cursor:pointer;padding:0}
+@media(max-width:1140px){.client-watchlist{grid-template-columns:1fr}}
+@media(max-width:800px){.breaking-list{grid-template-columns:1fr}.client-builder{flex-wrap:wrap}.client-builder input{flex-basis:100%}.map-story button{font-size:11px}.news-hist-toolbar{padding:10px 16px}.client-watchlist{padding:0 14px 15px}}
