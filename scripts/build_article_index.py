@@ -74,7 +74,7 @@ def build():
             if x.get("published_at") and x.get("date_basis")!="gdelt_first_observed_not_event_date"]
         all_pub_dates=reported_dates or [x.get("published_at") for x,_ in items if x.get("published_at")]
         out["id"]=hashlib.sha256(key.encode()).hexdigest()[:20]
-        out["article_links"]=list(links.values())[:20]
+        out["article_links"]=list(links.values())
         out["number_of_article_links"]=len(links)
         out["source_channels"]=sorted(set(x.get("discovery_source") or channel for x,channel in items))
         out["published_at"]=min(all_pub_dates) if all_pub_dates else None
