@@ -109,6 +109,25 @@ try:
         assert "Royal Bank of Canada" in page.locator("#clientWatchlist").inner_text()
         bg=page.evaluate("getComputedStyle(document.body).backgroundColor")
         assert bg in ("rgb(243, 246, 250)","rgb(255, 255, 255)","rgb(251, 252, 253)"),f"Expected light theme, got {bg}"
+        if (ROOT / "data" / "institution_intelligence.json").exists():
+            page.locator('[data-tab="connections"]').click()
+            page.wait_for_function("document.querySelectorAll('#connectInstitution option').length > 5", timeout=20000)
+            page.locator("#connectSearch").fill("Royal Bank")
+            page.locator("#connectInstitution").select_option("rbc")
+            assert "Royal Bank of Canada" in page.locator("#connectContent").inner_text()
+            assert page.locator("#connectContent .evidence-enforcement").count() > 0
+            assert page.locator("#connectContent .evidence-incident").count() > 0
+            assert page.locator("#reviewRows [data-review-status]").count() > 0
+            page.locator("#reviewRows [data-review-status]").first.select_option("In review")
+            assert page.locator("#reviewRows [data-review-status]").first.input_value() == "In review"
+            page.locator("#connectTrack").click()
+            assert "Royal Bank of Canada" in page.locator("#clientWatchlist").inner_text()
+            assert page.locator('#clientWatchlist button[data-open-connection]').count() > 0
+            page.locator('[data-tab="connections"]').click()
+            page.locator("#connectInstitution").select_option("rbc")
+            page.locator("#connectMap").click()
+            assert "Client: Royal Bank of Canada" in page.locator("#mapCaption").inner_text()
+            print("Institution graph, evidence provenance, triage, watchlist, alias-aware map: PASS")
         print("Client watchlists, historical filters, linked map, light theme: PASS")
         assert not errors, str(errors)
         print("Browser smoke test: PASS")
