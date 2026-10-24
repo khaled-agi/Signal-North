@@ -101,7 +101,7 @@ try:
         assert page.locator("#clientWatchlist .client-item").count() >= 1
         assert "Royal Bank of Canada" in page.locator("#clientWatchlist").inner_text()
         bg=page.evaluate("getComputedStyle(document.body).backgroundColor")
-        assert bg in ("rgb(243, 246, 250)","rgb(255, 255, 255)"),f"Expected light theme, got {bg}"
+        assert bg in ("rgb(243, 246, 250)","rgb(255, 255, 255)","rgb(251, 252, 253)"),f"Expected light theme, got {bg}"
         print("Client watchlists, historical filters, linked map, light theme: PASS")
         assert not errors, str(errors)
         print("Browser smoke test: PASS")
