@@ -38,6 +38,7 @@ function renderMetrics(){
 function initMap(){
  if(!window.L){$("#map").innerHTML='<div class="empty">Map tiles unavailable. Events remain accessible in the explorer.</div>';return;}
  if(!state.map){
+  $("#map").replaceChildren();
   state.map=L.map("map",{zoomControl:false,minZoom:3}).setView([55,-95],4);
   L.control.zoom({position:"bottomright"}).addTo(state.map);
   L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",{maxZoom:18,attribution:'&copy; OpenStreetMap &copy; CARTO'}).addTo(state.map);
@@ -118,4 +119,5 @@ for(const id of ["search","sourceFilter","provinceFilter","statusFilter"]){$(id)
 $("#close").addEventListener("click",closeDrawer);
 $("#overlay").addEventListener("click",e=>{if(e.target.id==="overlay")closeDrawer();});
 $("#reload").addEventListener("click",load);
+window.addEventListener("signalnorth:mapready", () => { if(state.events.length) initMap(); });
 load();
