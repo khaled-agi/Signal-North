@@ -14,21 +14,27 @@
 <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./editorial.css?v=__BUILD_SHA__">
 <link rel="stylesheet" href="./connections.css?v=__BUILD_SHA__">
+<link rel="stylesheet" href="./research.css?v=__BUILD_SHA__">
 </head>
 <body>
 <div class="layout">
 <aside class="sidebar">
   <div class="brand"><div class="brand-mark">✳</div><div>signal<span>north</span><small>FINANCIAL CRIME INTELLIGENCE</small></div></div>
-  <div class="side-caption">WORKSPACE</div>
-  <button class="nav active" data-tab="overview">◈ &nbsp; Intelligence overview</button>
-  <button class="nav" data-tab="incidents">◎ &nbsp; Reported fraud cases</button>
-  <button class="nav" data-tab="fraud">⚑ &nbsp; Fraud intelligence</button>
-  <button class="nav" data-tab="losses">◫ &nbsp; Losses &amp; penalties</button>
-  <button class="nav" data-tab="events">▤ &nbsp; Event explorer</button>
-  <button class="nav" data-tab="clients">▧ &nbsp; Client watchlists</button>
-  <button class="nav" data-tab="connections">✧ &nbsp; Evidence connections</button>
-  <button class="nav" data-tab="institutions">▥ &nbsp; Institution radar</button>
-  <button class="nav" data-tab="sources">◉ &nbsp; Sources &amp; methodology</button>
+  <div class="side-caption">YOUR WORKFLOW</div>
+  <button class="nav active" data-tab="overview">◈ &nbsp; Command center</button>
+  <button class="nav" data-tab="fraud">⚑ &nbsp; Discover stories</button>
+  <button class="nav" data-tab="connections">✧ &nbsp; Investigate institutions</button>
+  <button class="nav" data-tab="clients">▧ &nbsp; Client workspace</button>
+  <div class="side-caption">RESEARCH</div>
+  <button class="nav" data-tab="reports">▦ &nbsp; Research library</button>
+  <details class="nav-datasets" open>
+    <summary>Specialized data views <span>▾</span></summary>
+    <button class="nav nav-sub" data-tab="incidents">◎ &nbsp; Reported cases</button>
+    <button class="nav nav-sub" data-tab="events">▤ &nbsp; Enforcement decisions</button>
+    <button class="nav nav-sub" data-tab="losses">◫ &nbsp; Losses &amp; penalties</button>
+    <button class="nav nav-sub" data-tab="institutions">▥ &nbsp; Institution directory</button>
+    <button class="nav nav-sub" data-tab="sources">◉ &nbsp; Source monitoring</button>
+  </details>
   <div class="sidebar-bottom"><div class="live-mark"><i></i><span>PUBLIC RESEARCH PREVIEW</span></div><p>Regulatory orders and Google News research leads. Different verification levels; not a fraud ranking.</p><a href="https://github.com/khaled-agi/Signal-North" target="_blank" rel="noopener">View source on GitHub ↗</a></div>
 </aside>
 <div class="main">
@@ -40,19 +46,38 @@
   <div class="intro"><div><div class="eyebrow">CANADIAN FINANCIAL CRIME INTELLIGENCE</div><h1 id="headline">Know what changed.<br><em>Know where to look.</em></h1><p id="description">Monitor public enforcement developments and explore evidence-linked institutions across Canada.</p></div><span class="preview">✳ &nbsp; SOURCE-LINKED RESEARCH</span></div>
   <div class="error hidden" id="error" role="status"></div>
   <section id="overview" class="tab">
+    <div class="workflow-heading"><div><span class="eyebrow">ANALYST COMMAND CENTER</span><h2>From headlines to evidence-backed decisions.</h2><p>Three connected steps, not three disconnected databases.</p></div></div>
+    <div class="workflow-steps">
+      <button type="button" data-to="fraud"><span class="workflow-step-num">01 / DISCOVER</span><strong>What's happening?</strong><span>Search the multi-year article archive, police reports and fraud patterns</span><span class="workflow-step-link">Explore stories →</span></button>
+      <button type="button" data-to="connections"><span class="workflow-step-num">02 / INVESTIGATE</span><strong>Who is connected?</strong><span>Follow an institution across regulator actions, reported cases and news leads</span><span class="workflow-step-link">Investigate an institution →</span></button>
+      <button type="button" data-to="clients"><span class="workflow-step-num">03 / ACT</span><strong>What should we track?</strong><span>Build a client watchlist, log research and export sourced briefs</span><span class="workflow-step-link">Open workspace →</span></button>
+    </div>
     <div class="metrics" id="metrics"></div>
-    <div class="connection-shortcut"><span>Researching a client? Connect regulatory findings, customer reports and recent headlines on one timeline.</span><button class="link-btn" data-to="connections">Open evidence connections →</button></div>
+
+    <section class="panel breaking-panel"><div class="panel-heading"><div><div class="eyebrow">GOOGLE NEWS DISCOVERY · CANADA</div><h2>Newest fraud &amp; scam reports</h2></div><button class="link-btn" data-to="fraud">Open news intelligence →</button></div><div class="breaking-meta"><span id="newsFreshness">Checking latest syndication snapshot...</span><a href="https://news.google.com/search?q=fraud%20scam%20Canada&hl=en-CA&gl=CA&ceid=CA%3Aen" rel="noopener" target="_blank">Browse Google News directly ↗</a></div><div id="headlinesTop" class="breaking-list"><div class="empty">News headlines are loading...</div></div></section>
     <div class="cols">
       <section class="panel map-panel"><div class="panel-heading"><div><div class="eyebrow">GEOGRAPHIC INTELLIGENCE</div><h2>Canadian financial-crime activity</h2></div><button id="mapReset" class="map-reset" type="button">⌖ Canada view</button></div>
     <div class="map-controls"><div class="map-mode" role="group" aria-label="Map event layers"><button type="button" data-mapmode="all" class="active">All evidence</button><button type="button" data-mapmode="enforcement">Enforcement</button><button type="button" data-mapmode="major">Major C$1M+</button><button type="button" data-mapmode="news">News leads</button></div><select id="mapProvince" aria-label="Map province filter"><option value="">All provinces</option></select><input id="mapMonth" type="month" aria-label="Publication month"><button id="mapClearMonth" type="button" class="map-reset">All dates</button></div>
     <div id="map" class="map"></div><div class="map-mapfooter"><div class="map-key"><span class="key-reg">●</span> Confirmed regulator notices <span class="key-case">●</span> Source-reviewed cases <span class="key-news">●</span> Headline city mentions <span class="key-major">◆</span> Major penalties</div><div class="map-caption" id="mapCaption">Loading map layers...</div></div><p class="map-disclaimer">Locations are <strong>institution addresses</strong> for regulatory notices or <strong>cities explicitly mentioned in headlines</strong> for unverified news leads. Neither is necessarily where the fraud occurred.</p></section>
       <section class="panel right-panel"><div class="panel-heading"><div><div class="eyebrow">LINKED TO MAP</div><h2>Mapped articles &amp; cases</h2></div></div><div id="mappedStories" class="mapped-story-feed"><div class="empty">Connecting article locations...</div></div><div class="panel-heading"><div class="eyebrow">COVERAGE BY PROVINCE</div></div><div id="regions"></div><p class="small muted">Markers show locations mentioned in sources, not verified incident addresses. Click a story to open its map marker.</p></section>
     </div>
-    <section class="panel breaking-panel"><div class="panel-heading"><div><div class="eyebrow">GOOGLE NEWS DISCOVERY · CANADA</div><h2>Newest fraud &amp; scam reports</h2></div><button class="link-btn" data-to="fraud">Open news intelligence →</button></div><div class="breaking-meta"><span id="newsFreshness">Checking latest syndication snapshot...</span><a href="https://news.google.com/search?q=fraud%20scam%20Canada&hl=en-CA&gl=CA&ceid=CA%3Aen" rel="noopener" target="_blank">Browse Google News directly ↗</a></div><div id="headlinesTop" class="breaking-list"><div class="empty">News headlines are loading...</div></div></section>
     <section class="panel"><div class="panel-heading"><div><div class="eyebrow">CUSTOMER FRAUD CASES / SOURCE-REVIEWED</div><h2>Recent reporting on individual incidents</h2></div><button class="link-btn" data-to="incidents">Explore case tracker →</button></div><div id="featuredIncidents" class="case-featured"><div class="empty">Loading individual fraud cases...</div></div></section>
     <section class="panel"><div class="panel-heading"><div><div class="eyebrow">HIGH-VALUE ENFORCEMENT</div><h2>Major AML &amp; consumer protection penalties</h2></div><button class="link-btn" data-to="events">All enforcement →</button></div><p class="small" style="padding:0 22px">Verified regulatory notices of C$1 million or more, including historical actions. They are <strong>not</strong> fraud losses and not necessarily consent orders.</p><div id="majorOrders" class="events-list"><div class="empty">Loading major actions...</div></div></section>
     <section class="panel"><div class="panel-heading"><div><div class="eyebrow">FRAUD THREAT PULSE</div><h2>Canadian losses and emerging reports</h2></div><button class="link-btn" data-to="fraud">Explore fraud news →</button></div><div id="overviewFraud" class="fraud-overview"><div class="empty">Loading Canadian fraud intelligence...</div></div></section>
     <section class="panel"><div class="panel-heading"><div><div class="eyebrow">RECENT REGULATORY DEVELOPMENTS</div><h2>Latest tracked cases</h2></div><button class="link-btn" data-to="events">Explore all →</button></div><div id="recent" class="events-list"></div></section>
+  </section>
+  <section id="reports" class="tab hidden">
+    <section class="panel library-hero">
+      <div class="panel-heading"><div><div class="eyebrow">EVIDENCE LIBRARY / CANADA</div><h2>Research, statistics &amp; sector intelligence</h2></div><span id="libraryCount" class="small">Loading official reports</span></div>
+      <p class="library-intro">Use studies to understand fraud patterns and payment-system vulnerabilities. Use original news and regulator records to examine specific institutions. Reports do not prove that a bank caused customer losses.</p>
+      <div class="library-filters"><input id="librarySearch" type="search" placeholder="Find reports, research, organizations, typologies..." aria-label="Search research library"><select id="libraryTopic" aria-label="Report category"><option value="">All topics</option></select><select id="libraryYear" aria-label="Report year"><option value="">All years</option></select></div>
+      <div id="libraryRows" class="library-results"><div class="empty">Loading source-linked reports...</div></div>
+    </section>
+    <section class="panel"><div class="panel-heading"><div><div class="eyebrow">NATIONAL CONTEXT / CAFC REPORTING</div><h2>How reported fraud losses have changed</h2></div><span class="small">Different source vintages and revisions</span></div>
+      <p class="library-intro">Yearly victim-reported losses to the CAFC, rounded and drawn from original public releases. These are <strong>not bank-owned losses</strong>. Do not add them to fines or complaint counts.</p>
+      <div id="lossTrend" class="library-trend"><div class="empty">Loading historical trends...</div></div>
+      <p class="library-fineprint">Fraud is underreported; figures are subject to revision and differing reporting dates. Hover or open each source to check its release and limitations.</p>
+    </section>
   </section>
   <section id="incidents" class="tab hidden"><div class="panel"><div class="panel-heading"><div><div class="eyebrow">CASE INTELLIGENCE / CANADA</div><h2>Victim incidents and linked institutions</h2></div><span class="small" id="incidentCount">Loading...</span></div><div class="notice"><strong>Bank involvement is not bank culpability.</strong> Cases include fraud victims, impersonated institutions, refunds, and payment recovery. Publication dates are not necessarily incident dates. Amounts are tagged as victim losses, exposure, or recovered funds.</div><div class="case-filters"><input id="incidentSearch" type="search" placeholder="Search bank, scam type or location..."><select id="incidentProvince"><option value="">All provinces</option></select><select id="incidentBank"><option value="">All banks / unnamed</option></select></div><div id="incidentRows" class="incident-rows"></div></div></section>
   <section id="fraud" class="tab hidden">
@@ -120,5 +145,6 @@
 <script src="./intel.js?v=__BUILD_SHA__" defer></script>
 <script src="./workspace.js?v=__BUILD_SHA__" defer></script>
 <script src="./connections.js?v=__BUILD_SHA__" defer></script>
+<script src="./research.js?v=__BUILD_SHA__" defer></script>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" async crossorigin="" onload="window.dispatchEvent(new Event('signalnorth:mapready'))"></script>
 </body></html>
