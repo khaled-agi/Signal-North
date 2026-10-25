@@ -75,7 +75,7 @@ try:
         page.locator("#reviewedEventRows [data-reviewed-open]").first.click()
         assert "Source-supported claims" in page.locator("#drawerBody").inner_text()
         assert "What remains unanswered" in page.locator("#drawerBody").inner_text()
-        assert "Original sources and provenance" in page.locator("#drawerBody").inner_text()
+        assert "Cited publications and provenance" in page.locator("#drawerBody").inner_text()
         assert "Counterevidence: not_assessed" in page.locator("#drawerBody").inner_text()
         assert page.locator("#drawerBody .reviewed-source-card a").count() >= 1
         assert page.locator("#drawerBody .reviewed-timeline-step").count() >= 2
