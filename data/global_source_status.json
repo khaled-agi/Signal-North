@@ -1,0 +1,23 @@
+{
+  "started_at": "2026-10-25T00:02:42+00:00",
+  "sources": {
+    "FinCEN": {
+      "status": "ok",
+      "new_snapshot_rows": 20,
+      "kind": "official_decision_index"
+    },
+    "FCA": {
+      "status": "ok",
+      "new_snapshot_rows": 81,
+      "kind": "official_decision_index"
+    },
+    "AUSTRAC": {
+      "status": "seed_verified",
+      "kind": "manual_source_verified",
+      "records": 2
+    }
+  },
+  "warning": "No collector reports complete worldwide coverage. FCA and FinCEN are primary records; AUSTRAC currently has manually verified seed entries.",
+  "completed_at": "2026-10-25T00:02:54+00:00",
+  "total_global_events": 109
+}
