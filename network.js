@@ -105,6 +105,15 @@
    el("themeChoose").addEventListener("change",e=>{state.selected=e.target.value;renderThemes()});
    el("themeYear").addEventListener("change",renderThemes);
    for(const id of ["themeCompareA","themeCompareB","themeCompareMode"])el(id).addEventListener("change",renderCompare);
+   const openThemeIn=(tab)=>{
+     const theme=state.selected||el("themeChoose").value;
+     const year=el("themeYear").value;
+     window.dispatchEvent(new CustomEvent("signalnorth:applytheme",{detail:{theme,year}}));
+     const button=document.querySelector('[data-tab="'+tab+'"]');
+     if(button)button.click();
+   };
+   el("themeToMap").addEventListener("click",()=>openThemeIn("overview"));
+   el("themeToStories").addEventListener("click",()=>openThemeIn("fraud"));
    el("themeSourceLink").addEventListener("click",()=>document.querySelector('[data-tab="reports"]').click());
    el("sectorSearch").addEventListener("input",renderSectors);
    el("sectorFilter").addEventListener("change",renderSectors);
