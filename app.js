@@ -156,7 +156,7 @@ function initMap(){
   if(state.mapAgency)rows=rows.filter(e=>e.agency===state.mapAgency);
   if(state.mapProvince)rows=rows.filter(e=>e.countryCode!=="CA"||e.province===state.mapProvince);
   if(state.mapMonth)rows=rows.filter(e=>String(e.date).startsWith(state.mapMonth));
-  if(state.mapTopic)rows=rows.filter(e=>e.raw.category===state.mapTopic||e.raw.fraud_type===state.mapTopic);
+  if(state.mapTopic)rows=rows.filter(e=>e.raw.category===state.mapTopic||e.raw.fraud_type===state.mapTopic||(e.raw.fraud_themes||[]).includes(state.mapTopic));
   if(state.globalPattern){const re=new RegExp(state.globalPattern,"i");rows=rows.filter(e=>re.test([e.title,e.raw.category,e.raw.institution].join(" ")));}
   if(state.mapYearFrom)rows=rows.filter(e=>String(e.date).slice(0,4)>=state.mapYearFrom);
   if(state.mapYearTo)rows=rows.filter(e=>String(e.date).slice(0,4)<=state.mapYearTo);
@@ -173,7 +173,7 @@ function initMap(){
   refreshMapList();
   return;
  }
- const newsTopics=[...new Set(state.news.map(x=>x.category).filter(Boolean))].sort();
+ const newsTopics=[...new Set(state.news.flatMap(x=>[x.category,...(x.fraud_themes||[])]).filter(Boolean))].sort();
  if(newsTopics.length){
   const current=state.mapTopic||$("#mapTopic").value;
   $("#mapTopic").innerHTML='<option value="">All topics</option>'+newsTopics.map(x=>'<option value="'+escapeHTML(x)+'">'+escapeHTML(x)+'</option>').join("");
@@ -219,7 +219,7 @@ function initMap(){
     (!state.mapYearFrom||yr>=state.mapYearFrom)&&
     (!state.mapYearTo||yr<=state.mapYearTo);
  };
- const matchTopic=e=>!state.mapTopic||e.category===state.mapTopic||e.fraud_type===state.mapTopic;
+ const matchTopic=e=>!state.mapTopic||e.category===state.mapTopic||e.fraud_type===state.mapTopic||(e.fraud_themes||[]).includes(state.mapTopic);
  let records=[];
  if(showNews)records.push(...state.news.filter(e=>inDate(e)&&matchTopic(e)&&matchesClient(e)).map(e=>mapRecord("news",e)));
  if(showCases)records.push(...state.incidents.filter(e=>inDate(e)&&matchTopic(e)&&matchesClient(e)).map(e=>mapRecord("case",e)));
@@ -414,6 +414,31 @@ $("#mapStoryMore").addEventListener("click",()=>{state.mapSideVisible=(state.map
 $("#mapStoryAll").addEventListener("click",()=>{state.mapSideVisible=Number.MAX_SAFE_INTEGER;refreshMapList();});
 $("#mapStoryClear").addEventListener("click",()=>{state.mapSelectedIds=null;state.mapSideScope="all";refreshMapList();});
 
+window.addEventListener("signalnorth:applytheme",event=>{
+ const theme=String(event.detail?.theme||""),year=String(event.detail?.year||"");
+ state.mapTopic=theme;
+ state.mapYearFrom=year;
+ state.mapYearTo=year;
+ state.mapMonth="";
+ state.clientFocus="";
+ state.mapCountry="CA";
+ state.mapProvince="";
+ state.mapAgency="";
+ state.globalPattern="";
+ state.mapSideScope="all";
+ state.mapSideVisible=100;
+ state.mapMode="news";
+ document.querySelectorAll("[data-mapmode]").forEach(b=>b.classList.toggle("active",b.dataset.mapmode==="news"));
+ $("#mapTopic").value=theme;
+ $("#mapYearFrom").value=year;
+ $("#mapYearTo").value=year;
+ $("#mapCountry").value="CA";
+ $("#mapProvince").value="";
+ $("#mapAgency").value="";
+ $("#mapMonth").value="";
+ $("#mapStorySearch").value="";
+ initMap();
+});
 window.addEventListener("signalnorth:clientfocus",e=>{state.clientFocus=e.detail?.name||"";state.mapMode="all";document.querySelectorAll("[data-mapmode]").forEach(b=>b.classList.toggle("active",b.dataset.mapmode==="all"));initMap();});
 window.addEventListener("signalnorth:aliasesready",event=>{state.entityAliases=event.detail?.institutions||[];renderMetrics();initMap();});
 window.addEventListener("signalnorth:globalready",event=>{
