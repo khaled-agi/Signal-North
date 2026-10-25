@@ -1,0 +1,754 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-25T00:42:29+00:00",
+  "reviewed_events": 6,
+  "source_reviewed_legacy_records": 6,
+  "editorially_approved_new_records": 0,
+  "methodology": "Only previously curated source-attributed cases and manually approved editorial events appear here. No news headline, user tip, or algorithmic relationship is promoted automatically. Source-reviewed does not mean independently verified or adjudicated.",
+  "events": [
+    {
+      "id": "ca-2026-10-23-tangerine-courier-scam",
+      "title": "Tangerine customer reports C$7,200 courier bank-impersonation scam",
+      "case_type": "reported_financial_fraud",
+      "review_state": "source_reviewed",
+      "independently_verified": false,
+      "review_scope": "published summary reviewed; underlying events not adjudicated",
+      "reviewer_id": null,
+      "last_reviewed_at": null,
+      "publication_date": "2026-10-23",
+      "incident_period": "Spring 2026",
+      "incident_date": null,
+      "fraud_type": "Bank impersonation / debit card collection scam",
+      "province": "ON",
+      "geography": {
+        "label": "Toronto, Ontario",
+        "role": "reported customer city, not incident coordinates",
+        "latitude": 43.6532,
+        "longitude": -79.3832,
+        "location_is_verified_incident_scene": false
+      },
+      "entities": [
+        {
+          "name": "Tangerine",
+          "role": "customer_financial_institution",
+          "role_status": "source_attributed",
+          "legal_liability_established": false,
+          "source_ids": [
+            "source:ca-2026-10-23-tangerine-courier-scam:1"
+          ]
+        }
+      ],
+      "institution_role": "customer_financial_institution",
+      "reported_impact": [
+        {
+          "value": 7200,
+          "currency": "CAD",
+          "type": "victim_reported_loss",
+          "approximate": false,
+          "attributed_to": "customer",
+          "source_ids": [
+            "source:ca-2026-10-23-tangerine-courier-scam:1"
+          ],
+          "certainty": "source_attributed",
+          "not_a_bank_loss_unless_explicitly_supported": true
+        }
+      ],
+      "reported_recovery_outcome": "Customer reported a partial settlement, without full reimbursement",
+      "sources": [
+        {
+          "id": "source:ca-2026-10-23-tangerine-courier-scam:1",
+          "url": "https://todayincanada.ca/same-scam-2-countries-why-canadians-dont-get-their-money-back/",
+          "publisher": "CBC Marketplace story (reproduced by Today in Canada)",
+          "publication_date": "2026-10-23",
+          "document_type": "reported_by_news",
+          "provenance": "legacy_curated_source_attribution",
+          "full_text_preserved": false
+        }
+      ],
+      "claims": [
+        {
+          "id": "ca-2026-10-23-tangerine-courier-scam:claim:summary",
+          "statement": "A Toronto customer reported a caller impersonating Tangerine's fraud team who arranged collection of a debit card by courier. Media coverage reports a C$7,200 loss and a later partial settlement; the fraud occurred months before publication.",
+          "kind": "reported_narrative",
+          "source_ids": [
+            "source:ca-2026-10-23-tangerine-courier-scam:1"
+          ],
+          "certainty": "source_attributed",
+          "qualification": "A customer-reported loss and reimbursement dispute, not an adjudicated finding of wrongdoing by Tangerine. Secondary reproduction of CBC reporting."
+        }
+      ],
+      "timeline": [
+        {
+          "step": 1,
+          "label": "Impersonation",
+          "narrative": "A customer reported receiving a call from someone claiming to represent Tangerine's fraud team.",
+          "event_date": null,
+          "source_ids": [
+            "source:ca-2026-10-23-tangerine-courier-scam:1"
+          ],
+          "certainty": "source_attributed"
+        },
+        {
+          "step": 2,
+          "label": "Collection",
+          "narrative": "The caller arranged for a courier to collect a debit card.",
+          "event_date": null,
+          "source_ids": [
+            "source:ca-2026-10-23-tangerine-courier-scam:1"
+          ],
+          "certainty": "source_attributed"
+        },
+        {
+          "step": 3,
+          "label": "Reported impact",
+          "narrative": "The customer reported losing C$7,200.",
+          "event_date": null,
+          "source_ids": [
+            "source:ca-2026-10-23-tangerine-courier-scam:1"
+          ],
+          "certainty": "source_attributed"
+        },
+        {
+          "step": 4,
+          "label": "Reported outcome",
+          "narrative": "Coverage described a partial settlement, rather than full reimbursement.",
+          "event_date": null,
+          "source_ids": [
+            "source:ca-2026-10-23-tangerine-courier-scam:1"
+          ],
+          "certainty": "source_attributed"
+        }
+      ],
+      "unanswered_questions": [
+        "What communications and card-collection steps does the publication actually establish?",
+        "What reimbursement or recovery outcome is supported by the reporting?",
+        "Which controls could interrupt courier-assisted bank impersonation, without assuming this bank was at fault?"
+      ],
+      "counterevidence": [],
+      "counterevidence_status": "not_assessed",
+      "reporting_group_links": [],
+      "link_review_status": "not_reviewed",
+      "editorial_origin": {
+        "dataset": "data/incidents.json",
+        "original_case_id": "ca-2026-10-23-tangerine-courier-scam",
+        "record_created_from": "existing_curated_case_summary"
+      },
+      "disclaimer": "A customer-reported loss and reimbursement dispute, not an adjudicated finding of wrongdoing by Tangerine. Secondary reproduction of CBC reporting."
+    },
+    {
+      "id": "ca-2026-10-22-vpd-bank-spoof",
+      "title": "Vancouver employee loses C$34,000 to bank impersonation",
+      "case_type": "reported_financial_fraud",
+      "review_state": "source_reviewed",
+      "independently_verified": false,
+      "review_scope": "published summary reviewed; underlying events not adjudicated",
+      "reviewer_id": null,
+      "last_reviewed_at": null,
+      "publication_date": "2026-10-22",
+      "incident_period": "Before October 22, 2026; exact day not stated",
+      "incident_date": null,
+      "fraud_type": "Bank impersonation / social engineering",
+      "province": "BC",
+      "geography": {
+        "label": "Vancouver, British Columbia",
+        "role": "city named in police release",
+        "latitude": 49.2827,
+        "longitude": -123.1207,
+        "location_is_verified_incident_scene": false
+      },
+      "entities": [],
+      "institution_role": "bank_not_identified",
+      "reported_impact": [
+        {
+          "value": 34000,
+          "currency": "CAD",
+          "type": "victim_reported_loss",
+          "approximate": false,
+          "attributed_to": "customer",
+          "source_ids": [
+            "source:ca-2026-10-22-vpd-bank-spoof:1"
+          ],
+          "certainty": "source_attributed",
+          "not_a_bank_loss_unless_explicitly_supported": true
+        }
+      ],
+      "reported_recovery_outcome": "Not reported",
+      "sources": [
+        {
+          "id": "source:ca-2026-10-22-vpd-bank-spoof:1",
+          "url": "https://vpd.ca/news/2026/10/22/downtown-employee-loses-34000-in-bank-impersonation-scam/",
+          "publisher": "Vancouver Police Department",
+          "publication_date": "2026-10-22",
+          "document_type": "police_release",
+          "provenance": "legacy_curated_source_attribution",
+          "full_text_preserved": false
+        }
+      ],
+      "claims": [
+        {
+          "id": "ca-2026-10-22-vpd-bank-spoof:claim:summary",
+          "statement": "Vancouver police described a spoofed caller impersonating a bank representative. A victim was persuaded to provide information enabling withdrawals from two accounts.",
+          "kind": "reported_narrative",
+          "source_ids": [
+            "source:ca-2026-10-22-vpd-bank-spoof:1"
+          ],
+          "certainty": "source_attributed",
+          "qualification": "The police notice does not name the bank. No bank misconduct is implied."
+        }
+      ],
+      "timeline": [
+        {
+          "step": 1,
+          "label": "Impersonation",
+          "narrative": "Vancouver police described a caller impersonating a bank representative.",
+          "event_date": null,
+          "source_ids": [
+            "source:ca-2026-10-22-vpd-bank-spoof:1"
+          ],
+          "certainty": "source_attributed"
+        },
+        {
+          "step": 2,
+          "label": "Information disclosure",
+          "narrative": "Police reported that the victim was persuaded to provide information.",
+          "event_date": null,
+          "source_ids": [
+            "source:ca-2026-10-22-vpd-bank-spoof:1"
+          ],
+          "certainty": "source_attributed"
+        },
+        {
+          "step": 3,
+          "label": "Account activity",
+          "narrative": "The information reportedly enabled withdrawals from two accounts.",
+          "event_date": null,
+          "source_ids": [
+            "source:ca-2026-10-22-vpd-bank-spoof:1"
+          ],
+          "certainty": "source_attributed"
+        },
+        {
+          "step": 4,
+          "label": "Reported impact",
+          "narrative": "The police release described a C$34,000 loss.",
+          "event_date": null,
+          "source_ids": [
+            "source:ca-2026-10-22-vpd-bank-spoof:1"
+          ],
+          "certainty": "source_attributed"
+        }
+      ],
+      "unanswered_questions": [
+        "What exact customer information was requested, and what is not specified in the police release?",
+        "Which access and payment steps are confirmed versus unknown?",
+        "What intervention points might address spoofed-bank contact and account access?"
+      ],
+      "counterevidence": [],
+      "counterevidence_status": "not_assessed",
+      "reporting_group_links": [],
+      "link_review_status": "not_reviewed",
+      "editorial_origin": {
+        "dataset": "data/incidents.json",
+        "original_case_id": "ca-2026-10-22-vpd-bank-spoof",
+        "record_created_from": "existing_curated_case_summary"
+      },
+      "disclaimer": "The police notice does not name the bank. No bank misconduct is implied."
+    },
+    {
+      "id": "ca-2026-10-21-td-deepfake-investment",
+      "title": "B.C. customer reports C$450,000 deepfake investment scam",
+      "case_type": "reported_financial_fraud",
+      "review_state": "source_reviewed",
+      "independently_verified": false,
+      "review_scope": "published summary reviewed; underlying events not adjudicated",
+      "reviewer_id": null,
+      "last_reviewed_at": null,
+      "publication_date": "2026-10-21",
+      "incident_period": "May 2025–February 2026",
+      "incident_date": null,
+      "fraud_type": "Investment scam / deepfake promotion",
+      "province": "BC",
+      "geography": {
+        "label": "Qualicum Beach, British Columbia",
+        "role": "reported customer residence",
+        "latitude": 49.3463,
+        "longitude": -124.436,
+        "location_is_verified_incident_scene": false
+      },
+      "entities": [
+        {
+          "name": "TD Bank",
+          "role": "customer_financial_institution",
+          "role_status": "source_attributed",
+          "legal_liability_established": false,
+          "source_ids": [
+            "source:ca-2026-10-21-td-deepfake-investment:1"
+          ]
+        }
+      ],
+      "institution_role": "customer_financial_institution",
+      "reported_impact": [
+        {
+          "value": 450000,
+          "currency": "CAD",
+          "type": "victim_reported_loss",
+          "approximate": true,
+          "attributed_to": "customer",
+          "source_ids": [
+            "source:ca-2026-10-21-td-deepfake-investment:1"
+          ],
+          "certainty": "source_attributed",
+          "not_a_bank_loss_unless_explicitly_supported": true
+        }
+      ],
+      "reported_recovery_outcome": "Reported as not reimbursed at publication",
+      "sources": [
+        {
+          "id": "source:ca-2026-10-21-td-deepfake-investment:1",
+          "url": "https://finance.yahoo.com/economy/policy/articles/88-old-loses-450-000-032700028.html",
+          "publisher": "Yahoo Finance (reporting on CBC Go Public)",
+          "publication_date": "2026-10-21",
+          "document_type": "reported_by_news",
+          "provenance": "legacy_curated_source_attribution",
+          "full_text_preserved": false
+        }
+      ],
+      "claims": [
+        {
+          "id": "ca-2026-10-21-td-deepfake-investment:claim:summary",
+          "statement": "A customer reported losing money over months after seeing a deepfake investment promotion. The article describes payments made through a TD account and disputes about protective interventions.",
+          "kind": "reported_narrative",
+          "source_ids": [
+            "source:ca-2026-10-21-td-deepfake-investment:1"
+          ],
+          "certainty": "source_attributed",
+          "qualification": "This case is a reported customer loss, not a regulatory finding against TD."
+        }
+      ],
+      "timeline": [
+        {
+          "step": 1,
+          "label": "Promotion",
+          "narrative": "A customer reported encountering a deepfake investment promotion.",
+          "event_date": null,
+          "source_ids": [
+            "source:ca-2026-10-21-td-deepfake-investment:1"
+          ],
+          "certainty": "source_attributed"
+        },
+        {
+          "step": 2,
+          "label": "Payment activity",
+          "narrative": "The report describes payments through a TD account over a period spanning May 2025 to February 2026.",
+          "event_date": null,
+          "source_ids": [
+            "source:ca-2026-10-21-td-deepfake-investment:1"
+          ],
+          "certainty": "source_attributed"
+        },
+        {
+          "step": 3,
+          "label": "Reported impact",
+          "narrative": "The customer reported an approximately C$450,000 loss.",
+          "event_date": null,
+          "source_ids": [
+            "source:ca-2026-10-21-td-deepfake-investment:1"
+          ],
+          "certainty": "source_attributed"
+        },
+        {
+          "step": 4,
+          "label": "Dispute",
+          "narrative": "The coverage describes disagreement about protective interventions; reimbursement was not reported at publication.",
+          "event_date": null,
+          "source_ids": [
+            "source:ca-2026-10-21-td-deepfake-investment:1"
+          ],
+          "certainty": "source_attributed"
+        }
+      ],
+      "unanswered_questions": [
+        "Which investment-promotion claims are confirmed by sources, and which remain customer allegations?",
+        "What payment sequence and time gaps are independently documented?",
+        "What indicators, if any, could distinguish coercive scam activity from legitimate investing?"
+      ],
+      "counterevidence": [],
+      "counterevidence_status": "not_assessed",
+      "reporting_group_links": [],
+      "link_review_status": "not_reviewed",
+      "editorial_origin": {
+        "dataset": "data/incidents.json",
+        "original_case_id": "ca-2026-10-21-td-deepfake-investment",
+        "record_created_from": "existing_curated_case_summary"
+      },
+      "disclaimer": "This case is a reported customer loss, not a regulatory finding against TD."
+    },
+    {
+      "id": "ca-2026-10-10-scotia-credit",
+      "title": "Ontario customer reports C$35,000 unauthorized credit line",
+      "case_type": "reported_financial_fraud",
+      "review_state": "source_reviewed",
+      "independently_verified": false,
+      "review_scope": "published summary reviewed; underlying events not adjudicated",
+      "reviewer_id": null,
+      "last_reviewed_at": null,
+      "publication_date": "2026-10-10",
+      "incident_period": "November 2025 onward",
+      "incident_date": null,
+      "fraud_type": "Identity theft / unauthorized credit",
+      "province": "ON",
+      "geography": {
+        "label": "Brampton, Ontario",
+        "role": "reported customer residence; credit line allegedly opened in Milton",
+        "latitude": 43.7315,
+        "longitude": -79.7624,
+        "location_is_verified_incident_scene": false
+      },
+      "entities": [
+        {
+          "name": "Scotiabank",
+          "role": "customer_financial_institution",
+          "role_status": "source_attributed",
+          "legal_liability_established": false,
+          "source_ids": [
+            "source:ca-2026-10-10-scotia-credit:1"
+          ]
+        }
+      ],
+      "institution_role": "customer_financial_institution",
+      "reported_impact": [
+        {
+          "value": 35000,
+          "currency": "CAD",
+          "type": "unauthorized_credit_exposure",
+          "approximate": false,
+          "attributed_to": "credit_exposure",
+          "source_ids": [
+            "source:ca-2026-10-10-scotia-credit:1"
+          ],
+          "certainty": "source_attributed",
+          "not_a_bank_loss_unless_explicitly_supported": true
+        }
+      ],
+      "reported_recovery_outcome": "Reported fully refunded",
+      "sources": [
+        {
+          "id": "source:ca-2026-10-10-scotia-credit:1",
+          "url": "https://money.ca/news/identity-theft-credit-fraud-canada-credit-freeze",
+          "publisher": "Money.ca (citing CTV News)",
+          "publication_date": "2026-10-10",
+          "document_type": "reported_by_news",
+          "provenance": "legacy_curated_source_attribution",
+          "full_text_preserved": false
+        }
+      ],
+      "claims": [
+        {
+          "id": "ca-2026-10-10-scotia-credit:claim:summary",
+          "statement": "Customer said an unauthorized credit line was created at a Milton branch and exhausted; the article reported that the bank later refunded the amount.",
+          "kind": "reported_narrative",
+          "source_ids": [
+            "source:ca-2026-10-10-scotia-credit:1"
+          ],
+          "certainty": "source_attributed",
+          "qualification": "Unauthorized credit exposure is not necessarily a realized loss borne by the bank."
+        }
+      ],
+      "timeline": [
+        {
+          "step": 1,
+          "label": "Identity misuse",
+          "narrative": "The customer reported that a credit line was opened without authorization.",
+          "event_date": null,
+          "source_ids": [
+            "source:ca-2026-10-10-scotia-credit:1"
+          ],
+          "certainty": "source_attributed"
+        },
+        {
+          "step": 2,
+          "label": "Branch reference",
+          "narrative": "Coverage identified a Milton branch in connection with the reported opening.",
+          "event_date": null,
+          "source_ids": [
+            "source:ca-2026-10-10-scotia-credit:1"
+          ],
+          "certainty": "source_attributed"
+        },
+        {
+          "step": 3,
+          "label": "Exposure",
+          "narrative": "The reported unauthorized credit exposure was C$35,000.",
+          "event_date": null,
+          "source_ids": [
+            "source:ca-2026-10-10-scotia-credit:1"
+          ],
+          "certainty": "source_attributed"
+        },
+        {
+          "step": 4,
+          "label": "Reported outcome",
+          "narrative": "The article stated that the amount was later refunded.",
+          "event_date": null,
+          "source_ids": [
+            "source:ca-2026-10-10-scotia-credit:1"
+          ],
+          "certainty": "source_attributed"
+        }
+      ],
+      "unanswered_questions": [
+        "What evidence establishes the credit-opening channel and disputed identity-verification steps?",
+        "How should unauthorized credit exposure be distinguished from final victim loss?",
+        "Which outcome details and dates are corroborated by the original reporting?"
+      ],
+      "counterevidence": [],
+      "counterevidence_status": "not_assessed",
+      "reporting_group_links": [],
+      "link_review_status": "not_reviewed",
+      "editorial_origin": {
+        "dataset": "data/incidents.json",
+        "original_case_id": "ca-2026-10-10-scotia-credit",
+        "record_created_from": "existing_curated_case_summary"
+      },
+      "disclaimer": "Unauthorized credit exposure is not necessarily a realized loss borne by the bank."
+    },
+    {
+      "id": "ca-2026-05-13-cafc-wire-recovery",
+      "title": "C$3.5 million recovered after Québec payment-redirection fraud",
+      "case_type": "reported_financial_fraud",
+      "review_state": "source_reviewed",
+      "independently_verified": false,
+      "review_scope": "published summary reviewed; underlying events not adjudicated",
+      "reviewer_id": null,
+      "last_reviewed_at": null,
+      "publication_date": "2026-05-13",
+      "incident_period": "April 2026",
+      "incident_date": null,
+      "fraud_type": "Business email compromise / payment redirection",
+      "province": "QC",
+      "geography": {
+        "label": "Québec, Canada",
+        "role": "victim province; no sufficiently precise incident location",
+        "latitude": null,
+        "longitude": null,
+        "location_is_verified_incident_scene": false
+      },
+      "entities": [],
+      "institution_role": "unnamed_financial_institution_assisted_recovery",
+      "reported_impact": [
+        {
+          "value": 3500000,
+          "currency": "CAD",
+          "type": "recovered_amount",
+          "approximate": true,
+          "attributed_to": "recovery",
+          "source_ids": [
+            "source:ca-2026-05-13-cafc-wire-recovery:1"
+          ],
+          "certainty": "source_attributed",
+          "not_a_bank_loss_unless_explicitly_supported": true
+        }
+      ],
+      "reported_recovery_outcome": "C$3.5 million recovered according to CAFC",
+      "sources": [
+        {
+          "id": "source:ca-2026-05-13-cafc-wire-recovery:1",
+          "url": "https://antifraudcentre-centreantifraude.ca/news-nouvelles/2026/2026-05-13-eng.htm?wbdisable=true",
+          "publisher": "Canadian Anti-Fraud Centre",
+          "publication_date": "2026-05-13",
+          "document_type": "government_release",
+          "provenance": "legacy_curated_source_attribution",
+          "full_text_preserved": false
+        }
+      ],
+      "claims": [
+        {
+          "id": "ca-2026-05-13-cafc-wire-recovery:claim:summary",
+          "statement": "CAFC reported working with a financial institution to recover funds after a Québec business followed fraudulent payment instructions. The amount is recovered funds, not a bank loss.",
+          "kind": "reported_narrative",
+          "source_ids": [
+            "source:ca-2026-05-13-cafc-wire-recovery:1"
+          ],
+          "certainty": "source_attributed",
+          "qualification": "C$3.5 million is a reported recovery amount, not a victim net loss and not a penalty."
+        }
+      ],
+      "timeline": [
+        {
+          "step": 1,
+          "label": "Payment redirection",
+          "narrative": "A Québec business reportedly followed fraudulent payment instructions.",
+          "event_date": null,
+          "source_ids": [
+            "source:ca-2026-05-13-cafc-wire-recovery:1"
+          ],
+          "certainty": "source_attributed"
+        },
+        {
+          "step": 2,
+          "label": "Recovery response",
+          "narrative": "CAFC reported coordinating with a financial institution to recover the funds.",
+          "event_date": null,
+          "source_ids": [
+            "source:ca-2026-05-13-cafc-wire-recovery:1"
+          ],
+          "certainty": "source_attributed"
+        },
+        {
+          "step": 3,
+          "label": "Reported outcome",
+          "narrative": "Approximately C$3.5 million was recovered, according to CAFC.",
+          "event_date": null,
+          "source_ids": [
+            "source:ca-2026-05-13-cafc-wire-recovery:1"
+          ],
+          "certainty": "source_attributed"
+        }
+      ],
+      "unanswered_questions": [
+        "Which payment-instruction changes are described in the government release?",
+        "What roles did the reporting entity and assisting financial institution have?",
+        "What can and cannot be inferred from a recovered amount?"
+      ],
+      "counterevidence": [],
+      "counterevidence_status": "not_assessed",
+      "reporting_group_links": [],
+      "link_review_status": "not_reviewed",
+      "editorial_origin": {
+        "dataset": "data/incidents.json",
+        "original_case_id": "ca-2026-05-13-cafc-wire-recovery",
+        "record_created_from": "existing_curated_case_summary"
+      },
+      "disclaimer": "C$3.5 million is a reported recovery amount, not a victim net loss and not a penalty."
+    },
+    {
+      "id": "ca-2026-02-24-rcmp-rbc-spoof",
+      "title": "Nanaimo resident reports C$24,000 bank impersonation loss",
+      "case_type": "reported_financial_fraud",
+      "review_state": "source_reviewed",
+      "independently_verified": false,
+      "review_scope": "published summary reviewed; underlying events not adjudicated",
+      "reviewer_id": null,
+      "last_reviewed_at": null,
+      "publication_date": "2026-02-24",
+      "incident_period": "Before February 24, 2026; exact day not stated",
+      "incident_date": null,
+      "fraud_type": "Bank impersonation / account takeover",
+      "province": "BC",
+      "geography": {
+        "label": "Nanaimo, British Columbia",
+        "role": "city named in RCMP release",
+        "latitude": 49.1659,
+        "longitude": -123.9401,
+        "location_is_verified_incident_scene": false
+      },
+      "entities": [
+        {
+          "name": "RBC",
+          "role": "institution_impersonated",
+          "role_status": "source_attributed",
+          "legal_liability_established": false,
+          "source_ids": [
+            "source:ca-2026-02-24-rcmp-rbc-spoof:1"
+          ]
+        }
+      ],
+      "institution_role": "institution_impersonated",
+      "reported_impact": [
+        {
+          "value": 24000,
+          "currency": "CAD",
+          "type": "victim_reported_loss",
+          "approximate": true,
+          "attributed_to": "customer",
+          "source_ids": [
+            "source:ca-2026-02-24-rcmp-rbc-spoof:1"
+          ],
+          "certainty": "source_attributed",
+          "not_a_bank_loss_unless_explicitly_supported": true
+        }
+      ],
+      "reported_recovery_outcome": "Not reported",
+      "sources": [
+        {
+          "id": "source:ca-2026-02-24-rcmp-rbc-spoof:1",
+          "url": "https://rcmp.ca/en/bc/nanaimo/news/2026/02/4350604",
+          "publisher": "RCMP Nanaimo",
+          "publication_date": "2026-02-24",
+          "document_type": "police_release",
+          "provenance": "legacy_curated_source_attribution",
+          "full_text_preserved": false
+        }
+      ],
+      "claims": [
+        {
+          "id": "ca-2026-02-24-rcmp-rbc-spoof:claim:summary",
+          "statement": "RCMP described a local resident receiving calls and messages appearing to come from RBC; the victim reportedly gave personal details to scammers who accessed accounts.",
+          "kind": "reported_narrative",
+          "source_ids": [
+            "source:ca-2026-02-24-rcmp-rbc-spoof:1"
+          ],
+          "certainty": "source_attributed",
+          "qualification": "RBC is the impersonated institution, not an accused party."
+        }
+      ],
+      "timeline": [
+        {
+          "step": 1,
+          "label": "Impersonation",
+          "narrative": "RCMP described calls and messages that appeared to come from RBC.",
+          "event_date": null,
+          "source_ids": [
+            "source:ca-2026-02-24-rcmp-rbc-spoof:1"
+          ],
+          "certainty": "source_attributed"
+        },
+        {
+          "step": 2,
+          "label": "Information disclosure",
+          "narrative": "The resident reportedly shared personal information with the callers.",
+          "event_date": null,
+          "source_ids": [
+            "source:ca-2026-02-24-rcmp-rbc-spoof:1"
+          ],
+          "certainty": "source_attributed"
+        },
+        {
+          "step": 3,
+          "label": "Account access",
+          "narrative": "Scammers reportedly gained access to accounts.",
+          "event_date": null,
+          "source_ids": [
+            "source:ca-2026-02-24-rcmp-rbc-spoof:1"
+          ],
+          "certainty": "source_attributed"
+        },
+        {
+          "step": 4,
+          "label": "Reported impact",
+          "narrative": "A loss of approximately C$24,000 was reported.",
+          "event_date": null,
+          "source_ids": [
+            "source:ca-2026-02-24-rcmp-rbc-spoof:1"
+          ],
+          "certainty": "source_attributed"
+        }
+      ],
+      "unanswered_questions": [
+        "Which delivery channels were actually used by the impersonators?",
+        "What account-access steps were verified versus inferred?",
+        "How does identifying RBC as impersonated differ from alleging misconduct by RBC?"
+      ],
+      "counterevidence": [],
+      "counterevidence_status": "not_assessed",
+      "reporting_group_links": [],
+      "link_review_status": "not_reviewed",
+      "editorial_origin": {
+        "dataset": "data/incidents.json",
+        "original_case_id": "ca-2026-02-24-rcmp-rbc-spoof",
+        "record_created_from": "existing_curated_case_summary"
+      },
+      "disclaimer": "RBC is the impersonated institution, not an accused party."
+    }
+  ]
+}
