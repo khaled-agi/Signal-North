@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-25T00:06:44+00:00",
+  "updated_at": "2026-10-25T00:07:42+00:00",
   "events": [
     {
       "id": "us-fincen-2026-boa",
@@ -17,7 +17,10 @@
       "geographic_note": "US regulatory jurisdiction; not location of underlying laundering",
       "evidence_tier": "official_regulatory_source",
       "location_role": "regulator_jurisdiction_country_center",
-      "is_seed": true
+      "is_seed": true,
+      "additional_source_urls": [
+        "https://www.fincen.gov/system/files/2026-10/BoA-Consent-Order-Execution-Final.pdf"
+      ]
     },
     {
       "id": "us-ofac-2026-boa",
@@ -36,24 +39,6 @@
       "evidence_tier": "official_regulatory_source",
       "location_role": "regulator_jurisdiction_country_center",
       "is_seed": true
-    },
-    {
-      "id": "us-fincen-index-e599a14116f78be2",
-      "country_code": "US",
-      "country": "United States",
-      "regulator": "FinCEN",
-      "published_at": "2026-10-13",
-      "institution": "Bank of America, N.A.",
-      "title": "In the Matter of Bank of America, N.A.",
-      "status": "official enforcement index entry; open notice for decision details",
-      "category": "AML / BSA compliance · Depository Institutions",
-      "penalty_amount": null,
-      "penalty_currency": "USD",
-      "source_url": "https://www.fincen.gov/system/files/2026-10/BoA-Consent-Order-Execution-Final.pdf",
-      "location_role": "regulator_jurisdiction_country_center",
-      "evidence_tier": "official_enforcement_index",
-      "geographic_note": "US FinCEN jurisdiction, not location of alleged misconduct",
-      "first_seen_at": "2026-10-25T00:02:51+00:00"
     },
     {
       "id": "gb-fca-9caa02f73caf183e",
@@ -1619,25 +1604,10 @@
       "geographic_note": "Regulatory jurisdiction only",
       "evidence_tier": "official_regulatory_source",
       "location_role": "regulator_jurisdiction_country_center",
-      "is_seed": true
-    },
-    {
-      "id": "us-fincen-index-5ec7cf815290773f",
-      "country_code": "US",
-      "country": "United States",
-      "regulator": "FinCEN",
-      "published_at": "2023-11-21",
-      "institution": "Binance Holdings Limited, et. al. d/b/a Binance and Binance.com",
-      "title": "In the Matter of Binance Holdings Limited, et. al. d/b/a Binance and Binance.com",
-      "status": "official enforcement index entry; open notice for decision details",
-      "category": "AML / BSA compliance · Money Services Businesses",
-      "penalty_amount": null,
-      "penalty_currency": "USD",
-      "source_url": "https://www.fincen.gov/system/files/enforcement_action/2023-11-21/FinCEN_Consent_Order_2023-04_FINAL508.pdf",
-      "location_role": "regulator_jurisdiction_country_center",
-      "evidence_tier": "official_enforcement_index",
-      "geographic_note": "US FinCEN jurisdiction, not location of alleged misconduct",
-      "first_seen_at": "2026-10-25T00:02:51+00:00"
+      "is_seed": true,
+      "additional_source_urls": [
+        "https://www.fincen.gov/system/files/enforcement_action/2023-11-21/FinCEN_Consent_Order_2023-04_FINAL508.pdf"
+      ]
     },
     {
       "id": "gb-fca-1ac3be2190502333",
