@@ -102,6 +102,21 @@ class GroupedReportingTests(unittest.TestCase):
   self.assertEqual(len(grouped[0]["headline_variations"]),3)
   self.assertTrue(all(v["url"].startswith("https://") for v in grouped[0]["headline_variations"]))
 
+ def test_same_url_retains_distinct_original_headline_wording(self):
+  url="https://publisher.example/report"
+  first="Toronto investor loses $50,000 in elaborate crypto romance scam involving fake trading app"
+  second="Toronto investor loses $50,000 in complex crypto romance scam involving fake trading app"
+  row=self.example(first,url=url,article_links=[
+   {"title":first,"url":url,"publisher":"Publisher","published_at":"2025-04-11"},
+   {"title":second,"url":url,"publisher":"Publisher","published_at":"2025-04-12"}])
+  grouped=reporting.display_groups([row])
+  self.assertEqual(len(grouped),1)
+  self.assertEqual(grouped[0]["source_count"],1)
+  self.assertEqual(grouped[0]["variation_count"],2)
+  self.assertEqual({v["title"] for v in grouped[0]["headline_variations"]},
+                   {first,second})
+  self.assertEqual(len(grouped[0]["headline_variations"]),2)
+
  def test_do_not_merge_materially_distinct_reporting(self):
   base="Toronto investor loses $50,000 in elaborate crypto romance scam involving fake trading app"
   rows=[
