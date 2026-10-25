@@ -24,7 +24,7 @@ SOURCES=[
  ("FCA","GB","United Kingdom","https://www.fca.org.uk/news/news-stories/2026-fines"),
  ("AUSTRAC","AU","Australia","https://www.austrac.gov.au/about-us/record-our-actions/enforcement-actions-taken"),
 ]
-BASE_CENTERS={"US":(39.8,-98.6),"GB":(54,-2.7),"AU":(-25,134)}
+BASE_CENTERS={"US":(39.8,-98.6),"GB":(54,-2.7),"AU":(-25,134),"HK":(22.4,114.1),"SG":(1.35,103.8),"IE":(53.3,-8)}
 def now():return datetime.now(timezone.utc).isoformat(timespec="seconds")
 def date_us(raw):
  try:return datetime.strptime(raw.strip(),"%m/%d/%Y").strftime("%Y-%m-%d")
@@ -121,7 +121,10 @@ def run():
    except Exception as e:
     status["sources"][regulator]={"status":"failed","error":str(e)[:240],"kind":"official_decision_index"}
  if offline:status["sources"]["FinCEN"]={"status":"offline_test_uses_seed"};status["sources"]["FCA"]={"status":"offline_test_uses_seed"}
- status["sources"]["AUSTRAC"]={"status":"seed_verified","kind":"manual_source_verified","records":sum(x["regulator"]=="AUSTRAC" for x in seed)}
+ for agency in ("AUSTRAC","HKMA","MAS","Central Bank of Ireland","OFAC"):
+  status["sources"][agency]={"status":"seed_verified","kind":"manual_source_verified",
+    "records":sum(x.get("regulator")==agency for x in seed)}
+
  # Unknown currencies are not converted, and duplicate agencies remain separate
  # with their own regulator and notice ID.
  # When the seed has a source-reviewed assessment with penalty and legal
