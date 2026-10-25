@@ -79,6 +79,29 @@ try:
         page.locator("#close").click()
         print("Reviewed source-backed case investigation drawer: PASS")
         page.locator('[data-tab="overview"]').click()
+        page.wait_for_function("document.querySelector('#mapCountry').options.length >= 240",timeout=20000)
+        assert "countries" in page.locator("#worldCoverage").inner_text().lower()
+        page.locator("#worldView").click()
+        assert page.locator("#mapCountry").input_value() == ""
+        page.locator("#mapCountry").select_option("US")
+        assert "Jurisdiction: United States" in page.locator("#mapCaption").inner_text()
+        assert page.locator("#mappedStories .map-story").count() >= 2
+        assert "international agency" in page.locator("#mappedStories").inner_text().lower()
+        page.locator("#mapAgency").select_option("FinCEN")
+        assert "Agency: FinCEN" in page.locator("#mapCaption").inner_text()
+        assert "FinCEN" in page.locator("#mappedStories").inner_text()
+        page.locator("#mapAgency").select_option("")
+        page.locator("#mapCountry").select_option("GB")
+        assert "Jurisdiction: United Kingdom" in page.locator("#mapCaption").inner_text()
+        page.locator("#worldView").click()
+        assert page.locator("#globalPatterns button").count() >= 4
+        page.locator("[data-global-pattern]").first.click()
+        assert page.locator('[data-mapmode="enforcement"]').get_attribute("class") == "active"
+        page.locator("#mapReset").click()
+        assert page.locator("#mapCountry").input_value() == "CA"
+        assert "Jurisdiction: Canada" in page.locator("#mapCaption").inner_text()
+        page.locator("#worldView").click()
+        print("World+Canada single map, global jurisdiction/agency/pattern filters: PASS")
         page.locator('[data-mapmode="news"]').click()
         assert "mapped" in page.locator("#mapCaption").inner_text()
         assert page.locator("#mapProvince").count() == 1
