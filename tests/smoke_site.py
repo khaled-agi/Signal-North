@@ -271,7 +271,7 @@ try:
         page.locator("#librarySearch").fill("")
         assert page.locator("#libraryCount").inner_text()
         page.locator('[data-tab="overview"]').click()
-        assert page.locator(".sidebar > .nav").count() == 5
+        assert page.locator(".sidebar > .nav").count() == 6  # Reviewed events now has its own primary destination
         assert page.locator("#metrics .metric").count() == 4
         page.locator('[data-tab="themes"]').click()
         page.wait_for_function("document.querySelectorAll('#themeGrid .theme-matrix-row').length >= 8", timeout=12000)
