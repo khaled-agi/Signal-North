@@ -149,14 +149,15 @@ function initMap(){
             ...state.events.map(e=>mapRecord("reg",e)),
             ...state.incidents.map(e=>mapRecord("case",e)),
             ...state.globalEvents.map(e=>mapRecord("global",e))];
-  if(state.mapMode==="news")rows=rows.filter(e=>e.kind!=="reg");
-  else if(state.mapMode==="enforcement")rows=rows.filter(e=>e.kind==="reg");
+  if(state.mapMode==="news")rows=rows.filter(e=>e.kind==="news"||e.kind==="case");
+  else if(state.mapMode==="enforcement")rows=rows.filter(e=>e.kind==="reg"||e.kind==="global");
   else if(state.mapMode==="major")rows=rows.filter(e=>e.kind==="reg"&&Number(e.raw.penalty_cad)>=1000000);
   if(state.mapCountry)rows=rows.filter(e=>e.countryCode===state.mapCountry);
   if(state.mapAgency)rows=rows.filter(e=>e.agency===state.mapAgency);
   if(state.mapProvince)rows=rows.filter(e=>e.countryCode!=="CA"||e.province===state.mapProvince);
   if(state.mapMonth)rows=rows.filter(e=>String(e.date).startsWith(state.mapMonth));
   if(state.mapTopic)rows=rows.filter(e=>e.raw.category===state.mapTopic||e.raw.fraud_type===state.mapTopic);
+  if(state.globalPattern){const re=new RegExp(state.globalPattern,"i");rows=rows.filter(e=>re.test([e.title,e.raw.category,e.raw.institution].join(" ")));}
   if(state.mapYearFrom)rows=rows.filter(e=>String(e.date).slice(0,4)>=state.mapYearFrom);
   if(state.mapYearTo)rows=rows.filter(e=>String(e.date).slice(0,4)<=state.mapYearTo);
   state.mapRows=rows.sort((a,b)=>String(b.date).localeCompare(String(a.date)));
@@ -345,7 +346,7 @@ document.addEventListener("click",e=>{
     state.mapTopic="";$("#mapTopic").value="";
     state.mapYearFrom="";$("#mapYearFrom").value="";
     state.mapYearTo="";$("#mapYearTo").value="";
-    state.clientFocus="";state.mapMode="all";
+    state.clientFocus="";state.mapCountry="CA";$("#mapCountry").value="CA";state.mapAgency="";$("#mapAgency").value="";state.globalPattern="";state.mapMode="all";
     document.querySelectorAll("[data-mapmode]").forEach(b=>b.classList.toggle("active",b.dataset.mapmode==="all"));
     initMap();
    }
@@ -383,7 +384,24 @@ $("#close").addEventListener("click",closeDrawer);
 $("#overlay").addEventListener("click",e=>{if(e.target.id==="overlay")closeDrawer();});
 $("#reload").addEventListener("click",()=>{load(); window.dispatchEvent(new Event("signalnorth:refresh"));});
 $("#mapReset").addEventListener("click",()=>{state.mapProvince="";$("#mapProvince").value="";state.mapMonth="";$("#mapMonth").value="";state.mapTopic="";$("#mapTopic").value="";state.mapYearFrom="";$("#mapYearFrom").value="";state.mapYearTo="";$("#mapYearTo").value="";state.clientFocus="";state.mapMode="all";document.querySelectorAll("[data-mapmode]").forEach(b=>b.classList.toggle("active",b.dataset.mapmode==="all"));$("#mapStorySearch").value="";state.mapSideVisible=100;initMap();if(state.map)state.map.setView([55,-96],4);});
-$("#mapProvince").addEventListener("change",value=>{state.mapProvince=value.target.value;initMap();});
+$("#mapCountry").addEventListener("change",e=>{
+ state.mapCountry=e.target.value;state.mapProvince="";$("#mapProvince").value="";state.globalPattern="";
+ state.mapSideVisible=100;initMap();
+});
+$("#mapAgency").addEventListener("change",e=>{state.mapAgency=e.target.value;state.mapSideVisible=100;initMap();});
+$("#worldView").addEventListener("click",()=>{
+ state.mapCountry="";$("#mapCountry").value="";state.mapAgency="";$("#mapAgency").value="";
+ state.mapProvince="";$("#mapProvince").value="";state.mapMonth="";$("#mapMonth").value="";
+ state.mapTopic="";$("#mapTopic").value="";state.mapYearFrom="";$("#mapYearFrom").value="";
+ state.mapYearTo="";$("#mapYearTo").value="";state.globalPattern="";state.clientFocus="";
+ state.mapMode="all";document.querySelectorAll("[data-mapmode]").forEach(b=>b.classList.toggle("active",b.dataset.mapmode==="all"));
+ initMap();if(state.map)state.map.setView([24,0],2);
+});
+$("#mapProvince").addEventListener("change",e=>{
+ state.mapProvince=e.target.value;
+ if(state.mapProvince){state.mapCountry="CA";$("#mapCountry").value="CA";}
+ initMap();
+});
 $("#mapMonth").addEventListener("change",e=>{state.mapMonth=e.target.value;initMap();});
 $("#mapTopic").addEventListener("change",e=>{state.mapTopic=e.target.value;state.mapSideVisible=100;initMap();});
 $("#mapYearFrom").addEventListener("change",e=>{state.mapYearFrom=e.target.value;state.mapSideVisible=100;initMap();});
@@ -398,6 +416,20 @@ $("#mapStoryClear").addEventListener("click",()=>{state.mapSelectedIds=null;stat
 
 window.addEventListener("signalnorth:clientfocus",e=>{state.clientFocus=e.detail?.name||"";state.mapMode="all";document.querySelectorAll("[data-mapmode]").forEach(b=>b.classList.toggle("active",b.dataset.mapmode==="all"));initMap();});
 window.addEventListener("signalnorth:aliasesready",event=>{state.entityAliases=event.detail?.institutions||[];renderMetrics();initMap();});
+window.addEventListener("signalnorth:globalready",event=>{
+ state.globalEvents=event.detail?.events||[];
+ state.worldCountries=event.detail?.countries||[];
+ state.globalHealth=event.detail?.health||{};
+ renderMetrics();initMap();
+});
+window.addEventListener("signalnorth:globalpattern",event=>{
+ state.globalPattern=event.detail?.pattern||"";
+ state.mapCountry="";$("#mapCountry").value="";
+ state.mapAgency="";$("#mapAgency").value="";
+ state.mapTopic="";$("#mapTopic").value="";
+ state.mapMode="enforcement";document.querySelectorAll("[data-mapmode]").forEach(b=>b.classList.toggle("active",b.dataset.mapmode==="enforcement"));
+ state.mapSideVisible=100;initMap();
+});
 window.addEventListener("signalnorth:newsready",event=>{state.news=event.detail?.leads||[];state.rawHeadlineCount=Number(event.detail?.rawHeadlineCount||state.news.length);renderMetrics();initMap();});
 window.addEventListener("signalnorth:incidentsready",event=>{state.incidents=event.detail?.incidents||[];renderMetrics();initMap();});
 window.addEventListener("signalnorth:mapready", () => { if(state.events.length) initMap(); });
