@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-25T00:09:32+00:00",
+  "updated_at": "2026-10-25T00:10:27+00:00",
   "events": [
     {
       "id": "ie-cbi-2026-coinbase",
@@ -1280,25 +1280,10 @@
       "geographic_note": "The US subsidiaries are distinct legal entities from Canadian parent",
       "evidence_tier": "official_regulatory_source",
       "location_role": "regulator_jurisdiction_country_center",
-      "is_seed": true
-    },
-    {
-      "id": "us-fincen-index-fd3eb3da3ae10aef",
-      "country_code": "US",
-      "country": "United States",
-      "regulator": "FinCEN",
-      "published_at": "2024-10-10",
-      "institution": "TD Bank, N.A. and TD Bank USA, N.A.",
-      "title": "In the Matter of TD Bank, N.A. and TD Bank USA, N.A.",
-      "status": "official enforcement index entry; open notice for decision details",
-      "category": "AML / BSA compliance · Depository Institutions",
-      "penalty_amount": null,
-      "penalty_currency": "USD",
-      "source_url": "https://www.fincen.gov/system/files/enforcement_action/2024-10-10/FinCEN-TD-Bank-Consent-Order-508FINAL.pdf",
-      "location_role": "regulator_jurisdiction_country_center",
-      "evidence_tier": "official_enforcement_index",
-      "geographic_note": "US FinCEN jurisdiction, not location of alleged misconduct",
-      "first_seen_at": "2026-10-25T00:02:51+00:00"
+      "is_seed": true,
+      "additional_source_urls": [
+        "https://www.fincen.gov/system/files/enforcement_action/2024-10-10/FinCEN-TD-Bank-Consent-Order-508FINAL.pdf"
+      ]
     },
     {
       "id": "gb-fca-9025aed15db83973",
