@@ -115,6 +115,28 @@ class GroupedReportingTests(unittest.TestCase):
   self.assertGreaterEqual(len(groups),4)
   self.assertEqual(sum(x["underlying_headline_count"] for x in groups),len(rows))
 
+ def test_conflicting_plain_counts_are_not_silently_merged(self):
+  base="Toronto residents report 5 victims of coordinated crypto romance fraud using fake investment platform after elaborate social media outreach"
+  revised=base.replace("5 victims","8 victims")
+  a=self.example(base,url="https://news.example/count5")
+  b=self.example(revised,url="https://news.example/count8")
+  self.assertEqual(reporting.tokens_numbers(base),{"5"})
+  self.assertEqual(reporting.tokens_numbers(revised),{"8"})
+  self.assertFalse(reporting.likely_same_report(a,b))
+  self.assertEqual(len(reporting.display_groups([a,b])),2)
+  # Formatting differences are not contradictory numeric facts.
+  self.assertEqual(reporting.tokens_numbers("Losses of $50,000"),
+                   reporting.tokens_numbers("Losses of $50000"))
+
+ def test_conflicting_explicit_headline_cities_are_not_merged(self):
+  title="Toronto residents report 5 victims of coordinated crypto romance fraud using fake investment platform after elaborate social media outreach"
+  a=self.example(title,url="https://news.example/toronto")
+  b=self.example(title.replace("Toronto","Vancouver"),url="https://news.example/vancouver")
+  self.assertNotEqual(reporting.headline_cities(a["title"]),
+                      reporting.headline_cities(b["title"]))
+  self.assertFalse(reporting.likely_same_report(a,b))
+  self.assertEqual(len(reporting.display_groups([a,b])),2)
+
  def test_geographic_relevance_never_uses_publisher_location(self):
   foreign=self.example("Argentinian crypto investor exposes alleged scam in Buenos Aires",url="https://yahoo.ca/report")
   local=self.example("Toronto crypto investor reports account takeover",url="https://world.example/report")
