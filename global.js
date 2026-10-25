@@ -10,7 +10,7 @@
   "Casino / gambling":/(casino|gambling|gaming|betting|lottery)/i,
   "Investor / consumer protection":/(investor|consumer|client.asset|securities|conduct|financial crime controls)/i,
  };
- const model={events:[],countries:[],health:{}};
+ const model={events:[],countries:[],health:{},canadianEvents:[]};
  function renderPatterns(){
   const host=get("globalPatterns");
   const themes=Object.entries(THEMES).map(([name,rx])=>{
@@ -37,6 +37,36 @@
     '<a href="https://www.fatf-gafi.org/en/countries.html" target="_blank" rel="noopener noreferrer">Search FATF jurisdiction reviews ↗</a> · '+
     '<a href="https://egmontgroup.org/members-by-region/" target="_blank" rel="noopener noreferrer">Find financial intelligence units ↗</a>';
  }
+ const KNOWN_THREADS=[
+  {key:"td",name:"TD banking group · Canada / United States",
+   ca:/\btoronto.dominion bank\b/i,
+   global:/\btd bank\b|\btoronto.dominion\b/i,
+   description:"The US enforcement notice concerns TD's US subsidiaries; the Canadian parent and US operating banks are separate legal entities. These are not one enforcement proceeding.",
+   search:"td bank|toronto.dominion"},
+  {key:"binance",name:"Binance Holdings Limited · Canada / United States",
+   ca:/\bbinance holdings limited\b/i,
+   global:/\bbinance\b/i,
+   description:"The same named organization appears in distinct FINTRAC and FinCEN regulatory matters. Record overlap does not establish common factual allegations.",
+   search:"binance"},
+ ];
+ function renderThreads(){
+  const host=get("globalOrgThreads");if(!host)return;
+  const cards=[];
+  for(const thread of KNOWN_THREADS){
+   const ca=model.canadianEvents.filter(x=>thread.ca.test(x.institution||""));
+   const abroad=model.events.filter(x=>thread.global.test(x.institution||""));
+   if(!ca.length||!abroad.length)continue;
+   const sample=[...ca.map(x=>({agency:x.source,uri:x.source_url,date:x.published_at,country:"Canada"})),
+     ...abroad.map(x=>({agency:x.regulator,uri:x.source_url,date:x.published_at,country:x.country}))];
+   const links=sample.filter(x=>/^https:\/\//.test(x.uri||"")).slice(0,7).map(x=>
+     '<a href="'+html(x.uri)+'" target="_blank" rel="noopener noreferrer">'+html(x.agency+" · "+x.country+" · "+String(x.date||"").slice(0,10))+' ↗</a>').join("");
+   cards.push('<article class="crossborder-thread"><h3>'+html(thread.name)+'</h3>'+
+    '<div class="thread-counts"><span>'+ca.length+' Canadian regulatory notices</span><span>'+abroad.length+' international agency actions</span></div>'+
+    '<p>'+html(thread.description)+'</p><div class="thread-sources">'+links+'</div>'+
+    '<button type="button" data-global-entity="'+html(thread.key)+'">View the linked agency records on the map →</button></article>');
+  }
+  host.innerHTML=cards.join("")||'<div class="empty">No corroborated cross-jurisdiction institution links in the currently collected records.</div>';
+ }
  function renderCoverage(){
   const active=model.countries.filter(x=>x.coverage==="active");
   const countries=model.countries.length;
@@ -46,7 +76,7 @@
      count+' non-Canadian actions · other countries explicitly marked not yet ingested</span>';
  }
  async function load(){
-  const paths=["world_jurisdictions.json","global_enforcement.json","global_source_status.json"];
+  const paths=["world_jurisdictions.json","global_enforcement.json","global_source_status.json","events.json"];
   const results=await Promise.allSettled(paths.map(async x=>{
     const r=await fetch("./data/"+x+"?ts="+Date.now(),{cache:"no-store"});
     if(!r.ok)throw Error(x+": "+r.status);
@@ -55,6 +85,7 @@
   if(results[0].status==="fulfilled")model.countries=results[0].value.jurisdictions||[];
   if(results[1].status==="fulfilled")model.events=results[1].value.events||[];
   if(results[2].status==="fulfilled")model.health=results[2].value||{};
+  if(results[3].status==="fulfilled")model.canadianEvents=results[3].value.events||[];
   const country=get("mapCountry"),current=country.value;
   country.innerHTML='<option value="">All countries (worldwide)</option>'+model.countries.map(c=>
     '<option value="'+html(c.code)+'">'+html(c.name)+(c.coverage==="active"?" · source records":" · not yet ingested")+'</option>').join("");
@@ -63,13 +94,20 @@
   const agencies=[...new Set(["FINTRAC","FCAC",...model.events.map(x=>x.regulator).filter(Boolean)])].sort();
   regulator.innerHTML='<option value="">All agencies</option>'+agencies.map(x=>'<option value="'+html(x)+'">'+html(x)+'</option>').join("");
   if(agencies.includes(prev))regulator.value=prev;
-  renderCoverage();renderPatterns();renderCountryBrief();
+  renderCoverage();renderPatterns();renderCountryBrief();renderThreads();
   window.dispatchEvent(new CustomEvent("signalnorth:globalready",{detail:{events:model.events,countries:model.countries,health:model.health}}));
  }
  get("mapCountry").addEventListener("change",renderCountryBrief);
  get("mapReset").addEventListener("click",renderCountryBrief);
  get("worldView").addEventListener("click",renderCountryBrief);
  document.addEventListener("click",e=>{
+  const entity=e.target.closest("[data-global-entity]");
+  if(entity){
+   const spec=KNOWN_THREADS.find(x=>x.key===entity.dataset.globalEntity);
+   if(!spec)return;
+   window.dispatchEvent(new CustomEvent("signalnorth:globalentity",{detail:{name:spec.name,pattern:spec.search}}));
+   return;
+  }
   const button=e.target.closest("[data-global-pattern]");
   if(!button)return;
   const name=button.dataset.globalPattern;
