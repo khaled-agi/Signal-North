@@ -124,6 +124,27 @@ def run():
  status["sources"]["AUSTRAC"]={"status":"seed_verified","kind":"manual_source_verified","records":sum(x["regulator"]=="AUSTRAC" for x in seed)}
  # Unknown currencies are not converted, and duplicate agencies remain separate
  # with their own regulator and notice ID.
+ # When the seed has a source-reviewed assessment with penalty and legal
+ # context, combine its corresponding index entry rather than double-counting
+ # one agency action (e.g. the same FinCEN TD settlement).
+ def significant_words(value):
+  return set(w for w in re.findall(r"[a-z]{3,}",str(value or "").lower())
+             if w not in {"the","and","matter","bank","inc","usa","limited","holdings"})
+ seeds=[x for x in rows.values() if x.get("is_seed")]
+ for item_id,item in list(rows.items()):
+  if item.get("is_seed") or item.get("regulator")!="FinCEN":continue
+  for seed_row in seeds:
+   if seed_row.get("regulator")!=item["regulator"] or seed_row.get("published_at")!=item.get("published_at"):
+    continue
+   aa=significant_words(seed_row.get("institution"))
+   bb=significant_words(item.get("institution"))
+   if aa and bb and len(aa&bb)/max(1,min(len(aa),len(bb)))>=.67:
+    if item["source_url"]!=seed_row["source_url"]:
+     seed_row.setdefault("additional_source_urls",[])
+     if item["source_url"] not in seed_row["additional_source_urls"]:
+      seed_row["additional_source_urls"].append(item["source_url"])
+    del rows[item_id]
+    break
  items=sorted(rows.values(),key=lambda x:x.get("published_at") or "",reverse=True)
  OUTPUT.write_text(json.dumps({"updated_at":now(),"events":items,
    "methodology":"Official-source actions for USA, UK and Australia only; regulator-country center is a jurisdiction locator, not an incident location. No currency conversion. Separate agencies may publish overlapping settlements. Dynamic regulator feeds are best-effort; consult source health."},ensure_ascii=False,indent=2)+"\n","utf-8")
