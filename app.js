@@ -1,6 +1,6 @@
 "use strict";
 const $ = selector => document.querySelector(selector);
-const state = {events:[],news:[],status:{},map:null,layer:null,tab:"overview",mapMode:"all",mapCountMode:"groups",mapTopic:"",mapYearFrom:"",mapYearTo:"",mapProvince:"",mapMonth:"",clientFocus:"",mapMarkers:new Map(),incidents:[],entityAliases:[],rawHeadlineCount:0};
+const state = {events:[],news:[],status:{},map:null,layer:null,tab:"overview",mapMode:"all",mapCountMode:"groups",mapTopic:"",mapYearFrom:"",mapYearTo:"",mapProvince:"",mapMonth:"",clientFocus:"",mapMarkers:new Map(),incidents:[],entityAliases:[],rawHeadlineCount:0,globalEvents:[],worldCountries:[],globalHealth:{},mapCountry:"",mapAgency:"",globalPattern:""};
 const provinces = {ON:"Ontario",QC:"Québec",BC:"British Columbia",AB:"Alberta",NB:"New Brunswick",NS:"Nova Scotia",MB:"Manitoba",SK:"Saskatchewan",NL:"Newfoundland & Labrador",PE:"Prince Edward Island"};
 function escapeHTML(value){return String(value??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
 function currency(value){if(value==null)return "Not reported";const x=Number(value);return x>=1e6?"$"+(x/1e6).toLocaleString("en-CA",{maximumFractionDigits:2})+"M":"$"+x.toLocaleString("en-CA",{maximumFractionDigits:0});}
@@ -28,7 +28,7 @@ function renderMetrics(){
  ["Reporting groups",state.news.length?state.news.length.toLocaleString("en-CA"):"Loading", (state.rawHeadlineCount||0).toLocaleString("en-CA")+" indexed headlines · grouped, unverified reporting"],
  ["Official notices",String(e.length),"Regulator-published enforcement actions"],
  ["Reported cases",String(state.incidents.length),"Individually source-reviewed reports"],
- ["Institutions monitored",String(state.entityAliases.length||eventsByInstitution().length),"Canonical institution groups, where known"]
+ ["Global enforcement",String(state.globalEvents.length),"Non-Canadian official actions; not added to CAD penalty totals"]
  ];
  $("#metrics").innerHTML=values.map(v=>'<div class="metric"><span class="label">'+escapeHTML(v[0])+'</span><span class="value">'+escapeHTML(v[1])+'</span><span class="foot">'+escapeHTML(v[2])+'</span></div>').join("");
  const counts={};for(const x of mapped){counts[x.province||"Other"]=(counts[x.province||"Other"]||0)+1;}
@@ -43,17 +43,21 @@ function renderMetrics(){
 // One source record contributes exactly one count. A news article is not an
 // independently verified incident; unlocated articles remain in the list.
 function mapRecord(kind,e){
- const news=kind==="news",reg=kind==="reg",dateValue=reg?e.published_at:news?e.published_at:e.reported_at;
- const lat=news?e.map_latitude:e.latitude,lon=news?e.map_longitude:e.longitude;
+ const news=kind==="news",world=kind==="global",reg=kind==="reg"||world,dateValue=reg?e.published_at:news?e.published_at:e.reported_at;
+ const country=world?state.worldCountries.find(c=>c.code===e.country_code):null;
+ const lat=world?country?.map_latitude:(news?e.map_latitude:e.latitude),
+       lon=world?country?.map_longitude:(news?e.map_longitude:e.longitude);
  const hasGeo=Number.isFinite(lat)&&Number.isFinite(lon)&&Math.abs(lat)<=90&&Math.abs(lon)<=180;
  return {kind,id:String(e.id||""),date:dateValue||"",raw:e,
   title:String(e.title||e.institution||"Untitled evidence"),
   searchText:[e.title,...(e.headline_variations||[]).map(v=>v.title)].join(" ").toLowerCase(),
   reportCount:e.underlying_headline_count||1,
   sourceCount:e.source_count||e.number_of_article_links||1,
-  publisher:String(e.publisher||e.source||e.institution||"Original source"),
+  publisher:String(e.regulator||e.publisher||e.source||e.institution||"Original source"),
   lat:hasGeo?lat:null,lon:hasGeo?lon:null,province:news?e.map_province:e.province,
-  location:news?(e.map_location||"City mentioned in headline"):e.location||"Source-reported location",
+  countryCode:world?e.country_code:"CA",agency:world?e.regulator:(kind==="reg"?e.source:""),
+  locationRole:world?"regulator_jurisdiction_country_center":news?"headline_city_mention":"source_supported_location",
+  location:world?e.country+" · regulator jurisdiction":news?(e.map_location||"City mentioned in headline"):e.location||"Source-reported location",
   sourceUrl:news?e.url:e.source_url};
 }
 function refreshMapList(){
@@ -66,9 +70,10 @@ function refreshMapList(){
  else if(scope==="unmapped")rows=rows.filter(x=>x.lat===null);
  else if(scope==="selected")rows=rows.filter(x=>state.mapSelectedIds?.has(x.id));
  const located=rows.filter(x=>x.lat!==null).length;
+ const international=rows.filter(x=>x.kind==="global").length;
  const total=rows.length;
  $("#mapStorySummary").textContent=
-  total.toLocaleString("en-CA")+" matching records · "+located.toLocaleString("en-CA")+" have supported geography · "+
+  total.toLocaleString("en-CA")+" records · "+international+" global jurisdiction actions · "+located.toLocaleString("en-CA")+" placed by source clue or jurisdiction · "+
   Math.min(state.mapSideVisible||100,total).toLocaleString("en-CA")+" shown";
  $("#mapStoryScope").value=scope;
  $("#mapStoryClear").hidden=scope!=="selected";
@@ -76,12 +81,13 @@ function refreshMapList(){
  $("#mapStoryAll").hidden=total<=(state.mapSideVisible||100);
  host.innerHTML=rows.length?rows.slice(0,state.mapSideVisible||100).map(x=>{
   const located=x.lat!==null;
-  const label=x.kind==="reg"?"Regulatory notice":x.kind==="case"?"Reviewed case":"News headline";
+  const label=x.kind==="global"?"International agency action":x.kind==="reg"?"Canadian regulatory notice":x.kind==="case"?"Reviewed case":"News headline";
   return '<article class="map-story"><div class="map-story-meta">'+escapeHTML(date(x.date))+" · "+escapeHTML(label)+" · "+escapeHTML(x.publisher)+'</div>'+
    '<div class="map-story-title">'+(x.kind==="news"?
     '<button data-story="'+escapeHTML(x.id)+'" type="button">'+escapeHTML(x.title)+'</button>':
     '<a href="'+escapeHTML(/^https:\/\//.test(x.sourceUrl||"")?x.sourceUrl:"#")+'" target="_blank" rel="noopener noreferrer">'+escapeHTML(x.title)+' ↗</a>')+'</div>'+
    '<div class="map-story-sub">'+
+    (x.kind==="global"?'<span class="map-reg-note">Regulator country, not incident location · '+escapeHTML(x.raw.status||"Published official action")+'</span> · ':"")+
     (x.kind==="news"&&x.sourceCount>1?x.sourceCount+' source links · ':"")+
     (located?'<span class="map-geo-yes">◉ '+escapeHTML(x.location)+'</span>':'<span class="map-geo-no">Location not verified</span>')+
     (located? ' · <button data-mapfocus="'+escapeHTML(x.id)+'" type="button" class="map-locate">Locate →</button>':"")+
@@ -101,7 +107,7 @@ function renderMapClusters(){
   if(x.lat===null)continue;
   const point=state.map.project(L.latLng(x.lat,x.lon),zoom);
   const key=Math.floor(point.x/gridSize)+"/"+Math.floor(point.y/gridSize);
-  if(!clusters.has(key))clusters.set(key,{items:[],x:0,y:0,weights:{news:0,reg:0,case:0}});
+  if(!clusters.has(key))clusters.set(key,{items:[],x:0,y:0,weights:{news:0,reg:0,case:0,global:0}});
   const g=clusters.get(key);g.items.push(x);g.x+=point.x;g.y+=point.y;g.weights[x.kind]++;
  }
  for(const g of clusters.values()){
@@ -121,7 +127,7 @@ function renderMapClusters(){
   const popup='<div class="map-pop"><div class="map-pop-heading">'+escapeHTML(n.toLocaleString("en-CA"))+
     (state.mapCountMode==="headlines"?' headline / evidence units':' grouped records')+'</div>'+
     '<span class="map-pop-source">'+escapeHTML(geoNames||"Source-supported geography")+'</span>'+
-    '<p class="map-pop-notice">'+g.weights.news+' headlines · '+g.weights.reg+' regulator notices · '+g.weights.case+' reviewed cases. Record locations are not necessarily fraud locations.</p>'+
+    '<p class="map-pop-notice">'+g.weights.news+' Canadian headlines · '+g.weights.reg+' Canadian notices · '+g.weights.global+' international jurisdiction actions · '+g.weights.case+' reviewed cases. International dots locate regulatory jurisdiction, not alleged offences.</p>'+
     '<div class="map-popup-record">'+g.items.slice(0,4).map(x=>'<div><span class="map-popup-date">'+escapeHTML(date(x.date))+'</span> '+(x.kind==="news"?'<button type="button" class="report-popup-open" data-story="'+escapeHTML(x.id)+'">'+escapeHTML(x.title)+'</button>':escapeHTML(x.title))+'</div>').join("")+
     (recordCount>4?'<div class="small">+'+(recordCount-4)+' additional groups; select this circle to explore them.</div>':"")+'</div></div>';
   marker.bindPopup(popup,{maxWidth:330,minWidth:230,maxHeight:350});
@@ -141,11 +147,14 @@ function initMap(){
   // on Leaflet: preserve all headline titles and source links independently.
   let rows=[...state.news.map(e=>mapRecord("news",e)),
             ...state.events.map(e=>mapRecord("reg",e)),
-            ...state.incidents.map(e=>mapRecord("case",e))];
+            ...state.incidents.map(e=>mapRecord("case",e)),
+            ...state.globalEvents.map(e=>mapRecord("global",e))];
   if(state.mapMode==="news")rows=rows.filter(e=>e.kind!=="reg");
   else if(state.mapMode==="enforcement")rows=rows.filter(e=>e.kind==="reg");
   else if(state.mapMode==="major")rows=rows.filter(e=>e.kind==="reg"&&Number(e.raw.penalty_cad)>=1000000);
-  if(state.mapProvince)rows=rows.filter(e=>e.province===state.mapProvince);
+  if(state.mapCountry)rows=rows.filter(e=>e.countryCode===state.mapCountry);
+  if(state.mapAgency)rows=rows.filter(e=>e.agency===state.mapAgency);
+  if(state.mapProvince)rows=rows.filter(e=>e.countryCode!=="CA"||e.province===state.mapProvince);
   if(state.mapMonth)rows=rows.filter(e=>String(e.date).startsWith(state.mapMonth));
   if(state.mapTopic)rows=rows.filter(e=>e.raw.category===state.mapTopic||e.raw.fraud_type===state.mapTopic);
   if(state.mapYearFrom)rows=rows.filter(e=>String(e.date).slice(0,4)>=state.mapYearFrom);
@@ -169,7 +178,7 @@ function initMap(){
   $("#mapTopic").innerHTML='<option value="">All topics</option>'+newsTopics.map(x=>'<option value="'+escapeHTML(x)+'">'+escapeHTML(x)+'</option>').join("");
   if(newsTopics.includes(current))$("#mapTopic").value=current;
  }
- const availableYears=[...new Set([...state.news,...state.events,...state.incidents]
+ const availableYears=[...new Set([...state.news,...state.events,...state.incidents,...state.globalEvents]
     .map(x=>String(x.published_at||x.reported_at||"").slice(0,4))
     .filter(y=>/^20\d{2}$/.test(y)))].sort();
  if(availableYears.length){
@@ -181,7 +190,7 @@ function initMap(){
  }
  if(!state.map){
   $("#map").replaceChildren();
-  state.map=L.map("map",{zoomControl:false,minZoom:3,maxZoom:13,scrollWheelZoom:false,preferCanvas:true}).setView([55,-96],4);
+  state.map=L.map("map",{zoomControl:false,minZoom:2,maxZoom:13,scrollWheelZoom:false,preferCanvas:true}).setView([24,0],2);
   L.control.zoom({position:"bottomright"}).addTo(state.map);
   L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png",{
    maxZoom:19,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'
@@ -215,7 +224,15 @@ function initMap(){
  if(showCases)records.push(...state.incidents.filter(e=>inDate(e)&&matchTopic(e)&&matchesClient(e)).map(e=>mapRecord("case",e)));
  if(showReg)records.push(...state.events.filter(e=>inDate(e)&&matchTopic(e)&&matchesClient(e)&&
   (layers!=="major"||Number(e.penalty_cad)>=1000000)).map(e=>mapRecord("reg",e)));
- if(state.mapProvince)records=records.filter(x=>x.province===state.mapProvince);
+ if(showReg&&layers!=="major")records.push(...state.globalEvents.filter(e=>inDate(e)&&
+  (!state.mapTopic||e.category===state.mapTopic)&&matchesClient(e)).map(e=>mapRecord("global",e)));
+ if(state.mapCountry)records=records.filter(x=>x.countryCode===state.mapCountry);
+ if(state.mapAgency)records=records.filter(x=>x.agency===state.mapAgency);
+ if(state.mapProvince)records=records.filter(x=>x.countryCode!=="CA"||x.province===state.mapProvince);
+ if(state.globalPattern){
+  const regex=new RegExp(state.globalPattern,"i");
+  records=records.filter(x=>regex.test([x.title,x.raw.category,x.raw.institution].join(" ")));
+ }
  const query=($("#mapStorySearch")?.value||"").trim().toLowerCase();
  if(query)records=records.filter(x=>[x.searchText,x.publisher,x.location].some(y=>String(y||"").toLowerCase().includes(query)));
  records.sort((x,y)=>String(y.date).localeCompare(String(x.date)));
@@ -244,12 +261,14 @@ function initMap(){
   (state.mapMonth?state.mapMonth+" · ":"")+  (state.mapTopic?state.mapTopic+" · ":"")+
   (state.mapYearFrom||state.mapYearTo?(state.mapYearFrom||"earliest")+"–"+(state.mapYearTo||"latest")+" · ":"")+
   (state.clientFocus?"Organization: "+state.clientFocus+" · ":"")+
-  "Source-linked geography, not fraud rate.";
+  (state.mapCountry?"Jurisdiction: "+(state.worldCountries.find(x=>x.code===state.mapCountry)?.name||state.mapCountry)+" · ":"Worldwide · ")+
+  (state.mapAgency?"Agency: "+state.mapAgency+" · ":"")+
+  "International pins show regulator jurisdiction, not crime location.";
  if(state.mapSideScope==="selected")state.mapSideScope="all";
  state.mapSelectedIds=null;
  refreshMapList();
  renderMapClusters();
- if((state.mapProvince||state.clientFocus)&&mapped){
+ if((state.mapProvince||state.mapCountry||state.clientFocus)&&mapped){
   const pts=records.filter(x=>x.lat!==null).map(x=>[x.lat,x.lon]);
   state.map.fitBounds(L.latLngBounds(pts).pad(.25),{maxZoom:7,padding:[28,28]});
  }
