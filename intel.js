@@ -32,7 +32,7 @@
   {name:"Payment-system risk",value:"Planned",source:"Bank of Canada / Payments Canada",url:"https://www.bankofcanada.ca/",note:"Payment-system incidents and operational risk; distinguish from fraud"},
   {name:"Cyber incidents",value:"Planned",source:"Privacy Commissioner / Cyber Centre",url:"https://www.priv.gc.ca/en/opc-actions-and-decisions/investigations/",note:"Incident disclosures and privacy findings; differentiate alleged from confirmed"}
  ];
- let news=[],stats=[],bankDisclosure=[],events=[],incidents=[],newsWired=false,incidentsWired=false,archiveCount=0,newsVisible=100,rawHeadlineCount=0;
+ let news=[],stats=[],bankDisclosure=[],events=[],incidents=[],newsWired=false,incidentsWired=false,archiveCount=0,newsVisible=100,rawHeadlineCount=0,related={};
  async function getJSON(path){
   const res=await fetch("./data/"+path+"?v="+Date.now(),{cache:"no-store"});
   if(!res.ok)throw Error(path+": HTTP "+res.status);
@@ -116,7 +116,13 @@
      '<h3 class="report-versions-heading">Original reporting and headline variations</h3>'+
      '<p class="report-detail-meta">Compare the publication date and headline wording from each indexed source. This does not analyze the full article text.</p>'+
      (shared.length&&unique.length>1?'<p class="report-shared">Shared headline terms: '+esc(shared.slice(0,12).join(" · "))+'</p>':"")+
-     '<div class="report-versions">'+(variations||'<p>No source links retained.</p>')+'</div>';
+     '<div class="report-versions">'+(variations||'<p>No source links retained.</p>')+'</div>'+
+     (related[x.id]?.length?
+       '<section class="report-related"><h3>Other reporting worth comparing</h3>'+
+       '<p>These are <strong>research leads</strong> based on shared headline details. They have NOT been established as one event. Open their original sources before drawing conclusions.</p>'+
+       related[x.id].map(y=>'<article class="related-report"><button type="button" data-story="'+esc(y.group_id)+'">'+esc(y.title||"Other reporting")+'</button>'+
+         '<div class="small">'+esc(String(y.published_at||"").slice(0,10))+' · '+esc((y.shared_indicators||[]).join(" · "))+'</div></article>').join("")+
+       '</section>':"");
   $i("overlay").classList.remove("hidden");
   document.body.style.overflow="hidden";
  }
@@ -275,7 +281,7 @@
  }
  async function boot(){
   renderCatalog();
-  const names=["fraud_stats.json","news.json","bank_disclosures.json","events.json","news_status.json","incidents.json","news_archive.json","article_index.json","external_source_status.json","reporting_groups.json"];
+  const names=["fraud_stats.json","news.json","bank_disclosures.json","events.json","news_status.json","incidents.json","news_archive.json","article_index.json","external_source_status.json","reporting_groups.json","related_reporting.json"];
   // Grouped records are the primary archive. Avoid downloading the raw index
   // and the historical feed on every visit; request them only if grouping fails.
   const fetched=await Promise.allSettled(names.map((name,i)=>(i===6||i===7)?Promise.resolve({}):getJSON(name)));
@@ -283,6 +289,7 @@
   else $i("fraudNational").innerHTML='<div class="error">Fraud statistics unavailable: '+esc(String(fetched[0].reason))+'</div>';
   const recent=fetched[1].status==="fulfilled"?(fetched[1].value.leads||[]):[];
   const grouped=fetched[9].status==="fulfilled"?(fetched[9].value.groups||[]):[];
+  related=fetched[10].status==="fulfilled"?(fetched[10].value.connections||{}):{};
   let history=[],indexed=[];
   if(!grouped.length){
     // Preserve the old archive as a graceful fallback for incomplete deployments.
