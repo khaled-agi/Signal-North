@@ -14,7 +14,10 @@ import unicodedata
 from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
-from build_theme_trends import match_themes
+try:
+    from .build_theme_trends import match_themes
+except ImportError:  # Direct GitHub Actions script invocation
+    from build_theme_trends import match_themes
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
