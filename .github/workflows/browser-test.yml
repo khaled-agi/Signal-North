@@ -11,6 +11,7 @@ on:
       - 'scripts/build_article_index.py'
       - 'scripts/build_story_groups.py'
       - 'scripts/build_related_reporting.py'
+      - 'scripts/build_reviewed_events.py'
       - 'scripts/build_theme_trends.py'
       - 'scripts/collect_global.py'
       - 'scripts/build_world_registry.py'
@@ -39,6 +40,7 @@ jobs:
           python scripts/build_article_index.py
           python scripts/build_story_groups.py
           python scripts/build_related_reporting.py
+          python scripts/build_reviewed_events.py
           python scripts/build_intelligence_graph.py
           python scripts/build_theme_trends.py
           python -m unittest discover -s tests -p 'test_logic.py'
