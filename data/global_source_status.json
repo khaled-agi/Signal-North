@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-10-25T00:07:31+00:00",
+  "started_at": "2026-10-25T00:08:31+00:00",
   "sources": {
     "FinCEN": {
       "status": "ok",
@@ -15,9 +15,29 @@
       "status": "seed_verified",
       "kind": "manual_source_verified",
       "records": 2
+    },
+    "HKMA": {
+      "status": "seed_verified",
+      "kind": "manual_source_verified",
+      "records": 3
+    },
+    "MAS": {
+      "status": "seed_verified",
+      "kind": "manual_source_verified",
+      "records": 1
+    },
+    "Central Bank of Ireland": {
+      "status": "seed_verified",
+      "kind": "manual_source_verified",
+      "records": 1
+    },
+    "OFAC": {
+      "status": "seed_verified",
+      "kind": "manual_source_verified",
+      "records": 1
     }
   },
   "warning": "No collector reports complete worldwide coverage. FCA and FinCEN are primary records; AUSTRAC currently has manually verified seed entries.",
-  "completed_at": "2026-10-25T00:07:42+00:00",
-  "total_global_events": 107
+  "completed_at": "2026-10-25T00:08:41+00:00",
+  "total_global_events": 112
 }

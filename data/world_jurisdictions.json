@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-25T00:07:42+00:00",
+  "generated_at": "2026-10-25T00:08:41+00:00",
   "jurisdictions": [
     {
       "code": "AF",
@@ -996,9 +996,9 @@
       "name": "Hong Kong",
       "map_latitude": 22.25,
       "map_longitude": 114.1667,
-      "enforcement_count": 0,
-      "agency_count": 0,
-      "coverage": "not_ingested",
+      "enforcement_count": 3,
+      "agency_count": 1,
+      "coverage": "active",
       "location_role": "regulatory_jurisdiction_centroid"
     },
     {
@@ -1066,9 +1066,9 @@
       "name": "Ireland",
       "map_latitude": 53.0,
       "map_longitude": -8.0,
-      "enforcement_count": 0,
-      "agency_count": 0,
-      "coverage": "not_ingested",
+      "enforcement_count": 1,
+      "agency_count": 1,
+      "coverage": "active",
       "location_role": "regulatory_jurisdiction_centroid"
     },
     {
@@ -1986,9 +1986,9 @@
       "name": "Singapore",
       "map_latitude": 1.3667,
       "map_longitude": 103.8,
-      "enforcement_count": 0,
-      "agency_count": 0,
-      "coverage": "not_ingested",
+      "enforcement_count": 1,
+      "agency_count": 1,
+      "coverage": "active",
       "location_role": "regulatory_jurisdiction_centroid"
     },
     {
@@ -2494,5 +2494,5 @@
   ],
   "coverage_note": "ISO-3166 country and territory catalogue, not an assertion that all countries are monitored. Pins appear only for actual ingested official-source records. Country location is a representative centroid of the publishing enforcement jurisdiction, never an incident site.",
   "total_jurisdictions": 249,
-  "active_jurisdictions": 4
+  "active_jurisdictions": 7
 }
