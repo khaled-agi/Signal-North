@@ -14,6 +14,7 @@ import unicodedata
 from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
+from build_theme_trends import match_themes
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
@@ -164,6 +165,13 @@ def display_groups(articles):
         ids=[x.get("id") for x in group if x.get("id")]
         story["id"]="report-"+hashlib.sha256("|".join(sorted(ids)).encode()).hexdigest()[:20]
         story["article_ids"]=ids
+        # Preserve the scam-theme classification from ALL observed headline
+        # variants. It enables the map, timeline and article explorer to share
+        # the same thematic filter without asserting a confirmed incident type.
+        story["fraud_themes"]=sorted(set(
+            theme for item in group for theme in match_themes(item.get("title",""))
+        ))
+
         story["headline_variations"]=variants
         story["variation_count"]=len(set(normalized(x["title"]) for x in variants))
         story["source_count"]=len(set(x["url"] for x in variants))
