@@ -42,7 +42,7 @@
   const amounts=event.reported_impact||[];
   const sourceList=(event.sources||[]).map(x=>'<article class="reviewed-source-card">'+
     '<strong>'+escape(x.publisher)+' · '+escape(x.document_type||"Public reporting")+' · '+escape(date(x.publication_date))+'</strong>'+
-    '<p>'+urlLink(x.url,"Open original published source")+'</p>'+
+    '<p>'+urlLink(x.url,"Open cited publication")+'</p>'+
     '<p>Source ID: '+escape(x.id)+' · '+escape(x.provenance||"Curated public evidence")+'</p></article>').join("");
   const claims=(event.claims||[]).map(c=>'<article class="reviewed-claim">'+
     '<strong>'+escape(c.kind.replace(/_/g," "))+' · '+escape(c.certainty||"Source attributed")+'</strong>'+
@@ -85,7 +85,7 @@
     sectionTitle("What remains unanswered")+
     ((event.unanswered_questions||[]).length?'<ul class="reviewed-list">'+event.unanswered_questions.map(q=>'<li>'+escape(q)+'</li>').join("")+'</ul>':'<p class="reviewed-intro">No questions documented; this does not mean the record is complete.</p>')+
     '<p class="reviewed-evidence-warning">Counterevidence: '+escape(event.counterevidence_status||"Not assessed")+'. The absence of contradictory material is not proof that the account is complete.</p>'+
-    sectionTitle("Original sources and provenance")+
+    sectionTitle("Cited publications and provenance")+
     (sourceList||'<p>No sources linked.</p>')+
     ((event.reporting_group_links||[]).length?sectionTitle("Editorially approved linked article groups")+
       event.reporting_group_links.map(link=>'<button type="button" class="report-variations" data-story="'+escape(link.group_id)+'">View reviewed reporting group →</button><p class="reviewed-intro">'+escape(link.review_rationale)+'</p>').join(""):
