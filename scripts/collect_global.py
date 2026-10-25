@@ -131,7 +131,7 @@ def run():
  # context, combine its corresponding index entry rather than double-counting
  # one agency action (e.g. the same FinCEN TD settlement).
  def significant_words(value):
-  return set(w for w in re.findall(r"[a-z]{3,}",str(value or "").lower())
+  return set(w for w in re.findall(r"[a-z]{2,}",str(value or "").lower())
              if w not in {"the","and","matter","bank","inc","usa","limited","holdings"})
  seeds=[x for x in rows.values() if x.get("is_seed")]
  for item_id,item in list(rows.items()):
