@@ -6,7 +6,7 @@ decisions are currently represented by source-verified seed records; no scraping
 claims are made for unavailable feeds. Keep original penalty currencies.
 """
 from __future__ import annotations
-import hashlib,json,re
+import hashlib,json,re,os
 from datetime import datetime,timezone
 from pathlib import Path
 from urllib.parse import urljoin,urlparse
@@ -109,7 +109,8 @@ def run():
  status={"started_at":now(),"sources":{},"warning":"No collector reports complete worldwide coverage. FCA and FinCEN are primary records; AUSTRAC currently has manually verified seed entries."}
  with Session() as session:
   session.headers.update(HEADERS)
-  for regulator,fn in [("FinCEN",scan_fincen),("FCA",scan_fca)]:
+  offline=os.environ.get("GLOBAL_SOURCES_OFFLINE")=="1"
+  for regulator,fn in ([] if offline else [("FinCEN",scan_fincen),("FCA",scan_fca)]):
    try:
     found=fn(session)
     for e in found:
@@ -119,6 +120,7 @@ def run():
     status["sources"][regulator]={"status":"ok" if found else "empty","new_snapshot_rows":len(found),"kind":"official_decision_index"}
    except Exception as e:
     status["sources"][regulator]={"status":"failed","error":str(e)[:240],"kind":"official_decision_index"}
+ if offline:status["sources"]["FinCEN"]={"status":"offline_test_uses_seed"};status["sources"]["FCA"]={"status":"offline_test_uses_seed"}
  status["sources"]["AUSTRAC"]={"status":"seed_verified","kind":"manual_source_verified","records":sum(x["regulator"]=="AUSTRAC" for x in seed)}
  # Unknown currencies are not converted, and duplicate agencies remain separate
  # with their own regulator and notice ID.
