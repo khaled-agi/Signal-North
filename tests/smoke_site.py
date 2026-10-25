@@ -102,6 +102,12 @@ try:
         assert page.locator("#mappedStories .map-story").count() == 0
         page.locator("#worldView").click()
         assert page.locator("#globalPatterns button").count() >= 4
+        assert page.locator("#globalOrgThreads .crossborder-thread").count() >= 2
+        page.locator('[data-global-entity="td"]').click()
+        assert "FINTRAC" in page.locator("#mappedStories").inner_text() or "FinCEN" in page.locator("#mappedStories").inner_text()
+        assert "Agency:" not in page.locator("#mapCaption").inner_text()
+        print("Cross-jurisdiction TD family source links on same world map: PASS")
+        page.locator("#worldView").click()
         page.locator("[data-global-pattern]").first.click()
         assert page.locator('[data-mapmode="enforcement"]').get_attribute("class") == "active"
         page.locator("#mapReset").click()
