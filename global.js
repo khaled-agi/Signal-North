@@ -22,6 +22,21 @@
     '<span>'+t.matches.toLocaleString("en-CA")+' source records · '+t.countries+' jurisdictions</span></button>').join("");
   get("globalPatternStatus").textContent=model.events.length+" international actions · "+themes.length+" research themes";
  }
+ function renderCountryBrief(){
+  const code=get("mapCountry")?.value||"";
+  const host=get("worldCountryBrief");
+  if(!host)return;
+  if(!code){host.innerHTML='<strong>Global source coverage:</strong> Populated enforcement jurisdictions are marked with counted circles; other countries remain selectable but do not have invented cases. <a href="https://www.fatf-gafi.org/en/countries.html" target="_blank" rel="noopener noreferrer">FATF country assessments ↗</a>';return;}
+  const country=model.countries.find(c=>c.code===code);
+  if(!country){host.textContent="Country source status unavailable.";return;}
+  const found=model.events.filter(e=>e.country_code===code);
+  host.innerHTML='<strong>'+html(country.name)+': '+(country.coverage==="active"?
+    found.length+' collected international agency action(s)'+(code==="CA"?" plus Canadian domestic sources":""):
+    'no official enforcement actions ingested yet')+'</strong> · '+
+    'Country markers indicate regulator jurisdiction, not where fraud occurred. '+
+    '<a href="https://www.fatf-gafi.org/en/countries.html" target="_blank" rel="noopener noreferrer">Search FATF jurisdiction reviews ↗</a> · '+
+    '<a href="https://egmontgroup.org/members-by-region/" target="_blank" rel="noopener noreferrer">Find financial intelligence units ↗</a>';
+ }
  function renderCoverage(){
   const active=model.countries.filter(x=>x.coverage==="active");
   const countries=model.countries.length;
@@ -48,9 +63,12 @@
   const agencies=[...new Set(["FINTRAC","FCAC",...model.events.map(x=>x.regulator).filter(Boolean)])].sort();
   regulator.innerHTML='<option value="">All agencies</option>'+agencies.map(x=>'<option value="'+html(x)+'">'+html(x)+'</option>').join("");
   if(agencies.includes(prev))regulator.value=prev;
-  renderCoverage();renderPatterns();
+  renderCoverage();renderPatterns();renderCountryBrief();
   window.dispatchEvent(new CustomEvent("signalnorth:globalready",{detail:{events:model.events,countries:model.countries,health:model.health}}));
  }
+ get("mapCountry").addEventListener("change",renderCountryBrief);
+ get("mapReset").addEventListener("click",renderCountryBrief);
+ get("worldView").addEventListener("click",renderCountryBrief);
  document.addEventListener("click",e=>{
   const button=e.target.closest("[data-global-pattern]");
   if(!button)return;
@@ -58,6 +76,7 @@
   const rx=THEMES[name];
   if(!rx)return;
   window.dispatchEvent(new CustomEvent("signalnorth:globalpattern",{detail:{name,pattern:rx.source}}));
+  renderCountryBrief();
   document.querySelectorAll("[data-global-pattern]").forEach(b=>b.classList.toggle("active",b===button));
  });
  window.addEventListener("signalnorth:refresh",load);
