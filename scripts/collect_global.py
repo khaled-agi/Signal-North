@@ -129,13 +129,13 @@ def run():
  # with their own regulator and notice ID.
  # When the seed has a source-reviewed assessment with penalty and legal
  # context, combine its corresponding index entry rather than double-counting
- # one agency action (e.g. the same FinCEN TD settlement).
+ # one agency action (e.g. the same FinCEN TD settlement or FCA fine).
  def significant_words(value):
   return set(w for w in re.findall(r"[a-z]{2,}",str(value or "").lower())
              if w not in {"the","and","matter","bank","inc","usa","limited","holdings"})
  seeds=[x for x in rows.values() if x.get("is_seed")]
  for item_id,item in list(rows.items()):
-  if item.get("is_seed") or item.get("regulator")!="FinCEN":continue
+  if item.get("is_seed") or item.get("regulator") not in ("FinCEN","FCA"):continue
   for seed_row in seeds:
    if seed_row.get("regulator")!=item["regulator"] or seed_row.get("published_at")!=item.get("published_at"):
     continue
