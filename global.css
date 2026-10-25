@@ -23,3 +23,17 @@
 .country-context{font-size:11px;color:#586f7f;line-height:1.6;padding:10px 17px;background:#f6f9fa;border-top:1px solid #e0e9ed}
 .country-context strong{color:#274e61}
 .country-context a{color:#155d69;text-decoration:underline;text-underline-offset:2px}
+
+.crossborder-heading{display:flex;justify-content:space-between;gap:12px;padding:6px 21px 9px;align-items:baseline;flex-wrap:wrap}
+.crossborder-heading strong{font-size:13px;color:#214a61}
+.crossborder-heading span{font-size:10px;color:#6c8190}
+.global-org-threads{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;padding:0 20px 22px}
+.crossborder-thread{padding:16px;background:#f8fafb;border:1px solid #dbe5e9;border-radius:8px;display:flex;flex-direction:column;gap:9px;min-width:0}
+.crossborder-thread h3{font-size:15px;color:#204b5d;margin:0}
+.thread-counts{display:flex;flex-wrap:wrap;gap:7px}
+.thread-counts span{font-size:10px;padding:5px 8px;border-radius:4px;background:#e5f1f1;color:#235c65;font-weight:650}
+.crossborder-thread p{font-size:11px;color:#647f8f;margin:0;line-height:1.5}
+.thread-sources{display:flex;flex-wrap:wrap;gap:5px 12px}
+.thread-sources a{font-size:10px;color:#205f6e}
+.crossborder-thread button{border:1px solid #c2d7dc;background:#edf5f5;color:#1b6670;border-radius:5px;padding:10px;align-self:flex-start;font-weight:700;font-size:11px;cursor:pointer}
+@media(max-width:850px){.global-org-threads{grid-template-columns:1fr}}
