@@ -11,6 +11,7 @@ from scripts import build_intelligence_graph as graph
 from scripts import build_theme_trends as theme_trends
 from scripts import build_story_groups as reporting
 from scripts import build_related_reporting as related
+from scripts import build_reviewed_events as reviewed
 
 class FinancialAmountTests(unittest.TestCase):
  def test_large_abbreviated_penalties(self):
@@ -170,6 +171,68 @@ class SuggestedRelationshipTests(unittest.TestCase):
   a=self.sample("Toronto fake investment app complaint by customers", "Wealthsimple","2024-01-01","a")
   b=self.sample("Toronto fake investment app complaint by customers", "Binance","2026-01-01","b")
   self.assertIsNone(related.assess(a,b))
+
+class ReviewedEventDatabaseTests(unittest.TestCase):
+ def legacy(self):
+  return {"id":"case-1","title":"Police document reports customer account impersonation",
+    "reported_at":"2025-08-20","incident_period":"July 2025",
+    "fraud_type":"Impersonation","province":"ON",
+    "location":"Toronto","location_role":"source-mentioned customer city",
+    "institution":"Sample Bank","institution_role":"customer_financial_institution",
+    "amount_cad":22000,"amount_type":"victim_reported_loss",
+    "source_url":"https://police.example.org/release","source_name":"Sample Police",
+    "evidence_status":"police_release",
+    "summary":"The police release reports that a customer lost approximately C$22,000.",
+    "investigation":{"stages":[["Reported contact","Police described an impersonation call"]],
+                     "questions":["Has the bank role been independently confirmed?"]}}
+
+ def test_legacy_source_attribution_and_financial_roles(self):
+  event=reviewed.from_curated_case(self.legacy())
+  self.assertEqual(event["review_state"],"source_reviewed")
+  self.assertFalse(event["independently_verified"])
+  self.assertIsNone(event["reviewer_id"])
+  self.assertEqual(event["reported_impact"][0]["type"],"victim_reported_loss")
+  self.assertTrue(event["reported_impact"][0]["not_a_bank_loss_unless_explicitly_supported"])
+  self.assertEqual(event["entities"][0]["role"],"customer_financial_institution")
+  self.assertFalse(event["entities"][0]["legal_liability_established"])
+  self.assertEqual(event["claims"][0]["source_ids"],[event["sources"][0]["id"]])
+  self.assertEqual(event["timeline"][0]["source_ids"],[event["sources"][0]["id"]])
+  reviewed.validate(event,allow_legacy=True)
+
+ def test_no_review_without_editorial_signoff(self):
+  obj=reviewed.from_curated_case(self.legacy())
+  with self.assertRaisesRegex(ValueError,"editorial approval"):
+   reviewed.validate(obj,allow_legacy=False)
+  obj["review_state"]="editorially_approved"
+  with self.assertRaisesRegex(ValueError,"reviewer"):
+   reviewed.validate(obj,allow_legacy=False)
+  obj["reviewer_id"]="editor-example"
+  obj["last_reviewed_at"]="2026-10-24"
+  with self.assertRaisesRegex(ValueError,"rationale"):
+   reviewed.validate(obj,allow_legacy=False)
+  obj["review_rationale"]="Checked the original police publication; no stronger legal finding implied."
+  reviewed.validate(obj,allow_legacy=False)
+
+ def test_claims_and_links_must_cite_actual_sources(self):
+  obj=reviewed.from_curated_case(self.legacy())
+  obj["claims"][0]["source_ids"]=["invented-source"]
+  with self.assertRaisesRegex(ValueError,"Unattributed"):
+   reviewed.validate(obj,allow_legacy=True)
+  obj=reviewed.from_curated_case(self.legacy())
+  obj["reporting_group_links"]=[{"group_id":"report-unverified","review_rationale":"Same incident per official record","source_ids":["not-in-record"]}]
+  with self.assertRaisesRegex(ValueError,"not in approved"):
+   reviewed.validate(obj,allow_legacy=True)
+
+ def test_suggested_relationship_never_promotes_to_event(self):
+  a={"id":"report-a","title":"Case A","url":"https://publisher.example/a",
+     "published_at":"2026-07-01"}
+  b={"id":"report-b","title":"Case B","url":"https://publisher.example/b",
+     "published_at":"2026-07-02"}
+  queue=reviewed.review_queue({"report-a":[{"group_id":"report-b",
+    "shared_indicators":["Similar words"],"research_priority":9}]},[a,b])
+  self.assertEqual(len(queue),1)
+  self.assertEqual(queue[0]["status"],"unverified_suggested_connection")
+  self.assertEqual(queue[0]["group_ids"],["report-a","report-b"])
 
 if __name__=="__main__":
  unittest.main()
