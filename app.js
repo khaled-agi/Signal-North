@@ -422,10 +422,13 @@ window.addEventListener("signalnorth:globalready",event=>{
  state.globalHealth=event.detail?.health||{};
  renderMetrics();initMap();
 });
+window.addEventListener("signalnorth:globalentity",event=>{
+ window.dispatchEvent(new CustomEvent("signalnorth:globalpattern",{detail:event.detail}));
+});
 window.addEventListener("signalnorth:globalpattern",event=>{
  state.globalPattern=event.detail?.pattern||"";
  state.mapCountry="";$("#mapCountry").value="";
- state.mapAgency="";$("#mapAgency").value="";
+ state.mapAgency="";$("#mapAgency").value="";state.clientFocus="";
  state.mapTopic="";$("#mapTopic").value="";
  state.mapMode="enforcement";document.querySelectorAll("[data-mapmode]").forEach(b=>b.classList.toggle("active",b.dataset.mapmode==="enforcement"));
  state.mapSideVisible=100;initMap();
