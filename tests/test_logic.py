@@ -10,6 +10,7 @@ from scripts.collect import amount
 from scripts import build_intelligence_graph as graph
 from scripts import build_theme_trends as theme_trends
 from scripts import build_story_groups as reporting
+from scripts import build_related_reporting as related
 
 class FinancialAmountTests(unittest.TestCase):
  def test_large_abbreviated_penalties(self):
@@ -148,6 +149,27 @@ class ReviewedCaseNarrativeTests(unittest.TestCase):
     self.assertGreaterEqual(len(questions),2)
     self.assertTrue(all(len(stage)==2 and all(isinstance(s,str) and s.strip() for s in stage) for stage in stages))
     self.assertTrue(all(isinstance(q,str) and q.strip().endswith("?") for q in questions))
+
+
+class SuggestedRelationshipTests(unittest.TestCase):
+ def sample(self,title,name,date,ident):
+  return {"id":ident,"title":title,"published_at":date,
+   "banks_mentioned_in_headline":[name] if name else [],
+   "fraud_themes":["Investment & crypto scams"],"source_url":"https://example.org/"+ident}
+
+ def test_shared_clues_produce_an_unverified_link(self):
+  a=self.sample("Toronto investment crypto platform warning after customer loses funds with impersonation", "Wealthsimple", "2025-05-02","a")
+  b=self.sample("Toronto investment crypto platform warning after customer loses money with impersonation", "Wealthsimple", "2025-05-04","b")
+  result=related.assess(a,b)
+  self.assertIsNotNone(result)
+  links,_=related.generate([a,b])
+  self.assertEqual(links["a"][0]["group_id"],"b")
+  self.assertEqual(links["a"][0]["relationship_status"],"unverified_research_lead")
+
+ def test_unrelated_cases_never_become_matches(self):
+  a=self.sample("Toronto fake investment app complaint by customers", "Wealthsimple","2024-01-01","a")
+  b=self.sample("Toronto fake investment app complaint by customers", "Binance","2026-01-01","b")
+  self.assertIsNone(related.assess(a,b))
 
 if __name__=="__main__":
  unittest.main()
