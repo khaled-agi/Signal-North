@@ -1,6 +1,10 @@
 {
-  "started_at": "2026-10-25T06:39:47+00:00",
+  "started_at": "2026-10-25T12:27:14+00:00",
   "collectors": {
+    "GDELT DOC": {
+      "status": "scheduled_daily",
+      "message": "Will check at 06:00 UTC, unless manually forced; last GDELT calls were HTTP 429"
+    },
     "RCMP national news": {
       "status": "ok",
       "scanned": 20,
@@ -40,25 +44,9 @@
       "status": "ok",
       "scanned": 20,
       "accepted": 7
-    },
-    "Canadian banking fraud": {
-      "status": "rate_limited",
-      "error": "429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%22bank+fraud%22+sourcecountry%3ACanada&mode=artlist&format=json&timespan=3months&maxrecords=250&sort=datedesc"
-    },
-    "Canadian scam cases": {
-      "status": "skipped_rate_limit",
-      "error": "GDELT requested backoff after HTTP 429"
-    },
-    "Money laundering": {
-      "status": "skipped_rate_limit",
-      "error": "GDELT requested backoff after HTTP 429"
-    },
-    "French fraud coverage": {
-      "status": "skipped_rate_limit",
-      "error": "GDELT requested backoff after HTTP 429"
     }
   },
   "coverage_note": "RSS and GDELT coverage are neither exhaustive nor verified incident data.",
-  "completed_at": "2026-10-25T06:40:08+00:00",
-  "record_count": 141
+  "completed_at": "2026-10-25T12:27:17+00:00",
+  "record_count": 144
 }

@@ -10,27 +10,27 @@
   ],
   "articles_by_year": {
     "2020": 181,
-    "2021": 172,
+    "2021": 188,
     "2022": 220,
     "2023": 322,
     "2024": 328,
     "2025": 482,
-    "2026": 640
+    "2026": 643
   },
   "themes": [
     {
       "name": "Investment & crypto scams",
       "year_counts": {
         "2020": 3,
-        "2021": 6,
+        "2021": 8,
         "2022": 10,
         "2023": 21,
         "2024": 27,
         "2025": 48,
         "2026": 70
       },
-      "total_headlines": 185,
-      "publisher_count": 52,
+      "total_headlines": 187,
+      "publisher_count": 54,
       "examples": [
         {
           "id": "6bd1ec6e33e61c05b25d",
@@ -306,14 +306,14 @@
       "name": "Seniors & vulnerable victims",
       "year_counts": {
         "2020": 9,
-        "2021": 5,
+        "2021": 6,
         "2022": 12,
         "2023": 24,
         "2024": 10,
         "2025": 39,
         "2026": 22
       },
-      "total_headlines": 121,
+      "total_headlines": 122,
       "publisher_count": 31,
       "examples": [
         {
@@ -587,14 +587,14 @@
       "name": "Fraud investigations & enforcement",
       "year_counts": {
         "2020": 7,
-        "2021": 7,
+        "2021": 8,
         "2022": 10,
         "2023": 15,
         "2024": 14,
         "2025": 20,
         "2026": 31
       },
-      "total_headlines": 104,
+      "total_headlines": 105,
       "publisher_count": 31,
       "examples": [
         {
@@ -1714,15 +1714,15 @@
       "name": "Money mules & laundering",
       "year_counts": {
         "2020": 4,
-        "2021": 18,
+        "2021": 19,
         "2022": 3,
         "2023": 1,
         "2024": 6,
         "2025": 6,
         "2026": 8
       },
-      "total_headlines": 46,
-      "publisher_count": 14,
+      "total_headlines": 47,
+      "publisher_count": 15,
       "examples": [
         {
           "id": "504e2824be4695423ba2",
@@ -2756,7 +2756,7 @@
         {
           "id": "0e112fe24e9401fafed3",
           "title": "Former B.C. lottery director says he's the 'whistleblower' on money laundering at casinos - CBC",
-          "date": "2021-09-10T07:00:00+00:00",
+          "date": "2021-09-09T07:00:00+00:00",
           "publisher": "CBC",
           "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNaDc0Smk3Q1lVN3lWVk5Ub3QyRDVUZVpaOWhkbEpoUnJ4S1FUREZGcnVuQkRfQjhPMVg3eTZPaTB2MTV1bk9Wakl6eW12TTg0T2U2aHZWM2dFMWJSX1JzUWNlTDBQR3hxZEZNZFNmZEVibWhFMUJMTEV4WWdvejE4WDRLU1IxTHhsTUdXcjhUeE9INWFYYkozN2Z0X3cxeE1jc3lkM1JRZmFCRFE?oc=5",
           "geography": null,
@@ -2811,7 +2811,7 @@
         {
           "id": "be90074c1b7e91fe7192",
           "title": "Ex lottery VP says Eby 'disinterested' in corporation's anti-money laundering efforts - CBC",
-          "date": "2021-01-25T08:00:00+00:00",
+          "date": "2021-01-26T08:00:00+00:00",
           "publisher": "CBC",
           "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPRDFXNS05WFZfcVc1UmpoclR6M3lKTWM5bUdQWExyUXUyR2VfeGxZMzRYQlNsY0FBZ0J3ZUNsbmtTOW1GWWtpMklid1lyRkpLZmdsVGY1YzBJU0dtMDRleW5PZFNFTDFKRnRyMWl4R1ZVMFZkbzJmV3B3Y0JSakJ1NjhzeHdUNXBXWWVJTzBudVI2d2VwaTM0S095V25rQTN1V2RLUHVMTXVPc2hsaW92YkhVRE8wUDY4YWhHWDdLOWp5bW9iOUs1dEhnNnRQc3E0WExXZG1oRko?oc=5",
           "geography": null,
@@ -3137,8 +3137,8 @@
       }
     }
   ],
-  "generated_at": "2026-10-25T06:40:22+00:00",
-  "articles_analyzed": 2345,
+  "generated_at": "2026-10-25T12:27:32+00:00",
+  "articles_analyzed": 2364,
   "methodology": "MULTI-LABEL keyword classification of unique article TITLES by publication year; multiple theme counts can arise from one headline. Year-to-year article counts reflect discovery methods, changing news coverage, and archived source availability, NOT measured changes in fraud incidence. Bank/platform mentions are not accusations and never counted as confirmed enforcement.",
   "scope": "Canadian financial-crime news discovery",
   "data_quality": "Headlines only; no full-article automated fact checking. Counts can change as the archive expands."
