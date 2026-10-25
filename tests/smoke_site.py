@@ -66,6 +66,27 @@ try:
         assert page.locator("#headlinesTop .breaking-story").count() > 0
         print("Featured reviewed incidents:", page.locator("#featuredIncidents .case-item").count())
         page.locator('[data-tab="incidents"]').click()
+        page.wait_for_function("document.querySelectorAll('#reviewedEventRows .reviewed-card').length >= 5", timeout=15000)
+        assert page.locator("#reviewedEventRows .reviewed-card").count() == 6
+        assert "6" in page.locator("#reviewedSummary").inner_text()
+        assert "0" in page.locator("#reviewedSummary").inner_text()
+        page.locator("#reviewedSearch").fill("Scotiabank")
+        assert page.locator("#reviewedEventRows .reviewed-card").count() == 1
+        page.locator("#reviewedEventRows [data-reviewed-open]").first.click()
+        assert "Source-supported claims" in page.locator("#drawerBody").inner_text()
+        assert "What remains unanswered" in page.locator("#drawerBody").inner_text()
+        assert "Original sources and provenance" in page.locator("#drawerBody").inner_text()
+        assert "Counterevidence: not_assessed" in page.locator("#drawerBody").inner_text()
+        assert page.locator("#drawerBody .reviewed-source-card a").count() >= 1
+        assert page.locator("#drawerBody .reviewed-timeline-step").count() >= 2
+        assert "Unauthorized credit exposure" in page.locator("#drawerBody").inner_text()
+        page.locator("#close").click()
+        page.locator("#reviewedSearch").fill("")
+        page.wait_for_function("document.querySelectorAll('#eventCandidateRows .candidate-card').length > 0", timeout=10000)
+        assert "unverified" in page.locator("#eventCandidateRows").inner_text().lower()
+        assert page.locator("#eventCandidateRows [data-story]").count() >= 2
+        print("Source-grounded review database + explicit unverified suggestions: PASS")
+        page.locator("#incidents .overview-deepdive summary").click()
         page.wait_for_function("document.querySelectorAll('#incidentRows .case-item').length > 0", timeout=10000)
         assert page.locator("#incidentRows .case-item").count() >= 5
         page.locator("#incidentSearch").fill("Scotiabank")
