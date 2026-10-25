@@ -93,6 +93,13 @@ try:
         page.locator("#mapAgency").select_option("")
         page.locator("#mapCountry").select_option("GB")
         assert "Jurisdiction: United Kingdom" in page.locator("#mapCaption").inner_text()
+        for code,agency in [("HK","HKMA"),("SG","MAS"),("IE","Central Bank of Ireland")]:
+            page.locator("#mapCountry").select_option(code)
+            assert agency in page.locator("#mappedStories").inner_text()
+            assert "Jurisdiction:" in page.locator("#mapCaption").inner_text()
+        page.locator("#mapCountry").select_option("AF")
+        assert "no official enforcement actions ingested yet" in page.locator("#worldCountryBrief").inner_text()
+        assert page.locator("#mappedStories .map-story").count() == 0
         page.locator("#worldView").click()
         assert page.locator("#globalPatterns button").count() >= 4
         page.locator("[data-global-pattern]").first.click()
