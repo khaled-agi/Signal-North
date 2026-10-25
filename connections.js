@@ -41,7 +41,9 @@
    '<div class="evidence-name">'+esc(r.title||"Public notice")+'</div><div class="evidence-meta">'+esc(labels[r.role]||r.role||"Published source")+' · '+esc(r.source||"Publisher")+'</div>'+
    (amount?'<div class="evidence-amount">'+esc(amount)+'</div>':"")+
    (r.kind==="incident"&&r.recovery_status?'<div class="evidence-meta">Reported recovery: '+esc(r.recovery_status)+'</div>':"")+
-   '<div class="evidence-bottom">'+safeLink(r.source_url,"Original publication")+(r.kind==="headline"?"<span class='evidence-caveat'>No institutional responsibility established</span>":"")+'</div></article>';
+   '<div class="evidence-bottom">'+safeLink(r.source_url,"Original publication")+
+   (r.kind==="incident"?'<button type="button" class="report-variations" data-reviewed-open="'+esc(r.id)+'">Examine structured evidence →</button>':"")+
+   (r.kind==="headline"?"<span class='evidence-caveat'>No institutional responsibility established</span>":"")+'</div></article>';
  }
  function activityChart(records){
   const grouped={};
