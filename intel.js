@@ -52,11 +52,12 @@
  function renderNews(){
   const q=$i("newsSearch").value.trim().toLowerCase();
   const t=$i("newsCategory").value;
+  const theme=$i("newsTheme").value;
   const year=$i("newsYear").value;
   const month=$i("newsMonth").value;
   const bank=$i("newsBank").value;
   const geo=$i("newsGeo").value;
-  const hits=news.filter(x=>(!t||x.category===t)&&(!year||String(x.published_at||"").startsWith(year))&&(!month||String(x.published_at||"").slice(5,7)===month)&&(!bank||(x.banks_mentioned_in_headline||[]).includes(bank))&&(!geo||x.geographic_relevance===geo)&&(!q||[x.title,x.publisher,x.category,...(x.topics||[]),...(x.headline_variations||[]).map(v=>v.title)].join(" ").toLowerCase().includes(q)));
+  const hits=news.filter(x=>(!t||x.category===t)&&(!theme||(x.fraud_themes||[]).includes(theme))&&(!year||String(x.published_at||"").startsWith(year))&&(!month||String(x.published_at||"").slice(5,7)===month)&&(!bank||(x.banks_mentioned_in_headline||[]).includes(bank))&&(!geo||x.geographic_relevance===geo)&&(!q||[x.title,x.publisher,x.category,...(x.topics||[]),...(x.headline_variations||[]).map(v=>v.title)].join(" ").toLowerCase().includes(q)));
   const visible=hits.slice(0,newsVisible);
   $i("newsCount").textContent=hits.length+" reporting groups matching / "+news.length+" displayed groups";
   $i("newsPageCount").textContent="Showing "+visible.length+" of "+hits.length+" grouped reports from "+rawHeadlineCount.toLocaleString("en-CA")+" indexed headlines";
@@ -126,6 +127,10 @@
  function initNews(){
   const cats=[...new Set(news.map(x=>x.category).filter(Boolean))].sort();
   $i("newsCategory").innerHTML='<option value="">All fraud types</option>'+cats.map(x=>'<option value="'+esc(x)+'">'+esc(x)+"</option>").join("");
+  const oldTheme=$i("newsTheme").value;
+  const themes=[...new Set(news.flatMap(x=>x.fraud_themes||[]))].sort();
+  $i("newsTheme").innerHTML='<option value="">All scam methods</option>'+themes.map(x=>'<option value="'+esc(x)+'">'+esc(x)+'</option>').join("");
+  if(oldTheme&&themes.includes(oldTheme))$i("newsTheme").value=oldTheme;
   const years=[...new Set(news.map(x=>String(x.published_at||"").slice(0,4)).filter(y=>/^[0-9]{4}$/.test(y)))].sort().reverse();
   const banks=[...new Set(news.flatMap(x=>x.banks_mentioned_in_headline||[]))].sort();
   const prevYear=$i("newsYear").value,prevBank=$i("newsBank").value,prevMonth=$i("newsMonth").value;
@@ -137,6 +142,7 @@
   if(prevBank)$i("newsBank").value=prevBank;
   if(!newsWired){
    $i("newsCategory").addEventListener("change",()=>{newsVisible=100;renderNews()});
+   $i("newsTheme").addEventListener("change",()=>{newsVisible=100;renderNews()});
    $i("newsYear").addEventListener("change",()=>{newsVisible=100;renderNews()});
    $i("newsMonth").addEventListener("change",()=>{newsVisible=100;renderNews()});
    $i("newsBank").addEventListener("change",()=>{newsVisible=100;renderNews()});
@@ -312,6 +318,20 @@
   initNews();
   bankRows();
  }
+ // A single analyst selection can be carried from the longitudinal theme
+ // view into this full source-linked grouped-report explorer.
+ window.addEventListener("signalnorth:applytheme",event=>{
+   const theme=String(event.detail?.theme||""),year=String(event.detail?.year||"");
+   const themes=[...$i("newsTheme").options].map(x=>x.value);
+   $i("newsTheme").value=themes.includes(theme)?theme:"";
+   $i("newsYear").value=year&&[...$i("newsYear").options].some(x=>x.value===year)?year:"";
+   $i("newsCategory").value="";
+   $i("newsMonth").value="";
+   $i("newsGeo").value="";
+   $i("newsSearch").value="";
+   newsVisible=100;
+   renderNews();
+ });
  window.addEventListener("signalnorth:refresh",boot);
  if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",boot);
  else boot();
