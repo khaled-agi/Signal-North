@@ -10,6 +10,8 @@ on:
       - 'scripts/build_intelligence_graph.py'
       - 'scripts/build_article_index.py'
       - 'scripts/build_theme_trends.py'
+      - 'scripts/collect_global.py'
+      - 'scripts/build_world_registry.py'
       - 'data/**'
       - 'tests/**'
       - '.github/workflows/browser-test.yml'
@@ -30,6 +32,8 @@ jobs:
       - name: Build test intelligence snapshots
         run: |
           python -m pip install -r requirements.txt
+          GLOBAL_SOURCES_OFFLINE=1 python scripts/collect_global.py
+          python scripts/build_world_registry.py
           python scripts/build_article_index.py
           python scripts/build_story_groups.py
           python scripts/build_intelligence_graph.py
