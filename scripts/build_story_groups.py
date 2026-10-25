@@ -28,7 +28,9 @@ with about after against amidst amid says said says say news report reports
 fraud scam scams frauds police warning warns investigation investigations
 """.split())
 WORD = re.compile(r"[a-z0-9]+")
-AMOUNT = re.compile(r"(?<!\w)\$?\d+(?:[.,]\d+)*(?:k|m|million|billion)?(?!\w)", re.I)
+MATERIAL_NUMBER = re.compile(r"(?<![a-z0-9])(?:c?\$\s*)?\d[\d,]*(?:\.\d+)?(?:\s*(?:k|m|b|thousand|million|billion))?%?(?![a-z0-9])", re.I)
+# Only explicit city references, not publishers or broad provincial references.
+CITY_CUE = re.compile(r"\b(?:toronto|montreal|vancouver|calgary|edmonton|ottawa|winnipeg|halifax|regina|victoria|saskatoon|hamilton|surrey|mississauga)\b", re.I)
 DATE_LIMIT = 10
 CANADIAN_CUE = re.compile(
  r"\b(?:canada|canadian|canadien|canadienne|ontario|qu[ée]bec|alberta|"
@@ -66,9 +68,16 @@ def meaningful(title):
     return {w for w in WORD.findall(normalized(title)) if len(w) >= 3 and w not in COMMON}
 
 def tokens_numbers(title):
-    # Contrast quoted dollars/percentages, ages and victim counts. Stripping
-    # different numbers would mask a material reporting distinction.
-    return set(re.findall(r"(?:\$|c\$)\s?\d[\d,.]*(?:\s?(?:k|m|million|billion))?|\d+(?:\.\d+)?%",str(title or "").casefold()))
+    # Preserve differences in ALL explicit quantities (victim counts, ages,
+    # dates, dollar figures, and percentages), not only currency or rates.
+    # Normalize thousands separators so $50,000 and $50000 agree.
+    return {re.sub(r"[\s,]", "", m.group().casefold())
+            for m in MATERIAL_NUMBER.finditer(str(title or ""))}
+
+def headline_cities(title):
+    # Guard against merging explicitly different Canadian cities where the
+    # location was never geocoded. A city mention is NOT a verified scene.
+    return set(CITY_CUE.findall(normalized(title)))
 
 def when(item):
     try:
@@ -91,6 +100,9 @@ def likely_same_report(a, b):
     # Avoid false deduplication across dates, cities, named financial entities,
     # monetary figures and unrelated article topics.
     if not is_close(a, b) or not compatible_place(a, b):
+        return False
+    cities_a, cities_b = headline_cities(a.get("title")), headline_cities(b.get("title"))
+    if cities_a and cities_b and cities_a.isdisjoint(cities_b):
         return False
     na,nb = normalized(a.get("title")),normalized(b.get("title"))
     if na == nb and len(na) >= 18:
