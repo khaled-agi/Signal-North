@@ -263,6 +263,21 @@ try:
         print("Theme comparisons use coverage share or raw counts, and flag 2026 YTD: PASS")
         page.locator("#themeChoose").select_option("Investment & crypto scams")
         assert "Investment & crypto" in page.locator("#themeExamplesTitle").inner_text()
+        page.locator("#themeYear").select_option("2025")
+        page.locator("#themeToMap").click()
+        assert page.locator("#mapTopic").input_value() == "Investment & crypto scams"
+        assert page.locator("#mapYearFrom").input_value() == "2025"
+        assert page.locator("#mapYearTo").input_value() == "2025"
+        assert "2025" in page.locator("#mapCaption").inner_text()
+        assert page.locator("#mapStorySummary").inner_text()
+        page.locator('[data-tab="themes"]').click()
+        page.locator("#themeToStories").click()
+        assert page.locator("#newsTheme").input_value() == "Investment & crypto scams"
+        assert page.locator("#newsYear").input_value() == "2025"
+        assert page.locator("#newsRows .news-item").count() > 0
+        page.locator('[data-tab="themes"]').click()
+        page.locator("#themeYear").select_option("")
+        print("Cross-page scam theme and year filter synchronization: PASS")
         page.locator('[data-tab="sectors"]').click()
         page.wait_for_function("document.querySelectorAll('#sectorEntries .sector-item').length >= 10", timeout=12000)
         page.locator("#sectorSearch").fill("Wealthsimple")
