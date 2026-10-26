@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-26T04:15:27+00:00",
-  "candidate_pairs": 121,
+  "generated_at": "2026-10-26T10:25:49+00:00",
+  "candidate_pairs": 122,
   "methodology": "Suggested possible article relationships. These are not verified same incidents and require original-source editorial review.",
   "items": [
     {
@@ -32,44 +32,6 @@
         "Published within ten days"
       ],
       "priority": 12,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
-      "id": "candidate:report-076feb7a148e5d6ecffd:report-db2f6f65270f82d3fafa",
-      "group_ids": [
-        "report-076feb7a148e5d6ecffd",
-        "report-db2f6f65270f82d3fafa"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-076feb7a148e5d6ecffd",
-          "title": "2 men charged with fraud in probe of $300M Toronto hospital redevelopment contracts - Global News",
-          "source_url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5SVk5kR3BoU3RRdUFnTGhNVzY4RS1UR01pWV9Pd1VnLWVJNHd0NHZSUW9LY1d2YTFnU2RXcG1YWmpfUDFiREdPMFM3ZllEbmJDbmdvYk1BWW9BdWRPSUw1UWEzTEdKZXFFQnc?oc=5",
-          "publication_date": "2023-03-09T08:00:00+00:00",
-          "source_count": 1
-        },
-        {
-          "group_id": "report-db2f6f65270f82d3fafa",
-          "title": "Two men charged with fraud in probe of $300M Toronto hospital redevelopment contracts - MooseJawToday.com",
-          "source_url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOMVo1d3BHc1pLWDlJS2JjQ0o3d2VHMmpqdEdGNmd3bmJxczBjQXlBWUpiYksxSHBfWU9pNTJLYXR4S3dqUFZzWXdlNHdpV0NOdDliQm40QUFQd1RKaU40MjRFazRCazR4WkhURXh0cHdqbXd6aVJ0ajNKZ3A0T2Zfd21EVW5PUUJFU3FEUFJZNFJ6SnFnZlE2cklGdzcyeHJVLTRVTjJXdjc2NlhTeHhWMkppeUdlQkMtU1B3bGNPdTVqdG82LUU5ZVVuMVlOM1o2?oc=5",
-          "publication_date": "2023-03-09T08:00:00+00:00",
-          "source_count": 1
-        }
-      ],
-      "reasons": [
-        "8 shared descriptive headline terms",
-        "Overlapping scam method: Fraud investigations & enforcement",
-        "Same source-mentioned place",
-        "Published within ten days"
-      ],
-      "priority": 10,
       "status": "unverified_suggested_connection",
       "review_steps": [
         "Read both original articles, not only titles",
@@ -194,6 +156,44 @@
       ]
     },
     {
+      "id": "candidate:report-076feb7a148e5d6ecffd:report-db2f6f65270f82d3fafa",
+      "group_ids": [
+        "report-076feb7a148e5d6ecffd",
+        "report-db2f6f65270f82d3fafa"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-076feb7a148e5d6ecffd",
+          "title": "2 men charged with fraud in probe of $300M Toronto hospital redevelopment contracts - Global News",
+          "source_url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5SVk5kR3BoU3RRdUFnTGhNVzY4RS1UR01pWV9Pd1VnLWVJNHd0NHZSUW9LY1d2YTFnU2RXcG1YWmpfUDFiREdPMFM3ZllEbmJDbmdvYk1BWW9BdWRPSUw1UWEzTEdKZXFFQnc?oc=5",
+          "publication_date": "2023-03-09T08:00:00+00:00",
+          "source_count": 1
+        },
+        {
+          "group_id": "report-db2f6f65270f82d3fafa",
+          "title": "Two men charged with fraud in probe of $300M Toronto hospital redevelopment contracts - MooseJawToday.com",
+          "source_url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOMVo1d3BHc1pLWDlJS2JjQ0o3d2VHMmpqdEdGNmd3bmJxczBjQXlBWUpiYksxSHBfWU9pNTJLYXR4S3dqUFZzWXdlNHdpV0NOdDliQm40QUFQd1RKaU40MjRFazRCazR4WkhURXh0cHdqbXd6aVJ0ajNKZ3A0T2Zfd21EVW5PUUJFU3FEUFJZNFJ6SnFnZlE2cklGdzcyeHJVLTRVTjJXdjc2NlhTeHhWMkppeUdlQkMtU1B3bGNPdTVqdG82LUU5ZVVuMVlOM1o2?oc=5",
+          "publication_date": "2023-03-09T08:00:00+00:00",
+          "source_count": 1
+        }
+      ],
+      "reasons": [
+        "8 shared descriptive headline terms",
+        "Overlapping scam method: Fraud investigations & enforcement",
+        "Same source-mentioned place",
+        "Published within ten days"
+      ],
+      "priority": 10,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
       "id": "candidate:report-27fe2b5cfc5e39ab9561:report-cb61d4a9c7db76ed7943",
       "group_ids": [
         "report-27fe2b5cfc5e39ab9561",
@@ -256,6 +256,44 @@
       "reasons": [
         "Same organization explicitly named: National Bank",
         "4 shared descriptive headline terms",
+        "Published within ten days"
+      ],
+      "priority": 10,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
+      "id": "candidate:report-114dac84889eb9024014:report-6a4ddaa419767a7605a4",
+      "group_ids": [
+        "report-114dac84889eb9024014",
+        "report-6a4ddaa419767a7605a4"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-114dac84889eb9024014",
+          "title": "Vancouver police officer charged with fraud, theft and breach of trust - Castanet",
+          "source_url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPS0V2RmtmSVZIc3pjaWxBMGszMW1nbERNS0pwSGRpWlFfLTF5ZjZkd2YxYnM5ZEhoWk5pT2djZ01qSWtMdnVxanJuN2dJUFFrQXo4UHJkREdyaHYxTTBXVDZqUjZka2dlR3JBSW1Tbk95N055YjlKZzJvUkZ6VHJiNm9uT3VUcXRwWlZXcEx1dzZraTZfQVRabGRva3BsdjZ2ZkpmblNTTF9UVTRITTdSWlVWZ1NmZl9lbjBlcVlUZw?oc=5",
+          "publication_date": "2026-09-03T07:00:00+00:00",
+          "source_count": 1
+        },
+        {
+          "group_id": "report-6a4ddaa419767a7605a4",
+          "title": "High-profile Vancouver police officer and anti-gang advocate charged with fraud, theft, breach of trust - CTV News",
+          "source_url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOZGRqTW9Zd3VHVDZhcVNaSWdQSll0eDhEWWlPd2pwVkE1TWZZYU9yYUJldnFpdUZVVUg0VTFYeDVINExMckFjTUhHdHhKVlZBTEt1NTdGcnFZTU1wR093M3NWQm5PTWpXMlRIN2QtSE5KWWRsSVZxeko1TF9FVmx2QzNVODNYdUdXOWcxWXkyM0JhZk9uOVBjMV9MaHRQZjZWUnhYaFdteUM2WEpKLUktMDFBM01xTGZIQ2NKTzVTU1FhWXFLY24wX1Uycm9uZlRmU3JV?oc=5",
+          "publication_date": "2026-09-03T07:00:00+00:00",
+          "source_count": 1
+        }
+      ],
+      "reasons": [
+        "6 shared descriptive headline terms",
+        "Overlapping scam method: Fraud investigations & enforcement",
+        "Same source-mentioned place",
         "Published within ten days"
       ],
       "priority": 10,
@@ -367,44 +405,6 @@
       "reasons": [
         "Same organization explicitly named: RBC",
         "5 shared descriptive headline terms",
-        "Published within ten days"
-      ],
-      "priority": 10,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
-      "id": "candidate:report-114dac84889eb9024014:report-6a4ddaa419767a7605a4",
-      "group_ids": [
-        "report-114dac84889eb9024014",
-        "report-6a4ddaa419767a7605a4"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-114dac84889eb9024014",
-          "title": "Vancouver police officer charged with fraud, theft and breach of trust - Castanet",
-          "source_url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPS0V2RmtmSVZIc3pjaWxBMGszMW1nbERNS0pwSGRpWlFfLTF5ZjZkd2YxYnM5ZEhoWk5pT2djZ01qSWtMdnVxanJuN2dJUFFrQXo4UHJkREdyaHYxTTBXVDZqUjZka2dlR3JBSW1Tbk95N055YjlKZzJvUkZ6VHJiNm9uT3VUcXRwWlZXcEx1dzZraTZfQVRabGRva3BsdjZ2ZkpmblNTTF9UVTRITTdSWlVWZ1NmZl9lbjBlcVlUZw?oc=5",
-          "publication_date": "2026-09-03T07:00:00+00:00",
-          "source_count": 1
-        },
-        {
-          "group_id": "report-6a4ddaa419767a7605a4",
-          "title": "High-profile Vancouver police officer and anti-gang advocate charged with fraud, theft, breach of trust - CTV News",
-          "source_url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOZGRqTW9Zd3VHVDZhcVNaSWdQSll0eDhEWWlPd2pwVkE1TWZZYU9yYUJldnFpdUZVVUg0VTFYeDVINExMckFjTUhHdHhKVlZBTEt1NTdGcnFZTU1wR093M3NWQm5PTWpXMlRIN2QtSE5KWWRsSVZxeko1TF9FVmx2QzNVODNYdUdXOWcxWXkyM0JhZk9uOVBjMV9MaHRQZjZWUnhYaFdteUM2WEpKLUktMDFBM01xTGZIQ2NKTzVTU1FhWXFLY24wX1Uycm9uZlRmU3JV?oc=5",
-          "publication_date": "2026-09-03T07:00:00+00:00",
-          "source_count": 1
-        }
-      ],
-      "reasons": [
-        "6 shared descriptive headline terms",
-        "Overlapping scam method: Fraud investigations & enforcement",
-        "Same source-mentioned place",
         "Published within ten days"
       ],
       "priority": 10,
@@ -592,6 +592,43 @@
         "5 shared descriptive headline terms",
         "Overlapping scam method: Seniors & vulnerable victims",
         "Same source-mentioned place",
+        "Published within ten days"
+      ],
+      "priority": 10,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
+      "id": "candidate:report-681abb36d0d5c3c44d4d:report-7fb99199968f9dcd336c",
+      "group_ids": [
+        "report-681abb36d0d5c3c44d4d",
+        "report-7fb99199968f9dcd336c"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-681abb36d0d5c3c44d4d",
+          "title": "Plus d’une centaine de clients de la RBC victimes d’une fraude - TVA Nouvelles",
+          "source_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPSE5RdC1xVXByc0EzeFZtc3haUkRxOUZCZFBUUkZnRWhmNS1lcmcyaVktOC1QcnJWNTFZcVpJTWo0bFo4dm1pWmZZaDhhOUJxNmJtRlJPYzIxYTd6VnNIZjFMUnpYdGpPemZHZkROZkhJeGJDTDVMTElrSWpBblp6MUVOdlNpTDlrSGpDaERnSEJpZEtSbnZveEo4REY?oc=5",
+          "publication_date": "2026-10-15T07:00:00+00:00",
+          "source_count": 1
+        },
+        {
+          "group_id": "report-7fb99199968f9dcd336c",
+          "title": "Plus d’une centaine de clients de la RBC victimes d’une fraude - Le Journal de Montréal",
+          "source_url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOMWVnWlZnckxPdVNvOGZqYm5kZEFCcEpONEROaUZ3anhNY1J2N0dxOWc4SFk0RHZ3MlB5Y3VlWU1JUGx5LUFfTjRpWlh3ektCNndEUEpMSnE4SHZSQ0o3VWlJQTctbUVBVnhTal9heFRwMldMU1Jza0ZXbnlFb0xOSHR3cXpqdDZlZV8wV1pPWXpwMnFRQ0hURk9hWC1zT2wwcXpraQ?oc=5",
+          "publication_date": "2026-10-15T07:00:00+00:00",
+          "source_count": 1
+        }
+      ],
+      "reasons": [
+        "Same organization explicitly named: RBC",
+        "7 shared descriptive headline terms",
         "Published within ten days"
       ],
       "priority": 10,
@@ -830,24 +867,98 @@
       ]
     },
     {
-      "id": "candidate:report-2994b6b4b0464e86c059:report-8d5b4f8fdedecb920348",
+      "id": "candidate:report-9acebf36b6ac1374e625:report-c6590ddf6f96fa6dc425",
       "group_ids": [
-        "report-2994b6b4b0464e86c059",
-        "report-8d5b4f8fdedecb920348"
+        "report-9acebf36b6ac1374e625",
+        "report-c6590ddf6f96fa6dc425"
       ],
       "headlines": [
         {
-          "group_id": "report-2994b6b4b0464e86c059",
-          "title": "Calgary not-for-profit group battles bank after alleged fraud | Watch News Videos Online - Global News",
-          "source_url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQQjY4UVhuQ29CZnJMZkFsVE9BM2FVM3B4Q3hyVUk2cVN2emFYTUExa2xmSW15aHh5ZjhyWGx5V1kxMjBRbkxTXzg0dVVzMDhISzNZRGNBOUhlZ2dVRExORlFFOXg2MWk1U3FRNVNUaTlBbnBJZ0dwZHpUSEtmUzYyRlZ1dFNpZVUxNldqeGxGZUYyY1h4SlltUlZBYkk5c0E?oc=5",
-          "publication_date": "2024-03-25T07:00:00+00:00",
+          "group_id": "report-9acebf36b6ac1374e625",
+          "title": "Former Blue Jay Rich Butler charged with fraud in Ontario - The Globe and Mail",
+          "source_url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPNnZBNHNGeTlRUUV1SkFud3pvcXZDdXhobUN6M2tIY1JWMkRmaHJOU19hZ3p0b21GQlZTamIxbE1qWDNMdTVBc1VWZUVCbk1Oc2g1ZmZZcEFlYUl6R0p4ZG80NnFvdzdnSDZhUjNPeEhlTUNvU1RVcFFaLWZKNkdVMkhvcjczbDdkTVlUQWNjR2MtXzExbmhTWEtXNFdLek04WlVsMzN3dUo?oc=5",
+          "publication_date": "2026-10-21T00:23:47+00:00",
           "source_count": 1
         },
         {
-          "group_id": "report-8d5b4f8fdedecb920348",
-          "title": "Calgary not-for-profit battles big bank after fraudsters make off with $50K - Global News",
-          "source_url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNdE5vQm5BbDlTNmJGU0hrTDZUb1BzOC1mRlFTWlRPaDVDZ19vLVpQZmViUkkzWlFDLUZPaTdpSGgyOWVoeUwtTHE1NWNiVllNelRLTC0yQ0pEMkMyMVVMekhzZUt6cWcwS0JXSHg4eGdTY3hzUDJNOWNYYWIzTnBoU29zejhCVWVKZ2RhcQ?oc=5",
-          "publication_date": "2024-03-25T07:00:00+00:00",
+          "group_id": "report-c6590ddf6f96fa6dc425",
+          "title": "Former Blue Jay, wife charged with fraud linked to Ontario youth baseball program fees: police - CBC",
+          "source_url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNVm01UHpSdTNQdTllM2lJZ1JHdlNLVHRZYnBWcFliR3hkSUpCVHgtS2liTVZzd1RNRzI0dndQdWFibXdxUTVmaW5rNjUxci1TZ01jYk84YUVxUUxEM2M0b2FYYm9QY3d2b3pvdkdKajRIUTV4MzV4dmF6NzJyNVNuWUs2VWhwSy1tajFoQVpKbm5Vdk0?oc=5",
+          "publication_date": "2026-10-20T14:50:00+00:00",
+          "source_count": 1
+        }
+      ],
+      "reasons": [
+        "5 shared descriptive headline terms",
+        "Overlapping scam method: Fraud investigations & enforcement",
+        "Published within ten days"
+      ],
+      "priority": 8,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
+      "id": "candidate:report-3fd8305329461b0d01ab:report-9acebf36b6ac1374e625",
+      "group_ids": [
+        "report-3fd8305329461b0d01ab",
+        "report-9acebf36b6ac1374e625"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-3fd8305329461b0d01ab",
+          "title": "Former Blue Jays player Rich Butler, wife, charged with fraud in Ontario - Toronto Star",
+          "source_url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNWUdOZkRmSkR2Y2xiMi13d0dkQVVFZktkX0stV1V1OGYtUlBkU1BaekRTbWc3N1l5ZHdsdGxiNF94TVZmdUlIandlUVBaenJJbUhlWUZKalFtbGVFSW1XbUl2c2dQYS00OEd0RXFvc3k4ZXQ4VDVTcmFhYXVic0lLN1FuRVVVZlVwQmg1cjJjbWJpQURVUTZacWNfNndPdWdrYmxNS3dza2Mya1FscG1CT3BvcG1rdnVLLUJvNk5GdEdsV0pvRmc0a3VMMktweWQxMEwyTFFxY2FKNTNVUHA1N0pRTWdjWENoMEg3Rm9KMEI3T2c?oc=5",
+          "publication_date": "2026-10-20T17:28:48+00:00",
+          "source_count": 1
+        },
+        {
+          "group_id": "report-9acebf36b6ac1374e625",
+          "title": "Former Blue Jay Rich Butler charged with fraud in Ontario - The Globe and Mail",
+          "source_url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPNnZBNHNGeTlRUUV1SkFud3pvcXZDdXhobUN6M2tIY1JWMkRmaHJOU19hZ3p0b21GQlZTamIxbE1qWDNMdTVBc1VWZUVCbk1Oc2g1ZmZZcEFlYUl6R0p4ZG80NnFvdzdnSDZhUjNPeEhlTUNvU1RVcFFaLWZKNkdVMkhvcjczbDdkTVlUQWNjR2MtXzExbmhTWEtXNFdLek04WlVsMzN3dUo?oc=5",
+          "publication_date": "2026-10-21T00:23:47+00:00",
+          "source_count": 1
+        }
+      ],
+      "reasons": [
+        "6 shared descriptive headline terms",
+        "Overlapping scam method: Fraud investigations & enforcement",
+        "Published within ten days"
+      ],
+      "priority": 8,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
+      "id": "candidate:report-15a8b863815f11493a6a:report-8c68aeb5960c47ffc28d",
+      "group_ids": [
+        "report-15a8b863815f11493a6a",
+        "report-8c68aeb5960c47ffc28d"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-15a8b863815f11493a6a",
+          "title": "Credit cards, passports, licences: Metro Vancouver police find thousands of pieces of stolen mail - CTV News",
+          "source_url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQeVJZdUFqOGFGM213TTRtRDhQMjlscEZyNEFud0lhcU9lNThOU1RVaXhNOWROR3lUWUE5NFJKSFVrZ3ktSDhFWWhVNlpsdlptcWtqcExfWGhEQ3RGQWZQSXdwNXRCdG1ZQVFyUVhZR3c4V2FxenRTdHozN2J2WDRQRnRHMjNzVzFRbHZ3YWF5Rk1ibGlVVmxId0ZILVFVWUREcmtGVzQzRXRYc0U5eERPXzg0bl9FeGluRWZ5UXlSLUJSMkZ5Sm1DTXczT3YtTGduLUE?oc=5",
+          "publication_date": "2024-09-18T07:00:00+00:00",
+          "source_count": 1
+        },
+        {
+          "group_id": "report-8c68aeb5960c47ffc28d",
+          "title": "B.C. crime news: Police seize 8,000 pieces of stolen mail, bank cards, guns - Vancouver Sun",
+          "source_url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9DVzVaNTZOdFJSdGN1V1BQT0dXX204OTk3R2ZZbUdqWmNiNWJvLUs2cXRlOWtuNEFKSnZFTHdFanpFd1dmWThtWXJicTE3VjdBMDZZMWlqMnlSVVFxdlQ2V05CWHZkaTdDZl9WaEh2V2MtVlVxX2xKWFV0WQ?oc=5",
+          "publication_date": "2024-09-22T07:00:00+00:00",
           "source_count": 1
         }
       ],
@@ -867,30 +978,585 @@
       ]
     },
     {
-      "id": "candidate:report-9b06da84d8731fd36f33:report-a2fc5df07bd9a7dc58e0",
+      "id": "candidate:report-78f55fcd8a73043c0734:report-c9e2fc0e21d31f470f4c",
       "group_ids": [
-        "report-9b06da84d8731fd36f33",
-        "report-a2fc5df07bd9a7dc58e0"
+        "report-78f55fcd8a73043c0734",
+        "report-c9e2fc0e21d31f470f4c"
       ],
       "headlines": [
         {
-          "group_id": "report-9b06da84d8731fd36f33",
-          "title": "Senior charged after allegedly claiming group's $1M lottery winnings for himself - CBC",
-          "source_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNVHhnYkd6SGw2UTdwM3B5X2V0R1BCVWxZbnRmX3hBSGxyalBoUGFlMDFNV0pPNDcxU3ZFZzVBazZBaXhPOURSU0xLa3VYcmlmZHNJdGt1bkZ1cVdYM19yaUhNQ1RlSjVxUVdBYjVUZi1FUWdtY2wwajlrT09VQnhtS1ozX24?oc=5",
-          "publication_date": "2025-11-25T08:00:00+00:00",
+          "group_id": "report-78f55fcd8a73043c0734",
+          "title": "Indigo employees’ personal information breached as part of ransomware attack on retailer - The Globe and Mail",
+          "source_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQMlU1WkJueEhGQjN3bFcyaEZ1NmJFeXlJQmtFZElnTlcwbzlBTFVJb3RxQTNJalNCdlQ1SC1Va2RhcGFPSGdnOU1Qdm9hWlV5MW9KSUJTbVlLV1d4eGNMZEZqazNHa1hjelJhOFlLVW5QVXRxcEMtV2lNRzB1ZEduNVNuRFMtaG8yZWJDNEY3UjhaWTJudjZ1bXZzTTQ5TUFBaXZQSGsyTQ?oc=5",
+          "publication_date": "2023-02-24T08:00:00+00:00",
           "source_count": 1
         },
         {
-          "group_id": "report-a2fc5df07bd9a7dc58e0",
-          "title": "Man charged after $1M lottery winnings from ‘group arrangement’ claimed for himself: police - Global News",
-          "source_url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9CZVdwWU5SNzFXZ2VkT29DZkpoc0E1bElxcUduMWFDWnNLNkpUVkdhUUlpbjZiWno3dXo3TGdPcGsybXBlM2JyVEJGUGJBdW9NdzV4ZnV0VEhnM0JNYkJ1cDQyUEh5ZFFLamRqOUF2ZVBBZmtnWDItLUF6dTl3dw?oc=5",
-          "publication_date": "2025-11-25T08:00:00+00:00",
+          "group_id": "report-c9e2fc0e21d31f470f4c",
+          "title": "Indigo says ransomware attack breached data of current and former employees - Global News",
+          "source_url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQamxzVmhNSzRNdnZ6eWx4VVNTajZqcXlzdjRKWTh3R05iaUxhQS1aRVptX3ZGZEFhVk1mTVZCc0pDMngzcVYzVXZmeFdILUtyTTc0LUtwME1YcE1mcWhwVGhETnJ1clBaMnM4XzljRTZDZVZGLUVfSEplV1FVcmRScWlNMDRRaFhTSGc?oc=5",
+          "publication_date": "2023-02-24T08:00:00+00:00",
           "source_count": 1
         }
       ],
       "reasons": [
         "5 shared descriptive headline terms",
-        "Overlapping scam method: Gambling, gaming & casino",
+        "Overlapping scam method: Digital fraud & cybercrime",
+        "Published within ten days"
+      ],
+      "priority": 8,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
+      "id": "candidate:report-07b878b4dc2484407054:report-90b289bed8c24d200244",
+      "group_ids": [
+        "report-07b878b4dc2484407054",
+        "report-90b289bed8c24d200244"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-07b878b4dc2484407054",
+          "title": "Canada can do more to prosecute sophisticated money laundering cases: watchdog report - CFJC Today Kamloops",
+          "source_url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOZHpIMksybERTNEw0ZHlZTGtXemQxQWhjX1pWLXJQSzFrZU5UaXVYYm5kRXpfa0RJbjlVRXNSUGJ6ZU5xQnVxUW9XWHBlMHdZYktzb3VVVkVBb2g2RVQ2aGo1d1JOWnlfYm5RLVZhTHBLQ0k0czh3RlJaTGNsQzhJNVBYeXJGT19USnFmOGN5R3lQWVltTTUtYzNhcEwwdWJVM0p5bzJqVWMtdUo5WVlia1dpdW9SM19YS2c?oc=5",
+          "publication_date": "2026-09-29T07:00:00+00:00",
+          "source_count": 1
+        },
+        {
+          "group_id": "report-90b289bed8c24d200244",
+          "title": "Canada can do more to prosecute sophisticated money laundering cases: watchdog report - CTV News",
+          "source_url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQT3NvY0UzbWpPTnJhMlU4ZU5DWWNBZ2xfOGxrUVNHYUcxakpodHFCNXlpenhSNGFuRlFSX2xHZHRaREpUdUdaSUxoWEpMMURBM1hCeElVY0tlSlJ5ZWQxWFNRdjBSdW45UmRBSHkzajdTRmVacXF5Rk1GaXBTNGFSclpJU1NjWjI5VDhPOTFMbTRVZGM1WlJTc2VRMXZlOWd1Uy0wcS1wWGd2TU9CRF9vWE5Pdjk5aXoxSG13RDJ1aVRtSUE?oc=5",
+          "publication_date": "2026-09-29T07:00:00+00:00",
+          "source_count": 1
+        }
+      ],
+      "reasons": [
+        "6 shared descriptive headline terms",
+        "Overlapping scam method: Money mules & laundering",
+        "Published within ten days"
+      ],
+      "priority": 8,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
+      "id": "candidate:report-374cac619a49b836b67e:report-8b561afdf90ed24741dc",
+      "group_ids": [
+        "report-374cac619a49b836b67e",
+        "report-8b561afdf90ed24741dc"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-374cac619a49b836b67e",
+          "title": "Ontario’s ‘Crypto King’ arrested and charged with fraud, laundering - CityNews Toronto",
+          "source_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNSVY3bFU1bmwza1pIRGl6S2RBQnlHSzlzd253V2tyX09kcUxRb3lQelpuTXlkUGJpbWNoQlk2QWFoVVBmcnVBa1d2Zll1UE5GTlJ3TEhGb3A2d2pZSWxFWm8xZW9YSHdDMWhJcWFnc0gyb21hcEZIcXlYbDdfZm5LWFJlWU9XSFJFUnJxekZISm9sUzFkcGZfeEJ0b043Zw?oc=5",
+          "publication_date": "2024-05-15T07:00:00+00:00",
+          "source_count": 1
+        },
+        {
+          "group_id": "report-8b561afdf90ed24741dc",
+          "title": "Ontario’s 'Crypto King' arrested, charged with fraud | RCI - Radio-Canada",
+          "source_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQR0o1Wm1HeGtHR3F0UUo3WkNhLUlwaEpuTXdXanF0a0dhZnR5SklvTzhLYlFHTXJpU1dxMERFYVExUXUwazFRam5LTXhZSXJHaVVrcXhxaDlyV0hoYU42c0RxRnEtS0czUWN1TUtqRmFZMmE5RnZkNFpoLTFYZlBBcUdadklHMktYcEdoNVNyUXJVa2pZYjhMVjJHVzd5b3d3Vnd1NVo1MDVYVkNGMk00a1dNRDM?oc=5",
+          "publication_date": "2024-05-15T07:00:00+00:00",
+          "source_count": 1
+        }
+      ],
+      "reasons": [
+        "5 shared descriptive headline terms",
+        "Overlapping scam method: Fraud investigations & enforcement, Investment & crypto scams",
+        "Published within ten days"
+      ],
+      "priority": 8,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
+      "id": "candidate:report-3fd8305329461b0d01ab:report-df8b78e0954658949944",
+      "group_ids": [
+        "report-3fd8305329461b0d01ab",
+        "report-df8b78e0954658949944"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-3fd8305329461b0d01ab",
+          "title": "Former Blue Jays player Rich Butler, wife, charged with fraud in Ontario - Toronto Star",
+          "source_url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNWUdOZkRmSkR2Y2xiMi13d0dkQVVFZktkX0stV1V1OGYtUlBkU1BaekRTbWc3N1l5ZHdsdGxiNF94TVZmdUlIandlUVBaenJJbUhlWUZKalFtbGVFSW1XbUl2c2dQYS00OEd0RXFvc3k4ZXQ4VDVTcmFhYXVic0lLN1FuRVVVZlVwQmg1cjJjbWJpQURVUTZacWNfNndPdWdrYmxNS3dza2Mya1FscG1CT3BvcG1rdnVLLUJvNk5GdEdsV0pvRmc0a3VMMktweWQxMEwyTFFxY2FKNTNVUHA1N0pRTWdjWENoMEg3Rm9KMEI3T2c?oc=5",
+          "publication_date": "2026-10-20T17:28:48+00:00",
+          "source_count": 1
+        },
+        {
+          "group_id": "report-df8b78e0954658949944",
+          "title": "Former MLB player, wife charged after alleged $60K youth baseball program fraud - CityNews Toronto",
+          "source_url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPSVpqeG1HbEU3bkk3OHNlRUpmTVhYbmkwRWxOdEp1SXlqYXFxWTlQM0ZoLUJ0NVJTYnJlU3NLQklFY2dLUkY3VHdSdmVoeHhRdk4xZ2Y0U0RhUjYyd2ZSU2RkWkVETklfXzZaN25TNTJTM2pMTnpUZG8xdjVIOG5VdGRKdXRRSXc3blFqbnJkR1ZrUTM3UFdRbjljSHk3aUk?oc=5",
+          "publication_date": "2026-10-20T13:02:00+00:00",
+          "source_count": 1
+        }
+      ],
+      "reasons": [
+        "5 shared descriptive headline terms",
+        "Same source-mentioned place",
+        "Published within ten days"
+      ],
+      "priority": 8,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
+      "id": "candidate:report-3fd8305329461b0d01ab:report-c6590ddf6f96fa6dc425",
+      "group_ids": [
+        "report-3fd8305329461b0d01ab",
+        "report-c6590ddf6f96fa6dc425"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-3fd8305329461b0d01ab",
+          "title": "Former Blue Jays player Rich Butler, wife, charged with fraud in Ontario - Toronto Star",
+          "source_url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNWUdOZkRmSkR2Y2xiMi13d0dkQVVFZktkX0stV1V1OGYtUlBkU1BaekRTbWc3N1l5ZHdsdGxiNF94TVZmdUlIandlUVBaenJJbUhlWUZKalFtbGVFSW1XbUl2c2dQYS00OEd0RXFvc3k4ZXQ4VDVTcmFhYXVic0lLN1FuRVVVZlVwQmg1cjJjbWJpQURVUTZacWNfNndPdWdrYmxNS3dza2Mya1FscG1CT3BvcG1rdnVLLUJvNk5GdEdsV0pvRmc0a3VMMktweWQxMEwyTFFxY2FKNTNVUHA1N0pRTWdjWENoMEg3Rm9KMEI3T2c?oc=5",
+          "publication_date": "2026-10-20T17:28:48+00:00",
+          "source_count": 1
+        },
+        {
+          "group_id": "report-c6590ddf6f96fa6dc425",
+          "title": "Former Blue Jay, wife charged with fraud linked to Ontario youth baseball program fees: police - CBC",
+          "source_url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNVm01UHpSdTNQdTllM2lJZ1JHdlNLVHRZYnBWcFliR3hkSUpCVHgtS2liTVZzd1RNRzI0dndQdWFibXdxUTVmaW5rNjUxci1TZ01jYk84YUVxUUxEM2M0b2FYYm9QY3d2b3pvdkdKajRIUTV4MzV4dmF6NzJyNVNuWUs2VWhwSy1tajFoQVpKbm5Vdk0?oc=5",
+          "publication_date": "2026-10-20T14:50:00+00:00",
+          "source_count": 1
+        }
+      ],
+      "reasons": [
+        "5 shared descriptive headline terms",
+        "Overlapping scam method: Fraud investigations & enforcement",
+        "Published within ten days"
+      ],
+      "priority": 8,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
+      "id": "candidate:report-136b503356adea0912aa:report-3fd8305329461b0d01ab",
+      "group_ids": [
+        "report-136b503356adea0912aa",
+        "report-3fd8305329461b0d01ab"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-136b503356adea0912aa",
+          "title": "Former Blue Jays player Rich Butler, wife charged in fraud probe - Toronto Sun",
+          "source_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOQkpBQmlYR281TFZIN0VLSWxlQkM0SXF6Y3N6TVFJb1pfYUJycXhCVmltVWp1aEVubUtGbmxMQlhKTjhDY0Rtc3JMLUNodFRSbkR0cmZYNnkxLWhCNDZvaFpJMThxMW1IUlRZemJWSkhxdC00TzJ6Z0w4TFo3QURVMjdLS3FlTnFCMFg2dXZxQk9rVEdldkRBWQ?oc=5",
+          "publication_date": "2026-10-20T15:10:43+00:00",
+          "source_count": 1
+        },
+        {
+          "group_id": "report-3fd8305329461b0d01ab",
+          "title": "Former Blue Jays player Rich Butler, wife, charged with fraud in Ontario - Toronto Star",
+          "source_url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNWUdOZkRmSkR2Y2xiMi13d0dkQVVFZktkX0stV1V1OGYtUlBkU1BaekRTbWc3N1l5ZHdsdGxiNF94TVZmdUlIandlUVBaenJJbUhlWUZKalFtbGVFSW1XbUl2c2dQYS00OEd0RXFvc3k4ZXQ4VDVTcmFhYXVic0lLN1FuRVVVZlVwQmg1cjJjbWJpQURVUTZacWNfNndPdWdrYmxNS3dza2Mya1FscG1CT3BvcG1rdnVLLUJvNk5GdEdsV0pvRmc0a3VMMktweWQxMEwyTFFxY2FKNTNVUHA1N0pRTWdjWENoMEg3Rm9KMEI3T2c?oc=5",
+          "publication_date": "2026-10-20T17:28:48+00:00",
+          "source_count": 1
+        }
+      ],
+      "reasons": [
+        "9 shared descriptive headline terms",
+        "Same source-mentioned place",
+        "Published within ten days"
+      ],
+      "priority": 8,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
+      "id": "candidate:report-5853093e3de4700a6862:report-91d10bbd18899a742fd8",
+      "group_ids": [
+        "report-5853093e3de4700a6862",
+        "report-91d10bbd18899a742fd8"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-5853093e3de4700a6862",
+          "title": "Woman faces 65 additional charges for fraud, theft at multiple hospitals: OPP - Toronto Star",
+          "source_url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQaTFXU24wZk0xVmVadmpQX05FaEU1M3duUjFQeXV0UnRzNkx0X0tLWWxyWnk0R1lFR1d3NFpoRW9uUTVROEtNMldIQXVmLWRvcTJYdXd4aWNnU2VweHgzQ0VfN1RDOFNQa3VKbVNlZ0k1LUpuX1VEMnhtcV80NHRRY3J4X0NzZWpsNjJ6TC1FSXZFNVJxMDFvTkVlRnZrZHBsdV8xaFBFZ1Y4TS1sMXdfRnlPNXVVTHd0Q204aDMta3FaWGduV0NtN3pqTmp3Ukh1VnctanN5YWx1dURjekROSUtFRGc2NTRTX1NvaFd5c20tbEpj?oc=5",
+          "publication_date": "2026-09-26T07:00:00+00:00",
+          "source_count": 1
+        },
+        {
+          "group_id": "report-91d10bbd18899a742fd8",
+          "title": "Burlington woman faces 65 additional charges for fraud, theft at multiple hospitals - CityNews Toronto",
+          "source_url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNY3psTXlBT2xyZzRJeXduODNHQW5QNks2ZkpUZHlNekRUY1pxU1oyTk91OUJ0ZjhsNWhCWS1QRGZxTEhEUHFHcXl6LWFVZDMxazlKbUVEcXo5VjlVenljaWdINUZBbF9SZ2czVEpjVnBEdlJ6SV8xcXNhN2F1RnNCRVI4UE9aQy0ydmpzVlg5c0JXZG94TEhoS3NzY3RUcVFlODRvb2VMbDNpOHVHWDdWU3pCaTZXRUg2Tjl4eWFzdw?oc=5",
+          "publication_date": "2026-09-26T07:00:00+00:00",
+          "source_count": 1
+        }
+      ],
+      "reasons": [
+        "8 shared descriptive headline terms",
+        "Same source-mentioned place",
+        "Published within ten days"
+      ],
+      "priority": 8,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
+      "id": "candidate:report-7da9fa3cc0d0d0169e1a:report-cb0769fe6ed3b1efad02",
+      "group_ids": [
+        "report-7da9fa3cc0d0d0169e1a",
+        "report-cb0769fe6ed3b1efad02"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-7da9fa3cc0d0d0169e1a",
+          "title": "Vancouver police officer charged with fraud, theft and breach of trust - Toronto Star",
+          "source_url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxPa0lJVG82aTRUNUtfRGNWNjNVM19rc3lDSzZqVzZwMWxoR3ZVQms3UDJnRjZvbTZsbUh4a0EyWHdjVkZQdnhObW90eHlNcURkZnRkbm8zc2dBRDc1MDk3Qnhjc29VZWlZek1YMmpMY0RIcWkzakNjeGNfWTBXb0tkMHh6VkFQSGZpdmY2VHIwRWdpaHlRUHU0Mm0waXRiZUdWVU5rdVhUNXhJNFVIS3ZZcm1iMmlGNURNRmMxUFpSVTQyTVBJb3U5dURzZ1RxSXFuanJNUk02UURQZW5fVmlYR0h2T0Fza0pySXIw?oc=5",
+          "publication_date": "2026-09-03T07:00:00+00:00",
+          "source_count": 1
+        },
+        {
+          "group_id": "report-cb0769fe6ed3b1efad02",
+          "title": "Vancouver police officer arrested, charged with theft, fraud and breach of trust - Yahoo News Canada",
+          "source_url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNZTV2QTgwNU5ScFJHTXlDTXhheXZoYXV6cE45LWVkdURUQUtjNlZRMjV1UVFmZF91QktVMzdTc0xJaU5PNjhSLXVhQi1UalFXbGd5ZzBlXzBtU3ZsSkdhYUc1ZzZsVUNqNXA5bjF6RE1HZ3BwblVfZ3BaZmRGeG1jN0ZCZzNhOG85bUE?oc=5",
+          "publication_date": "2026-09-03T07:00:00+00:00",
+          "source_count": 1
+        }
+      ],
+      "reasons": [
+        "6 shared descriptive headline terms",
+        "Same source-mentioned place",
+        "Published within ten days"
+      ],
+      "priority": 8,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
+      "id": "candidate:report-5ee2c95920e16344a78e:report-7da9fa3cc0d0d0169e1a",
+      "group_ids": [
+        "report-5ee2c95920e16344a78e",
+        "report-7da9fa3cc0d0d0169e1a"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-5ee2c95920e16344a78e",
+          "title": "Punjabi-origin Canadian police officer charged with fraud, theft and breach of trust - The New Indian Express",
+          "source_url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOd0UyLS1sRzN5blBBdkJGSWpHNlJWR0ZPRUNaaENJLW5VbC1vbElyQ1d2UVJLSnJkNFJGMWp6VTFaTUJDMko2TXU4UHBNZlA3ZEFmREcwcXZZWXgwcElRbWtLc3hZczh2ajY4RTlfeHNGQ29Qd1FCZEVhMlFUamNQb1pFem04T0tVNmxKVUtoOU4yN0c3NGlHWUhoQkJFZVFFY2l2cGVIVFRUeE96UGRacmMzb1VlYjZSUDBMSmpXR2JaeHloWjBwUllaSHRNeW_SAdwBQVVfeXFMT1hJQUVMNVJ3d21vUENneE8tYllJZDVFcEdqbnZ4ajZxc1hrVDQ5LU1SQUc5b1V3UmJGQXkwTjBIWDZFQUVfRjMwTzdNSlF6N3JMT080UWxWTURCT1FRUnhXczJfeDFSYUg5Vmo0UmF5V2dYNFV2NTdiTzFuRjRLUEctNVhHTUFNaXRJX3FFQUFzSm1IS01rWXZBVW1vNGJpQzcxYjF5aUhzZnN5S0FtMWVpQlRJMEY4VzUxUl93MWZqMnRQcHNobTVHNk4zWlFHVUJaS196UmlXVVhUMw?oc=5",
+          "publication_date": "2026-09-04T07:00:00+00:00",
+          "source_count": 1
+        },
+        {
+          "group_id": "report-7da9fa3cc0d0d0169e1a",
+          "title": "Vancouver police officer charged with fraud, theft and breach of trust - Toronto Star",
+          "source_url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxPa0lJVG82aTRUNUtfRGNWNjNVM19rc3lDSzZqVzZwMWxoR3ZVQms3UDJnRjZvbTZsbUh4a0EyWHdjVkZQdnhObW90eHlNcURkZnRkbm8zc2dBRDc1MDk3Qnhjc29VZWlZek1YMmpMY0RIcWkzakNjeGNfWTBXb0tkMHh6VkFQSGZpdmY2VHIwRWdpaHlRUHU0Mm0waXRiZUdWVU5rdVhUNXhJNFVIS3ZZcm1iMmlGNURNRmMxUFpSVTQyTVBJb3U5dURzZ1RxSXFuanJNUk02UURQZW5fVmlYR0h2T0Fza0pySXIw?oc=5",
+          "publication_date": "2026-09-03T07:00:00+00:00",
+          "source_count": 1
+        }
+      ],
+      "reasons": [
+        "5 shared descriptive headline terms",
+        "Overlapping scam method: Fraud investigations & enforcement",
+        "Published within ten days"
+      ],
+      "priority": 8,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
+      "id": "candidate:report-136b503356adea0912aa:report-df8b78e0954658949944",
+      "group_ids": [
+        "report-136b503356adea0912aa",
+        "report-df8b78e0954658949944"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-136b503356adea0912aa",
+          "title": "Former Blue Jays player Rich Butler, wife charged in fraud probe - Toronto Sun",
+          "source_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOQkpBQmlYR281TFZIN0VLSWxlQkM0SXF6Y3N6TVFJb1pfYUJycXhCVmltVWp1aEVubUtGbmxMQlhKTjhDY0Rtc3JMLUNodFRSbkR0cmZYNnkxLWhCNDZvaFpJMThxMW1IUlRZemJWSkhxdC00TzJ6Z0w4TFo3QURVMjdLS3FlTnFCMFg2dXZxQk9rVEdldkRBWQ?oc=5",
+          "publication_date": "2026-10-20T15:10:43+00:00",
+          "source_count": 1
+        },
+        {
+          "group_id": "report-df8b78e0954658949944",
+          "title": "Former MLB player, wife charged after alleged $60K youth baseball program fraud - CityNews Toronto",
+          "source_url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPSVpqeG1HbEU3bkk3OHNlRUpmTVhYbmkwRWxOdEp1SXlqYXFxWTlQM0ZoLUJ0NVJTYnJlU3NLQklFY2dLUkY3VHdSdmVoeHhRdk4xZ2Y0U0RhUjYyd2ZSU2RkWkVETklfXzZaN25TNTJTM2pMTnpUZG8xdjVIOG5VdGRKdXRRSXc3blFqbnJkR1ZrUTM3UFdRbjljSHk3aUk?oc=5",
+          "publication_date": "2026-10-20T13:02:00+00:00",
+          "source_count": 1
+        }
+      ],
+      "reasons": [
+        "5 shared descriptive headline terms",
+        "Same source-mentioned place",
+        "Published within ten days"
+      ],
+      "priority": 8,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
+      "id": "candidate:report-136b503356adea0912aa:report-6686232aa4a558db3471",
+      "group_ids": [
+        "report-136b503356adea0912aa",
+        "report-6686232aa4a558db3471"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-136b503356adea0912aa",
+          "title": "Former Blue Jays player Rich Butler, wife charged in fraud probe - Toronto Sun",
+          "source_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOQkpBQmlYR281TFZIN0VLSWxlQkM0SXF6Y3N6TVFJb1pfYUJycXhCVmltVWp1aEVubUtGbmxMQlhKTjhDY0Rtc3JMLUNodFRSbkR0cmZYNnkxLWhCNDZvaFpJMThxMW1IUlRZemJWSkhxdC00TzJ6Z0w4TFo3QURVMjdLS3FlTnFCMFg2dXZxQk9rVEdldkRBWQ?oc=5",
+          "publication_date": "2026-10-20T15:10:43+00:00",
+          "source_count": 1
+        },
+        {
+          "group_id": "report-6686232aa4a558db3471",
+          "title": "Former Toronto Blue Jay, wife, charged with fraud - insauga.com",
+          "source_url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBuWC1EcGYtbGxSS3Fjd0VITGtwaGpWVGJDVUVXaTVGdE00UUVlMklXNE41RWNxMllfYXJ0MGhXQTBJeWZ1LUEtQjBLZVBfRVREZG5hdzZXeEthdTJOMHdBQWJ5NERlTC0wWVpmRVlVRm5rWk5JdWhUbFJDR3c?oc=5",
+          "publication_date": "2026-10-20T13:20:27+00:00",
+          "source_count": 1
+        }
+      ],
+      "reasons": [
+        "5 shared descriptive headline terms",
+        "Same source-mentioned place",
+        "Published within ten days"
+      ],
+      "priority": 8,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
+      "id": "candidate:report-136b503356adea0912aa:report-ca4ca315a14600e9ef84",
+      "group_ids": [
+        "report-136b503356adea0912aa",
+        "report-ca4ca315a14600e9ef84"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-136b503356adea0912aa",
+          "title": "Former Blue Jays player Rich Butler, wife charged in fraud probe - Toronto Sun",
+          "source_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOQkpBQmlYR281TFZIN0VLSWxlQkM0SXF6Y3N6TVFJb1pfYUJycXhCVmltVWp1aEVubUtGbmxMQlhKTjhDY0Rtc3JMLUNodFRSbkR0cmZYNnkxLWhCNDZvaFpJMThxMW1IUlRZemJWSkhxdC00TzJ6Z0w4TFo3QURVMjdLS3FlTnFCMFg2dXZxQk9rVEdldkRBWQ?oc=5",
+          "publication_date": "2026-10-20T15:10:43+00:00",
+          "source_count": 1
+        },
+        {
+          "group_id": "report-ca4ca315a14600e9ef84",
+          "title": "Former Toronto Blue Jays player charged in alleged scam - blogTO",
+          "source_url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNWW9pVnZOeHZ4YzRLN0JsbDJFdy1ONlFULThkWFlhODlqbUllNUppQzM4MnlwZG9ramJxVHF0aGdoR0JWYWtoby02MEdNSkx5YV9wV1VOUkZrejdSTnE2VFpTc2NBNDFsVVdJYmNaMktjLWpjdFpwV1hLM1FhYWdRczlJcWxTVXhWLV9DZUY0N3FIQQ?oc=5",
+          "publication_date": "2026-10-20T15:48:11+00:00",
+          "source_count": 1
+        }
+      ],
+      "reasons": [
+        "6 shared descriptive headline terms",
+        "Same source-mentioned place",
+        "Published within ten days"
+      ],
+      "priority": 8,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
+      "id": "candidate:report-076feb7a148e5d6ecffd:report-723af776d0a30e95a947",
+      "group_ids": [
+        "report-076feb7a148e5d6ecffd",
+        "report-723af776d0a30e95a947"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-076feb7a148e5d6ecffd",
+          "title": "2 men charged with fraud in probe of $300M Toronto hospital redevelopment contracts - Global News",
+          "source_url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5SVk5kR3BoU3RRdUFnTGhNVzY4RS1UR01pWV9Pd1VnLWVJNHd0NHZSUW9LY1d2YTFnU2RXcG1YWmpfUDFiREdPMFM3ZllEbmJDbmdvYk1BWW9BdWRPSUw1UWEzTEdKZXFFQnc?oc=5",
+          "publication_date": "2023-03-09T08:00:00+00:00",
+          "source_count": 1
+        },
+        {
+          "group_id": "report-723af776d0a30e95a947",
+          "title": "2 men charged with fraud after probe into $300M St. Michael's Hospital redevelopment - CBC",
+          "source_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOcGcyTFVHWE83TWswOFFWTnNHRlgxRnRqc1ROQVhOQVM2bFoySmdzWVd4eWtPNVJMUFVKZzJBeTJURkgyQk1lYUFKazlNUl90bFFZYUEwa2dUc1lLTm1LSG5IUDRuemJRR25xc01VYUQ0eTd5cnJwd2loV1BNVXZLTnVQOEU5VGJEQ0FSMzRvYUNUaFhLcXpZZTcwVTkxbUJI?oc=5",
+          "publication_date": "2023-03-09T08:00:00+00:00",
+          "source_count": 1
+        }
+      ],
+      "reasons": [
+        "6 shared descriptive headline terms",
+        "Overlapping scam method: Fraud investigations & enforcement",
+        "Published within ten days"
+      ],
+      "priority": 8,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
+      "id": "candidate:report-076feb7a148e5d6ecffd:report-8dde1d807a6a822c9894",
+      "group_ids": [
+        "report-076feb7a148e5d6ecffd",
+        "report-8dde1d807a6a822c9894"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-076feb7a148e5d6ecffd",
+          "title": "2 men charged with fraud in probe of $300M Toronto hospital redevelopment contracts - Global News",
+          "source_url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5SVk5kR3BoU3RRdUFnTGhNVzY4RS1UR01pWV9Pd1VnLWVJNHd0NHZSUW9LY1d2YTFnU2RXcG1YWmpfUDFiREdPMFM3ZllEbmJDbmdvYk1BWW9BdWRPSUw1UWEzTEdKZXFFQnc?oc=5",
+          "publication_date": "2023-03-09T08:00:00+00:00",
+          "source_count": 1
+        },
+        {
+          "group_id": "report-8dde1d807a6a822c9894",
+          "title": "2 men charged after $300M project at St. Mike's hospital - CityNews Toronto",
+          "source_url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxORlBydjdTSUdKMVlkS1ZQUVhzQmRLMGtwSGJFSWFtaVFEb2IzZTlGcmZ1ODJiR3FqUkxDcUk4WFRmYWU5dnNnaGw3aUZrd1FGZEJKY0g0aTJjbEtrOVNkUVFLX0NXQW5NQk1pMFYtZ1lvODdKODZEWWp0bmladmgyWDJnY3hXWUFjT0t6cV9oRQ?oc=5",
+          "publication_date": "2023-03-09T08:00:00+00:00",
+          "source_count": 1
+        }
+      ],
+      "reasons": [
+        "5 shared descriptive headline terms",
+        "Same source-mentioned place",
+        "Published within ten days"
+      ],
+      "priority": 8,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
+      "id": "candidate:report-723af776d0a30e95a947:report-db2f6f65270f82d3fafa",
+      "group_ids": [
+        "report-723af776d0a30e95a947",
+        "report-db2f6f65270f82d3fafa"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-723af776d0a30e95a947",
+          "title": "2 men charged with fraud after probe into $300M St. Michael's Hospital redevelopment - CBC",
+          "source_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOcGcyTFVHWE83TWswOFFWTnNHRlgxRnRqc1ROQVhOQVM2bFoySmdzWVd4eWtPNVJMUFVKZzJBeTJURkgyQk1lYUFKazlNUl90bFFZYUEwa2dUc1lLTm1LSG5IUDRuemJRR25xc01VYUQ0eTd5cnJwd2loV1BNVXZLTnVQOEU5VGJEQ0FSMzRvYUNUaFhLcXpZZTcwVTkxbUJI?oc=5",
+          "publication_date": "2023-03-09T08:00:00+00:00",
+          "source_count": 1
+        },
+        {
+          "group_id": "report-db2f6f65270f82d3fafa",
+          "title": "Two men charged with fraud in probe of $300M Toronto hospital redevelopment contracts - MooseJawToday.com",
+          "source_url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOMVo1d3BHc1pLWDlJS2JjQ0o3d2VHMmpqdEdGNmd3bmJxczBjQXlBWUpiYksxSHBfWU9pNTJLYXR4S3dqUFZzWXdlNHdpV0NOdDliQm40QUFQd1RKaU40MjRFazRCazR4WkhURXh0cHdqbXd6aVJ0ajNKZ3A0T2Zfd21EVW5PUUJFU3FEUFJZNFJ6SnFnZlE2cklGdzcyeHJVLTRVTjJXdjc2NlhTeHhWMkppeUdlQkMtU1B3bGNPdTVqdG82LUU5ZVVuMVlOM1o2?oc=5",
+          "publication_date": "2023-03-09T08:00:00+00:00",
+          "source_count": 1
+        }
+      ],
+      "reasons": [
+        "6 shared descriptive headline terms",
+        "Overlapping scam method: Fraud investigations & enforcement",
+        "Published within ten days"
+      ],
+      "priority": 8,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
+      "id": "candidate:report-8dde1d807a6a822c9894:report-db2f6f65270f82d3fafa",
+      "group_ids": [
+        "report-8dde1d807a6a822c9894",
+        "report-db2f6f65270f82d3fafa"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-8dde1d807a6a822c9894",
+          "title": "2 men charged after $300M project at St. Mike's hospital - CityNews Toronto",
+          "source_url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxORlBydjdTSUdKMVlkS1ZQUVhzQmRLMGtwSGJFSWFtaVFEb2IzZTlGcmZ1ODJiR3FqUkxDcUk4WFRmYWU5dnNnaGw3aUZrd1FGZEJKY0g0aTJjbEtrOVNkUVFLX0NXQW5NQk1pMFYtZ1lvODdKODZEWWp0bmladmgyWDJnY3hXWUFjT0t6cV9oRQ?oc=5",
+          "publication_date": "2023-03-09T08:00:00+00:00",
+          "source_count": 1
+        },
+        {
+          "group_id": "report-db2f6f65270f82d3fafa",
+          "title": "Two men charged with fraud in probe of $300M Toronto hospital redevelopment contracts - MooseJawToday.com",
+          "source_url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOMVo1d3BHc1pLWDlJS2JjQ0o3d2VHMmpqdEdGNmd3bmJxczBjQXlBWUpiYksxSHBfWU9pNTJLYXR4S3dqUFZzWXdlNHdpV0NOdDliQm40QUFQd1RKaU40MjRFazRCazR4WkhURXh0cHdqbXd6aVJ0ajNKZ3A0T2Zfd21EVW5PUUJFU3FEUFJZNFJ6SnFnZlE2cklGdzcyeHJVLTRVTjJXdjc2NlhTeHhWMkppeUdlQkMtU1B3bGNPdTVqdG82LUU5ZVVuMVlOM1o2?oc=5",
+          "publication_date": "2023-03-09T08:00:00+00:00",
+          "source_count": 1
+        }
+      ],
+      "reasons": [
+        "5 shared descriptive headline terms",
+        "Same source-mentioned place",
         "Published within ten days"
       ],
       "priority": 8,
@@ -1089,141 +1755,30 @@
       ]
     },
     {
-      "id": "candidate:report-5ee2c95920e16344a78e:report-7da9fa3cc0d0d0169e1a",
+      "id": "candidate:report-8981de4a574d5de74142:report-8cb9c0d9b1be583abb5d",
       "group_ids": [
-        "report-5ee2c95920e16344a78e",
-        "report-7da9fa3cc0d0d0169e1a"
+        "report-8981de4a574d5de74142",
+        "report-8cb9c0d9b1be583abb5d"
       ],
       "headlines": [
         {
-          "group_id": "report-5ee2c95920e16344a78e",
-          "title": "Punjabi-origin Canadian police officer charged with fraud, theft and breach of trust - The New Indian Express",
-          "source_url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOd0UyLS1sRzN5blBBdkJGSWpHNlJWR0ZPRUNaaENJLW5VbC1vbElyQ1d2UVJLSnJkNFJGMWp6VTFaTUJDMko2TXU4UHBNZlA3ZEFmREcwcXZZWXgwcElRbWtLc3hZczh2ajY4RTlfeHNGQ29Qd1FCZEVhMlFUamNQb1pFem04T0tVNmxKVUtoOU4yN0c3NGlHWUhoQkJFZVFFY2l2cGVIVFRUeE96UGRacmMzb1VlYjZSUDBMSmpXR2JaeHloWjBwUllaSHRNeW_SAdwBQVVfeXFMT1hJQUVMNVJ3d21vUENneE8tYllJZDVFcEdqbnZ4ajZxc1hrVDQ5LU1SQUc5b1V3UmJGQXkwTjBIWDZFQUVfRjMwTzdNSlF6N3JMT080UWxWTURCT1FRUnhXczJfeDFSYUg5Vmo0UmF5V2dYNFV2NTdiTzFuRjRLUEctNVhHTUFNaXRJX3FFQUFzSm1IS01rWXZBVW1vNGJpQzcxYjF5aUhzZnN5S0FtMWVpQlRJMEY4VzUxUl93MWZqMnRQcHNobTVHNk4zWlFHVUJaS196UmlXVVhUMw?oc=5",
-          "publication_date": "2026-09-04T07:00:00+00:00",
+          "group_id": "report-8981de4a574d5de74142",
+          "title": "Toronto police make another arrest in widespread 'grandparent scam,' fraud totals over $1.1M - CP24",
+          "source_url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQY29WbWFrVXJ3c2JLOGI5ZGYyQVRJNE8zeEpHNFFTQ0IyeUtVRnBhWG5mVWZSRE0wNDF6RVlKN1dCam5hQXRmUlJYdWJyMGdXYjdFQmk1WWt3eGZFUHJnUnItQWNRdXZHcWstcURNZlFlcTM5LTFHZGt3YWNjQkRIeDMzd2c0a2NTN1JPdlJCUTZ5bzNwaW9ER1J0THZ3Sy1Xb3BSd2djeGEyellpbUdXZUtrSjE3QXIxR0hROWc5ZjFJX0U?oc=5",
+          "publication_date": "2022-03-31T07:00:00+00:00",
           "source_count": 1
         },
         {
-          "group_id": "report-7da9fa3cc0d0d0169e1a",
-          "title": "Vancouver police officer charged with fraud, theft and breach of trust - Toronto Star",
-          "source_url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxPa0lJVG82aTRUNUtfRGNWNjNVM19rc3lDSzZqVzZwMWxoR3ZVQms3UDJnRjZvbTZsbUh4a0EyWHdjVkZQdnhObW90eHlNcURkZnRkbm8zc2dBRDc1MDk3Qnhjc29VZWlZek1YMmpMY0RIcWkzakNjeGNfWTBXb0tkMHh6VkFQSGZpdmY2VHIwRWdpaHlRUHU0Mm0waXRiZUdWVU5rdVhUNXhJNFVIS3ZZcm1iMmlGNURNRmMxUFpSVTQyTVBJb3U5dURzZ1RxSXFuanJNUk02UURQZW5fVmlYR0h2T0Fza0pySXIw?oc=5",
-          "publication_date": "2026-09-03T07:00:00+00:00",
-          "source_count": 1
-        }
-      ],
-      "reasons": [
-        "5 shared descriptive headline terms",
-        "Overlapping scam method: Fraud investigations & enforcement",
-        "Published within ten days"
-      ],
-      "priority": 8,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
-      "id": "candidate:report-662b00510eb22181415b:report-e5a09f3dfb9aacf93c96",
-      "group_ids": [
-        "report-662b00510eb22181415b",
-        "report-e5a09f3dfb9aacf93c96"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-662b00510eb22181415b",
-          "title": "Two arrested in alleged $1M university admission, immigration, loan and investment fraud - Yahoo News Canada",
-          "source_url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPNnJVcWNNMllNU185Q3g2VHIyMzJYWE14dGEzNk1yRXhSMVlPU1dWQnNXRlBJTTNPY21hWC1YUzcwbmZxZDFEMVBqME5ad2VaWVNiMlJhSW9fX21uYXRRM0JqU1lhM1RwNmxOeDNpY0xHR3F3MG5EaU1MSDVuN1VzeA?oc=5",
-          "publication_date": "2026-10-05T07:00:00+00:00",
-          "source_count": 1
-        },
-        {
-          "group_id": "report-e5a09f3dfb9aacf93c96",
-          "title": "Two arrested in alleged $1M university admission, immigration, loan and investment fraud - Calgary Herald",
-          "source_url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxORTlkcEVhZHFRc1VhcGs3a2IxSHFBVi02RE91QWRDV01nXzRNWVBCVTY5T291QjdpblgtQ3NrcGppdE9xc3ZMWV9nZ2NZb2hLZWYzNEZERHduWmZpRXMzNTNvNjkzMlBHbXVvNXhUTm14UlRzUUVrY1h6V2hBZk5DaFZvZXp4d01QRVM5UDBJVFZQMDh4cV9QNDFOR0JqTkt0dnVYenlabkpHUV91SlFkVXR3?oc=5",
-          "publication_date": "2026-10-05T07:00:00+00:00",
+          "group_id": "report-8cb9c0d9b1be583abb5d",
+          "title": "Toronto police make another arrest in widespread 'grandparent scam,' fraud totals over $1.1M - CTV News",
+          "source_url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNS0hiQUdPRW0tWmwyeGxkTTBwb09BNG1RVGJHeXdkc1ZNTmlheTlYTVVwUUxBdmhIc0JmTDFTWHExY2RxWXNOTjdjNl9sNlNMcVppekRjUnF6RFg2VjdyWVpqYWtTUFZzdEdsNnJhdzVjSjZ3U2g5bHF3X05kVHlhaVQxLXRDd3BxeEdmX19uM1VGTUhGdU9sUEh1ODVWcVJMTldZVGxVbndMcjJOQjRIS1EweDRKU2hYQzNEX2lxRGloajQ3dkE?oc=5",
+          "publication_date": "2022-03-31T07:00:00+00:00",
           "source_count": 1
         }
       ],
       "reasons": [
         "7 shared descriptive headline terms",
-        "Overlapping scam method: Investment & crypto scams",
-        "Published within ten days"
-      ],
-      "priority": 8,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
-      "id": "candidate:report-5853093e3de4700a6862:report-91d10bbd18899a742fd8",
-      "group_ids": [
-        "report-5853093e3de4700a6862",
-        "report-91d10bbd18899a742fd8"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-5853093e3de4700a6862",
-          "title": "Woman faces 65 additional charges for fraud, theft at multiple hospitals: OPP - Toronto Star",
-          "source_url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQaTFXU24wZk0xVmVadmpQX05FaEU1M3duUjFQeXV0UnRzNkx0X0tLWWxyWnk0R1lFR1d3NFpoRW9uUTVROEtNMldIQXVmLWRvcTJYdXd4aWNnU2VweHgzQ0VfN1RDOFNQa3VKbVNlZ0k1LUpuX1VEMnhtcV80NHRRY3J4X0NzZWpsNjJ6TC1FSXZFNVJxMDFvTkVlRnZrZHBsdV8xaFBFZ1Y4TS1sMXdfRnlPNXVVTHd0Q204aDMta3FaWGduV0NtN3pqTmp3Ukh1VnctanN5YWx1dURjekROSUtFRGc2NTRTX1NvaFd5c20tbEpj?oc=5",
-          "publication_date": "2026-09-26T07:00:00+00:00",
-          "source_count": 1
-        },
-        {
-          "group_id": "report-91d10bbd18899a742fd8",
-          "title": "Burlington woman faces 65 additional charges for fraud, theft at multiple hospitals - CityNews Toronto",
-          "source_url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNY3psTXlBT2xyZzRJeXduODNHQW5QNks2ZkpUZHlNekRUY1pxU1oyTk91OUJ0ZjhsNWhCWS1QRGZxTEhEUHFHcXl6LWFVZDMxazlKbUVEcXo5VjlVenljaWdINUZBbF9SZ2czVEpjVnBEdlJ6SV8xcXNhN2F1RnNCRVI4UE9aQy0ydmpzVlg5c0JXZG94TEhoS3NzY3RUcVFlODRvb2VMbDNpOHVHWDdWU3pCaTZXRUg2Tjl4eWFzdw?oc=5",
-          "publication_date": "2026-09-26T07:00:00+00:00",
-          "source_count": 1
-        }
-      ],
-      "reasons": [
-        "8 shared descriptive headline terms",
         "Same source-mentioned place",
-        "Published within ten days"
-      ],
-      "priority": 8,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
-      "id": "candidate:report-b63ec7ab9beb5aec69f2:report-fd0ee316e2ca1fda8c5c",
-      "group_ids": [
-        "report-b63ec7ab9beb5aec69f2",
-        "report-fd0ee316e2ca1fda8c5c"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-b63ec7ab9beb5aec69f2",
-          "title": "Canada-wide warrant issued for husband and wife Alberta investment scam - rdnewsnow.com",
-          "source_url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPX0lBU1JCLWE4MUhDeHpHOTcteGxaTTZ4TFI5OEc1V0ZBSkU3OFFVYmlENzR1cVFIa183aTB3Z0VDVHgxUUNMSWFlMWtpQ1YtZkZITTJNb3lxVDREQmkxdUs0NWMtTVBFd1JUeWF3Rm1wZjdjWDZEelYwWG9BenNXR0tncDQ5cEliZ1lOREZIWFJuSWdReklpaWVrLVRvdkhmZGlPRlN4UUU?oc=5",
-          "publication_date": "2021-11-26T08:00:00+00:00",
-          "source_count": 1
-        },
-        {
-          "group_id": "report-fd0ee316e2ca1fda8c5c",
-          "title": "Canada-wide warrant issued for husband and wife in million-dollar investment scam - DiscoverAirdrie",
-          "source_url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOdXZ4ZlNPYkZrNDB4bmdaSFlDbkViQ2ZwSWFVejRZMXRCYUZYSEtHYWtNOVc0dDB1UGl1dnR3NUt3R0VxWldHYmYtWk5GZ2NKVjVWdzNlczJPdTFDTEFWVXBnZkdnM3Z0dmM0a0Z5RmdOa2JXWFM4SHI1eS1YeVpfaEItU01kU1hVUzdrcmRTemhOSWJrOWoyZWxtbVlpbEZka0lKYWltMXhWVGZSbWhDWk5fMjBnV1hmOWI2dFcxaTUyNkRTMTkwZnFWWkJMVTJHYmdaaw?oc=5",
-          "publication_date": "2021-11-26T08:00:00+00:00",
-          "source_count": 1
-        }
-      ],
-      "reasons": [
-        "6 shared descriptive headline terms",
-        "Overlapping scam method: Investment & crypto scams",
         "Published within ten days"
       ],
       "priority": 8,
@@ -1385,437 +1940,67 @@
       ]
     },
     {
-      "id": "candidate:report-8981de4a574d5de74142:report-8cb9c0d9b1be583abb5d",
+      "id": "candidate:report-b63ec7ab9beb5aec69f2:report-fd0ee316e2ca1fda8c5c",
       "group_ids": [
-        "report-8981de4a574d5de74142",
-        "report-8cb9c0d9b1be583abb5d"
+        "report-b63ec7ab9beb5aec69f2",
+        "report-fd0ee316e2ca1fda8c5c"
       ],
       "headlines": [
         {
-          "group_id": "report-8981de4a574d5de74142",
-          "title": "Toronto police make another arrest in widespread 'grandparent scam,' fraud totals over $1.1M - CP24",
-          "source_url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQY29WbWFrVXJ3c2JLOGI5ZGYyQVRJNE8zeEpHNFFTQ0IyeUtVRnBhWG5mVWZSRE0wNDF6RVlKN1dCam5hQXRmUlJYdWJyMGdXYjdFQmk1WWt3eGZFUHJnUnItQWNRdXZHcWstcURNZlFlcTM5LTFHZGt3YWNjQkRIeDMzd2c0a2NTN1JPdlJCUTZ5bzNwaW9ER1J0THZ3Sy1Xb3BSd2djeGEyellpbUdXZUtrSjE3QXIxR0hROWc5ZjFJX0U?oc=5",
-          "publication_date": "2022-03-31T07:00:00+00:00",
+          "group_id": "report-b63ec7ab9beb5aec69f2",
+          "title": "Canada-wide warrant issued for husband and wife Alberta investment scam - rdnewsnow.com",
+          "source_url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPX0lBU1JCLWE4MUhDeHpHOTcteGxaTTZ4TFI5OEc1V0ZBSkU3OFFVYmlENzR1cVFIa183aTB3Z0VDVHgxUUNMSWFlMWtpQ1YtZkZITTJNb3lxVDREQmkxdUs0NWMtTVBFd1JUeWF3Rm1wZjdjWDZEelYwWG9BenNXR0tncDQ5cEliZ1lOREZIWFJuSWdReklpaWVrLVRvdkhmZGlPRlN4UUU?oc=5",
+          "publication_date": "2021-11-26T08:00:00+00:00",
           "source_count": 1
         },
         {
-          "group_id": "report-8cb9c0d9b1be583abb5d",
-          "title": "Toronto police make another arrest in widespread 'grandparent scam,' fraud totals over $1.1M - CTV News",
-          "source_url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNS0hiQUdPRW0tWmwyeGxkTTBwb09BNG1RVGJHeXdkc1ZNTmlheTlYTVVwUUxBdmhIc0JmTDFTWHExY2RxWXNOTjdjNl9sNlNMcVppekRjUnF6RFg2VjdyWVpqYWtTUFZzdEdsNnJhdzVjSjZ3U2g5bHF3X05kVHlhaVQxLXRDd3BxeEdmX19uM1VGTUhGdU9sUEh1ODVWcVJMTldZVGxVbndMcjJOQjRIS1EweDRKU2hYQzNEX2lxRGloajQ3dkE?oc=5",
-          "publication_date": "2022-03-31T07:00:00+00:00",
+          "group_id": "report-fd0ee316e2ca1fda8c5c",
+          "title": "Canada-wide warrant issued for husband and wife in million-dollar investment scam - DiscoverAirdrie",
+          "source_url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOdXZ4ZlNPYkZrNDB4bmdaSFlDbkViQ2ZwSWFVejRZMXRCYUZYSEtHYWtNOVc0dDB1UGl1dnR3NUt3R0VxWldHYmYtWk5GZ2NKVjVWdzNlczJPdTFDTEFWVXBnZkdnM3Z0dmM0a0Z5RmdOa2JXWFM4SHI1eS1YeVpfaEItU01kU1hVUzdrcmRTemhOSWJrOWoyZWxtbVlpbEZka0lKYWltMXhWVGZSbWhDWk5fMjBnV1hmOWI2dFcxaTUyNkRTMTkwZnFWWkJMVTJHYmdaaw?oc=5",
+          "publication_date": "2021-11-26T08:00:00+00:00",
+          "source_count": 1
+        }
+      ],
+      "reasons": [
+        "6 shared descriptive headline terms",
+        "Overlapping scam method: Investment & crypto scams",
+        "Published within ten days"
+      ],
+      "priority": 8,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
+      "id": "candidate:report-662b00510eb22181415b:report-e5a09f3dfb9aacf93c96",
+      "group_ids": [
+        "report-662b00510eb22181415b",
+        "report-e5a09f3dfb9aacf93c96"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-662b00510eb22181415b",
+          "title": "Two arrested in alleged $1M university admission, immigration, loan and investment fraud - Yahoo News Canada",
+          "source_url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPNnJVcWNNMllNU185Q3g2VHIyMzJYWE14dGEzNk1yRXhSMVlPU1dWQnNXRlBJTTNPY21hWC1YUzcwbmZxZDFEMVBqME5ad2VaWVNiMlJhSW9fX21uYXRRM0JqU1lhM1RwNmxOeDNpY0xHR3F3MG5EaU1MSDVuN1VzeA?oc=5",
+          "publication_date": "2026-10-05T07:00:00+00:00",
+          "source_count": 1
+        },
+        {
+          "group_id": "report-e5a09f3dfb9aacf93c96",
+          "title": "Two arrested in alleged $1M university admission, immigration, loan and investment fraud - Calgary Herald",
+          "source_url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxORTlkcEVhZHFRc1VhcGs3a2IxSHFBVi02RE91QWRDV01nXzRNWVBCVTY5T291QjdpblgtQ3NrcGppdE9xc3ZMWV9nZ2NZb2hLZWYzNEZERHduWmZpRXMzNTNvNjkzMlBHbXVvNXhUTm14UlRzUUVrY1h6V2hBZk5DaFZvZXp4d01QRVM5UDBJVFZQMDh4cV9QNDFOR0JqTkt0dnVYenlabkpHUV91SlFkVXR3?oc=5",
+          "publication_date": "2026-10-05T07:00:00+00:00",
           "source_count": 1
         }
       ],
       "reasons": [
         "7 shared descriptive headline terms",
-        "Same source-mentioned place",
-        "Published within ten days"
-      ],
-      "priority": 8,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
-      "id": "candidate:report-136b503356adea0912aa:report-df8b78e0954658949944",
-      "group_ids": [
-        "report-136b503356adea0912aa",
-        "report-df8b78e0954658949944"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-136b503356adea0912aa",
-          "title": "Former Blue Jays player Rich Butler, wife charged in fraud probe - Toronto Sun",
-          "source_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOQkpBQmlYR281TFZIN0VLSWxlQkM0SXF6Y3N6TVFJb1pfYUJycXhCVmltVWp1aEVubUtGbmxMQlhKTjhDY0Rtc3JMLUNodFRSbkR0cmZYNnkxLWhCNDZvaFpJMThxMW1IUlRZemJWSkhxdC00TzJ6Z0w4TFo3QURVMjdLS3FlTnFCMFg2dXZxQk9rVEdldkRBWQ?oc=5",
-          "publication_date": "2026-10-20T15:10:43+00:00",
-          "source_count": 1
-        },
-        {
-          "group_id": "report-df8b78e0954658949944",
-          "title": "Former MLB player, wife charged after alleged $60K youth baseball program fraud - CityNews Toronto",
-          "source_url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPSVpqeG1HbEU3bkk3OHNlRUpmTVhYbmkwRWxOdEp1SXlqYXFxWTlQM0ZoLUJ0NVJTYnJlU3NLQklFY2dLUkY3VHdSdmVoeHhRdk4xZ2Y0U0RhUjYyd2ZSU2RkWkVETklfXzZaN25TNTJTM2pMTnpUZG8xdjVIOG5VdGRKdXRRSXc3blFqbnJkR1ZrUTM3UFdRbjljSHk3aUk?oc=5",
-          "publication_date": "2026-10-20T13:02:00+00:00",
-          "source_count": 1
-        }
-      ],
-      "reasons": [
-        "5 shared descriptive headline terms",
-        "Same source-mentioned place",
-        "Published within ten days"
-      ],
-      "priority": 8,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
-      "id": "candidate:report-136b503356adea0912aa:report-6686232aa4a558db3471",
-      "group_ids": [
-        "report-136b503356adea0912aa",
-        "report-6686232aa4a558db3471"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-136b503356adea0912aa",
-          "title": "Former Blue Jays player Rich Butler, wife charged in fraud probe - Toronto Sun",
-          "source_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOQkpBQmlYR281TFZIN0VLSWxlQkM0SXF6Y3N6TVFJb1pfYUJycXhCVmltVWp1aEVubUtGbmxMQlhKTjhDY0Rtc3JMLUNodFRSbkR0cmZYNnkxLWhCNDZvaFpJMThxMW1IUlRZemJWSkhxdC00TzJ6Z0w4TFo3QURVMjdLS3FlTnFCMFg2dXZxQk9rVEdldkRBWQ?oc=5",
-          "publication_date": "2026-10-20T15:10:43+00:00",
-          "source_count": 1
-        },
-        {
-          "group_id": "report-6686232aa4a558db3471",
-          "title": "Former Toronto Blue Jay, wife, charged with fraud - insauga.com",
-          "source_url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBuWC1EcGYtbGxSS3Fjd0VITGtwaGpWVGJDVUVXaTVGdE00UUVlMklXNE41RWNxMllfYXJ0MGhXQTBJeWZ1LUEtQjBLZVBfRVREZG5hdzZXeEthdTJOMHdBQWJ5NERlTC0wWVpmRVlVRm5rWk5JdWhUbFJDR3c?oc=5",
-          "publication_date": "2026-10-20T13:20:27+00:00",
-          "source_count": 1
-        }
-      ],
-      "reasons": [
-        "5 shared descriptive headline terms",
-        "Same source-mentioned place",
-        "Published within ten days"
-      ],
-      "priority": 8,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
-      "id": "candidate:report-136b503356adea0912aa:report-ca4ca315a14600e9ef84",
-      "group_ids": [
-        "report-136b503356adea0912aa",
-        "report-ca4ca315a14600e9ef84"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-136b503356adea0912aa",
-          "title": "Former Blue Jays player Rich Butler, wife charged in fraud probe - Toronto Sun",
-          "source_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOQkpBQmlYR281TFZIN0VLSWxlQkM0SXF6Y3N6TVFJb1pfYUJycXhCVmltVWp1aEVubUtGbmxMQlhKTjhDY0Rtc3JMLUNodFRSbkR0cmZYNnkxLWhCNDZvaFpJMThxMW1IUlRZemJWSkhxdC00TzJ6Z0w4TFo3QURVMjdLS3FlTnFCMFg2dXZxQk9rVEdldkRBWQ?oc=5",
-          "publication_date": "2026-10-20T15:10:43+00:00",
-          "source_count": 1
-        },
-        {
-          "group_id": "report-ca4ca315a14600e9ef84",
-          "title": "Former Toronto Blue Jays player charged in alleged scam - blogTO",
-          "source_url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNWW9pVnZOeHZ4YzRLN0JsbDJFdy1ONlFULThkWFlhODlqbUllNUppQzM4MnlwZG9ramJxVHF0aGdoR0JWYWtoby02MEdNSkx5YV9wV1VOUkZrejdSTnE2VFpTc2NBNDFsVVdJYmNaMktjLWpjdFpwV1hLM1FhYWdRczlJcWxTVXhWLV9DZUY0N3FIQQ?oc=5",
-          "publication_date": "2026-10-20T15:48:11+00:00",
-          "source_count": 1
-        }
-      ],
-      "reasons": [
-        "6 shared descriptive headline terms",
-        "Same source-mentioned place",
-        "Published within ten days"
-      ],
-      "priority": 8,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
-      "id": "candidate:report-136b503356adea0912aa:report-3fd8305329461b0d01ab",
-      "group_ids": [
-        "report-136b503356adea0912aa",
-        "report-3fd8305329461b0d01ab"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-136b503356adea0912aa",
-          "title": "Former Blue Jays player Rich Butler, wife charged in fraud probe - Toronto Sun",
-          "source_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOQkpBQmlYR281TFZIN0VLSWxlQkM0SXF6Y3N6TVFJb1pfYUJycXhCVmltVWp1aEVubUtGbmxMQlhKTjhDY0Rtc3JMLUNodFRSbkR0cmZYNnkxLWhCNDZvaFpJMThxMW1IUlRZemJWSkhxdC00TzJ6Z0w4TFo3QURVMjdLS3FlTnFCMFg2dXZxQk9rVEdldkRBWQ?oc=5",
-          "publication_date": "2026-10-20T15:10:43+00:00",
-          "source_count": 1
-        },
-        {
-          "group_id": "report-3fd8305329461b0d01ab",
-          "title": "Former Blue Jays player Rich Butler, wife, charged with fraud in Ontario - Toronto Star",
-          "source_url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNWUdOZkRmSkR2Y2xiMi13d0dkQVVFZktkX0stV1V1OGYtUlBkU1BaekRTbWc3N1l5ZHdsdGxiNF94TVZmdUlIandlUVBaenJJbUhlWUZKalFtbGVFSW1XbUl2c2dQYS00OEd0RXFvc3k4ZXQ4VDVTcmFhYXVic0lLN1FuRVVVZlVwQmg1cjJjbWJpQURVUTZacWNfNndPdWdrYmxNS3dza2Mya1FscG1CT3BvcG1rdnVLLUJvNk5GdEdsV0pvRmc0a3VMMktweWQxMEwyTFFxY2FKNTNVUHA1N0pRTWdjWENoMEg3Rm9KMEI3T2c?oc=5",
-          "publication_date": "2026-10-20T17:28:48+00:00",
-          "source_count": 1
-        }
-      ],
-      "reasons": [
-        "9 shared descriptive headline terms",
-        "Same source-mentioned place",
-        "Published within ten days"
-      ],
-      "priority": 8,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
-      "id": "candidate:report-076feb7a148e5d6ecffd:report-723af776d0a30e95a947",
-      "group_ids": [
-        "report-076feb7a148e5d6ecffd",
-        "report-723af776d0a30e95a947"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-076feb7a148e5d6ecffd",
-          "title": "2 men charged with fraud in probe of $300M Toronto hospital redevelopment contracts - Global News",
-          "source_url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5SVk5kR3BoU3RRdUFnTGhNVzY4RS1UR01pWV9Pd1VnLWVJNHd0NHZSUW9LY1d2YTFnU2RXcG1YWmpfUDFiREdPMFM3ZllEbmJDbmdvYk1BWW9BdWRPSUw1UWEzTEdKZXFFQnc?oc=5",
-          "publication_date": "2023-03-09T08:00:00+00:00",
-          "source_count": 1
-        },
-        {
-          "group_id": "report-723af776d0a30e95a947",
-          "title": "2 men charged with fraud after probe into $300M St. Michael's Hospital redevelopment - CBC",
-          "source_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOcGcyTFVHWE83TWswOFFWTnNHRlgxRnRqc1ROQVhOQVM2bFoySmdzWVd4eWtPNVJMUFVKZzJBeTJURkgyQk1lYUFKazlNUl90bFFZYUEwa2dUc1lLTm1LSG5IUDRuemJRR25xc01VYUQ0eTd5cnJwd2loV1BNVXZLTnVQOEU5VGJEQ0FSMzRvYUNUaFhLcXpZZTcwVTkxbUJI?oc=5",
-          "publication_date": "2023-03-09T08:00:00+00:00",
-          "source_count": 1
-        }
-      ],
-      "reasons": [
-        "6 shared descriptive headline terms",
-        "Overlapping scam method: Fraud investigations & enforcement",
-        "Published within ten days"
-      ],
-      "priority": 8,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
-      "id": "candidate:report-076feb7a148e5d6ecffd:report-8dde1d807a6a822c9894",
-      "group_ids": [
-        "report-076feb7a148e5d6ecffd",
-        "report-8dde1d807a6a822c9894"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-076feb7a148e5d6ecffd",
-          "title": "2 men charged with fraud in probe of $300M Toronto hospital redevelopment contracts - Global News",
-          "source_url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5SVk5kR3BoU3RRdUFnTGhNVzY4RS1UR01pWV9Pd1VnLWVJNHd0NHZSUW9LY1d2YTFnU2RXcG1YWmpfUDFiREdPMFM3ZllEbmJDbmdvYk1BWW9BdWRPSUw1UWEzTEdKZXFFQnc?oc=5",
-          "publication_date": "2023-03-09T08:00:00+00:00",
-          "source_count": 1
-        },
-        {
-          "group_id": "report-8dde1d807a6a822c9894",
-          "title": "2 men charged after $300M project at St. Mike's hospital - CityNews Toronto",
-          "source_url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxORlBydjdTSUdKMVlkS1ZQUVhzQmRLMGtwSGJFSWFtaVFEb2IzZTlGcmZ1ODJiR3FqUkxDcUk4WFRmYWU5dnNnaGw3aUZrd1FGZEJKY0g0aTJjbEtrOVNkUVFLX0NXQW5NQk1pMFYtZ1lvODdKODZEWWp0bmladmgyWDJnY3hXWUFjT0t6cV9oRQ?oc=5",
-          "publication_date": "2023-03-09T08:00:00+00:00",
-          "source_count": 1
-        }
-      ],
-      "reasons": [
-        "5 shared descriptive headline terms",
-        "Same source-mentioned place",
-        "Published within ten days"
-      ],
-      "priority": 8,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
-      "id": "candidate:report-723af776d0a30e95a947:report-db2f6f65270f82d3fafa",
-      "group_ids": [
-        "report-723af776d0a30e95a947",
-        "report-db2f6f65270f82d3fafa"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-723af776d0a30e95a947",
-          "title": "2 men charged with fraud after probe into $300M St. Michael's Hospital redevelopment - CBC",
-          "source_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOcGcyTFVHWE83TWswOFFWTnNHRlgxRnRqc1ROQVhOQVM2bFoySmdzWVd4eWtPNVJMUFVKZzJBeTJURkgyQk1lYUFKazlNUl90bFFZYUEwa2dUc1lLTm1LSG5IUDRuemJRR25xc01VYUQ0eTd5cnJwd2loV1BNVXZLTnVQOEU5VGJEQ0FSMzRvYUNUaFhLcXpZZTcwVTkxbUJI?oc=5",
-          "publication_date": "2023-03-09T08:00:00+00:00",
-          "source_count": 1
-        },
-        {
-          "group_id": "report-db2f6f65270f82d3fafa",
-          "title": "Two men charged with fraud in probe of $300M Toronto hospital redevelopment contracts - MooseJawToday.com",
-          "source_url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOMVo1d3BHc1pLWDlJS2JjQ0o3d2VHMmpqdEdGNmd3bmJxczBjQXlBWUpiYksxSHBfWU9pNTJLYXR4S3dqUFZzWXdlNHdpV0NOdDliQm40QUFQd1RKaU40MjRFazRCazR4WkhURXh0cHdqbXd6aVJ0ajNKZ3A0T2Zfd21EVW5PUUJFU3FEUFJZNFJ6SnFnZlE2cklGdzcyeHJVLTRVTjJXdjc2NlhTeHhWMkppeUdlQkMtU1B3bGNPdTVqdG82LUU5ZVVuMVlOM1o2?oc=5",
-          "publication_date": "2023-03-09T08:00:00+00:00",
-          "source_count": 1
-        }
-      ],
-      "reasons": [
-        "6 shared descriptive headline terms",
-        "Overlapping scam method: Fraud investigations & enforcement",
-        "Published within ten days"
-      ],
-      "priority": 8,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
-      "id": "candidate:report-8dde1d807a6a822c9894:report-db2f6f65270f82d3fafa",
-      "group_ids": [
-        "report-8dde1d807a6a822c9894",
-        "report-db2f6f65270f82d3fafa"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-8dde1d807a6a822c9894",
-          "title": "2 men charged after $300M project at St. Mike's hospital - CityNews Toronto",
-          "source_url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxORlBydjdTSUdKMVlkS1ZQUVhzQmRLMGtwSGJFSWFtaVFEb2IzZTlGcmZ1ODJiR3FqUkxDcUk4WFRmYWU5dnNnaGw3aUZrd1FGZEJKY0g0aTJjbEtrOVNkUVFLX0NXQW5NQk1pMFYtZ1lvODdKODZEWWp0bmladmgyWDJnY3hXWUFjT0t6cV9oRQ?oc=5",
-          "publication_date": "2023-03-09T08:00:00+00:00",
-          "source_count": 1
-        },
-        {
-          "group_id": "report-db2f6f65270f82d3fafa",
-          "title": "Two men charged with fraud in probe of $300M Toronto hospital redevelopment contracts - MooseJawToday.com",
-          "source_url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOMVo1d3BHc1pLWDlJS2JjQ0o3d2VHMmpqdEdGNmd3bmJxczBjQXlBWUpiYksxSHBfWU9pNTJLYXR4S3dqUFZzWXdlNHdpV0NOdDliQm40QUFQd1RKaU40MjRFazRCazR4WkhURXh0cHdqbXd6aVJ0ajNKZ3A0T2Zfd21EVW5PUUJFU3FEUFJZNFJ6SnFnZlE2cklGdzcyeHJVLTRVTjJXdjc2NlhTeHhWMkppeUdlQkMtU1B3bGNPdTVqdG82LUU5ZVVuMVlOM1o2?oc=5",
-          "publication_date": "2023-03-09T08:00:00+00:00",
-          "source_count": 1
-        }
-      ],
-      "reasons": [
-        "5 shared descriptive headline terms",
-        "Same source-mentioned place",
-        "Published within ten days"
-      ],
-      "priority": 8,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
-      "id": "candidate:report-3fd8305329461b0d01ab:report-df8b78e0954658949944",
-      "group_ids": [
-        "report-3fd8305329461b0d01ab",
-        "report-df8b78e0954658949944"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-3fd8305329461b0d01ab",
-          "title": "Former Blue Jays player Rich Butler, wife, charged with fraud in Ontario - Toronto Star",
-          "source_url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNWUdOZkRmSkR2Y2xiMi13d0dkQVVFZktkX0stV1V1OGYtUlBkU1BaekRTbWc3N1l5ZHdsdGxiNF94TVZmdUlIandlUVBaenJJbUhlWUZKalFtbGVFSW1XbUl2c2dQYS00OEd0RXFvc3k4ZXQ4VDVTcmFhYXVic0lLN1FuRVVVZlVwQmg1cjJjbWJpQURVUTZacWNfNndPdWdrYmxNS3dza2Mya1FscG1CT3BvcG1rdnVLLUJvNk5GdEdsV0pvRmc0a3VMMktweWQxMEwyTFFxY2FKNTNVUHA1N0pRTWdjWENoMEg3Rm9KMEI3T2c?oc=5",
-          "publication_date": "2026-10-20T17:28:48+00:00",
-          "source_count": 1
-        },
-        {
-          "group_id": "report-df8b78e0954658949944",
-          "title": "Former MLB player, wife charged after alleged $60K youth baseball program fraud - CityNews Toronto",
-          "source_url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPSVpqeG1HbEU3bkk3OHNlRUpmTVhYbmkwRWxOdEp1SXlqYXFxWTlQM0ZoLUJ0NVJTYnJlU3NLQklFY2dLUkY3VHdSdmVoeHhRdk4xZ2Y0U0RhUjYyd2ZSU2RkWkVETklfXzZaN25TNTJTM2pMTnpUZG8xdjVIOG5VdGRKdXRRSXc3blFqbnJkR1ZrUTM3UFdRbjljSHk3aUk?oc=5",
-          "publication_date": "2026-10-20T13:02:00+00:00",
-          "source_count": 1
-        }
-      ],
-      "reasons": [
-        "5 shared descriptive headline terms",
-        "Same source-mentioned place",
-        "Published within ten days"
-      ],
-      "priority": 8,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
-      "id": "candidate:report-3fd8305329461b0d01ab:report-c6590ddf6f96fa6dc425",
-      "group_ids": [
-        "report-3fd8305329461b0d01ab",
-        "report-c6590ddf6f96fa6dc425"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-3fd8305329461b0d01ab",
-          "title": "Former Blue Jays player Rich Butler, wife, charged with fraud in Ontario - Toronto Star",
-          "source_url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNWUdOZkRmSkR2Y2xiMi13d0dkQVVFZktkX0stV1V1OGYtUlBkU1BaekRTbWc3N1l5ZHdsdGxiNF94TVZmdUlIandlUVBaenJJbUhlWUZKalFtbGVFSW1XbUl2c2dQYS00OEd0RXFvc3k4ZXQ4VDVTcmFhYXVic0lLN1FuRVVVZlVwQmg1cjJjbWJpQURVUTZacWNfNndPdWdrYmxNS3dza2Mya1FscG1CT3BvcG1rdnVLLUJvNk5GdEdsV0pvRmc0a3VMMktweWQxMEwyTFFxY2FKNTNVUHA1N0pRTWdjWENoMEg3Rm9KMEI3T2c?oc=5",
-          "publication_date": "2026-10-20T17:28:48+00:00",
-          "source_count": 1
-        },
-        {
-          "group_id": "report-c6590ddf6f96fa6dc425",
-          "title": "Former Blue Jay, wife charged with fraud linked to Ontario youth baseball program fees: police - CBC",
-          "source_url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNVm01UHpSdTNQdTllM2lJZ1JHdlNLVHRZYnBWcFliR3hkSUpCVHgtS2liTVZzd1RNRzI0dndQdWFibXdxUTVmaW5rNjUxci1TZ01jYk84YUVxUUxEM2M0b2FYYm9QY3d2b3pvdkdKajRIUTV4MzV4dmF6NzJyNVNuWUs2VWhwSy1tajFoQVpKbm5Vdk0?oc=5",
-          "publication_date": "2026-10-20T14:50:00+00:00",
-          "source_count": 1
-        }
-      ],
-      "reasons": [
-        "5 shared descriptive headline terms",
-        "Overlapping scam method: Fraud investigations & enforcement",
-        "Published within ten days"
-      ],
-      "priority": 8,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
-      "id": "candidate:report-7da9fa3cc0d0d0169e1a:report-cb0769fe6ed3b1efad02",
-      "group_ids": [
-        "report-7da9fa3cc0d0d0169e1a",
-        "report-cb0769fe6ed3b1efad02"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-7da9fa3cc0d0d0169e1a",
-          "title": "Vancouver police officer charged with fraud, theft and breach of trust - Toronto Star",
-          "source_url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxPa0lJVG82aTRUNUtfRGNWNjNVM19rc3lDSzZqVzZwMWxoR3ZVQms3UDJnRjZvbTZsbUh4a0EyWHdjVkZQdnhObW90eHlNcURkZnRkbm8zc2dBRDc1MDk3Qnhjc29VZWlZek1YMmpMY0RIcWkzakNjeGNfWTBXb0tkMHh6VkFQSGZpdmY2VHIwRWdpaHlRUHU0Mm0waXRiZUdWVU5rdVhUNXhJNFVIS3ZZcm1iMmlGNURNRmMxUFpSVTQyTVBJb3U5dURzZ1RxSXFuanJNUk02UURQZW5fVmlYR0h2T0Fza0pySXIw?oc=5",
-          "publication_date": "2026-09-03T07:00:00+00:00",
-          "source_count": 1
-        },
-        {
-          "group_id": "report-cb0769fe6ed3b1efad02",
-          "title": "Vancouver police officer arrested, charged with theft, fraud and breach of trust - Yahoo News Canada",
-          "source_url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNZTV2QTgwNU5ScFJHTXlDTXhheXZoYXV6cE45LWVkdURUQUtjNlZRMjV1UVFmZF91QktVMzdTc0xJaU5PNjhSLXVhQi1UalFXbGd5ZzBlXzBtU3ZsSkdhYUc1ZzZsVUNqNXA5bjF6RE1HZ3BwblVfZ3BaZmRGeG1jN0ZCZzNhOG85bUE?oc=5",
-          "publication_date": "2026-09-03T07:00:00+00:00",
-          "source_count": 1
-        }
-      ],
-      "reasons": [
-        "6 shared descriptive headline terms",
-        "Same source-mentioned place",
+        "Overlapping scam method: Investment & crypto scams",
         "Published within ten days"
       ],
       "priority": 8,
@@ -1890,43 +2075,6 @@
       "reasons": [
         "5 shared descriptive headline terms",
         "Overlapping scam method: Digital fraud & cybercrime",
-        "Published within ten days"
-      ],
-      "priority": 8,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
-      "id": "candidate:report-08a32e2e2986b0403470:report-c34af3837568a319b32c",
-      "group_ids": [
-        "report-08a32e2e2986b0403470",
-        "report-c34af3837568a319b32c"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-08a32e2e2986b0403470",
-          "title": "Police: Elderly man loses 200K in cryptocurrency investment scam - CTV News",
-          "source_url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNN3MwWmJudUJXTnYtTDZERE5mc2E4NVFIT21iVmhsSzVhcnh3T3JiaEh4OUJiY1psNlRERkpUbE9YVmdobk1XSkNHbWhzV2xNb1FIcTZfR3JGeTduQi1uTFZ2bVFzTTk2VnRHTm1BcVhtbmh0NW9INXNyTlktVGk5ZzZtd01uU0stdUZNSjJVRUpDUGlwdFhMSnpIV0czbnRuaGNqSQ?oc=5",
-          "publication_date": "2026-09-21T07:00:00+00:00",
-          "source_count": 1
-        },
-        {
-          "group_id": "report-c34af3837568a319b32c",
-          "title": "A 78-year-old Barrie man has lost $200K in an online cryptocurrency investment scam - CTV News",
-          "source_url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOT2VpS3NZVFdodDREVkU5cEhYODZSalpVT1IwM0JiSnZ1cEhPa1paU0M0NElteTlzTkdXN0tkRTRnLXI4QWhBbnFxRXp2a181LVBkVUtCcHpEQjZZWUFSOWJfOUx6MmhVMGY1UW9zaXhNTEpnV0tDQ24zclkzSVFqbHFYd0tBTWRzQmh0eTFVT2pVX2VLS3RnOWJucFlyZUh6Snk3S2s4V3YzQWtFVEFzWjRPTDZLb0dadm1OOHlXdm4zU3Zkd09CVDZB?oc=5",
-          "publication_date": "2026-09-21T07:00:00+00:00",
-          "source_count": 1
-        }
-      ],
-      "reasons": [
-        "5 shared descriptive headline terms",
-        "Overlapping scam method: Investment & crypto scams",
         "Published within ten days"
       ],
       "priority": 8,
@@ -2198,30 +2346,30 @@
       ]
     },
     {
-      "id": "candidate:report-8191a61d23ee548aee3c:report-c422a126154f2c58ae8a",
+      "id": "candidate:report-08a32e2e2986b0403470:report-c34af3837568a319b32c",
       "group_ids": [
-        "report-8191a61d23ee548aee3c",
-        "report-c422a126154f2c58ae8a"
+        "report-08a32e2e2986b0403470",
+        "report-c34af3837568a319b32c"
       ],
       "headlines": [
         {
-          "group_id": "report-8191a61d23ee548aee3c",
-          "title": "Alleged fake nurse who operated on Vancouver Island arrested in U.S. - CBC",
-          "source_url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQaGZRaTlJdDhoeGdhamVvem5iRE9FalhpVVJrV0RUeWtoSzZhSTNtemZuNmhaVE5hOXl2eEJqZUdJZlJCUXAwXzM3LVNkNV9UaHNvR3pCb0o1WTdoRTZYc0JOMEVmV21hbnNkNUpZYXZNVEJCWUdxV29QV29iTmJ0MTNFcG5XX1RvN2RVd3NROUhPQlhHY3lqN1lxQlhJUDY0aXpmWG53?oc=5",
-          "publication_date": "2025-05-07T07:00:00+00:00",
+          "group_id": "report-08a32e2e2986b0403470",
+          "title": "Police: Elderly man loses 200K in cryptocurrency investment scam - CTV News",
+          "source_url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNN3MwWmJudUJXTnYtTDZERE5mc2E4NVFIT21iVmhsSzVhcnh3T3JiaEh4OUJiY1psNlRERkpUbE9YVmdobk1XSkNHbWhzV2xNb1FIcTZfR3JGeTduQi1uTFZ2bVFzTTk2VnRHTm1BcVhtbmh0NW9INXNyTlktVGk5ZzZtd01uU0stdUZNSjJVRUpDUGlwdFhMSnpIV0czbnRuaGNqSQ?oc=5",
+          "publication_date": "2026-09-21T07:00:00+00:00",
           "source_count": 1
         },
         {
-          "group_id": "report-c422a126154f2c58ae8a",
-          "title": "Alleged fake nurse who worked on Vancouver Island arrested in U.S.: police - CHEK News",
-          "source_url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPVDVBWkd1VW1NaVZabXJ4dEZxRVFrSzFyUlk3NDM2RUtMdW1jSTNxT3IySTh1RUg4d3F5QjNPTUxYSDNIak5hLUdFMnpGOUd0bzFycVUzWVlLU1FFMENOVFA0d2xVeHVvQmtlc2JUMzY2WUk1Y1MzczNNOHRrdTlULVFOOHFzTS1yUGRWbHdmM0RKYU1XZ3haV1ZqVXpLdXNfR2c0?oc=5",
-          "publication_date": "2025-05-06T07:00:00+00:00",
+          "group_id": "report-c34af3837568a319b32c",
+          "title": "A 78-year-old Barrie man has lost $200K in an online cryptocurrency investment scam - CTV News",
+          "source_url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOT2VpS3NZVFdodDREVkU5cEhYODZSalpVT1IwM0JiSnZ1cEhPa1paU0M0NElteTlzTkdXN0tkRTRnLXI4QWhBbnFxRXp2a181LVBkVUtCcHpEQjZZWUFSOWJfOUx6MmhVMGY1UW9zaXhNTEpnV0tDQ24zclkzSVFqbHFYd0tBTWRzQmh0eTFVT2pVX2VLS3RnOWJucFlyZUh6Snk3S2s4V3YzQWtFVEFzWjRPTDZLb0dadm1OOHlXdm4zU3Zkd09CVDZB?oc=5",
+          "publication_date": "2026-09-21T07:00:00+00:00",
           "source_count": 1
         }
       ],
       "reasons": [
-        "6 shared descriptive headline terms",
-        "Same source-mentioned place",
+        "5 shared descriptive headline terms",
+        "Overlapping scam method: Investment & crypto scams",
         "Published within ten days"
       ],
       "priority": 8,
@@ -2369,6 +2517,43 @@
       ],
       "reasons": [
         "5 shared descriptive headline terms",
+        "Same source-mentioned place",
+        "Published within ten days"
+      ],
+      "priority": 8,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
+      "id": "candidate:report-8191a61d23ee548aee3c:report-c422a126154f2c58ae8a",
+      "group_ids": [
+        "report-8191a61d23ee548aee3c",
+        "report-c422a126154f2c58ae8a"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-8191a61d23ee548aee3c",
+          "title": "Alleged fake nurse who operated on Vancouver Island arrested in U.S. - CBC",
+          "source_url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQaGZRaTlJdDhoeGdhamVvem5iRE9FalhpVVJrV0RUeWtoSzZhSTNtemZuNmhaVE5hOXl2eEJqZUdJZlJCUXAwXzM3LVNkNV9UaHNvR3pCb0o1WTdoRTZYc0JOMEVmV21hbnNkNUpZYXZNVEJCWUdxV29QV29iTmJ0MTNFcG5XX1RvN2RVd3NROUhPQlhHY3lqN1lxQlhJUDY0aXpmWG53?oc=5",
+          "publication_date": "2025-05-07T07:00:00+00:00",
+          "source_count": 1
+        },
+        {
+          "group_id": "report-c422a126154f2c58ae8a",
+          "title": "Alleged fake nurse who worked on Vancouver Island arrested in U.S.: police - CHEK News",
+          "source_url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPVDVBWkd1VW1NaVZabXJ4dEZxRVFrSzFyUlk3NDM2RUtMdW1jSTNxT3IySTh1RUg4d3F5QjNPTUxYSDNIak5hLUdFMnpGOUd0bzFycVUzWVlLU1FFMENOVFA0d2xVeHVvQmtlc2JUMzY2WUk1Y1MzczNNOHRrdTlULVFOOHFzTS1yUGRWbHdmM0RKYU1XZ3haV1ZqVXpLdXNfR2c0?oc=5",
+          "publication_date": "2025-05-06T07:00:00+00:00",
+          "source_count": 1
+        }
+      ],
+      "reasons": [
+        "6 shared descriptive headline terms",
         "Same source-mentioned place",
         "Published within ten days"
       ],
@@ -2592,117 +2777,6 @@
       "reasons": [
         "5 shared descriptive headline terms",
         "Overlapping scam method: Investment & crypto scams",
-        "Published within ten days"
-      ],
-      "priority": 8,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
-      "id": "candidate:report-374cac619a49b836b67e:report-8b561afdf90ed24741dc",
-      "group_ids": [
-        "report-374cac619a49b836b67e",
-        "report-8b561afdf90ed24741dc"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-374cac619a49b836b67e",
-          "title": "Ontario’s ‘Crypto King’ arrested and charged with fraud, laundering - CityNews Toronto",
-          "source_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNSVY3bFU1bmwza1pIRGl6S2RBQnlHSzlzd253V2tyX09kcUxRb3lQelpuTXlkUGJpbWNoQlk2QWFoVVBmcnVBa1d2Zll1UE5GTlJ3TEhGb3A2d2pZSWxFWm8xZW9YSHdDMWhJcWFnc0gyb21hcEZIcXlYbDdfZm5LWFJlWU9XSFJFUnJxekZISm9sUzFkcGZfeEJ0b043Zw?oc=5",
-          "publication_date": "2024-05-15T07:00:00+00:00",
-          "source_count": 1
-        },
-        {
-          "group_id": "report-8b561afdf90ed24741dc",
-          "title": "Ontario’s 'Crypto King' arrested, charged with fraud | RCI - Radio-Canada",
-          "source_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQR0o1Wm1HeGtHR3F0UUo3WkNhLUlwaEpuTXdXanF0a0dhZnR5SklvTzhLYlFHTXJpU1dxMERFYVExUXUwazFRam5LTXhZSXJHaVVrcXhxaDlyV0hoYU42c0RxRnEtS0czUWN1TUtqRmFZMmE5RnZkNFpoLTFYZlBBcUdadklHMktYcEdoNVNyUXJVa2pZYjhMVjJHVzd5b3d3Vnd1NVo1MDVYVkNGMk00a1dNRDM?oc=5",
-          "publication_date": "2024-05-15T07:00:00+00:00",
-          "source_count": 1
-        }
-      ],
-      "reasons": [
-        "5 shared descriptive headline terms",
-        "Overlapping scam method: Fraud investigations & enforcement, Investment & crypto scams",
-        "Published within ten days"
-      ],
-      "priority": 8,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
-      "id": "candidate:report-78f55fcd8a73043c0734:report-c9e2fc0e21d31f470f4c",
-      "group_ids": [
-        "report-78f55fcd8a73043c0734",
-        "report-c9e2fc0e21d31f470f4c"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-78f55fcd8a73043c0734",
-          "title": "Indigo employees’ personal information breached as part of ransomware attack on retailer - The Globe and Mail",
-          "source_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQMlU1WkJueEhGQjN3bFcyaEZ1NmJFeXlJQmtFZElnTlcwbzlBTFVJb3RxQTNJalNCdlQ1SC1Va2RhcGFPSGdnOU1Qdm9hWlV5MW9KSUJTbVlLV1d4eGNMZEZqazNHa1hjelJhOFlLVW5QVXRxcEMtV2lNRzB1ZEduNVNuRFMtaG8yZWJDNEY3UjhaWTJudjZ1bXZzTTQ5TUFBaXZQSGsyTQ?oc=5",
-          "publication_date": "2023-02-24T08:00:00+00:00",
-          "source_count": 1
-        },
-        {
-          "group_id": "report-c9e2fc0e21d31f470f4c",
-          "title": "Indigo says ransomware attack breached data of current and former employees - Global News",
-          "source_url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQamxzVmhNSzRNdnZ6eWx4VVNTajZqcXlzdjRKWTh3R05iaUxhQS1aRVptX3ZGZEFhVk1mTVZCc0pDMngzcVYzVXZmeFdILUtyTTc0LUtwME1YcE1mcWhwVGhETnJ1clBaMnM4XzljRTZDZVZGLUVfSEplV1FVcmRScWlNMDRRaFhTSGc?oc=5",
-          "publication_date": "2023-02-24T08:00:00+00:00",
-          "source_count": 1
-        }
-      ],
-      "reasons": [
-        "5 shared descriptive headline terms",
-        "Overlapping scam method: Digital fraud & cybercrime",
-        "Published within ten days"
-      ],
-      "priority": 8,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
-      "id": "candidate:report-15a8b863815f11493a6a:report-8c68aeb5960c47ffc28d",
-      "group_ids": [
-        "report-15a8b863815f11493a6a",
-        "report-8c68aeb5960c47ffc28d"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-15a8b863815f11493a6a",
-          "title": "Credit cards, passports, licences: Metro Vancouver police find thousands of pieces of stolen mail - CTV News",
-          "source_url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQeVJZdUFqOGFGM213TTRtRDhQMjlscEZyNEFud0lhcU9lNThOU1RVaXhNOWROR3lUWUE5NFJKSFVrZ3ktSDhFWWhVNlpsdlptcWtqcExfWGhEQ3RGQWZQSXdwNXRCdG1ZQVFyUVhZR3c4V2FxenRTdHozN2J2WDRQRnRHMjNzVzFRbHZ3YWF5Rk1ibGlVVmxId0ZILVFVWUREcmtGVzQzRXRYc0U5eERPXzg0bl9FeGluRWZ5UXlSLUJSMkZ5Sm1DTXczT3YtTGduLUE?oc=5",
-          "publication_date": "2024-09-18T07:00:00+00:00",
-          "source_count": 1
-        },
-        {
-          "group_id": "report-8c68aeb5960c47ffc28d",
-          "title": "B.C. crime news: Police seize 8,000 pieces of stolen mail, bank cards, guns - Vancouver Sun",
-          "source_url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9DVzVaNTZOdFJSdGN1V1BQT0dXX204OTk3R2ZZbUdqWmNiNWJvLUs2cXRlOWtuNEFKSnZFTHdFanpFd1dmWThtWXJicTE3VjdBMDZZMWlqMnlSVVFxdlQ2V05CWHZkaTdDZl9WaEh2V2MtVlVxX2xKWFV0WQ?oc=5",
-          "publication_date": "2024-09-22T07:00:00+00:00",
-          "source_count": 1
-        }
-      ],
-      "reasons": [
-        "5 shared descriptive headline terms",
-        "Same source-mentioned place",
         "Published within ten days"
       ],
       "priority": 8,
@@ -3345,6 +3419,43 @@
       ]
     },
     {
+      "id": "candidate:report-7b438c0073ecf4a0c186:report-e7207bd817bac03fdddb",
+      "group_ids": [
+        "report-7b438c0073ecf4a0c186",
+        "report-e7207bd817bac03fdddb"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-7b438c0073ecf4a0c186",
+          "title": "Health-care aide charged with defrauding 2 seniors of $500K - CTV News",
+          "source_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQSXhhUEFZMXhMWXVkM0RKdjFPek9Kbk9JRUxCWXBIaDBEMGhIUjREdzN5WmpvY0QycVBjZWl0YVNvaHRNVHZwZ205TnNBTXM3VFJFV2xPYjEyZlNiSWtKUnRCYlhQYkI5TlB1MFU1WjJ6cXJ3clhxLVdMa1dQYUpwZlloR2c0cnJpRTVBVXFXbXRZNlRTOWp3dXU2LUpNQlVZ?oc=5",
+          "publication_date": "2020-07-22T07:00:00+00:00",
+          "source_count": 1
+        },
+        {
+          "group_id": "report-e7207bd817bac03fdddb",
+          "title": "Edmonton health-care aide charged with defrauding seniors of $560,000 - CBC",
+          "source_url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPRy03QTVMOFI3aTdqM2stdUVJcEtsaXNyVnFWZDdrSDZ6QlRWNnFCMmNVckctUUpaTTMwVVlzTjFxUmkxYXJsYmh0Ump2NFBRU1lMbmZsM0lKRzJtM0ZLNC1lSFZuOVdwakNCNWpSX19FSG5TNWliOGpIbEo0eTUxN0Fsamp6OV94V0tESk8yRHNJNGs?oc=5",
+          "publication_date": "2020-07-22T07:00:00+00:00",
+          "source_count": 1
+        }
+      ],
+      "reasons": [
+        "6 shared descriptive headline terms",
+        "Overlapping scam method: Seniors & vulnerable victims",
+        "Published within ten days"
+      ],
+      "priority": 8,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
       "id": "candidate:report-3fcb2c44741a689c8dcf:report-df8b78e0954658949944",
       "group_ids": [
         "report-3fcb2c44741a689c8dcf",
@@ -3419,30 +3530,67 @@
       ]
     },
     {
-      "id": "candidate:report-7b438c0073ecf4a0c186:report-e7207bd817bac03fdddb",
+      "id": "candidate:report-2994b6b4b0464e86c059:report-8d5b4f8fdedecb920348",
       "group_ids": [
-        "report-7b438c0073ecf4a0c186",
-        "report-e7207bd817bac03fdddb"
+        "report-2994b6b4b0464e86c059",
+        "report-8d5b4f8fdedecb920348"
       ],
       "headlines": [
         {
-          "group_id": "report-7b438c0073ecf4a0c186",
-          "title": "Health-care aide charged with defrauding 2 seniors of $500K - CTV News",
-          "source_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQSXhhUEFZMXhMWXVkM0RKdjFPek9Kbk9JRUxCWXBIaDBEMGhIUjREdzN5WmpvY0QycVBjZWl0YVNvaHRNVHZwZ205TnNBTXM3VFJFV2xPYjEyZlNiSWtKUnRCYlhQYkI5TlB1MFU1WjJ6cXJ3clhxLVdMa1dQYUpwZlloR2c0cnJpRTVBVXFXbXRZNlRTOWp3dXU2LUpNQlVZ?oc=5",
-          "publication_date": "2020-07-22T07:00:00+00:00",
+          "group_id": "report-2994b6b4b0464e86c059",
+          "title": "Calgary not-for-profit group battles bank after alleged fraud | Watch News Videos Online - Global News",
+          "source_url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQQjY4UVhuQ29CZnJMZkFsVE9BM2FVM3B4Q3hyVUk2cVN2emFYTUExa2xmSW15aHh5ZjhyWGx5V1kxMjBRbkxTXzg0dVVzMDhISzNZRGNBOUhlZ2dVRExORlFFOXg2MWk1U3FRNVNUaTlBbnBJZ0dwZHpUSEtmUzYyRlZ1dFNpZVUxNldqeGxGZUYyY1h4SlltUlZBYkk5c0E?oc=5",
+          "publication_date": "2024-03-25T07:00:00+00:00",
           "source_count": 1
         },
         {
-          "group_id": "report-e7207bd817bac03fdddb",
-          "title": "Edmonton health-care aide charged with defrauding seniors of $560,000 - CBC",
-          "source_url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPRy03QTVMOFI3aTdqM2stdUVJcEtsaXNyVnFWZDdrSDZ6QlRWNnFCMmNVckctUUpaTTMwVVlzTjFxUmkxYXJsYmh0Ump2NFBRU1lMbmZsM0lKRzJtM0ZLNC1lSFZuOVdwakNCNWpSX19FSG5TNWliOGpIbEo0eTUxN0Fsamp6OV94V0tESk8yRHNJNGs?oc=5",
-          "publication_date": "2020-07-22T07:00:00+00:00",
+          "group_id": "report-8d5b4f8fdedecb920348",
+          "title": "Calgary not-for-profit battles big bank after fraudsters make off with $50K - Global News",
+          "source_url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNdE5vQm5BbDlTNmJGU0hrTDZUb1BzOC1mRlFTWlRPaDVDZ19vLVpQZmViUkkzWlFDLUZPaTdpSGgyOWVoeUwtTHE1NWNiVllNelRLTC0yQ0pEMkMyMVVMekhzZUt6cWcwS0JXSHg4eGdTY3hzUDJNOWNYYWIzTnBoU29zejhCVWVKZ2RhcQ?oc=5",
+          "publication_date": "2024-03-25T07:00:00+00:00",
           "source_count": 1
         }
       ],
       "reasons": [
-        "6 shared descriptive headline terms",
-        "Overlapping scam method: Seniors & vulnerable victims",
+        "5 shared descriptive headline terms",
+        "Same source-mentioned place",
+        "Published within ten days"
+      ],
+      "priority": 8,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
+      "id": "candidate:report-9b06da84d8731fd36f33:report-a2fc5df07bd9a7dc58e0",
+      "group_ids": [
+        "report-9b06da84d8731fd36f33",
+        "report-a2fc5df07bd9a7dc58e0"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-9b06da84d8731fd36f33",
+          "title": "Senior charged after allegedly claiming group's $1M lottery winnings for himself - CBC",
+          "source_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNVHhnYkd6SGw2UTdwM3B5X2V0R1BCVWxZbnRmX3hBSGxyalBoUGFlMDFNV0pPNDcxU3ZFZzVBazZBaXhPOURSU0xLa3VYcmlmZHNJdGt1bkZ1cVdYM19yaUhNQ1RlSjVxUVdBYjVUZi1FUWdtY2wwajlrT09VQnhtS1ozX24?oc=5",
+          "publication_date": "2025-11-25T08:00:00+00:00",
+          "source_count": 1
+        },
+        {
+          "group_id": "report-a2fc5df07bd9a7dc58e0",
+          "title": "Man charged after $1M lottery winnings from ‘group arrangement’ claimed for himself: police - Global News",
+          "source_url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9CZVdwWU5SNzFXZ2VkT29DZkpoc0E1bElxcUduMWFDWnNLNkpUVkdhUUlpbjZiWno3dXo3TGdPcGsybXBlM2JyVEJGUGJBdW9NdzV4ZnV0VEhnM0JNYkJ1cDQyUEh5ZFFLamRqOUF2ZVBBZmtnWDItLUF6dTl3dw?oc=5",
+          "publication_date": "2025-11-25T08:00:00+00:00",
+          "source_count": 1
+        }
+      ],
+      "reasons": [
+        "5 shared descriptive headline terms",
+        "Overlapping scam method: Gambling, gaming & casino",
         "Published within ten days"
       ],
       "priority": 8,
@@ -3530,80 +3678,6 @@
       ]
     },
     {
-      "id": "candidate:report-9acebf36b6ac1374e625:report-c6590ddf6f96fa6dc425",
-      "group_ids": [
-        "report-9acebf36b6ac1374e625",
-        "report-c6590ddf6f96fa6dc425"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-9acebf36b6ac1374e625",
-          "title": "Former Blue Jay Rich Butler charged with fraud in Ontario - The Globe and Mail",
-          "source_url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPNnZBNHNGeTlRUUV1SkFud3pvcXZDdXhobUN6M2tIY1JWMkRmaHJOU19hZ3p0b21GQlZTamIxbE1qWDNMdTVBc1VWZUVCbk1Oc2g1ZmZZcEFlYUl6R0p4ZG80NnFvdzdnSDZhUjNPeEhlTUNvU1RVcFFaLWZKNkdVMkhvcjczbDdkTVlUQWNjR2MtXzExbmhTWEtXNFdLek04WlVsMzN3dUo?oc=5",
-          "publication_date": "2026-10-21T00:23:47+00:00",
-          "source_count": 1
-        },
-        {
-          "group_id": "report-c6590ddf6f96fa6dc425",
-          "title": "Former Blue Jay, wife charged with fraud linked to Ontario youth baseball program fees: police - CBC",
-          "source_url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNVm01UHpSdTNQdTllM2lJZ1JHdlNLVHRZYnBWcFliR3hkSUpCVHgtS2liTVZzd1RNRzI0dndQdWFibXdxUTVmaW5rNjUxci1TZ01jYk84YUVxUUxEM2M0b2FYYm9QY3d2b3pvdkdKajRIUTV4MzV4dmF6NzJyNVNuWUs2VWhwSy1tajFoQVpKbm5Vdk0?oc=5",
-          "publication_date": "2026-10-20T14:50:00+00:00",
-          "source_count": 1
-        }
-      ],
-      "reasons": [
-        "5 shared descriptive headline terms",
-        "Overlapping scam method: Fraud investigations & enforcement",
-        "Published within ten days"
-      ],
-      "priority": 8,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
-      "id": "candidate:report-3fd8305329461b0d01ab:report-9acebf36b6ac1374e625",
-      "group_ids": [
-        "report-3fd8305329461b0d01ab",
-        "report-9acebf36b6ac1374e625"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-3fd8305329461b0d01ab",
-          "title": "Former Blue Jays player Rich Butler, wife, charged with fraud in Ontario - Toronto Star",
-          "source_url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNWUdOZkRmSkR2Y2xiMi13d0dkQVVFZktkX0stV1V1OGYtUlBkU1BaekRTbWc3N1l5ZHdsdGxiNF94TVZmdUlIandlUVBaenJJbUhlWUZKalFtbGVFSW1XbUl2c2dQYS00OEd0RXFvc3k4ZXQ4VDVTcmFhYXVic0lLN1FuRVVVZlVwQmg1cjJjbWJpQURVUTZacWNfNndPdWdrYmxNS3dza2Mya1FscG1CT3BvcG1rdnVLLUJvNk5GdEdsV0pvRmc0a3VMMktweWQxMEwyTFFxY2FKNTNVUHA1N0pRTWdjWENoMEg3Rm9KMEI3T2c?oc=5",
-          "publication_date": "2026-10-20T17:28:48+00:00",
-          "source_count": 1
-        },
-        {
-          "group_id": "report-9acebf36b6ac1374e625",
-          "title": "Former Blue Jay Rich Butler charged with fraud in Ontario - The Globe and Mail",
-          "source_url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPNnZBNHNGeTlRUUV1SkFud3pvcXZDdXhobUN6M2tIY1JWMkRmaHJOU19hZ3p0b21GQlZTamIxbE1qWDNMdTVBc1VWZUVCbk1Oc2g1ZmZZcEFlYUl6R0p4ZG80NnFvdzdnSDZhUjNPeEhlTUNvU1RVcFFaLWZKNkdVMkhvcjczbDdkTVlUQWNjR2MtXzExbmhTWEtXNFdLek04WlVsMzN3dUo?oc=5",
-          "publication_date": "2026-10-21T00:23:47+00:00",
-          "source_count": 1
-        }
-      ],
-      "reasons": [
-        "6 shared descriptive headline terms",
-        "Overlapping scam method: Fraud investigations & enforcement",
-        "Published within ten days"
-      ],
-      "priority": 8,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
       "id": "candidate:report-3fd8305329461b0d01ab:report-ca4ca315a14600e9ef84",
       "group_ids": [
         "report-3fd8305329461b0d01ab",
@@ -3628,43 +3702,6 @@
       "reasons": [
         "6 shared descriptive headline terms",
         "Same source-mentioned place",
-        "Published within ten days"
-      ],
-      "priority": 8,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
-      "id": "candidate:report-07b878b4dc2484407054:report-90b289bed8c24d200244",
-      "group_ids": [
-        "report-07b878b4dc2484407054",
-        "report-90b289bed8c24d200244"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-07b878b4dc2484407054",
-          "title": "Canada can do more to prosecute sophisticated money laundering cases: watchdog report - CFJC Today Kamloops",
-          "source_url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOZHpIMksybERTNEw0ZHlZTGtXemQxQWhjX1pWLXJQSzFrZU5UaXVYYm5kRXpfa0RJbjlVRXNSUGJ6ZU5xQnVxUW9XWHBlMHdZYktzb3VVVkVBb2g2RVQ2aGo1d1JOWnlfYm5RLVZhTHBLQ0k0czh3RlJaTGNsQzhJNVBYeXJGT19USnFmOGN5R3lQWVltTTUtYzNhcEwwdWJVM0p5bzJqVWMtdUo5WVlia1dpdW9SM19YS2c?oc=5",
-          "publication_date": "2026-09-29T07:00:00+00:00",
-          "source_count": 1
-        },
-        {
-          "group_id": "report-90b289bed8c24d200244",
-          "title": "Canada can do more to prosecute sophisticated money laundering cases: watchdog report - CTV News",
-          "source_url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQT3NvY0UzbWpPTnJhMlU4ZU5DWWNBZ2xfOGxrUVNHYUcxakpodHFCNXlpenhSNGFuRlFSX2xHZHRaREpUdUdaSUxoWEpMMURBM1hCeElVY0tlSlJ5ZWQxWFNRdjBSdW45UmRBSHkzajdTRmVacXF5Rk1GaXBTNGFSclpJU1NjWjI5VDhPOTFMbTRVZGM1WlJTc2VRMXZlOWd1Uy0wcS1wWGd2TU9CRF9vWE5Pdjk5aXoxSG13RDJ1aVRtSUE?oc=5",
-          "publication_date": "2026-09-29T07:00:00+00:00",
-          "source_count": 1
-        }
-      ],
-      "reasons": [
-        "6 shared descriptive headline terms",
-        "Overlapping scam method: Money mules & laundering",
         "Published within ten days"
       ],
       "priority": 8,
@@ -3715,6 +3752,78 @@
       ]
     },
     {
+      "id": "candidate:report-3cd60ca7ce0cd092fe58:report-cbbcf1b388ef3275c6d3",
+      "group_ids": [
+        "report-3cd60ca7ce0cd092fe58",
+        "report-cbbcf1b388ef3275c6d3"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-3cd60ca7ce0cd092fe58",
+          "title": "Charges Laid In Lengthy, Multi-Million Dollar Fraud Investigation Involving Former Royal Bank Of Canada Bu ... - Kawartha 411",
+          "source_url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxNdm9PMG9EVWZOOTEzZGJaelJPbVh0bTNpUGZhVVBQZlpSSWZWWlowaUl4dEE2OFV1dWtTdmVZc2JGSV8yRy1JV2RGdS1DVVhNeW9KakVzWndzeGx1aHVzTHAxTDVnZVBpekFoTDEtNG8xM19DMkYtc09MWkIwMTJIXzhVaXpIQk5ob1ROX3JGLVA3OW1acXNZYTREbXFTZmpHbEo3NTRPWnVxZmc3RXVZT2hCLVhaLTdhWEhuOFg4SzZpWXA5UmRoMWxVSkczY0VkYzFhRkNYVkpFN2traE9lczVlUng0RVZiaVRRMk5qMNIB9wFBVV95cUxOWGRENkxaTDIyVXZJVWFQYU9oeDZDcWM5cVc2dGJZUDJCN2x4cmF2SEFnd3FsMkNzMFpxdnJTdDJJaUdaMFhqVnJjYUR6YmMxanlDU3pYSnJNeHl4ZFY5Zl84UFhGSTlNZlBiYm9oeERBSjRIRVdRZGFQaTdPR2tKWFdKUnJCRFdyWDZLejh2dnBJVV9uTXc4dVAxZ3loVTFVWU5LQlV6TDh4RU5KSzgwcTJSdFVZR3h4dUxzU3NkZXF0SkFaekpQRGZ3ZzVmd1dud193UGZpV1pIMHlaWG1VNlJSYkNaTUtraDJCV05wY3NLbV9BZ01r?oc=5",
+          "publication_date": "2022-04-22T07:00:00+00:00",
+          "source_count": 1
+        },
+        {
+          "group_id": "report-cbbcf1b388ef3275c6d3",
+          "title": "Former RBC business manager charged with fraud over falsified business loans - The Globe and Mail",
+          "source_url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPLU1jc1BnZ1RGcTZvUzB0MW1BcU43OEJYYktSYVJob3NGNjJkTjJyWWtjZldsa29XNWF2UlE5WHRZYV9kTjJpSkpzZWV5d0xKbTdNMUNjZnQteF9JZ21EZjd6b09rS1BsdWxNcXUxdkgwQXJ2TVBCSV9sWkVrUnQzWDhQbjJNWlpCbUhCNmdxVk1vOER2YXdlX190TDJxREZSWEM0RXVWdWQtbjM5Qm1pN0ZkZkNPcEhYOVhRNA?oc=5",
+          "publication_date": "2022-04-22T07:00:00+00:00",
+          "source_count": 1
+        }
+      ],
+      "reasons": [
+        "Same organization explicitly named: RBC",
+        "Published within ten days"
+      ],
+      "priority": 7,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
+      "id": "candidate:report-194a6f8a120316b73b31:report-5831b04a2938a773c003",
+      "group_ids": [
+        "report-194a6f8a120316b73b31",
+        "report-5831b04a2938a773c003"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-194a6f8a120316b73b31",
+          "title": "TD Bank Investors Advance Suit Over Money Laundering Issues - Bloomberg Law News",
+          "source_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQSzV1bTYydlpNUWt6OEE2Q2diNzZWOXFYa0tOTUgwZE16NGhWZWd2aWxrRFB5VHJxUFJlQ081TkYyYTZGTzdCZW5FMnEtMG9EMUdwcWdjaWw2a3V6bDdmZzduX0V5SkJFYUtsNDd0aFBrRDdfT1luS0RPenlvRFRYSW4zVjhHSW5MbHdKUlNsWW9YMTR5XzBJSkdGUVFIUk9rYWtubGJxcw?oc=5",
+          "publication_date": "2026-10-14T07:00:00+00:00",
+          "source_count": 1
+        },
+        {
+          "group_id": "report-5831b04a2938a773c003",
+          "title": "NEWS: Former TD Bank employee sentenced for role in money laundering scheme - AML Intelligence",
+          "source_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPbTJOMjM4djlBSF9jR0lZVGI3bHRNWVVObnBhd0x4VEd6c3NvN0RJQ3dIVG1WOWYyUmNVZnItUEhwTnlYZUdqQTdTUXBsanZBczlBdGtxMUZzc0h1MXpSVTdtc0NlVUtOUFlERmJMaktPVTFHb3p0QWsyS2lzcUI2TGlhaWhjTjc1Tks0MGdoeUQzdk1KQkkxbnlnMi1uSDNxMEZSZzZyaEl5Vzc0NXA0?oc=5",
+          "publication_date": "2026-07-20T07:00:00+00:00",
+          "source_count": 1
+        }
+      ],
+      "reasons": [
+        "Same organization explicitly named: TD",
+        "Overlapping scam method: Money mules & laundering"
+      ],
+      "priority": 7,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
       "id": "candidate:report-364d35087e558eecb398:report-85b0f0634acbc76abf96",
       "group_ids": [
         "report-364d35087e558eecb398",
@@ -3739,6 +3848,116 @@
       "reasons": [
         "Same organization explicitly named: TD",
         "Overlapping scam method: Money mules & laundering"
+      ],
+      "priority": 7,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
+      "id": "candidate:report-0e6dd7c424b5cc98aa69:report-1b567fc3e156b58c117d",
+      "group_ids": [
+        "report-0e6dd7c424b5cc98aa69",
+        "report-1b567fc3e156b58c117d"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-0e6dd7c424b5cc98aa69",
+          "title": "Former B.C. gaming minister agrees he was 'unfair' to Mountie who raised alarm on money laundering - CBC",
+          "source_url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQQ0o1WXZsVkJZdUgyV3JjTUM2UUhpNWRTeWRoaVpVX3NRLVFzYmRlc0FoR1BEcEQ1VkNqQmdvOVh0ZjlIVEpXajVKX01sSzhRT2RVaWcyNzVaRWZlaHZacTdZRVJ4VTItQlh0NEU3UzNHT0lfa3BUQ1NvYVotYW5vZXE3NFBvcVItLXd5TUxpVUxERmVYN0o5Rm9QU2xZV1hZbDc5blFmTU04QllmbFctMjU5UEZaaHNuNTYyN2VkbzYzcklfVlE?oc=5",
+          "publication_date": "2021-05-15T07:00:00+00:00",
+          "source_count": 1
+        },
+        {
+          "group_id": "report-1b567fc3e156b58c117d",
+          "title": "Allegations B.C. prioritized gaming revenue over money laundering are 'offensive,' former minister says - CBC",
+          "source_url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOQUF0MzUtX0FkWFBDd1FQQXRtVFROb3k3ZkEwU0YycTdrNlVfM1dsMTcxSkdJVm14cUZxal9jeDJFb3VDSnd3clVjTkZXYUI2VXJ6MGtZMXRDakZqMTVpb1h2OWFRU0I3djFUaXFpb25aUnFrSWRHbl9BRzVEUU9lTjRPZDQtWTJRZXlIaVRHSWlscFFGdkFzVUVGYWZsVDA?oc=5",
+          "publication_date": "2021-04-23T07:00:00+00:00",
+          "source_count": 2
+        }
+      ],
+      "reasons": [
+        "5 shared descriptive headline terms",
+        "Overlapping scam method: Money mules & laundering",
+        "Published within 45 days"
+      ],
+      "priority": 7,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
+      "id": "candidate:report-bfbf12ee5fb12e8691fc:report-df415971d68fc1a31145",
+      "group_ids": [
+        "report-bfbf12ee5fb12e8691fc",
+        "report-df415971d68fc1a31145"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-bfbf12ee5fb12e8691fc",
+          "title": "Gangs made B.C. casinos too dangerous to investigate for money laundering, inquiry hears - Global News",
+          "source_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQY1pHQ240TjlYUkx5YkhWdDFOb3ZNbTlHcW51Y19NNXV2dGFOTllkRHlEd1VzX0p0NFpfTFpFYXQ2WGlJcTJrRnVjMUVQcXVheXREVURTUVFJVThFVjhlci0tR1IyWEo3VFVGT3FIZWRCX2ROUHlwRHBoUTRfRTdFQml4VVo?oc=5",
+          "publication_date": "2021-01-22T08:00:00+00:00",
+          "source_count": 1
+        },
+        {
+          "group_id": "report-df415971d68fc1a31145",
+          "title": "‘Vancouver Model’ money laundering connects B.C., Las Vegas and Macau casinos, inquiry hears - Global News",
+          "source_url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNMXBBcjlvQ2V0c05YcElmWl9qN3BXSXNmRDBpUVBnTmNUY2dyZEFFbkhpZWlaUHZtRHd2TktuV3Y0cF93VEg1TGwzVVlQTXhYVTBIbG1jY1RhR1VveHR0VHJVZDNaY3Mxd0ZILVo3b2ZMazlHWjlxcThWMmJtRHRUM3ZEZjNaSlFGc0FNWUln?oc=5",
+          "publication_date": "2021-03-01T08:00:00+00:00",
+          "source_count": 1
+        }
+      ],
+      "reasons": [
+        "5 shared descriptive headline terms",
+        "Overlapping scam method: Gambling, gaming & casino, Money mules & laundering",
+        "Published within 45 days"
+      ],
+      "priority": 7,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
+      "id": "candidate:report-27862541184e9885781e:report-c0f06d2f6276bcff5022",
+      "group_ids": [
+        "report-27862541184e9885781e",
+        "report-c0f06d2f6276bcff5022"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-27862541184e9885781e",
+          "title": "Royal Bank of Canada ordered to pay $4.25M penalty for consumer violation - CTV News",
+          "source_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNNi04LWpRa3JBcXpXZzR5OHA0ams4TWpfTWJVUDdHazBsLVNXX0M4Z1pKRHNHYURWSVVkYzdjc08zRU1pVkVfRDVXMkJfS21mbDhsRGtveEtRWnJpRTlYYjhHVzhaUVNzRGtpUXlZVnZhZ0RVMGxxZzcyRFBHY240Y1NQT0JZam1CV0VZaGpRbTc0TTJCQ0hKX1c3dExzMThKOTdic2lNTHQ2X21TNjZz?oc=5",
+          "publication_date": "2026-06-25T07:00:00+00:00",
+          "source_count": 1
+        },
+        {
+          "group_id": "report-c0f06d2f6276bcff5022",
+          "title": "RBC pays penalty after over 200K Canadians affected by \"inaccurate\" credit card statements | National - Daily Hive",
+          "source_url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5jNDZBM201SlJPdGFUTXlxM0o2cDIxNGg3all0QkR5QTd0d3BlSWVBRk5haHVYcUhscl94MjdDYzlwb2dZM0IxN1FQSmRXZVRVY1RXSHRnWnc2YXdkNlB4ZHVFakFsOGQz?oc=5",
+          "publication_date": "2026-06-26T07:00:00+00:00",
+          "source_count": 1
+        }
+      ],
+      "reasons": [
+        "Same organization explicitly named: RBC",
+        "Published within ten days"
       ],
       "priority": 7,
       "status": "unverified_suggested_connection",
@@ -3811,6 +4030,43 @@
       "reasons": [
         "Same organization explicitly named: RBC",
         "Published within ten days"
+      ],
+      "priority": 7,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
+      "id": "candidate:report-644605ed2dce216d86d1:report-6f90834d9e02d0065f91",
+      "group_ids": [
+        "report-644605ed2dce216d86d1",
+        "report-6f90834d9e02d0065f91"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-644605ed2dce216d86d1",
+          "title": "OPP arrest 2 more suspects in ongoing door-to-door sales fraud investigation - CityNews Toronto",
+          "source_url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQN2xvMnpYOXdTVFZzd01IRXp5d2VpOFd4R2NaYURmVXRXUHZaTEpfNFI4aERoQUhTSFlrbEtmN1lHOHVjR2l0UHRhUWN0M3JXaG5jUzdxTWVLOGdwcjNiLVJKVXhIYkZFekdxRWlEdmgyelhTWlNEcS1qS1JNQzdpOGxSSUtHUGFqYXB6ODM0cjZ1MkFLYzRmZG1n?oc=5",
+          "publication_date": "2024-10-29T07:00:00+00:00",
+          "source_count": 1
+        },
+        {
+          "group_id": "report-6f90834d9e02d0065f91",
+          "title": "More than 200 victimized in door-to-door fraud scheme: OPP - CityNews Toronto",
+          "source_url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPM1BOZ09DbVJZeWdheE9iNVZpelJNd0hOZ0tUbUpZQjFQUW5kV0RxTUVaeG45QktCbU5oZF9LSHlIMG9nY3YydTVERktVRmk4cjlaSHJVemxycGFORTFMYVgzSlk0RHhPWW5JNWFMR0tNRU4zSEN2R0REWU1BSGVVTE5JbTMzZE52X1B4d1Z4c1lSejh0SllUSVprMFBadGFtMjMzT3hzQWREcTQzUXc?oc=5",
+          "publication_date": "2024-09-19T07:00:00+00:00",
+          "source_count": 1
+        }
+      ],
+      "reasons": [
+        "5 shared descriptive headline terms",
+        "Same source-mentioned place",
+        "Published within 45 days"
       ],
       "priority": 7,
       "status": "unverified_suggested_connection",
@@ -3971,115 +4227,6 @@
       ]
     },
     {
-      "id": "candidate:report-644605ed2dce216d86d1:report-6f90834d9e02d0065f91",
-      "group_ids": [
-        "report-644605ed2dce216d86d1",
-        "report-6f90834d9e02d0065f91"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-644605ed2dce216d86d1",
-          "title": "OPP arrest 2 more suspects in ongoing door-to-door sales fraud investigation - CityNews Toronto",
-          "source_url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQN2xvMnpYOXdTVFZzd01IRXp5d2VpOFd4R2NaYURmVXRXUHZaTEpfNFI4aERoQUhTSFlrbEtmN1lHOHVjR2l0UHRhUWN0M3JXaG5jUzdxTWVLOGdwcjNiLVJKVXhIYkZFekdxRWlEdmgyelhTWlNEcS1qS1JNQzdpOGxSSUtHUGFqYXB6ODM0cjZ1MkFLYzRmZG1n?oc=5",
-          "publication_date": "2024-10-29T07:00:00+00:00",
-          "source_count": 1
-        },
-        {
-          "group_id": "report-6f90834d9e02d0065f91",
-          "title": "More than 200 victimized in door-to-door fraud scheme: OPP - CityNews Toronto",
-          "source_url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPM1BOZ09DbVJZeWdheE9iNVZpelJNd0hOZ0tUbUpZQjFQUW5kV0RxTUVaeG45QktCbU5oZF9LSHlIMG9nY3YydTVERktVRmk4cjlaSHJVemxycGFORTFMYVgzSlk0RHhPWW5JNWFMR0tNRU4zSEN2R0REWU1BSGVVTE5JbTMzZE52X1B4d1Z4c1lSejh0SllUSVprMFBadGFtMjMzT3hzQWREcTQzUXc?oc=5",
-          "publication_date": "2024-09-19T07:00:00+00:00",
-          "source_count": 1
-        }
-      ],
-      "reasons": [
-        "5 shared descriptive headline terms",
-        "Same source-mentioned place",
-        "Published within 45 days"
-      ],
-      "priority": 7,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
-      "id": "candidate:report-27862541184e9885781e:report-c0f06d2f6276bcff5022",
-      "group_ids": [
-        "report-27862541184e9885781e",
-        "report-c0f06d2f6276bcff5022"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-27862541184e9885781e",
-          "title": "Royal Bank of Canada ordered to pay $4.25M penalty for consumer violation - CTV News",
-          "source_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNNi04LWpRa3JBcXpXZzR5OHA0ams4TWpfTWJVUDdHazBsLVNXX0M4Z1pKRHNHYURWSVVkYzdjc08zRU1pVkVfRDVXMkJfS21mbDhsRGtveEtRWnJpRTlYYjhHVzhaUVNzRGtpUXlZVnZhZ0RVMGxxZzcyRFBHY240Y1NQT0JZam1CV0VZaGpRbTc0TTJCQ0hKX1c3dExzMThKOTdic2lNTHQ2X21TNjZz?oc=5",
-          "publication_date": "2026-06-25T07:00:00+00:00",
-          "source_count": 1
-        },
-        {
-          "group_id": "report-c0f06d2f6276bcff5022",
-          "title": "RBC pays penalty after over 200K Canadians affected by \"inaccurate\" credit card statements | National - Daily Hive",
-          "source_url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5jNDZBM201SlJPdGFUTXlxM0o2cDIxNGg3all0QkR5QTd0d3BlSWVBRk5haHVYcUhscl94MjdDYzlwb2dZM0IxN1FQSmRXZVRVY1RXSHRnWnc2YXdkNlB4ZHVFakFsOGQz?oc=5",
-          "publication_date": "2026-06-26T07:00:00+00:00",
-          "source_count": 1
-        }
-      ],
-      "reasons": [
-        "Same organization explicitly named: RBC",
-        "Published within ten days"
-      ],
-      "priority": 7,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
-      "id": "candidate:report-3cd60ca7ce0cd092fe58:report-cbbcf1b388ef3275c6d3",
-      "group_ids": [
-        "report-3cd60ca7ce0cd092fe58",
-        "report-cbbcf1b388ef3275c6d3"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-3cd60ca7ce0cd092fe58",
-          "title": "Charges Laid In Lengthy, Multi-Million Dollar Fraud Investigation Involving Former Royal Bank Of Canada Bu ... - Kawartha 411",
-          "source_url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxNdm9PMG9EVWZOOTEzZGJaelJPbVh0bTNpUGZhVVBQZlpSSWZWWlowaUl4dEE2OFV1dWtTdmVZc2JGSV8yRy1JV2RGdS1DVVhNeW9KakVzWndzeGx1aHVzTHAxTDVnZVBpekFoTDEtNG8xM19DMkYtc09MWkIwMTJIXzhVaXpIQk5ob1ROX3JGLVA3OW1acXNZYTREbXFTZmpHbEo3NTRPWnVxZmc3RXVZT2hCLVhaLTdhWEhuOFg4SzZpWXA5UmRoMWxVSkczY0VkYzFhRkNYVkpFN2traE9lczVlUng0RVZiaVRRMk5qMNIB9wFBVV95cUxOWGRENkxaTDIyVXZJVWFQYU9oeDZDcWM5cVc2dGJZUDJCN2x4cmF2SEFnd3FsMkNzMFpxdnJTdDJJaUdaMFhqVnJjYUR6YmMxanlDU3pYSnJNeHl4ZFY5Zl84UFhGSTlNZlBiYm9oeERBSjRIRVdRZGFQaTdPR2tKWFdKUnJCRFdyWDZLejh2dnBJVV9uTXc4dVAxZ3loVTFVWU5LQlV6TDh4RU5KSzgwcTJSdFVZR3h4dUxzU3NkZXF0SkFaekpQRGZ3ZzVmd1dud193UGZpV1pIMHlaWG1VNlJSYkNaTUtraDJCV05wY3NLbV9BZ01r?oc=5",
-          "publication_date": "2022-04-22T07:00:00+00:00",
-          "source_count": 1
-        },
-        {
-          "group_id": "report-cbbcf1b388ef3275c6d3",
-          "title": "Former RBC business manager charged with fraud over falsified business loans - The Globe and Mail",
-          "source_url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPLU1jc1BnZ1RGcTZvUzB0MW1BcU43OEJYYktSYVJob3NGNjJkTjJyWWtjZldsa29XNWF2UlE5WHRZYV9kTjJpSkpzZWV5d0xKbTdNMUNjZnQteF9JZ21EZjd6b09rS1BsdWxNcXUxdkgwQXJ2TVBCSV9sWkVrUnQzWDhQbjJNWlpCbUhCNmdxVk1vOER2YXdlX190TDJxREZSWEM0RXVWdWQtbjM5Qm1pN0ZkZkNPcEhYOVhRNA?oc=5",
-          "publication_date": "2022-04-22T07:00:00+00:00",
-          "source_count": 1
-        }
-      ],
-      "reasons": [
-        "Same organization explicitly named: RBC",
-        "Published within ten days"
-      ],
-      "priority": 7,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
       "id": "candidate:report-c811e993aa423e129100:report-fb5b82e1f5408dd917cf",
       "group_ids": [
         "report-c811e993aa423e129100",
@@ -4105,42 +4252,6 @@
         "5 shared descriptive headline terms",
         "Overlapping scam method: Investment & crypto scams",
         "Published within 45 days"
-      ],
-      "priority": 7,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
-      "id": "candidate:report-194a6f8a120316b73b31:report-5831b04a2938a773c003",
-      "group_ids": [
-        "report-194a6f8a120316b73b31",
-        "report-5831b04a2938a773c003"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-194a6f8a120316b73b31",
-          "title": "TD Bank Investors Advance Suit Over Money Laundering Issues - Bloomberg Law News",
-          "source_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQSzV1bTYydlpNUWt6OEE2Q2diNzZWOXFYa0tOTUgwZE16NGhWZWd2aWxrRFB5VHJxUFJlQ081TkYyYTZGTzdCZW5FMnEtMG9EMUdwcWdjaWw2a3V6bDdmZzduX0V5SkJFYUtsNDd0aFBrRDdfT1luS0RPenlvRFRYSW4zVjhHSW5MbHdKUlNsWW9YMTR5XzBJSkdGUVFIUk9rYWtubGJxcw?oc=5",
-          "publication_date": "2026-10-14T07:00:00+00:00",
-          "source_count": 1
-        },
-        {
-          "group_id": "report-5831b04a2938a773c003",
-          "title": "NEWS: Former TD Bank employee sentenced for role in money laundering scheme - AML Intelligence",
-          "source_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPbTJOMjM4djlBSF9jR0lZVGI3bHRNWVVObnBhd0x4VEd6c3NvN0RJQ3dIVG1WOWYyUmNVZnItUEhwTnlYZUdqQTdTUXBsanZBczlBdGtxMUZzc0h1MXpSVTdtc0NlVUtOUFlERmJMaktPVTFHb3p0QWsyS2lzcUI2TGlhaWhjTjc1Tks0MGdoeUQzdk1KQkkxbnlnMi1uSDNxMEZSZzZyaEl5Vzc0NXA0?oc=5",
-          "publication_date": "2026-07-20T07:00:00+00:00",
-          "source_count": 1
-        }
-      ],
-      "reasons": [
-        "Same organization explicitly named: TD",
-        "Overlapping scam method: Money mules & laundering"
       ],
       "priority": 7,
       "status": "unverified_suggested_connection",
@@ -4374,43 +4485,6 @@
       ]
     },
     {
-      "id": "candidate:report-0e6dd7c424b5cc98aa69:report-1b567fc3e156b58c117d",
-      "group_ids": [
-        "report-0e6dd7c424b5cc98aa69",
-        "report-1b567fc3e156b58c117d"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-0e6dd7c424b5cc98aa69",
-          "title": "Former B.C. gaming minister agrees he was 'unfair' to Mountie who raised alarm on money laundering - CBC",
-          "source_url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQQ0o1WXZsVkJZdUgyV3JjTUM2UUhpNWRTeWRoaVpVX3NRLVFzYmRlc0FoR1BEcEQ1VkNqQmdvOVh0ZjlIVEpXajVKX01sSzhRT2RVaWcyNzVaRWZlaHZacTdZRVJ4VTItQlh0NEU3UzNHT0lfa3BUQ1NvYVotYW5vZXE3NFBvcVItLXd5TUxpVUxERmVYN0o5Rm9QU2xZV1hZbDc5blFmTU04QllmbFctMjU5UEZaaHNuNTYyN2VkbzYzcklfVlE?oc=5",
-          "publication_date": "2021-05-15T07:00:00+00:00",
-          "source_count": 1
-        },
-        {
-          "group_id": "report-1b567fc3e156b58c117d",
-          "title": "Allegations B.C. prioritized gaming revenue over money laundering are 'offensive,' former minister says - CBC",
-          "source_url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOQUF0MzUtX0FkWFBDd1FQQXRtVFROb3k3ZkEwU0YycTdrNlVfM1dsMTcxSkdJVm14cUZxal9jeDJFb3VDSnd3clVjTkZXYUI2VXJ6MGtZMXRDakZqMTVpb1h2OWFRU0I3djFUaXFpb25aUnFrSWRHbl9BRzVEUU9lTjRPZDQtWTJRZXlIaVRHSWlscFFGdkFzVUVGYWZsVDA?oc=5",
-          "publication_date": "2021-04-23T07:00:00+00:00",
-          "source_count": 2
-        }
-      ],
-      "reasons": [
-        "5 shared descriptive headline terms",
-        "Overlapping scam method: Money mules & laundering",
-        "Published within 45 days"
-      ],
-      "priority": 7,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
       "id": "candidate:report-10f78dea8e7c2be5a809:report-b79bb7d551ac4baa5b8b",
       "group_ids": [
         "report-10f78dea8e7c2be5a809",
@@ -4434,43 +4508,6 @@
       ],
       "reasons": [
         "Same organization explicitly named: RBC",
-        "Published within 45 days"
-      ],
-      "priority": 7,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
-      "id": "candidate:report-bfbf12ee5fb12e8691fc:report-df415971d68fc1a31145",
-      "group_ids": [
-        "report-bfbf12ee5fb12e8691fc",
-        "report-df415971d68fc1a31145"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-bfbf12ee5fb12e8691fc",
-          "title": "Gangs made B.C. casinos too dangerous to investigate for money laundering, inquiry hears - Global News",
-          "source_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQY1pHQ240TjlYUkx5YkhWdDFOb3ZNbTlHcW51Y19NNXV2dGFOTllkRHlEd1VzX0p0NFpfTFpFYXQ2WGlJcTJrRnVjMUVQcXVheXREVURTUVFJVThFVjhlci0tR1IyWEo3VFVGT3FIZWRCX2ROUHlwRHBoUTRfRTdFQml4VVo?oc=5",
-          "publication_date": "2021-01-22T08:00:00+00:00",
-          "source_count": 1
-        },
-        {
-          "group_id": "report-df415971d68fc1a31145",
-          "title": "‘Vancouver Model’ money laundering connects B.C., Las Vegas and Macau casinos, inquiry hears - Global News",
-          "source_url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNMXBBcjlvQ2V0c05YcElmWl9qN3BXSXNmRDBpUVBnTmNUY2dyZEFFbkhpZWlaUHZtRHd2TktuV3Y0cF93VEg1TGwzVVlQTXhYVTBIbG1jY1RhR1VveHR0VHJVZDNaY3Mxd0ZILVo3b2ZMazlHWjlxcThWMmJtRHRUM3ZEZjNaSlFGc0FNWUln?oc=5",
-          "publication_date": "2021-03-01T08:00:00+00:00",
-          "source_count": 1
-        }
-      ],
-      "reasons": [
-        "5 shared descriptive headline terms",
-        "Overlapping scam method: Gambling, gaming & casino, Money mules & laundering",
         "Published within 45 days"
       ],
       "priority": 7,

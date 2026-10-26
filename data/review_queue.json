@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-26T04:15:27+00:00",
+  "generated_at": "2026-10-26T10:25:50+00:00",
   "methodology": "Priority scores determine what an analyst reviews first, NOT bank risk or culpability. These are not verified incidents.",
-  "total_candidates": 1182,
+  "total_candidates": 1185,
   "items": [
     {
       "article_id": "report-d18ecc6ddc5684e4e27a",
@@ -324,6 +324,24 @@
       "date": "2026-10-15T07:00:00+00:00",
       "source_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPSE5RdC1xVXByc0EzeFZtc3haUkRxOUZCZFBUUkZnRWhmNS1lcmcyaVktOC1QcnJWNTFZcVpJTWo0bFo4dm1pWmZZaDhhOUJxNmJtRlJPYzIxYTd6VnNIZjFMUnpYdGpPemZHZkROZkhJeGJDTDVMTElrSWpBblp6MUVOdlNpTDlrSGpDaERnSEJpZEtSbnZveEo4REY?oc=5",
       "publisher": "TVA Nouvelles",
+      "priority": 5,
+      "priority_basis": [
+        "named bank in headline",
+        "possible victim story"
+      ],
+      "banks": [
+        "RBC"
+      ],
+      "amount_text": [],
+      "review_status": "unreviewed_headline_only",
+      "next_step": "Open original reporting, confirm event vs publication date, institution role, victim loss vs exposure vs recovery, and any corroborating police/regulator evidence."
+    },
+    {
+      "article_id": "report-7fb99199968f9dcd336c",
+      "headline": "Plus d’une centaine de clients de la RBC victimes d’une fraude - Le Journal de Montréal",
+      "date": "2026-10-15T07:00:00+00:00",
+      "source_url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOMWVnWlZnckxPdVNvOGZqYm5kZEFCcEpONEROaUZ3anhNY1J2N0dxOWc4SFk0RHZ3MlB5Y3VlWU1JUGx5LUFfTjRpWlh3ektCNndEUEpMSnE4SHZSQ0o3VWlJQTctbUVBVnhTal9heFRwMldMU1Jza0ZXbnlFb0xOSHR3cXpqdDZlZV8wV1pPWXpwMnFRQ0hURk9hWC1zT2wwcXpraQ?oc=5",
+      "publisher": "Le Journal de Montréal",
       "priority": 5,
       "priority_basis": [
         "named bank in headline",
@@ -4539,24 +4557,6 @@
       "banks": [],
       "amount_text": [
         "$1.5M"
-      ],
-      "review_status": "unreviewed_headline_only",
-      "next_step": "Open original reporting, confirm event vs publication date, institution role, victim loss vs exposure vs recovery, and any corroborating police/regulator evidence."
-    },
-    {
-      "article_id": "report-aca083f611ed3d62f1b7",
-      "headline": "$2.1M being returned to investors who lost 15 times that much in real estate fraud, BCSC says - CTV News",
-      "date": "2024-06-28T07:00:00+00:00",
-      "source_url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPTXVtVkRXb09oRFZ2Rjl1cWE0SU9oR0pEN3NOcThtMEhWVHB4S3pZdXVaRF81RWYxMVpqS01iU04td2wxTGY2bDY0ZFdnTmhGVjBDc3RxNGo5UlZKWGFXQXV2N1l0OGRkUFpDMDFaWXlaREZ2TG1aMmhPckdPaTR4VENGYjhYbGxsZEk3OTRhdnFqVF9tcDdlS2F1UmNobDdHenREZXdwNVNzNUhFa2p2bU1HeXdKdElxYkI5MWVCeS03NUZ2aEVkRFRzVWQ?oc=5",
-      "publisher": "CTV News",
-      "priority": 4,
-      "priority_basis": [
-        "currency or amount in headline",
-        "possible victim story"
-      ],
-      "banks": [],
-      "amount_text": [
-        "$2.1M"
       ],
       "review_status": "unreviewed_headline_only",
       "next_step": "Open original reporting, confirm event vs publication date, institution role, victim loss vs exposure vs recovery, and any corroborating police/regulator evidence."

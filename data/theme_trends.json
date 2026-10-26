@@ -15,7 +15,7 @@
     "2023": 322,
     "2024": 328,
     "2025": 482,
-    "2026": 649
+    "2026": 654
   },
   "themes": [
     {
@@ -593,11 +593,22 @@
         "2023": 15,
         "2024": 14,
         "2025": 20,
-        "2026": 31
+        "2026": 32
       },
-      "total_headlines": 105,
+      "total_headlines": 106,
       "publisher_count": 31,
       "examples": [
+        {
+          "id": "d1801c3be425f8ecb1b2",
+          "title": "Fraud accounts for rising share of money-laundering offences, FinTRAC reports - The Globe and Mail",
+          "date": "2026-10-26T09:00:00+00:00",
+          "publisher": "The Globe and Mail",
+          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNTEhLUlhlRFd5VkJUZVNweE1vOUx2VE5kWk1EcXR3ZTJ5NUhENndTS0JLWGlBTXB5WVltYVZuX014R0NWMnFWdHFGeXpqajlydEFtNU9ydGJub1JzSmdOTTk3R1NPNzg0NEtzOXY2N2FxZ19aQjNZQzZUWHcwc1laX3BGZ2M3b2xXaUZxOFJiWUFuSTNwSGxTMjN3?oc=5",
+          "geography": null,
+          "source_channels": [
+            "recent"
+          ]
+        },
         {
           "id": "2b18ecaf3cc6605f94d7",
           "title": "Former Blue Jay Rich Butler charged with fraud in Ontario - The Globe and Mail",
@@ -849,17 +860,6 @@
           "date": "2026-07-10T07:00:00+00:00",
           "publisher": "insauga.com",
           "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOem1yc1RwaDM1TE9tTHJ4WmM2SEFjSHZMVkg1ZG1HV2RfWmFEVm1RQTZmU1BYbFVVNHpDSFJEaUlxY1czOUNnOXFkcjJMY19ZR2NaekhJQnNENVVGdXI5SkxMWmtfMXZTekRidUVha0RsbEJOTVZnU1dITlNhZ3FVdk5TS0Y0NHo3SmpaTm9vMkgtOGFBb1lqMWNtNmV4emJ6cnc1MWtUNEh6Ym1Wa3lRRnl0TGpHR0dhMjR6UVBIWEZXMk9Bd0ZV?oc=5",
-          "geography": null,
-          "source_channels": [
-            "historical"
-          ]
-        },
-        {
-          "id": "b8d8de9faea47ec4cc18",
-          "title": "West Nipissing man charged with fraud by OPP: complex investigation - CTV News",
-          "date": "2026-06-17T07:00:00+00:00",
-          "publisher": "CTV News",
-          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNWFJFb0xCajcxWE9wX3VkTm5WR3ZabDhkXzloaVo1bDBCWkpZVU5aX2w2YXJRYzRvTzdIV0ZYODNWRUtMUzhZUUVmWGM2Tm5YT2locXpxb0hldTZseDc1NmUxWlN1eVRoeXpkaHVCVjVDQnhlcmtfOFg0VmFTTE9adW93aVYzV0tUS1o1VzhkdHNXQTdEeXhSTmswNVpLcWxoendJWUdZZFRfQTN6WWdXU1M2andqUQ?oc=5",
           "geography": null,
           "source_channels": [
             "historical"
@@ -3110,7 +3110,7 @@
         "2023": 1,
         "2024": 4,
         "2025": 11,
-        "2026": 3
+        "2026": 4
       }
     },
     {
@@ -3138,8 +3138,8 @@
       }
     }
   ],
-  "generated_at": "2026-10-26T04:15:27+00:00",
-  "articles_analyzed": 2370,
+  "generated_at": "2026-10-26T10:25:49+00:00",
+  "articles_analyzed": 2375,
   "methodology": "MULTI-LABEL keyword classification of unique article TITLES by publication year; multiple theme counts can arise from one headline. Year-to-year article counts reflect discovery methods, changing news coverage, and archived source availability, NOT measured changes in fraud incidence. Bank/platform mentions are not accusations and never counted as confirmed enforcement.",
   "scope": "Canadian financial-crime news discovery",
   "data_quality": "Headlines only; no full-article automated fact checking. Counts can change as the archive expands."
