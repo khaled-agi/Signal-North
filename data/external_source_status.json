@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-10-26T10:25:37+00:00",
+  "started_at": "2026-10-26T16:54:48+00:00",
   "collectors": {
     "GDELT DOC": {
       "status": "scheduled_daily",
@@ -8,7 +8,7 @@
     "RCMP national news": {
       "status": "ok",
       "scanned": 20,
-      "accepted": 0
+      "accepted": 1
     },
     "RCMP British Columbia": {
       "status": "ok",
@@ -33,7 +33,7 @@
     "RCMP Nova Scotia": {
       "status": "ok",
       "scanned": 20,
-      "accepted": 0
+      "accepted": 1
     },
     "RCMP New Brunswick": {
       "status": "ok",
@@ -47,6 +47,6 @@
     }
   },
   "coverage_note": "RSS and GDELT coverage are neither exhaustive nor verified incident data.",
-  "completed_at": "2026-10-26T10:25:40+00:00",
-  "record_count": 156
+  "completed_at": "2026-10-26T16:54:55+00:00",
+  "record_count": 159
 }
