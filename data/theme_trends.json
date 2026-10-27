@@ -15,7 +15,7 @@
     "2023": 322,
     "2024": 328,
     "2025": 482,
-    "2026": 664
+    "2026": 671
   },
   "themes": [
     {
@@ -1720,11 +1720,22 @@
         "2023": 1,
         "2024": 6,
         "2025": 6,
-        "2026": 8
+        "2026": 9
       },
-      "total_headlines": 47,
+      "total_headlines": 48,
       "publisher_count": 15,
       "examples": [
+        {
+          "id": "7794b6c3c42c8c46df78",
+          "title": "Winnipegger facing extradition over COVID relief fraud, money laundering allegations - CBC",
+          "date": "2026-10-27T10:00:00+00:00",
+          "publisher": "CBC",
+          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQdVJPZ3UtcVNEWlc0NXljMHhJNFFNTHVRNjl4RHRqTHp3ZW1tYzBpd283NjJNclZZcXVERF8zQXhEQXIycjdGMVJqZXQ4VEg3TVBhLUJOaGxKel8tT2ttU0lORzRfMkJrdGRTVHMwdldzMGN0RnZNRk9UTGk2QzNFUEZQb2JBV0JrUE9zaQ?oc=5",
+          "geography": null,
+          "source_channels": [
+            "recent"
+          ]
+        },
         {
           "id": "504e2824be4695423ba2",
           "title": "TD Bank Investors Advance Suit Over Money Laundering Issues - Bloomberg Law News",
@@ -1974,17 +1985,6 @@
           "date": "2022-08-10T07:00:00+00:00",
           "publisher": "CBC",
           "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPV2F6MkhmSnFDdktpSFJTcUFteWdxWTh6dC02Znprd1E1dVJ0TVhjNDNsNEpIVEdyQ3pZTVJETUhXVlFod2c5UXpDVy1haU8wdEY4YXR3d1dsaE9qeUVmbk1KbHliSkxnMHAtaE52YnlxQ0JudEc5VDVxbmkwX282WmRfZHlZVnQ4WWtSdHh1cWVYWGI4?oc=5",
-          "geography": null,
-          "source_channels": [
-            "historical"
-          ]
-        },
-        {
-          "id": "e32bd914607c3785def4",
-          "title": "Chinese widow once ensnared in major Canada money laundering case seeks Canadian citizenship - South China Morning Post",
-          "date": "2022-02-09T08:00:00+00:00",
-          "publisher": "South China Morning Post",
-          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQUm9oSlhYWTNjb2MwOE8tWnVrMWdINHBvN0o2TnVvSjZjWlZwNlhUcDlERW51NktUZWV0WXYzdHRyZ241VTRkc2VwZlJQU1E2d0VFZ043bjV0V3FRT1c3aFRNR0tnbzl4M19QY2VyNFhYc3BIMXlEQmJzbElMVGtpVGJkd3NfNVJYU2lpVXZnSzAtckt2SThveV9jWThSdW9JVnJNWG92d2oyWGZqSG5ybXJsTjXSAbQBQVVfeXFMT050Y09uVldKaTVYSVduSndobFBQZ29DSERLRjJHbXFmNC1Jc3BrX3cwZjJHVDVVWkhEV0lENlMzeGZvLXdQVkJfS0dmTVZ6X0hOVzBwZzdRazVzWXh5alFueVlZaVFFR3Iyc2NQYlBSdnVRbEFHLU5oclQ3QVVORF9VNFk0TGxmclJFMkpVNmRadHVPUlByS3MwZ2tJMVlkY2V0MDJXTW5NMWgxX184bkdySnNT?oc=5",
           "geography": null,
           "source_channels": [
             "historical"
@@ -3086,7 +3086,7 @@
         "2023": 1,
         "2024": 1,
         "2025": 0,
-        "2026": 1
+        "2026": 2
       }
     },
     {
@@ -3138,8 +3138,8 @@
       }
     }
   ],
-  "generated_at": "2026-10-27T06:07:46+00:00",
-  "articles_analyzed": 2385,
+  "generated_at": "2026-10-27T12:02:23+00:00",
+  "articles_analyzed": 2392,
   "methodology": "MULTI-LABEL keyword classification of unique article TITLES by publication year; multiple theme counts can arise from one headline. Year-to-year article counts reflect discovery methods, changing news coverage, and archived source availability, NOT measured changes in fraud incidence. Bank/platform mentions are not accusations and never counted as confirmed enforcement.",
   "scope": "Canadian financial-crime news discovery",
   "data_quality": "Headlines only; no full-article automated fact checking. Counts can change as the archive expands."
