@@ -15,7 +15,7 @@
     "2023": 322,
     "2024": 328,
     "2025": 482,
-    "2026": 685
+    "2026": 687
   },
   "themes": [
     {
@@ -27,11 +27,22 @@
         "2023": 21,
         "2024": 27,
         "2025": 48,
-        "2026": 70
+        "2026": 71
       },
-      "total_headlines": 187,
+      "total_headlines": 188,
       "publisher_count": 54,
       "examples": [
+        {
+          "id": "5f9fa8640ed2ae6f4d9a",
+          "title": "Canadian 'tremendously sorry' after spending stolen crypto on Lamborghini, BMWs, jewelry - CBC",
+          "date": "2026-10-27T08:00:00+00:00",
+          "publisher": "CBC",
+          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE13QUFkenY3T2xrc1FuOHpEZVd0TzhucVJlZThMb3hfdHlFYnlzLVZFRWRyUm9CODRrTWxlOVJ5WkU1VWpqMHNzZ2E2aGNVcG9uMmRqVDdNaXI3M0pHY3k2d3RETnpQRGUycER2TDF4X0NOX2tsdmc?oc=5",
+          "geography": null,
+          "source_channels": [
+            "recent"
+          ]
+        },
         {
           "id": "6bd1ec6e33e61c05b25d",
           "title": "Chinese national extradited to U.S. in $37M cryptocurrency scam case - Yahoo News Canada",
@@ -285,17 +296,6 @@
           "date": "2026-09-25T07:00:00+00:00",
           "publisher": "CBC",
           "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9mS2d6cGxCNU44QUNPM2Y1U0JtQ3ZWeVVwWFpUZDVzSWhWSXM4cVZTT2o2U1Y0cmxadGtzMkZxNUlBNXVRR2oxcXVkNFhncGpveXF1QXNka3VRdw?oc=5",
-          "geography": null,
-          "source_channels": [
-            "historical"
-          ]
-        },
-        {
-          "id": "16f49bfe490347009703",
-          "title": "Police: Elderly man loses 200K in cryptocurrency investment scam - CTV News",
-          "date": "2026-09-21T07:00:00+00:00",
-          "publisher": "CTV News",
-          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNN3MwWmJudUJXTnYtTDZERE5mc2E4NVFIT21iVmhsSzVhcnh3T3JiaEh4OUJiY1psNlRERkpUbE9YVmdobk1XSkNHbWhzV2xNb1FIcTZfR3JGeTduQi1uTFZ2bVFzTTk2VnRHTm1BcVhtbmh0NW9INXNyTlktVGk5ZzZtd01uU0stdUZNSjJVRUpDUGlwdFhMSnpIV0czbnRuaGNqSQ?oc=5",
           "geography": null,
           "source_channels": [
             "historical"
@@ -3138,8 +3138,8 @@
       }
     }
   ],
-  "generated_at": "2026-10-28T01:05:11+00:00",
-  "articles_analyzed": 2406,
+  "generated_at": "2026-10-28T06:48:43+00:00",
+  "articles_analyzed": 2408,
   "methodology": "MULTI-LABEL keyword classification of unique article TITLES by publication year; multiple theme counts can arise from one headline. Year-to-year article counts reflect discovery methods, changing news coverage, and archived source availability, NOT measured changes in fraud incidence. Bank/platform mentions are not accusations and never counted as confirmed enforcement.",
   "scope": "Canadian financial-crime news discovery",
   "data_quality": "Headlines only; no full-article automated fact checking. Counts can change as the archive expands."
