@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-28T23:27:39+00:00",
+  "updated_at": "2026-10-29T02:43:38+00:00",
   "leads": [
     {
       "id": "95f2b7ea41c522c13cb0",
@@ -8,7 +8,7 @@
       "publisher": "bloomingbit",
       "published_at": "2026-10-28T22:47:22+00:00",
       "first_seen_at": "2026-10-28T23:27:33+00:00",
-      "last_observed_at": "2026-10-28T23:27:34+00:00",
+      "last_observed_at": "2026-10-29T02:43:34+00:00",
       "topics": [
         "Crypto investment and exchange",
         "Social media scam reports"
@@ -33,7 +33,7 @@
       "publisher": "Traders Union",
       "published_at": "2026-10-28T21:39:29+00:00",
       "first_seen_at": "2026-10-28T23:27:33+00:00",
-      "last_observed_at": "2026-10-28T23:27:34+00:00",
+      "last_observed_at": "2026-10-29T02:43:32+00:00",
       "topics": [
         "Crypto investment and exchange",
         "Social media scam reports"
@@ -58,7 +58,7 @@
       "publisher": "CBC",
       "published_at": "2026-10-28T20:04:40+00:00",
       "first_seen_at": "2026-10-28T23:27:33+00:00",
-      "last_observed_at": "2026-10-28T23:27:33+00:00",
+      "last_observed_at": "2026-10-29T02:43:32+00:00",
       "topics": [
         "Crypto investment and exchange"
       ],
@@ -106,7 +106,7 @@
       "publisher": "kalkine.ca",
       "published_at": "2026-10-28T18:10:00+00:00",
       "first_seen_at": "2026-10-28T19:25:35+00:00",
-      "last_observed_at": "2026-10-28T23:27:34+00:00",
+      "last_observed_at": "2026-10-29T02:43:34+00:00",
       "topics": [
         "Social media scam reports"
       ],
@@ -154,7 +154,7 @@
       "publisher": "CBC",
       "published_at": "2026-10-28T17:27:12+00:00",
       "first_seen_at": "2026-10-28T19:25:31+00:00",
-      "last_observed_at": "2026-10-28T23:27:31+00:00",
+      "last_observed_at": "2026-10-29T02:43:30+00:00",
       "topics": [
         "Scams and victims"
       ],
@@ -207,7 +207,7 @@
       "publisher": "Castlegar Source",
       "published_at": "2026-10-28T16:10:08+00:00",
       "first_seen_at": "2026-10-28T19:25:35+00:00",
-      "last_observed_at": "2026-10-28T23:27:34+00:00",
+      "last_observed_at": "2026-10-29T02:43:34+00:00",
       "topics": [
         "Social media scam reports"
       ],
@@ -231,7 +231,7 @@
       "publisher": "Rossland Telegraph",
       "published_at": "2026-10-28T15:58:01+00:00",
       "first_seen_at": "2026-10-28T19:25:33+00:00",
-      "last_observed_at": "2026-10-28T23:27:33+00:00",
+      "last_observed_at": "2026-10-29T02:43:32+00:00",
       "topics": [
         "Fraud research and reports"
       ],
@@ -255,9 +255,10 @@
       "publisher": "Yahoo News Canada",
       "published_at": "2026-10-28T15:23:02+00:00",
       "first_seen_at": "2026-10-28T23:27:31+00:00",
-      "last_observed_at": "2026-10-28T23:27:31+00:00",
+      "last_observed_at": "2026-10-29T02:43:30+00:00",
       "topics": [
-        "Bank and customer fraud"
+        "Bank and customer fraud",
+        "Scams and victims"
       ],
       "category": "Scam and victim reports",
       "evidence_status": "unverified_news_lead",
@@ -314,7 +315,7 @@
       "publisher": "Money.ca",
       "published_at": "2026-10-28T12:58:03+00:00",
       "first_seen_at": "2026-10-28T13:55:44+00:00",
-      "last_observed_at": "2026-10-28T23:27:31+00:00",
+      "last_observed_at": "2026-10-29T02:43:29+00:00",
       "topics": [
         "Bank and customer fraud"
       ],
@@ -340,7 +341,31 @@
       "publisher": "The Globe and Mail",
       "published_at": "2026-10-28T10:00:00+00:00",
       "first_seen_at": "2026-10-28T19:25:32+00:00",
-      "last_observed_at": "2026-10-28T23:27:32+00:00",
+      "last_observed_at": "2026-10-29T02:43:31+00:00",
+      "topics": [
+        "Money laundering"
+      ],
+      "category": "AML and laundering",
+      "evidence_status": "unverified_news_lead",
+      "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "organizations_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
+      "institution": null,
+      "reported_loss": null,
+      "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness."
+    },
+    {
+      "id": "4bcd74d0e6597912e670",
+      "title": "RCMP investigating possible money laundering related to Alberta health-care contracts - CTV News",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPX09QY0V0MDV4U2VxWmJHQ01IN3VVQno2R3VPdnRDX0xubmlfaVVjbk1HTS00TU91c3ltNkp0UHZXTXl0VXZTU20tZk5GbThBNXBMZ0dUYlBNbTNHUk1ydW01VnNkUHBYeTI1SDhWeFFDcjQ4elYxT0pHaXJCMXg3dEh4b2ZBVl9hSzhMVlJBeXMwVUVMdi1iZnBRT1RfRnNHRWd4ZENPVkU2RWl1RGhqVjZOUlJYRHg2WVlZQUwzSXhzZjBMaFM2TTdjZjJiY0Iz?oc=5",
+      "publisher": "CTV News",
+      "published_at": "2026-10-27T23:19:23+00:00",
+      "first_seen_at": "2026-10-29T02:43:31+00:00",
+      "last_observed_at": "2026-10-29T02:43:31+00:00",
       "topics": [
         "Money laundering"
       ],
@@ -388,7 +413,7 @@
       "publisher": "CTV News",
       "published_at": "2026-10-27T18:58:20+00:00",
       "first_seen_at": "2026-10-27T22:01:49+00:00",
-      "last_observed_at": "2026-10-28T23:27:31+00:00",
+      "last_observed_at": "2026-10-29T02:43:30+00:00",
       "topics": [
         "Online gambling fraud",
         "Scams and victims"
@@ -413,7 +438,7 @@
       "publisher": "CTV News",
       "published_at": "2026-10-27T18:34:55+00:00",
       "first_seen_at": "2026-10-28T19:25:32+00:00",
-      "last_observed_at": "2026-10-28T19:25:33+00:00",
+      "last_observed_at": "2026-10-29T02:43:31+00:00",
       "topics": [
         "Fraud research and reports",
         "Money laundering"
@@ -548,7 +573,7 @@
       "publisher": "Retail Insider",
       "published_at": "2026-10-27T12:00:00+00:00",
       "first_seen_at": "2026-10-27T17:50:29+00:00",
-      "last_observed_at": "2026-10-28T23:27:34+00:00",
+      "last_observed_at": "2026-10-29T02:43:34+00:00",
       "topics": [
         "Social media scam reports"
       ],
@@ -572,7 +597,7 @@
       "publisher": "CTV News",
       "published_at": "2026-10-27T11:37:04+00:00",
       "first_seen_at": "2026-10-28T13:55:45+00:00",
-      "last_observed_at": "2026-10-28T23:27:31+00:00",
+      "last_observed_at": "2026-10-29T02:43:30+00:00",
       "topics": [
         "Police investigations"
       ],
@@ -649,7 +674,7 @@
       "publisher": "CBC",
       "published_at": "2026-10-27T10:00:00+00:00",
       "first_seen_at": "2026-10-27T12:02:00+00:00",
-      "last_observed_at": "2026-10-28T23:27:32+00:00",
+      "last_observed_at": "2026-10-29T02:43:31+00:00",
       "topics": [
         "Bank and customer fraud",
         "Money laundering"
@@ -674,7 +699,7 @@
       "publisher": "CBC",
       "published_at": "2026-10-27T09:00:00+00:00",
       "first_seen_at": "2026-10-27T17:50:25+00:00",
-      "last_observed_at": "2026-10-28T23:27:33+00:00",
+      "last_observed_at": "2026-10-29T02:43:32+00:00",
       "topics": [
         "Bank and customer fraud",
         "Fraud research and reports",
@@ -700,7 +725,7 @@
       "publisher": "CBC",
       "published_at": "2026-10-27T08:00:00+00:00",
       "first_seen_at": "2026-10-28T06:48:03+00:00",
-      "last_observed_at": "2026-10-28T23:27:33+00:00",
+      "last_observed_at": "2026-10-29T02:43:30+00:00",
       "topics": [
         "Crypto investment and exchange",
         "Scams and victims"
@@ -749,7 +774,7 @@
       "publisher": "Yahoo News Canada",
       "published_at": "2026-10-27T01:41:00+00:00",
       "first_seen_at": "2026-10-27T12:02:04+00:00",
-      "last_observed_at": "2026-10-28T19:25:35+00:00",
+      "last_observed_at": "2026-10-29T02:43:34+00:00",
       "topics": [
         "Social media scam reports"
       ],
@@ -775,7 +800,7 @@
       "publisher": "CoinMarketCap",
       "published_at": "2026-10-27T01:15:55+00:00",
       "first_seen_at": "2026-10-24T01:27:42+00:00",
-      "last_observed_at": "2026-10-28T23:27:34+00:00",
+      "last_observed_at": "2026-10-29T02:43:33+00:00",
       "topics": [
         "Crypto investment and exchange",
         "Scams and victims",
@@ -803,7 +828,7 @@
       "publisher": "Yahoo News Canada",
       "published_at": "2026-10-26T22:18:47+00:00",
       "first_seen_at": "2026-10-27T12:02:04+00:00",
-      "last_observed_at": "2026-10-28T19:25:35+00:00",
+      "last_observed_at": "2026-10-29T02:43:34+00:00",
       "topics": [
         "Social media scam reports"
       ],
@@ -829,7 +854,7 @@
       "publisher": "Yahoo News Canada",
       "published_at": "2026-10-26T21:10:39+00:00",
       "first_seen_at": "2026-10-27T12:02:04+00:00",
-      "last_observed_at": "2026-10-28T19:25:35+00:00",
+      "last_observed_at": "2026-10-29T02:43:34+00:00",
       "topics": [
         "Social media scam reports"
       ],
@@ -881,7 +906,7 @@
       "publisher": "Global News",
       "published_at": "2026-10-26T19:56:00+00:00",
       "first_seen_at": "2026-10-27T12:02:00+00:00",
-      "last_observed_at": "2026-10-28T23:27:31+00:00",
+      "last_observed_at": "2026-10-29T02:43:29+00:00",
       "topics": [
         "Bank and customer fraud"
       ],
@@ -905,7 +930,7 @@
       "publisher": "insauga.com",
       "published_at": "2026-10-26T19:25:24+00:00",
       "first_seen_at": "2026-10-26T21:31:41+00:00",
-      "last_observed_at": "2026-10-28T23:27:31+00:00",
+      "last_observed_at": "2026-10-29T02:43:29+00:00",
       "topics": [
         "Bank and customer fraud"
       ],
@@ -929,7 +954,7 @@
       "publisher": "CTV News",
       "published_at": "2026-10-26T19:01:30+00:00",
       "first_seen_at": "2026-10-27T00:42:43+00:00",
-      "last_observed_at": "2026-10-28T23:27:34+00:00",
+      "last_observed_at": "2026-10-29T02:43:34+00:00",
       "topics": [
         "Social media scam reports"
       ],
@@ -1008,7 +1033,7 @@
       "publisher": "Wealth Professional",
       "published_at": "2026-10-26T11:02:58+00:00",
       "first_seen_at": "2026-10-26T16:54:46+00:00",
-      "last_observed_at": "2026-10-28T23:27:33+00:00",
+      "last_observed_at": "2026-10-29T02:43:32+00:00",
       "topics": [
         "Fraud research and reports"
       ],
@@ -1032,7 +1057,7 @@
       "publisher": "The Globe and Mail",
       "published_at": "2026-10-26T09:00:00+00:00",
       "first_seen_at": "2026-10-26T10:25:34+00:00",
-      "last_observed_at": "2026-10-28T23:27:33+00:00",
+      "last_observed_at": "2026-10-29T02:43:32+00:00",
       "topics": [
         "Fraud research and reports",
         "Money laundering"
@@ -1057,7 +1082,7 @@
       "publisher": "CBC",
       "published_at": "2026-10-25T12:00:00+00:00",
       "first_seen_at": "2026-10-25T16:43:15+00:00",
-      "last_observed_at": "2026-10-28T23:27:31+00:00",
+      "last_observed_at": "2026-10-29T02:43:30+00:00",
       "topics": [
         "Scams and victims"
       ],
@@ -1081,7 +1106,7 @@
       "publisher": "NTV News",
       "published_at": "2026-10-25T11:55:38+00:00",
       "first_seen_at": "2026-10-24T01:27:42+00:00",
-      "last_observed_at": "2026-10-28T13:55:45+00:00",
+      "last_observed_at": "2026-10-29T02:43:30+00:00",
       "topics": [
         "Scams and victims"
       ],
@@ -1105,7 +1130,7 @@
       "publisher": "Money.ca",
       "published_at": "2026-10-25T10:30:16+00:00",
       "first_seen_at": "2026-10-25T12:27:09+00:00",
-      "last_observed_at": "2026-10-28T19:25:35+00:00",
+      "last_observed_at": "2026-10-29T02:43:34+00:00",
       "topics": [
         "Fraud research and reports",
         "Scams and victims",
@@ -1304,7 +1329,7 @@
       "publisher": "Yahoo News Canada",
       "published_at": "2026-10-24T02:34:00+00:00",
       "first_seen_at": "2026-10-24T03:02:28+00:00",
-      "last_observed_at": "2026-10-28T23:27:32+00:00",
+      "last_observed_at": "2026-10-29T02:43:31+00:00",
       "topics": [
         "Investment schemes",
         "Scams and victims"
@@ -1410,7 +1435,7 @@
       "publisher": "CTV News",
       "published_at": "2026-10-23T20:20:42+00:00",
       "first_seen_at": "2026-10-24T01:27:42+00:00",
-      "last_observed_at": "2026-10-27T12:02:00+00:00",
+      "last_observed_at": "2026-10-29T02:43:30+00:00",
       "topics": [
         "Scams and victims"
       ],
@@ -1542,7 +1567,7 @@
       "publisher": "insauga.com",
       "published_at": "2026-10-23T14:55:26+00:00",
       "first_seen_at": "2026-10-24T01:27:42+00:00",
-      "last_observed_at": "2026-10-28T13:55:45+00:00",
+      "last_observed_at": "2026-10-29T02:43:30+00:00",
       "topics": [
         "Fraud research and reports",
         "Scams and victims"
@@ -1567,7 +1592,31 @@
       "publisher": "Yen News",
       "published_at": "2026-10-23T14:26:23+00:00",
       "first_seen_at": "2026-10-26T21:31:46+00:00",
-      "last_observed_at": "2026-10-28T19:25:35+00:00",
+      "last_observed_at": "2026-10-29T02:43:34+00:00",
+      "topics": [
+        "Social media scam reports"
+      ],
+      "category": "Scam and victim reports",
+      "evidence_status": "unverified_news_lead",
+      "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "organizations_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
+      "institution": null,
+      "reported_loss": null,
+      "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness."
+    },
+    {
+      "id": "b57ae5a31a527f545117",
+      "title": "Fake Jagmeet Singh ‘arrest’ ads are flooding X — clicks lead to a trading scam targeting Canadians’ savings - Yahoo! Finance Canada",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOck4yV2F1aW81NnBkYTlWdFdKS25fYjVpRGlaRTlpSmdLc3dLQXFEREFoMXFFaHB1Y2lGcVhzRWw1QWI3YzhLSGwzLXNPYnZRbVBuazZ2X2VMNTJld0RpVUM0VGFmeElYYWIwLVZ6RUd1bVNUQzN6emFTVzhINi1ONEhzcVM?oc=5",
+      "publisher": "Yahoo! Finance Canada",
+      "published_at": "2026-10-23T12:30:00+00:00",
+      "first_seen_at": "2026-10-29T02:43:34+00:00",
+      "last_observed_at": "2026-10-29T02:43:34+00:00",
       "topics": [
         "Social media scam reports"
       ],
@@ -1591,7 +1640,7 @@
       "publisher": "CBC",
       "published_at": "2026-10-23T08:00:00+00:00",
       "first_seen_at": "2026-10-24T01:27:42+00:00",
-      "last_observed_at": "2026-10-28T23:27:31+00:00",
+      "last_observed_at": "2026-10-29T02:43:30+00:00",
       "topics": [
         "Bank and customer fraud",
         "Scams and victims"
@@ -1743,7 +1792,7 @@
       "publisher": "Modern Ghana",
       "published_at": "2026-10-22T13:58:44+00:00",
       "first_seen_at": "2026-10-24T01:27:42+00:00",
-      "last_observed_at": "2026-10-28T13:55:45+00:00",
+      "last_observed_at": "2026-10-29T02:43:30+00:00",
       "topics": [
         "Scams and victims"
       ],
@@ -1767,7 +1816,7 @@
       "publisher": "Radio-Canada",
       "published_at": "2026-10-22T13:55:47+00:00",
       "first_seen_at": "2026-10-24T01:47:46+00:00",
-      "last_observed_at": "2026-10-28T23:27:34+00:00",
+      "last_observed_at": "2026-10-29T02:43:32+00:00",
       "topics": [
         "Fraud research and reports",
         "Social media scam reports"
@@ -1792,7 +1841,7 @@
       "publisher": "CBC",
       "published_at": "2026-10-22T08:00:00+00:00",
       "first_seen_at": "2026-10-24T01:47:46+00:00",
-      "last_observed_at": "2026-10-28T19:25:35+00:00",
+      "last_observed_at": "2026-10-29T02:43:34+00:00",
       "topics": [
         "Fraud research and reports",
         "Social media scam reports"
@@ -1869,7 +1918,7 @@
       "publisher": "CityNews Edmonton",
       "published_at": "2026-10-21T23:52:33+00:00",
       "first_seen_at": "2026-10-25T06:39:47+00:00",
-      "last_observed_at": "2026-10-27T22:01:53+00:00",
+      "last_observed_at": "2026-10-29T02:43:34+00:00",
       "topics": [
         "Social media scam reports"
       ],
@@ -1922,7 +1971,7 @@
       "publisher": "Yahoo News Canada",
       "published_at": "2026-10-21T18:11:30+00:00",
       "first_seen_at": "2026-10-24T03:02:32+00:00",
-      "last_observed_at": "2026-10-28T19:25:35+00:00",
+      "last_observed_at": "2026-10-29T02:43:34+00:00",
       "topics": [
         "Social media scam reports"
       ],
@@ -1973,7 +2022,7 @@
       "publisher": "Yahoo News Canada",
       "published_at": "2026-10-21T15:48:21+00:00",
       "first_seen_at": "2026-10-24T01:47:46+00:00",
-      "last_observed_at": "2026-10-28T19:25:35+00:00",
+      "last_observed_at": "2026-10-29T02:43:34+00:00",
       "topics": [
         "Fraud research and reports",
         "Social media scam reports"
@@ -1998,7 +2047,7 @@
       "publisher": "Bhaskar English",
       "published_at": "2026-10-21T15:02:28+00:00",
       "first_seen_at": "2026-10-24T01:27:42+00:00",
-      "last_observed_at": "2026-10-28T23:27:31+00:00",
+      "last_observed_at": "2026-10-29T02:43:29+00:00",
       "topics": [
         "Bank and customer fraud",
         "Scams and victims",
@@ -2048,7 +2097,7 @@
       "publisher": "CTV News",
       "published_at": "2026-10-21T12:29:00+00:00",
       "first_seen_at": "2026-10-24T03:16:48+00:00",
-      "last_observed_at": "2026-10-28T19:25:35+00:00",
+      "last_observed_at": "2026-10-29T02:43:34+00:00",
       "topics": [
         "Social media scam reports"
       ],
@@ -2072,7 +2121,7 @@
       "publisher": "Tribune Online",
       "published_at": "2026-10-21T10:47:57+00:00",
       "first_seen_at": "2026-10-24T01:27:42+00:00",
-      "last_observed_at": "2026-10-28T13:55:45+00:00",
+      "last_observed_at": "2026-10-29T02:43:30+00:00",
       "topics": [
         "Scams and victims"
       ],
@@ -2193,44 +2242,13 @@
       "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness."
     },
     {
-      "id": "47bf911206a5aaad343b",
-      "title": "Vancouver Island email scam demands $1200 and features RCMP logo - CTV News",
-      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOOFhvOGhTZmZZTmhuUi04SFBKUHZQNHVwdW91Q2VXV1BwcVdiYXdBdWhjc3hKcG1vSWNWTzIzMFVUcmJrRnlSUzRuNUl2Zi1GbC1JN29vVUVhODBzR1pvaVJqU2lXZTZxR2NEUDhTZXVuZ2tpNUN4WTd3OFRUM2tCb1E4bXdzWVh5RE9KSVJUU1l4MVpUczNMbEdLZ1R6NlFmTVNNcjVHUWhkRlcyNER4LXJfcHBxODdoVTFLWDN3bw?oc=5",
-      "publisher": "CTV News",
-      "published_at": "2026-10-20T19:42:38+00:00",
-      "first_seen_at": "2026-10-25T21:59:46+00:00",
-      "last_observed_at": "2026-10-28T13:55:45+00:00",
-      "topics": [
-        "Scams and victims"
-      ],
-      "category": "Scam and victim reports",
-      "evidence_status": "unverified_news_lead",
-      "geographic_accuracy": "headline_only",
-      "banks_mentioned_in_headline": [],
-      "organizations_mentioned_in_headline": [],
-      "amount_strings_in_headline": [
-        "$1200 "
-      ],
-      "headline_case_candidate": false,
-      "content_kind": "news_lead",
-      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
-      "institution": null,
-      "reported_loss": null,
-      "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness.",
-      "map_location": "Vancouver, British Columbia",
-      "map_latitude": 49.2827,
-      "map_longitude": -123.1207,
-      "map_province": "BC",
-      "map_role": "headline city mention only; incident location unverified"
-    },
-    {
       "id": "ebef6c0a0414fc0c6ddb",
       "title": "Ogun Police Rescue 11 Ghanaians Allegedly Held Hostage Over Canada, Spain Visa Scam - Platform Times",
       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPMXNsdzRtMU1MTWZIeXNZbDg1dkNSb3F0Ry1LTjBabm12Mk9VS0J3clI4blRrc1pMeGlnZ0FKd3EzUU5CUVhYdWNjaHVmb3hYMW1jc2Q0eUtIWXdWTXEwZm5DXzNzeGxiR2VTVU83YWd2eVp6NjJpSDY5QWVoT01oczdUcFIzMFFKaS1zemt0UW02S3MzMHhXMzJvN24yc2hvLVkyYVdFOHVPTThhd29fRnRR?oc=5",
       "publisher": "Platform Times",
       "published_at": "2026-10-20T19:38:34+00:00",
       "first_seen_at": "2026-10-24T02:32:27+00:00",
-      "last_observed_at": "2026-10-24T21:28:08+00:00",
+      "last_observed_at": "2026-10-29T02:43:30+00:00",
       "topics": [
         "Scams and victims"
       ],
@@ -2280,7 +2298,7 @@
       "publisher": "Toronto Star",
       "published_at": "2026-10-20T17:28:48+00:00",
       "first_seen_at": "2026-10-24T03:09:24+00:00",
-      "last_observed_at": "2026-10-28T23:27:31+00:00",
+      "last_observed_at": "2026-10-29T02:43:30+00:00",
       "topics": [
         "Police investigations"
       ],
@@ -2303,37 +2321,13 @@
       "map_role": "headline city mention only; incident location unverified"
     },
     {
-      "id": "d389b77e97ddef43bca7",
-      "title": "Former Blue Jays player Rich Butler, wife, charged with fraud in Ontario - The Spec",
-      "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxNX0JQM25vMjRXbU9zUTlmUUNoT3Uwc2VBY0NsOUlMbTFjVXRLUmdNaGtyeW55blhVMEg5dkJoZm52OUNEMXZfMnBxdkU4Y3FEYy1WOXhVZWx6X1l1NkRCN2Q2U0tITTZqcHhXX1N3aklac3JSaU9VaXFsckdxdjJZVHVUX1ZhTlE3dlZiRmkwNnFvdkdwQ3c1c2JsY0lhY0dEVmRBRXQ1RHctWlBjN3FiQVpVd2o1ejBsdlJpVzdYckp5b3BHWnA5LTJ5VG1sUUdNS0JoNkFPM01lVE5tdm13dVJXZTV2WGlhNnl1V3A3MElSdw?oc=5",
-      "publisher": "The Spec",
-      "published_at": "2026-10-20T17:28:48+00:00",
-      "first_seen_at": "2026-10-28T19:25:32+00:00",
-      "last_observed_at": "2026-10-28T23:27:31+00:00",
-      "topics": [
-        "Police investigations"
-      ],
-      "category": "Reported fraud",
-      "evidence_status": "unverified_news_lead",
-      "geographic_accuracy": "not_geocoded",
-      "banks_mentioned_in_headline": [],
-      "organizations_mentioned_in_headline": [],
-      "amount_strings_in_headline": [],
-      "headline_case_candidate": false,
-      "content_kind": "news_lead",
-      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
-      "institution": null,
-      "reported_loss": null,
-      "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness."
-    },
-    {
       "id": "83c4f6d51eef2289bda0",
       "title": "Telus and Norton Launch Scam Protection for Calls, Texts and Email - iPhone in Canada",
       "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9CUndaUkJVZkNWZEF2UGFUbmJ5WmZVQ0NEanU2Uk1FTHV6ZmI5Q1VCdG9uVjBtV3RyTV9RYzVZREZySk91amJnMGZZbDdjQVZxdTA2c1M5clNrTXhndmRIM1VfWFVyOXNnT2tES1YzZ1lKZkR2TnBHOFdR?oc=5",
       "publisher": "iPhone in Canada",
       "published_at": "2026-10-20T16:59:35+00:00",
       "first_seen_at": "2026-10-24T01:27:42+00:00",
-      "last_observed_at": "2026-10-28T13:55:45+00:00",
+      "last_observed_at": "2026-10-29T02:43:30+00:00",
       "topics": [
         "Scams and victims"
       ],
@@ -2386,7 +2380,7 @@
       "publisher": "CTV News",
       "published_at": "2026-10-20T14:47:49+00:00",
       "first_seen_at": "2026-10-28T06:48:04+00:00",
-      "last_observed_at": "2026-10-28T06:48:04+00:00",
+      "last_observed_at": "2026-10-29T02:43:32+00:00",
       "topics": [
         "Fraud research and reports"
       ],
@@ -2443,7 +2437,7 @@
       "publisher": "TSN",
       "published_at": "2026-10-20T14:27:12+00:00",
       "first_seen_at": "2026-10-24T01:27:43+00:00",
-      "last_observed_at": "2026-10-28T23:27:31+00:00",
+      "last_observed_at": "2026-10-29T02:43:30+00:00",
       "topics": [
         "Police investigations"
       ],
@@ -2472,7 +2466,7 @@
       "publisher": "Toronto Star",
       "published_at": "2026-10-20T14:23:49+00:00",
       "first_seen_at": "2026-10-24T01:27:44+00:00",
-      "last_observed_at": "2026-10-28T23:27:33+00:00",
+      "last_observed_at": "2026-10-29T02:43:32+00:00",
       "topics": [
         "Credit unions and fintech"
       ],
@@ -2588,9 +2582,64 @@
       "publisher": "Wealth Professional",
       "published_at": "2026-10-20T10:42:24+00:00",
       "first_seen_at": "2026-10-24T01:47:46+00:00",
-      "last_observed_at": "2026-10-28T23:27:33+00:00",
+      "last_observed_at": "2026-10-29T02:43:32+00:00",
       "topics": [
         "Fraud research and reports"
+      ],
+      "category": "Reported fraud",
+      "evidence_status": "unverified_news_lead",
+      "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "organizations_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
+      "institution": null,
+      "reported_loss": null,
+      "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness."
+    },
+    {
+      "id": "47bf911206a5aaad343b",
+      "title": "Vancouver Island email scam demands $1200 and features RCMP logo - CTV News",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOOFhvOGhTZmZZTmhuUi04SFBKUHZQNHVwdW91Q2VXV1BwcVdiYXdBdWhjc3hKcG1vSWNWTzIzMFVUcmJrRnlSUzRuNUl2Zi1GbC1JN29vVUVhODBzR1pvaVJqU2lXZTZxR2NEUDhTZXVuZ2tpNUN4WTd3OFRUM2tCb1E4bXdzWVh5RE9KSVJUU1l4MVpUczNMbEdLZ1R6NlFmTVNNcjVHUWhkRlcyNER4LXJfcHBxODdoVTFLWDN3bw?oc=5",
+      "publisher": "CTV News",
+      "published_at": "2026-10-20T07:00:00+00:00",
+      "first_seen_at": "2026-10-25T21:59:46+00:00",
+      "last_observed_at": "2026-10-29T02:43:30+00:00",
+      "topics": [
+        "Scams and victims"
+      ],
+      "category": "Scam and victim reports",
+      "evidence_status": "unverified_news_lead",
+      "geographic_accuracy": "headline_only",
+      "banks_mentioned_in_headline": [],
+      "organizations_mentioned_in_headline": [],
+      "amount_strings_in_headline": [
+        "$1200 "
+      ],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
+      "institution": null,
+      "reported_loss": null,
+      "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness.",
+      "map_location": "Vancouver, British Columbia",
+      "map_latitude": 49.2827,
+      "map_longitude": -123.1207,
+      "map_province": "BC",
+      "map_role": "headline city mention only; incident location unverified"
+    },
+    {
+      "id": "d389b77e97ddef43bca7",
+      "title": "Former Blue Jays player Rich Butler, wife, charged with fraud in Ontario - The Spec",
+      "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxNX0JQM25vMjRXbU9zUTlmUUNoT3Uwc2VBY0NsOUlMbTFjVXRLUmdNaGtyeW55blhVMEg5dkJoZm52OUNEMXZfMnBxdkU4Y3FEYy1WOXhVZWx6X1l1NkRCN2Q2U0tITTZqcHhXX1N3aklac3JSaU9VaXFsckdxdjJZVHVUX1ZhTlE3dlZiRmkwNnFvdkdwQ3c1c2JsY0lhY0dEVmRBRXQ1RHctWlBjN3FiQVpVd2o1ejBsdlJpVzdYckp5b3BHWnA5LTJ5VG1sUUdNS0JoNkFPM01lVE5tdm13dVJXZTV2WGlhNnl1V3A3MElSdw?oc=5",
+      "publisher": "The Spec",
+      "published_at": "2026-10-20T07:00:00+00:00",
+      "first_seen_at": "2026-10-28T19:25:32+00:00",
+      "last_observed_at": "2026-10-29T02:43:30+00:00",
+      "topics": [
+        "Police investigations"
       ],
       "category": "Reported fraud",
       "evidence_status": "unverified_news_lead",
@@ -2612,7 +2661,7 @@
       "publisher": "The Globe and Mail",
       "published_at": "2026-10-20T07:00:00+00:00",
       "first_seen_at": "2026-10-24T01:27:43+00:00",
-      "last_observed_at": "2026-10-28T23:27:31+00:00",
+      "last_observed_at": "2026-10-29T02:43:30+00:00",
       "topics": [
         "Police investigations"
       ],
@@ -2636,7 +2685,7 @@
       "publisher": "Global News",
       "published_at": "2026-10-20T07:00:00+00:00",
       "first_seen_at": "2026-10-24T01:27:43+00:00",
-      "last_observed_at": "2026-10-28T23:27:31+00:00",
+      "last_observed_at": "2026-10-29T02:43:30+00:00",
       "topics": [
         "Police investigations"
       ],
@@ -2660,7 +2709,7 @@
       "publisher": "CBC",
       "published_at": "2026-10-20T07:00:00+00:00",
       "first_seen_at": "2026-10-24T01:27:43+00:00",
-      "last_observed_at": "2026-10-28T23:27:33+00:00",
+      "last_observed_at": "2026-10-29T02:43:32+00:00",
       "topics": [
         "Bank and customer fraud",
         "Fraud research and reports",
@@ -2712,7 +2761,7 @@
       "publisher": "CBC",
       "published_at": "2026-10-20T07:00:00+00:00",
       "first_seen_at": "2026-10-24T03:02:30+00:00",
-      "last_observed_at": "2026-10-28T23:27:33+00:00",
+      "last_observed_at": "2026-10-29T02:43:32+00:00",
       "topics": [
         "Crypto investment and exchange"
       ],
@@ -2791,7 +2840,7 @@
       "publisher": "CTV News",
       "published_at": "2026-10-20T07:00:00+00:00",
       "first_seen_at": "2026-10-24T01:27:43+00:00",
-      "last_observed_at": "2026-10-28T23:27:31+00:00",
+      "last_observed_at": "2026-10-29T02:43:30+00:00",
       "topics": [
         "Bank and customer fraud",
         "Police investigations",
@@ -2845,7 +2894,7 @@
       "publisher": "CoinMarketCap",
       "published_at": "2026-10-19T22:04:01+00:00",
       "first_seen_at": "2026-10-24T01:27:42+00:00",
-      "last_observed_at": "2026-10-28T23:27:34+00:00",
+      "last_observed_at": "2026-10-29T02:43:33+00:00",
       "topics": [
         "Crypto investment and exchange",
         "Scams and victims",
@@ -2921,7 +2970,7 @@
       "publisher": "NOW Toronto",
       "published_at": "2026-10-19T07:00:00+00:00",
       "first_seen_at": "2026-10-24T01:27:43+00:00",
-      "last_observed_at": "2026-10-28T23:27:32+00:00",
+      "last_observed_at": "2026-10-29T02:43:31+00:00",
       "topics": [
         "Investment schemes"
       ],
@@ -2950,7 +2999,7 @@
       "publisher": "CityNews Toronto",
       "published_at": "2026-10-19T07:00:00+00:00",
       "first_seen_at": "2026-10-24T01:27:43+00:00",
-      "last_observed_at": "2026-10-28T23:27:31+00:00",
+      "last_observed_at": "2026-10-29T02:43:30+00:00",
       "topics": [
         "Police investigations"
       ],
@@ -2979,7 +3028,7 @@
       "publisher": "ThePrint",
       "published_at": "2026-10-19T07:00:00+00:00",
       "first_seen_at": "2026-10-24T21:28:12+00:00",
-      "last_observed_at": "2026-10-28T19:25:35+00:00",
+      "last_observed_at": "2026-10-29T02:43:34+00:00",
       "topics": [
         "Fraud research and reports",
         "Social media scam reports"
@@ -3088,7 +3137,7 @@
       "publisher": "insauga.com",
       "published_at": "2026-10-19T07:00:00+00:00",
       "first_seen_at": "2026-10-24T01:27:42+00:00",
-      "last_observed_at": "2026-10-28T23:27:31+00:00",
+      "last_observed_at": "2026-10-29T02:43:30+00:00",
       "topics": [
         "Scams and victims"
       ],
@@ -3114,7 +3163,7 @@
       "publisher": "CBC",
       "published_at": "2026-10-19T07:00:00+00:00",
       "first_seen_at": "2026-10-24T01:27:42+00:00",
-      "last_observed_at": "2026-10-28T23:27:32+00:00",
+      "last_observed_at": "2026-10-29T02:43:31+00:00",
       "topics": [
         "Bank and customer fraud",
         "Investment schemes",
@@ -3219,7 +3268,7 @@
       "publisher": "UpNext by Reelgood",
       "published_at": "2026-10-18T09:17:46+00:00",
       "first_seen_at": "2026-10-28T19:25:31+00:00",
-      "last_observed_at": "2026-10-28T19:25:31+00:00",
+      "last_observed_at": "2026-10-29T02:43:30+00:00",
       "topics": [
         "Scams and victims"
       ],
@@ -3243,7 +3292,7 @@
       "publisher": "ThePrint",
       "published_at": "2026-10-18T07:00:00+00:00",
       "first_seen_at": "2026-10-24T03:02:32+00:00",
-      "last_observed_at": "2026-10-28T19:25:35+00:00",
+      "last_observed_at": "2026-10-29T02:43:34+00:00",
       "topics": [
         "Social media scam reports"
       ],
@@ -3291,7 +3340,7 @@
       "publisher": "CTV News",
       "published_at": "2026-10-17T07:00:00+00:00",
       "first_seen_at": "2026-10-24T01:47:46+00:00",
-      "last_observed_at": "2026-10-28T19:25:35+00:00",
+      "last_observed_at": "2026-10-29T02:43:34+00:00",
       "topics": [
         "Fraud research and reports",
         "Social media scam reports"
@@ -3367,7 +3416,7 @@
       "publisher": "Citizen Digital",
       "published_at": "2026-10-16T07:00:00+00:00",
       "first_seen_at": "2026-10-24T01:27:42+00:00",
-      "last_observed_at": "2026-10-28T23:27:31+00:00",
+      "last_observed_at": "2026-10-29T02:43:30+00:00",
       "topics": [
         "Scams and victims"
       ],
@@ -3391,7 +3440,7 @@
       "publisher": "CTV News",
       "published_at": "2026-10-15T07:00:00+00:00",
       "first_seen_at": "2026-10-24T01:27:43+00:00",
-      "last_observed_at": "2026-10-28T23:27:31+00:00",
+      "last_observed_at": "2026-10-29T02:43:30+00:00",
       "topics": [
         "Police investigations",
         "Social media scam reports"
@@ -3423,7 +3472,7 @@
       "publisher": "https://www.readthepeak.com/",
       "published_at": "2026-10-15T07:00:00+00:00",
       "first_seen_at": "2026-10-24T01:27:42+00:00",
-      "last_observed_at": "2026-10-28T13:55:45+00:00",
+      "last_observed_at": "2026-10-29T02:43:30+00:00",
       "topics": [
         "Scams and victims"
       ],
@@ -3447,7 +3496,7 @@
       "publisher": "TVA Nouvelles",
       "published_at": "2026-10-15T07:00:00+00:00",
       "first_seen_at": "2026-10-24T01:27:44+00:00",
-      "last_observed_at": "2026-10-28T23:27:32+00:00",
+      "last_observed_at": "2026-10-29T02:43:31+00:00",
       "topics": [
         "Québec fraude"
       ],
@@ -3581,7 +3630,7 @@
       "publisher": "TVA Nouvelles",
       "published_at": "2026-10-15T07:00:00+00:00",
       "first_seen_at": "2026-10-28T06:48:04+00:00",
-      "last_observed_at": "2026-10-28T23:27:32+00:00",
+      "last_observed_at": "2026-10-29T02:43:31+00:00",
       "topics": [
         "Québec fraude"
       ],
@@ -3800,7 +3849,7 @@
       "publisher": "Financial Post",
       "published_at": "2026-10-14T07:00:00+00:00",
       "first_seen_at": "2026-10-24T01:27:42+00:00",
-      "last_observed_at": "2026-10-28T23:27:34+00:00",
+      "last_observed_at": "2026-10-29T02:43:34+00:00",
       "topics": [
         "Bank and customer fraud",
         "Fraud research and reports",
@@ -4102,7 +4151,7 @@
       "publisher": "ProPakistani",
       "published_at": "2026-10-13T07:00:00+00:00",
       "first_seen_at": "2026-10-24T01:47:46+00:00",
-      "last_observed_at": "2026-10-28T19:25:35+00:00",
+      "last_observed_at": "2026-10-29T02:43:34+00:00",
       "topics": [
         "Bank and customer fraud",
         "Fraud research and reports",
@@ -4318,7 +4367,7 @@
       "publisher": "CTV News",
       "published_at": "2026-10-10T07:00:00+00:00",
       "first_seen_at": "2026-10-28T01:04:51+00:00",
-      "last_observed_at": "2026-10-28T23:27:34+00:00",
+      "last_observed_at": "2026-10-29T02:43:33+00:00",
       "topics": [
         "Online gambling fraud"
       ],
@@ -4342,7 +4391,7 @@
       "publisher": "CBC",
       "published_at": "2026-10-09T07:00:00+00:00",
       "first_seen_at": "2026-10-24T01:47:46+00:00",
-      "last_observed_at": "2026-10-28T23:27:33+00:00",
+      "last_observed_at": "2026-10-29T02:43:32+00:00",
       "topics": [
         "Fraud research and reports"
       ],
@@ -4424,7 +4473,7 @@
       "publisher": "Yahoo! Finance Canada",
       "published_at": "2026-10-08T07:00:00+00:00",
       "first_seen_at": "2026-10-24T12:28:58+00:00",
-      "last_observed_at": "2026-10-28T23:27:33+00:00",
+      "last_observed_at": "2026-10-29T02:43:32+00:00",
       "topics": [
         "Crypto investment and exchange"
       ],
@@ -4575,7 +4624,7 @@
       "publisher": "CTV News",
       "published_at": "2026-10-06T07:00:00+00:00",
       "first_seen_at": "2026-10-24T03:02:31+00:00",
-      "last_observed_at": "2026-10-28T23:27:34+00:00",
+      "last_observed_at": "2026-10-29T02:43:33+00:00",
       "topics": [
         "Online gambling fraud"
       ],
@@ -4785,7 +4834,7 @@
       "publisher": "The420.in",
       "published_at": "2026-10-02T07:00:00+00:00",
       "first_seen_at": "2026-10-27T12:02:04+00:00",
-      "last_observed_at": "2026-10-28T19:25:35+00:00",
+      "last_observed_at": "2026-10-29T02:43:34+00:00",
       "topics": [
         "Social media scam reports"
       ],
@@ -4905,7 +4954,7 @@
       "publisher": "Wealth Professional",
       "published_at": "2026-09-30T07:00:00+00:00",
       "first_seen_at": "2026-10-24T01:47:46+00:00",
-      "last_observed_at": "2026-10-28T23:27:33+00:00",
+      "last_observed_at": "2026-10-29T02:43:32+00:00",
       "topics": [
         "Fraud research and reports"
       ],
@@ -5006,7 +5055,7 @@
       "publisher": "Crowdfund Insider",
       "published_at": "2026-09-29T07:00:00+00:00",
       "first_seen_at": "2026-10-24T03:02:30+00:00",
-      "last_observed_at": "2026-10-28T23:27:33+00:00",
+      "last_observed_at": "2026-10-29T02:43:34+00:00",
       "topics": [
         "Crypto investment and exchange",
         "Social media scam reports"
@@ -5134,7 +5183,7 @@
       "publisher": "Decrypt",
       "published_at": "2026-09-29T07:00:00+00:00",
       "first_seen_at": "2026-10-24T03:02:30+00:00",
-      "last_observed_at": "2026-10-28T23:27:33+00:00",
+      "last_observed_at": "2026-10-29T02:43:32+00:00",
       "topics": [
         "Crypto investment and exchange"
       ],
@@ -5158,7 +5207,7 @@
       "publisher": "Radio-Canada",
       "published_at": "2026-09-29T07:00:00+00:00",
       "first_seen_at": "2026-10-28T13:55:47+00:00",
-      "last_observed_at": "2026-10-28T23:27:33+00:00",
+      "last_observed_at": "2026-10-29T02:43:32+00:00",
       "topics": [
         "Crypto investment and exchange"
       ],
