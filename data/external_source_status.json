@@ -1,44 +1,52 @@
 {
-  "started_at": "2026-10-29T09:43:15+00:00",
+  "started_at": "2026-10-29T16:49:07+00:00",
   "collectors": {
     "GDELT DOC": {
       "status": "scheduled_daily",
       "message": "Will check at 06:00 UTC, unless manually forced; last GDELT calls were HTTP 429"
     },
     "RCMP national news": {
-      "status": "failed",
-      "error": "XML or text declaration not at start of entity: line 6, column 0"
+      "status": "ok",
+      "scanned": 20,
+      "accepted": 0
     },
     "RCMP British Columbia": {
-      "status": "failed",
-      "error": "XML or text declaration not at start of entity: line 6, column 0"
+      "status": "ok",
+      "scanned": 20,
+      "accepted": 0
     },
     "RCMP Alberta": {
-      "status": "failed",
-      "error": "XML or text declaration not at start of entity: line 6, column 0"
+      "status": "ok",
+      "scanned": 20,
+      "accepted": 0
     },
     "RCMP Manitoba": {
-      "status": "failed",
-      "error": "XML or text declaration not at start of entity: line 6, column 0"
+      "status": "ok",
+      "scanned": 20,
+      "accepted": 0
     },
     "RCMP Saskatchewan": {
-      "status": "failed",
-      "error": "XML or text declaration not at start of entity: line 6, column 0"
+      "status": "ok",
+      "scanned": 20,
+      "accepted": 0
     },
     "RCMP Nova Scotia": {
-      "status": "failed",
-      "error": "XML or text declaration not at start of entity: line 6, column 0"
+      "status": "ok",
+      "scanned": 20,
+      "accepted": 1
     },
     "RCMP New Brunswick": {
-      "status": "failed",
-      "error": "XML or text declaration not at start of entity: line 6, column 0"
+      "status": "ok",
+      "scanned": 20,
+      "accepted": 0
     },
     "RCMP Federal Central": {
-      "status": "failed",
-      "error": "XML or text declaration not at start of entity: line 6, column 0"
+      "status": "ok",
+      "scanned": 20,
+      "accepted": 7
     }
   },
   "coverage_note": "RSS and GDELT coverage are neither exhaustive nor verified incident data.",
-  "completed_at": "2026-10-29T09:43:19+00:00",
-  "record_count": 221
+  "completed_at": "2026-10-29T16:49:13+00:00",
+  "record_count": 232
 }
