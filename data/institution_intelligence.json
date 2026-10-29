@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-29T16:49:28+00:00",
+  "generated_at": "2026-10-29T21:43:18+00:00",
   "methodology": "Institution names are canonically grouped using explicit aliases. Headline entries are conservative reporting groups, not distinct or independently verified fraud incidents; multiple publisher headlines are retained under each group. An institution mention is not proof of wrongdoing.",
   "source_counts": {
     "enforcement": 98,
     "reviewed_incidents": 6,
-    "unverified_report_groups": 2438
+    "unverified_report_groups": 2446
   },
   "institutions": [
     {
@@ -509,9 +509,36 @@
       "counts": {
         "enforcement": 2,
         "incidents": 1,
-        "headlines": 26
+        "headlines": 27
       },
       "evidence": [
+        {
+          "kind": "headline",
+          "id": "report-07b08225fd1625b58776",
+          "date": "2026-10-28T19:14:29+00:00",
+          "title": "RBC Blocks Third-Party Personal AI Agents Over Fraud Risks - PYMNTS.com",
+          "source_url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNUlIzMTNkUzAwZXo1blc1R29WZlJvSW9tUGt3QUtVbnB3YjNZODk0dzd2VGdtaHAzazY3dE44djk4ZGNrNHF6MzFZMzVVWU4xY1p2bklpd3BmRlpaUHNZM0xUa3Jvcmxnc0ZQY2gxcFNYZEt3c0pyM1VXWWd2bG1VblEzeHNOYTc2QzZwcHFaZ0I5ZVpNMGRKNkY0RHdSUmtIYlE?oc=5",
+          "source": "PYMNTS.com",
+          "category": "Reported fraud",
+          "source_count": 1,
+          "source_channels": [
+            "recent"
+          ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "RBC Blocks Third-Party Personal AI Agents Over Fraud Risks - PYMNTS.com",
+              "publisher": "PYMNTS.com",
+              "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNUlIzMTNkUzAwZXo1blc1R29WZlJvSW9tUGt3QUtVbnB3YjNZODk0dzd2VGdtaHAzazY3dE44djk4ZGNrNHF6MzFZMzVVWU4xY1p2bklpd3BmRlpaUHNZM0xUa3Jvcmxnc0ZQY2gxcFNYZEt3c0pyM1VXWWd2bG1VblEzeHNOYTc2QzZwcHFaZ0I5ZVpNMGRKNkY0RHdSUmtIYlE?oc=5",
+              "published_at": "2026-10-28T19:14:29+00:00",
+              "discovery_channel": "recent"
+            }
+          ],
+          "amount_text": [],
+          "location": null,
+          "evidence": "unverified_headline",
+          "role": "mentioned_in_headline_only"
+        },
         {
           "kind": "headline",
           "id": "report-681abb36d0d5c3c44d4d",
@@ -1314,8 +1341,8 @@
         "2026": 4250000.0,
         "2023": 7475000.0
       },
-      "recent_activity": "2026-10-15T07:00:00+00:00",
-      "evidence_count_shown": 29
+      "recent_activity": "2026-10-28T19:14:29+00:00",
+      "evidence_count_shown": 30
     },
     {
       "id": "bmo",
