@@ -195,3 +195,37 @@ box-shadow:0 2px 9px #12364830,0 0 0 1px #176f7950;transition:transform .13s eas
 .world-enforcement-notice{font-size:12px;color:#54717d;line-height:1.6;padding:0 20px 14px;margin:0}
 .regulator-publications-panel>.supporting-disclaimer{padding:0 20px 15px;font-size:11px}
 @media(max-width:700px){.world-reporting-toolbar input{width:100%}.world-reporting-toolbar label{width:100%}}
+
+
+/* Map circles use a permanent, accessible right-hand investigation panel. */
+.map-selected-context,.map-record-detail{
+ margin:0 14px 12px;padding:13px 15px;border-radius:10px;
+ border:1px solid #c6dcdf;background:#f4faf9;min-width:0;
+}
+.map-selected-context[hidden],.map-record-detail[hidden]{display:none!important}
+.map-selection-header,.map-record-head{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.map-selected-context strong{font-size:14px;color:#164c59}
+.map-selected-context p,.map-record-detail p{font-size:11px;line-height:1.55;color:#536f7b;margin:6px 0}
+.map-selected-context small{font-size:11px;color:#4a7480}
+.map-selection-note{padding-top:8px;border-top:1px solid #dfeded}
+.map-selection-header button,#mapDetailClose{
+ flex:0 0 auto;border:1px solid #bed6da;background:white;color:#176878;
+ border-radius:7px;padding:6px 9px;cursor:pointer;font-size:11px
+}
+#mapDetailClose{font-size:19px;line-height:1.1;padding:2px 9px}
+.map-record-detail{background:#fff;border-color:#92bcc0;box-shadow:0 3px 14px #1e4c5814}
+.map-record-detail h3{font-family:inherit;font-size:15px;line-height:1.4;margin:10px 0;color:#164559}
+.map-record-detail dl{display:grid;grid-template-columns:minmax(90px,.36fr) minmax(0,1fr);gap:7px 12px;margin:12px 0}
+.map-record-detail dt{font-size:10px;font-weight:750;color:#65808b}
+.map-record-detail dd{margin:0;min-width:0;overflow-wrap:anywhere;font-size:11px;color:#284b58}
+.map-detail-source{display:inline-flex;margin-top:8px;background:#e9f5f2;border:1px solid #accfd0;color:#145b69!important;border-radius:7px;padding:10px 13px;font-weight:750;font-size:12px}
+.map-detail-trigger{border:0;padding:0;display:inline;text-align:left;background:transparent;color:#184b62;font:inherit;font-weight:750;cursor:pointer;line-height:inherit}
+.map-detail-trigger:hover{text-decoration:underline;color:#0d7180}
+.map-detail-trigger:focus-visible{outline:3px solid #8abcbc;outline-offset:2px}
+.count-map-pin{cursor:pointer}
+.map-coverage{flex-shrink:0}
+@media(max-width:780px){
+ .map-selected-context,.map-record-detail{margin:0 10px 10px}
+ .map-record-detail dl{grid-template-columns:1fr;gap:3px}
+ .map-record-detail dd{margin-bottom:8px}
+}
