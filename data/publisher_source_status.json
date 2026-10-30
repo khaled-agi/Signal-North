@@ -1,5 +1,5 @@
 {
-  "completed_at": "2026-10-30T08:25:31+00:00",
+  "completed_at": "2026-10-30T15:15:57+00:00",
   "sources": {
     "Global News Canada": {
       "status": "ok",
@@ -8,9 +8,8 @@
       "url": "https://globalnews.ca/canada/feed/"
     },
     "Financial Post": {
-      "status": "ok",
-      "feed_items": 10,
-      "accepted": 0,
+      "status": "failed",
+      "error": "HTTPSConnectionPool(host='financialpost.com', port=443): Read timed out. (read timeout=30)",
       "url": "https://financialpost.com/feed/"
     },
     "National Post": {
