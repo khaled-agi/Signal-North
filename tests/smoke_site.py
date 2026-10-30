@@ -189,6 +189,11 @@ try:
         page.locator("#mapStyle").select_option("positron")
         assert page.locator("#mapBasemapStatus").text_content()
         assert page.locator(".explore-pathways button").count() == 3
+        page.locator("#mapFocus").click()
+        assert page.locator("#mapFocus").get_attribute("aria-pressed") == "true"
+        assert not page.locator("#mappedStories").is_visible()
+        page.locator("#mapFocus").click()
+        assert page.locator("#mappedStories").is_visible()
         assert page.locator(".sidebar > .nav").count() == 5
         page.locator("#mapCountMode").select_option("headlines")
         assert page.locator("#mapCountMode").input_value() == "headlines"
