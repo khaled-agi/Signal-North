@@ -1,5 +1,7 @@
 """Source-domain and evidence integrity regression for international regulator discovery."""
 import unittest
+import json
+from pathlib import Path
 from datetime import datetime, timedelta, timezone
 from unittest.mock import Mock
 from scripts.collect_global_regulator_publications import (
@@ -46,6 +48,21 @@ class EnforcementDiscoveryTests(unittest.TestCase):
         self.assertIsNone(x["penalty_amount"])
         self.assertEqual(x["review_status"],"legal_status_and_action_type_not_independently_checked")
         self.assertNotIn("final",x["evidence_tier"])
+
+    def test_new_zealand_official_actions_are_not_falsely_fines(self):
+        data=json.loads((Path(__file__).resolve().parents[1] /
+                         "data" / "global_enforcement_seed.json").read_text("utf-8"))
+        nz=[x for x in data["events"] if x["country_code"]=="NZ"]
+        self.assertEqual(len(nz),2)
+        self.assertTrue(all(x["regulator"]=="FMA" and
+                            x["evidence_tier"]=="official_regulatory_source" and
+                            x["penalty_amount"] is None for x in nz))
+        self.assertIn("warning",next(x for x in nz if "tsb" in x["id"])["status"])
+        self.assertIn("undertaking",next(x for x in nz if "bnz" in x["id"])["status"])
+        sg=[x for x in data["events"] if x["country_code"]=="SG"]
+        self.assertTrue(any("revocation" in x["status"] for x in sg))
+        self.assertTrue(any(x["penalty_amount"]==120000 and
+                            x["penalty_currency"]=="SGD" for x in sg))
 
     def test_mas_primary_index_parser_rejects_external_links(self):
         markup="""<html><body><table>

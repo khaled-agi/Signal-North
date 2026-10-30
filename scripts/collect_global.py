@@ -158,7 +158,7 @@ def run():
     status["sources"][regulator]={"status":"failed","error":str(e)[:240],"kind":"official_decision_index"}
  if offline:
   for agency in ("FinCEN","FCA","MAS"):status["sources"][agency]={"status":"offline_test_uses_seed"}
- for agency in ("AUSTRAC","HKMA","Central Bank of Ireland","OFAC"):
+ for agency in ("AUSTRAC","HKMA","Central Bank of Ireland","OFAC","FMA"):
   status["sources"][agency]={"status":"seed_verified","kind":"manual_source_verified",
     "records":sum(x.get("regulator")==agency for x in seed)}
 
@@ -172,10 +172,13 @@ def run():
              if w not in {"the","and","matter","bank","inc","usa","limited","holdings"})
  seeds=[x for x in rows.values() if x.get("is_seed")]
  for item_id,item in list(rows.items()):
-  if item.get("is_seed") or item.get("regulator") not in ("FinCEN","FCA"):continue
+  if item.get("is_seed") or item.get("regulator") not in ("FinCEN","FCA","MAS"):continue
   for seed_row in seeds:
    if seed_row.get("regulator")!=item["regulator"] or seed_row.get("published_at")!=item.get("published_at"):
     continue
+   if item.get("source_url")==seed_row.get("source_url"):
+    del rows[item_id]
+    break
    aa=significant_words(seed_row.get("institution"))
    bb=significant_words(item.get("institution"))
    if aa and bb and len(aa&bb)/max(1,min(len(aa),len(bb)))>=.67:
