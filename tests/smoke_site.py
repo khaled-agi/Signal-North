@@ -66,11 +66,11 @@ try:
         page.wait_for_function(
             "document.querySelector('#supportCasesStatus').textContent.includes('Scan:')", timeout=15000)
         assert page.locator("#supportCases .supporting-news-item").count() > 0
-        assert "Unverified news lead" in page.locator("#supportCases").inner_text()
-        assert "Scan:" in page.locator("#supportEnforcementStatus").inner_text()
-        assert "Scan:" in page.locator("#supportRegulatoryStatus").inner_text()
-        assert "partial year" in page.locator("#overviewFraud").inner_text()
-        assert "UNVERIFIED" in page.locator("#overviewFraud").inner_text()
+        assert "Unverified news lead" in page.locator("#supportCases").text_content()
+        assert "Scan:" in page.locator("#supportEnforcementStatus").text_content()
+        assert "Scan:" in page.locator("#supportRegulatoryStatus").text_content()
+        assert "partial year" in page.locator("#overviewFraud").text_content()
+        assert "UNVERIFIED" in page.locator("#overviewFraud").text_content()
         assert page.locator("#supportCases .supporting-news-item a").first.get_attribute("href").startswith("https://")
         print("Supporting intelligence routing, evidence labels and 2026 partial-year figures: PASS")
         assert page.locator("#headlinesTop .breaking-story").count() > 0
