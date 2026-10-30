@@ -45,9 +45,46 @@
   const rows=types.map(m=>'<div class="fraud-stat"><div><strong>'+esc(m.category)+'</strong><div class="small">'+esc(m.period)+'</div></div><strong>'+money(m.amount_cad)+'</strong>'+link(m.source_url,"Source")+'</div>').join("");
   const obsi=stats.find(x=>x.type==="banking_fraud_complaints");
   $i("fraudNational").innerHTML='<div class="fraud-highlights">'+main+'</div><div class="fraud-separator">REPORTED LOSSES BY FRAUD TYPOLOGY — NOT ADDITIVE TO NATIONAL TOTAL</div><div class="fraud-stat-grid">'+rows+'</div>'+(obsi?'<div class="notice" style="margin:14px 20px"><strong>Consumer dispute indicator:</strong> OBSI opened '+Number(obsi.count).toLocaleString()+" fraud-related banking investigations in "+esc(obsi.year)+". This is a complaint count, not a loss amount. "+link(obsi.source_url,"Original source")+"</div>":"");
-  const latest=all.find(x=>x.year===2025)||all[0];
-  const recent=news.slice(0,4).map(x=>'<div class="mini-lead"><span class="small">'+esc((x.published_at||"").slice(0,10))+'</span><div>'+link(x.url,x.title)+'</div></div>').join("");
-  $i("overviewFraud").innerHTML='<div class="fraud-highlightline"><div><span class="small">Canada reported fraud losses · '+esc(latest?.period||"2025")+'</span><div class="fraud-figure">'+money(latest?.amount_cad)+'</div><span class="small">Nationwide victim reports, not institutional loss · '+(latest?link(latest.source_url,"CAFC source"):"")+'</span></div><div class="fraud-split"><div class="eyebrow">LATEST NEWS DISCOVERIES</div>'+ (recent||'<div class="small">No syndicated news leads collected yet. Regulator and CAFC data remain available.</div>')+'</div></div>';
+  const annual=all.filter(x=>/calendar year/i.test(x.period||"")).sort((a,b)=>b.year-a.year)[0]||all[0];
+  const partial=all.filter(x=>x.year>Number(annual?.year||0)).sort((a,b)=>b.year-a.year)[0];
+  const routed=window.SignalNorthSupportingIntelligence;
+  const fraudLeads=routed?routed.select(news,"fraud",4,Date.now(),90):[];
+  const recent=fraudLeads.map(x=>'<div class="mini-lead"><span class="small">'+esc((x.published_at||"").slice(0,10))+'</span><div>'+link(x.url,x.title)+'</div></div>').join("");
+  $i("overviewFraud").innerHTML='<div class="fraud-highlightline"><div><span class="small">Most recent full-year Canadian victim-reported losses · '+esc(annual?.period||"Unavailable")+'</span><div class="fraud-figure">'+money(annual?.amount_cad)+'</div><span class="small">Not institutional losses · '+(annual?link(annual.source_url,"CAFC source"):"")+'</span>'+(partial?'<div class="fraud-stat" style="margin-top:12px"><div><strong>'+money(partial.amount_cad)+'</strong><div class="small">'+esc(partial.period)+' · partial year, not directly comparable to annual total</div></div>'+link(partial.source_url,"Source")+'</div>':"")+'</div><div class="fraud-split"><div class="eyebrow">LATEST FRAUD & SCAM REPORTING · UNVERIFIED</div>'+ (recent||'<div class="small">No matching news from the past 90 days; official figures remain available.</div>')+'</div></div>';
+ }
+
+ function renderSupportingNews(scanTime){
+  const router=window.SignalNorthSupportingIntelligence;
+  const sections=[
+   ["incidents","supportCases","supportCasesStatus"],
+   ["enforcement","supportEnforcement","supportEnforcementStatus"],
+   ["regulatory","supportRegulatory","supportRegulatoryStatus"]
+  ];
+  const scan=scanTime&&!Number.isNaN(Date.parse(scanTime))?new Date(scanTime).toLocaleString("en-CA",{
+   month:"short",day:"numeric",hour:"numeric",minute:"2-digit",timeZone:"America/Toronto"
+  })+" ET":"Scan time unavailable";
+  for(const [section,containerId,statusId] of sections){
+   const container=$i(containerId),status=$i(statusId);
+   if(!container||!status)continue;
+   if(!router){
+    status.textContent="Routing not loaded";
+    container.innerHTML='<div class="empty">Recent-news routing is unavailable; reviewed source records remain above.</div>';
+    continue;
+   }
+   const hits=router.select(news,section,4,Date.now(),90);
+   const newest=hits.length?String(hits[0].published_at||"").slice(0,10):"None in past 90 days";
+   status.textContent="Latest publication: "+newest+" · Scan: "+scan;
+   container.innerHTML=hits.length?hits.map(item=>{
+    const source=router.sourceUrl(item);
+    const publisher=item.publisher||item.headline_variations?.[0]?.publisher||"Source-linked reporting";
+    const sourceCount=Number(item.source_count||1);
+    return '<article class="supporting-news-item">'+
+     '<button type="button" class="supporting-news-title" data-story="'+esc(item.id)+'">'+esc(item.title)+'</button>'+
+     '<div class="supporting-news-meta">'+esc(String(item.published_at||"").slice(0,10))+' · '+esc(publisher)+
+     (sourceCount>1?' · '+sourceCount+' source links':"")+' · Unverified news lead</div>'+
+     '<div class="supporting-news-source">'+link(source,"Read source")+'</div></article>';
+   }).join(""):'<div class="empty">No matching source-linked reporting published in the past 90 days. This is not evidence that no relevant activity occurred.</div>';
+  }
  }
  function renderNews(){
   const q=$i("newsSearch").value.trim().toLowerCase();
@@ -314,10 +351,11 @@
       :'<div class="source-line"><span class="small">RCMP / GDELT source-health data will appear after the next successful collection.</span></div>';
   const lastUpdated=newsStatus.last_completed_at||(fetched[1].status==="fulfilled"?fetched[1].value.updated_at:null);
   renderHomeHeadlines(lastUpdated);
+  renderSupportingNews(lastUpdated);
   window.dispatchEvent(new CustomEvent("signalnorth:newsready",{detail:{leads:news,rawHeadlineCount}}));
   if(fetched[2].status==="fulfilled")bankDisclosure=fetched[2].value.records||[];
   if(fetched[3].status==="fulfilled")events=fetched[3].value.events||[];
-  if(fetched[5].status==="fulfilled")incidents=fetched[5].value.incidents||[];
+  if(fetched[5].status==="fulfilled")incidents=(fetched[5].value.incidents||[]).slice().sort((a,b)=>String(b.reported_at||"").localeCompare(String(a.reported_at||"")));
   initIncidents();
   window.dispatchEvent(new CustomEvent("signalnorth:incidentsready",{detail:{incidents}}));
   if(stats.length)national();
