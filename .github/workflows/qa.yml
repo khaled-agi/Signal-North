@@ -26,6 +26,7 @@ jobs:
           node --check app.js
           node --check intel.js
           node --check supporting_intelligence.js
+          node --check map_upgrade.js
           node --check community_signals.js
           node --check workspace.js
           node --check connections.js
