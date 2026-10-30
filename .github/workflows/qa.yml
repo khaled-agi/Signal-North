@@ -24,6 +24,7 @@ jobs:
         run: |
           python -m compileall -q scripts tests
           node --check app.js
+          node --check global.js
           node --check intel.js
           node --check supporting_intelligence.js
           node --check map_upgrade.js
@@ -38,5 +39,6 @@ jobs:
           node tests/test_supporting_intelligence.js
           python -m unittest discover -s tests -p test_community_signals.py
           python -m unittest discover -s tests -p test_world_reporting.py
+          python -m unittest discover -s tests -p test_global_regulator_publications.py
       - name: Test real browser interactions
         run: python tests/smoke_site.py

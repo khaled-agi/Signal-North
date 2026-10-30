@@ -43,6 +43,13 @@ def build():
   if code and len(code)==2:info[code]=x
  global_events=read("global_enforcement.json","events")
  world_reports=read("world_reporting.json","leads")
+ agency_publications=read("global_regulator_publications.json","leads")
+ agency_lead_counts=Counter(x.get("country_code") for x in agency_publications)
+ agency_health={}
+ agency_status_path=DATA/"global_regulator_publications_status.json"
+ if agency_status_path.exists():
+  agency_health=json.loads(agency_status_path.read_text("utf-8")).get("agencies",{})
+
  world_status={}
  status_path=DATA/"world_reporting_status.json"
  if status_path.exists():
@@ -52,6 +59,10 @@ def build():
   profile=country_profile(country)
   attempt=world_status.get(code,{})
   return {"world_reporting_count":reporting_counts.get(code,0),
+    "official_publication_lead_count":agency_lead_counts.get(code,0),
+    "regulator_feed_status":"scanned" if any(
+      x.get("country_code")==code and x.get("checked_at") for x in agency_health.values()
+    ) else "not_monitored",
     "world_reporting_state":attempt.get("state","not_attempted"),
     "world_reporting_last_attempt_at":attempt.get("attempted_at"),
     "catalogue_type":profile["catalogue_type"],
@@ -88,6 +99,7 @@ def build():
   "jurisdictions":countries,
   "coverage_note":"ISO-3166 country and territory catalogue plus labeled non-ISO research jurisdictions (e.g. Kosovo XK). Official enforcement, country-language news discovery, and unattempted markets are separate coverage levels. A country discovery result is a search-market label only, NOT a geolocated alleged crime. Pins use country centroids solely for geographic browsing, never incident coordinates.",
   "markets_with_recent_reporting":sum(bool(x.get("world_reporting_count")) for x in countries),
+  "jurisdictions_with_agency_site_publication_leads":sum(bool(x.get("official_publication_lead_count")) for x in countries),
   "markets_attempted":sum(x.get("world_reporting_state")!="not_attempted" for x in countries),
   "iso_jurisdictions":len(pycountry.countries),
   "non_iso_research_jurisdictions":sum(x.get("catalogue_type")=="non_iso_user_assigned" for x in countries),

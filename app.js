@@ -1,6 +1,6 @@
 "use strict";
 const $ = selector => document.querySelector(selector);
-const state = {events:[],news:[],status:{},map:null,layer:null,tab:"overview",mapMode:"all",mapCountMode:"groups",mapTopic:"",mapYearFrom:"",mapYearTo:"",mapProvince:"",mapMonth:"",clientFocus:"",mapMarkers:new Map(),incidents:[],entityAliases:[],rawHeadlineCount:0,globalEvents:[],worldNews:[],worldNewsStatus:{},worldCountries:[],globalHealth:{},mapCountry:"",mapAgency:"",globalPattern:"",basemap:null,basemapMode:null,mapSideVisible:12};
+const state = {events:[],news:[],status:{},map:null,layer:null,tab:"overview",mapMode:"all",mapCountMode:"groups",mapTopic:"",mapYearFrom:"",mapYearTo:"",mapProvince:"",mapMonth:"",clientFocus:"",mapMarkers:new Map(),incidents:[],entityAliases:[],rawHeadlineCount:0,globalEvents:[],worldNews:[],worldRegLeads:[],worldNewsStatus:{},worldCountries:[],globalHealth:{},mapCountry:"",mapAgency:"",globalPattern:"",basemap:null,basemapMode:null,mapSideVisible:12};
 const provinces = {ON:"Ontario",QC:"Québec",BC:"British Columbia",AB:"Alberta",NB:"New Brunswick",NS:"Nova Scotia",MB:"Manitoba",SK:"Saskatchewan",NL:"Newfoundland & Labrador",PE:"Prince Edward Island"};
 function escapeHTML(value){return String(value??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
 function currency(value){if(value==null)return "Not reported";const x=Number(value);return x>=1e6?"$"+(x/1e6).toLocaleString("en-CA",{maximumFractionDigits:2})+"M":"$"+x.toLocaleString("en-CA",{maximumFractionDigits:0});}
@@ -44,7 +44,7 @@ function renderMetrics(){
 // One source record contributes exactly one count. A news article is not an
 // independently verified incident; unlocated articles remain in the list.
 function mapRecord(kind,e){
- const news=kind==="news",market=kind==="worldnews",world=kind==="global",reg=kind==="reg"||world,dateValue=reg||market?e.published_at:news?e.published_at:e.reported_at;
+ const news=kind==="news",market=kind==="worldnews",officialLead=kind==="officiallead",world=kind==="global"||officialLead,reg=kind==="reg"||world,dateValue=officialLead?e.first_observed_at:reg||market?e.published_at:news?e.published_at:e.reported_at;
  const country=(world||market)?state.worldCountries.find(c=>c.code===e.country_code):null;
  const lat=(world||market)?country?.map_latitude:(news?e.map_latitude:e.latitude),
        lon=(world||market)?country?.map_longitude:(news?e.map_longitude:e.longitude);
@@ -57,7 +57,7 @@ function mapRecord(kind,e){
   publisher:String(e.regulator||e.publisher||e.source||e.institution||"Original source"),
   lat:hasGeo?lat:null,lon:hasGeo?lon:null,province:news?e.map_province:e.province,
   countryCode:(world||market)?e.country_code:"CA",agency:world?e.regulator:(kind==="reg"?e.source:""),
-  locationRole:world?"regulator_jurisdiction_country_center":market?"country_search_market_only":news?"headline_city_mention":"source_supported_location",
+  locationRole:officialLead?"unreviewed_official_agency_publication":world?"regulator_jurisdiction_country_center":market?"country_search_market_only":news?"headline_city_mention":"source_supported_location",
   location:world?e.country+" · regulator jurisdiction":market?e.country+" · SEARCH MARKET (not event location)":news?(e.map_location||"City mentioned in headline"):e.location||"Source-reported location",
   sourceUrl:(news||market)?e.url:e.source_url};
 }
@@ -73,9 +73,10 @@ function refreshMapList(){
  const located=rows.filter(x=>x.lat!==null).length;
  const international=rows.filter(x=>x.kind==="global").length;
  const globalReports=rows.filter(x=>x.kind==="worldnews").length;
+ const agencyLeads=rows.filter(x=>x.kind==="officiallead").length;
  const total=rows.length;
  $("#mapStorySummary").textContent=
-  total.toLocaleString("en-CA")+" records · "+international+" global jurisdiction actions · "+globalReports+" country-search leads · "+located.toLocaleString("en-CA")+" country-market / agency / source-clue markers · "+
+  total.toLocaleString("en-CA")+" records · "+international+" global jurisdiction actions · "+agencyLeads+" unreviewed agency-site publications · "+globalReports+" country-search leads · "+located.toLocaleString("en-CA")+" country-market / agency / source-clue markers · "+
   Math.min(state.mapSideVisible||100,total).toLocaleString("en-CA")+" shown";
  $("#mapStoryScope").value=scope;
  $("#mapStoryClear").hidden=scope!=="selected";
@@ -83,7 +84,7 @@ function refreshMapList(){
  $("#mapStoryAll").hidden=total<=(state.mapSideVisible||100);
  host.innerHTML=rows.length?rows.slice(0,state.mapSideVisible||100).map(x=>{
   const located=x.lat!==null;
-  const label=x.kind==="global"?"International agency action":x.kind==="worldnews"?"Unverified country-search report":x.kind==="reg"?"Canadian regulatory notice":x.kind==="case"?"Reviewed case":"Canadian news headline";
+  const label=x.kind==="officiallead"?"Unreviewed original regulator publication":x.kind==="global"?"International agency action":x.kind==="worldnews"?"Unverified country-search report":x.kind==="reg"?"Canadian regulatory notice":x.kind==="case"?"Reviewed case":"Canadian news headline";
   return '<article class="map-story"><div class="map-story-meta">'+escapeHTML(date(x.date))+" · "+escapeHTML(label)+" · "+escapeHTML(x.publisher)+'</div>'+
    '<div class="map-story-title">'+(x.kind==="news"?
     '<button data-story="'+escapeHTML(x.id)+'" type="button">'+escapeHTML(x.title)+'</button>':
@@ -91,6 +92,7 @@ function refreshMapList(){
    '<div class="map-story-sub">'+
     (x.kind==="global"?'<span class="map-reg-note">Regulator country, not incident location · '+escapeHTML(x.raw.status||"Published official action")+'</span> · ':"")+
     (x.kind==="worldnews"?'<span class="map-reg-note">Search-market only · Unverified · Not a verified fraud location</span> · ':"")+
+    (x.kind==="officiallead"?'<span class="map-reg-note">Original regulator-site publication · Legal status not reviewed · Date is first observed</span> · ':"")+
     (x.kind==="news"&&x.sourceCount>1?x.sourceCount+' source links · ':"")+
     (located?'<span class="map-geo-yes">◉ '+escapeHTML(x.location)+'</span>':'<span class="map-geo-no">Location not verified</span>')+
     (located? ' · <button data-mapfocus="'+escapeHTML(x.id)+'" type="button" class="map-locate">Locate →</button>':"")+
@@ -110,7 +112,7 @@ function renderMapClusters(){
   if(x.lat===null)continue;
   const point=state.map.project(L.latLng(x.lat,x.lon),zoom);
   const key=Math.floor(point.x/gridSize)+"/"+Math.floor(point.y/gridSize);
-  if(!clusters.has(key))clusters.set(key,{items:[],x:0,y:0,weights:{news:0,worldnews:0,reg:0,case:0,global:0}});
+  if(!clusters.has(key))clusters.set(key,{items:[],x:0,y:0,weights:{news:0,worldnews:0,officiallead:0,reg:0,case:0,global:0}});
   const g=clusters.get(key);g.items.push(x);g.x+=point.x;g.y+=point.y;g.weights[x.kind]++;
  }
  for(const g of clusters.values()){
@@ -130,7 +132,7 @@ function renderMapClusters(){
   const popup='<div class="map-pop"><div class="map-pop-heading">'+escapeHTML(n.toLocaleString("en-CA"))+
     (state.mapCountMode==="headlines"?' headline / evidence units':' grouped records')+'</div>'+
     '<span class="map-pop-source">'+escapeHTML(geoNames||"Source-supported geography")+'</span>'+
-    '<p class="map-pop-notice">'+g.weights.news+' Canadian headlines · '+g.weights.worldnews+' unverified country-search reports · '+g.weights.reg+' Canadian notices · '+g.weights.global+' international regulator actions · '+g.weights.case+' reviewed cases. Country-market locations and regulator jurisdictions are NOT alleged incident locations.</p>'+
+    '<p class="map-pop-notice">'+g.weights.news+' Canadian headlines · '+g.weights.worldnews+' unverified country-search reports · '+g.weights.reg+' Canadian notices · '+g.weights.global+' international regulator actions · '+g.weights.officiallead+' unreviewed original-agency publications · '+g.weights.case+' reviewed cases. Country-market locations and regulator jurisdictions are NOT alleged incident locations.</p>'+
     '<div class="map-popup-record">'+g.items.slice(0,4).map(x=>'<div><span class="map-popup-date">'+escapeHTML(date(x.date))+'</span> '+(x.kind==="news"?'<button type="button" class="report-popup-open" data-story="'+escapeHTML(x.id)+'">'+escapeHTML(x.title)+'</button>':escapeHTML(x.title))+'</div>').join("")+
     (recordCount>4?'<div class="small">+'+(recordCount-4)+' additional groups; select this circle to explore them.</div>':"")+'</div></div>';
   marker.bindPopup(popup,{maxWidth:330,minWidth:230,maxHeight:350});
@@ -198,9 +200,10 @@ function initMap(){
             ...state.events.map(e=>mapRecord("reg",e)),
             ...state.incidents.map(e=>mapRecord("case",e)),
             ...state.globalEvents.map(e=>mapRecord("global",e)),
-            ...state.worldNews.map(e=>mapRecord("worldnews",e))];
+            ...state.worldNews.map(e=>mapRecord("worldnews",e)),
+            ...state.worldRegLeads.map(e=>mapRecord("officiallead",e))];
   if(state.mapMode==="news")rows=rows.filter(e=>e.kind==="news"||e.kind==="case"||e.kind==="worldnews");
-  else if(state.mapMode==="enforcement")rows=rows.filter(e=>e.kind==="reg"||e.kind==="global");
+  else if(state.mapMode==="enforcement")rows=rows.filter(e=>e.kind==="reg"||e.kind==="global"||e.kind==="officiallead");
   else if(state.mapMode==="major")rows=rows.filter(e=>e.kind==="reg"&&Number(e.raw.penalty_cad)>=1000000);
   if(state.mapCountry)rows=rows.filter(e=>e.countryCode===state.mapCountry);
   if(state.mapAgency)rows=rows.filter(e=>e.agency===state.mapAgency);
@@ -229,7 +232,7 @@ function initMap(){
   $("#mapTopic").innerHTML='<option value="">All topics</option>'+newsTopics.map(x=>'<option value="'+escapeHTML(x)+'">'+escapeHTML(x)+'</option>').join("");
   if(newsTopics.includes(current))$("#mapTopic").value=current;
  }
- const availableYears=[...new Set([...state.news,...state.events,...state.incidents,...state.globalEvents,...state.worldNews]
+ const availableYears=[...new Set([...state.news,...state.events,...state.incidents,...state.globalEvents,...state.worldNews,...state.worldRegLeads]
     .map(x=>String(x.published_at||x.reported_at||"").slice(0,4))
     .filter(y=>/^20\d{2}$/.test(y)))].sort();
  if(availableYears.length){
@@ -276,6 +279,11 @@ function initMap(){
   (layers!=="major"||Number(e.penalty_cad)>=1000000)).map(e=>mapRecord("reg",e)));
  if(showReg&&layers!=="major")records.push(...state.globalEvents.filter(e=>inDate(e)&&
   (!state.mapTopic||e.category===state.mapTopic)&&matchesClient(e)).map(e=>mapRecord("global",e)));
+ if(showReg&&layers!=="major")records.push(...state.worldRegLeads.filter(e=>
+  (!state.mapMonth||String(e.first_observed_at||"").startsWith(state.mapMonth))&&
+  (!state.mapYearFrom||String(e.first_observed_at||"").slice(0,4)>=state.mapYearFrom)&&
+  (!state.mapYearTo||String(e.first_observed_at||"").slice(0,4)<=state.mapYearTo)&&
+  (!state.mapTopic||e.category===state.mapTopic)&&matchesClient(e)).map(e=>mapRecord("officiallead",e)));
  if(state.mapCountry)records=records.filter(x=>x.countryCode===state.mapCountry);
  if(state.mapAgency)records=records.filter(x=>x.agency===state.mapAgency);
  if(state.mapProvince)records=records.filter(x=>x.countryCode!=="CA"||x.province===state.mapProvince);
@@ -505,6 +513,7 @@ window.addEventListener("signalnorth:globalready",event=>{
  state.globalHealth=event.detail?.health||{};
  state.worldNews=event.detail?.worldNews||[];
  state.worldNewsStatus=event.detail?.worldNewsStatus||{};
+ state.worldRegLeads=event.detail?.regLeads||[];
  renderMetrics();initMap();
 });
 window.addEventListener("signalnorth:globalentity",event=>{

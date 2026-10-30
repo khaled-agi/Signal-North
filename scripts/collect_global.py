@@ -11,6 +11,7 @@ from datetime import datetime,timezone
 from pathlib import Path
 from urllib.parse import urljoin,urlparse
 from bs4 import BeautifulSoup
+from dateutil.parser import parse as parse_date_flexible
 from requests import Session
 from requests.exceptions import RequestException
 
@@ -24,7 +25,7 @@ SOURCES=[
  ("FCA","GB","United Kingdom","https://www.fca.org.uk/news/news-stories/2026-fines"),
  ("AUSTRAC","AU","Australia","https://www.austrac.gov.au/about-us/record-our-actions/enforcement-actions-taken"),
 ]
-BASE_CENTERS={"US":(39.8,-98.6),"GB":(54,-2.7),"AU":(-25,134),"HK":(22.4,114.1),"SG":(1.35,103.8),"IE":(53.3,-8)}
+BASE_CENTERS={"US":(39.8,-98.6),"GB":(54,-2.7),"AU":(-25,134),"HK":(22.4,114.1),"SG":(1.35,103.8),"IE":(53.3,-8),"NZ":(-41,174)}
 def now():return datetime.now(timezone.utc).isoformat(timespec="seconds")
 def date_us(raw):
  try:return datetime.strptime(raw.strip(),"%m/%d/%Y").strftime("%Y-%m-%d")
@@ -100,17 +101,52 @@ def scan_fca(session):
     "geographic_note":"UK FCA jurisdiction, not fraud location",
    })
  return all_rows
+
+def scan_mas(session):
+ """Read Monetary Authority of Singapore official enforcement index entries."""
+ url="https://www.mas.gov.sg/regulation/enforcement/enforcement-actions"
+ response=session.get(url,timeout=35);response.raise_for_status()
+ soup=BeautifulSoup(response.text,"html.parser")
+ out=[]
+ for tr in soup.select("tr"):
+  cells=tr.find_all("td")
+  if len(cells)<3:continue
+  try:published=parse_date_flexible(cells[0].get_text(" ",strip=True),dayfirst=True).strftime("%Y-%m-%d")
+  except (ValueError,OverflowError,TypeError):continue
+  if not ("2020"<=published[:4]<="2027"):continue
+  title_cell=cells[-1]
+  anchor=title_cell.find("a",href=True)
+  if not anchor:continue
+  ref=urljoin(url,anchor.get("href",""))
+  if not valid_url(ref,"mas.gov.sg"):continue
+  title=title_cell.get_text(" ",strip=True)[:320]
+  if len(title)<14:continue
+  action=cells[-2].get_text(" ",strip=True)[:120]
+  subject=cells[1].get_text(" ",strip=True)[:160]
+  out.append({
+   "id":"sg-mas-index-"+hashlib.sha256((published+"|"+ref).encode()).hexdigest()[:16],
+   "country_code":"SG","country":"Singapore","regulator":"MAS",
+   "published_at":published,"institution":subject or None,"title":title,
+   "status":"Official MAS enforcement index entry; verify exact action, finality and appeals",
+   "category":action or "Financial services enforcement",
+   "penalty_amount":None,"penalty_currency":"SGD","source_url":ref,
+   "location_role":"regulator_jurisdiction_country_center",
+   "evidence_tier":"official_enforcement_index",
+   "geographic_note":"MAS jurisdiction; NOT an alleged offence location",
+  })
+ return out
+
 def run():
  DATA.mkdir(parents=True,exist_ok=True)
  seed=json.loads(SEED.read_text("utf-8")).get("events",[])
  try:previous=json.loads(OUTPUT.read_text("utf-8")).get("events",[]) if OUTPUT.exists() else []
  except (OSError,ValueError) as exc:raise SystemExit("Refusing to overwrite unreadable historical global data: "+str(exc))
  rows={x["id"]:x for x in previous+seed if valid(x)}
- status={"started_at":now(),"sources":{},"warning":"No collector reports complete worldwide coverage. FCA and FinCEN are primary records; AUSTRAC currently has manually verified seed entries."}
+ status={"started_at":now(),"sources":{},"warning":"No collector reports complete worldwide coverage. FinCEN, FCA and MAS have primary-source index collectors; other authorities currently have manually verified seed entries."}
  with Session() as session:
   session.headers.update(HEADERS)
   offline=os.environ.get("GLOBAL_SOURCES_OFFLINE")=="1"
-  for regulator,fn in ([] if offline else [("FinCEN",scan_fincen),("FCA",scan_fca)]):
+  for regulator,fn in ([] if offline else [("FinCEN",scan_fincen),("FCA",scan_fca),("MAS",scan_mas)]):
    try:
     found=fn(session)
     for e in found:
@@ -120,8 +156,9 @@ def run():
     status["sources"][regulator]={"status":"ok" if found else "empty","new_snapshot_rows":len(found),"kind":"official_decision_index"}
    except Exception as e:
     status["sources"][regulator]={"status":"failed","error":str(e)[:240],"kind":"official_decision_index"}
- if offline:status["sources"]["FinCEN"]={"status":"offline_test_uses_seed"};status["sources"]["FCA"]={"status":"offline_test_uses_seed"}
- for agency in ("AUSTRAC","HKMA","MAS","Central Bank of Ireland","OFAC"):
+ if offline:
+  for agency in ("FinCEN","FCA","MAS"):status["sources"][agency]={"status":"offline_test_uses_seed"}
+ for agency in ("AUSTRAC","HKMA","Central Bank of Ireland","OFAC"):
   status["sources"][agency]={"status":"seed_verified","kind":"manual_source_verified",
     "records":sum(x.get("regulator")==agency for x in seed)}
 
@@ -150,7 +187,7 @@ def run():
     break
  items=sorted(rows.values(),key=lambda x:x.get("published_at") or "",reverse=True)
  OUTPUT.write_text(json.dumps({"updated_at":now(),"events":items,
-   "methodology":"Official-source actions for USA, UK and Australia only; regulator-country center is a jurisdiction locator, not an incident location. No currency conversion. Separate agencies may publish overlapping settlements. Dynamic regulator feeds are best-effort; consult source health."},ensure_ascii=False,indent=2)+"\n","utf-8")
+   "methodology":"Official regulator-index actions for USA, UK, Singapore and additional manually verified seeds; regulator-country center is a jurisdiction locator, not an incident location. No currency conversion. Separate agencies may publish overlapping settlements. Dynamic regulator feeds are best-effort; consult source health."},ensure_ascii=False,indent=2)+"\n","utf-8")
  status["completed_at"]=now()
  status["total_global_events"]=len(items)
  STATUS.write_text(json.dumps(status,ensure_ascii=False,indent=2)+"\n","utf-8")
