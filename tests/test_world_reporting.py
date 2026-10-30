@@ -1,5 +1,7 @@
 """Offline unit checks: every country is addressable, but not falsely ingested."""
 import unittest
+import json
+from pathlib import Path
 from datetime import datetime, timedelta, timezone
 import pycountry
 from scripts.collect_world_news import (
@@ -37,6 +39,19 @@ class WorldCountryTest(unittest.TestCase):
             for x in chunk:
                 seen.add(x["code"])
         self.assertEqual(len(seen),len(entries))
+
+    def test_published_registry_is_complete_and_geographically_honest(self):
+        data=json.loads((Path(__file__).resolve().parents[1] /
+                         "data" / "world_jurisdictions.json").read_text("utf-8"))
+        entries=data["jurisdictions"]
+        self.assertEqual(len(entries),250)
+        self.assertEqual(data["iso_jurisdictions"],249)
+        self.assertEqual(data["non_iso_research_jurisdictions"],1)
+        self.assertEqual({x["code"] for x in entries},
+                         {c.alpha_2 for c in pycountry.countries}|{"XK"})
+        self.assertEqual({x["code"] for x in entries if x["map_latitude"] is None},
+                         {"AQ","UM"})
+        self.assertIsNotNone(next(x for x in entries if x["code"]=="PS")["map_latitude"])
 
     def test_kosovo_non_iso_discovery(self):
         xk=next(x for x in markets() if x["code"]=="XK")
