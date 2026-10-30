@@ -1,12 +1,16 @@
 {
-  "last_completed_at": null,
-  "stored_signals": 0,
+  "last_attempt_at": "2026-10-30T22:44:39+00:00",
+  "retention_days": 7,
   "sources": {
     "reddit": {
-      "status": "pending_approval"
+      "status": "pending_approval",
+      "reason": "Approved Reddit API usage is required; no scraping performed."
     },
     "telegram": {
-      "status": "not_configured"
+      "status": "not_configured",
+      "reason": "Dedicated Bot API token and explicit opt-in required."
     }
-  }
+  },
+  "stored_signals": 0,
+  "last_completed_at": "2026-10-30T22:44:39+00:00"
 }
