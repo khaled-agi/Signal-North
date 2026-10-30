@@ -21,8 +21,11 @@ class WorldCountryTest(unittest.TestCase):
         entries=markets()
         self.assertGreaterEqual(len(entries),240)
         self.assertEqual(len(entries),len({x["code"] for x in entries}))
-        self.assertEqual({x["code"] for x in entries},
-                         {c.alpha_2 for c in pycountry.countries})
+        iso_codes={c.alpha_2 for c in pycountry.countries}
+        self.assertEqual({x["code"] for x in entries},iso_codes|{"XK"})
+        self.assertEqual(len(entries),len(iso_codes)+1)
+        self.assertEqual(next(x for x in entries if x["code"]=="XK")["catalogue_type"],
+                         "non_iso_user_assigned")
         for p in entries:
             self.assertIn(p["name"],search_queries(p)[0])
 
@@ -34,6 +37,16 @@ class WorldCountryTest(unittest.TestCase):
             for x in chunk:
                 seen.add(x["code"])
         self.assertEqual(len(seen),len(entries))
+
+    def test_kosovo_non_iso_discovery(self):
+        xk=next(x for x in markets() if x["code"]=="XK")
+        self.assertEqual(xk["name"],"Kosovo")
+        self.assertEqual(xk["local_language"],"sq")
+        self.assertIn("mashtrim",search_queries(xk)[1])
+        self.assertIn("Kosovë",search_queries(xk)[1])
+        self.assertEqual(xk["agency_directory"][0]["name"],"Central Bank of Kosovo")
+        self.assertEqual(classify("Mashtrim bankar në Kosovë",xk),"Fraud and scam reporting")
+        self.assertEqual(classify("Kosovo bank phishing scam",xk),"Cyber / account compromise")
 
     def test_localized_language_and_english_fallback(self):
         france=country_profile(pycountry.countries.get(alpha_2="FR"))
