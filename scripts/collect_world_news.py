@@ -35,6 +35,16 @@ MAX_ALL=12000
 DEFAULT_BATCH=32
 ENGLISH_TERMS=('fraud','scam','money laundering','bank phishing')
 TITLE_RELEVANCE_TERMS=tuple(x.casefold() for x in CRIME_TERMS)
+FINANCE_TERMS=re.compile(
+ r"\b(bank|banking|financial|fintech|securities|payments?|insurance|investment|aml|"
+ r"anti.money laundering|money changer|crypto|credit union|financ(?:e|ial)|"
+ r"banco|banca|banque|banque centrale|regulador financiero|banqueiro|"
+ r"البنك|مصرف|مالي|银行|銀行|金融|은행|금융)\b",re.I)
+ENFORCEMENT_TERMS=re.compile(
+ r"\b(fine[ds]?|fined|penalt(?:y|ies)|sanction|settlement|enforcement action|"
+ r"prohibition order|revok(?:ed|ation)|administrative order|regulator fines?|"
+ r"amende|multa|sanci[oó]n|bu(?:ß|ss)geld|geldbu(?:ß|ss)e|penalidade|"
+ r"处罚|罚款|벌금)\b",re.I)
 QUERY_DAYS=30
 
 def now():
@@ -69,6 +79,7 @@ def search_queries(profile):
     queries=[
         f'"{name}" (fraud OR scam OR phishing) when:{QUERY_DAYS}d',
         f'"{name}" ("money laundering" OR "financial crime" OR "investment scam" OR "fraud enforcement") when:{QUERY_DAYS}d',
+        f'"{name}" (bank fined OR "financial regulator penalty" OR "anti-money laundering fine") when:{QUERY_DAYS}d',
     ]
     if profile["local_term"] and profile["local_country_term"]:
         queries.append(f'{profile["local_term"]} "{profile["local_country_term"]}" when:{QUERY_DAYS}d')
@@ -98,6 +109,9 @@ def item_date(raw):
 
 def classify(title,profile):
     t=title.casefold()
+    regulatory=bool(FINANCE_TERMS.search(title) and ENFORCEMENT_TERMS.search(title))
+    if regulatory:
+        return "Reported financial regulatory enforcement (unverified)"
     relevant=any(term in t for term in TITLE_RELEVANCE_TERMS)
     if not relevant:
         return None
