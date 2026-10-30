@@ -177,7 +177,7 @@ try:
         assert "original-domain" in page.locator(".regulator-publications-panel").text_content().lower()
         page.locator('[data-tab="fraud"]').click()
         page.locator("#worldReportingPanel > summary").click()
-        assert "country" in page.locator("#worldReportingSummary").text_content() or "source-linked leads" in page.locator("#worldReportingSummary").text_content()
+        assert "stored articles" in page.locator("#worldReportingSummary").text_content()
         page.locator('[data-tab="overview"]').click()
         # Synthetic browser-only record tests country search-market map attribution.
         page.evaluate("""() => {
