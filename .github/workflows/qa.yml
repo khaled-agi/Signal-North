@@ -38,5 +38,6 @@ jobs:
           node tests/test_supporting_intelligence.js
           python -m unittest discover -s tests -p test_community_signals.py
           python -m unittest discover -s tests -p test_world_reporting.py
+          python -m unittest discover -s tests -p test_global_regulator_publications.py
       - name: Test real browser interactions
         run: python tests/smoke_site.py
