@@ -39,6 +39,7 @@ jobs:
       - name: Validate application syntax
         run: |
           python -m py_compile scripts/collect.py scripts/collect_news.py scripts/collect_sources.py scripts/build_article_index.py scripts/build_story_groups.py scripts/build_related_reporting.py scripts/build_reviewed_events.py scripts/build_intelligence_graph.py scripts/collect_publishers.py scripts/build_theme_trends.py scripts/collect_global.py scripts/build_world_registry.py scripts/world_country_lenses.py scripts/collect_world_news.py scripts/collect_global_regulator_publications.py scripts/collect_community.py
+          node --check geography.js
           node --check app.js
           node --check intel.js
           node --check supporting_intelligence.js
@@ -132,7 +133,7 @@ jobs:
       - name: Assemble cache-busted static website
         run: |
           mkdir -p _site/data
-          cp index.html styles.css light.css editorial.css connections.css research.css network.css refine.css global.css reviewed.css product_redesign.css map_upgrade.js app.js supporting_intelligence.js community_signals.js intel.js workspace.js connections.js research.js network.js global.js reviewed.js .nojekyll _site/
+          cp index.html styles.css light.css editorial.css connections.css research.css network.css refine.css global.css reviewed.css product_redesign.css map_upgrade.js geography.js app.js supporting_intelligence.js community_signals.js intel.js workspace.js connections.js research.js network.js global.js reviewed.js .nojekyll _site/
           cp data/events.json data/status.json data/news.json data/news_status.json data/fraud_stats.json data/bank_disclosures.json data/incidents.json _site/data/
           if [ -f data/news_archive.json ]; then cp data/news_archive.json _site/data/; fi
           if [ -f data/archive_status.json ]; then cp data/archive_status.json _site/data/; fi
