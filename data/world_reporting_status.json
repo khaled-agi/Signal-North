@@ -1,11 +1,11 @@
 {
-  "last_completed_at": "2026-10-30T23:17:12+00:00",
+  "last_completed_at": "2026-10-30T23:27:53+00:00",
   "market_count": 250,
-  "markets_attempted": 16,
-  "markets_with_current_news": 11,
-  "current_leads": 133,
+  "markets_attempted": 32,
+  "markets_with_current_news": 24,
+  "current_leads": 270,
   "batch_size": 16,
-  "next_cursor": 16,
+  "next_cursor": 32,
   "countries": {
     "AD": {
       "state": "attempted_empty",
@@ -166,6 +166,166 @@
       "name": "Argentina",
       "language_strategy": "country_configured",
       "last_nonempty_at": "2026-10-30T23:17:12+00:00"
+    },
+    "BA": {
+      "state": "reporting_found",
+      "attempted_at": "2026-10-30T23:27:53+00:00",
+      "queries_attempted": 1,
+      "accepted": 8,
+      "errors": [],
+      "name": "Bosnia and Herzegovina",
+      "language_strategy": "english_country_named_fallback",
+      "last_nonempty_at": "2026-10-30T23:27:53+00:00"
+    },
+    "BB": {
+      "state": "reporting_found",
+      "attempted_at": "2026-10-30T23:27:53+00:00",
+      "queries_attempted": 1,
+      "accepted": 4,
+      "errors": [],
+      "name": "Barbados",
+      "language_strategy": "english_country_named_fallback",
+      "last_nonempty_at": "2026-10-30T23:27:53+00:00"
+    },
+    "BD": {
+      "state": "reporting_found",
+      "attempted_at": "2026-10-30T23:27:53+00:00",
+      "queries_attempted": 2,
+      "accepted": 18,
+      "errors": [],
+      "name": "Bangladesh",
+      "language_strategy": "country_configured",
+      "last_nonempty_at": "2026-10-30T23:27:53+00:00"
+    },
+    "BE": {
+      "state": "reporting_found",
+      "attempted_at": "2026-10-30T23:27:53+00:00",
+      "queries_attempted": 2,
+      "accepted": 16,
+      "errors": [],
+      "name": "Belgium",
+      "language_strategy": "country_configured",
+      "last_nonempty_at": "2026-10-30T23:27:53+00:00"
+    },
+    "BF": {
+      "state": "reporting_found",
+      "attempted_at": "2026-10-30T23:27:53+00:00",
+      "queries_attempted": 1,
+      "accepted": 3,
+      "errors": [],
+      "name": "Burkina Faso",
+      "language_strategy": "english_country_named_fallback",
+      "last_nonempty_at": "2026-10-30T23:27:53+00:00"
+    },
+    "BG": {
+      "state": "reporting_found",
+      "attempted_at": "2026-10-30T23:27:53+00:00",
+      "queries_attempted": 1,
+      "accepted": 20,
+      "errors": [],
+      "name": "Bulgaria",
+      "language_strategy": "english_country_named_fallback",
+      "last_nonempty_at": "2026-10-30T23:27:53+00:00"
+    },
+    "BI": {
+      "state": "reporting_found",
+      "attempted_at": "2026-10-30T23:27:53+00:00",
+      "queries_attempted": 1,
+      "accepted": 2,
+      "errors": [],
+      "name": "Burundi",
+      "language_strategy": "english_country_named_fallback",
+      "last_nonempty_at": "2026-10-30T23:27:53+00:00"
+    },
+    "BJ": {
+      "state": "reporting_found",
+      "attempted_at": "2026-10-30T23:27:53+00:00",
+      "queries_attempted": 1,
+      "accepted": 21,
+      "errors": [],
+      "name": "Benin",
+      "language_strategy": "english_country_named_fallback",
+      "last_nonempty_at": "2026-10-30T23:27:53+00:00"
+    },
+    "BH": {
+      "state": "reporting_found",
+      "attempted_at": "2026-10-30T23:27:53+00:00",
+      "queries_attempted": 2,
+      "accepted": 16,
+      "errors": [],
+      "name": "Bahrain",
+      "language_strategy": "country_configured",
+      "last_nonempty_at": "2026-10-30T23:27:53+00:00"
+    },
+    "BL": {
+      "state": "attempted_empty",
+      "attempted_at": "2026-10-30T23:27:53+00:00",
+      "queries_attempted": 1,
+      "accepted": 0,
+      "errors": [],
+      "name": "Saint Barthélemy",
+      "language_strategy": "english_country_named_fallback",
+      "last_nonempty_at": null
+    },
+    "BM": {
+      "state": "reporting_found",
+      "attempted_at": "2026-10-30T23:27:53+00:00",
+      "queries_attempted": 1,
+      "accepted": 5,
+      "errors": [],
+      "name": "Bermuda",
+      "language_strategy": "english_country_named_fallback",
+      "last_nonempty_at": "2026-10-30T23:27:53+00:00"
+    },
+    "BN": {
+      "state": "reporting_found",
+      "attempted_at": "2026-10-30T23:27:53+00:00",
+      "queries_attempted": 1,
+      "accepted": 5,
+      "errors": [],
+      "name": "Brunei",
+      "language_strategy": "english_country_named_fallback",
+      "last_nonempty_at": "2026-10-30T23:27:53+00:00"
+    },
+    "BQ": {
+      "state": "attempted_empty",
+      "attempted_at": "2026-10-30T23:27:53+00:00",
+      "queries_attempted": 1,
+      "accepted": 0,
+      "errors": [],
+      "name": "Bonaire, Sint Eustatius and Saba",
+      "language_strategy": "english_country_named_fallback",
+      "last_nonempty_at": null
+    },
+    "BO": {
+      "state": "attempted_empty",
+      "attempted_at": "2026-10-30T23:27:53+00:00",
+      "queries_attempted": 1,
+      "accepted": 0,
+      "errors": [],
+      "name": "Bolivia",
+      "language_strategy": "english_country_named_fallback",
+      "last_nonempty_at": null
+    },
+    "BS": {
+      "state": "reporting_found",
+      "attempted_at": "2026-10-30T23:27:53+00:00",
+      "queries_attempted": 1,
+      "accepted": 6,
+      "errors": [],
+      "name": "Bahamas",
+      "language_strategy": "english_country_named_fallback",
+      "last_nonempty_at": "2026-10-30T23:27:53+00:00"
+    },
+    "BR": {
+      "state": "reporting_found",
+      "attempted_at": "2026-10-30T23:27:53+00:00",
+      "queries_attempted": 2,
+      "accepted": 26,
+      "errors": [],
+      "name": "Brazil",
+      "language_strategy": "country_configured",
+      "last_nonempty_at": "2026-10-30T23:27:53+00:00"
     }
   },
   "coverage_note": "A country scan does not establish complete local coverage. No accepted reporting is not evidence of no fraud; official actions remain separately collected."
