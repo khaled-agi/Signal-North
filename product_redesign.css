@@ -140,3 +140,11 @@ box-shadow:0 2px 9px #12364830,0 0 0 1px #176f7950;transition:transform .13s eas
  .intro h1{font-size:27px}
 }
 @media(prefers-reduced-motion:reduce){.explore-pathways button,.count-pin-inner{transition:none}}
+
+
+/* Immersive map browsing without removing the source evidence panel from DOM. */
+#overview .cols.map-focus{grid-template-columns:minmax(0,1fr)}
+#overview .cols.map-focus>.right-panel{display:none}
+#overview .cols.map-focus .map{height:min(78vh,850px);min-height:500px}
+#mapFocus[aria-pressed="true"]{background:#e5f3f1;color:#115d64;border-color:#aed1cc}
+@media(max-width:780px){#overview .cols.map-focus .map{height:65vh;min-height:360px}}
