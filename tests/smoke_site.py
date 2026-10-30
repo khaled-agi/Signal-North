@@ -158,7 +158,11 @@ try:
         assert "0 official actions collected" in page.locator("#worldCountryBrief").inner_text()
         page.locator("#mapCountry").select_option("AF")
         assert "0 official actions collected" in page.locator("#worldCountryBrief").inner_text()
+        # A country can have unverified search-market news without any official
+        # enforcement. Verify the official layer separately from news discovery.
+        page.locator('[data-mapmode="enforcement"]').click()
         assert page.locator("#mappedStories .map-story").count() == 0
+        page.locator('[data-mapmode="all"]').click()
         page.locator('[data-tab="fraud"]').click()
         assert page.locator("#worldNewsCountry option").count() >= 240
         page.locator("#worldReportingPanel > summary").click()
