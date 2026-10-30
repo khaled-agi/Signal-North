@@ -49,7 +49,7 @@
   const partial=all.filter(x=>x.year>Number(annual?.year||0)).sort((a,b)=>b.year-a.year)[0];
   const routed=window.SignalNorthSupportingIntelligence;
   const fraudLeads=routed?routed.select(news,"fraud",4,Date.now(),90):[];
-  const recent=fraudLeads.map(x=>'<div class="mini-lead"><span class="small">'+esc((x.published_at||"").slice(0,10))+'</span><div>'+link(x.url,x.title)+'</div></div>').join("");
+  const recent=fraudLeads.map(x=>'<div class="mini-lead"><span class="small">'+esc((x.published_at||"").slice(0,10))+' · Unverified report</span><div>'+link(routed.sourceUrl(x),x.title)+'</div></div>').join("");
   $i("overviewFraud").innerHTML='<div class="fraud-highlightline"><div><span class="small">Most recent full-year Canadian victim-reported losses · '+esc(annual?.period||"Unavailable")+'</span><div class="fraud-figure">'+money(annual?.amount_cad)+'</div><span class="small">Not institutional losses · '+(annual?link(annual.source_url,"CAFC source"):"")+'</span>'+(partial?'<div class="fraud-stat" style="margin-top:12px"><div><strong>'+money(partial.amount_cad)+'</strong><div class="small">'+esc(partial.period)+' · partial year, not directly comparable to annual total</div></div>'+link(partial.source_url,"Source")+'</div>':"")+'</div><div class="fraud-split"><div class="eyebrow">LATEST FRAUD & SCAM REPORTING · UNVERIFIED</div>'+ (recent||'<div class="small">No matching news from the past 90 days; official figures remain available.</div>')+'</div></div>';
  }
 
@@ -352,6 +352,12 @@
   const lastUpdated=newsStatus.last_completed_at||(fetched[1].status==="fulfilled"?fetched[1].value.updated_at:null);
   renderHomeHeadlines(lastUpdated);
   renderSupportingNews(lastUpdated);
+  const incomplete=Object.entries(newsStatus.sources||{}).filter(([name,entry])=>
+   entry.status!=="ok" || Number(entry.accepted||0)===0).map(([name])=>name);
+  if(incomplete.length){
+   $i("newsFreshnessDetail").textContent+=" · Coverage warning: "+incomplete.length+
+    " topic feeds returned no accepted articles or reported a collection issue";
+  }
   window.dispatchEvent(new CustomEvent("signalnorth:newsready",{detail:{leads:news,rawHeadlineCount}}));
   if(fetched[2].status==="fulfilled")bankDisclosure=fetched[2].value.records||[];
   if(fetched[3].status==="fulfilled")events=fetched[3].value.events||[];
