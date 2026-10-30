@@ -5,11 +5,24 @@ Country/local-language editions are curated; arbitrary locales are never
 claimed to be available. An editorial source watchlist is NOT an ingested feed.
 """
 from __future__ import annotations
+from types import SimpleNamespace
+import pycountry
+
+# Special research jurisdictions outside ISO 3166-1, not a statement of sovereignty.
+# XK is a widely used user-assigned code, NOT an officially allocated ISO country code.
+ADDITIONAL_RESEARCH_JURISDICTIONS = (
+    SimpleNamespace(alpha_2="XK", name="Kosovo", common_name="Kosovo"),
+)
+
+def research_jurisdictions():
+    return sorted([*pycountry.countries, *ADDITIONAL_RESEARCH_JURISDICTIONS], key=lambda x: x.alpha_2)
+
 
 # Each tuple: Google News language edition, locally spoken geographic term,
 # one representative local fraud term. This does NOT guarantee local coverage.
 # A canonical English country-named search also runs for every market.
 LOCAL = {
+ "XK":("sq","Kosovë","mashtrim"),
  "AE":("ar","الإمارات","احتيال"),"SA":("ar","السعودية","احتيال"),
  "QA":("ar","قطر","احتيال"),"JO":("ar","الأردن","احتيال"),
  "EG":("ar","مصر","احتيال"),"MA":("ar","المغرب","نصب"),
@@ -43,7 +56,7 @@ LOCAL = {
  "NG":("en","Nigeria","fraud"),"GH":("en","Ghana","fraud"),
 }
 COUNTRY_NAMES={
- "US":"United States","GB":"United Kingdom","KR":"South Korea","KP":"North Korea",
+ "XK":"Kosovo","US":"United States","GB":"United Kingdom","KR":"South Korea","KP":"North Korea",
  "RU":"Russia","IR":"Iran","SY":"Syria","LA":"Laos","VN":"Vietnam",
  "BO":"Bolivia","VE":"Venezuela","TZ":"Tanzania","TW":"Taiwan",
  "PS":"Palestine","HK":"Hong Kong","MO":"Macau","TR":"Türkiye",
@@ -73,6 +86,7 @@ NEWS_EDITIONS={
 # Human-reviewed authority discovery links. NOT automatic ingestion or verified
 # enforcement feeds. Add jurisdictions only with trusted actual agency URLs.
 AUTHORITIES={
+ "XK":[("Central Bank of Kosovo","https://bqk-kos.org/?lang=en")],
  "US":[("FinCEN","https://www.fincen.gov/news/enforcement-actions")],
  "CA":[("FINTRAC","https://fintrac-canafe.canada.ca/pen/4-eng")],
  "GB":[("FCA","https://www.fca.org.uk/news")],
@@ -101,7 +115,8 @@ def country_profile(country):
     local=LOCAL.get(code)
     hl,gl,ceid=NEWS_EDITIONS.get(code,("en-US","US","en"))
     return {
-        "code":code,"name":name,"edition_language":hl,"edition_country":gl,
+        "code":code,"name":name,
+        "catalogue_type":"non_iso_user_assigned" if code=="XK" else "iso_3166_1","edition_language":hl,"edition_country":gl,
         "edition_id":ceid,"local_term":local[2] if local else None,
         "local_country_term":local[1] if local else None,
         "local_language":local[0] if local else None,
@@ -114,6 +129,7 @@ CRIME_TERMS=(
  "forgery","financial crime","ransomware","money mule","fraude",
  "escroquer","arnaque","estafa","estafas","fraudul","golpe",
  "burla","truffa","betrug","oplichting","oszust","podvod","csalás",
+ "mashtrim","mashtrimi","prevara",
  "απάτη","dolandır","мошенн","шахрай","احتيال","نصب","تحيل",
  "הונאה","کلاهبردار","धोखाधड़","فراڈ","প্রতারণা","ठगी","වංචා",
  "หลอกลวง","lừa đảo","penipuan","詐欺","诈骗","詐騙","사기","utapeli",
