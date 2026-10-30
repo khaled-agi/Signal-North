@@ -1,11 +1,11 @@
 {
-  "last_completed_at": "2026-10-30T23:27:53+00:00",
+  "last_completed_at": "2026-10-30T23:37:11+00:00",
   "market_count": 250,
-  "markets_attempted": 32,
-  "markets_with_current_news": 24,
-  "current_leads": 270,
+  "markets_attempted": 48,
+  "markets_with_current_news": 36,
+  "current_leads": 398,
   "batch_size": 16,
-  "next_cursor": 32,
+  "next_cursor": 48,
   "countries": {
     "AD": {
       "state": "attempted_empty",
@@ -326,6 +326,166 @@
       "name": "Brazil",
       "language_strategy": "country_configured",
       "last_nonempty_at": "2026-10-30T23:27:53+00:00"
+    },
+    "BT": {
+      "state": "reporting_found",
+      "attempted_at": "2026-10-30T23:37:11+00:00",
+      "queries_attempted": 1,
+      "accepted": 7,
+      "errors": [],
+      "name": "Bhutan",
+      "language_strategy": "english_country_named_fallback",
+      "last_nonempty_at": "2026-10-30T23:37:11+00:00"
+    },
+    "BV": {
+      "state": "attempted_empty",
+      "attempted_at": "2026-10-30T23:37:11+00:00",
+      "queries_attempted": 1,
+      "accepted": 0,
+      "errors": [],
+      "name": "Bouvet Island",
+      "language_strategy": "english_country_named_fallback",
+      "last_nonempty_at": null
+    },
+    "BW": {
+      "state": "attempted_empty",
+      "attempted_at": "2026-10-30T23:37:11+00:00",
+      "queries_attempted": 1,
+      "accepted": 0,
+      "errors": [],
+      "name": "Botswana",
+      "language_strategy": "english_country_named_fallback",
+      "last_nonempty_at": null
+    },
+    "BY": {
+      "state": "reporting_found",
+      "attempted_at": "2026-10-30T23:37:11+00:00",
+      "queries_attempted": 1,
+      "accepted": 14,
+      "errors": [],
+      "name": "Belarus",
+      "language_strategy": "english_country_named_fallback",
+      "last_nonempty_at": "2026-10-30T23:37:11+00:00"
+    },
+    "CD": {
+      "state": "reporting_found",
+      "attempted_at": "2026-10-30T23:37:11+00:00",
+      "queries_attempted": 1,
+      "accepted": 5,
+      "errors": [],
+      "name": "DR Congo",
+      "language_strategy": "english_country_named_fallback",
+      "last_nonempty_at": "2026-10-30T23:37:11+00:00"
+    },
+    "CC": {
+      "state": "attempted_empty",
+      "attempted_at": "2026-10-30T23:37:11+00:00",
+      "queries_attempted": 1,
+      "accepted": 0,
+      "errors": [],
+      "name": "Cocos (Keeling) Islands",
+      "language_strategy": "english_country_named_fallback",
+      "last_nonempty_at": null
+    },
+    "BZ": {
+      "state": "reporting_found",
+      "attempted_at": "2026-10-30T23:37:11+00:00",
+      "queries_attempted": 1,
+      "accepted": 10,
+      "errors": [],
+      "name": "Belize",
+      "language_strategy": "english_country_named_fallback",
+      "last_nonempty_at": "2026-10-30T23:37:11+00:00"
+    },
+    "CA": {
+      "state": "reporting_found",
+      "attempted_at": "2026-10-30T23:37:11+00:00",
+      "queries_attempted": 1,
+      "accepted": 37,
+      "errors": [],
+      "name": "Canada",
+      "language_strategy": "english_country_named_fallback",
+      "last_nonempty_at": "2026-10-30T23:37:11+00:00"
+    },
+    "CF": {
+      "state": "reporting_found",
+      "attempted_at": "2026-10-30T23:37:11+00:00",
+      "queries_attempted": 1,
+      "accepted": 1,
+      "errors": [],
+      "name": "Central African Republic",
+      "language_strategy": "english_country_named_fallback",
+      "last_nonempty_at": "2026-10-30T23:37:11+00:00"
+    },
+    "CG": {
+      "state": "reporting_found",
+      "attempted_at": "2026-10-30T23:37:11+00:00",
+      "queries_attempted": 1,
+      "accepted": 14,
+      "errors": [],
+      "name": "Republic of the Congo",
+      "language_strategy": "english_country_named_fallback",
+      "last_nonempty_at": "2026-10-30T23:37:11+00:00"
+    },
+    "CI": {
+      "state": "reporting_found",
+      "attempted_at": "2026-10-30T23:37:11+00:00",
+      "queries_attempted": 1,
+      "accepted": 13,
+      "errors": [],
+      "name": "Côte d'Ivoire",
+      "language_strategy": "english_country_named_fallback",
+      "last_nonempty_at": "2026-10-30T23:37:11+00:00"
+    },
+    "CK": {
+      "state": "attempted_empty",
+      "attempted_at": "2026-10-30T23:37:11+00:00",
+      "queries_attempted": 1,
+      "accepted": 0,
+      "errors": [],
+      "name": "Cook Islands",
+      "language_strategy": "english_country_named_fallback",
+      "last_nonempty_at": null
+    },
+    "CM": {
+      "state": "reporting_found",
+      "attempted_at": "2026-10-30T23:37:11+00:00",
+      "queries_attempted": 1,
+      "accepted": 4,
+      "errors": [],
+      "name": "Cameroon",
+      "language_strategy": "english_country_named_fallback",
+      "last_nonempty_at": "2026-10-30T23:37:11+00:00"
+    },
+    "CH": {
+      "state": "reporting_found",
+      "attempted_at": "2026-10-30T23:37:11+00:00",
+      "queries_attempted": 2,
+      "accepted": 21,
+      "errors": [],
+      "name": "Switzerland",
+      "language_strategy": "country_configured",
+      "last_nonempty_at": "2026-10-30T23:37:11+00:00"
+    },
+    "CL": {
+      "state": "reporting_found",
+      "attempted_at": "2026-10-30T23:37:11+00:00",
+      "queries_attempted": 2,
+      "accepted": 6,
+      "errors": [],
+      "name": "Chile",
+      "language_strategy": "country_configured",
+      "last_nonempty_at": "2026-10-30T23:37:11+00:00"
+    },
+    "CN": {
+      "state": "reporting_found",
+      "attempted_at": "2026-10-30T23:37:11+00:00",
+      "queries_attempted": 2,
+      "accepted": 37,
+      "errors": [],
+      "name": "China",
+      "language_strategy": "country_configured",
+      "last_nonempty_at": "2026-10-30T23:37:11+00:00"
     }
   },
   "coverage_note": "A country scan does not establish complete local coverage. No accepted reporting is not evidence of no fraud; official actions remain separately collected."
