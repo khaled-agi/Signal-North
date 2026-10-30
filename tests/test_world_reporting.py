@@ -57,8 +57,8 @@ class WorldCountryTest(unittest.TestCase):
         xk=next(x for x in markets() if x["code"]=="XK")
         self.assertEqual(xk["name"],"Kosovo")
         self.assertEqual(xk["local_language"],"sq")
-        self.assertIn("mashtrim",search_queries(xk)[2])
-        self.assertIn("Kosovë",search_queries(xk)[2])
+        self.assertIn("mashtrim",search_queries(xk)[3])
+        self.assertIn("Kosovë",search_queries(xk)[3])
         self.assertEqual(xk["agency_directory"][0]["name"],"Central Bank of Kosovo")
         self.assertEqual(classify("Mashtrim bankar në Kosovë",xk),"Fraud and scam reporting")
         self.assertEqual(classify("Kosovo bank phishing scam",xk),"Cyber / account compromise")
@@ -68,16 +68,16 @@ class WorldCountryTest(unittest.TestCase):
         saudi=country_profile(pycountry.countries.get(alpha_2="SA"))
         tanzania=country_profile(pycountry.countries.get(alpha_2="TZ"))
         angola=country_profile(pycountry.countries.get(alpha_2="AO"))
-        self.assertIn("escroquerie",search_queries(france)[2])
-        self.assertIn("احتيال",search_queries(saudi)[2])
-        self.assertIn("utapeli",search_queries(tanzania)[2])
+        self.assertIn("escroquerie",search_queries(france)[3])
+        self.assertIn("احتيال",search_queries(saudi)[3])
+        self.assertIn("utapeli",search_queries(tanzania)[3])
         self.assertEqual(angola["language_strategy"],"english_country_named_fallback")
-        self.assertIn("gl=FR",feed_url(france,search_queries(france)[2]))
+        self.assertIn("gl=FR",feed_url(france,search_queries(france)[3]))
         self.assertIn("gl=US",feed_url(angola,search_queries(angola)[0]))
 
     def test_rss_discovery_has_no_claims_about_incident_location(self):
         fr=country_profile(pycountry.countries.get(alpha_2="FR"))
-        leads=parse_feed(rss(),fr,search_queries(fr)[2],NOW)
+        leads=parse_feed(rss(),fr,search_queries(fr)[3],NOW)
         self.assertEqual(len(leads),1)
         lead=leads[0]
         self.assertEqual(lead["country_code"],"FR")
@@ -87,6 +87,21 @@ class WorldCountryTest(unittest.TestCase):
         self.assertEqual(lead["category"],"Fraud and scam reporting")
         self.assertNotIn("map_latitude",lead)
         self.assertNotIn("latitude",lead)
+
+    def test_worldwide_enforcement_reporting_is_not_verified_order(self):
+        france=country_profile(pycountry.countries.get(alpha_2="FR"))
+        self.assertEqual(classify("French bank fined by financial regulator",france),
+                         "Reported financial regulatory enforcement (unverified)")
+        self.assertEqual(classify("Banque française reçoit une amende",france),
+                         "Reported financial regulatory enforcement (unverified)")
+        self.assertIsNone(classify("Food safety regulator fines restaurant",france))
+        self.assertEqual(len(search_queries(france)),4)
+        record=parse_feed(rss("French bank fined by financial regulator"),
+                          france,search_queries(france)[2],NOW)[0]
+        self.assertEqual(record["evidence_status"],"unverified_news_lead")
+        self.assertEqual(record["search_language"],"en")
+        self.assertEqual(record["category"],"Reported financial regulatory enforcement (unverified)")
+        self.assertEqual(record["country_basis"],"search_market_only_not_confirmed_incident_location")
 
     def test_unrelated_headline_not_automatically_accepted(self):
         fr=country_profile(pycountry.countries.get(alpha_2="FR"))
