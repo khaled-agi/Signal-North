@@ -42,6 +42,7 @@ jobs:
           node --check app.js
           node --check intel.js
           node --check supporting_intelligence.js
+          node --check map_upgrade.js
           node --check community_signals.js
           node --check workspace.js
           node --check connections.js
@@ -119,7 +120,7 @@ jobs:
       - name: Assemble cache-busted static website
         run: |
           mkdir -p _site/data
-          cp index.html styles.css light.css editorial.css connections.css research.css network.css refine.css global.css reviewed.css app.js supporting_intelligence.js community_signals.js intel.js workspace.js connections.js research.js network.js global.js reviewed.js .nojekyll _site/
+          cp index.html styles.css light.css editorial.css connections.css research.css network.css refine.css global.css reviewed.css product_redesign.css map_upgrade.js app.js supporting_intelligence.js community_signals.js intel.js workspace.js connections.js research.js network.js global.js reviewed.js .nojekyll _site/
           cp data/events.json data/status.json data/news.json data/news_status.json data/fraud_stats.json data/bank_disclosures.json data/incidents.json _site/data/
           if [ -f data/news_archive.json ]; then cp data/news_archive.json _site/data/; fi
           if [ -f data/archive_status.json ]; then cp data/archive_status.json _site/data/; fi
