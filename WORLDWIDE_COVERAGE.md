@@ -85,3 +85,12 @@ markets. For example, Ascension and Tristan da Cunha appear within ISO's
 Saint Helena, Ascension and Tristan da Cunha (SH) entry. This catalogue should
 not be described as every geopolitical entity or every separate legal/regulatory
 jurisdiction, and inclusion does not imply diplomatic recognition.
+
+## Geographic reference completeness
+
+Of the 250 configured ISO and non-ISO research markets, 248 have an
+approximate browsing coordinate. Antarctica (AQ) and the geographically
+scattered United States Minor Outlying Islands (UM) do not have a meaningful
+single representative point and intentionally remain unplotted when news is
+indexed. This is not a collection omission and never changes the country
+filter. No browsing coordinate is a verified incident address.
