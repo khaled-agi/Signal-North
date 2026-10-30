@@ -127,7 +127,7 @@
     ' · Unverified · Country-search context, not incident location'+
     (url?' · <a href="'+html(url)+'" target="_blank" rel="noopener noreferrer">Original source ↗</a>':"")+
     '</div></article>';
-  }).join(""):'<div class="empty">No matching reported headlines stored. This does not mean there were no fraud incidents; see the country's scan status.</div>';
+  }).join(""):'<div class="empty">No matching reported headlines stored. This does not mean there were no fraud incidents; see the country scan status.</div>';
   get("worldNewsShown").textContent=visible.length+" of "+matches.length+" matching reports shown";
   get("worldNewsMore").hidden=visible.length>=matches.length;
   get("worldNewsAll").hidden=visible.length>=matches.length;
