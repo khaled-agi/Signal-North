@@ -87,6 +87,35 @@
   }
   host.innerHTML=cards.join("")||'<div class="empty">No corroborated cross-jurisdiction institution links in the currently collected records.</div>';
  }
+
+ function renderWorldReporting(){
+  const picker=get("worldNewsCountry");
+  if(!picker)return;
+  const code=picker.value;
+  const rows=model.worldNews.filter(x=>!code||x.country_code===code)
+    .slice().sort((a,b)=>String(b.published_at||"").localeCompare(String(a.published_at||""))).slice(0,24);
+  const profile=model.countries.find(x=>x.code===code);
+  const scan=model.worldNewsStatus.countries?.[code];
+  const last=model.worldNewsStatus.last_completed_at||"Not collected yet";
+  get("worldReportingSummary").textContent=
+    model.worldNews.length+" source-linked leads · "+model.worldNewsStatus.markets_attempted+" markets scanned · Updated "+String(last).slice(0,10);
+  get("worldReportingHealth").textContent=code?
+   (profile?.name||code)+" · "+(scan?.state||"Not scanned")+" · Last attempt "+String(scan?.attempted_at||"never").slice(0,16):
+   model.worldNewsStatus.markets_attempted+" of "+model.countries.length+" markets scanned · "+model.worldNews.length+" recent unverified articles";
+  const safe=x=>{try{const u=new URL(x);return u.protocol==="https:"&&!u.username&&!u.password?u.href:"";}catch{return "";}};
+  get("worldReportingRows").innerHTML=rows.length?rows.map(x=>{
+   const url=safe(x.url);
+   return '<article class="world-reporting-record">'+
+    '<div class="world-reporting-date">'+html(x.country)+" · "+html(String(x.published_at||"").slice(0,10))+
+      ' · '+html(x.publisher||"Unknown publisher")+'</div>'+
+    '<strong>'+html(x.title)+'</strong>'+
+    '<div class="world-reporting-details">'+html(x.category||"News lead")+
+      ' · Unverified · Country search market, not confirmed event location'+
+      (url?' · <a href="'+html(url)+'" target="_blank" rel="noopener noreferrer">Open source ↗</a>':"")+
+    '</div></article>';
+  }).join(""):'<div class="empty">No recent source-linked headlines in this view. A missing or empty feed is not evidence of a country having no fraud. Check the latest scan status.</div>';
+ }
+
  function renderCoverage(){
   const active=model.countries.filter(x=>x.coverage==="active");
   const countries=model.countries.length;
@@ -118,10 +147,19 @@
   const agencies=[...new Set(["FINTRAC","FCAC",...model.events.map(x=>x.regulator).filter(Boolean)])].sort();
   regulator.innerHTML='<option value="">All agencies</option>'+agencies.map(x=>'<option value="'+html(x)+'">'+html(x)+'</option>').join("");
   if(agencies.includes(prev))regulator.value=prev;
+  const worldPicker=get("worldNewsCountry");
+  if(worldPicker){
+   const selected=worldPicker.value;
+   worldPicker.innerHTML='<option value="">All scanned countries</option>'+model.countries.map(c=>
+    '<option value="'+html(c.code)+'">'+html(c.name)+'</option>').join("");
+   if(model.countries.some(c=>c.code===selected))worldPicker.value=selected;
+   renderWorldReporting();
+  }
   renderCoverage();renderPatterns();renderCountryBrief();renderThreads();
   window.dispatchEvent(new CustomEvent("signalnorth:globalready",{detail:{events:model.events,countries:model.countries,health:model.health,worldNews:model.worldNews,worldNewsStatus:model.worldNewsStatus}}));
  }
  get("mapCountry").addEventListener("change",renderCountryBrief);
+ get("worldNewsCountry")?.addEventListener("change",renderWorldReporting);
  get("mapReset").addEventListener("click",renderCountryBrief);
  get("worldView").addEventListener("click",renderCountryBrief);
  document.addEventListener("click",e=>{
