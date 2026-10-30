@@ -165,6 +165,17 @@ try:
         page.locator('[data-mapmode="all"]').click()
         page.locator('[data-tab="fraud"]').click()
         assert page.locator("#worldNewsCountry option").count() >= 240
+        assert page.locator("#worldNewsQuery").count() == 1
+        assert page.locator("#worldNewsCategory").count() == 1
+        assert page.locator("#worldNewsShown").text_content()
+        assert page.locator("#worldNewsMore").count() == 1
+        page.locator('[data-tab="events"]').click()
+        page.wait_for_function("document.querySelector('#worldRegulatorHealth').textContent.includes('agencies scanned')")
+        assert page.locator("#worldRegRows").count() == 1
+        assert page.locator("#worldRegQuery").count() == 1
+        assert page.locator("#worldRegCountry").count() == 1
+        assert "original-domain" in page.locator(".regulator-publications-panel").text_content().lower()
+        page.locator('[data-tab="fraud"]').click()
         page.locator("#worldReportingPanel > summary").click()
         assert "country" in page.locator("#worldReportingSummary").text_content() or "source-linked leads" in page.locator("#worldReportingSummary").text_content()
         page.locator('[data-tab="overview"]').click()
