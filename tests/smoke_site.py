@@ -63,6 +63,16 @@ try:
         page.locator('[data-tab="overview"]').click()
         page.wait_for_function("document.querySelectorAll('#featuredIncidents .case-item').length > 0", timeout=15000)
         assert page.locator("#majorOrders .event").count() > 0
+        page.wait_for_function(
+            "document.querySelector('#supportCasesStatus').textContent.includes('Scan:')", timeout=15000)
+        assert page.locator("#supportCases .supporting-news-item").count() > 0
+        assert "Unverified news lead" in page.locator("#supportCases").text_content()
+        assert "Scan:" in page.locator("#supportEnforcementStatus").text_content()
+        assert "Scan:" in page.locator("#supportRegulatoryStatus").text_content()
+        assert "partial year" in page.locator("#overviewFraud").text_content()
+        assert "UNVERIFIED" in page.locator("#overviewFraud").text_content()
+        assert page.locator("#supportCases .supporting-news-item a").first.get_attribute("href").startswith("https://")
+        print("Supporting intelligence routing, evidence labels and 2026 partial-year figures: PASS")
         assert page.locator("#headlinesTop .breaking-story").count() > 0
         print("Featured reviewed incidents:", page.locator("#featuredIncidents .case-item").count())
         page.locator('[data-tab="incidents"]').click()

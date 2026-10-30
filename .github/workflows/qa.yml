@@ -25,11 +25,14 @@ jobs:
           python -m compileall -q scripts tests
           node --check app.js
           node --check intel.js
+          node --check supporting_intelligence.js
           node --check workspace.js
           node --check connections.js
           node --check research.js
           node --check network.js
       - name: Execute data-integrity tests
-        run: python -m unittest discover -s tests -p test_logic.py
+        run: |
+          python -m unittest discover -s tests -p test_logic.py
+          node tests/test_supporting_intelligence.js
       - name: Test real browser interactions
         run: python tests/smoke_site.py
