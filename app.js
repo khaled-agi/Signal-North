@@ -1,6 +1,6 @@
 "use strict";
 const $ = selector => document.querySelector(selector);
-const state = {events:[],news:[],status:{},map:null,layer:null,tab:"overview",mapMode:"all",mapCountMode:"groups",mapTopic:"",mapYearFrom:"",mapYearTo:"",mapProvince:"",mapMonth:"",clientFocus:"",mapMarkers:new Map(),incidents:[],entityAliases:[],rawHeadlineCount:0,globalEvents:[],worldCountries:[],globalHealth:{},mapCountry:"",mapAgency:"",globalPattern:""};
+const state = {events:[],news:[],status:{},map:null,layer:null,tab:"overview",mapMode:"all",mapCountMode:"groups",mapTopic:"",mapYearFrom:"",mapYearTo:"",mapProvince:"",mapMonth:"",clientFocus:"",mapMarkers:new Map(),incidents:[],entityAliases:[],rawHeadlineCount:0,globalEvents:[],worldCountries:[],globalHealth:{},mapCountry:"",mapAgency:"",globalPattern:"",basemap:null,basemapMode:null,mapSideVisible:12};
 const provinces = {ON:"Ontario",QC:"Québec",BC:"British Columbia",AB:"Alberta",NB:"New Brunswick",NS:"Nova Scotia",MB:"Manitoba",SK:"Saskatchewan",NL:"Newfoundland & Labrador",PE:"Prince Edward Island"};
 function escapeHTML(value){return String(value??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
 function currency(value){if(value==null)return "Not reported";const x=Number(value);return x>=1e6?"$"+(x/1e6).toLocaleString("en-CA",{maximumFractionDigits:2})+"M":"$"+x.toLocaleString("en-CA",{maximumFractionDigits:0});}
@@ -12,11 +12,12 @@ function switchTab(tab){
  state.tab=tab;
  document.querySelectorAll(".tab").forEach(x=>x.classList.toggle("hidden",x.id!==tab));
  document.querySelectorAll(".nav").forEach(x=>x.classList.toggle("active",x.dataset.tab===tab));
+ const active=document.querySelector(".sidebar .nav.active");if(active?.closest("details.nav-datasets"))active.closest("details.nav-datasets").open=true;
  $("#crumb").textContent=({overview:"INTELLIGENCE OVERVIEW",events:"EVENT EXPLORER",incidents:"REPORTED FRAUD CASES",clients:"CLIENT WORKSPACE",connections:"INSTITUTION INTELLIGENCE",themes:"SCAM THEMES",sectors:"SECTOR INTELLIGENCE",community:"COMMUNITY NETWORK",reports:"RESEARCH LIBRARY",institutions:"INSTITUTION RADAR",fraud:"FRAUD INTELLIGENCE",losses:"LOSSES & PENALTIES",sources:"SOURCES & METHODOLOGY"})[tab];
  const t={overview:["Know what changed.","Know where to look.","Monitor public enforcement developments and explore evidence-linked institutions across Canada."],events:["Explore the evidence.","Understand each case.","Search regulator-published actions by entity, location, and legal status."],incidents:["Follow individual cases.","Know what was reported.","Source-linked customer incidents, financial impact and bank relationships."],clients:["Track client priorities.","Act on evidence.","Manage research notes, institution timelines and sourced briefs."],reports:["Understand the bigger picture.","Stay grounded in research.","Official studies, national fraud statistics and evidence limitations."],connections:["Connect the dots.","Keep evidence distinct.","Follow an institution across enforcement decisions, reported customer incidents, and preliminary news leads."],themes:["Follow the patterns.","Across the years.","Explore article coverage by scam typology, year and original source; trends are not incidence estimates."],sectors:["Beyond traditional banks.","Track every sector.","Crypto platforms, fintech, casinos and securities—classified by their actual regulatory evidence."],community:["Help connect the evidence.","Build a safer network.","Contribute public reports and corrections for independent review, without sharing private information."],institutions:["Organizations, not rankings.","Evidence before inference.","Institution profiles connect reported events without implying fraud or demand for consulting services."],fraud:["Follow the patterns.","Separate leads from findings.","Reported fraud losses, emerging incidents, and Canadian threat intelligence."],losses:["Follow the money.","Separate losses from penalties.","Compare reported enforcement penalties by publication year and see which institution fraud-loss figures remain undisclosed."],sources:["Trust the source.","Understand the gaps.","Track source availability, update times, and limitations of public regulatory data."]}[tab];
  $("#headline").innerHTML=escapeHTML(t[0])+"<br><em>"+escapeHTML(t[1])+"</em>";
  $("#description").textContent=t[2];
- if(tab==="overview"&&state.map)setTimeout(()=>state.map.invalidateSize(),60);
+ if(tab==="overview"&&state.map)setTimeout(()=>state.map.invalidateSize(),120);
  if(changing)window.scrollTo(0,0);
 }
 function rowHTML(e){
@@ -101,7 +102,7 @@ function renderMapClusters(){
  const zoom=state.map.getZoom();
  // Cluster nearby symbols in projected pixels at the current zoom. Each source
  // is only counted once; marker AREA broadly tracks grouped record count.
- const gridSize=84;
+ const gridSize=91;
  const clusters=new Map();
  for(const x of state.mapRows||[]){
   if(x.lat===null)continue;
@@ -115,7 +116,7 @@ function renderMapClusters(){
   const n=state.mapCountMode==="headlines"?
       g.items.reduce((sum,x)=>sum+(x.kind==="news"?Math.max(1,Number(x.reportCount||1)):1),0):recordCount;
   const centre=state.map.unproject(L.point(g.x/recordCount,g.y/recordCount),zoom);
-  const areaDiameter=Math.min(83,Math.max(28,22+Math.sqrt(n)*7));
+  const areaDiameter=Math.min(71,Math.max(27,22+Math.sqrt(n)*5.5));
   const kind=Object.entries(g.weights).sort((a,b)=>b[1]-a[1])[0][0];
   const accessibleLabel=n+" "+(state.mapCountMode==="headlines"?"headline and notice units":"grouped records")+" near "+(g.items[0]?.location||"this location");
   const marker=L.marker(centre,{
@@ -133,14 +134,55 @@ function renderMapClusters(){
   marker.bindPopup(popup,{maxWidth:330,minWidth:230,maxHeight:350});
   marker.on("click",()=>{
    state.mapSelectedIds=new Set(g.items.map(x=>x.id));
-   state.mapSideScope="selected";state.mapSideVisible=100;
+   state.mapSideScope="selected";state.mapSideVisible=12;
    refreshMapList();
    $("#mapStorySummary").scrollIntoView({behavior:"smooth",block:"nearest"});
   });
   for(const x of g.items)state.mapMarkers.set(x.id,marker);
  }
- $("#mapClusterCount").textContent=clusters.size.toLocaleString("en-CA")+" proportional circles at this zoom";
+ $("#mapClusterCount").textContent=clusters.size.toLocaleString("en-CA")+" source clusters at this zoom";
 }
+
+// Vector tiles are optional and never replace source records, geocoding,
+// clustering, popups or keyboard navigation.
+function setBasemap(){
+ if(!state.map||!window.L)return;
+ const desired=$("#mapStyle")?.value||"positron";
+ const vectorReady=typeof L.maplibreGL==="function" && Boolean(window.maplibregl);
+ const mode=desired!=="osm"&&vectorReady?desired:"osm";
+ const status=$("#mapBasemapStatus");
+ if(state.basemapMode===mode && state.basemap)return;
+ const previous=state.basemap;
+ let next=null;
+ if(mode!=="osm"){
+  try{
+   next=L.maplibreGL({
+    style:"https://tiles.openfreemap.org/styles/"+(mode==="liberty"?"liberty":"positron"),
+    attribution:'<a href="https://openfreemap.org/" target="_blank" rel="noopener">OpenFreeMap</a> · <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors</a>'
+   });
+   next.addTo(state.map);
+  }catch(_){next=null;}
+ }
+ if(!next){
+  next=L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png",{
+   maxZoom:19,
+   attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'
+  });
+  next.addTo(state.map);
+ }
+ if(previous && state.map.hasLayer(previous))state.map.removeLayer(previous);
+ state.basemap=next;
+ state.basemapMode=next===state.basemap&&mode!=="osm"&&vectorReady?"vector-"+mode:"osm";
+ // Store normalized key to avoid rebuilding on every filter.
+ state.basemapMode=next && mode!=="osm"&&vectorReady && typeof next.getMaplibreMap==="function"?mode:"osm";
+ $("#map")?.classList.toggle("vector-active",state.basemapMode!=="osm");
+ if(status)status.textContent=state.basemapMode==="osm"?
+   (desired==="osm"?"Classic OpenStreetMap · streets shown as geographic context":
+    "Classic map fallback · quiet vector tiles are unavailable"):
+   "OpenFreeMap "+(mode==="liberty"?"Liberty":"Positron")+" · modern vector basemap · circles represent source counts";
+ if(typeof next.bringToBack==="function")next.bringToBack();
+}
+
 function initMap(){
  if(!window.L){
   // A CDN outage must not disable the research list. The list never depends
@@ -193,9 +235,7 @@ function initMap(){
   $("#map").replaceChildren();
   state.map=L.map("map",{zoomControl:false,minZoom:2,maxZoom:13,scrollWheelZoom:false,preferCanvas:true}).setView([24,0],2);
   L.control.zoom({position:"bottomright"}).addTo(state.map);
-  L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png",{
-   maxZoom:19,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'
-  }).addTo(state.map);
+  setBasemap();
   state.layer=L.layerGroup().addTo(state.map);
   state.map.on("zoomend",renderMapClusters);
   const provinceSelect=$("#mapProvince");
@@ -383,12 +423,12 @@ for(const id of ["search","sourceFilter","provinceFilter","statusFilter"]){$("#"
 $("#close").addEventListener("click",closeDrawer);
 $("#overlay").addEventListener("click",e=>{if(e.target.id==="overlay")closeDrawer();});
 $("#reload").addEventListener("click",()=>{load(); window.dispatchEvent(new Event("signalnorth:refresh"));});
-$("#mapReset").addEventListener("click",()=>{state.mapProvince="";$("#mapProvince").value="";state.mapMonth="";$("#mapMonth").value="";state.mapTopic="";$("#mapTopic").value="";state.mapYearFrom="";$("#mapYearFrom").value="";state.mapYearTo="";$("#mapYearTo").value="";state.clientFocus="";state.mapCountry="CA";$("#mapCountry").value="CA";state.mapAgency="";$("#mapAgency").value="";state.globalPattern="";state.mapMode="all";document.querySelectorAll("[data-mapmode]").forEach(b=>b.classList.toggle("active",b.dataset.mapmode==="all"));$("#mapStorySearch").value="";state.mapSideVisible=100;initMap();if(state.map)state.map.setView([55,-96],4);});
+$("#mapReset").addEventListener("click",()=>{state.mapProvince="";$("#mapProvince").value="";state.mapMonth="";$("#mapMonth").value="";state.mapTopic="";$("#mapTopic").value="";state.mapYearFrom="";$("#mapYearFrom").value="";state.mapYearTo="";$("#mapYearTo").value="";state.clientFocus="";state.mapCountry="CA";$("#mapCountry").value="CA";state.mapAgency="";$("#mapAgency").value="";state.globalPattern="";state.mapMode="all";document.querySelectorAll("[data-mapmode]").forEach(b=>b.classList.toggle("active",b.dataset.mapmode==="all"));$("#mapStorySearch").value="";state.mapSideVisible=12;initMap();if(state.map)state.map.setView([55,-96],4);});
 $("#mapCountry").addEventListener("change",e=>{
  state.mapCountry=e.target.value;state.mapProvince="";$("#mapProvince").value="";state.globalPattern="";
- state.mapSideVisible=100;initMap();
+ state.mapSideVisible=12;initMap();
 });
-$("#mapAgency").addEventListener("change",e=>{state.mapAgency=e.target.value;state.mapSideVisible=100;initMap();});
+$("#mapAgency").addEventListener("change",e=>{state.mapAgency=e.target.value;state.mapSideVisible=12;initMap();});
 $("#worldView").addEventListener("click",()=>{
  state.mapCountry="";$("#mapCountry").value="";state.mapAgency="";$("#mapAgency").value="";
  state.mapProvince="";$("#mapProvince").value="";state.mapMonth="";$("#mapMonth").value="";
@@ -403,14 +443,17 @@ $("#mapProvince").addEventListener("change",e=>{
  initMap();
 });
 $("#mapMonth").addEventListener("change",e=>{state.mapMonth=e.target.value;initMap();});
-$("#mapTopic").addEventListener("change",e=>{state.mapTopic=e.target.value;state.mapSideVisible=100;initMap();});
-$("#mapYearFrom").addEventListener("change",e=>{state.mapYearFrom=e.target.value;state.mapSideVisible=100;initMap();});
-$("#mapYearTo").addEventListener("change",e=>{state.mapYearTo=e.target.value;state.mapSideVisible=100;initMap();});
+$("#mapTopic").addEventListener("change",e=>{state.mapTopic=e.target.value;state.mapSideVisible=12;initMap();});
+$("#mapYearFrom").addEventListener("change",e=>{state.mapYearFrom=e.target.value;state.mapSideVisible=12;initMap();});
+$("#mapYearTo").addEventListener("change",e=>{state.mapYearTo=e.target.value;state.mapSideVisible=12;initMap();});
 $("#mapClearMonth").addEventListener("click",()=>{state.mapMonth="";$("#mapMonth").value="";initMap();});
 $("#mapCountMode").addEventListener("change",e=>{state.mapCountMode=e.target.value;renderMapClusters();});
-$("#mapStorySearch").addEventListener("input",()=>{state.mapSideVisible=100;initMap();});
-$("#mapStoryScope").addEventListener("change",e=>{state.mapSideScope=e.target.value;state.mapSideVisible=100;refreshMapList();});
-$("#mapStoryMore").addEventListener("click",()=>{state.mapSideVisible=(state.mapSideVisible||100)+100;refreshMapList();});
+$("#mapStyle").addEventListener("change",setBasemap);
+window.addEventListener("signalnorth:basemapready",setBasemap);
+window.addEventListener("signalnorth:basemaperror",e=>{if($("#mapBasemapStatus"))$("#mapBasemapStatus").textContent=e.detail?.reason||"Classic OpenStreetMap fallback";});
+$("#mapStorySearch").addEventListener("input",()=>{state.mapSideVisible=12;initMap();});
+$("#mapStoryScope").addEventListener("change",e=>{state.mapSideScope=e.target.value;state.mapSideVisible=12;refreshMapList();});
+$("#mapStoryMore").addEventListener("click",()=>{state.mapSideVisible=(state.mapSideVisible||12)+50;refreshMapList();});
 $("#mapStoryAll").addEventListener("click",()=>{state.mapSideVisible=Number.MAX_SAFE_INTEGER;refreshMapList();});
 $("#mapStoryClear").addEventListener("click",()=>{state.mapSelectedIds=null;state.mapSideScope="all";refreshMapList();});
 
@@ -426,7 +469,7 @@ window.addEventListener("signalnorth:applytheme",event=>{
  state.mapAgency="";
  state.globalPattern="";
  state.mapSideScope="all";
- state.mapSideVisible=100;
+ state.mapSideVisible=12;
  state.mapMode="news";
  document.querySelectorAll("[data-mapmode]").forEach(b=>b.classList.toggle("active",b.dataset.mapmode==="news"));
  $("#mapTopic").value=theme;
@@ -451,12 +494,13 @@ window.addEventListener("signalnorth:globalentity",event=>{
  window.dispatchEvent(new CustomEvent("signalnorth:globalpattern",{detail:event.detail}));
 });
 window.addEventListener("signalnorth:globalpattern",event=>{
+ switchTab("overview");
  state.globalPattern=event.detail?.pattern||"";
  state.mapCountry="";$("#mapCountry").value="";
  state.mapAgency="";$("#mapAgency").value="";state.clientFocus="";
  state.mapTopic="";$("#mapTopic").value="";
  state.mapMode="enforcement";document.querySelectorAll("[data-mapmode]").forEach(b=>b.classList.toggle("active",b.dataset.mapmode==="enforcement"));
- state.mapSideVisible=100;initMap();
+ state.mapSideVisible=12;initMap();
 });
 window.addEventListener("signalnorth:newsready",event=>{state.news=event.detail?.leads||[];state.rawHeadlineCount=Number(event.detail?.rawHeadlineCount||state.news.length);renderMetrics();initMap();});
 window.addEventListener("signalnorth:incidentsready",event=>{state.incidents=event.detail?.incidents||[];renderMetrics();initMap();});
