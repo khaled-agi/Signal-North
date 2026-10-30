@@ -210,13 +210,13 @@
       </div>
     </details>
 </div>
-    <details class="overview-deepdive world-reporting-panel" id="worldReportingPanel">
+    <details class="overview-deepdive world-reporting-panel" id="worldReportingPanel" open>
       <summary><div><strong>Worldwide fraud reporting</strong><span id="worldReportingSummary">Country-aware searches · Local languages · Unverified headlines</span></div><span class="overview-expand">Expand ↓</span></summary>
       <div class="overview-deepdive-content">
         <section class="panel world-reporting-card">
           <div class="panel-heading"><div><div class="eyebrow">COUNTRY-SPECIFIC DISCOVERY / ORIGINAL LANGUAGE</div><h2>Explore international scam reports</h2></div><span class="small" id="worldReportingHealth">Loading country scan coverage...</span></div>
-          <div class="world-reporting-toolbar"><label for="worldNewsCountry">Market <select id="worldNewsCountry" aria-label="Browse international fraud reporting by country"><option value="">All scanned markets</option></select></label></div>
-          <div id="worldReportingRows" class="world-reporting-rows" aria-live="polite"><div class="empty">Checking available public reporting...</div></div>
+          <div class="world-reporting-toolbar"><label for="worldNewsCountry">Market <select id="worldNewsCountry" aria-label="Browse international fraud reporting by country"><option value="">All countries</option></select></label><label for="worldNewsCategory">Topic <select id="worldNewsCategory" aria-label="Worldwide fraud topic"><option value="">All topics</option></select></label><label for="worldNewsQuery">Search <input id="worldNewsQuery" type="search" placeholder="Find headlines, banks, publishers..." aria-label="Search international headlines"></label></div>
+          <div id="worldReportingRows" class="world-reporting-rows" aria-live="polite"><div class="empty">Checking available public reporting...</div></div><div class="world-results-footer"><span id="worldNewsShown">No matching articles yet</span><button id="worldNewsMore" type="button">Load 50 more</button><button id="worldNewsAll" type="button">Show all matches</button></div>
           <p class="supporting-disclaimer">Country labels identify the <strong>search market</strong>, not an incident location or a verified publisher jurisdiction. Records are unverified article discoveries; local-language headlines are retained as published. These feeds do not measure national fraud levels.</p>
         </section>
       </div>
@@ -246,6 +246,13 @@
     </div>
   </section>
   <section id="events" class="tab hidden">
+    <section class="panel regulator-publications-panel">
+      <div class="panel-heading"><div><div class="eyebrow">WORLDWIDE ENFORCEMENT / DIRECT OFFICIAL PUBLISHER LINKS</div><h2>International regulator publications</h2></div><span class="small" id="worldRegulatorHealth">Checking official publication discovery...</span></div>
+      <p class="world-enforcement-notice">These are announcements on recognized regulator websites identified for further review. <strong>They are not yet verified as final orders or fines.</strong> Official enforcement records with assessed legal status remain in the map's Enforcement layer. No announcement implies an institution committed fraud.</p>
+      <div class="world-reporting-toolbar"><label for="worldRegCountry">Country <select id="worldRegCountry" aria-label="Official regulator publication country"><option value="">All countries</option></select></label><label for="worldRegAgency">Agency <select id="worldRegAgency" aria-label="Agency publication filter"><option value="">All agencies</option></select></label><label for="worldRegQuery">Search <input id="worldRegQuery" type="search" placeholder="Find regulator publications..." aria-label="Search regulator publications"></label></div>
+      <div id="worldRegRows" class="world-reporting-rows" aria-live="polite"><div class="empty">Checking published notices...</div></div><div class="world-results-footer"><span id="worldRegShown">No matching publications yet</span><button id="worldRegMore" type="button">Load 50 more</button><button id="worldRegAll" type="button">Show all matches</button></div>
+      <p class="supporting-disclaimer">Country identifies the regulator's jurisdiction, not an alleged crime location. Date shown for newly discovered agency-site publications is when the news index first observed the URL, not necessarily the original decision or publication date.</p>
+    </section>
     <div class="panel"><div class="panel-heading"><div><div class="eyebrow">CASE EXPLORER</div><h2>Events and enforcement</h2></div><span class="small" id="resultCount">0 records</span></div><div class="filters"><input id="search" type="search" placeholder="Search institution, category or notice..."><select id="sourceFilter"><option value="">All regulators</option></select><select id="provinceFilter"><option value="">All provinces</option></select><select id="statusFilter"><option value="">All legal statuses</option></select></div><div id="eventRows" class="events-list"></div></div>
   </section>
   <section id="clients" class="tab hidden">
