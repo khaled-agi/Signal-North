@@ -153,7 +153,13 @@ function setBasemap(){
  const vectorReady=typeof L.maplibreGL==="function" && Boolean(window.maplibregl);
  const mode=desired!=="osm"&&vectorReady?desired:"osm";
  const status=$("#mapBasemapStatus");
- if(state.basemapMode===mode && state.basemap)return;
+ if(state.basemapMode===mode && state.basemap){
+  if(status)status.textContent=mode==="osm"?
+    (desired==="osm"?"Classic OpenStreetMap · streets shown as geographic context":
+    "Classic map fallback · quiet vector tiles are unavailable"):
+    "OpenFreeMap "+(mode==="liberty"?"Liberty":"Positron")+" · modern vector basemap · circles represent source counts";
+  return;
+ }
  const previous=state.basemap;
  let next=null;
  if(mode!=="osm"){
