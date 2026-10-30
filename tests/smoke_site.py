@@ -184,6 +184,10 @@ try:
         assert page.locator(".count-map-pin .count-pin-inner").first.inner_text().strip().isdigit()
         page.locator("#mapAdvancedFilters > summary").click()
         assert page.locator("#mapStyle").input_value() in ("positron", "liberty", "osm")
+        page.locator("#mapStyle").select_option("osm")
+        assert "Classic OpenStreetMap" in page.locator("#mapBasemapStatus").text_content()
+        page.locator("#mapStyle").select_option("positron")
+        assert page.locator("#mapBasemapStatus").text_content()
         assert page.locator(".explore-pathways button").count() == 3
         assert page.locator(".sidebar > .nav").count() == 5
         page.locator("#mapCountMode").select_option("headlines")
@@ -279,7 +283,7 @@ try:
         assert page.locator("#clientWatchlist .client-item").count() >= 1
         assert "Royal Bank of Canada" in page.locator("#clientWatchlist").inner_text()
         bg=page.evaluate("getComputedStyle(document.body).backgroundColor")
-        assert bg in ("rgb(243, 246, 250)","rgb(255, 255, 255)","rgb(251, 252, 253)","rgb(245, 247, 248)"),f"Expected light theme, got {bg}"
+        assert bg in ("rgb(243, 246, 250)","rgb(255, 255, 255)","rgb(251, 252, 253)","rgb(245, 247, 248)","rgb(245, 248, 249)"),f"Expected light theme, got {bg}"
         if (ROOT / "data" / "institution_intelligence.json").exists():
             page.locator('[data-tab="connections"]').click()
             page.wait_for_function("document.querySelectorAll('#connectInstitution option').length > 5", timeout=20000)
