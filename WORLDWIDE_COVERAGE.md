@@ -94,3 +94,48 @@ scattered United States Minor Outlying Islands (UM) do not have a meaningful
 single representative point and intentionally remain unplotted when news is
 indexed. This is not a collection omission and never changes the country
 filter. No browsing coordinate is a verified incident address.
+
+## 2026 worldwide content ingestion expansion
+
+The website distinguishes **three** source classes:
+
+- **Unverified news headlines:** country-aware Google News RSS searches for all
+  250 ISO/non-ISO research markets, two financial-crime theme queries plus a
+  local-language query where configured. Each scheduled scan covers up to
+  32 markets, cycling through the catalogue over about four hours if jobs run
+  at their nominal half-hour frequency. Up to 120 days of accepted metadata
+  are retained after discovery (up to 90 per country and 12,000 overall).
+  This is not an exhaustive archive of everything published in that period.
+- **Official enforcement-index entries:** actual regulator index listings
+  collected directly from named authorities. Current primary-source index
+  collectors are FinCEN (US), FCA (UK) and MAS (Singapore); separately
+  source-reviewed historic entries remain preserved. Being listed does NOT
+  automatically imply criminal guilt or that a decision is final.
+- **Original-regulator-domain publication leads:** GDELT identifies candidate
+  news announcements originating on 30 specified official agency domains.
+  Every URL is checked against the EXACT government/agency domain, and every
+  title must mention an enforcement-related action. Index first-seen dates
+  are explicitly NOT official publication or decision dates. These records
+  are separate from verified index entries, and contain no inferred penalties
+  or institutional blame. About six agencies are scanned in each scheduled run.
+  Some agencies will not return results, and their status is visible.
+
+The complete world enforcement pipeline would require individually validated
+country-level regulators, local-language legal-status parsers, archived orders,
+appeals, settlement overlap, date-normalization and source freshness.
+30 source-domain search targets **do not** mean enforcement is covered for all
+250 countries. Neither GDELT nor syndicated news provides complete country
+or official enforcement coverage. A country with zero collected actions must
+never be labeled a jurisdiction with zero enforcement.
+
+Data files:
+- data/world_reporting.json and data/world_reporting_status.json
+- data/global_enforcement.json and data/global_source_status.json
+- data/global_regulator_publications.json and
+  data/global_regulator_publications_status.json
+- data/world_jurisdictions.json (actual counts for each evidence tier)
+
+The worldwide news browser under News & Reporting supports search, typology,
+country selection, load more and all matches. The Enforcement tab has a
+**separate** original-regulator-domain publication browser with country,
+agency and text filters. The map keeps the three evidence categories distinct.
