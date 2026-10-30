@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-29T21:43:07+00:00",
-  "original_index_headlines": 2456,
-  "reporting_groups": 2446,
-  "multi_report_groups": 10,
-  "groups_with_multiple_sources": 22,
-  "headline_variation_groups": 20,
+  "generated_at": "2026-10-30T01:47:07+00:00",
+  "original_index_headlines": 2460,
+  "reporting_groups": 2449,
+  "multi_report_groups": 11,
+  "groups_with_multiple_sources": 23,
+  "headline_variation_groups": 21,
   "methodology": "Display-only high-similarity headline grouping within ten days; original article index preserved. Publisher-specific title wording and original links are retained in each detail view. Groups are not independently verified fraud incidents.",
   "groups": [
     {
@@ -14,7 +14,7 @@
       "publisher": "insauga.com",
       "published_at": "2026-10-29T19:01:37+00:00",
       "first_seen_at": "2026-10-29T21:42:55+00:00",
-      "last_observed_at": "2026-10-29T21:42:55+00:00",
+      "last_observed_at": "2026-10-30T01:46:58+00:00",
       "topics": [
         "Social media scam reports"
       ],
@@ -73,7 +73,7 @@
       "publisher": "CBC",
       "published_at": "2026-10-29T18:57:15+00:00",
       "first_seen_at": "2026-10-29T16:49:05+00:00",
-      "last_observed_at": "2026-10-29T21:42:54+00:00",
+      "last_observed_at": "2026-10-30T01:46:56+00:00",
       "topics": [
         "Crypto investment and exchange"
       ],
@@ -134,7 +134,7 @@
       "publisher": "BBC",
       "published_at": "2026-10-29T18:46:57+00:00",
       "first_seen_at": "2026-10-29T21:42:54+00:00",
-      "last_observed_at": "2026-10-29T21:42:55+00:00",
+      "last_observed_at": "2026-10-30T01:46:58+00:00",
       "topics": [
         "Crypto investment and exchange",
         "Social media scam reports"
@@ -212,7 +212,7 @@
       "headline_case_candidate": false,
       "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "first_seen_at": "2026-10-29T21:42:57+00:00",
-      "last_observed_at": "2026-10-29T21:42:57+00:00",
+      "last_observed_at": "2026-10-30T01:46:59+00:00",
       "notice": "Article metadata / headline discovery only. Any mentioned bank, sum or location is not independently corroborated.",
       "article_links": [
         {
@@ -260,7 +260,7 @@
       "publisher": "Financial Post",
       "published_at": "2026-10-29T17:05:36+00:00",
       "first_seen_at": "2026-10-29T16:49:04+00:00",
-      "last_observed_at": "2026-10-29T21:42:52+00:00",
+      "last_observed_at": "2026-10-30T01:46:55+00:00",
       "topics": [
         "Money laundering"
       ],
@@ -316,13 +316,13 @@
       "grouping_disclaimer": "Grouped reporting is not independently verified as one event; similarity does not prove the same underlying victim, incident, loss or misconduct."
     },
     {
-      "id": "report-d1cb6f7b67ca5a3c6edf",
+      "id": "report-773a6b2c7e4bb2150fc6",
       "title": "'Crypto King' Aiden Pleterski found guilty of fraud at his jury trial in Toronto - CBC",
       "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE45WjBKQWNUT2JtS3RjckJDRnIwaWxPWUlUbFZYWXFjdGhvSnpSUmI5QWd6REpLTV9IbWRmbWJYU1FlT3p2STA4MzVaeGQzaFI5aGI5RDFab0MwaU83M0QxNUZwNDhMY21objYzc00xVi1NMFRBTGI4?oc=5",
       "publisher": "CBC",
       "published_at": "2026-10-29T16:03:12+00:00",
       "first_seen_at": "2026-10-29T21:42:54+00:00",
-      "last_observed_at": "2026-10-29T21:42:54+00:00",
+      "last_observed_at": "2026-10-30T01:46:56+00:00",
       "topics": [
         "Crypto investment and exchange"
       ],
@@ -345,10 +345,91 @@
       "map_role": "headline city mention only; incident location unverified",
       "article_links": [
         {
+          "title": "'Crypto King' Aiden Pleterski found guilty of fraud at Toronto jury trial | Hanomansing Live - CBC",
+          "publisher": "CBC",
+          "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBoNk03TkpWMHhsNGRqdVlfQUhXcmFuLVhMYWpJSGtHWWZMNDZFYk8wUlpLTnNPcWJpR3RhMmZxY051Q25JTDcwMWUxVE4yMktLNTZPV1hFWVk?oc=5",
+          "published_at": "2026-10-30T00:03:52+00:00",
+          "discovery_channel": "recent"
+        },
+        {
           "title": "‘Crypto King’ Aiden Pleterski found guilty of fraud at his jury trial in Toronto - CBC",
           "publisher": "CBC",
           "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE45WjBKQWNUT2JtS3RjckJDRnIwaWxPWUlUbFZYWXFjdGhvSnpSUmI5QWd6REpLTV9IbWRmbWJYU1FlT3p2STA4MzVaeGQzaFI5aGI5RDFab0MwaU83M0QxNUZwNDhMY21objYzc00xVi1NMFRBTGI4?oc=5",
           "published_at": "2026-10-29T16:03:12+00:00",
+          "discovery_channel": "recent"
+        }
+      ],
+      "number_of_article_links": 2,
+      "source_channels": [
+        "recent"
+      ],
+      "review_status": "requires_source_review",
+      "index_note": "Article discovery record, not a confirmed individual incident or bank loss.",
+      "article_ids": [
+        "eafb7a19283968ee2732",
+        "6e45235ee06f030e391c"
+      ],
+      "fraud_themes": [
+        "Investment & crypto scams"
+      ],
+      "headline_variations": [
+        {
+          "title": "'Crypto King' Aiden Pleterski found guilty of fraud at Toronto jury trial | Hanomansing Live - CBC",
+          "publisher": "CBC",
+          "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBoNk03TkpWMHhsNGRqdVlfQUhXcmFuLVhMYWpJSGtHWWZMNDZFYk8wUlpLTnNPcWJpR3RhMmZxY051Q25JTDcwMWUxVE4yMktLNTZPV1hFWVk?oc=5",
+          "published_at": "2026-10-30T00:03:52+00:00",
+          "discovery_channel": "recent"
+        },
+        {
+          "title": "‘Crypto King’ Aiden Pleterski found guilty of fraud at his jury trial in Toronto - CBC",
+          "publisher": "CBC",
+          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE45WjBKQWNUT2JtS3RjckJDRnIwaWxPWUlUbFZYWXFjdGhvSnpSUmI5QWd6REpLTV9IbWRmbWJYU1FlT3p2STA4MzVaeGQzaFI5aGI5RDFab0MwaU83M0QxNUZwNDhMY21objYzc00xVi1NMFRBTGI4?oc=5",
+          "published_at": "2026-10-29T16:03:12+00:00",
+          "discovery_channel": "recent"
+        }
+      ],
+      "variation_count": 2,
+      "source_count": 2,
+      "underlying_headline_count": 2,
+      "geographic_relevance": "canadian_location_or_reference",
+      "geographic_relevance_basis": "Canadian geographic clue in title or curated headline city reference; not verified incident location.",
+      "grouping_basis": "conservative_headline_similarity_within_10_days",
+      "grouping_disclaimer": "Grouped reporting is not independently verified as one event; similarity does not prove the same underlying victim, incident, loss or misconduct."
+    },
+    {
+      "id": "report-9e0a0d1d3c203a067c6a",
+      "title": "Ontario ‘Crypto King’ is found guilty of fraud. Jury takes just hour and a half to reach verdict - Toronto Star",
+      "url": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxNY3VSZEVxcTJxeTd2VEViQ09US29MRTJFcFVwelZfUncyajZHWGM5eldnMHRsX01mbDJyVkxPQ0ZZdW9IeGdsVHlJQU5kZDJWLVFSNjczV2VxVlUwQzY3QUFzMG5tX2JFSEhSUG5Rb29pdmd1YWtjaHdSeW5XT01uVl9IM1lIV2VHekc0bko4YmQxU1Vfc0J5X0s1a1pWcXYxaE81RkF2QmxENWI1VXlWa2oybWl2UkJaSHoxMm9ZM21fNDRUUkt5UVBDQk0wR3RhREQ1cG1ZQnpUN0pubUJ1NW9XQVNOQXlWN2tGcjhVUVlsN2hkTjN3am9qS0QzRWMxM3IwZTR1NU1BcWc?oc=5",
+      "publisher": "Toronto Star",
+      "published_at": "2026-10-29T15:55:00+00:00",
+      "first_seen_at": "2026-10-30T01:46:56+00:00",
+      "last_observed_at": "2026-10-30T01:46:56+00:00",
+      "topics": [
+        "Crypto investment and exchange"
+      ],
+      "category": "Investment fraud",
+      "evidence_status": "unverified_grouped_reporting",
+      "geographic_accuracy": "headline_only",
+      "banks_mentioned_in_headline": [],
+      "organizations_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
+      "institution": null,
+      "reported_loss": null,
+      "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness.",
+      "map_location": "Toronto, Ontario",
+      "map_latitude": 43.6532,
+      "map_longitude": -79.3832,
+      "map_province": "ON",
+      "map_role": "headline city mention only; incident location unverified",
+      "article_links": [
+        {
+          "title": "Ontario ‘Crypto King’ is found guilty of fraud. Jury takes just hour and a half to reach verdict - Toronto Star",
+          "publisher": "Toronto Star",
+          "url": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxNY3VSZEVxcTJxeTd2VEViQ09US29MRTJFcFVwelZfUncyajZHWGM5eldnMHRsX01mbDJyVkxPQ0ZZdW9IeGdsVHlJQU5kZDJWLVFSNjczV2VxVlUwQzY3QUFzMG5tX2JFSEhSUG5Rb29pdmd1YWtjaHdSeW5XT01uVl9IM1lIV2VHekc0bko4YmQxU1Vfc0J5X0s1a1pWcXYxaE81RkF2QmxENWI1VXlWa2oybWl2UkJaSHoxMm9ZM21fNDRUUkt5UVBDQk0wR3RhREQ1cG1ZQnpUN0pubUJ1NW9XQVNOQXlWN2tGcjhVUVlsN2hkTjN3am9qS0QzRWMxM3IwZTR1NU1BcWc?oc=5",
+          "published_at": "2026-10-29T15:55:00+00:00",
           "discovery_channel": "recent"
         }
       ],
@@ -359,17 +440,17 @@
       "review_status": "requires_source_review",
       "index_note": "Article discovery record, not a confirmed individual incident or bank loss.",
       "article_ids": [
-        "6e45235ee06f030e391c"
+        "992d017f2e3b89c19d73"
       ],
       "fraud_themes": [
         "Investment & crypto scams"
       ],
       "headline_variations": [
         {
-          "title": "‘Crypto King’ Aiden Pleterski found guilty of fraud at his jury trial in Toronto - CBC",
-          "publisher": "CBC",
-          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE45WjBKQWNUT2JtS3RjckJDRnIwaWxPWUlUbFZYWXFjdGhvSnpSUmI5QWd6REpLTV9IbWRmbWJYU1FlT3p2STA4MzVaeGQzaFI5aGI5RDFab0MwaU83M0QxNUZwNDhMY21objYzc00xVi1NMFRBTGI4?oc=5",
-          "published_at": "2026-10-29T16:03:12+00:00",
+          "title": "Ontario ‘Crypto King’ is found guilty of fraud. Jury takes just hour and a half to reach verdict - Toronto Star",
+          "publisher": "Toronto Star",
+          "url": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxNY3VSZEVxcTJxeTd2VEViQ09US29MRTJFcFVwelZfUncyajZHWGM5eldnMHRsX01mbDJyVkxPQ0ZZdW9IeGdsVHlJQU5kZDJWLVFSNjczV2VxVlUwQzY3QUFzMG5tX2JFSEhSUG5Rb29pdmd1YWtjaHdSeW5XT01uVl9IM1lIV2VHekc0bko4YmQxU1Vfc0J5X0s1a1pWcXYxaE81RkF2QmxENWI1VXlWa2oybWl2UkJaSHoxMm9ZM21fNDRUUkt5UVBDQk0wR3RhREQ1cG1ZQnpUN0pubUJ1NW9XQVNOQXlWN2tGcjhVUVlsN2hkTjN3am9qS0QzRWMxM3IwZTR1NU1BcWc?oc=5",
+          "published_at": "2026-10-29T15:55:00+00:00",
           "discovery_channel": "recent"
         }
       ],
@@ -388,7 +469,7 @@
       "publisher": "Yahoo News Canada",
       "published_at": "2026-10-29T11:07:53+00:00",
       "first_seen_at": "2026-10-29T21:42:51+00:00",
-      "last_observed_at": "2026-10-29T21:42:51+00:00",
+      "last_observed_at": "2026-10-30T01:46:54+00:00",
       "topics": [
         "Scams and victims"
       ],
@@ -501,15 +582,73 @@
       "grouping_disclaimer": "Grouped reporting is not independently verified as one event; similarity does not prove the same underlying victim, incident, loss or misconduct."
     },
     {
-      "id": "report-3d521df6e0624057aa2d",
-      "title": "Protect Yourself: VFS Global Alerts Visa Applicants To Canada Not To Fall For Fraud - Menafn",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOZFZmY3NzWTZaN2FDNjVWUnMweVFWNlpxV3N3SkdVLThOYkMzbHVxclhqZDhCVDNWclgtUVZ2c0hZODBNS3BRWXRDdWxRQUdWYmZGLUpWVlpZM1RoOWdWZk40cnB4cnRaYVZyX25wNktyNGJ5bU9DVW0ySE9IaXJkaTlqX0wwOTdLZV9UaFFyOGZsMlBWbGJOSlNGMHNqVHBESmxpMDFYMnlZaHV1NkhqenFn?oc=5",
-      "publisher": "Menafn",
-      "published_at": "2026-10-29T10:00:39+00:00",
-      "first_seen_at": "2026-10-29T16:49:05+00:00",
-      "last_observed_at": "2026-10-29T21:42:55+00:00",
+      "id": "report-40cb97bc91e009bb671a",
+      "title": "Your stolen SIN is building digital Frankensteins for fraud — and Ontario residents might never find out - Brampton Guardian",
+      "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxObTQ0cVQ1MGNhTTNqS1ZmRjllT3JheHV3ai1WRmVRTThZa0lNYmxCd1B6LWlqYXZteklMYk9PbElkRGt1M2Q0eGltZ1ZsQVFfQUlYY3F2Q29Wa1E3bjk5ZlhxRTBuTzVPbUJwMlZuR2I5VlBSd1VNY0RzZ2hqZm94TzJWMzZzd19NODd5c0YxOGp4dXVlWUlpVTNvWTZMcC1vOXp0MzNJa0JlNE9nekNrUWU0UkFlTlRfcmhEcTcxeDZpSTdLNng5MkVJYmttTkJzT0o5MDB5UmlMY3FOckRETU1FVjdPbjhEa2pNWWJDZFh4d182UG1KVjhKbWVlSGtiZEE?oc=5",
+      "publisher": "Brampton Guardian",
+      "published_at": "2026-10-29T10:30:00+00:00",
+      "first_seen_at": "2026-10-30T01:46:58+00:00",
+      "last_observed_at": "2026-10-30T01:46:58+00:00",
       "topics": [
-        "Fraud research and reports",
+        "Social media scam reports"
+      ],
+      "category": "Reported fraud",
+      "evidence_status": "unverified_grouped_reporting",
+      "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "organizations_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": true,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
+      "institution": null,
+      "reported_loss": null,
+      "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness.",
+      "article_links": [
+        {
+          "title": "Your stolen SIN is building digital Frankensteins for fraud — and Ontario residents might never find out - Brampton Guardian",
+          "publisher": "Brampton Guardian",
+          "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxObTQ0cVQ1MGNhTTNqS1ZmRjllT3JheHV3ai1WRmVRTThZa0lNYmxCd1B6LWlqYXZteklMYk9PbElkRGt1M2Q0eGltZ1ZsQVFfQUlYY3F2Q29Wa1E3bjk5ZlhxRTBuTzVPbUJwMlZuR2I5VlBSd1VNY0RzZ2hqZm94TzJWMzZzd19NODd5c0YxOGp4dXVlWUlpVTNvWTZMcC1vOXp0MzNJa0JlNE9nekNrUWU0UkFlTlRfcmhEcTcxeDZpSTdLNng5MkVJYmttTkJzT0o5MDB5UmlMY3FOckRETU1FVjdPbjhEa2pNWWJDZFh4d182UG1KVjhKbWVlSGtiZEE?oc=5",
+          "published_at": "2026-10-29T10:30:00+00:00",
+          "discovery_channel": "recent"
+        }
+      ],
+      "number_of_article_links": 1,
+      "source_channels": [
+        "recent"
+      ],
+      "review_status": "requires_source_review",
+      "index_note": "Article discovery record, not a confirmed individual incident or bank loss.",
+      "article_ids": [
+        "8c18c31488cc5855a5d9"
+      ],
+      "fraud_themes": [],
+      "headline_variations": [
+        {
+          "title": "Your stolen SIN is building digital Frankensteins for fraud — and Ontario residents might never find out - Brampton Guardian",
+          "publisher": "Brampton Guardian",
+          "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxObTQ0cVQ1MGNhTTNqS1ZmRjllT3JheHV3ai1WRmVRTThZa0lNYmxCd1B6LWlqYXZteklMYk9PbElkRGt1M2Q0eGltZ1ZsQVFfQUlYY3F2Q29Wa1E3bjk5ZlhxRTBuTzVPbUJwMlZuR2I5VlBSd1VNY0RzZ2hqZm94TzJWMzZzd19NODd5c0YxOGp4dXVlWUlpVTNvWTZMcC1vOXp0MzNJa0JlNE9nekNrUWU0UkFlTlRfcmhEcTcxeDZpSTdLNng5MkVJYmttTkJzT0o5MDB5UmlMY3FOckRETU1FVjdPbjhEa2pNWWJDZFh4d182UG1KVjhKbWVlSGtiZEE?oc=5",
+          "published_at": "2026-10-29T10:30:00+00:00",
+          "discovery_channel": "recent"
+        }
+      ],
+      "variation_count": 1,
+      "source_count": 1,
+      "underlying_headline_count": 1,
+      "geographic_relevance": "canadian_location_or_reference",
+      "geographic_relevance_basis": "Canadian geographic clue in title or curated headline city reference; not verified incident location.",
+      "grouping_basis": "conservative_headline_similarity_within_10_days",
+      "grouping_disclaimer": "Grouped reporting is not independently verified as one event; similarity does not prove the same underlying victim, incident, loss or misconduct."
+    },
+    {
+      "id": "report-3d521df6e0624057aa2d",
+      "title": "Protect yourself: VFS Global alerts visa applicants to Canada not to fall for fraud - Zawya",
+      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNRVZ3d25icUdOREZuZXVPUzI3MzVrd0tTaFkwRnZLNGo3UW5zczJIT09LcHFxbVJBZXA1SFBwMW55bDkwVmRFRlRUblBUV2thUWNhdWtLY0d4RWVIWmdnZTAyMnZBbjM4ejIzMVdJeExkVkwwQVNRLWNFTWlOWGFheW93THh6VlZRN2ZVZmQ3aTV6OUhOTmw3UGlVRFBZSEM2bktVLXJOaGtUTTZEeVRaWUNpVi1oX1lkTDFZQl9VVW5kekIxSGxXaXUyVlZCbDc0Z0E0c0Q0R0lSVzgy?oc=5",
+      "publisher": "Zawya",
+      "published_at": "2026-10-29T10:15:00+00:00",
+      "first_seen_at": "2026-10-29T16:49:07+00:00",
+      "last_observed_at": "2026-10-29T16:49:07+00:00",
+      "topics": [
         "Social media scam reports"
       ],
       "category": "Reported fraud",
@@ -526,17 +665,17 @@
       "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness.",
       "article_links": [
         {
+          "title": "Protect Yourself: VFS Global Alerts Visa Applicants to Canada not to fall for fraud - Menafn",
+          "publisher": "Menafn",
+          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQQkdJTk82Y3B1ZEdSci0xdWVnV1AzSnR3TVdaMmdzR2ZVaVh0QVRGTS14Z3JOU3dqdzJNUE1lTFNVR3ZwTWlvX0tZR0FGVUJXdHlENVVSNExoY3RtSjdTT2ZSaHcxTERpZHBmYTgxNjc1dkpLU0s5LVR3MlFUZUw5b2xHWnd1ajNjZWZsVHoxLVFKZXg1QlBTdnhVVXFJaG1rdU9BM2RHUlMzM0cwVy0tZm9n?oc=5",
+          "published_at": "2026-10-29T12:36:37+00:00",
+          "discovery_channel": "recent"
+        },
+        {
           "title": "Protect yourself: VFS Global alerts visa applicants to Canada not to fall for fraud - Zawya",
           "publisher": "Zawya",
           "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNRVZ3d25icUdOREZuZXVPUzI3MzVrd0tTaFkwRnZLNGo3UW5zczJIT09LcHFxbVJBZXA1SFBwMW55bDkwVmRFRlRUblBUV2thUWNhdWtLY0d4RWVIWmdnZTAyMnZBbjM4ejIzMVdJeExkVkwwQVNRLWNFTWlOWGFheW93THh6VlZRN2ZVZmQ3aTV6OUhOTmw3UGlVRFBZSEM2bktVLXJOaGtUTTZEeVRaWUNpVi1oX1lkTDFZQl9VVW5kekIxSGxXaXUyVlZCbDc0Z0E0c0Q0R0lSVzgy?oc=5",
           "published_at": "2026-10-29T10:15:00+00:00",
-          "discovery_channel": "recent"
-        },
-        {
-          "title": "Protect Yourself: VFS Global Alerts Visa Applicants To Canada Not To Fall For Fraud - Menafn",
-          "publisher": "Menafn",
-          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOZFZmY3NzWTZaN2FDNjVWUnMweVFWNlpxV3N3SkdVLThOYkMzbHVxclhqZDhCVDNWclgtUVZ2c0hZODBNS3BRWXRDdWxRQUdWYmZGLUpWVlpZM1RoOWdWZk40cnB4cnRaYVZyX25wNktyNGJ5bU9DVW0ySE9IaXJkaTlqX0wwOTdLZV9UaFFyOGZsMlBWbGJOSlNGMHNqVHBESmxpMDFYMnlZaHV1NkhqenFn?oc=5",
-          "published_at": "2026-10-29T10:00:39+00:00",
           "discovery_channel": "recent"
         }
       ],
@@ -547,23 +686,23 @@
       "review_status": "requires_source_review",
       "index_note": "Article discovery record, not a confirmed individual incident or bank loss.",
       "article_ids": [
-        "c876f2682690e1113f66",
-        "8ebaf117b4f36ca5a220"
+        "8ebaf117b4f36ca5a220",
+        "c876f2682690e1113f66"
       ],
       "fraud_themes": [],
       "headline_variations": [
+        {
+          "title": "Protect Yourself: VFS Global Alerts Visa Applicants to Canada not to fall for fraud - Menafn",
+          "publisher": "Menafn",
+          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQQkdJTk82Y3B1ZEdSci0xdWVnV1AzSnR3TVdaMmdzR2ZVaVh0QVRGTS14Z3JOU3dqdzJNUE1lTFNVR3ZwTWlvX0tZR0FGVUJXdHlENVVSNExoY3RtSjdTT2ZSaHcxTERpZHBmYTgxNjc1dkpLU0s5LVR3MlFUZUw5b2xHWnd1ajNjZWZsVHoxLVFKZXg1QlBTdnhVVXFJaG1rdU9BM2RHUlMzM0cwVy0tZm9n?oc=5",
+          "published_at": "2026-10-29T12:36:37+00:00",
+          "discovery_channel": "recent"
+        },
         {
           "title": "Protect yourself: VFS Global alerts visa applicants to Canada not to fall for fraud - Zawya",
           "publisher": "Zawya",
           "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNRVZ3d25icUdOREZuZXVPUzI3MzVrd0tTaFkwRnZLNGo3UW5zczJIT09LcHFxbVJBZXA1SFBwMW55bDkwVmRFRlRUblBUV2thUWNhdWtLY0d4RWVIWmdnZTAyMnZBbjM4ejIzMVdJeExkVkwwQVNRLWNFTWlOWGFheW93THh6VlZRN2ZVZmQ3aTV6OUhOTmw3UGlVRFBZSEM2bktVLXJOaGtUTTZEeVRaWUNpVi1oX1lkTDFZQl9VVW5kekIxSGxXaXUyVlZCbDc0Z0E0c0Q0R0lSVzgy?oc=5",
           "published_at": "2026-10-29T10:15:00+00:00",
-          "discovery_channel": "recent"
-        },
-        {
-          "title": "Protect Yourself: VFS Global Alerts Visa Applicants To Canada Not To Fall For Fraud - Menafn",
-          "publisher": "Menafn",
-          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOZFZmY3NzWTZaN2FDNjVWUnMweVFWNlpxV3N3SkdVLThOYkMzbHVxclhqZDhCVDNWclgtUVZ2c0hZODBNS3BRWXRDdWxRQUdWYmZGLUpWVlpZM1RoOWdWZk40cnB4cnRaYVZyX25wNktyNGJ5bU9DVW0ySE9IaXJkaTlqX0wwOTdLZV9UaFFyOGZsMlBWbGJOSlNGMHNqVHBESmxpMDFYMnlZaHV1NkhqenFn?oc=5",
-          "published_at": "2026-10-29T10:00:39+00:00",
           "discovery_channel": "recent"
         }
       ],
@@ -582,7 +721,7 @@
       "publisher": "The Hawk",
       "published_at": "2026-10-29T02:59:26+00:00",
       "first_seen_at": "2026-10-29T16:49:03+00:00",
-      "last_observed_at": "2026-10-29T21:42:50+00:00",
+      "last_observed_at": "2026-10-30T01:46:53+00:00",
       "topics": [
         "Bank and customer fraud"
       ],
@@ -641,7 +780,7 @@
       "publisher": "Yahoo News Canada",
       "published_at": "2026-10-29T00:57:00+00:00",
       "first_seen_at": "2026-10-29T09:43:10+00:00",
-      "last_observed_at": "2026-10-29T21:42:51+00:00",
+      "last_observed_at": "2026-10-30T01:46:54+00:00",
       "topics": [
         "Scams and victims"
       ],
@@ -707,7 +846,7 @@
       "publisher": "bloomingbit",
       "published_at": "2026-10-28T22:47:22+00:00",
       "first_seen_at": "2026-10-28T23:27:33+00:00",
-      "last_observed_at": "2026-10-29T21:42:54+00:00",
+      "last_observed_at": "2026-10-30T01:46:56+00:00",
       "topics": [
         "Crypto investment and exchange",
         "Social media scam reports"
@@ -769,7 +908,7 @@
       "publisher": "Traders Union",
       "published_at": "2026-10-28T21:39:29+00:00",
       "first_seen_at": "2026-10-28T23:27:33+00:00",
-      "last_observed_at": "2026-10-29T21:42:54+00:00",
+      "last_observed_at": "2026-10-30T01:46:56+00:00",
       "topics": [
         "Crypto investment and exchange",
         "Social media scam reports"
@@ -831,7 +970,7 @@
       "publisher": "CBC",
       "published_at": "2026-10-28T20:04:40+00:00",
       "first_seen_at": "2026-10-28T23:27:33+00:00",
-      "last_observed_at": "2026-10-29T21:42:54+00:00",
+      "last_observed_at": "2026-10-30T01:46:56+00:00",
       "topics": [
         "Crypto investment and exchange"
       ],
@@ -882,6 +1021,70 @@
       "underlying_headline_count": 1,
       "geographic_relevance": "geography_unresolved",
       "geographic_relevance_basis": "Headline alone does not establish incident geography. No inference from publisher domain.",
+      "grouping_basis": "conservative_headline_similarity_within_10_days",
+      "grouping_disclaimer": "Grouped reporting is not independently verified as one event; similarity does not prove the same underlying victim, incident, loss or misconduct."
+    },
+    {
+      "id": "report-d9562a8745f2b3f08d76",
+      "title": "Winnipeg man wanted after fraudulent withdrawals from Sask. business account - CTV News",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPZjl0dkVEQTBsZnJEcUFDaFB0cWpHakFpLVhfNVFQeHFjbU5Qbk50ZnRlNHZ6Y29pWGdQeE1HdG1kVWhJeDBicnk0QWl1eFVaTmVHRU1iVXlXY1NCa0FHaFpxU0pmN2VSMUtCdDZhVU4ydTBVX0tfSmhBTGZ6MEJXbkg1d2dBMXdvYzlreFR3NmJqMkVoTllvSm5NM0tzSV9CNTRtRW14YTh5SkxZU1JlM0NJZ0Y?oc=5",
+      "publisher": "CTV News",
+      "published_at": "2026-10-28T19:38:27+00:00",
+      "first_seen_at": "2026-10-30T01:46:53+00:00",
+      "last_observed_at": "2026-10-30T01:46:53+00:00",
+      "topics": [
+        "Bank and customer fraud"
+      ],
+      "category": "Reported fraud",
+      "evidence_status": "unverified_grouped_reporting",
+      "geographic_accuracy": "headline_only",
+      "banks_mentioned_in_headline": [],
+      "organizations_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": true,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
+      "institution": null,
+      "reported_loss": null,
+      "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness.",
+      "map_location": "Winnipeg, Manitoba",
+      "map_latitude": 49.8951,
+      "map_longitude": -97.1384,
+      "map_province": "MB",
+      "map_role": "headline city mention only; incident location unverified",
+      "article_links": [
+        {
+          "title": "Winnipeg man wanted after fraudulent withdrawals from Sask. business account - CTV News",
+          "publisher": "CTV News",
+          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPZjl0dkVEQTBsZnJEcUFDaFB0cWpHakFpLVhfNVFQeHFjbU5Qbk50ZnRlNHZ6Y29pWGdQeE1HdG1kVWhJeDBicnk0QWl1eFVaTmVHRU1iVXlXY1NCa0FHaFpxU0pmN2VSMUtCdDZhVU4ydTBVX0tfSmhBTGZ6MEJXbkg1d2dBMXdvYzlreFR3NmJqMkVoTllvSm5NM0tzSV9CNTRtRW14YTh5SkxZU1JlM0NJZ0Y?oc=5",
+          "published_at": "2026-10-28T19:38:27+00:00",
+          "discovery_channel": "recent"
+        }
+      ],
+      "number_of_article_links": 1,
+      "source_channels": [
+        "recent"
+      ],
+      "review_status": "requires_source_review",
+      "index_note": "Article discovery record, not a confirmed individual incident or bank loss.",
+      "article_ids": [
+        "1db17eab29322f77bcec"
+      ],
+      "fraud_themes": [],
+      "headline_variations": [
+        {
+          "title": "Winnipeg man wanted after fraudulent withdrawals from Sask. business account - CTV News",
+          "publisher": "CTV News",
+          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPZjl0dkVEQTBsZnJEcUFDaFB0cWpHakFpLVhfNVFQeHFjbU5Qbk50ZnRlNHZ6Y29pWGdQeE1HdG1kVWhJeDBicnk0QWl1eFVaTmVHRU1iVXlXY1NCa0FHaFpxU0pmN2VSMUtCdDZhVU4ydTBVX0tfSmhBTGZ6MEJXbkg1d2dBMXdvYzlreFR3NmJqMkVoTllvSm5NM0tzSV9CNTRtRW14YTh5SkxZU1JlM0NJZ0Y?oc=5",
+          "published_at": "2026-10-28T19:38:27+00:00",
+          "discovery_channel": "recent"
+        }
+      ],
+      "variation_count": 1,
+      "source_count": 1,
+      "underlying_headline_count": 1,
+      "geographic_relevance": "canadian_location_or_reference",
+      "geographic_relevance_basis": "Canadian geographic clue in title or curated headline city reference; not verified incident location.",
       "grouping_basis": "conservative_headline_similarity_within_10_days",
       "grouping_disclaimer": "Grouped reporting is not independently verified as one event; similarity does not prove the same underlying victim, incident, loss or misconduct."
     },
@@ -1014,7 +1217,7 @@
       "publisher": "kalkine.ca",
       "published_at": "2026-10-28T18:10:00+00:00",
       "first_seen_at": "2026-10-28T19:25:35+00:00",
-      "last_observed_at": "2026-10-29T21:42:55+00:00",
+      "last_observed_at": "2026-10-30T01:46:58+00:00",
       "topics": [
         "Social media scam reports"
       ],
@@ -1132,7 +1335,7 @@
       "publisher": "CBC",
       "published_at": "2026-10-28T17:27:12+00:00",
       "first_seen_at": "2026-10-28T19:25:31+00:00",
-      "last_observed_at": "2026-10-29T21:42:51+00:00",
+      "last_observed_at": "2026-10-30T01:46:54+00:00",
       "topics": [
         "Scams and victims"
       ],
@@ -1196,7 +1399,7 @@
       "publisher": "The Lawton Constitution",
       "published_at": "2026-10-28T16:49:08+00:00",
       "first_seen_at": "2026-10-28T19:25:31+00:00",
-      "last_observed_at": "2026-10-29T21:42:51+00:00",
+      "last_observed_at": "2026-10-30T01:46:54+00:00",
       "topics": [
         "Scams and victims"
       ],
@@ -1257,7 +1460,7 @@
       "publisher": "Castlegar Source",
       "published_at": "2026-10-28T16:10:08+00:00",
       "first_seen_at": "2026-10-28T19:25:35+00:00",
-      "last_observed_at": "2026-10-29T21:42:55+00:00",
+      "last_observed_at": "2026-10-30T01:46:58+00:00",
       "topics": [
         "Social media scam reports"
       ],
@@ -1316,7 +1519,7 @@
       "publisher": "Rossland Telegraph",
       "published_at": "2026-10-28T15:58:01+00:00",
       "first_seen_at": "2026-10-28T19:25:33+00:00",
-      "last_observed_at": "2026-10-29T21:42:53+00:00",
+      "last_observed_at": "2026-10-30T01:46:56+00:00",
       "topics": [
         "Fraud research and reports"
       ],
@@ -1375,7 +1578,7 @@
       "publisher": "Yahoo News Canada",
       "published_at": "2026-10-28T15:23:02+00:00",
       "first_seen_at": "2026-10-28T23:27:31+00:00",
-      "last_observed_at": "2026-10-29T21:42:51+00:00",
+      "last_observed_at": "2026-10-30T01:46:54+00:00",
       "topics": [
         "Bank and customer fraud",
         "Scams and victims"
@@ -1440,7 +1643,7 @@
       "publisher": "CTV News",
       "published_at": "2026-10-28T14:46:52+00:00",
       "first_seen_at": "2026-10-28T19:25:31+00:00",
-      "last_observed_at": "2026-10-29T21:42:50+00:00",
+      "last_observed_at": "2026-10-30T01:46:53+00:00",
       "topics": [
         "Bank and customer fraud",
         "Police investigations"
@@ -1507,7 +1710,7 @@
       "publisher": "Money.ca",
       "published_at": "2026-10-28T12:58:03+00:00",
       "first_seen_at": "2026-10-28T13:55:44+00:00",
-      "last_observed_at": "2026-10-29T21:42:50+00:00",
+      "last_observed_at": "2026-10-30T01:46:53+00:00",
       "topics": [
         "Bank and customer fraud"
       ],
@@ -1568,7 +1771,7 @@
       "publisher": "The Manila Times",
       "published_at": "2026-10-28T10:09:37+00:00",
       "first_seen_at": "2026-10-29T16:49:05+00:00",
-      "last_observed_at": "2026-10-29T21:42:53+00:00",
+      "last_observed_at": "2026-10-30T01:46:56+00:00",
       "topics": [
         "Fraud research and reports"
       ],
@@ -1627,7 +1830,7 @@
       "publisher": "The Globe and Mail",
       "published_at": "2026-10-28T10:00:00+00:00",
       "first_seen_at": "2026-10-28T19:25:32+00:00",
-      "last_observed_at": "2026-10-29T21:42:52+00:00",
+      "last_observed_at": "2026-10-30T01:46:55+00:00",
       "topics": [
         "Money laundering"
       ],
@@ -1749,7 +1952,7 @@
       "publisher": "CTV News",
       "published_at": "2026-10-27T23:19:23+00:00",
       "first_seen_at": "2026-10-29T02:43:31+00:00",
-      "last_observed_at": "2026-10-29T21:42:52+00:00",
+      "last_observed_at": "2026-10-30T01:46:55+00:00",
       "topics": [
         "Money laundering"
       ],
@@ -1871,7 +2074,7 @@
       "publisher": "CTV News",
       "published_at": "2026-10-27T18:58:20+00:00",
       "first_seen_at": "2026-10-27T22:01:49+00:00",
-      "last_observed_at": "2026-10-29T21:42:51+00:00",
+      "last_observed_at": "2026-10-30T01:46:54+00:00",
       "topics": [
         "Online gambling fraud",
         "Scams and victims"
@@ -2006,7 +2209,7 @@
       "publisher": "Durham Regional Police Service",
       "published_at": "2026-10-27T18:11:25+00:00",
       "first_seen_at": "2026-10-28T01:04:48+00:00",
-      "last_observed_at": "2026-10-29T21:42:51+00:00",
+      "last_observed_at": "2026-10-30T01:46:54+00:00",
       "topics": [
         "Police investigations"
       ],
@@ -2317,7 +2520,7 @@
       "publisher": "Retail Insider",
       "published_at": "2026-10-27T12:00:00+00:00",
       "first_seen_at": "2026-10-27T17:50:29+00:00",
-      "last_observed_at": "2026-10-29T21:42:55+00:00",
+      "last_observed_at": "2026-10-30T01:46:58+00:00",
       "topics": [
         "Social media scam reports"
       ],
@@ -2376,7 +2579,7 @@
       "publisher": "CTV News",
       "published_at": "2026-10-27T11:37:04+00:00",
       "first_seen_at": "2026-10-28T13:55:45+00:00",
-      "last_observed_at": "2026-10-29T21:42:51+00:00",
+      "last_observed_at": "2026-10-30T01:46:54+00:00",
       "topics": [
         "Police investigations"
       ],
@@ -2435,7 +2638,7 @@
       "publisher": "CTV News",
       "published_at": "2026-10-27T11:20:41+00:00",
       "first_seen_at": "2026-10-27T17:50:26+00:00",
-      "last_observed_at": "2026-10-29T16:49:07+00:00",
+      "last_observed_at": "2026-10-30T01:46:54+00:00",
       "topics": [
         "Bank and customer fraud",
         "Police investigations",
@@ -2559,7 +2762,7 @@
       "publisher": "CBC",
       "published_at": "2026-10-27T10:00:00+00:00",
       "first_seen_at": "2026-10-27T12:02:00+00:00",
-      "last_observed_at": "2026-10-29T21:42:52+00:00",
+      "last_observed_at": "2026-10-30T01:46:55+00:00",
       "topics": [
         "Bank and customer fraud",
         "Money laundering"
@@ -2621,7 +2824,7 @@
       "publisher": "CBC",
       "published_at": "2026-10-27T09:00:00+00:00",
       "first_seen_at": "2026-10-27T17:50:25+00:00",
-      "last_observed_at": "2026-10-29T21:42:51+00:00",
+      "last_observed_at": "2026-10-30T01:46:54+00:00",
       "topics": [
         "Bank and customer fraud",
         "Fraud research and reports",
@@ -2682,7 +2885,7 @@
       "publisher": "CBC",
       "published_at": "2026-10-27T08:00:00+00:00",
       "first_seen_at": "2026-10-28T06:48:03+00:00",
-      "last_observed_at": "2026-10-29T21:42:51+00:00",
+      "last_observed_at": "2026-10-30T01:46:56+00:00",
       "topics": [
         "Crypto investment and exchange",
         "Scams and victims"
@@ -2744,7 +2947,7 @@
       "publisher": "Todayville",
       "published_at": "2026-10-27T07:00:00+00:00",
       "first_seen_at": "2026-10-29T21:42:52+00:00",
-      "last_observed_at": "2026-10-29T21:42:52+00:00",
+      "last_observed_at": "2026-10-30T01:46:55+00:00",
       "topics": [
         "Money laundering"
       ],
@@ -2866,7 +3069,7 @@
       "publisher": "Yahoo News Canada",
       "published_at": "2026-10-27T01:41:00+00:00",
       "first_seen_at": "2026-10-27T12:02:04+00:00",
-      "last_observed_at": "2026-10-29T21:42:55+00:00",
+      "last_observed_at": "2026-10-30T01:46:58+00:00",
       "topics": [
         "Social media scam reports"
       ],
@@ -2927,7 +3130,7 @@
       "publisher": "Yahoo News Canada",
       "published_at": "2026-10-26T22:18:47+00:00",
       "first_seen_at": "2026-10-27T12:02:04+00:00",
-      "last_observed_at": "2026-10-29T21:42:55+00:00",
+      "last_observed_at": "2026-10-30T01:46:58+00:00",
       "topics": [
         "Social media scam reports"
       ],
@@ -2988,7 +3191,7 @@
       "publisher": "Yahoo News Canada",
       "published_at": "2026-10-26T21:10:39+00:00",
       "first_seen_at": "2026-10-27T12:02:04+00:00",
-      "last_observed_at": "2026-10-29T21:42:55+00:00",
+      "last_observed_at": "2026-10-30T01:46:58+00:00",
       "topics": [
         "Social media scam reports"
       ],
@@ -3110,7 +3313,7 @@
       "publisher": "Global News",
       "published_at": "2026-10-26T19:56:00+00:00",
       "first_seen_at": "2026-10-27T12:02:00+00:00",
-      "last_observed_at": "2026-10-29T21:42:50+00:00",
+      "last_observed_at": "2026-10-30T01:46:53+00:00",
       "topics": [
         "Bank and customer fraud"
       ],
@@ -3169,7 +3372,7 @@
       "publisher": "insauga.com",
       "published_at": "2026-10-26T19:25:24+00:00",
       "first_seen_at": "2026-10-26T21:31:41+00:00",
-      "last_observed_at": "2026-10-29T21:42:50+00:00",
+      "last_observed_at": "2026-10-30T01:46:53+00:00",
       "topics": [
         "Bank and customer fraud"
       ],
@@ -3354,7 +3557,7 @@
       "publisher": "CTV News",
       "published_at": "2026-10-26T15:53:17+00:00",
       "first_seen_at": "2026-10-29T21:42:50+00:00",
-      "last_observed_at": "2026-10-29T21:42:50+00:00",
+      "last_observed_at": "2026-10-30T01:46:53+00:00",
       "topics": [
         "Bank and customer fraud"
       ],
@@ -3428,8 +3631,8 @@
       "amount_strings_in_headline": [],
       "headline_case_candidate": false,
       "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
-      "first_seen_at": "2026-10-29T21:42:58+00:00",
-      "last_observed_at": "2026-10-29T21:42:58+00:00",
+      "first_seen_at": "2026-10-30T01:47:01+00:00",
+      "last_observed_at": "2026-10-30T01:47:01+00:00",
       "notice": "Article metadata / headline discovery only. Any mentioned bank, sum or location is not independently corroborated.",
       "article_links": [
         {
@@ -3474,7 +3677,7 @@
       "publisher": "NBC 6 South Florida",
       "published_at": "2026-10-26T13:08:05+00:00",
       "first_seen_at": "2026-10-26T16:54:45+00:00",
-      "last_observed_at": "2026-10-29T21:42:52+00:00",
+      "last_observed_at": "2026-10-30T01:46:55+00:00",
       "topics": [
         "Bank and customer fraud",
         "Money laundering"
@@ -3534,7 +3737,7 @@
       "publisher": "Wealth Professional",
       "published_at": "2026-10-26T11:02:58+00:00",
       "first_seen_at": "2026-10-26T16:54:46+00:00",
-      "last_observed_at": "2026-10-29T21:42:53+00:00",
+      "last_observed_at": "2026-10-30T01:46:56+00:00",
       "topics": [
         "Fraud research and reports"
       ],
@@ -3593,7 +3796,7 @@
       "publisher": "The Globe and Mail",
       "published_at": "2026-10-26T09:00:00+00:00",
       "first_seen_at": "2026-10-26T10:25:34+00:00",
-      "last_observed_at": "2026-10-29T21:42:53+00:00",
+      "last_observed_at": "2026-10-30T01:46:55+00:00",
       "topics": [
         "Fraud research and reports",
         "Money laundering"
@@ -3655,7 +3858,7 @@
       "publisher": "Money.ca",
       "published_at": "2026-10-25T10:30:16+00:00",
       "first_seen_at": "2026-10-25T12:27:09+00:00",
-      "last_observed_at": "2026-10-29T21:42:55+00:00",
+      "last_observed_at": "2026-10-30T01:46:58+00:00",
       "topics": [
         "Fraud research and reports",
         "Scams and victims",
@@ -4077,7 +4280,7 @@
       "publisher": "Trak.in",
       "published_at": "2026-10-24T05:22:46+00:00",
       "first_seen_at": "2026-10-24T07:05:27+00:00",
-      "last_observed_at": "2026-10-29T21:42:50+00:00",
+      "last_observed_at": "2026-10-30T01:46:53+00:00",
       "topics": [
         "Bank and customer fraud"
       ],
@@ -4136,7 +4339,7 @@
       "publisher": "Yahoo News Canada",
       "published_at": "2026-10-24T02:34:00+00:00",
       "first_seen_at": "2026-10-24T03:02:28+00:00",
-      "last_observed_at": "2026-10-29T21:42:52+00:00",
+      "last_observed_at": "2026-10-30T01:46:55+00:00",
       "topics": [
         "Investment schemes",
         "Scams and victims"
@@ -4261,7 +4464,7 @@
       "publisher": "Yahoo News Canada",
       "published_at": "2026-10-24T01:21:00+00:00",
       "first_seen_at": "2026-10-24T03:02:30+00:00",
-      "last_observed_at": "2026-10-28T23:27:33+00:00",
+      "last_observed_at": "2026-10-30T01:46:56+00:00",
       "topics": [
         "Crypto investment and exchange"
       ],
@@ -4388,7 +4591,7 @@
       "publisher": "CTV News",
       "published_at": "2026-10-23T20:20:42+00:00",
       "first_seen_at": "2026-10-24T01:27:42+00:00",
-      "last_observed_at": "2026-10-29T21:42:51+00:00",
+      "last_observed_at": "2026-10-30T01:46:54+00:00",
       "topics": [
         "Scams and victims"
       ],
@@ -4699,7 +4902,7 @@
       "publisher": "insauga.com",
       "published_at": "2026-10-23T14:55:26+00:00",
       "first_seen_at": "2026-10-24T01:27:42+00:00",
-      "last_observed_at": "2026-10-29T21:42:51+00:00",
+      "last_observed_at": "2026-10-30T01:46:54+00:00",
       "topics": [
         "Fraud research and reports",
         "Scams and victims"
@@ -4759,7 +4962,7 @@
       "publisher": "Yen News",
       "published_at": "2026-10-23T14:26:23+00:00",
       "first_seen_at": "2026-10-26T21:31:46+00:00",
-      "last_observed_at": "2026-10-29T21:42:55+00:00",
+      "last_observed_at": "2026-10-30T01:46:58+00:00",
       "topics": [
         "Social media scam reports"
       ],
@@ -4877,7 +5080,7 @@
       "publisher": "CBC",
       "published_at": "2026-10-23T08:00:00+00:00",
       "first_seen_at": "2026-10-24T01:27:42+00:00",
-      "last_observed_at": "2026-10-29T21:42:51+00:00",
+      "last_observed_at": "2026-10-30T01:46:54+00:00",
       "topics": [
         "Bank and customer fraud",
         "Scams and victims"
@@ -5259,7 +5462,7 @@
       "publisher": "Modern Ghana",
       "published_at": "2026-10-22T13:58:44+00:00",
       "first_seen_at": "2026-10-24T01:27:42+00:00",
-      "last_observed_at": "2026-10-29T21:42:51+00:00",
+      "last_observed_at": "2026-10-30T01:46:54+00:00",
       "topics": [
         "Scams and victims"
       ],
@@ -5318,7 +5521,7 @@
       "publisher": "Radio-Canada",
       "published_at": "2026-10-22T08:00:00+00:00",
       "first_seen_at": "2026-10-24T01:47:46+00:00",
-      "last_observed_at": "2026-10-29T21:42:53+00:00",
+      "last_observed_at": "2026-10-30T01:46:56+00:00",
       "topics": [
         "Fraud research and reports",
         "Social media scam reports"
@@ -5451,7 +5654,7 @@
       "publisher": "Gulf News",
       "published_at": "2026-10-22T02:52:39+00:00",
       "first_seen_at": "2026-10-24T03:02:30+00:00",
-      "last_observed_at": "2026-10-29T21:42:52+00:00",
+      "last_observed_at": "2026-10-30T01:46:55+00:00",
       "topics": [
         "Crypto investment and exchange",
         "Money laundering",
@@ -5514,7 +5717,7 @@
       "publisher": "NTV News",
       "published_at": "2026-10-21T23:13:27+00:00",
       "first_seen_at": "2026-10-24T01:27:42+00:00",
-      "last_observed_at": "2026-10-29T21:42:51+00:00",
+      "last_observed_at": "2026-10-30T01:46:54+00:00",
       "topics": [
         "Scams and victims"
       ],
@@ -5693,7 +5896,7 @@
       "publisher": "India.com",
       "published_at": "2026-10-21T17:44:37+00:00",
       "first_seen_at": "2026-10-24T01:27:42+00:00",
-      "last_observed_at": "2026-10-29T21:42:50+00:00",
+      "last_observed_at": "2026-10-30T01:46:53+00:00",
       "topics": [
         "Bank and customer fraud",
         "Fraud research and reports"
@@ -5756,7 +5959,7 @@
       "publisher": "Yahoo News Canada",
       "published_at": "2026-10-21T15:48:21+00:00",
       "first_seen_at": "2026-10-24T01:47:46+00:00",
-      "last_observed_at": "2026-10-29T21:42:55+00:00",
+      "last_observed_at": "2026-10-30T01:46:58+00:00",
       "topics": [
         "Fraud research and reports",
         "Social media scam reports"
@@ -5816,7 +6019,7 @@
       "publisher": "Bhaskar English",
       "published_at": "2026-10-21T15:02:28+00:00",
       "first_seen_at": "2026-10-24T01:27:42+00:00",
-      "last_observed_at": "2026-10-29T21:42:50+00:00",
+      "last_observed_at": "2026-10-30T01:46:53+00:00",
       "topics": [
         "Bank and customer fraud",
         "Scams and victims",
@@ -5878,7 +6081,7 @@
       "publisher": "Crime Fighters",
       "published_at": "2026-10-21T14:00:45+00:00",
       "first_seen_at": "2026-10-24T01:27:42+00:00",
-      "last_observed_at": "2026-10-29T21:42:51+00:00",
+      "last_observed_at": "2026-10-30T01:46:54+00:00",
       "topics": [
         "Scams and victims"
       ],
@@ -6056,7 +6259,7 @@
       "publisher": "Tribune Online",
       "published_at": "2026-10-21T10:47:57+00:00",
       "first_seen_at": "2026-10-24T01:27:42+00:00",
-      "last_observed_at": "2026-10-29T21:42:51+00:00",
+      "last_observed_at": "2026-10-30T01:46:54+00:00",
       "topics": [
         "Scams and victims"
       ],
@@ -6115,7 +6318,7 @@
       "publisher": "iPhone in Canada",
       "published_at": "2026-10-21T09:05:14+00:00",
       "first_seen_at": "2026-10-29T21:42:51+00:00",
-      "last_observed_at": "2026-10-29T21:42:51+00:00",
+      "last_observed_at": "2026-10-30T01:46:54+00:00",
       "topics": [
         "Scams and victims"
       ],
@@ -6238,7 +6441,7 @@
       "publisher": "CityNews Edmonton",
       "published_at": "2026-10-21T07:00:00+00:00",
       "first_seen_at": "2026-10-25T06:39:47+00:00",
-      "last_observed_at": "2026-10-29T21:42:55+00:00",
+      "last_observed_at": "2026-10-30T01:46:58+00:00",
       "topics": [
         "Social media scam reports"
       ],
@@ -6302,7 +6505,7 @@
       "publisher": "UL Lawyers",
       "published_at": "2026-10-21T01:12:27+00:00",
       "first_seen_at": "2026-10-24T01:27:43+00:00",
-      "last_observed_at": "2026-10-29T21:42:51+00:00",
+      "last_observed_at": "2026-10-30T01:46:54+00:00",
       "topics": [
         "Police investigations"
       ],
@@ -6612,7 +6815,7 @@
       "publisher": "Toronto Star",
       "published_at": "2026-10-20T14:23:49+00:00",
       "first_seen_at": "2026-10-24T01:27:44+00:00",
-      "last_observed_at": "2026-10-29T21:42:53+00:00",
+      "last_observed_at": "2026-10-30T01:46:55+00:00",
       "topics": [
         "Credit unions and fintech"
       ],
@@ -6816,7 +7019,7 @@
       "publisher": "Wealth Professional",
       "published_at": "2026-10-20T10:42:24+00:00",
       "first_seen_at": "2026-10-24T01:47:46+00:00",
-      "last_observed_at": "2026-10-29T21:42:53+00:00",
+      "last_observed_at": "2026-10-30T01:46:56+00:00",
       "topics": [
         "Fraud research and reports"
       ],
@@ -6865,87 +7068,6 @@
       "variation_count": 1,
       "source_count": 1,
       "underlying_headline_count": 1,
-      "geographic_relevance": "canadian_location_or_reference",
-      "geographic_relevance_basis": "Canadian geographic clue in title or curated headline city reference; not verified incident location.",
-      "grouping_basis": "conservative_headline_similarity_within_10_days",
-      "grouping_disclaimer": "Grouped reporting is not independently verified as one event; similarity does not prove the same underlying victim, incident, loss or misconduct."
-    },
-    {
-      "id": "report-e92c0cbef5e399199d34",
-      "title": "Former Blue Jays player Rich Butler, wife, charged with fraud in Ontario - The Spec",
-      "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxNX0JQM25vMjRXbU9zUTlmUUNoT3Uwc2VBY0NsOUlMbTFjVXRLUmdNaGtyeW55blhVMEg5dkJoZm52OUNEMXZfMnBxdkU4Y3FEYy1WOXhVZWx6X1l1NkRCN2Q2U0tITTZqcHhXX1N3aklac3JSaU9VaXFsckdxdjJZVHVUX1ZhTlE3dlZiRmkwNnFvdkdwQ3c1c2JsY0lhY0dEVmRBRXQ1RHctWlBjN3FiQVpVd2o1ejBsdlJpVzdYckp5b3BHWnA5LTJ5VG1sUUdNS0JoNkFPM01lVE5tdm13dVJXZTV2WGlhNnl1V3A3MElSdw?oc=5",
-      "publisher": "The Spec",
-      "published_at": "2026-10-20T07:00:00+00:00",
-      "first_seen_at": "2026-10-28T19:25:32+00:00",
-      "last_observed_at": "2026-10-29T21:42:51+00:00",
-      "topics": [
-        "Police investigations"
-      ],
-      "category": "Reported fraud",
-      "evidence_status": "unverified_grouped_reporting",
-      "geographic_accuracy": "not_geocoded",
-      "banks_mentioned_in_headline": [],
-      "organizations_mentioned_in_headline": [],
-      "amount_strings_in_headline": [],
-      "headline_case_candidate": false,
-      "content_kind": "news_lead",
-      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
-      "institution": null,
-      "reported_loss": null,
-      "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness.",
-      "article_links": [
-        {
-          "title": "Former Blue Jays player Rich Butler, wife, charged with fraud in Ontario - Toronto Star",
-          "publisher": "Toronto Star",
-          "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNWUdOZkRmSkR2Y2xiMi13d0dkQVVFZktkX0stV1V1OGYtUlBkU1BaekRTbWc3N1l5ZHdsdGxiNF94TVZmdUlIandlUVBaenJJbUhlWUZKalFtbGVFSW1XbUl2c2dQYS00OEd0RXFvc3k4ZXQ4VDVTcmFhYXVic0lLN1FuRVVVZlVwQmg1cjJjbWJpQURVUTZacWNfNndPdWdrYmxNS3dza2Mya1FscG1CT3BvcG1rdnVLLUJvNk5GdEdsV0pvRmc0a3VMMktweWQxMEwyTFFxY2FKNTNVUHA1N0pRTWdjWENoMEg3Rm9KMEI3T2c?oc=5",
-          "published_at": "2026-10-20T17:28:48+00:00",
-          "discovery_channel": "recent"
-        },
-        {
-          "title": "Former Blue Jays player Rich Butler, wife, charged with fraud in Ontario - The Spec",
-          "publisher": "The Spec",
-          "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxNX0JQM25vMjRXbU9zUTlmUUNoT3Uwc2VBY0NsOUlMbTFjVXRLUmdNaGtyeW55blhVMEg5dkJoZm52OUNEMXZfMnBxdkU4Y3FEYy1WOXhVZWx6X1l1NkRCN2Q2U0tITTZqcHhXX1N3aklac3JSaU9VaXFsckdxdjJZVHVUX1ZhTlE3dlZiRmkwNnFvdkdwQ3c1c2JsY0lhY0dEVmRBRXQ1RHctWlBjN3FiQVpVd2o1ejBsdlJpVzdYckp5b3BHWnA5LTJ5VG1sUUdNS0JoNkFPM01lVE5tdm13dVJXZTV2WGlhNnl1V3A3MElSdw?oc=5",
-          "published_at": "2026-10-20T07:00:00+00:00",
-          "discovery_channel": "recent"
-        }
-      ],
-      "number_of_article_links": 2,
-      "source_channels": [
-        "recent"
-      ],
-      "review_status": "requires_source_review",
-      "index_note": "Article discovery record, not a confirmed individual incident or bank loss.",
-      "article_ids": [
-        "2efb7e011211834c4d4b",
-        "d21edd09a51918fe22c4"
-      ],
-      "fraud_themes": [
-        "Fraud investigations & enforcement"
-      ],
-      "headline_variations": [
-        {
-          "title": "Former Blue Jays player Rich Butler, wife, charged with fraud in Ontario - Toronto Star",
-          "publisher": "Toronto Star",
-          "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNWUdOZkRmSkR2Y2xiMi13d0dkQVVFZktkX0stV1V1OGYtUlBkU1BaekRTbWc3N1l5ZHdsdGxiNF94TVZmdUlIandlUVBaenJJbUhlWUZKalFtbGVFSW1XbUl2c2dQYS00OEd0RXFvc3k4ZXQ4VDVTcmFhYXVic0lLN1FuRVVVZlVwQmg1cjJjbWJpQURVUTZacWNfNndPdWdrYmxNS3dza2Mya1FscG1CT3BvcG1rdnVLLUJvNk5GdEdsV0pvRmc0a3VMMktweWQxMEwyTFFxY2FKNTNVUHA1N0pRTWdjWENoMEg3Rm9KMEI3T2c?oc=5",
-          "published_at": "2026-10-20T17:28:48+00:00",
-          "discovery_channel": "recent"
-        },
-        {
-          "title": "Former Blue Jays player Rich Butler, wife, charged with fraud in Ontario - The Spec",
-          "publisher": "The Spec",
-          "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxNX0JQM25vMjRXbU9zUTlmUUNoT3Uwc2VBY0NsOUlMbTFjVXRLUmdNaGtyeW55blhVMEg5dkJoZm52OUNEMXZfMnBxdkU4Y3FEYy1WOXhVZWx6X1l1NkRCN2Q2U0tITTZqcHhXX1N3aklac3JSaU9VaXFsckdxdjJZVHVUX1ZhTlE3dlZiRmkwNnFvdkdwQ3c1c2JsY0lhY0dEVmRBRXQ1RHctWlBjN3FiQVpVd2o1ejBsdlJpVzdYckp5b3BHWnA5LTJ5VG1sUUdNS0JoNkFPM01lVE5tdm13dVJXZTV2WGlhNnl1V3A3MElSdw?oc=5",
-          "published_at": "2026-10-20T07:00:00+00:00",
-          "discovery_channel": "recent"
-        }
-      ],
-      "variation_count": 2,
-      "source_count": 2,
-      "underlying_headline_count": 2,
-      "map_latitude": 43.6532,
-      "map_longitude": -79.3832,
-      "map_location": "Toronto, Ontario",
-      "map_province": "ON",
-      "map_role": "headline city mention only; incident location unverified",
       "geographic_relevance": "canadian_location_or_reference",
       "geographic_relevance_basis": "Canadian geographic clue in title or curated headline city reference; not verified incident location.",
       "grouping_basis": "conservative_headline_similarity_within_10_days",
@@ -7027,13 +7149,94 @@
       "grouping_disclaimer": "Grouped reporting is not independently verified as one event; similarity does not prove the same underlying victim, incident, loss or misconduct."
     },
     {
+      "id": "report-e92c0cbef5e399199d34",
+      "title": "Former Blue Jays player Rich Butler, wife, charged with fraud in Ontario - Toronto Star",
+      "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNWUdOZkRmSkR2Y2xiMi13d0dkQVVFZktkX0stV1V1OGYtUlBkU1BaekRTbWc3N1l5ZHdsdGxiNF94TVZmdUlIandlUVBaenJJbUhlWUZKalFtbGVFSW1XbUl2c2dQYS00OEd0RXFvc3k4ZXQ4VDVTcmFhYXVic0lLN1FuRVVVZlVwQmg1cjJjbWJpQURVUTZacWNfNndPdWdrYmxNS3dza2Mya1FscG1CT3BvcG1rdnVLLUJvNk5GdEdsV0pvRmc0a3VMMktweWQxMEwyTFFxY2FKNTNVUHA1N0pRTWdjWENoMEg3Rm9KMEI3T2c?oc=5",
+      "publisher": "Toronto Star",
+      "published_at": "2026-10-20T07:00:00+00:00",
+      "first_seen_at": "2026-10-24T03:09:24+00:00",
+      "last_observed_at": "2026-10-30T01:46:54+00:00",
+      "topics": [
+        "Police investigations"
+      ],
+      "category": "Reported fraud",
+      "evidence_status": "unverified_grouped_reporting",
+      "geographic_accuracy": "headline_only",
+      "banks_mentioned_in_headline": [],
+      "organizations_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
+      "institution": null,
+      "reported_loss": null,
+      "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness.",
+      "map_location": "Toronto, Ontario",
+      "map_latitude": 43.6532,
+      "map_longitude": -79.3832,
+      "map_province": "ON",
+      "map_role": "headline city mention only; incident location unverified",
+      "article_links": [
+        {
+          "title": "Former Blue Jays player Rich Butler, wife, charged with fraud in Ontario - Toronto Star",
+          "publisher": "Toronto Star",
+          "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNWUdOZkRmSkR2Y2xiMi13d0dkQVVFZktkX0stV1V1OGYtUlBkU1BaekRTbWc3N1l5ZHdsdGxiNF94TVZmdUlIandlUVBaenJJbUhlWUZKalFtbGVFSW1XbUl2c2dQYS00OEd0RXFvc3k4ZXQ4VDVTcmFhYXVic0lLN1FuRVVVZlVwQmg1cjJjbWJpQURVUTZacWNfNndPdWdrYmxNS3dza2Mya1FscG1CT3BvcG1rdnVLLUJvNk5GdEdsV0pvRmc0a3VMMktweWQxMEwyTFFxY2FKNTNVUHA1N0pRTWdjWENoMEg3Rm9KMEI3T2c?oc=5",
+          "published_at": "2026-10-20T07:00:00+00:00",
+          "discovery_channel": "recent"
+        },
+        {
+          "title": "Former Blue Jays player Rich Butler, wife, charged with fraud in Ontario - The Spec",
+          "publisher": "The Spec",
+          "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxNX0JQM25vMjRXbU9zUTlmUUNoT3Uwc2VBY0NsOUlMbTFjVXRLUmdNaGtyeW55blhVMEg5dkJoZm52OUNEMXZfMnBxdkU4Y3FEYy1WOXhVZWx6X1l1NkRCN2Q2U0tITTZqcHhXX1N3aklac3JSaU9VaXFsckdxdjJZVHVUX1ZhTlE3dlZiRmkwNnFvdkdwQ3c1c2JsY0lhY0dEVmRBRXQ1RHctWlBjN3FiQVpVd2o1ejBsdlJpVzdYckp5b3BHWnA5LTJ5VG1sUUdNS0JoNkFPM01lVE5tdm13dVJXZTV2WGlhNnl1V3A3MElSdw?oc=5",
+          "published_at": "2026-10-20T07:00:00+00:00",
+          "discovery_channel": "recent"
+        }
+      ],
+      "number_of_article_links": 2,
+      "source_channels": [
+        "recent"
+      ],
+      "review_status": "requires_source_review",
+      "index_note": "Article discovery record, not a confirmed individual incident or bank loss.",
+      "article_ids": [
+        "2efb7e011211834c4d4b",
+        "d21edd09a51918fe22c4"
+      ],
+      "fraud_themes": [
+        "Fraud investigations & enforcement"
+      ],
+      "headline_variations": [
+        {
+          "title": "Former Blue Jays player Rich Butler, wife, charged with fraud in Ontario - Toronto Star",
+          "publisher": "Toronto Star",
+          "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNWUdOZkRmSkR2Y2xiMi13d0dkQVVFZktkX0stV1V1OGYtUlBkU1BaekRTbWc3N1l5ZHdsdGxiNF94TVZmdUlIandlUVBaenJJbUhlWUZKalFtbGVFSW1XbUl2c2dQYS00OEd0RXFvc3k4ZXQ4VDVTcmFhYXVic0lLN1FuRVVVZlVwQmg1cjJjbWJpQURVUTZacWNfNndPdWdrYmxNS3dza2Mya1FscG1CT3BvcG1rdnVLLUJvNk5GdEdsV0pvRmc0a3VMMktweWQxMEwyTFFxY2FKNTNVUHA1N0pRTWdjWENoMEg3Rm9KMEI3T2c?oc=5",
+          "published_at": "2026-10-20T07:00:00+00:00",
+          "discovery_channel": "recent"
+        },
+        {
+          "title": "Former Blue Jays player Rich Butler, wife, charged with fraud in Ontario - The Spec",
+          "publisher": "The Spec",
+          "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxNX0JQM25vMjRXbU9zUTlmUUNoT3Uwc2VBY0NsOUlMbTFjVXRLUmdNaGtyeW55blhVMEg5dkJoZm52OUNEMXZfMnBxdkU4Y3FEYy1WOXhVZWx6X1l1NkRCN2Q2U0tITTZqcHhXX1N3aklac3JSaU9VaXFsckdxdjJZVHVUX1ZhTlE3dlZiRmkwNnFvdkdwQ3c1c2JsY0lhY0dEVmRBRXQ1RHctWlBjN3FiQVpVd2o1ejBsdlJpVzdYckp5b3BHWnA5LTJ5VG1sUUdNS0JoNkFPM01lVE5tdm13dVJXZTV2WGlhNnl1V3A3MElSdw?oc=5",
+          "published_at": "2026-10-20T07:00:00+00:00",
+          "discovery_channel": "recent"
+        }
+      ],
+      "variation_count": 2,
+      "source_count": 2,
+      "underlying_headline_count": 2,
+      "geographic_relevance": "canadian_location_or_reference",
+      "geographic_relevance_basis": "Canadian geographic clue in title or curated headline city reference; not verified incident location.",
+      "grouping_basis": "conservative_headline_similarity_within_10_days",
+      "grouping_disclaimer": "Grouped reporting is not independently verified as one event; similarity does not prove the same underlying victim, incident, loss or misconduct."
+    },
+    {
       "id": "report-02a0ecc804c3a538d8d3",
       "title": "Ogun Police Rescue 11 Ghanaians Allegedly Held Hostage Over Canada, Spain Visa Scam - Platform Times",
       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPMXNsdzRtMU1MTWZIeXNZbDg1dkNSb3F0Ry1LTjBabm12Mk9VS0J3clI4blRrc1pMeGlnZ0FKd3EzUU5CUVhYdWNjaHVmb3hYMW1jc2Q0eUtIWXdWTXEwZm5DXzNzeGxiR2VTVU83YWd2eVp6NjJpSDY5QWVoT01oczdUcFIzMFFKaS1zemt0UW02S3MzMHhXMzJvN24yc2hvLVkyYVdFOHVPTThhd29fRnRR?oc=5",
       "publisher": "Platform Times",
       "published_at": "2026-10-20T07:00:00+00:00",
       "first_seen_at": "2026-10-24T02:32:27+00:00",
-      "last_observed_at": "2026-10-29T21:42:51+00:00",
+      "last_observed_at": "2026-10-30T01:46:54+00:00",
       "topics": [
         "Scams and victims"
       ],
@@ -7218,7 +7421,7 @@
       "publisher": "TSN",
       "published_at": "2026-10-20T07:00:00+00:00",
       "first_seen_at": "2026-10-24T01:27:43+00:00",
-      "last_observed_at": "2026-10-29T21:42:51+00:00",
+      "last_observed_at": "2026-10-30T01:46:54+00:00",
       "topics": [
         "Police investigations"
       ],
@@ -7282,7 +7485,7 @@
       "publisher": "insauga.com",
       "published_at": "2026-10-20T07:00:00+00:00",
       "first_seen_at": "2026-10-24T01:27:43+00:00",
-      "last_observed_at": "2026-10-29T21:42:51+00:00",
+      "last_observed_at": "2026-10-30T01:46:54+00:00",
       "topics": [
         "Bank and customer fraud",
         "Police investigations"
@@ -7349,7 +7552,7 @@
       "publisher": "CTV News",
       "published_at": "2026-10-20T07:00:00+00:00",
       "first_seen_at": "2026-10-25T21:59:46+00:00",
-      "last_observed_at": "2026-10-29T21:42:51+00:00",
+      "last_observed_at": "2026-10-30T01:46:54+00:00",
       "topics": [
         "Bank and customer fraud",
         "Scams and victims"
@@ -7416,7 +7619,7 @@
       "publisher": "The Globe and Mail",
       "published_at": "2026-10-20T07:00:00+00:00",
       "first_seen_at": "2026-10-24T01:27:43+00:00",
-      "last_observed_at": "2026-10-29T21:42:51+00:00",
+      "last_observed_at": "2026-10-30T01:46:54+00:00",
       "topics": [
         "Police investigations"
       ],
@@ -7478,7 +7681,7 @@
       "publisher": "Global News",
       "published_at": "2026-10-20T07:00:00+00:00",
       "first_seen_at": "2026-10-24T01:27:43+00:00",
-      "last_observed_at": "2026-10-29T21:42:51+00:00",
+      "last_observed_at": "2026-10-30T01:46:54+00:00",
       "topics": [
         "Police investigations"
       ],
@@ -7538,7 +7741,7 @@
       "publisher": "CBC",
       "published_at": "2026-10-20T07:00:00+00:00",
       "first_seen_at": "2026-10-24T01:27:43+00:00",
-      "last_observed_at": "2026-10-29T21:42:53+00:00",
+      "last_observed_at": "2026-10-30T01:46:56+00:00",
       "topics": [
         "Bank and customer fraud",
         "Fraud research and reports",
@@ -7663,7 +7866,7 @@
       "publisher": "CBC",
       "published_at": "2026-10-20T07:00:00+00:00",
       "first_seen_at": "2026-10-24T03:02:30+00:00",
-      "last_observed_at": "2026-10-29T21:42:54+00:00",
+      "last_observed_at": "2026-10-30T01:46:56+00:00",
       "topics": [
         "Crypto investment and exchange"
       ],
@@ -7788,7 +7991,7 @@
       "publisher": "CTV News",
       "published_at": "2026-10-20T07:00:00+00:00",
       "first_seen_at": "2026-10-24T01:27:43+00:00",
-      "last_observed_at": "2026-10-29T21:42:51+00:00",
+      "last_observed_at": "2026-10-30T01:46:54+00:00",
       "topics": [
         "Bank and customer fraud",
         "Police investigations",
@@ -7974,7 +8177,7 @@
       "publisher": "CoinMarketCap",
       "published_at": "2026-10-19T22:04:01+00:00",
       "first_seen_at": "2026-10-24T01:27:42+00:00",
-      "last_observed_at": "2026-10-29T21:42:55+00:00",
+      "last_observed_at": "2026-10-30T01:46:57+00:00",
       "topics": [
         "Crypto investment and exchange",
         "Scams and victims",
@@ -8175,7 +8378,7 @@
       "publisher": "NOW Toronto",
       "published_at": "2026-10-19T07:00:00+00:00",
       "first_seen_at": "2026-10-24T01:27:43+00:00",
-      "last_observed_at": "2026-10-29T21:42:52+00:00",
+      "last_observed_at": "2026-10-30T01:46:55+00:00",
       "topics": [
         "Investment schemes"
       ],
@@ -8242,7 +8445,7 @@
       "publisher": "CityNews Toronto",
       "published_at": "2026-10-19T07:00:00+00:00",
       "first_seen_at": "2026-10-24T01:27:43+00:00",
-      "last_observed_at": "2026-10-29T21:42:51+00:00",
+      "last_observed_at": "2026-10-30T01:46:54+00:00",
       "topics": [
         "Police investigations"
       ],
@@ -8452,7 +8655,7 @@
       "publisher": "CBC",
       "published_at": "2026-10-19T07:00:00+00:00",
       "first_seen_at": "2026-10-24T01:27:42+00:00",
-      "last_observed_at": "2026-10-29T21:42:50+00:00",
+      "last_observed_at": "2026-10-30T01:46:53+00:00",
       "topics": [
         "Bank and customer fraud"
       ],
@@ -8514,7 +8717,7 @@
       "publisher": "insauga.com",
       "published_at": "2026-10-19T07:00:00+00:00",
       "first_seen_at": "2026-10-24T01:27:42+00:00",
-      "last_observed_at": "2026-10-29T21:42:51+00:00",
+      "last_observed_at": "2026-10-30T01:46:54+00:00",
       "topics": [
         "Scams and victims"
       ],
@@ -8641,7 +8844,7 @@
       "publisher": "Wealth Professional",
       "published_at": "2026-10-19T07:00:00+00:00",
       "first_seen_at": "2026-10-28T23:27:32+00:00",
-      "last_observed_at": "2026-10-29T21:42:52+00:00",
+      "last_observed_at": "2026-10-30T01:46:55+00:00",
       "topics": [
         "Money laundering"
       ],
@@ -8759,7 +8962,7 @@
       "publisher": "UpNext by Reelgood",
       "published_at": "2026-10-18T09:17:46+00:00",
       "first_seen_at": "2026-10-28T19:25:31+00:00",
-      "last_observed_at": "2026-10-29T21:42:51+00:00",
+      "last_observed_at": "2026-10-30T01:46:54+00:00",
       "topics": [
         "Scams and victims"
       ],
@@ -8818,7 +9021,7 @@
       "publisher": "ThePrint",
       "published_at": "2026-10-18T07:00:00+00:00",
       "first_seen_at": "2026-10-24T03:02:32+00:00",
-      "last_observed_at": "2026-10-29T21:42:55+00:00",
+      "last_observed_at": "2026-10-30T01:46:58+00:00",
       "topics": [
         "Social media scam reports"
       ],
@@ -8996,7 +9199,7 @@
       "publisher": "CTV News",
       "published_at": "2026-10-17T07:00:00+00:00",
       "first_seen_at": "2026-10-24T01:47:46+00:00",
-      "last_observed_at": "2026-10-29T21:42:55+00:00",
+      "last_observed_at": "2026-10-30T01:46:58+00:00",
       "topics": [
         "Fraud research and reports",
         "Social media scam reports"
@@ -9177,7 +9380,7 @@
       "publisher": "Citizen Digital",
       "published_at": "2026-10-16T07:00:00+00:00",
       "first_seen_at": "2026-10-24T01:27:42+00:00",
-      "last_observed_at": "2026-10-29T21:42:51+00:00",
+      "last_observed_at": "2026-10-30T01:46:54+00:00",
       "topics": [
         "Scams and victims"
       ],
@@ -9236,7 +9439,7 @@
       "publisher": "insauga.com",
       "published_at": "2026-10-16T07:00:00+00:00",
       "first_seen_at": "2026-10-29T09:43:10+00:00",
-      "last_observed_at": "2026-10-29T21:42:50+00:00",
+      "last_observed_at": "2026-10-30T01:46:53+00:00",
       "topics": [
         "Bank and customer fraud"
       ],
@@ -10406,7 +10609,7 @@
       "publisher": "Financial Post",
       "published_at": "2026-10-14T07:00:00+00:00",
       "first_seen_at": "2026-10-24T01:27:42+00:00",
-      "last_observed_at": "2026-10-29T21:42:55+00:00",
+      "last_observed_at": "2026-10-30T01:46:58+00:00",
       "topics": [
         "Bank and customer fraud",
         "Fraud research and reports",
@@ -11097,7 +11300,7 @@
       "publisher": "ProPakistani",
       "published_at": "2026-10-13T07:00:00+00:00",
       "first_seen_at": "2026-10-24T01:47:46+00:00",
-      "last_observed_at": "2026-10-29T21:42:55+00:00",
+      "last_observed_at": "2026-10-30T01:46:58+00:00",
       "topics": [
         "Bank and customer fraud",
         "Fraud research and reports",
@@ -11600,7 +11803,7 @@
       "publisher": "CoinMarketCap",
       "published_at": "2026-10-10T12:55:44+00:00",
       "first_seen_at": "2026-10-24T01:27:42+00:00",
-      "last_observed_at": "2026-10-29T21:42:55+00:00",
+      "last_observed_at": "2026-10-30T01:46:57+00:00",
       "topics": [
         "Crypto investment and exchange",
         "Scams and victims",
@@ -11852,7 +12055,7 @@
       "publisher": "CBC",
       "published_at": "2026-10-09T07:00:00+00:00",
       "first_seen_at": "2026-10-24T01:47:46+00:00",
-      "last_observed_at": "2026-10-29T21:42:53+00:00",
+      "last_observed_at": "2026-10-30T01:46:56+00:00",
       "topics": [
         "Fraud research and reports"
       ],
@@ -11981,7 +12184,7 @@
       "publisher": "Toronto Star",
       "published_at": "2026-10-08T07:00:00+00:00",
       "first_seen_at": "2026-10-24T03:02:30+00:00",
-      "last_observed_at": "2026-10-28T23:27:33+00:00",
+      "last_observed_at": "2026-10-30T01:46:56+00:00",
       "topics": [
         "Crypto investment and exchange"
       ],
@@ -12047,7 +12250,7 @@
       "publisher": "CTV News",
       "published_at": "2026-10-08T07:00:00+00:00",
       "first_seen_at": "2026-10-24T03:02:32+00:00",
-      "last_observed_at": "2026-10-29T21:42:55+00:00",
+      "last_observed_at": "2026-10-30T01:46:58+00:00",
       "topics": [
         "Social media scam reports"
       ],
@@ -12109,7 +12312,7 @@
       "publisher": "Yahoo! Finance Canada",
       "published_at": "2026-10-08T07:00:00+00:00",
       "first_seen_at": "2026-10-24T12:28:58+00:00",
-      "last_observed_at": "2026-10-29T21:42:54+00:00",
+      "last_observed_at": "2026-10-30T01:46:56+00:00",
       "topics": [
         "Crypto investment and exchange"
       ],
@@ -12358,7 +12561,7 @@
       "publisher": "INC News",
       "published_at": "2026-10-07T07:00:00+00:00",
       "first_seen_at": "2026-10-24T01:47:46+00:00",
-      "last_observed_at": "2026-10-29T21:42:53+00:00",
+      "last_observed_at": "2026-10-30T01:46:56+00:00",
       "topics": [
         "Fraud research and reports"
       ],
@@ -12663,7 +12866,7 @@
       "publisher": "CTV News",
       "published_at": "2026-10-06T07:00:00+00:00",
       "first_seen_at": "2026-10-24T03:02:31+00:00",
-      "last_observed_at": "2026-10-29T21:42:54+00:00",
+      "last_observed_at": "2026-10-30T01:46:57+00:00",
       "topics": [
         "Online gambling fraud"
       ],
@@ -13299,7 +13502,7 @@
       "publisher": "The Globe and Mail",
       "published_at": "2026-10-05T07:00:00+00:00",
       "first_seen_at": "2026-10-24T03:02:30+00:00",
-      "last_observed_at": "2026-10-29T21:42:53+00:00",
+      "last_observed_at": "2026-10-30T01:46:56+00:00",
       "topics": [
         "Crypto investment and exchange",
         "Fraud research and reports"
@@ -13605,7 +13808,7 @@
       "publisher": "CTV News",
       "published_at": "2026-10-02T07:00:00+00:00",
       "first_seen_at": "2026-10-24T03:02:32+00:00",
-      "last_observed_at": "2026-10-24T07:05:32+00:00",
+      "last_observed_at": "2026-10-30T01:46:58+00:00",
       "topics": [
         "Social media scam reports"
       ],
@@ -13733,7 +13936,7 @@
       "publisher": "The420.in",
       "published_at": "2026-10-02T07:00:00+00:00",
       "first_seen_at": "2026-10-27T12:02:04+00:00",
-      "last_observed_at": "2026-10-29T21:42:55+00:00",
+      "last_observed_at": "2026-10-30T01:46:58+00:00",
       "topics": [
         "Social media scam reports"
       ],
@@ -14032,7 +14235,7 @@
       "publisher": "Yahoo! Finance Canada",
       "published_at": "2026-10-01T07:00:00+00:00",
       "first_seen_at": "2026-10-24T03:02:30+00:00",
-      "last_observed_at": "2026-10-28T23:27:33+00:00",
+      "last_observed_at": "2026-10-30T01:46:56+00:00",
       "topics": [
         "Crypto investment and exchange"
       ],
@@ -14524,7 +14727,7 @@
       "publisher": "Wealth Professional",
       "published_at": "2026-09-30T07:00:00+00:00",
       "first_seen_at": "2026-10-24T01:47:46+00:00",
-      "last_observed_at": "2026-10-29T21:42:53+00:00",
+      "last_observed_at": "2026-10-30T01:46:56+00:00",
       "topics": [
         "Fraud research and reports"
       ],
@@ -28954,7 +29157,7 @@
       "headline_case_candidate": false,
       "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "first_seen_at": "2026-10-24T02:16:56+00:00",
-      "last_observed_at": "2026-10-29T21:42:59+00:00",
+      "last_observed_at": "2026-10-30T01:47:02+00:00",
       "notice": "Article metadata / headline discovery only. Any mentioned bank, sum or location is not independently corroborated.",
       "organizations_mentioned_in_headline": [],
       "article_links": [
@@ -32060,7 +32263,7 @@
       "headline_case_candidate": false,
       "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "first_seen_at": "2026-10-24T02:16:56+00:00",
-      "last_observed_at": "2026-10-29T21:42:59+00:00",
+      "last_observed_at": "2026-10-30T01:47:02+00:00",
       "notice": "Article metadata / headline discovery only. Any mentioned bank, sum or location is not independently corroborated.",
       "organizations_mentioned_in_headline": [],
       "article_links": [
@@ -33296,8 +33499,8 @@
       "amount_strings_in_headline": [],
       "headline_case_candidate": false,
       "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
-      "first_seen_at": "2026-10-29T21:42:59+00:00",
-      "last_observed_at": "2026-10-29T21:42:59+00:00",
+      "first_seen_at": "2026-10-30T01:47:02+00:00",
+      "last_observed_at": "2026-10-30T01:47:02+00:00",
       "notice": "Article metadata / headline discovery only. Any mentioned bank, sum or location is not independently corroborated.",
       "article_links": [
         {
@@ -34358,7 +34561,7 @@
       "headline_case_candidate": false,
       "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "first_seen_at": "2026-10-24T02:16:56+00:00",
-      "last_observed_at": "2026-10-29T21:42:59+00:00",
+      "last_observed_at": "2026-10-30T01:47:02+00:00",
       "notice": "Article metadata / headline discovery only. Any mentioned bank, sum or location is not independently corroborated.",
       "organizations_mentioned_in_headline": [],
       "article_links": [
@@ -34661,7 +34864,7 @@
       "headline_case_candidate": false,
       "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "first_seen_at": "2026-10-24T02:16:56+00:00",
-      "last_observed_at": "2026-10-29T21:42:59+00:00",
+      "last_observed_at": "2026-10-30T01:47:02+00:00",
       "notice": "Article metadata / headline discovery only. Any mentioned bank, sum or location is not independently corroborated.",
       "organizations_mentioned_in_headline": [],
       "article_links": [
@@ -36039,7 +36242,7 @@
       "headline_case_candidate": false,
       "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "first_seen_at": "2026-10-24T02:16:56+00:00",
-      "last_observed_at": "2026-10-29T21:42:59+00:00",
+      "last_observed_at": "2026-10-30T01:47:02+00:00",
       "notice": "Article metadata / headline discovery only. Any mentioned bank, sum or location is not independently corroborated.",
       "organizations_mentioned_in_headline": [],
       "article_links": [
@@ -39234,7 +39437,7 @@
       "headline_case_candidate": false,
       "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "first_seen_at": "2026-10-24T02:16:56+00:00",
-      "last_observed_at": "2026-10-29T21:42:59+00:00",
+      "last_observed_at": "2026-10-30T01:47:02+00:00",
       "notice": "Article metadata / headline discovery only. Any mentioned bank, sum or location is not independently corroborated.",
       "organizations_mentioned_in_headline": [],
       "article_links": [
