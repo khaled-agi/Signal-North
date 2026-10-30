@@ -147,8 +147,12 @@ try:
         assert "Jurisdiction: United Kingdom" in page.locator("#mapCaption").inner_text()
         for code,agency in [("HK","HKMA"),("SG","MAS"),("IE","Central Bank of Ireland")]:
             page.locator("#mapCountry").select_option(code)
+            # News can be more recent than enforcement and crowd it out of the
+            # first 12 items. Explicitly select the regulator evidence layer.
+            page.locator('[data-mapmode="enforcement"]').click()
             assert agency in page.locator("#mappedStories").inner_text()
             assert "Jurisdiction:" in page.locator("#mapCaption").inner_text()
+            page.locator('[data-mapmode="all"]').click()
         # Kosovo is a separately labeled non-ISO research jurisdiction,
         # not an alleged incident location or an invented official action.
         assert page.locator("#mapCountry option[value='XK']").count() == 1
