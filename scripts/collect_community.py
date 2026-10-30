@@ -57,7 +57,7 @@ BANKS = {
 }
 COUNTRY_MARKERS = [
     ("CA", re.compile(r"\b(canada|canadian|ontario|quebec|québec|toronto|montreal|vancouver|interac)\b", re.I)),
-    ("US", re.compile(r"\b(united states|u\.s\.|american|zelle)\b", re.I)),
+    ("US", re.compile(r"\b(united states|usa|u\.s\.a\.|u\.s\.|american|zelle)\b", re.I)),
 ]
 
 def utcnow():
@@ -82,8 +82,11 @@ def classify(text):
     """Derive non-personal, conservative labels. Do NOT retain input text."""
     if not isinstance(text, str) or not RELEVANT.search(text):
         return None
-    topic = next((label for label, rx in THEMES if rx.search(text)), "Other scam warning")
     institutions = [name for name, aliases in BANKS.items() if any(mention(text, alias) for alias in aliases)]
+    named_impersonation = bool(institutions) and bool(re.search(
+        r"\b(fake|spoof\w*|impersonat\w*|pretend\w*|posing as|posed as)\b", text, re.I))
+    topic = "Bank impersonation" if named_impersonation else next(
+        (label for label, rx in THEMES if rx.search(text)), "Other scam warning")
     countries = [country for country, rx in COUNTRY_MARKERS if rx.search(text)]
     country = countries[0] if len(countries) == 1 else None
     return {"topic": topic, "institutions_mentioned": institutions[:5], "country_hint": country}
