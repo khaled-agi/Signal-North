@@ -12,9 +12,9 @@ from pathlib import Path
 import pycountry
 from countryinfo import CountryInfo
 try:
- from .world_country_lenses import country_profile
+ from .world_country_lenses import country_profile, research_jurisdictions
 except ImportError:
- from world_country_lenses import country_profile
+ from world_country_lenses import country_profile, research_jurisdictions
 
 DATA=Path(__file__).resolve().parents[1]/"data"
 CENTROID_OVERRIDES={
@@ -46,6 +46,7 @@ def build():
   return {"world_reporting_count":reporting_counts.get(code,0),
     "world_reporting_state":attempt.get("state","not_attempted"),
     "world_reporting_last_attempt_at":attempt.get("attempted_at"),
+    "catalogue_type":profile["catalogue_type"],
     "language_strategy":profile["language_strategy"],
     "local_language":profile["local_language"],
     "agency_directory":profile["agency_directory"],
@@ -59,7 +60,7 @@ def build():
  regulators={}
  for e in global_events:
   regulators.setdefault(e.get("country_code"),set()).add(e.get("regulator"))
- for c in pycountry.countries:
+ for c in research_jurisdictions():
   if c.alpha_2=="CA":continue
   geo=info.get(c.alpha_2,{}).get("latlng") or CENTROID_OVERRIDES.get(c.alpha_2)
   if not geo or len(geo)<2:geo=None
@@ -77,9 +78,11 @@ def build():
  out={
   "generated_at":datetime.now(timezone.utc).isoformat(timespec="seconds"),
   "jurisdictions":countries,
-  "coverage_note":"ISO-3166 country and territory catalogue. Official enforcement, country-language news discovery, and unattempted markets are separate coverage levels. A country discovery result is a search-market label only, NOT a geolocated alleged crime. Pins use country centroids solely for geographic browsing, never incident coordinates.",
+  "coverage_note":"ISO-3166 country and territory catalogue plus labeled non-ISO research jurisdictions (e.g. Kosovo XK). Official enforcement, country-language news discovery, and unattempted markets are separate coverage levels. A country discovery result is a search-market label only, NOT a geolocated alleged crime. Pins use country centroids solely for geographic browsing, never incident coordinates.",
   "markets_with_recent_reporting":sum(bool(x.get("world_reporting_count")) for x in countries),
   "markets_attempted":sum(x.get("world_reporting_state")!="not_attempted" for x in countries),
+  "iso_jurisdictions":len(pycountry.countries),
+  "non_iso_research_jurisdictions":sum(x.get("catalogue_type")=="non_iso_user_assigned" for x in countries),
   "total_jurisdictions":len(countries),
   "active_jurisdictions":sum(x["coverage"]=="active" for x in countries),
  }
