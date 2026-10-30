@@ -148,3 +148,19 @@ box-shadow:0 2px 9px #12364830,0 0 0 1px #176f7950;transition:transform .13s eas
 #overview .cols.map-focus .map{height:min(78vh,850px);min-height:500px}
 #mapFocus[aria-pressed="true"]{background:#e5f3f1;color:#115d64;border-color:#aed1cc}
 @media(max-width:780px){#overview .cols.map-focus .map{height:65vh;min-height:360px}}
+
+
+/* Worldwide country-market discovery — distinct from official enforcement. */
+.count-worldnews .count-pin-inner{background:#b97531;box-shadow:0 2px 9px rgba(105,65,21,.25),0 0 0 1px #b9753140}
+.key-worldnews{color:#b97531;font-size:15px}
+.country-intelligence{background:#f9fbfc;border:1px solid #dce7eb;border-radius:10px;padding:12px 14px;display:flex;flex-direction:column;gap:10px;color:#335463}
+.country-intelligence>div:first-child{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+.country-intelligence strong{font-size:13px;color:#153f4f}
+.country-intelligence-status{font-size:10px;color:#607e8d}
+.country-intelligence-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.country-intelligence-grid>span{padding:8px 10px;border:1px solid #e0e9ed;background:white;border-radius:7px;font-size:10px;line-height:1.5}
+.country-intelligence-grid b{font-size:15px;color:#236375}
+.country-intelligence-authorities{font-size:11px;line-height:1.6;color:#4d7080}
+.country-intelligence-authorities a{font-weight:650;color:#176774}
+.country-intelligence p{font-size:10px;color:#6e8590;line-height:1.55;margin:0}
+@media(max-width:700px){.country-intelligence-grid{grid-template-columns:1fr}}
