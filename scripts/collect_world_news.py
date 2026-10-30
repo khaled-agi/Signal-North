@@ -145,7 +145,7 @@ def parse_feed(raw,profile,query,observed_at):
             "country_basis":"search_market_only_not_confirmed_incident_location",
             "source_market":profile["edition_country"],
             "language_strategy":profile["language_strategy"],
-            "search_language":profile["local_language"] if query!=search_queries(profile)[0] else "en",
+            "search_language":profile["local_language"] if profile["local_term"] and query==search_queries(profile)[-1] else "en",
             "category":category,"evidence_status":"unverified_news_lead",
             "review_status":"not_source_reviewed",
             "source_kind":"country_localized_news_search",
