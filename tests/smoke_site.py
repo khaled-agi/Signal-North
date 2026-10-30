@@ -149,6 +149,13 @@ try:
             page.locator("#mapCountry").select_option(code)
             assert agency in page.locator("#mappedStories").inner_text()
             assert "Jurisdiction:" in page.locator("#mapCaption").inner_text()
+        # Kosovo is a separately labeled non-ISO research jurisdiction,
+        # not an alleged incident location or an invented official action.
+        assert page.locator("#mapCountry option[value='XK']").count() == 1
+        page.locator("#mapCountry").select_option("XK")
+        assert "Kosovo" in page.locator("#worldCountryBrief").inner_text()
+        assert "Central Bank of Kosovo" in page.locator("#worldCountryBrief").inner_text()
+        assert "0 official actions collected" in page.locator("#worldCountryBrief").inner_text()
         page.locator("#mapCountry").select_option("AF")
         assert "0 official actions collected" in page.locator("#worldCountryBrief").inner_text()
         assert page.locator("#mappedStories .map-story").count() == 0
