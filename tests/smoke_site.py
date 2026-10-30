@@ -88,6 +88,12 @@ try:
         assert page.locator("#supportCases .supporting-news-item a").first.get_attribute("href").startswith("https://")
         print("Supporting intelligence routing, evidence labels and 2026 partial-year figures: PASS")
         assert page.locator("#headlinesTop .breaking-story").count() > 0
+        page.wait_for_function(
+            "document.querySelector('#communitySignalHealth').textContent.includes('Reddit:')", timeout=15000)
+        assert "Telegram:" in page.locator("#communitySignalHealth").text_content()
+        assert "No matching social signals collected yet" in page.locator("#communitySignalRows").text_content() or page.locator("#communitySignalRows .community-signal-card").count() > 0
+        assert "unverified signal" in page.locator("#communitySignalCount").text_content()
+        print("Authorized social signal health and no-fabrication empty state: PASS")
         print("Featured reviewed incidents:", page.locator("#featuredIncidents .case-item").count())
         page.locator('[data-tab="incidents"]').click()
         page.wait_for_function("document.querySelectorAll('#reviewedEventRows .reviewed-card').length >= 5", timeout=15000)
