@@ -67,6 +67,42 @@ function mapRecord(kind,e){
   location:world?e.country+" · regulator jurisdiction":market?(reference.referenced?e.country+" · NAMED IN HEADLINE (not incident location)":"Country not established from headline"):news?(e.map_location||"City mentioned in headline"):e.location||"Source-reported location",
   sourceUrl:(news||market)?e.url:e.source_url};
 }
+
+function showRecordDetail(x){
+ const el=$("#mapRecordDetail");if(!el)return;
+ if(!x){el.hidden=true;el.replaceChildren();state.mapDetailId=null;return;}
+ state.mapDetailId=x.id;
+ const source=/^https:\/\//i.test(x.sourceUrl||"")?x.sourceUrl:null;
+ const basis=x.kind==="worldnews"?
+   "Headline explicitly mentions this country. This does NOT establish where an incident occurred.":
+   x.kind==="global"||x.kind==="reg"?"Original regulatory notice: map shows jurisdiction, NOT incident location.":
+   x.kind==="officiallead"?"Unreviewed official-domain publication: legal status has not been established.":
+   "Source-linked reporting; the incident location is not independently verified.";
+ el.innerHTML='<div class="map-record-head"><span class="eyebrow">EVIDENCE DETAILS</span><button id="mapDetailClose" aria-label="Close evidence details" type="button">×</button></div>'+
+ '<h3>'+escapeHTML(x.title)+'</h3><dl>'+
+ '<dt>Date</dt><dd>'+escapeHTML(date(x.date))+'</dd>'+
+ '<dt>Source</dt><dd>'+escapeHTML(x.publisher)+'</dd>'+
+ '<dt>Type</dt><dd>'+escapeHTML(x.kind==="worldnews"?"Unverified country-referenced headline":x.kind==="global"?"Official regulatory index record":x.kind==="officiallead"?"Unreviewed official-domain publication":"Source-linked report")+'</dd>'+
+ '<dt>Country / location evidence</dt><dd>'+escapeHTML(x.location)+'</dd></dl>'+
+ '<p>'+escapeHTML(basis)+'</p>'+
+ (source?'<a class="map-detail-source" href="'+escapeHTML(source)+'" target="_blank" rel="noopener noreferrer">Open original source ↗</a>':'<p>Original source URL unavailable</p>');
+ el.hidden=false;el.scrollIntoView({behavior:"smooth",block:"nearest"});
+}
+function renderMapSelection(){
+ const el=$("#mapSelectedContext");if(!el)return;
+ const chosen=(state.mapRows||[]).filter(x=>state.mapSelectedIds?.has(x.id));
+ if(state.mapSideScope!=="selected"||!chosen.length){el.hidden=true;el.replaceChildren();return;}
+ const types={};
+ for(const x of chosen){
+  const type=x.kind==="worldnews"?"country mentions":x.kind==="global"||x.kind==="reg"?"regulator notices":x.kind==="officiallead"?"unreviewed regulator publications":"reports";
+  types[type]=(types[type]||0)+1;
+ }
+ const name=[...new Set(chosen.map(x=>x.location).filter(Boolean))].slice(0,2).join(" · ");
+ el.innerHTML='<div class="map-selection-header"><strong>'+chosen.length+' selected records</strong><button id="mapSelectionClear" type="button">Show all</button></div>'+
+  '<p>'+escapeHTML(name)+'</p><small>'+escapeHTML(Object.entries(types).map(([name,n])=>n+" "+name).join(" · "))+
+  '</small><p class="map-selection-note">Select a record below for its source and evidence details. A headline country mention does not prove incident geography.</p>';
+ el.hidden=false;
+}
 function refreshMapList(){
  const host=$("#mappedStories");if(!host)return;
  let rows=state.mapRows||[];
@@ -85,6 +121,7 @@ function refreshMapList(){
   total.toLocaleString("en-CA")+" records · "+international+" global jurisdiction actions · "+agencyLeads+" unreviewed agency-site publications · "+globalReports+" country-search leads · "+located.toLocaleString("en-CA")+" country-market / agency / source-clue markers · "+
   Math.min(state.mapSideVisible||100,total).toLocaleString("en-CA")+" shown";
  $("#mapStoryScope").value=scope;
+ renderMapSelection();
  $("#mapStoryClear").hidden=scope!=="selected";
  $("#mapStoryMore").hidden=total<=(state.mapSideVisible||100);
  $("#mapStoryAll").hidden=total<=(state.mapSideVisible||100);
@@ -94,7 +131,7 @@ function refreshMapList(){
   return '<article class="map-story"><div class="map-story-meta">'+escapeHTML(date(x.date))+" · "+escapeHTML(label)+" · "+escapeHTML(x.publisher)+'</div>'+
    '<div class="map-story-title">'+(x.kind==="news"?
     '<button data-story="'+escapeHTML(x.id)+'" type="button">'+escapeHTML(x.title)+'</button>':
-    '<a href="'+escapeHTML(/^https:\/\//.test(x.sourceUrl||"")?x.sourceUrl:"#")+'" target="_blank" rel="noopener noreferrer">'+escapeHTML(x.title)+' ↗</a>')+'</div>'+
+    '<button data-mapdetail="'+escapeHTML(x.id)+'" type="button" class="map-detail-trigger">'+escapeHTML(x.title)+'</button>')+'</div>'+
    '<div class="map-story-sub">'+
     (x.kind==="global"?'<span class="map-reg-note">Regulator country, not incident location · '+escapeHTML(x.raw.status||"Published official action")+'</span> · ':"")+
     (x.kind==="worldnews"?'<span class="map-reg-note">'+
@@ -136,19 +173,12 @@ function renderMapClusters(){
     iconSize:[areaDiameter,areaDiameter],iconAnchor:[areaDiameter/2,areaDiameter/2]}),
    keyboard:true,title:accessibleLabel,alt:accessibleLabel,
   }).addTo(state.layer);
-  const geoNames=[...new Set(g.items.map(x=>x.location).filter(Boolean))].slice(0,3).join(" · ");
-  const popup='<div class="map-pop"><div class="map-pop-heading">'+escapeHTML(n.toLocaleString("en-CA"))+
-    (state.mapCountMode==="headlines"?' headline / evidence units':' grouped records')+'</div>'+
-    '<span class="map-pop-source">'+escapeHTML(geoNames||"Source-supported geography")+'</span>'+
-    '<p class="map-pop-notice">'+g.weights.news+' Canadian headlines · '+g.weights.worldnews+' unverified country-search reports · '+g.weights.reg+' Canadian notices · '+g.weights.global+' international regulator actions · '+g.weights.officiallead+' unreviewed original-agency publications · '+g.weights.case+' reviewed cases. Country-market locations and regulator jurisdictions are NOT alleged incident locations.</p>'+
-    '<div class="map-popup-record">'+g.items.slice(0,4).map(x=>'<div><span class="map-popup-date">'+escapeHTML(date(x.date))+'</span> '+(x.kind==="news"?'<button type="button" class="report-popup-open" data-story="'+escapeHTML(x.id)+'">'+escapeHTML(x.title)+'</button>':escapeHTML(x.title))+'</div>').join("")+
-    (recordCount>4?'<div class="small">+'+(recordCount-4)+' additional groups; select this circle to explore them.</div>':"")+'</div></div>';
-  marker.bindPopup(popup,{maxWidth:330,minWidth:230,maxHeight:350});
+  // A circle selects evidence in the right sidebar; no obscuring Leaflet popup.
   marker.on("click",()=>{
    state.mapSelectedIds=new Set(g.items.map(x=>x.id));
    state.mapSideScope="selected";state.mapSideVisible=12;
-   refreshMapList();
-   $("#mapStorySummary").scrollIntoView({behavior:"smooth",block:"nearest"});
+   showRecordDetail(null);refreshMapList();
+   $("#mapSelectedContext").scrollIntoView({behavior:"smooth",block:"nearest"});
   });
   for(const x of g.items)state.mapMarkers.set(x.id,marker);
  }
@@ -208,7 +238,7 @@ function initMap(){
             ...state.events.map(e=>mapRecord("reg",e)),
             ...state.incidents.map(e=>mapRecord("case",e)),
             ...state.globalEvents.map(e=>mapRecord("global",e)),
-            ...state.worldNews.map(e=>mapRecord("worldnews",e)),
+            ...state.worldNews.filter(e=>worldCountryReference(e).referenced).map(e=>mapRecord("worldnews",e)),
             ...state.worldRegLeads.map(e=>mapRecord("officiallead",e))];
   if(state.mapMode==="news")rows=rows.filter(e=>e.kind==="news"||e.kind==="case"||e.kind==="worldnews");
   else if(state.mapMode==="enforcement")rows=rows.filter(e=>e.kind==="reg"||e.kind==="global"||e.kind==="officiallead");
@@ -281,7 +311,7 @@ function initMap(){
  const matchTopic=e=>!state.mapTopic||e.category===state.mapTopic||e.fraud_type===state.mapTopic||(e.fraud_themes||[]).includes(state.mapTopic);
  let records=[];
  if(showNews)records.push(...state.news.filter(e=>inDate(e)&&matchTopic(e)&&matchesClient(e)).map(e=>mapRecord("news",e)));
- if(showNews)records.push(...state.worldNews.filter(e=>inDate(e)&&matchTopic(e)&&matchesClient(e)).map(e=>mapRecord("worldnews",e)));
+ if(showNews)records.push(...state.worldNews.filter(e=>worldCountryReference(e).referenced&&inDate(e)&&matchTopic(e)&&matchesClient(e)).map(e=>mapRecord("worldnews",e)));
  if(showCases)records.push(...state.incidents.filter(e=>inDate(e)&&matchTopic(e)&&matchesClient(e)).map(e=>mapRecord("case",e)));
  if(showReg)records.push(...state.events.filter(e=>inDate(e)&&matchTopic(e)&&matchesClient(e)&&
   (layers!=="major"||Number(e.penalty_cad)>=1000000)).map(e=>mapRecord("reg",e)));
@@ -332,6 +362,7 @@ function initMap(){
   "Country-search pins represent monitoring markets; international enforcement pins represent regulator jurisdiction, never proven crime location.";
  if(state.mapSideScope==="selected")state.mapSideScope="all";
  state.mapSelectedIds=null;
+ showRecordDetail(null);
  refreshMapList();
  renderMapClusters();
  if((state.mapProvince||state.mapCountry||state.clientFocus)&&mapped){
@@ -395,6 +426,10 @@ async function load(){
  }catch(err){$("#error").classList.remove("hidden");$("#error").textContent="Unable to load published data: "+err.message;}
 }
 document.addEventListener("click",e=>{
+ const mapDetail=e.target.closest("[data-mapdetail]");
+ if(mapDetail){const x=(state.mapRows||[]).find(r=>r.id===mapDetail.dataset.mapdetail);if(x)showRecordDetail(x);return;}
+ if(e.target.closest("#mapDetailClose")){showRecordDetail(null);return;}
+ if(e.target.closest("#mapSelectionClear")){state.mapSelectedIds=null;state.mapSideScope="all";showRecordDetail(null);refreshMapList();return;}
  const story=e.target.closest("[data-story]");
  if(story){
   e.preventDefault();
@@ -423,7 +458,7 @@ document.addEventListener("click",e=>{
    if(selected?.lat!==null&&selected){
     state.map.setView([selected.lat,selected.lon],Math.max(state.map.getZoom(),8),{animate:false});
     const pin=state.mapMarkers.get(selected.id);
-    if(pin){pin.openPopup();state.mapSideScope="selected";state.mapSelectedIds=new Set([selected.id]);refreshMapList();}
+    if(pin){pin.fire("click");}
     $("#map").scrollIntoView({behavior:"smooth",block:"center"});
    }
    return;
@@ -486,7 +521,7 @@ $("#mapStorySearch").addEventListener("input",()=>{state.mapSideVisible=12;initM
 $("#mapStoryScope").addEventListener("change",e=>{state.mapSideScope=e.target.value;state.mapSideVisible=12;refreshMapList();});
 $("#mapStoryMore").addEventListener("click",()=>{state.mapSideVisible=(state.mapSideVisible||12)+50;refreshMapList();});
 $("#mapStoryAll").addEventListener("click",()=>{state.mapSideVisible=Number.MAX_SAFE_INTEGER;refreshMapList();});
-$("#mapStoryClear").addEventListener("click",()=>{state.mapSelectedIds=null;state.mapSideScope="all";refreshMapList();});
+$("#mapStoryClear").addEventListener("click",()=>{state.mapSelectedIds=null;state.mapSideScope="all";showRecordDetail(null);refreshMapList();});
 
 window.addEventListener("signalnorth:applytheme",event=>{
  const theme=String(event.detail?.theme||""),year=String(event.detail?.year||"");
