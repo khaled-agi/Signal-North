@@ -1,6 +1,6 @@
 "use strict";
 const $ = selector => document.querySelector(selector);
-const state = {events:[],news:[],status:{},map:null,layer:null,tab:"overview",mapMode:"all",mapCountMode:"groups",mapTopic:"",mapYearFrom:"",mapYearTo:"",mapProvince:"",mapMonth:"",clientFocus:"",mapMarkers:new Map(),incidents:[],entityAliases:[],rawHeadlineCount:0,globalEvents:[],worldNews:[],worldRegLeads:[],worldNewsStatus:{},worldCountries:[],globalHealth:{},mapCountry:"",mapAgency:"",globalPattern:"",basemap:null,basemapMode:null,mapSideVisible:12};
+const state = {events:[],news:[],status:{},map:null,layer:null,tab:"overview",mapMode:"all",mapCountMode:"groups",mapTopic:"",mapYearFrom:"",mapYearTo:"",mapProvince:"",mapMonth:"",clientFocus:"",mapMarkers:new Map(),incidents:[],entityAliases:[],rawHeadlineCount:0,globalEvents:[],worldNews:[],worldRegLeads:[],worldNewsStatus:{},worldCountries:[],globalHealth:{},mapCountry:"",mapAgency:"",globalPattern:"",basemap:null,basemapMode:null,mapSideVisible:12,mapDetailId:null,mapSelectedContext:null};
 const provinces = {ON:"Ontario",QC:"Québec",BC:"British Columbia",AB:"Alberta",NB:"New Brunswick",NS:"Nova Scotia",MB:"Manitoba",SK:"Saskatchewan",NL:"Newfoundland & Labrador",PE:"Prince Edward Island"};
 function escapeHTML(value){return String(value??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
 function currency(value){if(value==null)return "Not reported";const x=Number(value);return x>=1e6?"$"+(x/1e6).toLocaleString("en-CA",{maximumFractionDigits:2})+"M":"$"+x.toLocaleString("en-CA",{maximumFractionDigits:0});}
@@ -43,11 +43,16 @@ function renderMetrics(){
 }
 // One source record contributes exactly one count. A news article is not an
 // independently verified incident; unlocated articles remain in the list.
+function worldCountryReference(e){
+ const country=state.worldCountries.find(c=>c.code===e.country_code);
+ return window.SignalNorthGeo?.evaluate?.(e,country)||{referenced:false,basis:"geographic_validation_unavailable"};
+}
 function mapRecord(kind,e){
  const news=kind==="news",market=kind==="worldnews",officialLead=kind==="officiallead",world=kind==="global"||officialLead,reg=kind==="reg"||world,dateValue=officialLead?e.first_observed_at:reg||market?e.published_at:news?e.published_at:e.reported_at;
  const country=(world||market)?state.worldCountries.find(c=>c.code===e.country_code):null;
- const lat=(world||market)?country?.map_latitude:(news?e.map_latitude:e.latitude),
-       lon=(world||market)?country?.map_longitude:(news?e.map_longitude:e.longitude);
+ const reference=market?worldCountryReference(e):null;
+ const lat=market&&!reference.referenced?null:(world||market)?country?.map_latitude:(news?e.map_latitude:e.latitude),
+       lon=market&&!reference.referenced?null:(world||market)?country?.map_longitude:(news?e.map_longitude:e.longitude);
  const hasGeo=Number.isFinite(lat)&&Number.isFinite(lon)&&Math.abs(lat)<=90&&Math.abs(lon)<=180;
  return {kind,id:String(e.id||""),date:dateValue||"",raw:e,
   title:String(e.title||e.institution||"Untitled evidence"),
@@ -57,8 +62,9 @@ function mapRecord(kind,e){
   publisher:String(e.regulator||e.publisher||e.source||e.institution||"Original source"),
   lat:hasGeo?lat:null,lon:hasGeo?lon:null,province:news?e.map_province:e.province,
   countryCode:(world||market)?e.country_code:"CA",agency:world?e.regulator:(kind==="reg"?e.source:""),
-  locationRole:officialLead?"unreviewed_official_agency_publication":world?"regulator_jurisdiction_country_center":market?"country_search_market_only":news?"headline_city_mention":"source_supported_location",
-  location:world?e.country+" · regulator jurisdiction":market?e.country+" · SEARCH MARKET (not event location)":news?(e.map_location||"City mentioned in headline"):e.location||"Source-reported location",
+  countryReference:reference,
+  locationRole:officialLead?"unreviewed_official_agency_publication":world?"regulator_jurisdiction_country_center":market?(reference.referenced?"headline_country_reference_not_incident_location":"country_not_supported_by_headline"):news?"headline_city_mention":"source_supported_location",
+  location:world?e.country+" · regulator jurisdiction":market?(reference.referenced?e.country+" · NAMED IN HEADLINE (not incident location)":"Country not established from headline"):news?(e.map_location||"City mentioned in headline"):e.location||"Source-reported location",
   sourceUrl:(news||market)?e.url:e.source_url};
 }
 function refreshMapList(){
@@ -91,7 +97,9 @@ function refreshMapList(){
     '<a href="'+escapeHTML(/^https:\/\//.test(x.sourceUrl||"")?x.sourceUrl:"#")+'" target="_blank" rel="noopener noreferrer">'+escapeHTML(x.title)+' ↗</a>')+'</div>'+
    '<div class="map-story-sub">'+
     (x.kind==="global"?'<span class="map-reg-note">Regulator country, not incident location · '+escapeHTML(x.raw.status||"Published official action")+'</span> · ':"")+
-    (x.kind==="worldnews"?'<span class="map-reg-note">Search-market only · Unverified · Not a verified fraud location</span> · ':"")+
+    (x.kind==="worldnews"?'<span class="map-reg-note">'+
+      (x.countryReference?.referenced?"Headline names "+escapeHTML(x.raw.country)+" · not a verified incident location":"Country not supported by headline; unlocated")+
+      ' · Unverified</span> · ':"")+
     (x.kind==="officiallead"?'<span class="map-reg-note">Original regulator-site publication · Legal status not reviewed · Date is first observed</span> · ':"")+
     (x.kind==="news"&&x.sourceCount>1?x.sourceCount+' source links · ':"")+
     (located?'<span class="map-geo-yes">◉ '+escapeHTML(x.location)+'</span>':'<span class="map-geo-no">Location not verified</span>')+
