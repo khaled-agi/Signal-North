@@ -24,6 +24,7 @@ jobs:
         run: |
           python -m compileall -q scripts tests
           node --check app.js
+          node --check global.js
           node --check intel.js
           node --check supporting_intelligence.js
           node --check map_upgrade.js
