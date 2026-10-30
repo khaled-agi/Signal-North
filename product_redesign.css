@@ -164,3 +164,19 @@ box-shadow:0 2px 9px #12364830,0 0 0 1px #176f7950;transition:transform .13s eas
 .country-intelligence-authorities a{font-weight:650;color:#176774}
 .country-intelligence p{font-size:10px;color:#6e8590;line-height:1.55;margin:0}
 @media(max-width:700px){.country-intelligence-grid{grid-template-columns:1fr}}
+
+
+/* International headlines remain distinct from the Canadian reviewed archive. */
+.world-reporting-panel{margin:0 0 18px}
+.world-reporting-panel .overview-deepdive-content{padding:12px}
+.world-reporting-panel .panel{margin:0}
+.world-reporting-toolbar{padding:0 20px 15px}
+.world-reporting-toolbar label{display:flex;align-items:center;gap:12px;font-size:12px;font-weight:700;color:#375b69}
+.world-reporting-toolbar select{min-width:210px;max-width:100%;padding:9px 12px;border:1px solid #cfdfe3;border-radius:8px;background:white;color:#225466}
+.world-reporting-rows{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;padding:0 20px 18px;max-height:620px;overflow-y:auto}
+.world-reporting-record{border:1px solid #dce7eb;border-radius:9px;padding:12px 14px;background:#fafcfc;min-width:0}
+.world-reporting-record strong{font-size:14px;line-height:1.45;color:#174352;font-weight:750;display:block;margin:7px 0}
+.world-reporting-date,.world-reporting-details{font-size:11px;color:#607f8b;line-height:1.5}
+.world-reporting-record a{font-weight:750;color:#147281}
+.world-reporting-panel .supporting-disclaimer{padding:0 20px 17px;font-size:11px}
+@media(max-width:750px){.world-reporting-rows{grid-template-columns:1fr}.world-reporting-toolbar label{flex-wrap:wrap}.world-reporting-toolbar select{width:100%;min-width:0}}
