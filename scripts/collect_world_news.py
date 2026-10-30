@@ -20,9 +20,9 @@ from urllib.parse import urlencode, urlsplit
 import pycountry
 import requests
 try:
-    from .world_country_lenses import country_profile, CRIME_TERMS
+    from .world_country_lenses import country_profile, CRIME_TERMS, research_jurisdictions
 except ImportError:
-    from world_country_lenses import country_profile, CRIME_TERMS
+    from world_country_lenses import country_profile, CRIME_TERMS, research_jurisdictions
 
 DATA=Path(__file__).resolve().parents[1]/"data"
 FEED=DATA/"world_reporting.json"
@@ -54,7 +54,7 @@ def save(path,payload):
     path.write_text(json.dumps(payload,ensure_ascii=False,indent=2)+"\n","utf-8")
 
 def markets():
-    return [country_profile(x) for x in sorted(pycountry.countries,key=lambda c:c.alpha_2)]
+    return [country_profile(x) for x in research_jurisdictions()]
 
 def choose_batch(all_markets,cursor,batch_size):
     if not all_markets:return [],0
@@ -174,7 +174,7 @@ def retained(leads,observed_at):
         except ValueError:continue
         if not (cutoff<=dt<=observed_at+timedelta(days=1)):continue
         code=str(item.get("country_code") or "")
-        if len(code)!=2 or code not in {m.alpha_2 for m in pycountry.countries}:continue
+        if len(code)!=2 or code not in {m.alpha_2 for m in research_jurisdictions()}:continue
         by_country.setdefault(code,{})[item["id"]]=item
     rows=[]
     for group in by_country.values():

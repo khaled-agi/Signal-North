@@ -2,7 +2,8 @@
 
 ## What is extended
 
-Every ISO 3166-1 country/territory in the catalogue gets a distinct news
+All 249 ISO 3166-1 countries/territories plus Kosovo (XK), a separately labeled
+non-ISO research jurisdiction, receive a distinct news
 discovery lens. Coverage levels are explicitly different:
 
 1. Country indexed, but not yet scanned (no source coverage claimed).
@@ -54,7 +55,7 @@ presented as verified enforcement, bank losses or a researched incident.
 
 ## Limitations and ongoing expansion
 
-This is NOT complete official enforcement ingestion for 249 jurisdictions.
+This is NOT complete official enforcement ingestion for all 250 configured research jurisdictions.
 Official national agency collectors must be built and verified individually.
 Country-local reporting is only best-effort, and editions, syndication feeds,
 language coverage and query relevance vary widely. Absence of articles or
@@ -70,3 +71,26 @@ a subsequent release, but source country is not crime location.
 Tests:
   python -m unittest discover -s tests -p test_world_reporting.py
   python tests/smoke_site.py
+
+## Non-ISO jurisdictions and transparent counts
+
+The ISO 3166-1 list contains 249 countries and territories. Signal North also
+includes Kosovo using the commonly used **XK** user-assigned identifier; XK is
+not an official ISO 3166-1 alpha-2 code. Its research entry uses the Albanian
+term *mashtrim* and links to the Central Bank of Kosovo's official homepage,
+without treating that directory entry as an ingested enforcement source.
+
+Other subnational, self-governing and disputed territories are not all separate
+markets. For example, Ascension and Tristan da Cunha appear within ISO's
+Saint Helena, Ascension and Tristan da Cunha (SH) entry. This catalogue should
+not be described as every geopolitical entity or every separate legal/regulatory
+jurisdiction, and inclusion does not imply diplomatic recognition.
+
+## Geographic reference completeness
+
+Of the 250 configured ISO and non-ISO research markets, 248 have an
+approximate browsing coordinate. Antarctica (AQ) and the geographically
+scattered United States Minor Outlying Islands (UM) do not have a meaningful
+single representative point and intentionally remain unplotted when news is
+indexed. This is not a collection omission and never changes the country
+filter. No browsing coordinate is a verified incident address.

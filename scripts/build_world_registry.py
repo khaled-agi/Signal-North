@@ -12,9 +12,9 @@ from pathlib import Path
 import pycountry
 from countryinfo import CountryInfo
 try:
- from .world_country_lenses import country_profile
+ from .world_country_lenses import country_profile, research_jurisdictions
 except ImportError:
- from world_country_lenses import country_profile
+ from world_country_lenses import country_profile, research_jurisdictions
 
 DATA=Path(__file__).resolve().parents[1]/"data"
 CENTROID_OVERRIDES={
@@ -22,6 +22,14 @@ CENTROID_OVERRIDES={
  "FR":[46.6,2.2],"DE":[51.2,10.4],"JP":[36.2,138.2],
  "IN":[22.6,79],"AE":[24,54],"HK":[22.4,114.1],
  "SG":[1.35,103.8],"KR":[36,127.8],"XK":[42.6,20.9],
+ # Approximate RESEARCH MAP browsing points, never alleged incident locations.
+ # Geographically dispersed Antarctica and US Minor Outlying Islands intentionally
+ # remain without a misleading single representative marker.
+ "AD":[42.5,1.52],"BQ":[12.2,-68.3],"BV":[-54.42,3.38],
+ "CW":[12.17,-68.99],"VA":[41.903,12.453],"ME":[42.7,19.25],
+ "MM":[21.9,95.9],"PS":[31.7,34.95],"BL":[17.9,-62.83],
+ "MF":[18.08,-63.07],"SX":[18.04,-63.05],"TC":[21.8,-71.8],
+ "VG":[18.42,-64.63],"VI":[18.33,-64.92],"AX":[60.15,19.94],
 }
 def read(path,key):
  p=DATA/path
@@ -46,6 +54,7 @@ def build():
   return {"world_reporting_count":reporting_counts.get(code,0),
     "world_reporting_state":attempt.get("state","not_attempted"),
     "world_reporting_last_attempt_at":attempt.get("attempted_at"),
+    "catalogue_type":profile["catalogue_type"],
     "language_strategy":profile["language_strategy"],
     "local_language":profile["local_language"],
     "agency_directory":profile["agency_directory"],
@@ -59,7 +68,7 @@ def build():
  regulators={}
  for e in global_events:
   regulators.setdefault(e.get("country_code"),set()).add(e.get("regulator"))
- for c in pycountry.countries:
+ for c in research_jurisdictions():
   if c.alpha_2=="CA":continue
   geo=info.get(c.alpha_2,{}).get("latlng") or CENTROID_OVERRIDES.get(c.alpha_2)
   if not geo or len(geo)<2:geo=None
@@ -77,9 +86,11 @@ def build():
  out={
   "generated_at":datetime.now(timezone.utc).isoformat(timespec="seconds"),
   "jurisdictions":countries,
-  "coverage_note":"ISO-3166 country and territory catalogue. Official enforcement, country-language news discovery, and unattempted markets are separate coverage levels. A country discovery result is a search-market label only, NOT a geolocated alleged crime. Pins use country centroids solely for geographic browsing, never incident coordinates.",
+  "coverage_note":"ISO-3166 country and territory catalogue plus labeled non-ISO research jurisdictions (e.g. Kosovo XK). Official enforcement, country-language news discovery, and unattempted markets are separate coverage levels. A country discovery result is a search-market label only, NOT a geolocated alleged crime. Pins use country centroids solely for geographic browsing, never incident coordinates.",
   "markets_with_recent_reporting":sum(bool(x.get("world_reporting_count")) for x in countries),
   "markets_attempted":sum(x.get("world_reporting_state")!="not_attempted" for x in countries),
+  "iso_jurisdictions":len(pycountry.countries),
+  "non_iso_research_jurisdictions":sum(x.get("catalogue_type")=="non_iso_user_assigned" for x in countries),
   "total_jurisdictions":len(countries),
   "active_jurisdictions":sum(x["coverage"]=="active" for x in countries),
  }

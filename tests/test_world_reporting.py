@@ -1,5 +1,7 @@
 """Offline unit checks: every country is addressable, but not falsely ingested."""
 import unittest
+import json
+from pathlib import Path
 from datetime import datetime, timedelta, timezone
 import pycountry
 from scripts.collect_world_news import (
@@ -21,8 +23,11 @@ class WorldCountryTest(unittest.TestCase):
         entries=markets()
         self.assertGreaterEqual(len(entries),240)
         self.assertEqual(len(entries),len({x["code"] for x in entries}))
-        self.assertEqual({x["code"] for x in entries},
-                         {c.alpha_2 for c in pycountry.countries})
+        iso_codes={c.alpha_2 for c in pycountry.countries}
+        self.assertEqual({x["code"] for x in entries},iso_codes|{"XK"})
+        self.assertEqual(len(entries),len(iso_codes)+1)
+        self.assertEqual(next(x for x in entries if x["code"]=="XK")["catalogue_type"],
+                         "non_iso_user_assigned")
         for p in entries:
             self.assertIn(p["name"],search_queries(p)[0])
 
@@ -34,6 +39,29 @@ class WorldCountryTest(unittest.TestCase):
             for x in chunk:
                 seen.add(x["code"])
         self.assertEqual(len(seen),len(entries))
+
+    def test_published_registry_is_complete_and_geographically_honest(self):
+        data=json.loads((Path(__file__).resolve().parents[1] /
+                         "data" / "world_jurisdictions.json").read_text("utf-8"))
+        entries=data["jurisdictions"]
+        self.assertEqual(len(entries),250)
+        self.assertEqual(data["iso_jurisdictions"],249)
+        self.assertEqual(data["non_iso_research_jurisdictions"],1)
+        self.assertEqual({x["code"] for x in entries},
+                         {c.alpha_2 for c in pycountry.countries}|{"XK"})
+        self.assertEqual({x["code"] for x in entries if x["map_latitude"] is None},
+                         {"AQ","UM"})
+        self.assertIsNotNone(next(x for x in entries if x["code"]=="PS")["map_latitude"])
+
+    def test_kosovo_non_iso_discovery(self):
+        xk=next(x for x in markets() if x["code"]=="XK")
+        self.assertEqual(xk["name"],"Kosovo")
+        self.assertEqual(xk["local_language"],"sq")
+        self.assertIn("mashtrim",search_queries(xk)[1])
+        self.assertIn("Kosovë",search_queries(xk)[1])
+        self.assertEqual(xk["agency_directory"][0]["name"],"Central Bank of Kosovo")
+        self.assertEqual(classify("Mashtrim bankar në Kosovë",xk),"Fraud and scam reporting")
+        self.assertEqual(classify("Kosovo bank phishing scam",xk),"Cyber / account compromise")
 
     def test_localized_language_and_english_fallback(self):
         france=country_profile(pycountry.countries.get(alpha_2="FR"))

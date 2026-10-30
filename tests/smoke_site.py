@@ -149,9 +149,20 @@ try:
             page.locator("#mapCountry").select_option(code)
             assert agency in page.locator("#mappedStories").inner_text()
             assert "Jurisdiction:" in page.locator("#mapCaption").inner_text()
+        # Kosovo is a separately labeled non-ISO research jurisdiction,
+        # not an alleged incident location or an invented official action.
+        assert page.locator("#mapCountry option[value='XK']").count() == 1
+        page.locator("#mapCountry").select_option("XK")
+        assert "Kosovo" in page.locator("#worldCountryBrief").inner_text()
+        assert "Central Bank of Kosovo" in page.locator("#worldCountryBrief").inner_text()
+        assert "0 official actions collected" in page.locator("#worldCountryBrief").inner_text()
         page.locator("#mapCountry").select_option("AF")
         assert "0 official actions collected" in page.locator("#worldCountryBrief").inner_text()
+        # A country can have unverified search-market news without any official
+        # enforcement. Verify the official layer separately from news discovery.
+        page.locator('[data-mapmode="enforcement"]').click()
         assert page.locator("#mappedStories .map-story").count() == 0
+        page.locator('[data-mapmode="all"]').click()
         page.locator('[data-tab="fraud"]').click()
         assert page.locator("#worldNewsCountry option").count() >= 240
         page.locator("#worldReportingPanel > summary").click()
