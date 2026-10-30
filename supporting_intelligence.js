@@ -29,8 +29,8 @@
   }
 
   function sourceUrl(item) {
-    const possible = [item.url, ...(Array.isArray(item.article_links) ? item.article_links.map(x => x.url) : []),
-      ...(Array.isArray(item.headline_variations) ? item.headline_variations.map(x => x.url) : [])];
+    const possible = [...(Array.isArray(item.article_links) ? item.article_links.map(x => x.url) : []),
+      ...(Array.isArray(item.headline_variations) ? item.headline_variations.map(x => x.url) : []), item.url];
     return possible.find(url => typeof url === "string" && /^https:\/\//i.test(url)) || "";
   }
 
