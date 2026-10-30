@@ -1,11 +1,11 @@
 {
-  "last_completed_at": "2026-10-30T23:37:11+00:00",
+  "last_completed_at": "2026-10-30T23:42:27+00:00",
   "market_count": 250,
-  "markets_attempted": 48,
-  "markets_with_current_news": 36,
-  "current_leads": 398,
-  "batch_size": 16,
-  "next_cursor": 48,
+  "markets_attempted": 80,
+  "markets_with_current_news": 62,
+  "current_leads": 988,
+  "batch_size": 32,
+  "next_cursor": 80,
   "countries": {
     "AD": {
       "state": "attempted_empty",
@@ -486,7 +486,327 @@
       "name": "China",
       "language_strategy": "country_configured",
       "last_nonempty_at": "2026-10-30T23:37:11+00:00"
+    },
+    "CV": {
+      "state": "attempted_empty",
+      "attempted_at": "2026-10-30T23:42:27+00:00",
+      "queries_attempted": 2,
+      "accepted": 0,
+      "errors": [],
+      "name": "Cabo Verde",
+      "language_strategy": "english_country_named_fallback",
+      "last_nonempty_at": null
+    },
+    "CX": {
+      "state": "reporting_found",
+      "attempted_at": "2026-10-30T23:42:27+00:00",
+      "queries_attempted": 2,
+      "accepted": 1,
+      "errors": [],
+      "name": "Christmas Island",
+      "language_strategy": "english_country_named_fallback",
+      "last_nonempty_at": "2026-10-30T23:42:27+00:00"
+    },
+    "CW": {
+      "state": "reporting_found",
+      "attempted_at": "2026-10-30T23:42:27+00:00",
+      "queries_attempted": 2,
+      "accepted": 5,
+      "errors": [],
+      "name": "Curaçao",
+      "language_strategy": "english_country_named_fallback",
+      "last_nonempty_at": "2026-10-30T23:42:27+00:00"
+    },
+    "CY": {
+      "state": "reporting_found",
+      "attempted_at": "2026-10-30T23:42:27+00:00",
+      "queries_attempted": 2,
+      "accepted": 33,
+      "errors": [],
+      "name": "Cyprus",
+      "language_strategy": "english_country_named_fallback",
+      "last_nonempty_at": "2026-10-30T23:42:27+00:00"
+    },
+    "CU": {
+      "state": "reporting_found",
+      "attempted_at": "2026-10-30T23:42:27+00:00",
+      "queries_attempted": 2,
+      "accepted": 42,
+      "errors": [],
+      "name": "Cuba",
+      "language_strategy": "english_country_named_fallback",
+      "last_nonempty_at": "2026-10-30T23:42:27+00:00"
+    },
+    "CZ": {
+      "state": "reporting_found",
+      "attempted_at": "2026-10-30T23:42:27+00:00",
+      "queries_attempted": 3,
+      "accepted": 14,
+      "errors": [],
+      "name": "Czechia",
+      "language_strategy": "country_configured",
+      "last_nonempty_at": "2026-10-30T23:42:27+00:00"
+    },
+    "CR": {
+      "state": "reporting_found",
+      "attempted_at": "2026-10-30T23:42:27+00:00",
+      "queries_attempted": 3,
+      "accepted": 11,
+      "errors": [],
+      "name": "Costa Rica",
+      "language_strategy": "country_configured",
+      "last_nonempty_at": "2026-10-30T23:42:27+00:00"
+    },
+    "DJ": {
+      "state": "attempted_empty",
+      "attempted_at": "2026-10-30T23:42:27+00:00",
+      "queries_attempted": 2,
+      "accepted": 0,
+      "errors": [],
+      "name": "Djibouti",
+      "language_strategy": "english_country_named_fallback",
+      "last_nonempty_at": null
+    },
+    "CO": {
+      "state": "reporting_found",
+      "attempted_at": "2026-10-30T23:42:27+00:00",
+      "queries_attempted": 3,
+      "accepted": 107,
+      "errors": [],
+      "name": "Colombia",
+      "language_strategy": "country_configured",
+      "last_nonempty_at": "2026-10-30T23:42:27+00:00"
+    },
+    "DK": {
+      "state": "reporting_found",
+      "attempted_at": "2026-10-30T23:42:27+00:00",
+      "queries_attempted": 2,
+      "accepted": 15,
+      "errors": [],
+      "name": "Denmark",
+      "language_strategy": "english_country_named_fallback",
+      "last_nonempty_at": "2026-10-30T23:42:27+00:00"
+    },
+    "DM": {
+      "state": "reporting_found",
+      "attempted_at": "2026-10-30T23:42:27+00:00",
+      "queries_attempted": 2,
+      "accepted": 1,
+      "errors": [],
+      "name": "Dominica",
+      "language_strategy": "english_country_named_fallback",
+      "last_nonempty_at": "2026-10-30T23:42:27+00:00"
+    },
+    "DZ": {
+      "state": "reporting_found",
+      "attempted_at": "2026-10-30T23:42:27+00:00",
+      "queries_attempted": 2,
+      "accepted": 2,
+      "errors": [],
+      "name": "Algeria",
+      "language_strategy": "english_country_named_fallback",
+      "last_nonempty_at": "2026-10-30T23:42:27+00:00"
+    },
+    "DE": {
+      "state": "reporting_found",
+      "attempted_at": "2026-10-30T23:42:27+00:00",
+      "queries_attempted": 3,
+      "accepted": 35,
+      "errors": [],
+      "name": "Germany",
+      "language_strategy": "country_configured",
+      "last_nonempty_at": "2026-10-30T23:42:27+00:00"
+    },
+    "DO": {
+      "state": "reporting_found",
+      "attempted_at": "2026-10-30T23:42:27+00:00",
+      "queries_attempted": 2,
+      "accepted": 38,
+      "errors": [],
+      "name": "Dominican Republic",
+      "language_strategy": "english_country_named_fallback",
+      "last_nonempty_at": "2026-10-30T23:42:27+00:00"
+    },
+    "EE": {
+      "state": "reporting_found",
+      "attempted_at": "2026-10-30T23:42:27+00:00",
+      "queries_attempted": 2,
+      "accepted": 11,
+      "errors": [],
+      "name": "Estonia",
+      "language_strategy": "english_country_named_fallback",
+      "last_nonempty_at": "2026-10-30T23:42:27+00:00"
+    },
+    "EC": {
+      "state": "reporting_found",
+      "attempted_at": "2026-10-30T23:42:27+00:00",
+      "queries_attempted": 3,
+      "accepted": 10,
+      "errors": [],
+      "name": "Ecuador",
+      "language_strategy": "country_configured",
+      "last_nonempty_at": "2026-10-30T23:42:27+00:00"
+    },
+    "ER": {
+      "state": "reporting_found",
+      "attempted_at": "2026-10-30T23:42:27+00:00",
+      "queries_attempted": 2,
+      "accepted": 1,
+      "errors": [],
+      "name": "Eritrea",
+      "language_strategy": "english_country_named_fallback",
+      "last_nonempty_at": "2026-10-30T23:42:27+00:00"
+    },
+    "EH": {
+      "state": "reporting_found",
+      "attempted_at": "2026-10-30T23:42:27+00:00",
+      "queries_attempted": 2,
+      "accepted": 1,
+      "errors": [],
+      "name": "Western Sahara",
+      "language_strategy": "english_country_named_fallback",
+      "last_nonempty_at": "2026-10-30T23:42:27+00:00"
+    },
+    "EG": {
+      "state": "reporting_found",
+      "attempted_at": "2026-10-30T23:42:27+00:00",
+      "queries_attempted": 3,
+      "accepted": 11,
+      "errors": [],
+      "name": "Egypt",
+      "language_strategy": "country_configured",
+      "last_nonempty_at": "2026-10-30T23:42:27+00:00"
+    },
+    "FI": {
+      "state": "reporting_found",
+      "attempted_at": "2026-10-30T23:42:27+00:00",
+      "queries_attempted": 2,
+      "accepted": 15,
+      "errors": [],
+      "name": "Finland",
+      "language_strategy": "english_country_named_fallback",
+      "last_nonempty_at": "2026-10-30T23:42:27+00:00"
+    },
+    "ET": {
+      "state": "reporting_found",
+      "attempted_at": "2026-10-30T23:42:27+00:00",
+      "queries_attempted": 2,
+      "accepted": 29,
+      "errors": [],
+      "name": "Ethiopia",
+      "language_strategy": "english_country_named_fallback",
+      "last_nonempty_at": "2026-10-30T23:42:27+00:00"
+    },
+    "FJ": {
+      "state": "reporting_found",
+      "attempted_at": "2026-10-30T23:42:27+00:00",
+      "queries_attempted": 2,
+      "accepted": 8,
+      "errors": [],
+      "name": "Fiji",
+      "language_strategy": "english_country_named_fallback",
+      "last_nonempty_at": "2026-10-30T23:42:27+00:00"
+    },
+    "FK": {
+      "state": "attempted_empty",
+      "attempted_at": "2026-10-30T23:42:27+00:00",
+      "queries_attempted": 2,
+      "accepted": 0,
+      "errors": [],
+      "name": "Falkland Islands (Malvinas)",
+      "language_strategy": "english_country_named_fallback",
+      "last_nonempty_at": null
+    },
+    "FO": {
+      "state": "attempted_empty",
+      "attempted_at": "2026-10-30T23:42:27+00:00",
+      "queries_attempted": 2,
+      "accepted": 0,
+      "errors": [],
+      "name": "Faroe Islands",
+      "language_strategy": "english_country_named_fallback",
+      "last_nonempty_at": null
+    },
+    "FM": {
+      "state": "attempted_empty",
+      "attempted_at": "2026-10-30T23:42:27+00:00",
+      "queries_attempted": 2,
+      "accepted": 0,
+      "errors": [],
+      "name": "Micronesia, Federated States of",
+      "language_strategy": "english_country_named_fallback",
+      "last_nonempty_at": null
+    },
+    "ES": {
+      "state": "reporting_found",
+      "attempted_at": "2026-10-30T23:42:27+00:00",
+      "queries_attempted": 3,
+      "accepted": 70,
+      "errors": [],
+      "name": "Spain",
+      "language_strategy": "country_configured",
+      "last_nonempty_at": "2026-10-30T23:42:27+00:00"
+    },
+    "GA": {
+      "state": "reporting_found",
+      "attempted_at": "2026-10-30T23:42:27+00:00",
+      "queries_attempted": 2,
+      "accepted": 12,
+      "errors": [],
+      "name": "Gabon",
+      "language_strategy": "english_country_named_fallback",
+      "last_nonempty_at": "2026-10-30T23:42:27+00:00"
+    },
+    "GD": {
+      "state": "reporting_found",
+      "attempted_at": "2026-10-30T23:42:27+00:00",
+      "queries_attempted": 2,
+      "accepted": 2,
+      "errors": [],
+      "name": "Grenada",
+      "language_strategy": "english_country_named_fallback",
+      "last_nonempty_at": "2026-10-30T23:42:27+00:00"
+    },
+    "GE": {
+      "state": "reporting_found",
+      "attempted_at": "2026-10-30T23:42:27+00:00",
+      "queries_attempted": 2,
+      "accepted": 30,
+      "errors": [],
+      "name": "Georgia",
+      "language_strategy": "english_country_named_fallback",
+      "last_nonempty_at": "2026-10-30T23:42:27+00:00"
+    },
+    "FR": {
+      "state": "reporting_found",
+      "attempted_at": "2026-10-30T23:42:27+00:00",
+      "queries_attempted": 3,
+      "accepted": 67,
+      "errors": [],
+      "name": "France",
+      "language_strategy": "country_configured",
+      "last_nonempty_at": "2026-10-30T23:42:27+00:00"
+    },
+    "GB": {
+      "state": "reporting_found",
+      "attempted_at": "2026-10-30T23:42:27+00:00",
+      "queries_attempted": 2,
+      "accepted": 36,
+      "errors": [],
+      "name": "United Kingdom",
+      "language_strategy": "english_country_named_fallback",
+      "last_nonempty_at": "2026-10-30T23:42:27+00:00"
+    },
+    "GF": {
+      "state": "attempted_empty",
+      "attempted_at": "2026-10-30T23:42:27+00:00",
+      "queries_attempted": 2,
+      "accepted": 0,
+      "errors": [],
+      "name": "French Guiana",
+      "language_strategy": "english_country_named_fallback",
+      "last_nonempty_at": null
     }
   },
-  "coverage_note": "A country scan does not establish complete local coverage. No accepted reporting is not evidence of no fraud; official actions remain separately collected."
+  "coverage_note": "Rotating multi-theme RSS sampling, not all news. Country scan does not prove complete local coverage. Empty results never imply zero fraud; official actions are separately collected."
 }
