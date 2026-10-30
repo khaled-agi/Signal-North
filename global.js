@@ -110,13 +110,13 @@
   const scan=model.worldNewsStatus.countries?.[code];
   const last=model.worldNewsStatus.last_completed_at;
   get("worldReportingSummary").textContent=
-    model.worldNews.length+" stored articles · "+(model.worldNewsStatus.markets_attempted||0)+
+    model.worldNews.length+" country-referenced articles · "+(model.worldNewsStatus.markets_attempted||0)+
     " markets scanned · Last refresh "+String(last||"not yet").slice(0,10);
   get("worldReportingHealth").textContent=code?
     (model.countries.find(x=>x.code===code)?.name||code)+" · "+(scan?.state||"not attempted")+
       " · Last scan "+String(scan?.attempted_at||"never").slice(0,16):
     (model.worldNewsStatus.markets_attempted||0)+" / "+model.countries.length+
-      " markets attempted · "+model.worldNews.length+" stored unverified articles";
+      " markets attempted · "+model.worldNews.length+" country-referenced unverified articles";
   const visible=matches.slice(0,model.newsVisible);
   get("worldReportingRows").innerHTML=visible.length?visible.map(x=>{
    const url=goodUrl(x.url);
@@ -124,7 +124,7 @@
     html(x.country)+" · "+html(String(x.published_at||"").slice(0,10))+" · "+
     html(x.publisher||"Unknown publisher")+'</div><strong>'+html(x.title)+'</strong>'+
     '<div class="world-reporting-details">'+html(x.category||"News lead")+
-    ' · Unverified · Country-search context, not incident location'+
+    ' · Country explicitly referenced in headline · Unverified; NOT confirmed incident location'+
     (url?' · <a href="'+html(url)+'" target="_blank" rel="noopener noreferrer">Original source ↗</a>':"")+
     '</div></article>';
   }).join(""):'<div class="empty">No matching reported headlines stored. This does not mean there were no fraud incidents; see the country scan status.</div>';
@@ -180,7 +180,15 @@
   if(results[1].status==="fulfilled")model.events=results[1].value.events||[];
   if(results[2].status==="fulfilled")model.health=results[2].value||{};
   if(results[3].status==="fulfilled")model.canadianEvents=results[3].value.events||[];
-  if(results[4].status==="fulfilled")model.worldNews=results[4].value.leads||[];
+  if(results[4].status==="fulfilled"){
+    const raw=results[4].value.leads||[];
+    // Historical RSS market labels weren't evidence of geography.
+    // Unlinked Orlando/Alberta/Israel headlines cannot be shown as Jordan news.
+    model.worldNews=raw.filter(e=>{
+      const country=model.countries.find(c=>c.code===e.country_code);
+      return Boolean(window.SignalNorthGeo?.evaluate?.(e,country)?.referenced);
+    });
+  }
   if(results[5].status==="fulfilled")model.worldNewsStatus=results[5].value||{};
   if(results[6].status==="fulfilled")model.regLeads=results[6].value.leads||[];
   if(results[7].status==="fulfilled")model.regStatus=results[7].value||{};
