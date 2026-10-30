@@ -75,6 +75,21 @@
     <section class="panel breaking-panel"><div class="panel-heading"><div><div class="eyebrow">CURRENT NEWS DISCOVERY · CANADA</div><h2>Newest fraud &amp; scam reports</h2></div><button class="link-btn" data-to="fraud">Open news intelligence →</button></div><div class="breaking-meta"><span id="newsFreshness">Checking latest syndication snapshot...</span><a href="https://news.google.com/search?q=fraud%20scam%20Canada&hl=en-CA&gl=CA&ceid=CA%3Aen" rel="noopener" target="_blank">Browse Google News directly ↗</a></div><div id="headlinesTop" class="breaking-list"><div class="empty">News headlines are loading...</div></div></section>
       </div>
     </details>
+    <details class="overview-deepdive" id="communitySignalExplorer">
+      <summary><div><strong>Community fraud signals</strong><span id="communitySignalCount">Checking approved Reddit and Telegram sources...</span></div><span class="overview-expand">Expand ↓</span></summary>
+      <div class="overview-deepdive-content">
+        <section class="panel community-signals-panel">
+          <div class="panel-heading"><div><div class="eyebrow">EARLY-WARNING DISCOVERY · UNVERIFIED</div><h2>Reddit &amp; Telegram community signals</h2></div><span class="small">Not verified incidents or institutional findings</span></div>
+          <div class="community-signal-health" id="communitySignalHealth">Checking source access and collection status...</div>
+          <div class="community-signal-toolbar">
+            <select id="communitySignalPlatform" aria-label="Social signal platform"><option value="">Both platforms</option><option value="reddit">Reddit</option><option value="telegram">Telegram</option></select>
+            <select id="communitySignalTheme" aria-label="Scam typology"><option value="">All scam methods</option></select>
+          </div>
+          <div id="communitySignalRows" class="community-signal-grid" aria-live="polite"><div class="community-signal-empty">Loading community collection status...</div></div>
+          <p class="small">Public sources monitored only with authorized access. Example communities to review: <a href="https://www.reddit.com/r/Scams/" target="_blank" rel="noopener noreferrer">r/Scams</a>, <a href="https://www.reddit.com/r/PersonalFinanceCanada/" target="_blank" rel="noopener noreferrer">r/PersonalFinanceCanada</a>, <a href="https://www.reddit.com/r/Wealthsimple/" target="_blank" rel="noopener noreferrer">r/Wealthsimple</a>. Community posts may be inaccurate, coordinated, promotional or deleted. An institution being mentioned does not establish culpability.</p>
+        </section>
+      </div>
+    </details>
     <details class="overview-deepdive" id="overviewDeepDive">
       <summary><div><strong>Explore the supporting intelligence</strong><span id="overviewSupportingSummary">Latest reporting · Source-reviewed investigations · Official enforcement · Victim losses</span></div><span class="overview-expand">Expand ↓</span></summary>
       <div class="overview-deepdive-content">
@@ -225,6 +240,7 @@
 <div id="overlay" class="overlay hidden"><div class="drawer"><button id="close" class="close" aria-label="Close panel">×</button><div id="drawerBody"></div></div></div>
 <script src="./app.js?v=__BUILD_SHA__" defer></script>
 <script src="./supporting_intelligence.js?v=__BUILD_SHA__" defer></script>
+<script src="./community_signals.js?v=__BUILD_SHA__" defer></script>
 <script src="./intel.js?v=__BUILD_SHA__" defer></script>
 <script src="./workspace.js?v=__BUILD_SHA__" defer></script>
 <script src="./connections.js?v=__BUILD_SHA__" defer></script>
