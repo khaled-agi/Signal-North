@@ -41,12 +41,14 @@ jobs:
           python -m py_compile scripts/collect.py scripts/collect_news.py scripts/collect_sources.py scripts/build_article_index.py scripts/build_story_groups.py scripts/build_related_reporting.py scripts/build_reviewed_events.py scripts/build_intelligence_graph.py scripts/collect_publishers.py scripts/build_theme_trends.py scripts/collect_global.py scripts/build_world_registry.py
           node --check app.js
           node --check intel.js
+          node --check supporting_intelligence.js
           node --check workspace.js
           node --check connections.js
           node --check research.js
           node --check network.js
           node --check global.js
           python -m unittest discover -s tests -p 'test_logic.py'
+          node tests/test_supporting_intelligence.js
       - name: Collect global enforcement from primary regulators
         continue-on-error: true
         run: python scripts/collect_global.py
@@ -105,7 +107,7 @@ jobs:
       - name: Assemble cache-busted static website
         run: |
           mkdir -p _site/data
-          cp index.html styles.css light.css editorial.css connections.css research.css network.css refine.css global.css reviewed.css app.js intel.js workspace.js connections.js research.js network.js global.js reviewed.js .nojekyll _site/
+          cp index.html styles.css light.css editorial.css connections.css research.css network.css refine.css global.css reviewed.css app.js supporting_intelligence.js intel.js workspace.js connections.js research.js network.js global.js reviewed.js .nojekyll _site/
           cp data/events.json data/status.json data/news.json data/news_status.json data/fraud_stats.json data/bank_disclosures.json data/incidents.json _site/data/
           if [ -f data/news_archive.json ]; then cp data/news_archive.json _site/data/; fi
           if [ -f data/archive_status.json ]; then cp data/archive_status.json _site/data/; fi
