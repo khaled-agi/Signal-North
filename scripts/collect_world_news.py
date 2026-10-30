@@ -20,9 +20,9 @@ from urllib.parse import urlencode, urlsplit
 import pycountry
 import requests
 try:
-    from .world_country_lenses import country_profile, CRIME_TERMS, research_jurisdictions
+    from .world_country_lenses import country_profile, CRIME_TERMS, research_jurisdictions, country_title_reference
 except ImportError:
-    from world_country_lenses import country_profile, CRIME_TERMS, research_jurisdictions
+    from world_country_lenses import country_profile, CRIME_TERMS, research_jurisdictions, country_title_reference
 
 DATA=Path(__file__).resolve().parents[1]/"data"
 FEED=DATA/"world_reporting.json"
@@ -134,6 +134,11 @@ def parse_feed(raw,profile,query,observed_at):
         category=classify(title,profile)
         if not title or not link or not pub or not category or pub<cutoff or pub>observed_at+timedelta(days=1):
             continue
+        country_term=country_title_reference(title,profile)
+        if not country_term:
+            # RSS market context is not evidence of country relevance.
+            # Do not publish unrelated Orlando/Alberta stories under Jordan.
+            continue
         src=item.find("source")
         publisher=" ".join((src.text or "").split())[:100] if src is not None else "RSS discovery"
         key=(profile["code"]+"|"+title.casefold()+"|"+publisher.casefold())
@@ -142,7 +147,9 @@ def parse_feed(raw,profile,query,observed_at):
             "title":title,"url":link,"publisher":publisher,
             "published_at":iso(pub),"first_seen_at":iso(observed_at),
             "country_code":profile["code"],"country":profile["name"],
-            "country_basis":"search_market_only_not_confirmed_incident_location",
+            "country_basis":"country_explicitly_named_in_title_not_incident_location",
+            "country_reference_status":"country_name_in_headline_not_incident_location",
+            "country_reference_term":country_term,
             "source_market":profile["edition_country"],
             "language_strategy":profile["language_strategy"],
             "search_language":profile["local_language"] if profile["local_term"] and query==search_queries(profile)[-1] else "en",
@@ -192,6 +199,14 @@ def retained(leads,observed_at):
         if not (cutoff<=dt<=observed_at+timedelta(days=1)):continue
         code=str(item.get("country_code") or "")
         if len(code)!=2 or code not in {m.alpha_2 for m in research_jurisdictions()}:continue
+        country=next((m for m in research_jurisdictions() if m.alpha_2==code),None)
+        if country is None:continue
+        profile=country_profile(country)
+        term=country_title_reference(item.get("title",""),profile)
+        if not term:continue
+        item["country_basis"]="country_explicitly_named_in_title_not_incident_location"
+        item["country_reference_status"]="country_name_in_headline_not_incident_location"
+        item["country_reference_term"]=term
         by_country.setdefault(code,{})[item["id"]]=item
     rows=[]
     for group in by_country.values():
@@ -234,12 +249,12 @@ def run():
     total_attempted=sum(bool(v.get("attempted_at")) for v in status.values())
     count_codes=len({x["country_code"] for x in final})
     save(FEED,{"updated_at":iso(ts),"leads":final,
-        "methodology":"Up to 120 days of retained public headline metadata, not every article. Country is search context, never confirmed incident geography. Published dates are RSS dates, not incident dates. Country language support is best effort."})
+        "methodology":"Only headlines explicitly mentioning a country or its curated local name are attributed to that country. Mentions are NOT incident locations. RSS search-market results without country evidence are rejected, including older false-positive records. Non-exhaustive public metadata."})
     save(STATUS,{"last_completed_at":iso(ts),"market_count":len(profiles),
         "markets_attempted":total_attempted,"markets_with_current_news":count_codes,
         "current_leads":len(final),"batch_size":len(chosen),"next_cursor":next_cursor,
         "countries":status,
-        "coverage_note":"Rotating multi-theme RSS sampling, not all news. Country scan does not prove complete local coverage. Empty results never imply zero fraud; official actions are separately collected."})
+        "coverage_note":"Rotating RSS sampling with explicit headline-country mention checks. Not all local reporting and not incident geography. No accepted results do not imply no fraud."})
     save(STATE,{"next_cursor":next_cursor})
     print(json.dumps({"markets":len(profiles),"attempted":total_attempted,
                       "in_this_batch":len(chosen),"market_news":count_codes,"recent_leads":len(final)}))
