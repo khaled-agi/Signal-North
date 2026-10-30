@@ -25,6 +25,7 @@ assert.deepEqual(select(items, "regulatory", 4, now).map(x => x.id), ["e", "r"])
 assert.deepEqual(select(items, "incidents", 4, now).map(x => x.id), ["c", "v"]);
 assert.deepEqual(select(items, "fraud", 4, now).map(x => x.id), ["c", "t", "v"]);
 assert.equal(sourceUrl(invalid), "");
+assert.equal(sourceUrl({...customer, url:"https://news.google.com/rss", article_links:[{url:"https://publisher.ca/story"}]}), "https://publisher.ca/story");
 assert.equal(select([stale], "incidents", 4, now).length, 0);
 assert.equal(select([article("future", customer.title, "2030-01-01")], "incidents", 4, now).length, 0);
 assert.equal(select([article("a", customer.title, undefined, { headline_variations: [{title:"Other phrasing"}] })], "incidents", 4, now).length, 1);
