@@ -14,7 +14,8 @@
     "MAS": {
       "status": "empty",
       "new_snapshot_rows": 0,
-      "kind": "official_decision_index"
+      "kind": "official_decision_index",
+      "seed_verified_records": 4
     },
     "AUSTRAC": {
       "status": "seed_verified",
@@ -35,9 +36,14 @@
       "status": "seed_verified",
       "kind": "manual_source_verified",
       "records": 1
+    },
+    "FMA": {
+      "status": "seed_verified",
+      "kind": "manual_source_verified",
+      "records": 2
     }
   },
   "warning": "No collector reports complete worldwide coverage. FinCEN, FCA and MAS have primary-source index collectors; other authorities currently have manually verified seed entries.",
   "completed_at": "2026-10-30T23:44:40+00:00",
-  "total_global_events": 111
+  "total_global_events": 116
 }
