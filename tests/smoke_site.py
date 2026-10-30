@@ -47,7 +47,7 @@ try:
         print("Runtime errors:", errors)
         assert actual == str(EXPECTED), f"Expected {EXPECTED}, got {actual}"
         assert not errors, str(errors)
-        page.locator("details.nav-datasets summary").click()
+        page.locator("details.nav-datasets summary").first.click()
         page.locator('[data-tab="events"]').click()
         assert page.locator("#eventRows .event").count() == EXPECTED
         page.locator("#search").fill("RBC Unlikelyterm")
@@ -69,6 +69,7 @@ try:
         assert "Unverified news lead" in page.locator("#supportCases").text_content()
         assert "Latest reporting" in page.locator("#overviewSupportingSummary").text_content()
         assert "newest publication" in page.locator("#reviewedCasesLatest").text_content()
+        page.locator('[data-tab="reports"]').click()
         page.locator("#overviewDeepDive > summary").click()
         assert page.locator("#supportCases .supporting-news-item").first.is_visible()
         assert not page.locator("#featuredIncidents .case-item").first.is_visible()
@@ -152,6 +153,8 @@ try:
         assert "no official enforcement actions ingested yet" in page.locator("#worldCountryBrief").inner_text()
         assert page.locator("#mappedStories .map-story").count() == 0
         page.locator("#worldView").click()
+        page.locator('[data-tab="connections"]').click()
+        page.locator(".connections-crossborder > summary").click()
         assert page.locator("#globalPatterns button").count() >= 4
         assert page.locator("#globalOrgThreads .crossborder-thread").count() >= 2
         page.locator('[data-global-entity="td"]').click()
@@ -159,6 +162,7 @@ try:
         assert "Agency:" not in page.locator("#mapCaption").inner_text()
         print("Cross-jurisdiction TD family source links on same world map: PASS")
         page.locator("#worldView").click()
+        page.locator('[data-tab="connections"]').click()
         page.locator("[data-global-pattern]").first.click()
         assert page.locator('[data-mapmode="enforcement"]').get_attribute("class") == "active"
         page.locator("#mapReset").click()
@@ -169,13 +173,28 @@ try:
         page.locator('[data-mapmode="news"]').click()
         assert "mapped" in page.locator("#mapCaption").inner_text()
         assert page.locator("#mapProvince").count() == 1
-        print("News, major orders, source-reviewed incidents, and map controls: PASS")
+        assert page.locator("#mapStyle").count() == 1
+        assert page.locator("#mapAdvancedFilters").count() == 1
+        print("News, major orders, source-reviewed incidents, and cleaner map controls: PASS")
         page.wait_for_function("document.querySelectorAll('#mappedStories .map-story').length > 0", timeout=10000)
         assert page.locator("#mapMonth").count() == 1
         assert "indexed" in page.locator("#mapCoverage").inner_text().lower()
         assert page.locator(".count-map-pin").count() > 0
         print("Geographic data coverage:", page.locator("#mapCoverage").inner_text())
         assert page.locator(".count-map-pin .count-pin-inner").first.inner_text().strip().isdigit()
+        page.locator("#mapAdvancedFilters > summary").click()
+        assert page.locator("#mapStyle").input_value() in ("positron", "liberty", "osm")
+        page.locator("#mapStyle").select_option("osm")
+        assert "Classic OpenStreetMap" in page.locator("#mapBasemapStatus").text_content()
+        page.locator("#mapStyle").select_option("positron")
+        assert page.locator("#mapBasemapStatus").text_content()
+        assert page.locator(".explore-pathways button").count() == 3
+        page.locator("#mapFocus").click()
+        assert page.locator("#mapFocus").get_attribute("aria-pressed") == "true"
+        assert not page.locator("#mappedStories").is_visible()
+        page.locator("#mapFocus").click()
+        assert page.locator("#mappedStories").is_visible()
+        assert page.locator(".sidebar > .nav").count() == 5
         page.locator("#mapCountMode").select_option("headlines")
         assert page.locator("#mapCountMode").input_value() == "headlines"
         assert page.locator(".count-map-pin").count() > 0
@@ -262,13 +281,14 @@ try:
             print("Full headline list: PASS")
         page.locator("#newsYear").select_option("2026")
         assert page.locator("#newsRows .news-item").count() > 0
+        page.locator(".nav-datasets").nth(1).locator("summary").click()
         page.locator('[data-tab="clients"]').click()
         page.locator("#clientName").fill("Royal Bank of Canada")
         page.locator("#clientAdd").click()
         assert page.locator("#clientWatchlist .client-item").count() >= 1
         assert "Royal Bank of Canada" in page.locator("#clientWatchlist").inner_text()
         bg=page.evaluate("getComputedStyle(document.body).backgroundColor")
-        assert bg in ("rgb(243, 246, 250)","rgb(255, 255, 255)","rgb(251, 252, 253)","rgb(245, 247, 248)"),f"Expected light theme, got {bg}"
+        assert bg in ("rgb(243, 246, 250)","rgb(255, 255, 255)","rgb(251, 252, 253)","rgb(245, 247, 248)","rgb(245, 248, 249)"),f"Expected light theme, got {bg}"
         if (ROOT / "data" / "institution_intelligence.json").exists():
             page.locator('[data-tab="connections"]').click()
             page.wait_for_function("document.querySelectorAll('#connectInstitution option').length > 5", timeout=20000)
@@ -301,7 +321,7 @@ try:
         page.locator("#librarySearch").fill("")
         assert page.locator("#libraryCount").inner_text()
         page.locator('[data-tab="overview"]').click()
-        assert page.locator(".sidebar > .nav").count() == 6  # Reviewed events now has its own primary destination
+        assert page.locator(".sidebar > .nav").count() == 5  # Main navigation is focused; specialist tools remain accessible
         assert page.locator("#metrics .metric").count() == 4
         page.locator('[data-tab="themes"]').click()
         page.wait_for_function("document.querySelectorAll('#themeGrid .theme-matrix-row').length >= 8", timeout=12000)
