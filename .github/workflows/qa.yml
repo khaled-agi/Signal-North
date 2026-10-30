@@ -26,6 +26,7 @@ jobs:
           node --check app.js
           node --check intel.js
           node --check supporting_intelligence.js
+          node --check community_signals.js
           node --check workspace.js
           node --check connections.js
           node --check research.js
@@ -34,5 +35,6 @@ jobs:
         run: |
           python -m unittest discover -s tests -p test_logic.py
           node tests/test_supporting_intelligence.js
+          python -m unittest discover -s tests -p test_community_signals.py
       - name: Test real browser interactions
         run: python tests/smoke_site.py
