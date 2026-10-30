@@ -148,3 +148,35 @@ box-shadow:0 2px 9px #12364830,0 0 0 1px #176f7950;transition:transform .13s eas
 #overview .cols.map-focus .map{height:min(78vh,850px);min-height:500px}
 #mapFocus[aria-pressed="true"]{background:#e5f3f1;color:#115d64;border-color:#aed1cc}
 @media(max-width:780px){#overview .cols.map-focus .map{height:65vh;min-height:360px}}
+
+
+/* Worldwide country-market discovery — distinct from official enforcement. */
+.count-worldnews .count-pin-inner{background:#b97531;box-shadow:0 2px 9px rgba(105,65,21,.25),0 0 0 1px #b9753140}
+.key-worldnews{color:#b97531;font-size:15px}
+.country-intelligence{background:#f9fbfc;border:1px solid #dce7eb;border-radius:10px;padding:12px 14px;display:flex;flex-direction:column;gap:10px;color:#335463}
+.country-intelligence>div:first-child{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+.country-intelligence strong{font-size:13px;color:#153f4f}
+.country-intelligence-status{font-size:10px;color:#607e8d}
+.country-intelligence-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.country-intelligence-grid>span{padding:8px 10px;border:1px solid #e0e9ed;background:white;border-radius:7px;font-size:10px;line-height:1.5}
+.country-intelligence-grid b{font-size:15px;color:#236375}
+.country-intelligence-authorities{font-size:11px;line-height:1.6;color:#4d7080}
+.country-intelligence-authorities a{font-weight:650;color:#176774}
+.country-intelligence p{font-size:10px;color:#6e8590;line-height:1.55;margin:0}
+@media(max-width:700px){.country-intelligence-grid{grid-template-columns:1fr}}
+
+
+/* International headlines remain distinct from the Canadian reviewed archive. */
+.world-reporting-panel{margin:0 0 18px}
+.world-reporting-panel .overview-deepdive-content{padding:12px}
+.world-reporting-panel .panel{margin:0}
+.world-reporting-toolbar{padding:0 20px 15px}
+.world-reporting-toolbar label{display:flex;align-items:center;gap:12px;font-size:12px;font-weight:700;color:#375b69}
+.world-reporting-toolbar select{min-width:210px;max-width:100%;padding:9px 12px;border:1px solid #cfdfe3;border-radius:8px;background:white;color:#225466}
+.world-reporting-rows{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;padding:0 20px 18px;max-height:620px;overflow-y:auto}
+.world-reporting-record{border:1px solid #dce7eb;border-radius:9px;padding:12px 14px;background:#fafcfc;min-width:0}
+.world-reporting-record strong{font-size:14px;line-height:1.45;color:#174352;font-weight:750;display:block;margin:7px 0}
+.world-reporting-date,.world-reporting-details{font-size:11px;color:#607f8b;line-height:1.5}
+.world-reporting-record a{font-weight:750;color:#147281}
+.world-reporting-panel .supporting-disclaimer{padding:0 20px 17px;font-size:11px}
+@media(max-width:750px){.world-reporting-rows{grid-template-columns:1fr}.world-reporting-toolbar label{flex-wrap:wrap}.world-reporting-toolbar select{width:100%;min-width:0}}

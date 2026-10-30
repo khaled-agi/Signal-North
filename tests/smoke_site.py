@@ -132,7 +132,7 @@ try:
         print("Reviewed source-backed case investigation drawer: PASS")
         page.locator('[data-tab="overview"]').click()
         page.wait_for_function("document.querySelector('#mapCountry').options.length >= 240",timeout=20000)
-        assert "countries" in page.locator("#worldCoverage").inner_text().lower()
+        assert "country and territory lenses" in page.locator("#worldCoverage").inner_text().lower()
         page.locator("#worldView").click()
         assert page.locator("#mapCountry").input_value() == ""
         page.locator("#mapCountry").select_option("US")
@@ -150,8 +150,32 @@ try:
             assert agency in page.locator("#mappedStories").inner_text()
             assert "Jurisdiction:" in page.locator("#mapCaption").inner_text()
         page.locator("#mapCountry").select_option("AF")
-        assert "no official enforcement actions ingested yet" in page.locator("#worldCountryBrief").inner_text()
+        assert "0 official actions collected" in page.locator("#worldCountryBrief").inner_text()
         assert page.locator("#mappedStories .map-story").count() == 0
+        page.locator('[data-tab="fraud"]').click()
+        assert page.locator("#worldNewsCountry option").count() >= 240
+        page.locator("#worldReportingPanel > summary").click()
+        assert "country" in page.locator("#worldReportingSummary").text_content() or "source-linked leads" in page.locator("#worldReportingSummary").text_content()
+        page.locator('[data-tab="overview"]').click()
+        # Synthetic browser-only record tests country search-market map attribution.
+        page.evaluate("""() => {
+          window.__originalWorldNewsForTest=state.worldNews;
+          state.worldNews=[{id:"world-news-fixture",country_code:"FR",country:"France",
+            title:"French bank fraud research example",publisher:"Test fixture only",
+            published_at:"2026-10-30T12:00:00+00:00",
+            url:"https://example.org/fixture",category:"Fraud and scam reporting",
+            evidence_status:"unverified_news_lead"}];
+          state.mapCountry="FR";document.querySelector("#mapCountry").value="FR";
+          state.mapMode="news";initMap();
+        }""")
+        assert "search-market" in page.locator("#mappedStories").inner_text().lower()
+        assert "Not a verified fraud location" in page.locator("#mappedStories").inner_text()
+        assert page.locator("#mappedStories a[href='https://example.org/fixture']").count() >= 1
+        page.evaluate("""() => {
+          state.worldNews=window.__originalWorldNewsForTest;
+          state.mapCountry="";document.querySelector("#mapCountry").value="";
+          state.mapMode="all";initMap();
+        }""")
         page.locator("#worldView").click()
         page.locator('[data-tab="connections"]').click()
         page.locator(".connections-crossborder > summary").click()

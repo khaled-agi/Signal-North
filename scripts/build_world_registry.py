@@ -11,6 +11,10 @@ from datetime import datetime,timezone
 from pathlib import Path
 import pycountry
 from countryinfo import CountryInfo
+try:
+ from .world_country_lenses import country_profile
+except ImportError:
+ from world_country_lenses import country_profile
 
 DATA=Path(__file__).resolve().parents[1]/"data"
 CENTROID_OVERRIDES={
@@ -30,9 +34,27 @@ def build():
   code=iso.get("alpha2")
   if code and len(code)==2:info[code]=x
  global_events=read("global_enforcement.json","events")
+ world_reports=read("world_reporting.json","leads")
+ world_status={}
+ status_path=DATA/"world_reporting_status.json"
+ if status_path.exists():
+  world_status=json.loads(status_path.read_text("utf-8")).get("countries",{})
+ reporting_counts=Counter(x.get("country_code") for x in world_reports)
+ def details(code, country):
+  profile=country_profile(country)
+  attempt=world_status.get(code,{})
+  return {"world_reporting_count":reporting_counts.get(code,0),
+    "world_reporting_state":attempt.get("state","not_attempted"),
+    "world_reporting_last_attempt_at":attempt.get("attempted_at"),
+    "language_strategy":profile["language_strategy"],
+    "local_language":profile["local_language"],
+    "agency_directory":profile["agency_directory"],
+    "country_basis":"country_search_market_not_verified_event_location"}
+ canada=pycountry.countries.get(alpha_2="CA")
  countries=[{"code":"CA","name":"Canada","map_latitude":57,"map_longitude":-101,
    "enforcement_count":len(read("events.json","events")),"coverage":"active",
-   "agency_count":2,"location_role":"regulatory_jurisdiction_centroid"}]
+   "agency_count":2,"location_role":"regulatory_jurisdiction_centroid",
+   **details("CA",canada)}]
  count=Counter(x.get("country_code") for x in global_events)
  regulators={}
  for e in global_events:
@@ -49,12 +71,15 @@ def build():
    "agency_count":len(regulators.get(c.alpha_2,[])),
    "coverage":"active" if count.get(c.alpha_2,0) else "not_ingested",
    "location_role":"regulatory_jurisdiction_centroid",
+   **details(c.alpha_2,c),
   })
  countries.sort(key=lambda x:x["name"])
  out={
   "generated_at":datetime.now(timezone.utc).isoformat(timespec="seconds"),
   "jurisdictions":countries,
-  "coverage_note":"ISO-3166 country and territory catalogue, not an assertion that all countries are monitored. Pins appear only for actual ingested official-source records. Country location is a representative centroid of the publishing enforcement jurisdiction, never an incident site.",
+  "coverage_note":"ISO-3166 country and territory catalogue. Official enforcement, country-language news discovery, and unattempted markets are separate coverage levels. A country discovery result is a search-market label only, NOT a geolocated alleged crime. Pins use country centroids solely for geographic browsing, never incident coordinates.",
+  "markets_with_recent_reporting":sum(bool(x.get("world_reporting_count")) for x in countries),
+  "markets_attempted":sum(x.get("world_reporting_state")!="not_attempted" for x in countries),
   "total_jurisdictions":len(countries),
   "active_jurisdictions":sum(x["coverage"]=="active" for x in countries),
  }

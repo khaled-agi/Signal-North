@@ -10,7 +10,7 @@
   "Casino / gambling":/(casino|gambling|gaming|betting|lottery)/i,
   "Investor / consumer protection":/(investor|consumer|client.asset|securities|conduct|financial crime controls)/i,
  };
- const model={events:[],countries:[],health:{},canadianEvents:[]};
+ const model={events:[],countries:[],health:{},canadianEvents:[],worldNews:[],worldNewsStatus:{}};
  function renderPatterns(){
   const host=get("globalPatterns");
   const themes=Object.entries(THEMES).map(([name,rx])=>{
@@ -26,16 +26,36 @@
   const code=get("mapCountry")?.value||"";
   const host=get("worldCountryBrief");
   if(!host)return;
-  if(!code){host.innerHTML='<strong>Global source coverage:</strong> Populated enforcement jurisdictions are marked with counted circles; other countries remain selectable but do not have invented cases. <a href="https://www.fatf-gafi.org/en/countries.html" target="_blank" rel="noopener noreferrer">FATF country assessments ↗</a>';return;}
+  if(!code){
+   host.innerHTML='<strong>Worldwide intelligence:</strong> official agency actions and unverified country-market news searches are separate layers. The map never asserts the location of an alleged offence based on search-market metadata. <a href="https://www.fatf-gafi.org/en/countries.html" target="_blank" rel="noopener noreferrer">FATF jurisdictions ↗</a>';
+   return;
+  }
   const country=model.countries.find(c=>c.code===code);
   if(!country){host.textContent="Country source status unavailable.";return;}
   const found=model.events.filter(e=>e.country_code===code);
-  host.innerHTML='<strong>'+html(country.name)+': '+(country.coverage==="active"?
-    found.length+' collected international agency action(s)'+(code==="CA"?" plus Canadian domestic sources":""):
-    'no official enforcement actions ingested yet')+'</strong> · '+
-    'Country markers indicate regulator jurisdiction, not where fraud occurred. '+
-    '<a href="https://www.fatf-gafi.org/en/countries.html" target="_blank" rel="noopener noreferrer">Search FATF jurisdiction reviews ↗</a> · '+
-    '<a href="https://egmontgroup.org/members-by-region/" target="_blank" rel="noopener noreferrer">Find financial intelligence units ↗</a>';
+  const news=model.worldNews.filter(e=>e.country_code===code);
+  const cs=model.worldNewsStatus.countries?.[code]||{};
+  const officialCount=found.length+(code==="CA"?model.canadianEvents.length:0);
+  const state=cs.state||"not_attempted";
+  const status={
+   not_attempted:"Not yet scanned for local reporting",
+   attempted_empty:"Scanned; no qualifying recent headlines accepted",
+   reporting_found:"Recent headlines discovered (unverified)",
+   partial_error:"Partial coverage; some searches failed",
+   error:"Latest search attempt failed"
+  }[state]||"Country discovery status unavailable";
+  const checked=cs.attempted_at?String(cs.attempted_at).slice(0,16).replace("T"," ")+" UTC":"No completed scan yet";
+  const authorities=(country.agency_directory||[]).slice(0,4).map(x=>
+   '<a href="'+html(x.url)+'" target="_blank" rel="noopener noreferrer">'+html(x.name)+' ↗</a>').join(' · ');
+  host.innerHTML='<div class="country-intelligence"><div><strong>'+html(country.name)+'</strong>'+
+    '<span class="country-intelligence-status">'+html(status)+' · Last attempted: '+html(checked)+'</span></div>'+
+    '<div class="country-intelligence-grid"><span><b>'+officialCount+'</b> official actions collected</span>'+
+    '<span><b>'+news.length+'</b> recent unverified country-search headlines</span>'+
+    '<span><b>'+html(country.local_language||"English fallback")+'</b> discovery language hint</span></div>'+
+    (authorities?'<div class="country-intelligence-authorities"><b>Agency directory (not automatically monitored):</b> '+authorities+'</div>':
+      '<div class="country-intelligence-authorities">No country-specific agency directory verified yet. <a href="https://www.fatf-gafi.org/en/countries.html" target="_blank" rel="noopener noreferrer">Browse FATF country information ↗</a></div>')+
+    '<p>News is indexed by search market only, not where an incident occurred. No collection result means no coverage conclusion; only official-source actions are verified as regulator publications.</p></div>';
+
  }
  const KNOWN_THREADS=[
   {key:"td",name:"TD banking group · Canada / United States",
@@ -67,16 +87,47 @@
   }
   host.innerHTML=cards.join("")||'<div class="empty">No corroborated cross-jurisdiction institution links in the currently collected records.</div>';
  }
+
+ function renderWorldReporting(){
+  const picker=get("worldNewsCountry");
+  if(!picker)return;
+  const code=picker.value;
+  const rows=model.worldNews.filter(x=>!code||x.country_code===code)
+    .slice().sort((a,b)=>String(b.published_at||"").localeCompare(String(a.published_at||""))).slice(0,24);
+  const profile=model.countries.find(x=>x.code===code);
+  const scan=model.worldNewsStatus.countries?.[code];
+  const last=model.worldNewsStatus.last_completed_at||"Not collected yet";
+  get("worldReportingSummary").textContent=
+    model.worldNews.length+" source-linked leads · "+model.worldNewsStatus.markets_attempted+" markets scanned · Updated "+String(last).slice(0,10);
+  get("worldReportingHealth").textContent=code?
+   (profile?.name||code)+" · "+(scan?.state||"Not scanned")+" · Last attempt "+String(scan?.attempted_at||"never").slice(0,16):
+   model.worldNewsStatus.markets_attempted+" of "+model.countries.length+" markets scanned · "+model.worldNews.length+" recent unverified articles";
+  const safe=x=>{try{const u=new URL(x);return u.protocol==="https:"&&!u.username&&!u.password?u.href:"";}catch{return "";}};
+  get("worldReportingRows").innerHTML=rows.length?rows.map(x=>{
+   const url=safe(x.url);
+   return '<article class="world-reporting-record">'+
+    '<div class="world-reporting-date">'+html(x.country)+" · "+html(String(x.published_at||"").slice(0,10))+
+      ' · '+html(x.publisher||"Unknown publisher")+'</div>'+
+    '<strong>'+html(x.title)+'</strong>'+
+    '<div class="world-reporting-details">'+html(x.category||"News lead")+
+      ' · Unverified · Country search market, not confirmed event location'+
+      (url?' · <a href="'+html(url)+'" target="_blank" rel="noopener noreferrer">Open source ↗</a>':"")+
+    '</div></article>';
+  }).join(""):'<div class="empty">No recent source-linked headlines in this view. A missing or empty feed is not evidence of a country having no fraud. Check the latest scan status.</div>';
+ }
+
  function renderCoverage(){
   const active=model.countries.filter(x=>x.coverage==="active");
   const countries=model.countries.length;
   const count=model.events.length;
-  get("worldCoverage").innerHTML='<strong>'+countries.toLocaleString("en-CA")+' countries & territories indexed for discovery</strong>'+
-   '<span>Official enforcement currently populated for '+active.length+' jurisdictions including Canada · '+
-     count+' non-Canadian actions · other countries explicitly marked not yet ingested</span>';
+  const attempts=Object.values(model.worldNewsStatus.countries||{}).filter(x=>x.attempted_at).length;
+  const activeNews=new Set(model.worldNews.map(x=>x.country_code)).size;
+  get("worldCoverage").innerHTML='<strong>'+countries.toLocaleString("en-CA")+' country and territory lenses</strong>'+
+   '<span>'+attempts+' scanned for country-specific reporting · '+activeNews+' with recent unverified news · '+
+   active.length+' jurisdictions with official enforcement records including Canada · '+count+' non-Canadian official actions</span>';
  }
  async function load(){
-  const paths=["world_jurisdictions.json","global_enforcement.json","global_source_status.json","events.json"];
+  const paths=["world_jurisdictions.json","global_enforcement.json","global_source_status.json","events.json","world_reporting.json","world_reporting_status.json"];
   const results=await Promise.allSettled(paths.map(async x=>{
     const r=await fetch("./data/"+x+"?ts="+Date.now(),{cache:"no-store"});
     if(!r.ok)throw Error(x+": "+r.status);
@@ -86,18 +137,29 @@
   if(results[1].status==="fulfilled")model.events=results[1].value.events||[];
   if(results[2].status==="fulfilled")model.health=results[2].value||{};
   if(results[3].status==="fulfilled")model.canadianEvents=results[3].value.events||[];
+  if(results[4].status==="fulfilled")model.worldNews=results[4].value.leads||[];
+  if(results[5].status==="fulfilled")model.worldNewsStatus=results[5].value||{};
   const country=get("mapCountry"),current=country.value;
   country.innerHTML='<option value="">All countries (worldwide)</option>'+model.countries.map(c=>
-    '<option value="'+html(c.code)+'">'+html(c.name)+(c.coverage==="active"?" · source records":" · not yet ingested")+'</option>').join("");
+    '<option value="'+html(c.code)+'">'+html(c.name)+(c.coverage==="active"?" · official actions":(c.world_reporting_count?" · recent news":(c.world_reporting_state&&c.world_reporting_state!=="not_attempted"?" · scanned":" · pending scan")))+'</option>').join("");
   if(model.countries.some(c=>c.code===current))country.value=current;
   const regulator=get("mapAgency"),prev=regulator.value;
   const agencies=[...new Set(["FINTRAC","FCAC",...model.events.map(x=>x.regulator).filter(Boolean)])].sort();
   regulator.innerHTML='<option value="">All agencies</option>'+agencies.map(x=>'<option value="'+html(x)+'">'+html(x)+'</option>').join("");
   if(agencies.includes(prev))regulator.value=prev;
+  const worldPicker=get("worldNewsCountry");
+  if(worldPicker){
+   const selected=worldPicker.value;
+   worldPicker.innerHTML='<option value="">All scanned countries</option>'+model.countries.map(c=>
+    '<option value="'+html(c.code)+'">'+html(c.name)+'</option>').join("");
+   if(model.countries.some(c=>c.code===selected))worldPicker.value=selected;
+   renderWorldReporting();
+  }
   renderCoverage();renderPatterns();renderCountryBrief();renderThreads();
-  window.dispatchEvent(new CustomEvent("signalnorth:globalready",{detail:{events:model.events,countries:model.countries,health:model.health}}));
+  window.dispatchEvent(new CustomEvent("signalnorth:globalready",{detail:{events:model.events,countries:model.countries,health:model.health,worldNews:model.worldNews,worldNewsStatus:model.worldNewsStatus}}));
  }
  get("mapCountry").addEventListener("change",renderCountryBrief);
+ get("worldNewsCountry")?.addEventListener("change",renderWorldReporting);
  get("mapReset").addEventListener("click",renderCountryBrief);
  get("worldView").addEventListener("click",renderCountryBrief);
  document.addEventListener("click",e=>{
