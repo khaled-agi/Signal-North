@@ -67,6 +67,20 @@ try:
             "document.querySelector('#supportCasesStatus').textContent.includes('Scan:')", timeout=15000)
         assert page.locator("#supportCases .supporting-news-item").count() > 0
         assert "Unverified news lead" in page.locator("#supportCases").text_content()
+        assert "Latest reporting" in page.locator("#overviewSupportingSummary").text_content()
+        assert "newest publication" in page.locator("#reviewedCasesLatest").text_content()
+        page.locator("#overviewDeepDive > summary").click()
+        assert page.locator("#supportCases .supporting-news-item").first.is_visible()
+        assert not page.locator("#featuredIncidents .case-item").first.is_visible()
+        first_reported = page.locator("#supportCases .supporting-news-meta").first.text_content()[:10]
+        latest_curated = page.locator("#reviewedCasesLatest").text_content()[-10:]
+        assert first_reported > latest_curated, (
+            f"Fresh reporting {first_reported} must lead older reviewed cases {latest_curated}")
+        page.locator("#overviewDeepDive .supporting-reviewed-details").first.locator("summary").click()
+        assert page.locator("#featuredIncidents .case-item").first.is_visible()
+        page.locator("#overviewDeepDive .supporting-reviewed-details").first.locator("summary").click()
+        assert not page.locator("#featuredIncidents .case-item").first.is_visible()
+        print("Latest reported articles are prioritized; curated Oct-23 files are secondary: PASS")
         assert "Scan:" in page.locator("#supportEnforcementStatus").text_content()
         assert "Scan:" in page.locator("#supportRegulatoryStatus").text_content()
         assert "partial year" in page.locator("#overviewFraud").text_content()

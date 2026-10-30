@@ -71,9 +71,9 @@
     container.innerHTML='<div class="empty">Recent-news routing is unavailable; reviewed source records remain above.</div>';
     continue;
    }
-   const hits=router.select(news,section,4,Date.now(),90);
+   const hits=router.select(news,section,section==="incidents"?6:4,Date.now(),90);
    const newest=hits.length?String(hits[0].published_at||"").slice(0,10):"None in past 90 days";
-   status.textContent="Latest publication: "+newest+" · Scan: "+scan;
+   status.textContent=hits.length+" recent report"+(hits.length===1?"":"s")+" · Latest "+newest+" · Scan: "+scan;
    container.innerHTML=hits.length?hits.map(item=>{
     const source=router.sourceUrl(item);
     const publisher=item.publisher||item.headline_variations?.[0]?.publisher||"Source-linked reporting";
@@ -84,6 +84,11 @@
      (sourceCount>1?' · '+sourceCount+' source links':"")+' · Unverified news lead</div>'+
      '<div class="supporting-news-source">'+link(source,"Read source")+'</div></article>';
    }).join(""):'<div class="empty">No matching source-linked reporting published in the past 90 days. This is not evidence that no relevant activity occurred.</div>';
+  }
+  const summary=$i("overviewSupportingSummary");
+  if(summary){
+   const recent=router?router.select(news,"incidents",1,Date.now(),90):[];
+   summary.textContent=recent.length?"Latest reporting "+String(recent[0].published_at).slice(0,10)+" · Reviewed cases and official records separately":"Current reporting and reviewed cases have separate update dates";
   }
  }
  function renderNews(){
@@ -198,11 +203,12 @@
   renderNews();
  }
  function renderHomeHeadlines(updatedAt){
-  const hits=news.slice(0,6);
+  const hits=[...news].sort((a,b)=>String(b.published_at||"").localeCompare(String(a.published_at||""))).slice(0,6);
   const last=updatedAt?new Date(updatedAt):null;
   const stamp=last&&!Number.isNaN(last.getTime())?new Intl.DateTimeFormat("en-CA",{month:"short",day:"numeric",hour:"numeric",minute:"2-digit",timeZone:"America/Toronto",timeZoneName:"short"}).format(last):"Not yet collected";
   const freshness="Google News RSS · "+news.length+" screened leads · Last scan: "+stamp;
   $i("newsFreshness").textContent=freshness;
+  if($i("latestHeadlinesSummary"))$i("latestHeadlinesSummary").textContent="Latest publication: "+(hits.length?String(hits[0].published_at||"").slice(0,10):"Unavailable")+" · Last scan: "+stamp+" · Unverified";
   $i("newsFreshnessDetail").textContent=freshness+" · Scheduled every 30 minutes (best effort)";
   $i("headlinesTop").innerHTML=hits.length?hits.map(x=>
    '<div class="breaking-story"><div class="breaking-story-head"><span class="breaking-type">'+esc(x.category||"News lead")+'</span><span>'+esc((x.published_at||"").slice(0,10))+'</span></div><div class="breaking-story-title"><button type="button" class="report-open" data-story="'+esc(x.id)+'">'+esc(x.title)+'</button></div><div class="breaking-publisher">'+Math.max(1,Number(x.source_count||1))+' source link(s) · Grouped, unverified reporting</div></div>'
@@ -276,6 +282,9 @@
    $i("incidentRows").innerHTML=found.length?found.map(x=>caseMarkup(x)).join(""):'<div class="empty">No incidents match this filter.</div>';
  }
  function initIncidents(){
+   const latest=incidents[0]?.reported_at||"Unavailable";
+   const reviewed=$i("reviewedCasesLatest");
+   if(reviewed)reviewed.textContent=incidents.length+" curated reports · newest publication "+String(latest).slice(0,10);
    $i("featuredIncidents").innerHTML=incidents.length?incidents.slice(0,3).map(x=>caseMarkup(x,true)).join(""):'<div class="empty">Source-reviewed case entries are not yet available.</div>';
    $i("incidentProvince").innerHTML='<option value="">All provinces</option>'+[...new Set(incidents.map(x=>x.province).filter(Boolean))].sort().map(p=>'<option value="'+esc(p)+'">'+esc(p)+'</option>').join("");
    $i("incidentBank").innerHTML='<option value="">All banks / unnamed</option><option value="__unnamed__">Bank unnamed</option>'+[...new Set(incidents.map(x=>x.institution).filter(Boolean))].sort().map(name=>'<option value="'+esc(name)+'">'+esc(name)+'</option>').join("");

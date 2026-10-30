@@ -214,3 +214,31 @@ a,.link-btn{color:#185f67}
 .supporting-news-item .supporting-news-source{font-size:11px;margin-top:7px}
 .supporting-news .empty{font-size:12px;color:var(--muted,#627681);padding:10px 0}
 .supporting-disclaimer{font-size:11px;color:var(--muted,#627681);line-height:1.5;margin:10px 0 0}
+
+
+/* Fresh discoveries lead each supporting intelligence panel.
+   The older source-reviewed dataset is available as an explicitly separate archive. */
+.supporting-priority .panel-heading{margin-bottom:0}
+.supporting-news-primary{margin:0;padding:20px 22px 20px;border-top:0}
+.supporting-news-primary .supporting-news-heading{margin-bottom:14px}
+.supporting-news-primary .supporting-news-list{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.supporting-news-primary .supporting-news-item{padding:17px;border-color:#dbe6ea;background:#f7fafb}
+.supporting-news-primary .supporting-news-title{font-size:15px;line-height:1.45}
+.supporting-news-primary .supporting-news-meta{font-size:12px}
+.supporting-news-primary .supporting-disclaimer{margin-top:14px}
+.supporting-reviewed-details{margin:0 20px 18px;border:1px solid var(--line,#dae3e8);border-radius:8px;background:#fff}
+.supporting-reviewed-details>summary{display:flex;justify-content:space-between;gap:10px;align-items:center;cursor:pointer;padding:17px 18px;font-size:13px;font-weight:700;color:var(--ink,#172e3b);list-style:none}
+.supporting-reviewed-details>summary::-webkit-details-marker{display:none}
+.supporting-reviewed-details>summary::after{content:"Show files ▾";font-size:12px;white-space:nowrap;color:var(--teal,#175f67)}
+.supporting-reviewed-details[open]>summary::after{content:"Hide files ▴"}
+.supporting-reviewed-details>summary span:last-of-type:not(:first-child){font-size:11px;font-weight:400;color:var(--muted,#627681)}
+.supporting-reviewed-details .case-featured{padding:0 14px 10px}
+.supporting-reviewed-details .events-list{padding-bottom:12px}
+.supporting-reviewed-details>.supporting-disclaimer{margin:0 18px 18px}
+@media(max-width:1100px){.supporting-news-primary .supporting-news-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){
+ .supporting-news-primary .supporting-news-list{grid-template-columns:1fr}
+ .supporting-news-primary{padding:16px}
+ .supporting-reviewed-details{margin:0 12px 14px}
+ .supporting-reviewed-details>summary{flex-wrap:wrap}
+}
