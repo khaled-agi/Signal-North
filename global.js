@@ -193,6 +193,7 @@
   if(results[6].status==="fulfilled")model.regLeads=results[6].value.leads||[];
   if(results[7].status==="fulfilled")model.regStatus=results[7].value||{};
   const country=get("mapCountry"),current=country.value;
+  const referencedMarkets=new Set(model.worldNews.map(x=>x.country_code));
   country.innerHTML='<option value="">All countries (worldwide)</option>'+model.countries.map(c=>
     '<option value="'+html(c.code)+'">'+html(c.name)+(c.coverage==="active"?" · official actions":(c.world_reporting_count?" · recent news":(c.world_reporting_state&&c.world_reporting_state!=="not_attempted"?" · scanned":" · pending scan")))+'</option>').join("");
   if(model.countries.some(c=>c.code===current))country.value=current;
