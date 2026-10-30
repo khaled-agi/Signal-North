@@ -29,13 +29,13 @@ FEED=DATA/"world_reporting.json"
 STATUS=DATA/"world_reporting_status.json"
 STATE=DATA/"world_reporting_state.json"
 HEADERS={"User-Agent":"SignalNorthPublicResearch/0.9 (+https://github.com/khaled-agi/Signal-North; metadata-only news discovery)"}
-MAX_AGE_DAYS=21
-MAX_PER_COUNTRY=18
-MAX_ALL=2500
-DEFAULT_BATCH=16
+MAX_AGE_DAYS=120
+MAX_PER_COUNTRY=90
+MAX_ALL=12000
+DEFAULT_BATCH=32
 ENGLISH_TERMS=('fraud','scam','money laundering','bank phishing')
 TITLE_RELEVANCE_TERMS=tuple(x.casefold() for x in CRIME_TERMS)
-QUERY_DAYS=14
+QUERY_DAYS=30
 
 def now():
     return datetime.now(timezone.utc)
@@ -66,7 +66,10 @@ def search_queries(profile):
     name=profile["name"].replace('"',"")
     # The country name is a search constraint, NOT proof that a reported incident
     # took place in that country.
-    queries=[f'"{name}" (fraud OR scam OR "money laundering") when:{QUERY_DAYS}d']
+    queries=[
+        f'"{name}" (fraud OR scam OR phishing) when:{QUERY_DAYS}d',
+        f'"{name}" ("money laundering" OR "financial crime" OR "investment scam" OR "fraud enforcement") when:{QUERY_DAYS}d',
+    ]
     if profile["local_term"] and profile["local_country_term"]:
         queries.append(f'{profile["local_term"]} "{profile["local_country_term"]}" when:{QUERY_DAYS}d')
     return queries
@@ -110,7 +113,7 @@ def parse_feed(raw,profile,query,observed_at):
     root=ET.fromstring(raw)
     cutoff=observed_at-timedelta(days=MAX_AGE_DAYS)
     results=[]
-    for item in root.findall(".//channel/item")[:45]:
+    for item in root.findall(".//channel/item")[:90]:
         title=" ".join((item.findtext("title") or "").split())[:300]
         link=safe_link(item.findtext("link"))
         pub=item_date(item.findtext("pubDate"))
@@ -188,7 +191,7 @@ def run():
     previous=read(FEED,{"leads":[]})
     last=read(STATUS,{"countries":{}})
     progress=read(STATE,{"next_cursor":0})
-    batch_size=min(32,max(1,int(os.environ.get("WORLD_NEWS_BATCH",str(DEFAULT_BATCH)))))
+    batch_size=min(64,max(1,int(os.environ.get("WORLD_NEWS_BATCH",str(DEFAULT_BATCH)))))
     chosen,next_cursor=choose_batch(profiles,progress.get("next_cursor",0),batch_size)
     existing={r["id"]:r for r in retained(previous.get("leads",[]),ts)}
     status={**last.get("countries",{})}
@@ -196,7 +199,7 @@ def run():
         # Tests and manual dry runs should not erase historical results or
         # claim discovery was attempted.
         chosen=[]; next_cursor=progress.get("next_cursor",0)
-    with ThreadPoolExecutor(max_workers=4) as pool:
+    with ThreadPoolExecutor(max_workers=8) as pool:
         jobs={pool.submit(collect_market,p,ts):p for p in chosen}
         for fut in as_completed(jobs):
             profile=jobs[fut];code=profile["code"]
@@ -217,12 +220,12 @@ def run():
     total_attempted=sum(bool(v.get("attempted_at")) for v in status.values())
     count_codes=len({x["country_code"] for x in final})
     save(FEED,{"updated_at":iso(ts),"leads":final,
-        "methodology":"Public headline metadata, not verified incidents. Country is search context, not confirmed event geography. Published dates are RSS dates, not incident dates. Some country editions are English fallback."})
+        "methodology":"Up to 120 days of retained public headline metadata, not every article. Country is search context, never confirmed incident geography. Published dates are RSS dates, not incident dates. Country language support is best effort."})
     save(STATUS,{"last_completed_at":iso(ts),"market_count":len(profiles),
         "markets_attempted":total_attempted,"markets_with_current_news":count_codes,
         "current_leads":len(final),"batch_size":len(chosen),"next_cursor":next_cursor,
         "countries":status,
-        "coverage_note":"A country scan does not establish complete local coverage. No accepted reporting is not evidence of no fraud; official actions remain separately collected."})
+        "coverage_note":"Rotating multi-theme RSS sampling, not all news. Country scan does not prove complete local coverage. Empty results never imply zero fraud; official actions are separately collected."})
     save(STATE,{"next_cursor":next_cursor})
     print(json.dumps({"markets":len(profiles),"attempted":total_attempted,
                       "in_this_batch":len(chosen),"market_news":count_codes,"recent_leads":len(final)}))
