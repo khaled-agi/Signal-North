@@ -227,7 +227,7 @@ def country_title_reference(title, profile):
         # China/Thailand stories. Names in these scripts are matched as a
         # literal substring; they establish a textual mention, never a crime site.
         nonspace_script=bool(re.search(
-            r"[\u3400-\u9fff\u3040-\u30ff\u0e00-\u0e7f\u1780-\u17ff\u0e80-\u0eff\u1000-\u109f]",raw))
+            r"[\u3400-\u9fff\u3040-\u30ff\u0e00-\u0e7f\u1780-\u17ff\u0e80-\u0eff\u1000-\u109f\u0900-\u0d7f]",raw))
         if nonspace_script:
             if len(raw)>=2 and raw.casefold() in title.casefold():return raw
         elif len(raw)>=3 and re.search(
