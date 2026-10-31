@@ -20,9 +20,9 @@ DATA=Path(__file__).resolve().parents[1]/"data"
 
 BANKS={
  "rbc":{"name":"Royal Bank of Canada","aliases":["Royal Bank of Canada","RBC"]},
- "td":{"name":"Toronto-Dominion Bank","aliases":["The Toronto-Dominion Bank","Toronto-Dominion Bank","TD Bank","TD Canada Trust","TD"]},
+ "td":{"name":"Toronto-Dominion Bank","aliases":["The Toronto-Dominion Bank","Toronto-Dominion Bank (The)","Toronto-Dominion Bank","TD Bank","TD Canada Trust","TD"]},
  "bmo":{"name":"Bank of Montreal","aliases":["Bank of Montreal","BMO","BMO Bank of Montreal"]},
- "scotiabank":{"name":"Scotiabank","aliases":["Bank of Nova Scotia","The Bank of Nova Scotia","Scotiabank"]},
+ "scotiabank":{"name":"Scotiabank","aliases":["Bank of Nova Scotia (The)","Bank of Nova Scotia","The Bank of Nova Scotia","Scotiabank"]},
  "cibc":{"name":"Canadian Imperial Bank of Commerce","aliases":["Canadian Imperial Bank of Commerce","CIBC"]},
  "national-bank":{"name":"National Bank of Canada","aliases":["National Bank of Canada","National Bank"]},
  "desjardins":{"name":"Desjardins","aliases":["Desjardins Group","Desjardins","Fédération des caisses Desjardins du Québec"]},
