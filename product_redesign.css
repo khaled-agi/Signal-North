@@ -262,3 +262,13 @@ box-shadow:0 2px 9px #12364830,0 0 0 1px #176f7950;transition:transform .13s eas
 .world-coverage-example strong{font-size:12px;color:#245366}
 .world-coverage-example a{color:#146b7b;font-size:11px;font-weight:700}
 @media(max-width:730px){.world-coverage-audit-rows,#worldCoverageExamples{grid-template-columns:1fr}}
+
+
+/* Direct original-publisher collection sits beside, never underneath, RSS search geography. */
+#worldDirectSources .world-reporting-toolbar{padding:8px 15px 13px}
+#worldDirectSources .world-reporting-rows{max-height:590px}
+#worldDirectSources .world-direct-health{border-top:1px solid #d7e5e8;padding:12px 15px}
+#worldDirectSources .world-direct-health>summary{font-size:11px;font-weight:750;color:#286172;cursor:pointer;display:flex;gap:10px;justify-content:space-between}
+#worldDirectSources .world-direct-health>summary span{color:#64818d;font-weight:500}
+#worldDirectSources .world-direct-health .world-coverage-audit-rows{margin:12px 0 0}
+#worldDirectSources .world-coverage-audit-row a{font-size:10px;color:#206a7b;text-decoration:underline}
