@@ -31,10 +31,11 @@ class NewOfficialSignalTests(unittest.TestCase):
   with self.assertRaises(ValueError):
    ofac_parse(("\n".join(lines)+"\n").encode())
   # Parsing the actual file has a high minimum to prevent publishing a sample.
-  from unittest.mock import patch
-  from scripts import collect_us_ofac as module
-  with patch.object(module,"parse",wraps=module.parse):
-   pass
+  rows,stats=ofac_parse(("\n".join(lines)+"\n").encode(),minimum=1)
+  self.assertEqual(len(rows),1)
+  self.assertEqual(rows[0]["sanctions_programs"],["SDGT","IRAN"])
+  self.assertEqual(stats["excluded_types"]["individual"],1)
+  self.assertEqual(stats["excluded_types"]["vessel"],1)
 
  def test_sec_rss_official_host_only(self):
   rss=b'''<rss><channel>
