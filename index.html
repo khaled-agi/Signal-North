@@ -250,6 +250,9 @@
           <label for="canadianHubQuery">Search <input id="canadianHubQuery" type="search" placeholder="Regulator, province, dataset…" aria-label="Search Canadian source registry"></label>
         </div>
         <div id="canadianHubRows" class="world-reporting-rows" aria-live="polite"><div class="empty">Loading official source coverage…</div></div>
+        <details class="cfpb-history" id="ciroNamedProceedings"><summary><strong>CIRO concluded enforcement decisions · named investment dealers</strong><span id="ciroNamedStatus">Checking confirmed case records…</span></summary>
+        <p class="supporting-disclaimer">Direct CIRO published concluded proceedings and predecessor IIROC decisions. Named investment-dealer legal entities are separate from their parent banks. Fines, costs, and disgorgement are displayed separately. Pending hearing allegations are excluded.</p>
+        <div class="world-reporting-toolbar"><label for="ciroNamedSearch">Dealer <input id="ciroNamedSearch" type="search" placeholder="Investment dealer…" aria-label="Search concluded CIRO dealer cases"></label></div><div id="ciroNamedRows" class="world-reporting-rows"><div class="empty">Loading concluded CIRO cases…</div></div></details>
         <details class="cfpb-history" id="ciroSectorStats"><summary><strong>CIRO firm-level sector enforcement totals · FY2024 onward</strong><span id="ciroSectorHealth">Checking official annual figures…</span></summary>
         <p class="supporting-disclaimer">These are annual sector-wide enforcement totals against firms, not case-level or institution-level decisions. Fiscal 2027 is partial to September 30, 2026. CIRO's own decision pages still reject automated collection (HTTP 403), so this separately sourced historical snapshot must not be treated as a live case feed.</p>
         <div id="ciroSectorRows" class="world-reporting-rows"><div class="empty">Loading CIRO annual enforcement metrics…</div></div></details>
@@ -450,6 +453,7 @@
 <script src="./canadian_sources.js?v=__BUILD_SHA__" defer></script>
 <script src="./canadian_provincial.js?v=__BUILD_SHA__" defer></script>
 <script src="./ciro_sector.js?v=__BUILD_SHA__" defer></script>
+<script src="./ciro_named.js?v=__BUILD_SHA__" defer></script>
 <script src="./canadian_verified_enforcement.js?v=__BUILD_SHA__" defer></script>
 <script src="./fintrac_official.js?v=__BUILD_SHA__" defer></script>
 <script src="./canadian_regulatory_leads.js?v=__BUILD_SHA__" defer></script>

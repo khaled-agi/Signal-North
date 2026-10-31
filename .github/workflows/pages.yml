@@ -57,6 +57,7 @@ jobs:
           node --check obsi_firms.js
           node --check canadian_provincial.js
           node --check ciro_sector.js
+          node --check ciro_named.js
           node --check bank_disclosures.js
           node --check canadian_sources.js
           node --check canadian_regulatory_leads.js
@@ -76,6 +77,7 @@ jobs:
           python -m unittest discover -s tests -p test_bank_collector.py
           python -m unittest discover -s tests -p test_cross_source_graph.py
           python -m unittest discover -s tests -p test_obsi_firm_data.py
+          python -m unittest discover -s tests -p test_ciro_named.py
           python -m unittest discover -s tests -p test_provincial_sources.py
           python -m unittest discover -s tests -p test_empty_market_recovery.py
           python -m unittest discover -s tests -p 'test_global_regulator_publications.py'
@@ -197,7 +199,7 @@ jobs:
       - name: Assemble cache-busted static website
         run: |
           mkdir -p _site/data
-          cp index.html styles.css light.css editorial.css connections.css research.css network.css refine.css global.css reviewed.css product_redesign.css map_upgrade.js geography.js app.js supporting_intelligence.js community_signals.js intel.js workspace.js connections.js research.js network.js global.js reviewed.js cfpb.js cafc.js obsi.js obsi_history.js obsi_firms.js bank_disclosures.js canadian_sources.js canadian_provincial.js ciro_sector.js canadian_regulatory_leads.js canadian_verified_enforcement.js osfi_register.js fintrac_official.js .nojekyll _site/
+          cp index.html styles.css light.css editorial.css connections.css research.css network.css refine.css global.css reviewed.css product_redesign.css map_upgrade.js geography.js app.js supporting_intelligence.js community_signals.js intel.js workspace.js connections.js research.js network.js global.js reviewed.js cfpb.js cafc.js obsi.js obsi_history.js obsi_firms.js bank_disclosures.js canadian_sources.js canadian_provincial.js ciro_sector.js ciro_named.js canadian_regulatory_leads.js canadian_verified_enforcement.js osfi_register.js fintrac_official.js .nojekyll _site/
           cp data/events.json data/status.json data/news.json data/news_status.json data/fraud_stats.json data/bank_disclosures.json data/incidents.json _site/data/
           if [ -f data/news_archive.json ]; then cp data/news_archive.json _site/data/; fi
           if [ -f data/archive_status.json ]; then cp data/archive_status.json _site/data/; fi
@@ -212,7 +214,7 @@ jobs:
           cp data/research_library.json _site/data/
           cp data/theme_trends.json data/sector_watch.json _site/data/
           cp data/global_enforcement.json data/global_enforcement_seed.json data/global_source_status.json data/world_jurisdictions.json data/world_reporting.json data/world_reporting_status.json data/world_local_unattributed.json data/world_coverage_counterexamples.json data/direct_country_sources.json data/direct_country_source_status.json data/direct_country_source_catalog.json data/cfpb_complaints.json data/cfpb_complaints_status.json data/cfpb_monthly_history.json data/cfpb_monthly_history_status.json data/cafc_aggregates.json data/cafc_source_status.json data/global_regulator_publications.json data/global_regulator_publications_status.json _site/data/
-          cp data/bank_complaint_disclosures.json data/canadian_source_registry.json data/canadian_enforcement_verified.json data/obsi_annual_banking.json data/obsi_firm_complaints.json data/ciro_enforcement_activity.json _site/data/
+          cp data/bank_complaint_disclosures.json data/canadian_source_registry.json data/canadian_enforcement_verified.json data/obsi_annual_banking.json data/obsi_firm_complaints.json data/ciro_enforcement_activity.json data/ciro_named_enforcement.json _site/data/
           for file in data/canadian_regulatory_leads.json data/osfi_institutions.json data/fintrac_penalties_official.json; do
             if [ -f "$file" ]; then cp "$file" _site/data/; fi
           done
