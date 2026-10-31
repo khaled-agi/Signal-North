@@ -176,6 +176,7 @@ def generate():
  bank_disclosures=load("bank_complaint_disclosures.json","records")
  fintrac=load("fintrac_penalties_official.json","records")
  fcac=[x for x in load("canadian_enforcement_verified.json","records") if x.get("agency")=="FCAC"]
+ ciro_cases=load("ciro_named_enforcement.json","records")
  amf=load("amf_quebec_entities.json","records")
  obsi_sector=load("obsi_annual_banking.json","rows")
  obsi_firms=load("obsi_firm_complaints.json","records")
@@ -204,6 +205,16 @@ def generate():
    "penalty_cad":notice.get("penalty_cad"),"violation_count":notice.get("violation_count"),
    "status_summary":notice.get("status_summary"),"source_url":notice.get("source_url"),
    "source_kind":"official_FINTRAC_index"})
+ for case in ciro_cases:
+  entry=ensure(case.get("institution"))
+  if not entry:continue
+  entry.setdefault("official_data",{}).setdefault("ciro_concluded_cases",[]).append({
+   "id":case.get("id"),"status":case.get("status"),"date":case.get("concluded_date"),
+   "publication_date":case.get("publication_date"),"topic":case.get("topic"),
+   "fine_cad":case.get("fine_cad"),"costs_cad":case.get("costs_cad"),
+   "disgorgement_cad":case.get("disgorgement_cad"),"source_url":case.get("case_url"),
+   "source_kind":case.get("source_kind"),
+   "note":"Entity-specific disciplinary case; do not attribute to parent or affiliates."})
  for action in fcac:
   entry=ensure(action.get("name"))
   if not entry:continue
@@ -229,7 +240,8 @@ def generate():
   official["counts"]={"fintrac_public_notices":len(official.get("fintrac_notices",[])),
      "fcac_index_notices":len(official.get("fcac_notices",[])),
      "bank_disclosure_years":len(official.get("bank_disclosures",[])),
-     "obsi_firm_years":len(official.get("obsi_firm_complaints",[]))}
+     "obsi_firm_years":len(official.get("obsi_firm_complaints",[])),
+     "ciro_concluded_cases":len(official.get("ciro_concluded_cases",[]))}
   if official.get("bank_disclosures"):
    official["bank_disclosures"].sort(key=lambda x:x.get("year",0),reverse=True)
   if official.get("fintrac_notices"):
@@ -259,7 +271,7 @@ def generate():
   "source_counts":{"enforcement":len(events),"reviewed_incidents":len(incidents),"unverified_report_groups":len(articles),
     "osfi_institution_rows":len(osfi),"fintrac_index_notices":len(fintrac),
     "bank_disclosure_records":len(bank_disclosures),"fcac_manual_sample":len(fcac),
-    "obsi_banking_years":len(obsi_sector),"obsi_firm_records":len(obsi_firms),"amf_quebec_entity_rows":len(amf)},
+    "obsi_banking_years":len(obsi_sector),"obsi_firm_records":len(obsi_firms),"ciro_confirmed_cases":len(ciro_cases),"amf_quebec_entity_rows":len(amf)},
   "sector_context":{"obsi_banking":obsi_sector,"note":"OBSI annual sector totals must not be attributed to individual institutions."},
   "institutions":ranked
  }
