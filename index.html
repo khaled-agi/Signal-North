@@ -250,6 +250,10 @@
           <label for="canadianHubQuery">Search <input id="canadianHubQuery" type="search" placeholder="Regulator, province, dataset…" aria-label="Search Canadian source registry"></label>
         </div>
         <div id="canadianHubRows" class="world-reporting-rows" aria-live="polite"><div class="empty">Loading official source coverage…</div></div>
+        <details class="cfpb-history" id="canadianRegulatorLeads"><summary><strong>Official regulator publication links · FINTRAC / FCAC / CSA / provinces</strong><span id="canRegLeadStatus">Checking collected source indexes…</span></summary>
+        <p class="supporting-disclaimer">Automated publication links are <strong>research leads, not independently validated enforcement cases</strong>. Open each official source to confirm involved institutions, findings, dates, appeal status and any amounts. Publication coverage varies by regulator.</p>
+        <div class="world-reporting-toolbar"><label for="canRegAgency">Agency <select id="canRegAgency"><option value="">All collected agencies</option></select></label><label for="canRegSearch">Search <input id="canRegSearch" type="search" placeholder="Title or source…" aria-label="Search collected regulator index links"></label></div>
+        <div id="canRegRows" class="world-reporting-rows"><div class="empty">Collection not yet verified.</div></div></details>
         <details class="cfpb-history" id="osfiRegisterPanel"><summary><strong>OSFI federally regulated institutions · downloadable register</strong><span id="osfiRegisterStatus">Checking official monthly CSV snapshot…</span></summary>
           <p class="supporting-disclaimer">Official OSFI regulated-institution directory only. Inclusion indicates regulatory status, not complaints, investigation, wrongdoing or enforcement. No CSV data are displayed until a collector succeeds.</p>
           <div class="world-reporting-toolbar"><label for="osfiInstitutionSearch">Search institution <input id="osfiInstitutionSearch" type="search" placeholder="Bank or institution name…" aria-label="Filter OSFI regulated institutions"></label></div>
@@ -416,6 +420,7 @@
 <script src="./obsi.js?v=__BUILD_SHA__" defer></script>
 <script src="./bank_disclosures.js?v=__BUILD_SHA__" defer></script>
 <script src="./canadian_sources.js?v=__BUILD_SHA__" defer></script>
+<script src="./canadian_regulatory_leads.js?v=__BUILD_SHA__" defer></script>
 <script src="./osfi_register.js?v=__BUILD_SHA__" defer></script>
 <script src="./reviewed.js?v=__BUILD_SHA__" defer></script>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" async crossorigin="" onload="window.dispatchEvent(new Event('signalnorth:mapready'))"></script>
