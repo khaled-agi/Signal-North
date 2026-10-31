@@ -20,9 +20,9 @@ from urllib.parse import urlencode, urlsplit
 import pycountry
 import requests
 try:
-    from .world_country_lenses import country_profile, CRIME_TERMS, research_jurisdictions, country_title_reference
+    from .world_country_lenses import country_profile, CRIME_TERMS, research_jurisdictions, country_title_reference, LANGUAGE_PROXY_EDITIONS, NEWS_EDITIONS
 except ImportError:
-    from world_country_lenses import country_profile, CRIME_TERMS, research_jurisdictions, country_title_reference
+    from world_country_lenses import country_profile, CRIME_TERMS, research_jurisdictions, country_title_reference, LANGUAGE_PROXY_EDITIONS, NEWS_EDITIONS
 
 DATA=Path(__file__).resolve().parents[1]/"data"
 FEED=DATA/"world_reporting.json"
@@ -81,15 +81,40 @@ def search_queries(profile):
         f'"{name}" ("money laundering" OR "financial crime" OR "investment scam" OR "fraud enforcement") when:{QUERY_DAYS}d',
         f'"{name}" (bank fined OR "financial regulator penalty" OR "anti-money laundering fine") when:{QUERY_DAYS}d',
     ]
-    if profile["local_term"] and profile["local_country_term"]:
+    if profile["local_term"] and profile["local_country_term"] and profile["local_language"]!="en":
         queries.append(f'{profile["local_term"]} "{profile["local_country_term"]}" when:{QUERY_DAYS}d')
     return queries
 
+def is_local_query(profile,query):
+    """Whether this query uses curated native-language search terms."""
+    return bool(profile.get("local_language") not in (None,"en")
+        and query==search_queries(profile)[-1])
+
+def query_edition(profile,query):
+    """Google News UI/feed edition, not a claim of article or source language.
+
+    English searches deliberately use English editions, while native-language
+    searches use a matching national edition where supported, otherwise a
+    labeled same-language proxy. Unlisted languages fall back to en-US
+    discovery with original native-script keywords.
+    """
+    code=profile["code"]
+    known=NEWS_EDITIONS.get(code)
+    if is_local_query(profile,query):
+        language=profile["local_language"]
+        if known and known[0].split("-")[0]==language:
+            return known,"local_country_edition"
+        proxy=LANGUAGE_PROXY_EDITIONS.get(language)
+        if proxy:return proxy,"language_proxy_edition"
+        return ("en-US","US","en"),"native_query_english_edition_fallback"
+    if known and known[0].split("-")[0]=="en":
+        return known,"english_country_edition"
+    return ("en-US","US","en"),"english_global_edition"
+
 def feed_url(profile,query):
-    # Configured editions are market hints, not jurisdiction guarantees.
-    params={"q":query,"hl":profile["edition_language"],
-            "gl":profile["edition_country"],
-            "ceid":profile["edition_country"]+":"+profile["edition_id"]}
+    edition,_basis=query_edition(profile,query)
+    hl,gl,ceid=edition
+    params={"q":query,"hl":hl,"gl":gl,"ceid":gl+":"+ceid}
     return "https://news.google.com/rss/search?"+urlencode(params)
 
 def safe_link(raw):
@@ -112,7 +137,10 @@ def classify(title,profile):
     regulatory=bool(FINANCE_TERMS.search(title) and ENFORCEMENT_TERMS.search(title))
     if regulatory:
         return "Reported financial regulatory enforcement (unverified)"
-    relevant=any(term in t for term in TITLE_RELEVANCE_TERMS)
+    local_term=(profile.get("local_term") or "").casefold()
+    relevant=any(term in t for term in TITLE_RELEVANCE_TERMS) or bool(
+        local_term and re.search(r"(?<!\w)"+re.escape(local_term)+r"(?!\w)",t)
+    )
     if not relevant:
         return None
     if any(x in t for x in ("launder","blanchiment","blanqueo","lavado de dinero","غسل الأموال")):
@@ -141,6 +169,8 @@ def parse_feed(raw,profile,query,observed_at):
             continue
         src=item.find("source")
         publisher=" ".join((src.text or "").split())[:100] if src is not None else "RSS discovery"
+        edition,edition_basis=query_edition(profile,query)
+        native_query=is_local_query(profile,query)
         key=(profile["code"]+"|"+title.casefold()+"|"+publisher.casefold())
         results.append({
             "id":"world-news-"+hashlib.sha256(key.encode()).hexdigest()[:20],
@@ -150,9 +180,12 @@ def parse_feed(raw,profile,query,observed_at):
             "country_basis":"country_explicitly_named_in_title_not_incident_location",
             "country_reference_status":"country_name_in_headline_not_incident_location",
             "country_reference_term":country_term,
-            "source_market":profile["edition_country"],
+            "source_market":edition[1],
+            "query_language":profile["local_language"] if native_query else "en",
+            "query_edition":edition[1]+":"+edition[2],
+            "query_edition_basis":edition_basis,
             "language_strategy":profile["language_strategy"],
-            "search_language":profile["local_language"] if profile["local_term"] and query==search_queries(profile)[-1] else "en",
+            "search_language":profile["local_language"] if native_query else "en",
             "category":category,"evidence_status":"unverified_news_lead",
             "review_status":"not_source_reviewed",
             "source_kind":"country_localized_news_search",
@@ -183,6 +216,7 @@ def collect_market(profile,observed_at):
                 "error" if failures else "reporting_found" if combined else "attempted_empty",
         "attempted_at":iso(observed_at),
         "queries_attempted":attempts,
+        "local_queries_attempted":int(bool(profile.get("local_language") not in (None,"en") and profile.get("local_term"))),
         "accepted":len(combined),"errors":failures[:3],
     }
 
@@ -253,6 +287,10 @@ def run():
     save(STATUS,{"last_completed_at":iso(ts),"market_count":len(profiles),
         "markets_attempted":total_attempted,"markets_with_current_news":count_codes,
         "current_leads":len(final),"batch_size":len(chosen),"next_cursor":next_cursor,
+        "local_language_markets_configured":sum(
+            bool(p["local_term"] and p["local_language"]!="en") for p in profiles),
+        "markets_with_local_queries_attempted":sum(
+            bool(v.get("local_queries_attempted",0)) for v in status.values()),
         "countries":status,
         "coverage_note":"Rotating RSS sampling with explicit headline-country mention checks. Not all local reporting and not incident geography. No accepted results do not imply no fraud."})
     save(STATE,{"next_cursor":next_cursor})
