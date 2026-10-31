@@ -74,7 +74,7 @@ def parse_csv(data,minimum=300):
    "note":"An entity designation is not a bank identity match, an allegation of bank fraud, or a criminal conviction. Check current UK designation status.",
   }
   entries[uid]=entry
- if total<1000 or len(entries)<minimum:
+ if total<minimum or len(entries)<minimum:
   raise ValueError(f"Incomplete FCDO CSV: {total} rows, {len(entries)} entity designations")
  return list(entries.values()),total
 
