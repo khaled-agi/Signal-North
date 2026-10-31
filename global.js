@@ -125,7 +125,7 @@
     html(x.publisher||"Unknown publisher")+'</div><strong>'+html(x.title)+'</strong>'+
     '<div class="world-reporting-details">'+html(x.category||"News lead")+
     ' · Country explicitly referenced in headline · Unverified; NOT confirmed incident location'+
-    (url?' · <a href="'+html(url)+'" target="_blank" rel="noopener noreferrer">Original source ↗</a>':"")+
+    (url?' · <a href="'+html(url)+'" target="_blank" rel="noopener noreferrer">Open linked article ↗</a>':"")+
     '</div></article>';
   }).join(""):'<div class="empty">No matching reported headlines stored. This does not mean there were no fraud incidents; see the country scan status.</div>';
   get("worldNewsShown").textContent=visible.length+" of "+matches.length+" matching reports shown";
@@ -153,7 +153,7 @@
     '<div class="world-reporting-details">Local-language search targeted '+
     html(x.search_market_name||"an unconfirmed market")+
     ' · Country and article origin NOT established · No map pin'+
-    (source?' · <a href="'+html(source)+'" target="_blank" rel="noopener noreferrer">Original source ↗</a>':"")+
+    (source?' · <a href="'+html(source)+'" target="_blank" rel="noopener noreferrer">Open linked article ↗</a>':"")+
     '</div></article>';
   }).join(""):'<div class="empty">No additional original-language candidates stored in this selection. Only matches explicitly supported by their headlines appear in the country-referenced feed above.</div>';
   get("localLanguageSummary").textContent=model.localCandidates.length+" unlocated source leads";
