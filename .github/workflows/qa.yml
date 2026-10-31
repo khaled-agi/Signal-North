@@ -34,6 +34,7 @@ jobs:
           node --check ciro_named.js
           node --check us_fdic.js
           node --check us_regulatory_signals.js
+          node --check primary_regulatory_signals.js
           node --check connections.js
           node --check fintrac_official.js
           node --check canadian_regulatory_leads.js
@@ -64,6 +65,7 @@ jobs:
           python -m unittest discover -s tests -p test_ciro_named.py
           python -m unittest discover -s tests -p test_us_institutions.py
           python -m unittest discover -s tests -p test_us_regulator_signals.py
+          python -m unittest discover -s tests -p test_new_official_sources.py
           python -m unittest discover -s tests -p test_provincial_sources.py
           python -m unittest discover -s tests -p test_canadian_integrity.py
           python -m unittest discover -s tests -p test_empty_market_recovery.py
