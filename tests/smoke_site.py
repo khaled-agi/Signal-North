@@ -169,6 +169,16 @@ try:
         page.locator('[data-mapmode="all"]').click()
         page.locator('[data-tab="fraud"]').click()
         assert page.locator("#worldNewsCountry option").count() >= 240
+        assert page.locator("#worldDirectSources").count() == 1
+        assert page.locator("#worldDirectKind option").count() >= 6
+        assert page.locator("#worldDirectRows").count() == 1
+        assert page.locator("#worldDirectHealthRows").count() == 1
+        assert "sources configured" in page.locator("#worldDirectSummary").inner_text()
+        assert "NOT necessarily where" in page.locator("#worldDirectSources .supporting-disclaimer").first.inner_text()
+        page.locator("#worldDirectKind").select_option("central_bank")
+        assert page.locator("#worldDirectShown").inner_text()
+        page.locator("#worldDirectKind").select_option("")
+
         # The gap audit distinguishes unscanned and empty feeds from genuine
         # proof of absent fraud reporting, and links real counterexamples.
         page.locator("#worldCoverageAudit > summary").click()
