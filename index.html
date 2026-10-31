@@ -288,6 +288,10 @@
             <label for="obsiFirmSearch">Find institution <input id="obsiFirmSearch" type="search" placeholder="e.g. RBC, TD, Scotiabank…" aria-label="Filter OBSI source links by financial institution"></label>
           </div>
           <div id="obsiSourceLinks" class="world-reporting-rows" aria-live="polite"></div>
+          <div class="panel-heading"><div><div class="eyebrow">OBSI FISCAL-YEAR HISTORY / SECTOR-WIDE</div><h2>Published banking complaint trends</h2></div><span id="obsiHistoricStatus" class="small">Checking official banking history…</span></div>
+          <p class="supporting-disclaimer">These are OBSI banking-sector totals, not complaints attributed to individual banks. The 2025 expansion to all federally regulated banks creates a coverage break; do not treat it as purely organic complaint growth. Institution-by-institution historical totals remain unverified without a Power BI data export.</p>
+          <div id="obsiHistoricalSeries" class="world-reporting-rows"><div class="empty">Loading published OBSI historical figures…</div></div>
+          <details class="cfpb-history"><summary>Historical OBSI official report documents <span id="obsiReportCount">Checking report catalog…</span></summary><div id="obsiReportLinks" class="world-reporting-rows"><div class="empty">Official report downloads pending…</div></div></details>
           <p class="supporting-disclaimer"><strong>Historical scope:</strong> OBSI's Data Cube provides historical reporting from November 1, 2016, updated quarterly. Individual bank case summaries cover closed federally regulated bank cases from June 30, 2022. Scope and bank participation have changed over time, especially with the single banking external complaints body effective November 2024. Do not add OBSI cases to CAFC fraud reports or CFPB complaint counts.</p>
         </section>
       </div>
@@ -426,6 +430,7 @@
 <script src="./cfpb.js?v=__BUILD_SHA__" defer></script>
 <script src="./cafc.js?v=__BUILD_SHA__" defer></script>
 <script src="./obsi.js?v=__BUILD_SHA__" defer></script>
+<script src="./obsi_history.js?v=__BUILD_SHA__" defer></script>
 <script src="./bank_disclosures.js?v=__BUILD_SHA__" defer></script>
 <script src="./canadian_sources.js?v=__BUILD_SHA__" defer></script>
 <script src="./canadian_verified_enforcement.js?v=__BUILD_SHA__" defer></script>
