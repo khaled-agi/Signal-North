@@ -172,7 +172,7 @@ def parse_feed(raw,profile,query,observed_at,unattributed=None):
             # country-backed evidence. Only the search market is known.
             local_term=profile.get("local_term") or ""
             if (unattributed is not None and is_local_query(profile,query) and
-                local_term and re.search(r"(?<!\\w)"+re.escape(local_term)+r"(?!\\w)",
+                local_term and re.search(r"(?<!\w)"+re.escape(local_term)+r"(?!\w)",
                                          title,re.IGNORECASE)):
                 src=item.find("source")
                 publisher=" ".join((src.text or "").split())[:100] if src is not None else "RSS discovery"
