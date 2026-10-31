@@ -212,6 +212,23 @@
       </div>
     </details>
 </div>
+    <details class="overview-deepdive cfpb-complaints-panel" id="cfpbComplaints">
+      <summary><div><strong>U.S. consumer complaints · CFPB</strong><span id="cfpbSummary">Source 1 · Structured public complaints · Checking collection</span></div><span class="overview-expand">Expand ↓</span></summary>
+      <div class="overview-deepdive-content">
+        <section class="panel cfpb-complaints-content">
+          <div class="panel-heading"><div><div class="eyebrow">CONSUMER FINANCIAL PROTECTION BUREAU / PUBLIC COMPLAINTS</div><h2>What consumers report about financial products</h2></div><span id="cfpbHealth" class="small">Checking data source...</span></div>
+          <p class="supporting-disclaimer"><strong>Complaints are consumer allegations, not verified misconduct, fraud cases, or enforcement.</strong> This is a bounded sample of recent published complaint records, not all U.S. complaints. Counts by company cannot be compared without market share, exposure, and reporting differences. States refer to consumers' mailing addresses, not crime locations. No complaint narratives or ZIP codes are collected.</p>
+          <div id="cfpbStats" class="cfpb-stats" aria-live="polite"></div>
+          <div class="world-reporting-toolbar">
+            <label for="cfpbProduct">Product <select id="cfpbProduct" aria-label="CFPB complaint product"><option value="">All products</option></select></label>
+            <label for="cfpbState">State <select id="cfpbState" aria-label="Consumer mailing state"><option value="">All states</option></select></label>
+            <label for="cfpbQuery">Search <input id="cfpbQuery" type="search" placeholder="Company or complaint issue…" aria-label="Search CFPB company and issue"></label>
+          </div>
+          <div id="cfpbRows" class="world-reporting-rows" aria-live="polite"><div class="empty">No CFPB records collected yet.</div></div>
+          <div class="world-results-footer"><span id="cfpbShown">0 records</span><button id="cfpbMore" type="button" hidden>Load 30 more</button><a href="https://www.consumerfinance.gov/data-research/consumer-complaints/" target="_blank" rel="noopener noreferrer">CFPB database and methodology ↗</a></div>
+        </section>
+      </div>
+    </details>
     <details class="overview-deepdive world-reporting-panel" id="worldReportingPanel" open>
       <summary><div><strong>Worldwide fraud reporting</strong><span id="worldReportingSummary">Country-aware searches · Local languages · Unverified headlines</span></div><span class="overview-expand">Expand ↓</span></summary>
       <div class="overview-deepdive-content">
@@ -326,6 +343,7 @@
 <script src="./research.js?v=__BUILD_SHA__" defer></script>
 <script src="./network.js?v=__BUILD_SHA__" defer></script>
 <script src="./global.js?v=__BUILD_SHA__" defer></script>
+<script src="./cfpb.js?v=__BUILD_SHA__" defer></script>
 <script src="./reviewed.js?v=__BUILD_SHA__" defer></script>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" async crossorigin="" onload="window.dispatchEvent(new Event('signalnorth:mapready'))"></script>
 </body></html>

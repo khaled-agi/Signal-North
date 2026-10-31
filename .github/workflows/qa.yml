@@ -25,6 +25,7 @@ jobs:
           python -m compileall -q scripts tests
           node --check app.js
           node --check global.js
+          node --check cfpb.js
           node --check geography.js
           node --check intel.js
           node --check supporting_intelligence.js
@@ -41,6 +42,7 @@ jobs:
           python -m unittest discover -s tests -p test_community_signals.py
           python -m unittest discover -s tests -p test_world_reporting.py
           python -m unittest discover -s tests -p test_direct_country_sources.py
+          python -m unittest discover -s tests -p test_cfpb_complaints.py
           python -m unittest discover -s tests -p test_empty_market_recovery.py
           python -m unittest discover -s tests -p test_global_regulator_publications.py
       - name: Test real browser interactions

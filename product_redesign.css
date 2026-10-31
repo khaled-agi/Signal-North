@@ -262,3 +262,19 @@ box-shadow:0 2px 9px #12364830,0 0 0 1px #176f7950;transition:transform .13s eas
 .world-coverage-example strong{font-size:12px;color:#245366}
 .world-coverage-example a{color:#146b7b;font-size:11px;font-weight:700}
 @media(max-width:730px){.world-coverage-audit-rows,#worldCoverageExamples{grid-template-columns:1fr}}
+
+
+/* CFPB single-source complaint signals, deliberately outside verified enforcement. */
+.cfpb-complaints-panel{margin:0 0 17px}
+.cfpb-complaints-panel .overview-deepdive-content{padding:11px}
+.cfpb-complaints-content{margin:0}
+.cfpb-complaints-content>.supporting-disclaimer{padding:0 20px 15px;line-height:1.6;font-size:11px}
+.cfpb-stats{padding:0 20px 17px;display:flex;flex-wrap:wrap;gap:9px}
+.cfpb-sample-count,.cfpb-mini-stat{padding:11px 13px;border:1px solid #d6e6e8;border-radius:9px;display:flex;flex-direction:column;gap:5px;background:#f7fbfc;min-width:140px;flex:1 1 155px}
+.cfpb-sample-count strong{font-size:23px;color:#174e60}
+.cfpb-mini-stat strong{font-size:16px;color:#1b5868}
+.cfpb-sample-count span,.cfpb-mini-stat span{font-size:11px;color:#547780;line-height:1.35}
+.cfpb-complaints-content .world-reporting-rows{max-height:570px}
+.cfpb-record p{font-size:11px;line-height:1.5;color:#536f7c;margin:6px 0}
+.cfpb-record .world-reporting-details{margin-top:7px}
+@media(max-width:760px){.cfpb-stats{padding:0 12px 12px}.cfpb-complaints-panel .overview-deepdive-content{padding:6px}}

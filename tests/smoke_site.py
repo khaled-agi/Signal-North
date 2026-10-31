@@ -32,6 +32,25 @@ try:
         page.on("pageerror", lambda e: errors.append(str(e)))
         page.on("response", lambda resp: resources.append(
             (resp.status, resp.url)) if "/data/events.json" in resp.url or resp.url.endswith("/app.js") else None)
+        # Browser-only CFPB fixture; no synthetic complaint is committed to site data.
+        page.route("**/data/cfpb_complaints.json*",lambda route:route.fulfill(
+            status=200,content_type="application/json",body=json.dumps({
+              "source":"CFPB","country_code":"US","complaints":[{
+                "id":"12345678","date_received":"2026-10-25",
+                "company":"Example Financial Services","product":"Checking or savings account",
+                "sub_product":"Checking account","issue":"Managing an account",
+                "sub_issue":"Problem with a transaction","state":"NY",
+                "company_response":"Closed with explanation","timely":"Yes",
+                "source_url":"https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/12345678",
+                "evidence_status":"published_consumer_complaint_not_verified",
+                "geography_basis":"consumer_reported_state_not_incident_location"
+              }]
+            })))
+        page.route("**/data/cfpb_complaints_status.json*",lambda route:route.fulfill(
+            status=200,content_type="application/json",body=json.dumps({
+              "status":"ok","stored_records":1,
+              "last_attempt_at":"2026-10-30T12:00:00+00:00"
+            })))
         page.goto(url, wait_until="domcontentloaded", timeout=20000)
         try:
             page.wait_for_function("document.querySelectorAll('.metric').length === 4", timeout=20000)
@@ -53,6 +72,22 @@ try:
         page.locator("#search").fill("RBC Unlikelyterm")
         assert page.locator("#eventRows .event").count() == 0
         page.locator('[data-tab="fraud"]').click()
+        page.locator("#cfpbComplaints > summary").click()
+        page.wait_for_function("document.querySelectorAll('#cfpbRows .cfpb-record').length === 1")
+        assert "Example Financial Services" in page.locator("#cfpbRows").inner_text()
+        assert "allegation" in page.locator("#cfpbRows").inner_text().lower()
+        assert "not verified misconduct" in page.locator("#cfpbComplaints").inner_text().lower()
+        assert page.locator('#cfpbRows a[href="https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/12345678"]').count() == 1
+        assert page.locator("#cfpbRows").locator("text=private narrative").count() == 0
+        page.locator("#cfpbQuery").fill("unmatched company")
+        assert page.locator("#cfpbRows .cfpb-record").count() == 0
+        page.locator("#cfpbQuery").fill("Example")
+        assert page.locator("#cfpbRows .cfpb-record").count() == 1
+        page.locator("#cfpbState").select_option("NY")
+        assert page.locator("#cfpbRows .cfpb-record").count() == 1
+        page.locator("#cfpbComplaints > summary").click()
+        print("CFPB public structured complaint record and safe search/filter display: PASS")
+
         page.wait_for_function("document.querySelectorAll('#fraudNational .fraud-amount').length >= 2", timeout=10000)
         print("National fraud statistics:", page.locator("#fraudNational .fraud-amount").count())
         page.locator('[data-tab="losses"]').click()
