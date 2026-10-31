@@ -16,16 +16,16 @@
     out.innerHTML='<div class="empty">The last official FDIC collection is unavailable. This does not indicate zero institutions or failures.</div>';return;
   }
   const records=source.records, matches=records.filter(r=>!query||
-    [r.institution,r.city,r.state,r.fdic_cert,r.acquirer].some(x=>String(x||"").toLowerCase().includes(query)));
+    [r.institution,r.city,r.state,r.fdic_cert,r.ncua_charter,r.acquirer].some(x=>String(x||"").toLowerCase().includes(query)));
   el("usFdicStatus").textContent=records.length.toLocaleString("en-US")+" source rows · fetched "+String(source.retrieved_at||"").slice(0,10);
   out.innerHTML=matches.slice(0,90).map(r=>{
    const head='<article class="world-reporting-record"><div class="world-reporting-date">'+
-    esc(r.state||"United States")+' · FDIC certificate '+esc(r.fdic_cert)+' · '+(dataset==="institutions"?"Insured bank register":"Bank lifecycle event")+'</div><strong>'+esc(r.institution)+'</strong>'+
+    esc(r.state||"United States")+' · '+(dataset==="ncua"?'NCUA charter '+esc(r.ncua_charter):'FDIC certificate '+esc(r.fdic_cert))+' · '+(dataset==="institutions"?"Insured bank register":dataset==="ncua"?"Insured credit union register":"Bank lifecycle event")+'</div><strong>'+esc(r.institution)+'</strong>'+
     '<div class="world-reporting-details">'+esc(r.city||"")+
     (dataset==="failures"?' · Failure date: '+esc(r.failure_date||"Unknown")+' · Resolution: '+esc(r.resolution_type||"Not specified")+
-      (r.acquirer?' · Acquirer: '+esc(r.acquirer):''):' · Active insured institution')+
+      (r.acquirer?' · Acquirer: '+esc(r.acquirer):'') :dataset==="ncua"?' · NCUA quarterly cycle '+esc(r.cycle||"Unknown"):' · Active insured institution')+
     '</div>';
-   return head+'<a href="'+(dataset==="failures"?'https://banks.data.fdic.gov/bankfind-suite/failures':'https://banks.data.fdic.gov/bankfind-suite/')+
+   return head+'<a href="'+(dataset==="failures"?'https://banks.data.fdic.gov/bankfind-suite/failures':dataset==="ncua"?'https://ncua.gov/analysis/credit-union-corporate-call-report-data/quarterly-data':'https://banks.data.fdic.gov/bankfind-suite/')+
     '" target="_blank" rel="noopener noreferrer">Official FDIC source ↗</a></article>';
   }).join("")+'<p class="supporting-disclaimer">Showing '+Math.min(90,matches.length)+' of '+
   matches.length.toLocaleString("en-US")+' matching original records; use institution search to narrow results.</p>';
