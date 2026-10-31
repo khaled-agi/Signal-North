@@ -290,3 +290,13 @@ box-shadow:0 2px 9px #12364830,0 0 0 1px #176f7950;transition:transform .13s eas
 .cfpb-history-reasons{display:flex;gap:5px;flex-wrap:wrap;margin-top:9px}
 .cfpb-history-reasons span{padding:5px 7px;border-radius:6px;background:#edf6f7;border:1px solid #d2e5e9;color:#355b6a;font-size:10px;line-height:1.4}
 @media(max-width:730px){.cfpb-history{margin:4px 9px 10px}}
+
+
+/* CAFC Canadian intake: aggregates only, distinct from CFPB and enforcement. */
+.cafc-open-data-panel{margin:0 0 17px}
+.cafc-open-data-panel .overview-deepdive-content{padding:11px}
+.cafc-content>.supporting-disclaimer{padding:0 20px 16px;line-height:1.6;font-size:11px}
+.cafc-content .world-reporting-rows{max-height:530px}
+.cafc-content .cfpb-stats{padding:4px 20px 15px}
+.cafc-content .world-results-footer{align-items:center}
+@media(max-width:730px){.cafc-open-data-panel .overview-deepdive-content{padding:6px}}
