@@ -1,7 +1,7 @@
 {
-  "last_completed_at": "2026-10-30T23:51:16+00:00",
+  "last_completed_at": "2026-10-31T00:03:15+00:00",
   "regulators_configured": 30,
-  "regulators_attempted": 18,
+  "regulators_attempted": 24,
   "countries_with_publication_leads": 0,
   "leads_count": 0,
   "agencies": {
@@ -148,6 +148,54 @@
       "source_domain": "cftc.gov",
       "country_code": "US",
       "regulator": "CFTC"
+    },
+    "US:CFPB": {
+      "status": "error",
+      "error_type": "HTTPError",
+      "checked_at": "2026-10-31T00:03:01+00:00",
+      "source_domain": "consumerfinance.gov",
+      "country_code": "US",
+      "regulator": "CFPB"
+    },
+    "US:Federal Reserve": {
+      "status": "error",
+      "error_type": "HTTPError",
+      "checked_at": "2026-10-31T00:03:01+00:00",
+      "source_domain": "federalreserve.gov",
+      "country_code": "US",
+      "regulator": "Federal Reserve"
+    },
+    "US:SEC": {
+      "status": "error",
+      "error_type": "HTTPError",
+      "checked_at": "2026-10-31T00:03:01+00:00",
+      "source_domain": "sec.gov",
+      "country_code": "US",
+      "regulator": "SEC"
+    },
+    "US:OFAC": {
+      "status": "error",
+      "error_type": "HTTPError",
+      "checked_at": "2026-10-31T00:03:14+00:00",
+      "source_domain": "ofac.treasury.gov",
+      "country_code": "US",
+      "regulator": "OFAC"
+    },
+    "BR:Banco Central do Brasil": {
+      "status": "error",
+      "error_type": "HTTPError",
+      "checked_at": "2026-10-31T00:03:14+00:00",
+      "source_domain": "bcb.gov.br",
+      "country_code": "BR",
+      "regulator": "Banco Central do Brasil"
+    },
+    "BR:CVM": {
+      "status": "error",
+      "error_type": "HTTPError",
+      "checked_at": "2026-10-31T00:03:15+00:00",
+      "source_domain": "gov.br",
+      "country_code": "BR",
+      "regulator": "CVM"
     }
   },
   "coverage_note": "Configured agencies are a small subset of world regulators, not comprehensive enforcement. Official-domain publication leads require individual legal status confirmation."
