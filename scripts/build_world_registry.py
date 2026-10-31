@@ -43,6 +43,19 @@ def build():
   if code and len(code)==2:info[code]=x
  global_events=read("global_enforcement.json","events")
  world_reports=read("world_reporting.json","leads")
+ direct_records=read("world_direct_sources.json","records")
+ direct_counts=Counter(x.get("publisher_country_code") for x in direct_records)
+ try:
+  from .direct_source_catalogue import SOURCES
+ except ImportError:
+  from direct_source_catalogue import SOURCES
+ direct_catalogue=Counter(x["country"] for x in SOURCES)
+ direct_status={}
+ direct_status_path=DATA/"world_direct_source_status.json"
+ if direct_status_path.exists():
+  direct_status=json.loads(direct_status_path.read_text("utf-8")).get("source_health",{})
+ direct_success_counts=Counter(x.get("country_code") for x in direct_status.values()
+    if x.get("checked_at") and x.get("status")!="error")
  agency_publications=read("global_regulator_publications.json","leads")
  agency_lead_counts=Counter(x.get("country_code") for x in agency_publications)
  agency_health={}
@@ -59,6 +72,9 @@ def build():
   profile=country_profile(country)
   attempt=world_status.get(code,{})
   return {"world_reporting_count":reporting_counts.get(code,0),
+    "direct_sources_configured":direct_catalogue.get(code,0),
+    "direct_sources_successfully_checked":direct_success_counts.get(code,0),
+    "direct_original_publications":direct_counts.get(code,0),
     "official_publication_lead_count":agency_lead_counts.get(code,0),
     "regulator_feed_status":"scanned" if any(
       x.get("country_code")==code and x.get("checked_at") for x in agency_health.values()
@@ -101,6 +117,8 @@ def build():
   "jurisdictions":countries,
   "coverage_note":"ISO-3166 country and territory catalogue plus labeled non-ISO research jurisdictions (e.g. Kosovo XK). Official enforcement, country-language news discovery, and unattempted markets are separate coverage levels. A country discovery result is a search-market label only, NOT a geolocated alleged crime. Pins use country centroids solely for geographic browsing, never incident coordinates.",
   "markets_with_recent_reporting":sum(bool(x.get("world_reporting_count")) for x in countries),
+  "markets_with_configured_direct_sources":sum(bool(x.get("direct_sources_configured")) for x in countries),
+  "markets_with_direct_original_publications":sum(bool(x.get("direct_original_publications")) for x in countries),
   "jurisdictions_with_agency_site_publication_leads":sum(bool(x.get("official_publication_lead_count")) for x in countries),
   "markets_attempted":sum(x.get("world_reporting_state")!="not_attempted" for x in countries),
   "iso_jurisdictions":len(pycountry.countries),
