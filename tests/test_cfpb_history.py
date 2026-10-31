@@ -22,7 +22,7 @@ class CFPBHistoryTests(unittest.TestCase):
   self.assertEqual(len(months),178)
   self.assertEqual(h.boundaries("2011-12"),("2011-12-01","2012-01-01"))
   self.assertEqual(h.boundaries("2024-02"),("2024-02-01","2024-03-01"))
-  self.assertEqual(h.month_sequence(datetime(2012,1,8,tzinfo=timezone.utc)),["2011-12"])
+  self.assertEqual(h.month_sequence(datetime(2012,1,25,tzinfo=timezone.utc)),["2011-12"])
 
  def test_month_total_exact_but_issue_only_from_100_sample(self):
   response=Mock()
