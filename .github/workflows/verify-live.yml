@@ -1,0 +1,21 @@
+name: Verify published Signal North site
+on:
+  workflow_dispatch:
+  workflow_run:
+    workflows: ["Update intelligence and deploy"]
+    types: [completed]
+permissions:
+  contents: read
+jobs:
+  public-site:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify deployed HTML, JavaScript and Canadian JSON over HTTPS
+        env:
+          EXPECTED_BUILD_SHA: ${{ github.event.workflow_run.head_sha }}
+        run: python scripts/check_live_site.py --expected "$EXPECTED_BUILD_SHA"
