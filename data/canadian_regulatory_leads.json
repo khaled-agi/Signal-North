@@ -1,0 +1,876 @@
+{
+  "generated_at": "2026-10-31T03:46:58.311290+00:00",
+  "unit": "official_index_link_unreviewed",
+  "note": "Links are discovery leads. They are not verified enforcement actions or evidence of wrongdoing. Only read original documents for case findings.",
+  "sources": {
+    "fintrac": {
+      "status": "success",
+      "last_success": "2026-10-31T03:46:58.311290+00:00",
+      "count": 2,
+      "index_url": "https://fintrac-canafe.canada.ca/pen/4-eng"
+    },
+    "fcac": {
+      "status": "success",
+      "last_success": "2026-10-31T03:46:58.311290+00:00",
+      "count": 44,
+      "index_url": "https://www.canada.ca/en/financial-consumer-agency/services/industry/commissioner-decisions.html"
+    },
+    "ciro": {
+      "status": "unavailable",
+      "last_check": "2026-10-31T03:46:58.311290+00:00",
+      "error_type": "HTTPError",
+      "index_url": "https://www.ciro.ca/enforcement"
+    },
+    "osc": {
+      "status": "success",
+      "last_success": "2026-10-31T03:46:58.311290+00:00",
+      "count": 27,
+      "index_url": "https://www.osc.ca/en/enforcement"
+    },
+    "amf": {
+      "status": "unavailable",
+      "last_check": "2026-10-31T03:46:58.311290+00:00",
+      "error_type": "HTTPError",
+      "index_url": "https://lautorite.qc.ca/en/"
+    },
+    "bcsc": {
+      "status": "success",
+      "last_success": "2026-10-31T03:46:58.311290+00:00",
+      "count": 22,
+      "index_url": "https://www.bcsc.bc.ca/"
+    },
+    "asc": {
+      "status": "success",
+      "last_success": "2026-10-31T03:46:58.311290+00:00",
+      "count": 22,
+      "index_url": "https://www.asc.ca/"
+    },
+    "csa": {
+      "status": "unavailable",
+      "last_check": "2026-10-31T03:46:58.311290+00:00",
+      "error_type": "HTTPError",
+      "index_url": "https://www.securities-administrators.ca/csa-activities/enforcement/disciplined-list/"
+    }
+  },
+  "leads": [
+    {
+      "agency": "FINTRAC",
+      "source_id": "fintrac",
+      "title": "Backgrounder: Change to public notices for administrative monetary penalties",
+      "url": "https://fintrac-canafe.canada.ca/pen/6-eng",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "FINTRAC",
+      "source_id": "fintrac",
+      "title": "Administrative monetary penalties policy",
+      "url": "https://fintrac-canafe.canada.ca/pen/2-eng",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "FCAC",
+      "source_id": "fcac",
+      "title": "Skip to main content",
+      "url": "https://www.canada.ca/en/financial-consumer-agency/services/industry/commissioner-decisions.html#wb-cont",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "FCAC",
+      "source_id": "fcac",
+      "title": "Skip to \"About government\"",
+      "url": "https://www.canada.ca/en/financial-consumer-agency/services/industry/commissioner-decisions.html#wb-info",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "FCAC",
+      "source_id": "fcac",
+      "title": "Français fr",
+      "url": "https://www.canada.ca/fr/agence-consommation-matiere-financiere/services/industrie/decisions-commissaire.html",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "FCAC",
+      "source_id": "fcac",
+      "title": "Commissioner’s Decisions and summaries of proceedings",
+      "url": "https://www.canada.ca/en/financial-consumer-agency/services/industry/supervision-framework.html#toc30",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "FCAC",
+      "source_id": "fcac",
+      "title": "View decisions from 2003 to 2011",
+      "url": "https://www.canada.ca/en/financial-consumer-agency/services/industry/commissioner-decisions/archived-decisions.html",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "FCAC",
+      "source_id": "fcac",
+      "title": "Read Court decisions",
+      "url": "https://www.canada.ca/en/financial-consumer-agency/services/industry/commissioner-decisions/court-decisions.html",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "FCAC",
+      "source_id": "fcac",
+      "title": "Summary of proceeding #5",
+      "url": "https://www.canada.ca/en/financial-consumer-agency/services/industry/commissioner-decisions/summary-proceeding-5.html",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "FCAC",
+      "source_id": "fcac",
+      "title": "Summary of proceeding #4",
+      "url": "https://www.canada.ca/en/financial-consumer-agency/services/industry/commissioner-decisions/summary-proceeding-4.html",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "FCAC",
+      "source_id": "fcac",
+      "title": "Summary of proceeding #3",
+      "url": "https://www.canada.ca/en/financial-consumer-agency/services/industry/commissioner-decisions/summary-proceeding-3.html",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "FCAC",
+      "source_id": "fcac",
+      "title": "Summary of proceeding #2",
+      "url": "https://www.canada.ca/en/financial-consumer-agency/services/industry/commissioner-decisions/summary-proceeding-2.html",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "FCAC",
+      "source_id": "fcac",
+      "title": "Decision #145",
+      "url": "https://www.canada.ca/en/financial-consumer-agency/services/industry/commissioner-decisions/decision-145.html",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "FCAC",
+      "source_id": "fcac",
+      "title": "Summary of proceeding #1",
+      "url": "https://www.canada.ca/en/financial-consumer-agency/services/industry/commissioner-decisions/summary-proceeding-1.html",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "FCAC",
+      "source_id": "fcac",
+      "title": "Decision #144",
+      "url": "https://www.canada.ca/en/financial-consumer-agency/services/industry/commissioner-decisions/decision-144.html",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "FCAC",
+      "source_id": "fcac",
+      "title": "Decision #143",
+      "url": "https://www.canada.ca/en/financial-consumer-agency/services/industry/commissioner-decisions/decision-143.html",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "FCAC",
+      "source_id": "fcac",
+      "title": "Decision #142",
+      "url": "https://www.canada.ca/en/financial-consumer-agency/services/industry/commissioner-decisions/decision-142.html",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "FCAC",
+      "source_id": "fcac",
+      "title": "Decision #141",
+      "url": "https://www.canada.ca/en/financial-consumer-agency/services/industry/commissioner-decisions/decision-141.html",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "FCAC",
+      "source_id": "fcac",
+      "title": "Decision #140",
+      "url": "https://www.canada.ca/en/financial-consumer-agency/services/industry/commissioner-decisions/decision-140.html",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "FCAC",
+      "source_id": "fcac",
+      "title": "Decision #139",
+      "url": "https://www.canada.ca/en/financial-consumer-agency/services/industry/commissioner-decisions/decision-139.html",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "FCAC",
+      "source_id": "fcac",
+      "title": "Decision #138",
+      "url": "https://www.canada.ca/en/financial-consumer-agency/services/industry/commissioner-decisions/decision-138.html",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "FCAC",
+      "source_id": "fcac",
+      "title": "Decision #137",
+      "url": "https://www.canada.ca/en/financial-consumer-agency/services/industry/commissioner-decisions/decision-137.html",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "FCAC",
+      "source_id": "fcac",
+      "title": "Decision #136",
+      "url": "https://www.canada.ca/en/financial-consumer-agency/services/industry/commissioner-decisions/decision-136.html",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "FCAC",
+      "source_id": "fcac",
+      "title": "Decision #135",
+      "url": "https://www.canada.ca/en/financial-consumer-agency/services/industry/commissioner-decisions/decision-135.html",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "FCAC",
+      "source_id": "fcac",
+      "title": "Decision #134",
+      "url": "https://www.canada.ca/en/financial-consumer-agency/services/industry/commissioner-decisions/decision-134.html",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "FCAC",
+      "source_id": "fcac",
+      "title": "Decision #133",
+      "url": "https://www.canada.ca/en/financial-consumer-agency/services/industry/commissioner-decisions/decision-133.html",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "FCAC",
+      "source_id": "fcac",
+      "title": "Decision #132",
+      "url": "https://www.canada.ca/en/financial-consumer-agency/services/industry/commissioner-decisions/decision-132.html",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "FCAC",
+      "source_id": "fcac",
+      "title": "Decision #131",
+      "url": "https://www.canada.ca/en/financial-consumer-agency/services/industry/commissioner-decisions/decision-131.html",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "FCAC",
+      "source_id": "fcac",
+      "title": "Decision #130",
+      "url": "https://www.canada.ca/en/financial-consumer-agency/services/industry/commissioner-decisions/decision-130.html",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "FCAC",
+      "source_id": "fcac",
+      "title": "Decision #129",
+      "url": "https://www.canada.ca/en/financial-consumer-agency/services/industry/commissioner-decisions/decision-129.html",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "FCAC",
+      "source_id": "fcac",
+      "title": "Decision #128",
+      "url": "https://www.canada.ca/en/financial-consumer-agency/services/industry/commissioner-decisions/decision-128.html",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "FCAC",
+      "source_id": "fcac",
+      "title": "Decision #127",
+      "url": "https://www.canada.ca/en/financial-consumer-agency/services/industry/commissioner-decisions/decision-127.html",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "FCAC",
+      "source_id": "fcac",
+      "title": "Decision #126",
+      "url": "https://www.canada.ca/en/financial-consumer-agency/services/industry/commissioner-decisions/commissioner-decision-126.html",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "FCAC",
+      "source_id": "fcac",
+      "title": "Decision #125",
+      "url": "https://www.canada.ca/en/financial-consumer-agency/services/industry/commissioner-decisions/commissioner-decision-125.html",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "FCAC",
+      "source_id": "fcac",
+      "title": "Decision #124",
+      "url": "https://www.canada.ca/en/financial-consumer-agency/services/industry/commissioner-decisions/decision-124.html",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "FCAC",
+      "source_id": "fcac",
+      "title": "Decision #123",
+      "url": "https://www.canada.ca/en/financial-consumer-agency/services/industry/commissioner-decisions/decision-123.html",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "FCAC",
+      "source_id": "fcac",
+      "title": "Decision #120",
+      "url": "https://www.canada.ca/en/financial-consumer-agency/services/industry/commissioner-decisions/decision-120.html",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "FCAC",
+      "source_id": "fcac",
+      "title": "Decision #122",
+      "url": "https://www.canada.ca/en/financial-consumer-agency/services/industry/commissioner-decisions/decision-122.html",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "FCAC",
+      "source_id": "fcac",
+      "title": "Decision #121",
+      "url": "https://www.canada.ca/en/financial-consumer-agency/services/industry/commissioner-decisions/decision-121.html",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "FCAC",
+      "source_id": "fcac",
+      "title": "Decision #119",
+      "url": "https://www.canada.ca/en/financial-consumer-agency/services/industry/commissioner-decisions/decision-119.html",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "FCAC",
+      "source_id": "fcac",
+      "title": "Decision #118",
+      "url": "https://www.canada.ca/en/financial-consumer-agency/services/industry/commissioner-decisions/decision-118.html",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "FCAC",
+      "source_id": "fcac",
+      "title": "Decision #117",
+      "url": "https://www.canada.ca/en/financial-consumer-agency/services/industry/commissioner-decisions/decision-117.html",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "FCAC",
+      "source_id": "fcac",
+      "title": "Decision #116",
+      "url": "https://www.canada.ca/en/financial-consumer-agency/services/industry/commissioner-decisions/decision-116.html",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "FCAC",
+      "source_id": "fcac",
+      "title": "Decision #115",
+      "url": "https://www.canada.ca/en/financial-consumer-agency/services/industry/commissioner-decisions/decision-115.html",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "FCAC",
+      "source_id": "fcac",
+      "title": "Decision #114",
+      "url": "https://www.canada.ca/en/financial-consumer-agency/services/industry/commissioner-decisions/decision-114.html",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "FCAC",
+      "source_id": "fcac",
+      "title": "Decision #113",
+      "url": "https://www.canada.ca/en/financial-consumer-agency/services/industry/commissioner-decisions/decision-113.html",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "OSC",
+      "source_id": "osc",
+      "title": "Skip to content",
+      "url": "https://www.osc.ca/en/enforcement#content",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "OSC",
+      "source_id": "osc",
+      "title": "Opportunity to be heard and Director’s decisions",
+      "url": "https://www.osc.ca/en/industry/registration-and-compliance/opportunity-be-heard-and-directors-decisions",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "OSC",
+      "source_id": "osc",
+      "title": "Bankruptcy, restructuring and receivership proceedings",
+      "url": "https://www.osc.ca/en/industry/companies/guidance-reporting-issuers-undergoing-bankruptcy-restructuring-and-receivership-proceedings",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "OSC",
+      "source_id": "osc",
+      "title": "Orders, rulings and decisions",
+      "url": "https://www.osc.ca/en/securities-law/orders-rulings-and-decisions",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "OSC",
+      "source_id": "osc",
+      "title": "Court proceedings",
+      "url": "https://www.osc.ca/en/enforcement/court-proceedings",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "OSC",
+      "source_id": "osc",
+      "title": "Sanctions",
+      "url": "https://www.osc.ca/en/enforcement/sanctions",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "OSC",
+      "source_id": "osc",
+      "title": "Allocation and use of funds from sanctions and settlements",
+      "url": "https://www.osc.ca/en/enforcement/sanctions/allocation-and-use-funds-sanctions-and-settlements",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "OSC",
+      "source_id": "osc",
+      "title": "Individuals or companies with unpaid OSC sanctions",
+      "url": "https://www.osc.ca/en/enforcement/osc-sanctions/individuals-or-companies-unpaid-osc-sanctions",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "OSC",
+      "source_id": "osc",
+      "title": "Returning funds to harmed investors",
+      "url": "https://www.osc.ca/en/enforcement/sanctions/returning-funds-harmed-investors",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "OSC",
+      "source_id": "osc",
+      "title": "Cease trade and freeze orders",
+      "url": "https://www.osc.ca/en/enforcement/cease-trade-and-freeze-orders",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "OSC",
+      "source_id": "osc",
+      "title": "Mediation program",
+      "url": "https://www.osc.ca/en/enforcement/mediation-program",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "OSC",
+      "source_id": "osc",
+      "title": "OSC Whistleblower Program",
+      "url": "https://www.osc.ca/en/enforcement/osc-whistleblower-program",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "OSC",
+      "source_id": "osc",
+      "title": "Award eligibility and process",
+      "url": "https://www.osc.ca/en/enforcement/osc-whistleblower-program/award-eligibility-and-process",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "OSC",
+      "source_id": "osc",
+      "title": "Whistleblower protections",
+      "url": "https://www.osc.ca/en/enforcement/osc-whistleblower-program/whistleblower-protections",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "OSC",
+      "source_id": "osc",
+      "title": "Submit a whistleblower report",
+      "url": "https://www.osc.ca/en/enforcement/osc-whistleblower-program/submit-whistleblower-report",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "OSC",
+      "source_id": "osc",
+      "title": "Update on the OSC Whistleblower Program 2016 to 2022",
+      "url": "https://www.osc.ca/en/enforcement/osc-whistleblower-program/update-osc-whistleblower-program-2016-2022",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "OSC",
+      "source_id": "osc",
+      "title": "Investigation resources",
+      "url": "https://www.osc.ca/en/enforcement/investigation-resources",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "OSC",
+      "source_id": "osc",
+      "title": "Automatically reciprocated orders and settlement agreements",
+      "url": "https://www.osc.ca/en/enforcement/automatically-reciprocated-orders-and-settlement-agreements",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "OSC",
+      "source_id": "osc",
+      "title": "View all enforcement news",
+      "url": "https://www.osc.ca/en/news-events/news?keyword=&category%5B5051%5D=5051&date%5Bmin%5D=&date%5Bmax%5D=&sort_bef_combine=field_publication_date_DESC",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "OSC",
+      "source_id": "osc",
+      "title": "Enforcement",
+      "url": "https://www.osc.ca/en/news-events/news-releases?category%5B7526%5D=7526",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "OSC",
+      "source_id": "osc",
+      "title": "Grant opportunities",
+      "url": "https://www.osc.ca/en/enforcement/sanctions/allocation-and-use-funds-sanctions-and-settlements/grant-opportunities",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "OSC",
+      "source_id": "osc",
+      "title": "Research Grant Competition",
+      "url": "https://www.osc.ca/en/enforcement/sanctions/allocation-and-use-funds-sanctions-and-settlements/grant-opportunities/research-grant-competition",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "OSC",
+      "source_id": "osc",
+      "title": "Status of money received under disgorgement orders issued on or after September 1, 2025",
+      "url": "https://www.osc.ca/en/enforcement/sanctions/returning-funds-harmed-investors/money-received-under-disgorgement-orders-issued-or-after-september-1-2025",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "OSC",
+      "source_id": "osc",
+      "title": "Active Distributions",
+      "url": "https://www.osc.ca/en/enforcement/sanctions/returning-funds-harmed-investors/active-distributions",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "OSC",
+      "source_id": "osc",
+      "title": "Report of completed distributions to date",
+      "url": "https://www.osc.ca/en/enforcement/sanctions/returning-funds-harmed-investors/report-completed-distributions-date",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "OSC",
+      "source_id": "osc",
+      "title": "Submission guide",
+      "url": "https://www.osc.ca/en/enforcement/osc-whistleblower-program/submit-whistleblower-report/submission-guide",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "OSC",
+      "source_id": "osc",
+      "title": "Technical support for submitting a Whistleblower report",
+      "url": "https://www.osc.ca/en/enforcement/osc-whistleblower-program/submit-whistleblower-report/technical-support-submitting-whistleblower-report",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "BCSC",
+      "source_id": "bcsc",
+      "title": "Enforcement FAQs",
+      "url": "https://www.bcsc.bc.ca/about/media-room/enforcement-faqs",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "BCSC",
+      "source_id": "bcsc",
+      "title": "Enforcement",
+      "url": "https://www.bcsc.bc.ca/enforcement",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "BCSC",
+      "source_id": "bcsc",
+      "title": "Administrative Enforcement",
+      "url": "https://www.bcsc.bc.ca/enforcement/administrative-enforcement",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "BCSC",
+      "source_id": "bcsc",
+      "title": "Notices of Hearing and Temporary Orders",
+      "url": "https://www.bcsc.bc.ca/enforcement/administrative-enforcement/notices-of-hearing-and-temporary-orders",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "BCSC",
+      "source_id": "bcsc",
+      "title": "Settlements",
+      "url": "https://www.bcsc.bc.ca/enforcement/administrative-enforcement/settlements",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "BCSC",
+      "source_id": "bcsc",
+      "title": "Decisions",
+      "url": "https://www.bcsc.bc.ca/hearings/decisions",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "BCSC",
+      "source_id": "bcsc",
+      "title": "Automatic Reciprocal Orders",
+      "url": "https://www.bcsc.bc.ca/enforcement/administrative-enforcement/automatic-reciprocal-orders",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "BCSC",
+      "source_id": "bcsc",
+      "title": "Administrative Penalties Imposed by Notice",
+      "url": "https://www.bcsc.bc.ca/enforcement/administrative-enforcement/administrative-penalties-imposed-by-notice",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "BCSC",
+      "source_id": "bcsc",
+      "title": "Administrative Sanctions",
+      "url": "https://www.bcsc.bc.ca/enforcement/administrative-enforcement/administrative-sanctions",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "BCSC",
+      "source_id": "bcsc",
+      "title": "Returning Funds to Investors",
+      "url": "https://www.bcsc.bc.ca/enforcement/administrative-enforcement/administrative-sanctions/returning-funds-to-investors",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "BCSC",
+      "source_id": "bcsc",
+      "title": "Sanction Payment Status List",
+      "url": "https://www.bcsc.bc.ca/enforcement/administrative-enforcement/administrative-sanctions/sanction-payment-status-list",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "BCSC",
+      "source_id": "bcsc",
+      "title": "Disciplined List",
+      "url": "https://www.bcsc.bc.ca/enforcement/administrative-enforcement/administrative-sanctions/disciplined-list",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "BCSC",
+      "source_id": "bcsc",
+      "title": "Criminal Enforcement",
+      "url": "https://www.bcsc.bc.ca/enforcement/criminal-enforcement",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "BCSC",
+      "source_id": "bcsc",
+      "title": "Past Cases",
+      "url": "https://www.bcsc.bc.ca/enforcement/criminal-enforcement/past-cases",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "BCSC",
+      "source_id": "bcsc",
+      "title": "Early Intervention",
+      "url": "https://www.bcsc.bc.ca/enforcement/early-intervention",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "BCSC",
+      "source_id": "bcsc",
+      "title": "Operation Avalanche",
+      "url": "https://www.bcsc.bc.ca/enforcement/early-intervention/operation-avalanche-protecting-canadians-from-crypto-fraud",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "BCSC",
+      "source_id": "bcsc",
+      "title": "Investment Caution List",
+      "url": "https://www.bcsc.bc.ca/enforcement/early-intervention/investment-caution-list",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "BCSC",
+      "source_id": "bcsc",
+      "title": "Investor Alert",
+      "url": "https://www.bcsc.bc.ca/enforcement/early-intervention/investor-alert",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "BCSC",
+      "source_id": "bcsc",
+      "title": "Halt Trade Orders",
+      "url": "https://www.bcsc.bc.ca/enforcement/early-intervention/halt-trade-orders",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "BCSC",
+      "source_id": "bcsc",
+      "title": "Cease Trade Orders",
+      "url": "https://www.bcsc.bc.ca/enforcement/early-intervention/cease-trade-orders",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "BCSC",
+      "source_id": "bcsc",
+      "title": "Disciplined List",
+      "url": "https://www.bcsc.bc.ca//enforcement/administrative-enforcement/administrative-sanctions/disciplined-list",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "BCSC",
+      "source_id": "bcsc",
+      "title": "Cease Trade Orders",
+      "url": "https://www.bcsc.bc.ca//enforcement/early-intervention/cease-trade-orders",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "ASC",
+      "source_id": "asc",
+      "title": "ASC Hearings",
+      "url": "https://www.asc.ca/en/enforcement/asc-proceedings",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "ASC",
+      "source_id": "asc",
+      "title": "ASC HEARINGS",
+      "url": "https://www.asc.ca/en/Enforcement/ASC-Proceedings",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "ASC",
+      "source_id": "asc",
+      "title": "Office of the Whistleblower",
+      "url": "https://www.asc.ca/en/enforcement/office-of-the-whistleblower",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "ASC",
+      "source_id": "asc",
+      "title": "Blanket Orders & Designation Orders",
+      "url": "https://www.asc.ca/en/securities-law-and-policy/blanket-orders-and-designation-orders",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "ASC",
+      "source_id": "asc",
+      "title": "Exemption Orders",
+      "url": "https://www.asc.ca/en/issuer-regulation/exemption-orders",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "ASC",
+      "source_id": "asc",
+      "title": "Cease Trade Orders",
+      "url": "https://www.asc.ca/en/issuer-regulation/cease-trade-orders",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "ASC",
+      "source_id": "asc",
+      "title": "Decisions and Orders",
+      "url": "https://www.asc.ca/en/issuer-regulation/decisions-and-orders",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "ASC",
+      "source_id": "asc",
+      "title": "Exemption Orders",
+      "url": "https://www.asc.ca/en/registrant-and-market-regulation/exemption-orders-registrants",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "ASC",
+      "source_id": "asc",
+      "title": "Decisions & Orders",
+      "url": "https://www.asc.ca/en/registrant-and-market-regulation/decisions-and-orders-registrants",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "ASC",
+      "source_id": "asc",
+      "title": "Enforcement",
+      "url": "https://www.asc.ca/en/enforcement",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "ASC",
+      "source_id": "asc",
+      "title": "Appearing Before the ASC",
+      "url": "https://www.asc.ca/en/enforcement/asc-proceedings/appearing-before-the-asc",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "ASC",
+      "source_id": "asc",
+      "title": "Electronic Document Guidelines",
+      "url": "https://www.asc.ca/en/enforcement/asc-proceedings/guidelines-for-using-electronic-documents-in-asc-enforcement-hearings",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "ASC",
+      "source_id": "asc",
+      "title": "Remote Hearing Guidelines",
+      "url": "https://www.asc.ca/en/enforcement/asc-proceedings/remote-hearing-guidelines",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "ASC",
+      "source_id": "asc",
+      "title": "Status of Current Proceedings",
+      "url": "https://www.asc.ca/en/enforcement/asc-proceedings/status-of-current-proceedings",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "ASC",
+      "source_id": "asc",
+      "title": "Other proceedings",
+      "url": "https://www.asc.ca/en/enforcement/asc-proceedings/other-proceedings",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "ASC",
+      "source_id": "asc",
+      "title": "Notices, Decisions & Orders",
+      "url": "https://www.asc.ca/en/enforcement/notices-decisions-and-orders",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "ASC",
+      "source_id": "asc",
+      "title": "Unpaid Orders",
+      "url": "https://www.asc.ca/en/enforcement/unpaid-orders",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "ASC",
+      "source_id": "asc",
+      "title": "Investment Caution List",
+      "url": "https://www.asc.ca/en/enforcement/investment-caution-list",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "ASC",
+      "source_id": "asc",
+      "title": "Automatic Reciprocation",
+      "url": "https://www.asc.ca/en/enforcement/automatic-reciprocation",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "ASC",
+      "source_id": "asc",
+      "title": "Investment Caution List",
+      "url": "https://www.asc.ca/en/Enforcement/Investment-Caution-List",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "ASC",
+      "source_id": "asc",
+      "title": "Status of Current Proceedings",
+      "url": "https://www.asc.ca/en/enforcement/asc-proceedings/status-of-current-proceedings#sort=%40z95xpdoproceedingdate%20descending",
+      "classification": "official_index_link_unreviewed"
+    },
+    {
+      "agency": "ASC",
+      "source_id": "asc",
+      "title": "NOTICES, DECISIONS AND ORDERS",
+      "url": "https://www.asc.ca/en/Enforcement/Notices-Decisions-and-Orders",
+      "classification": "official_index_link_unreviewed"
+    }
+  ]
+}
