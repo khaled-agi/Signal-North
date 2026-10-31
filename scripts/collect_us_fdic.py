@@ -9,6 +9,7 @@
 """
 from __future__ import annotations
 import json
+import hashlib
 import os
 import tempfile
 from datetime import datetime, timezone
@@ -31,7 +32,7 @@ REQUEST_TIMEOUT = 45
 MAX_BYTES = 7_000_000
 FIELDS = {
     "institutions": "NAME,CERT,CITY,STNAME,STALP,FED_RSSD,WEBADDR,ACTIVE,DATEUPDT",
-    "failures": "NAME,CERT,FAILDATE,FAILYR,CITY,PSTALP,RESTYPE,BIDNAME,QBFASSET,QBFDEP",
+    "failures": "ID,FIN,NAME,CERT,FAILDATE,FAILYR,CITY,PSTALP,RESTYPE,BIDNAME,QBFASSET,QBFDEP",
 }
 MIN_ROWS = {"institutions": 2500, "failures": 3500}
 SOURCE = "FDIC BankFind Suite public API"
@@ -68,8 +69,11 @@ def normalize(row, dataset):
     if cert.endswith(".0"):
         cert = cert[:-2]
     name = str(fields.get("NAME") or "").strip()
-    if not cert.isdigit() or not name or len(name) > 250:
+    if dataset == "institutions" and (not cert.isdigit() or not name or len(name) > 250):
         return None
+    if dataset == "failures" and (not name or len(name) > 250):
+        return None
+    cert = cert if cert.isdigit() else None
     common = {
         "fdic_cert": cert,
         "institution": name,
@@ -86,8 +90,11 @@ def normalize(row, dataset):
             "website": str(fields.get("WEBADDR") or "").strip()[:300] or None,
             "last_updated": str(fields.get("DATEUPDT") or "")[:40] or None,
         }
+    raw_id = str(fields.get("ID") or fields.get("FIN") or "").strip()
+    stable_uid = raw_id or hashlib.sha256(json.dumps(fields,sort_keys=True,default=str).encode()).hexdigest()[:22]
     return {
         **common,
+        "fdic_event_id":stable_uid,
         "failure_date": str(fields.get("FAILDATE") or "")[:40] or None,
         "failure_year": str(fields.get("FAILYR") or "")[:10] or None,
         "resolution_type": str(fields.get("RESTYPE") or "")[:120] or None,
@@ -124,9 +131,7 @@ def collect(session, dataset):
             record = normalize(raw, dataset)
             if record is None:
                 continue
-            ident = record["fdic_cert"] if dataset == "institutions" else (
-                record["fdic_cert"], record["failure_date"], record["institution"]
-            )
+            ident = record["fdic_cert"] if dataset == "institutions" else record["fdic_event_id"]
             if ident in ids:
                 continue
             ids.add(ident)
@@ -137,7 +142,7 @@ def collect(session, dataset):
         raise ValueError(f"{dataset}: reached maximum pagination without last page")
     if len(results) < MIN_ROWS[dataset]:
         raise ValueError(f"{dataset}: only {len(results)} valid records, below validated safety floor")
-    if meta_total is not None and len(results) < meta_total * 0.9:
+    if meta_total is not None and len(results) < meta_total * 0.98:
         raise ValueError(f"{dataset}: incomplete result ({len(results)} vs reported {meta_total})")
     return results
 
