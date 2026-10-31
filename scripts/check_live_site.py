@@ -12,7 +12,7 @@ REQUIRED = {
     "data/bank_complaint_disclosures.json": ("records", 15),
     "data/canadian_source_registry.json": ("sources", 18),
     "data/obsi_annual_banking.json": ("rows", 5),
-    "data/obsi_firm_complaints.json": ("records", 53),
+    "data/obsi_firm_complaints.json": ("records", 91),
     "data/ciro_enforcement_activity.json": ("firm_sanctions", 4),
     "data/ciro_named_enforcement.json": ("records", 5),
     "data/cafc_aggregates.json": ("rows", 1000),

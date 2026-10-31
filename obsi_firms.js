@@ -16,7 +16,7 @@
     const found=rows.filter(x=>(!yr||String(x.fiscal_year)===yr)&&(!term||x.institution.toLowerCase().includes(term)));
     root.innerHTML=found.slice(0,120).map(x=>
      '<article class="world-reporting-record"><div class="world-reporting-date">OBSI FY'+esc(x.fiscal_year)+' · '+esc(x.sector.replaceAll("_"," "))+'</div><strong>'+esc(x.institution)+'</strong>'+
-     '<div class="world-reporting-details">'+Number(x.complaints_received).toLocaleString("en-CA")+' complaints received · '+Number(x.opened_cases).toLocaleString("en-CA")+' opened · '+Number(x.closed_cases).toLocaleString("en-CA")+' closed · '+Number(x.resolved_satisfaction).toLocaleString("en-CA")+' resolved to complainant satisfaction</div>'+
+     '<div class="world-reporting-details">'+Number(x.complaints_received).toLocaleString("en-CA")+' complaints received · '+Number(x.opened_cases).toLocaleString("en-CA")+' opened · '+(x.closed_cases==null?'not reported':Number(x.closed_cases).toLocaleString("en-CA"))+' closed · '+(x.resolved_satisfaction==null?'not reported':Number(x.resolved_satisfaction).toLocaleString("en-CA"))+' resolved to complainant satisfaction</div>'+
      '<a href="'+esc(x.source_url)+'" rel="noopener noreferrer" target="_blank">OBSI original annual report (p. '+esc(x.source_pages)+') ↗</a></article>').join("")+
      '<p class="supporting-disclaimer">'+found.length+' matching OBSI institution-year records; showing up to 120. No missing year is interpreted as zero.</p>';
    }
