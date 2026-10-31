@@ -184,3 +184,55 @@ edition was selected.
 
 English and local-language versions of the same reporting may both appear.
 Full cross-language event merging is intentionally deferred.
+
+
+## African and Asian market-depth expansion
+
+An ISO country entry is not evidence of local coverage. The country-wide
+rotation continues to scan all 250 configured research markets. In addition,
+`scripts/region_query_lenses.py` defines language- and sector-specific search
+phrases for major markets across:
+
+- Mainland China: simplified-Chinese cyberfraud and money-laundering queries;
+  Hong Kong/Taiwan retain distinct edition and jurisdiction labels.
+- India: existing English/Hindi plus Tamil, Bengali, Telugu and Marathi
+  fraud reporting. Google News unsupported local editions use an explicitly
+  tagged English India edition fallback; they are not reported as native
+  publisher editions.
+- Malaysia: Malay online fraud, simplified-Chinese fraud, Tamil fraud;
+  Chinese edition searches are proxies and do NOT establish Malaysian source
+  nationality or incident geography.
+- Other Southeast Asian markets: Indonesia, Thailand, Vietnam, Philippines,
+  Singapore, Cambodia, Laos, Myanmar, Brunei and Timor-Leste.
+- African countries: Nigeria, Kenya, Tanzania, Uganda, South Africa, Ghana,
+  Ethiopia, Egypt, Morocco, Algeria, Tunisia, Senegal, Côte d'Ivoire,
+  Cameroon, DR Congo, Rwanda, Angola, Mozambique, Zambia and Zimbabwe.
+
+All other countries retain the English baseline and configured local
+languages. Queries are capped per market: they are not an exhaustive crawl.
+Some source editions or languages will return zero matches. Original-language
+results with no supported country mention remain in the separate unmapped
+`data/world_local_unattributed.json` queue.
+
+A second deterministic priority rotation scans up to four additional hub
+markets per scheduled run, alongside (never instead of) the existing 32-market
+worldwide baseline. It covers China, India, Malaysia, Indonesia, Thailand,
+Vietnam, Philippines, Singapore, Cambodia, Nigeria, Kenya, South Africa,
+Egypt, Ghana, Tanzania and Ethiopia.
+
+The frontend News & Reporting browser now offers Africa, Southeast Asia,
+South Asia and East Asia regional filters for *country-referenced* headlines
+and separately labeled unlocated discovery candidates.
+
+**Country evidence and non-spaced scripts:** Chinese and certain South/Southeast
+Asian writing systems do not necessarily place whitespace around a country
+name. Both the collector and map checker explicitly support native-script
+country mentions, including Chinese 中国, Malay-targeted Mandarin 马来西亚,
+and Tamil இந்தியா. A country *mention* does not prove an event took place
+there. RSS edition, journalist language, publisher domicile, victim location,
+and regulator jurisdiction remain distinct concepts.
+
+The actual number of successful searches and accepted article leads is
+reported by the latest source-status snapshots, not predicted from the
+configured country or query count. Cross-language event deduplication is
+intentionally deferred.
