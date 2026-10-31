@@ -110,7 +110,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/events.json data/status.json data/news.json data/news_status.json data/article_index.json data/reporting_groups.json data/related_reporting.json data/reviewed_events.json data/event_review_candidates.json data/institution_intelligence.json data/review_queue.json data/theme_trends.json data/global_enforcement.json data/global_source_status.json data/world_jurisdictions.json data/community_signals.json data/community_status.json data/community_state.json data/world_reporting.json data/world_reporting_status.json data/world_reporting_state.json data/global_regulator_publications.json data/global_regulator_publications_status.json data/global_regulator_publications_state.json
+          git add data/events.json data/status.json data/news.json data/news_status.json data/article_index.json data/reporting_groups.json data/related_reporting.json data/reviewed_events.json data/event_review_candidates.json data/institution_intelligence.json data/review_queue.json data/theme_trends.json data/global_enforcement.json data/global_source_status.json data/world_jurisdictions.json data/community_signals.json data/community_status.json data/community_state.json data/world_reporting.json data/world_reporting_status.json data/world_reporting_state.json data/world_local_unattributed.json data/global_regulator_publications.json data/global_regulator_publications_status.json data/global_regulator_publications_state.json
           if [ -f data/publisher_news.json ]; then git add data/publisher_news.json; fi
           if [ -f data/publisher_source_status.json ]; then git add data/publisher_source_status.json; fi
           if [ -f data/external_source_status.json ]; then git add data/external_source_status.json; fi
@@ -147,7 +147,7 @@ jobs:
           cp data/community_signals.json data/community_status.json _site/data/
           cp data/research_library.json _site/data/
           cp data/theme_trends.json data/sector_watch.json _site/data/
-          cp data/global_enforcement.json data/global_enforcement_seed.json data/global_source_status.json data/world_jurisdictions.json data/world_reporting.json data/world_reporting_status.json data/global_regulator_publications.json data/global_regulator_publications_status.json _site/data/
+          cp data/global_enforcement.json data/global_enforcement_seed.json data/global_source_status.json data/world_jurisdictions.json data/world_reporting.json data/world_reporting_status.json data/world_local_unattributed.json data/global_regulator_publications.json data/global_regulator_publications_status.json _site/data/
           sed -i "s/__BUILD_SHA__/${GITHUB_SHA}/g" _site/index.html
       - name: Configure Pages
         uses: actions/configure-pages@v5
