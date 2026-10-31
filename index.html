@@ -250,6 +250,9 @@
           <label for="canadianHubQuery">Search <input id="canadianHubQuery" type="search" placeholder="Regulator, province, dataset…" aria-label="Search Canadian source registry"></label>
         </div>
         <div id="canadianHubRows" class="world-reporting-rows" aria-live="polite"><div class="empty">Loading official source coverage…</div></div>
+        <details class="cfpb-history" id="ciroSectorStats"><summary><strong>CIRO firm-level sector enforcement totals · FY2024 onward</strong><span id="ciroSectorHealth">Checking official annual figures…</span></summary>
+        <p class="supporting-disclaimer">These are annual sector-wide enforcement totals against firms, not case-level or institution-level decisions. Fiscal 2027 is partial to September 30, 2026. CIRO's own decision pages still reject automated collection (HTTP 403), so this separately sourced historical snapshot must not be treated as a live case feed.</p>
+        <div id="ciroSectorRows" class="world-reporting-rows"><div class="empty">Loading CIRO annual enforcement metrics…</div></div></details>
         <details class="cfpb-history" id="provincialFeeds"><summary><strong>Provincial regulator open data · BCSC / AMF</strong><span id="provincialFeedStatus">Checking official feeds…</span></summary>
         <p class="supporting-disclaimer">BCSC official RSS reports published discipline and hearing notices in separate categories. A hearing is not a final finding. AMF open data lists regulated Québec institutions, not enforcement outcomes; the datasets must never be combined into a misconduct ranking.</p>
         <div class="world-reporting-toolbar"><label for="provincialFeedType">Dataset <select id="provincialFeedType"><option value="bcsc">BCSC regulatory notices</option><option value="amf">AMF licensed organizations</option></select></label><label for="provincialFeedSearch">Find <input id="provincialFeedSearch" type="search" placeholder="Firm, subject, notice…" aria-label="Search official provincial data"></label></div>
@@ -438,6 +441,7 @@
 <script src="./bank_disclosures.js?v=__BUILD_SHA__" defer></script>
 <script src="./canadian_sources.js?v=__BUILD_SHA__" defer></script>
 <script src="./canadian_provincial.js?v=__BUILD_SHA__" defer></script>
+<script src="./ciro_sector.js?v=__BUILD_SHA__" defer></script>
 <script src="./canadian_verified_enforcement.js?v=__BUILD_SHA__" defer></script>
 <script src="./fintrac_official.js?v=__BUILD_SHA__" defer></script>
 <script src="./canadian_regulatory_leads.js?v=__BUILD_SHA__" defer></script>
