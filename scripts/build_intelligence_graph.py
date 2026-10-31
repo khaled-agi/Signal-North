@@ -169,6 +169,65 @@ def generate():
    if not entry:continue
    entry["counts"]["headlines"]+=1  # One grouped report; not one incident or source
    entry["evidence"].append(reference("headline",art))
+ # Official institution context, FINTRAC penalty notices and bank complaints
+ # are separate source-specific measures, not extra entries in regulator-event
+ # or headline counters. No attempt is made to infer bank complaints from CAFC.
+ osfi=load("osfi_institutions.json","records")
+ bank_disclosures=load("bank_complaint_disclosures.json","records")
+ fintrac=load("fintrac_penalties_official.json","records")
+ fcac=[x for x in load("canadian_enforcement_verified.json","records") if x.get("agency")=="FCAC"]
+ amf=load("amf_quebec_entities.json","records")
+ obsi_sector=load("obsi_annual_banking.json","rows")
+ for row in osfi:
+  fields=row.get("fields") or {}
+  name=fields.get("Company Name","").strip()
+  if not name:continue
+  entry=ensure(name)
+  entry.setdefault("official_data",{})["osfi"]={
+   "name":name,"group":fields.get("FI Group Name"),
+   "type":fields.get("FI Type Name"),"industry":fields.get("FI Industry Name"),
+   "source_url":"https://open.canada.ca/data/en/dataset/b27ec3ef-7338-4e76-a6fd-128339a92df5"}
+ for record in bank_disclosures:
+  entry=ensure(record.get("institution"))
+  if not entry:continue
+  entry.setdefault("official_data",{}).setdefault("bank_disclosures",[]).append(record)
+ for notice in fintrac:
+  entry=ensure(notice.get("entity_name"))
+  if not entry:continue
+  entry.setdefault("official_data",{}).setdefault("fintrac_notices",[]).append({
+   "record_id":notice.get("record_id"),"date":notice.get("published"),
+   "penalty_cad":notice.get("penalty_cad"),"violation_count":notice.get("violation_count"),
+   "status_summary":notice.get("status_summary"),"source_url":notice.get("source_url"),
+   "source_kind":"official_FINTRAC_index"})
+ for action in fcac:
+  entry=ensure(action.get("name"))
+  if not entry:continue
+  entry.setdefault("official_data",{}).setdefault("fcac_notices",[]).append({
+   "date":action.get("published"),"penalty_cad":action.get("penalty_cad"),
+   "topic":action.get("topic"),"source_url":action.get("url"),
+   "source_kind":"manually_transcribed_FCAC_index"})
+ # Québec AMF institution register joins only on an exact recognized legal name.
+ # The complete provincial directory remains browsable separately. Do not
+ # guess that similarly named firms are the same regulated legal entity.
+ for row in amf:
+  fields=row.get("fields") or {}
+  matches=[str(v).strip() for k,v in fields.items() if v and any(t in normalize(k) for t in ("nom","d nomination","d nomination sociale","raison sociale","institution","company name"))]
+  for name in matches[:2]:
+   key=bank_key(name)
+   if key not in by_key:continue
+   by_key[key].setdefault("official_data",{}).setdefault("amf_registrations",[]).append({
+     "name":name,"source":"AMF Québec open data","source_url":"https://www.donneesquebec.ca/recherche/dataset/liste-des-institutions-financieres-et-agences-d-evaluation-du-credit",
+     "entity_record_id":row.get("id")})
+   break
+ for entry in by_key.values():
+  official=entry.setdefault("official_data",{})
+  official["counts"]={"fintrac_public_notices":len(official.get("fintrac_notices",[])),
+     "fcac_index_notices":len(official.get("fcac_notices",[])),
+     "bank_disclosure_years":len(official.get("bank_disclosures",[]))}
+  if official.get("bank_disclosures"):
+   official["bank_disclosures"].sort(key=lambda x:x.get("year",0),reverse=True)
+  if official.get("fintrac_notices"):
+   official["fintrac_notices"].sort(key=lambda x:x.get("date") or "",reverse=True)
  for entry in by_key.values():
   entry["evidence"].sort(key=lambda e:str(e.get("date") or ""),reverse=True)
   entry["recent_activity"]=entry["evidence"][0].get("date") if entry["evidence"] else None
@@ -191,7 +250,11 @@ def generate():
  graph={
   "generated_at":datetime.now(timezone.utc).isoformat(timespec="seconds"),
   "methodology":"Institution names are canonically grouped using explicit aliases. Headline entries are conservative reporting groups, not distinct or independently verified fraud incidents; multiple publisher headlines are retained under each group. An institution mention is not proof of wrongdoing.",
-  "source_counts":{"enforcement":len(events),"reviewed_incidents":len(incidents),"unverified_report_groups":len(articles)},
+  "source_counts":{"enforcement":len(events),"reviewed_incidents":len(incidents),"unverified_report_groups":len(articles),
+    "osfi_institution_rows":len(osfi),"fintrac_index_notices":len(fintrac),
+    "bank_disclosure_records":len(bank_disclosures),"fcac_manual_sample":len(fcac),
+    "obsi_banking_years":len(obsi_sector),"amf_quebec_entity_rows":len(amf)},
+  "sector_context":{"obsi_banking":obsi_sector,"note":"OBSI annual sector totals must not be attributed to individual institutions."},
   "institutions":ranked
  }
  (DATA/"institution_intelligence.json").write_text(json.dumps(graph,ensure_ascii=False,indent=2)+"\n","utf-8")

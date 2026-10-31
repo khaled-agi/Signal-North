@@ -62,6 +62,24 @@
     '</div><strong>'+total+'</strong></div>';
   }).join("")+'</div>';
  }
+ function officialSections(x){
+  const o=x.official_data||{}, reports=o.bank_disclosures||[], fintrac=o.fintrac_notices||[], fcac=o.fcac_notices||[];
+  const osfi=o.osfi,amf=o.amf_registrations||[];
+  if(!osfi&&!amf.length&&!reports.length&&!fintrac.length&&!fcac.length)return '';
+  const head='<div class="connection-timeline-title"><h4>Official institution data</h4><span class="small">Different sources and denominators · never sum the figures</span></div>';
+  const identity=osfi?'<div class="evidence-entry"><strong>OSFI regulated institution</strong><div class="small">'+esc(osfi.name)+' · '+esc(osfi.group||osfi.industry||"Federal institution registry")+'</div>'+safeLink(osfi.source_url,"Official OSFI directory")+'</div>':'';
+  const complaintRows=reports.map(r=>'<article class="evidence-entry"><div class="evidence-top"><strong>'+esc(r.year)+' · '+esc(r.office||"Complaints office")+'</strong><span>'+Number(r.metric_value).toLocaleString("en-CA")+' records</span></div><div class="small">'+esc(r.scope||r.metric_name)+'</div>'+
+  (r.fraud_nature_pct!=null?'<div class="small">Published fraud category: '+esc(r.fraud_nature_pct)+'%</div>':'')+
+  (r.fraud_nature_count!=null?'<div class="small">Fraud-category cases: '+esc(r.fraud_nature_count)+'</div>':'')+
+  '<div>'+safeLink(r.source_url,"Bank annual disclosure")+'</div></article>').join('');
+  const penaltyRows=fintrac.slice(0,35).map(r=>'<article class="evidence-entry"><div class="evidence-top"><strong>FINTRAC · '+esc(r.date)+'</strong><span>'+esc(money(r.penalty_cad))+'</span></div><div class="small">Official-index notice · '+esc(r.violation_count==null?"Violation count unavailable":r.violation_count+" violations")+' · '+esc(r.status_summary||"Status not confirmed")+'</div>'+safeLink(r.source_url,"Original FINTRAC index")+'</article>').join('');
+  const fcacRows=fcac.map(r=>'<article class="evidence-entry"><div class="evidence-top"><strong>FCAC · '+esc(r.date)+'</strong><span>'+esc(money(r.penalty_cad))+'</span></div><div class="small">'+esc(r.topic||"Published action")+' · Source is agency index</div>'+safeLink(r.source_url,"Original FCAC index")+'</article>').join('');
+  const quebec=amf.length?'<div class="evidence-entry"><strong>Québec AMF registered entity</strong><div class="small">'+esc(amf.length)+' official registry matches · not enforcement findings</div>'+safeLink(amf[0].source_url,"Québec AMF open data")+'</div>':'';
+  return head+identity+quebec+
+   (reports.length?'<details class="supporting-reviewed-details"><summary>Internal bank complaints · '+reports.length+' fiscal years</summary>'+complaintRows+'</details>':'')+
+   (fintrac.length?'<details class="supporting-reviewed-details"><summary>FINTRAC monetary penalty notices · '+fintrac.length+' (may overlap other enforcement feeds)</summary>'+penaltyRows+'</details>':'')+
+   (fcac.length?'<details class="supporting-reviewed-details"><summary>FCAC index-sourced actions · '+fcac.length+' (not deduplicated against existing event tracker)</summary>'+fcacRows+'</details>':'');
+ }
  function renderInstitution(){
   const x=state.institutions.find(a=>a.id===state.selected);
   el("connectTrack").disabled=el("connectMap").disabled=el("connectExport").disabled=!x;
@@ -73,6 +91,7 @@
   el("connectContent").innerHTML=
    '<div class="connection-title"><div><div class="eyebrow">CANONICAL INSTITUTION · PUBLIC-SOURCE RESEARCH</div><h3>'+esc(x.name)+'</h3><div class="small">Alias names linked for research: '+esc((x.aliases||[]).join(", "))+'</div></div><div class="small">Last observed evidence: '+esc(date(x.recent_activity))+'</div></div>'+
    '<div class="connection-metrics"><div><strong>'+x.counts.enforcement+'</strong><span>Published regulator actions</span></div><div><strong>'+x.counts.incidents+'</strong><span>Source-reviewed reported incidents</span></div><div><strong>'+x.counts.headlines+'</strong><span>Unverified name mentions</span></div></div>'+
+   officialSections(x)+
    '<div class="connection-insight-grid"><div><h4>Evidence by publication year</h4>'+activityChart(items)+
    '<div class="evidence-legend"><span class="legend-reg">Regulator</span><span class="legend-case">Reported case</span><span class="legend-headline">Headline only</span></div></div>'+
    '<div><h4>Topics to investigate, not proven failures</h4>'+

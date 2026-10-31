@@ -250,6 +250,13 @@
           <label for="canadianHubQuery">Search <input id="canadianHubQuery" type="search" placeholder="Regulator, province, dataset…" aria-label="Search Canadian source registry"></label>
         </div>
         <div id="canadianHubRows" class="world-reporting-rows" aria-live="polite"><div class="empty">Loading official source coverage…</div></div>
+        <details class="cfpb-history" id="ciroSectorStats"><summary><strong>CIRO firm-level sector enforcement totals · FY2024 onward</strong><span id="ciroSectorHealth">Checking official annual figures…</span></summary>
+        <p class="supporting-disclaimer">These are annual sector-wide enforcement totals against firms, not case-level or institution-level decisions. Fiscal 2027 is partial to September 30, 2026. CIRO's own decision pages still reject automated collection (HTTP 403), so this separately sourced historical snapshot must not be treated as a live case feed.</p>
+        <div id="ciroSectorRows" class="world-reporting-rows"><div class="empty">Loading CIRO annual enforcement metrics…</div></div></details>
+        <details class="cfpb-history" id="provincialFeeds"><summary><strong>Provincial regulator open data · BCSC / AMF</strong><span id="provincialFeedStatus">Checking official feeds…</span></summary>
+        <p class="supporting-disclaimer">BCSC official RSS reports published discipline and hearing notices in separate categories. A hearing is not a final finding. AMF open data lists regulated Québec institutions, not enforcement outcomes; the datasets must never be combined into a misconduct ranking.</p>
+        <div class="world-reporting-toolbar"><label for="provincialFeedType">Dataset <select id="provincialFeedType"><option value="bcsc">BCSC regulatory notices</option><option value="amf">AMF licensed organizations</option></select></label><label for="provincialFeedSearch">Find <input id="provincialFeedSearch" type="search" placeholder="Firm, subject, notice…" aria-label="Search official provincial data"></label></div>
+        <div id="provincialFeedRows" class="world-reporting-rows"><div class="empty">Loading official published data…</div></div></details>
         <details class="cfpb-history" id="verifiedCanadaEnforcement"><summary><strong>Official-index sourced Canadian enforcement sample</strong><span id="verifiedCanadaCount">Loading sourced cases…</span></summary>
         <p class="supporting-disclaimer">Non-exhaustive manually transcribed index-based case sample. Links may lead to an agency index rather than an individual decision. Date of penalty and date of publication may differ. Each record represents a regulator notice; do not equate penalties with fraud losses or unreviewed allegations.</p>
         <div class="world-reporting-toolbar"><label for="verifiedCanadaAgency">Agency <select id="verifiedCanadaAgency"><option value="">All agencies</option></select></label><label for="verifiedCanadaSearch">Institution <input id="verifiedCanadaSearch" type="search" placeholder="Bank or credit union…" aria-label="Filter verified Canadian enforcement cases"></label></div>
@@ -288,6 +295,10 @@
             <label for="obsiFirmSearch">Find institution <input id="obsiFirmSearch" type="search" placeholder="e.g. RBC, TD, Scotiabank…" aria-label="Filter OBSI source links by financial institution"></label>
           </div>
           <div id="obsiSourceLinks" class="world-reporting-rows" aria-live="polite"></div>
+          <div class="panel-heading"><div><div class="eyebrow">OBSI FISCAL-YEAR HISTORY / SECTOR-WIDE</div><h2>Published banking complaint trends</h2></div><span id="obsiHistoricStatus" class="small">Checking official banking history…</span></div>
+          <p class="supporting-disclaimer">These are OBSI banking-sector totals, not complaints attributed to individual banks. The 2025 expansion to all federally regulated banks creates a coverage break; do not treat it as purely organic complaint growth. Institution-by-institution historical totals remain unverified without a Power BI data export.</p>
+          <div id="obsiHistoricalSeries" class="world-reporting-rows"><div class="empty">Loading published OBSI historical figures…</div></div>
+          <details class="cfpb-history"><summary>Historical OBSI official report documents <span id="obsiReportCount">Checking report catalog…</span></summary><div id="obsiReportLinks" class="world-reporting-rows"><div class="empty">Official report downloads pending…</div></div></details>
           <p class="supporting-disclaimer"><strong>Historical scope:</strong> OBSI's Data Cube provides historical reporting from November 1, 2016, updated quarterly. Individual bank case summaries cover closed federally regulated bank cases from June 30, 2022. Scope and bank participation have changed over time, especially with the single banking external complaints body effective November 2024. Do not add OBSI cases to CAFC fraud reports or CFPB complaint counts.</p>
         </section>
       </div>
@@ -426,8 +437,11 @@
 <script src="./cfpb.js?v=__BUILD_SHA__" defer></script>
 <script src="./cafc.js?v=__BUILD_SHA__" defer></script>
 <script src="./obsi.js?v=__BUILD_SHA__" defer></script>
+<script src="./obsi_history.js?v=__BUILD_SHA__" defer></script>
 <script src="./bank_disclosures.js?v=__BUILD_SHA__" defer></script>
 <script src="./canadian_sources.js?v=__BUILD_SHA__" defer></script>
+<script src="./canadian_provincial.js?v=__BUILD_SHA__" defer></script>
+<script src="./ciro_sector.js?v=__BUILD_SHA__" defer></script>
 <script src="./canadian_verified_enforcement.js?v=__BUILD_SHA__" defer></script>
 <script src="./fintrac_official.js?v=__BUILD_SHA__" defer></script>
 <script src="./canadian_regulatory_leads.js?v=__BUILD_SHA__" defer></script>
