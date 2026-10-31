@@ -37,7 +37,7 @@ def verify(base,sha):
     if "__BUILD_SHA__" in page or (sha and sha not in page):
         raise AssertionError("Old build or unreplaced placeholder served")
     for marker in ['id="canadianSourceHub"','id="fintracOfficialPenalties"',
-                   'id="bankDisclosure"','id="osfiRegisterPanel"','id="obsiHistoricalSeries"','id="obsiFirmRows"','id="ciroNamedRows"','id="usFdicRows"','id="usSignalRows"','id="provincialFeeds"']:
+                   'id="bankDisclosure"','id="osfiRegisterPanel"','id="obsiHistoricalSeries"','id="obsiFirmRows"','id="ciroNamedRows"','id="usFdicRows"','id="usSignalRows"','id="primarySignalRows"','id="provincialFeeds"']:
         if marker not in page:raise AssertionError("Missing section "+marker)
     scripts=sorted(set(re.findall(r'<script[^>]+src="\./([^"?]+)',page)))
     if len(scripts)<20:raise AssertionError(f"Only {len(scripts)} scripts referenced")
@@ -54,6 +54,23 @@ def verify(base,sha):
         if name.endswith("fintrac_penalties_official.json") and data.get("count")!=len(rows):
             raise AssertionError("FINTRAC count mismatch")
         counts[name]=len(rows)
+    for name,minimum in {
+        "us_occ_enforcement_actions.json":20,
+        "us_ofac_sdn_entities.json":5000,
+        "us_sec_litigation_releases.json":3,
+    }.items():
+        path="data/"+name
+        try:
+            data=json.loads(read(urljoin(base,path)+version))
+        except Exception:
+            continue # Explicit source status is validated below.
+        if len(data.get("records",[]))<minimum:
+            raise AssertionError("Invalid optional original source "+path)
+        counts[path]=len(data["records"])
+    for name in ("us_occ_enforcement_health.json","us_ofac_source_health.json","us_sec_source_health.json"):
+        data=json.loads(read(urljoin(base,"data/"+name)+version))
+        if not data.get("status") and not data.get("source_health"):
+            raise AssertionError("Source health not published: "+name)
     return {"scripts":len(scripts),"datasets":counts}
 
 def main():

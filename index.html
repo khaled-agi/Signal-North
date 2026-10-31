@@ -437,6 +437,16 @@
     <div class="panel"><div class="panel-heading"><div><div class="eyebrow">ORGANIZATION RESEARCH</div><h2>Institution radar</h2></div></div><div class="notice"><strong>Institutional involvement does not mean institutional fraud.</strong> Records here are published enforcement notices; a count of records does not measure culpability or actual demand for consulting services.</div><div id="institutionRows"></div></div>
   </section>
   <section id="sources" class="tab hidden">
+    <section class="panel" id="primaryRegulatorySignals">
+      <div class="panel-heading"><div><div class="eyebrow">ORIGINAL REGULATOR RECORDS / MULTI-SOURCE</div><h2>Enforcement, sanctions and SEC court notices</h2></div><span class="small" id="primarySignalsStatus">Checking original-source datasets…</span></div>
+      <p class="supporting-disclaimer">Sources have different meanings: OCC actions describe institution or individual regulatory proceedings; OFAC entries are current sanctions-list organization/group designations, not automatically banks; SEC litigation announcements may include allegations and should not be treated as final judgments. No name-only automatic linkage or fraud culpability inference.</p>
+      <div class="world-reporting-toolbar">
+        <label for="primarySignalType">Source <select id="primarySignalType"><option value="occ">OCC enforcement actions</option><option value="ofac">OFAC sanctions entities</option><option value="sec">SEC litigation publications</option></select></label>
+        <label for="primarySignalSearch">Search original records <input id="primarySignalSearch" type="search" placeholder="Institution, program, subject matter…" aria-label="Search original regulator records"></label>
+      </div>
+      <div id="primarySignalRows" class="world-reporting-rows" aria-live="polite"><div class="empty">Loading official datasets…</div></div>
+      <p class="supporting-disclaimer" id="primarySignalHealth">Each collector reports success or failure independently; unavailable feeds never imply zero enforcement or designations.</p>
+    </section>
     <section class="panel" id="usAgencySignalHub">
       <div class="panel-heading"><div><div class="eyebrow">UNITED STATES / MULTI-AGENCY PUBLIC SOURCE FEEDS</div><h2>Official enforcement and closure publications</h2></div><span class="small" id="usAgencySignalStatus">Checking live agency sources…</span></div>
       <p class="supporting-disclaimer">These are regulator-issued publication links collected from the Federal Reserve, OCC, and NCUA. <strong>Publication is not a final enforcement judgment.</strong> Notices may concern an individual or an institution; closure notices concern bank or credit-union lifecycle events. No institution wrongdoing is inferred by the collector.</p>
@@ -481,6 +491,7 @@
 <script src="./osfi_register.js?v=__BUILD_SHA__" defer></script>
 <script src="./us_fdic.js?v=__BUILD_SHA__" defer></script>
 <script src="./us_regulatory_signals.js?v=__BUILD_SHA__" defer></script>
+<script src="./primary_regulatory_signals.js?v=__BUILD_SHA__" defer></script>
 <script src="./reviewed.js?v=__BUILD_SHA__" defer></script>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" async crossorigin="" onload="window.dispatchEvent(new Event('signalnorth:mapready'))"></script>
 </body></html>

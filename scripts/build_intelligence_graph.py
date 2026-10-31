@@ -183,6 +183,9 @@ def generate():
  fdic_banks=load("us_fdic_institutions.json","records")
  fdic_failures=load("us_fdic_failures.json","records")
  ncua_credit_unions=load("us_ncua_credit_unions.json","records")
+ occ_actions=load("us_occ_enforcement_actions.json","records")
+ ofac_entities=load("us_ofac_sdn_entities.json","records")
+ sec_litigation=load("us_sec_litigation_releases.json","records")
  for row in obsi_firms:
   entry=ensure(row.get("institution"))
   if entry:
@@ -314,6 +317,36 @@ def generate():
    "source_url":"https://ncua.gov/analysis/credit-union-corporate-call-report-data/quarterly-data",
    "source_kind":"official_NCUA_quarterly_credit_union_roster",
   }
+ # OCC national-bank charter is a separate legal identifier from FDIC CERT.
+ # Without an explicit OCC charter -> FDIC CERT crosswalk, retain its own identity.
+ # Individual-affiliated actions are not institutional wrongdoing.
+ for notice in occ_actions:
+  charter=str(notice.get("occ_charter") or "").strip()
+  name=str(notice.get("institution") or "").strip()
+  if not charter.isdigit() or not name:continue
+  key="us-occ-"+charter
+  if key not in by_key:
+   by_key[key]={
+    "id":key,"name":name+" (OCC charter "+charter+")",
+    "legal_name":name,"jurisdiction":"US","country":"US",
+    "aliases":[name+" OCC "+charter],
+    "counts":{"enforcement":0,"incidents":0,"headlines":0},
+    "evidence":[],"themes":[],"annual_penalties_cad":{},"recent_activity":None,
+   }
+  entry=by_key[key]
+  official=entry.setdefault("official_data",{})
+  keyname="occ_individual_matters" if notice.get("subject_is_individual") else "occ_institution_actions"
+  official.setdefault(keyname,[]).append({
+    "id":notice.get("id"),"start_date":notice.get("start_date"),
+    "case_type":notice.get("case_type"),"type_description":notice.get("action_description"),
+    "amount_usd":notice.get("amount_usd"),"amount_raw":notice.get("amount_raw"),
+    "docket":notice.get("docket"),"subject_matters":notice.get("subject_matters") or [],
+    "individual_party":notice.get("individual_party"),"termination_date":notice.get("termination_date"),
+    "source_url":notice.get("source_url"),"start_documents":notice.get("start_documents") or [],
+    "source_kind":"OCC_official_case_record"})
+  official["occ"]={"charter":charter,"legal_name":name,
+    "source_url":"https://apps.occ.gov/EASearch",
+    "note":"OCC charter identifier. No speculative FDIC CERT or Canadian entity merge."}
  for entry in by_key.values():
   official=entry.setdefault("official_data",{})
   official["counts"]={"fintrac_public_notices":len(official.get("fintrac_notices",[])),
@@ -321,7 +354,9 @@ def generate():
      "bank_disclosure_years":len(official.get("bank_disclosures",[])),
      "obsi_firm_years":len(official.get("obsi_firm_complaints",[])),
      "ciro_concluded_cases":len(official.get("ciro_concluded_cases",[])),
-     "fdic_failures":len(official.get("fdic_failure_events",[]))}
+     "fdic_failures":len(official.get("fdic_failure_events",[])),
+     "occ_institution_actions":len(official.get("occ_institution_actions",[])),
+     "occ_individual_matters":len(official.get("occ_individual_matters",[]))}
   if official.get("bank_disclosures"):
    official["bank_disclosures"].sort(key=lambda x:x.get("year",0),reverse=True)
   if official.get("fintrac_notices"):
@@ -353,7 +388,9 @@ def generate():
     "bank_disclosure_records":len(bank_disclosures),"fcac_manual_sample":len(fcac),
     "obsi_banking_years":len(obsi_sector),"obsi_firm_records":len(obsi_firms),"ciro_confirmed_cases":len(ciro_cases),"amf_quebec_entity_rows":len(amf),
     "us_fdic_active_entities":len(fdic_banks),"us_fdic_failure_events":len(fdic_failures),
-    "us_ncua_credit_union_entities":len(ncua_credit_unions)},
+    "us_ncua_credit_union_entities":len(ncua_credit_unions),
+    "us_occ_enforcement_actions":len(occ_actions),"us_ofac_sdn_entity_designations":len(ofac_entities),
+    "us_sec_litigation_publications":len(sec_litigation)},
   "sector_context":{"obsi_banking":obsi_sector,"note":"OBSI annual sector totals must not be attributed to individual institutions."},
   "institutions":ranked
  }
