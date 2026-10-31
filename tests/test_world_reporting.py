@@ -6,7 +6,7 @@ from datetime import datetime, timedelta, timezone
 import pycountry
 from scripts.collect_world_news import (
     markets, choose_batch, search_queries, feed_url, classify,
-    parse_feed, retained, retained_unattributed, safe_link, query_edition, is_local_query, MAX_AGE_DAYS,
+    parse_feed, retained, retained_unattributed, safe_link, query_edition, is_local_query, local_search_specs, choose_priority_batch, MAX_AGE_DAYS,
 )
 from scripts.world_country_lenses import country_profile, country_title_reference
 
@@ -99,6 +99,76 @@ class WorldCountryTest(unittest.TestCase):
         self.assertEqual(query_edition(jordan,search_queries(jordan)[3])[1],
                          "language_proxy_edition")
         self.assertEqual(query_edition(jordan,search_queries(jordan)[0])[0][1],"US")
+
+    def test_china_india_malaysia_deeper_native_fraud_queries(self):
+        entries={p["code"]:p for p in markets()}
+        china,india,malaysia=entries["CN"],entries["IN"],entries["MY"]
+        self.assertGreaterEqual(len(search_queries(china)),6)
+        self.assertGreaterEqual(len(search_queries(india)),8)
+        self.assertGreaterEqual(len(search_queries(malaysia)),7)
+        self.assertIn("洗钱",str(search_queries(china)))
+        self.assertIn("மோசடி",str(search_queries(india)))
+        self.assertIn("诈骗",str(search_queries(malaysia)))
+        self.assertIn("மோசடி",str(search_queries(malaysia)))
+        china_query=next(x for x in search_queries(china) if "网络诈骗" in x)
+        india_query=next(x for x in search_queries(india) if "இந்தியா" in x)
+        malaysia_query=next(x for x in search_queries(malaysia) if "马来西亚" in x)
+        self.assertTrue(is_local_query(china,china_query))
+        self.assertTrue(is_local_query(india,india_query))
+        self.assertTrue(is_local_query(malaysia,malaysia_query))
+        self.assertEqual(query_edition(china,china_query)[0][1],"CN")
+        self.assertEqual(query_edition(india,india_query)[0][1],"IN")
+        self.assertEqual(query_edition(malaysia,malaysia_query)[0][1],"CN")
+        self.assertEqual(query_edition(malaysia,malaysia_query)[1],"language_proxy_edition")
+        self.assertEqual(classify("中国网络诈骗案件",china),"Fraud and scam reporting")
+        self.assertEqual(country_title_reference("中国网络诈骗案件",china),"中国")
+        self.assertEqual(country_title_reference("马来西亚银行诈骗案件",malaysia),"马来西亚")
+        self.assertEqual(country_title_reference("இந்தியா வங்கி மோசடி",india),"இந்தியா")
+        chinese=parse_feed(rss(title="中国网络诈骗案件"),china,china_query,NOW)
+        self.assertEqual(len(chinese),1)
+        self.assertEqual(chinese[0]["query_language"],"zh")
+        self.assertEqual(chinese[0]["country_basis"],"country_explicitly_named_in_title_not_incident_location")
+        self.assertNotIn("latitude",chinese[0])
+
+    def test_southeast_asia_and_africa_market_queries(self):
+        entries={p["code"]:p for p in markets()}
+        for code,needle in [
+            ("ID","pencucian uang"),("TH","หลอกลวงออนไลน์"),
+            ("VN","rửa tiền"),("PH","panloloko"),("SG","新加坡"),
+            ("KH","បោកប្រាស់តាមអ៊ីនធឺណិត"),("NG","zamba"),
+            ("KE","mobile money fraud"),("ZA","Suid-Afrika"),
+            ("EG","نصب إلكتروني"),("SN","blanchiment"),
+            ("ET","የባንክ"),
+        ]:
+            with self.subTest(code=code):
+                self.assertIn(needle,str(search_queries(entries[code])))
+        for code in ("CN","IN","MY","NG","KE","ZA","ID","VN","PH"):
+            self.assertTrue(any(is_local_query(entries[code],q)
+                                for q in search_queries(entries[code])))
+
+    def test_hub_priority_does_not_displace_rotating_country_coverage(self):
+        entries=markets()
+        selected,cursor=choose_batch(entries,0,32)
+        hubs,next_cursor=choose_priority_batch(entries,selected,0)
+        self.assertEqual(len(selected),32)
+        self.assertLessEqual(len(hubs),4)
+        self.assertFalse({p["code"] for p in selected}&{p["code"] for p in hubs})
+        self.assertTrue({p["code"] for p in hubs}.issubset(
+            {"CN","IN","MY","ID","TH","VN","PH","SG","KH",
+             "NG","KE","ZA","EG","GH","TZ","ET"}))
+        self.assertEqual(next_cursor,4)
+        seen=set()
+        for i in range(4):
+            out,_=choose_priority_batch(entries,[],i*4)
+            seen.update(p["code"] for p in out)
+        self.assertEqual(len(seen),16)
+        # The 250-market baseline rotation remains exhaustive independently.
+        all_seen=set()
+        cursor=0
+        for _ in range(8):
+            base,cursor=choose_batch(entries,cursor,32)
+            all_seen.update(p["code"] for p in base)
+        self.assertEqual(len(all_seen),250)
 
     def test_unlocated_local_headline_is_not_mapped_or_assigned(self):
         france=country_profile(pycountry.countries.get(alpha_2="FR"))
