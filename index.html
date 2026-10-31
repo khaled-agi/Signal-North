@@ -250,11 +250,15 @@
           <label for="canadianHubQuery">Search <input id="canadianHubQuery" type="search" placeholder="Regulator, province, dataset…" aria-label="Search Canadian source registry"></label>
         </div>
         <div id="canadianHubRows" class="world-reporting-rows" aria-live="polite"><div class="empty">Loading official source coverage…</div></div>
-        <details class="cfpb-history" id="verifiedCanadaEnforcement"><summary><strong>Verified named-institution enforcement actions · Canada</strong><span id="verifiedCanadaCount">Loading sourced cases…</span></summary>
-        <p class="supporting-disclaimer">Non-exhaustive primary-source case sample. Date of penalty and date of publication may differ. Each record represents a regulator notice; do not equate penalties with fraud losses or unreviewed allegations.</p>
+        <details class="cfpb-history" id="verifiedCanadaEnforcement"><summary><strong>Official-index sourced Canadian enforcement sample</strong><span id="verifiedCanadaCount">Loading sourced cases…</span></summary>
+        <p class="supporting-disclaimer">Non-exhaustive manually transcribed index-based case sample. Links may lead to an agency index rather than an individual decision. Date of penalty and date of publication may differ. Each record represents a regulator notice; do not equate penalties with fraud losses or unreviewed allegations.</p>
         <div class="world-reporting-toolbar"><label for="verifiedCanadaAgency">Agency <select id="verifiedCanadaAgency"><option value="">All agencies</option></select></label><label for="verifiedCanadaSearch">Institution <input id="verifiedCanadaSearch" type="search" placeholder="Bank or credit union…" aria-label="Filter verified Canadian enforcement cases"></label></div>
         <div id="verifiedCanadaRows" class="world-reporting-rows"><div class="empty">Loading original-source enforcement notices…</div></div></details>
-        <details class="cfpb-history" id="canadianRegulatorLeads"><summary><strong>Official regulator publication links · FINTRAC / FCAC / CSA / provinces</strong><span id="canRegLeadStatus">Checking collected source indexes…</span></summary>
+        <details class="cfpb-history" id="fintracOfficialPenalties"><summary><strong>FINTRAC official penalty notices · structured records</strong><span id="fintracOfficialStatus">Checking official dataset…</span></summary>
+        <p class="supporting-disclaimer">Public notice index, not a criminal finding. Amounts are regulator-imposed administrative penalties, not customer fraud losses. Current payment or appeal status may have changed. This is distinct from the manually curated enforcement sample above.</p>
+        <div class="world-reporting-toolbar"><label for="fintracOfficialSearch">Entity <input id="fintracOfficialSearch" type="search" placeholder="Bank, credit union, payment firm…" aria-label="Search official FINTRAC penalties"></label></div>
+        <div id="fintracOfficialRows" class="world-reporting-rows"><div class="empty">No confirmed official-index snapshot yet.</div></div></details>
+        <details class="cfpb-history" id="canadianRegulatorLeads"><summary><strong>Official regulator publication links · FCAC / CIRO / CSA / provinces</strong><span id="canRegLeadStatus">Checking collected source indexes…</span></summary>
         <p class="supporting-disclaimer">Automated publication links are <strong>research leads, not independently validated enforcement cases</strong>. Open each official source to confirm involved institutions, findings, dates, appeal status and any amounts. Publication coverage varies by regulator.</p>
         <div class="world-reporting-toolbar"><label for="canRegAgency">Agency <select id="canRegAgency"><option value="">All collected agencies</option></select></label><label for="canRegSearch">Search <input id="canRegSearch" type="search" placeholder="Title or source…" aria-label="Search collected regulator index links"></label></div>
         <div id="canRegRows" class="world-reporting-rows"><div class="empty">Collection not yet verified.</div></div></details>
@@ -425,6 +429,7 @@
 <script src="./bank_disclosures.js?v=__BUILD_SHA__" defer></script>
 <script src="./canadian_sources.js?v=__BUILD_SHA__" defer></script>
 <script src="./canadian_verified_enforcement.js?v=__BUILD_SHA__" defer></script>
+<script src="./fintrac_official.js?v=__BUILD_SHA__" defer></script>
 <script src="./canadian_regulatory_leads.js?v=__BUILD_SHA__" defer></script>
 <script src="./osfi_register.js?v=__BUILD_SHA__" defer></script>
 <script src="./reviewed.js?v=__BUILD_SHA__" defer></script>
