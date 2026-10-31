@@ -1,5 +1,5 @@
 {
-  "last_completed_at": "2026-10-31T13:16:00+00:00",
+  "last_completed_at": "2026-10-31T13:23:10+00:00",
   "regulators_configured": 30,
   "regulators_attempted": 30,
   "countries_with_publication_leads": 0,
@@ -152,7 +152,7 @@
     "US:CFPB": {
       "status": "error",
       "error_type": "HTTPError",
-      "checked_at": "2026-10-31T09:28:45+00:00",
+      "checked_at": "2026-10-31T13:22:57+00:00",
       "source_domain": "consumerfinance.gov",
       "country_code": "US",
       "regulator": "CFPB"
@@ -160,7 +160,7 @@
     "US:Federal Reserve": {
       "status": "error",
       "error_type": "HTTPError",
-      "checked_at": "2026-10-31T09:28:45+00:00",
+      "checked_at": "2026-10-31T13:22:59+00:00",
       "source_domain": "federalreserve.gov",
       "country_code": "US",
       "regulator": "Federal Reserve"
@@ -168,7 +168,7 @@
     "US:SEC": {
       "status": "error",
       "error_type": "HTTPError",
-      "checked_at": "2026-10-31T09:28:46+00:00",
+      "checked_at": "2026-10-31T13:22:58+00:00",
       "source_domain": "sec.gov",
       "country_code": "US",
       "regulator": "SEC"
@@ -176,15 +176,15 @@
     "US:OFAC": {
       "status": "error",
       "error_type": "HTTPError",
-      "checked_at": "2026-10-31T09:28:52+00:00",
+      "checked_at": "2026-10-31T13:23:08+00:00",
       "source_domain": "ofac.treasury.gov",
       "country_code": "US",
       "regulator": "OFAC"
     },
     "BR:Banco Central do Brasil": {
-      "status": "empty",
-      "accepted": 0,
-      "checked_at": "2026-10-31T09:28:56+00:00",
+      "status": "error",
+      "error_type": "HTTPError",
+      "checked_at": "2026-10-31T13:23:09+00:00",
       "source_domain": "bcb.gov.br",
       "country_code": "BR",
       "regulator": "Banco Central do Brasil"
@@ -192,7 +192,7 @@
     "BR:CVM": {
       "status": "error",
       "error_type": "HTTPError",
-      "checked_at": "2026-10-31T09:28:53+00:00",
+      "checked_at": "2026-10-31T13:23:10+00:00",
       "source_domain": "gov.br",
       "country_code": "BR",
       "regulator": "CVM"
