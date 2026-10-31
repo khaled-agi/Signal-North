@@ -14,6 +14,7 @@ required = [
     "data/canadian_enforcement_verified.json",
     "data/cafc_aggregates.json",
     "data/cafc_source_status.json",
+    "data/obsi_annual_banking.json",
 ]
 missing += [p for p in required if not (root / p).is_file()]
 if missing:
@@ -25,4 +26,10 @@ if optional_penalties.is_file():
     penalties = json.loads(optional_penalties.read_text(encoding="utf-8"))
     if penalties.get("count", 0) < 15 or penalties["count"] != len(penalties.get("records", [])):
         raise SystemExit("FINTRAC index snapshot incomplete; refusing deployment")
+obsi = json.loads((root / "data/obsi_annual_banking.json").read_text(encoding="utf-8"))
+if len(obsi.get("rows", [])) < 5:
+    raise SystemExit("OBSI banking historical series is missing")
+banks = json.loads((root / "data/bank_complaint_disclosures.json").read_text(encoding="utf-8"))
+if len(banks.get("records", [])) < 15:
+    raise SystemExit("Bank disclosure archive is incomplete")
 print(f"Pages Canadian bundle verified: {len(scripts)} local scripts, {len(required)} required JSON files")
