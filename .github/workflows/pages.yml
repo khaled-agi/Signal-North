@@ -38,7 +38,7 @@ jobs:
         run: python -m pip install -r requirements.txt
       - name: Validate application syntax
         run: |
-          python -m py_compile scripts/collect.py scripts/collect_news.py scripts/collect_sources.py scripts/build_article_index.py scripts/build_story_groups.py scripts/build_related_reporting.py scripts/build_reviewed_events.py scripts/build_intelligence_graph.py scripts/collect_publishers.py scripts/build_theme_trends.py scripts/collect_global.py scripts/build_world_registry.py scripts/world_country_lenses.py scripts/region_query_lenses.py scripts/collect_world_news.py scripts/collect_global_regulator_publications.py scripts/collect_community.py
+          python -m py_compile scripts/collect.py scripts/collect_news.py scripts/collect_sources.py scripts/build_article_index.py scripts/build_story_groups.py scripts/build_related_reporting.py scripts/build_reviewed_events.py scripts/build_intelligence_graph.py scripts/collect_publishers.py scripts/build_theme_trends.py scripts/collect_global.py scripts/build_world_registry.py scripts/world_country_lenses.py scripts/region_query_lenses.py scripts/empty_country_recovery.py scripts/collect_world_news.py scripts/collect_global_regulator_publications.py scripts/collect_community.py
           node --check geography.js
           node --check app.js
           node --check intel.js
@@ -147,7 +147,7 @@ jobs:
           cp data/community_signals.json data/community_status.json _site/data/
           cp data/research_library.json _site/data/
           cp data/theme_trends.json data/sector_watch.json _site/data/
-          cp data/global_enforcement.json data/global_enforcement_seed.json data/global_source_status.json data/world_jurisdictions.json data/world_reporting.json data/world_reporting_status.json data/world_local_unattributed.json data/global_regulator_publications.json data/global_regulator_publications_status.json _site/data/
+          cp data/global_enforcement.json data/global_enforcement_seed.json data/global_source_status.json data/world_jurisdictions.json data/world_reporting.json data/world_reporting_status.json data/world_local_unattributed.json data/world_coverage_counterexamples.json data/global_regulator_publications.json data/global_regulator_publications_status.json _site/data/
           sed -i "s/__BUILD_SHA__/${GITHUB_SHA}/g" _site/index.html
       - name: Configure Pages
         uses: actions/configure-pages@v5
