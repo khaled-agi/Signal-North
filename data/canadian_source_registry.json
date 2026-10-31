@@ -8,8 +8,8 @@
       "jurisdiction": "Canada",
       "dataset": "Data Cube: cases by banking services firms",
       "url": "https://www.obsi.ca/en/case-data-insights/data-cube/cases-by-banking-services-firms/",
-      "status": "linked_only",
-      "notes": "Interactive Power BI, no verified stable public bulk API"
+      "status": "partial_ingestion",
+      "notes": "FY2025 firm-level metrics imported from annual report (53 legal entities), cross-checked against published totals; Data Cube direct export still unverified"
     },
     {
       "agency": "Canadian bank annual complaints",
