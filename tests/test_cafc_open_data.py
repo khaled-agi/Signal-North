@@ -49,6 +49,7 @@ class CAFCDataTests(unittest.TestCase):
   self.assertEqual(year[0]["report_rows"],6)
   self.assertIsNone(year[0]["reported_dollar_loss_sum"])
   self.assertEqual(year[0]["rows_without_loss"],6)
+  self.assertEqual(year[0]["known_reported_dollar_loss_subtotal"],0.0)
 
  def test_fails_closed_on_schema_change(self):
   with self.assertRaises(ValueError):c.aggregate(io.StringIO("First,Second\none,two\n"))
