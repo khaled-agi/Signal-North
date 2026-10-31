@@ -186,6 +186,7 @@ def generate():
  occ_actions=load("us_occ_enforcement_actions.json","records")
  ofac_entities=load("us_ofac_sdn_entities.json","records")
  sec_litigation=load("us_sec_litigation_releases.json","records")
+ uk_sanctions=load("uk_sanctions_entities.json","records")
  for row in obsi_firms:
   entry=ensure(row.get("institution"))
   if entry:
@@ -390,7 +391,7 @@ def generate():
     "us_fdic_active_entities":len(fdic_banks),"us_fdic_failure_events":len(fdic_failures),
     "us_ncua_credit_union_entities":len(ncua_credit_unions),
     "us_occ_enforcement_actions":len(occ_actions),"us_ofac_sdn_entity_designations":len(ofac_entities),
-    "us_sec_litigation_publications":len(sec_litigation)},
+    "us_sec_litigation_publications":len(sec_litigation),"uk_sanctions_entity_designations":len(uk_sanctions)},
   "sector_context":{"obsi_banking":obsi_sector,"note":"OBSI annual sector totals must not be attributed to individual institutions."},
   "institutions":ranked
  }
