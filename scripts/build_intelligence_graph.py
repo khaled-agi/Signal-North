@@ -221,9 +221,9 @@ def generate():
    break
  for entry in by_key.values():
   official=entry.setdefault("official_data",{})
-  entry["counts"]["fintrac_public_notices"]=len(official.get("fintrac_notices",[]))
-  entry["counts"]["fcac_index_notices"]=len(official.get("fcac_notices",[]))
-  entry["counts"]["bank_disclosure_years"]=len(official.get("bank_disclosures",[]))
+  official["counts"]={"fintrac_public_notices":len(official.get("fintrac_notices",[])),
+     "fcac_index_notices":len(official.get("fcac_notices",[])),
+     "bank_disclosure_years":len(official.get("bank_disclosures",[]))}
   if official.get("bank_disclosures"):
    official["bank_disclosures"].sort(key=lambda x:x.get("year",0),reverse=True)
   if official.get("fintrac_notices"):
