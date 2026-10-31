@@ -181,7 +181,7 @@ try:
         assert "original-domain" in page.locator(".regulator-publications-panel").text_content().lower()
         page.locator('[data-tab="fraud"]').click()
         page.locator("#worldReportingPanel > summary").click()
-        assert "stored articles" in page.locator("#worldReportingSummary").text_content()
+        assert "country-referenced articles" in page.locator("#worldReportingSummary").text_content()
         page.locator('[data-tab="overview"]').click()
         # Synthetic browser-only record tests country search-market map attribution.
         page.evaluate("""() => {
@@ -194,9 +194,27 @@ try:
           state.mapCountry="FR";document.querySelector("#mapCountry").value="FR";
           state.mapMode="news";initMap();
         }""")
-        assert "search-market" in page.locator("#mappedStories").inner_text().lower()
-        assert "Not a verified fraud location" in page.locator("#mappedStories").inner_text()
+        assert "Headline names France" in page.locator("#mappedStories").inner_text()
+        assert "not a verified incident location" in page.locator("#mappedStories").inner_text()
         assert page.locator("#mappedStories a[href='https://example.org/fixture']").count() >= 1
+        page.locator(".count-map-pin").first.click()
+        assert not page.locator(".leaflet-popup").is_visible()
+        assert "selected records" in page.locator("#mapSelectedContext").inner_text()
+        page.locator('#mappedStories [data-mapdetail="world-news-fixture"]').click()
+        assert "explicitly mentions this country" in page.locator("#mapRecordDetail").inner_text()
+        assert page.locator('#mapRecordDetail a[href="https://example.org/fixture"]').count() == 1
+        page.locator("#mapDetailClose").click()
+        assert page.locator("#mapRecordDetail").is_hidden()
+        page.locator("#mapSelectionClear").click()
+        assert page.locator("#mapSelectedContext").is_hidden()
+        # A Jordan RSS search must not place unrelated world stories in Jordan.
+        assert page.evaluate("""() => {
+          const jordan=state.worldCountries.find(c=>c.code==="JO");
+          return ["Orlando man arrested in fraud","Israeli police report election fraud",
+             "RCMP in Alberta investigating fraud","Former RMW worker charged with bribery scam"]
+             .every(title=>!SignalNorthGeo.evaluate({country_code:"JO",country:"Jordan",title},jordan).referenced);
+        }""")
+
         page.evaluate("""() => {
           state.worldNews=window.__originalWorldNewsForTest;
           state.mapCountry="";document.querySelector("#mapCountry").value="";

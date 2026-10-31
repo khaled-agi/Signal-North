@@ -7,6 +7,7 @@ claimed to be available. An editorial source watchlist is NOT an ingested feed.
 from __future__ import annotations
 from types import SimpleNamespace
 import pycountry
+import re
 
 # Special research jurisdictions outside ISO 3166-1, not a statement of sovereignty.
 # XK is a widely used user-assigned code, NOT an officially allocated ISO country code.
@@ -123,6 +124,34 @@ def country_profile(country):
         "language_strategy":"country_configured" if local else "english_country_named_fallback",
         "agency_directory":[{"name":n,"url":u} for n,u in AUTHORITIES.get(code,[])],
     }
+
+
+# Headline title terms can establish a named-country reference for research,
+# NEVER the incident location. Search edition and query are insufficient.
+COUNTRY_HEADLINE_ALIASES={
+ "JO":["Jordanian","الأردني"],"IL":["Israeli","ישראל"],
+ "PS":["Palestinian","فلسطيني"],"US":["United States","American","USA","U.S."],
+ "CA":["Canadian"],"GB":["British","Britain","United Kingdom","U.K."],
+ "AE":["Emirati","UAE"],"SA":["Saudi","Saudi Arabia"],"IN":["Indian"],
+ "DE":["German","Deutschland"],"FR":["French"],"JP":["Japanese"],
+ "KR":["South Korean","Korean"],"BR":["Brazilian","Brasil"],
+ "AU":["Australian"],"MX":["Mexican","México"],"TW":["Taiwanese"],
+ "XK":["Kosovar"],
+}
+def country_title_reference(title, profile):
+    """Explicit country-name/demonym in a headline; NOT verified event geography.
+
+    Does not infer any jurisdiction from where a Google News RSS search was run.
+    In particular, Jordan-search results about unrelated Orlando or Alberta
+    stories are ineligible, even if Google News returned them.
+    """
+    terms=[profile["name"],profile.get("local_country_term"),
+           *COUNTRY_HEADLINE_ALIASES.get(profile["code"],[])]
+    for raw in terms:
+        if not raw or len(raw)<3:continue
+        if re.search(r"(?<!\w)"+re.escape(raw)+r"(?!\w)",title,re.IGNORECASE):
+            return raw
+    return None
 
 CRIME_TERMS=(
  "fraud","scam","phish","launder","identity theft","ponzi","embezzle",

@@ -8,7 +8,7 @@ from scripts.collect_world_news import (
     markets, choose_batch, search_queries, feed_url, classify,
     parse_feed, retained, safe_link, MAX_AGE_DAYS,
 )
-from scripts.world_country_lenses import country_profile
+from scripts.world_country_lenses import country_profile, country_title_reference
 
 NOW=datetime(2026,10,30,18,tzinfo=timezone.utc)
 
@@ -81,7 +81,8 @@ class WorldCountryTest(unittest.TestCase):
         self.assertEqual(len(leads),1)
         lead=leads[0]
         self.assertEqual(lead["country_code"],"FR")
-        self.assertEqual(lead["country_basis"],"search_market_only_not_confirmed_incident_location")
+        self.assertEqual(lead["country_basis"],"country_explicitly_named_in_title_not_incident_location")
+        self.assertEqual(lead["country_reference_term"],"France")
         self.assertEqual(lead["evidence_status"],"unverified_news_lead")
         self.assertEqual(lead["review_status"],"not_source_reviewed")
         self.assertEqual(lead["category"],"Fraud and scam reporting")
@@ -101,7 +102,36 @@ class WorldCountryTest(unittest.TestCase):
         self.assertEqual(record["evidence_status"],"unverified_news_lead")
         self.assertEqual(record["search_language"],"en")
         self.assertEqual(record["category"],"Reported financial regulatory enforcement (unverified)")
-        self.assertEqual(record["country_basis"],"search_market_only_not_confirmed_incident_location")
+        self.assertEqual(record["country_basis"],"country_explicitly_named_in_title_not_incident_location")
+
+    def test_jordan_search_excludes_unrelated_international_headlines(self):
+        jordan=country_profile(pycountry.countries.get(alpha_2="JO"))
+        titles=[
+            "Orlando man arrested in fraud targeting elderly woman",
+            "Former RMW worker charged with bribery scam - Boston Globe",
+            "Israeli police find no evidence backing election fraud claims",
+            "RCMP investigating Alberta health spending with possible money laundering",
+        ]
+        for title in titles:
+            with self.subTest(title=title):
+                self.assertIsNone(country_title_reference(title,jordan))
+                self.assertEqual(parse_feed(rss(title=title),jordan,
+                           search_queries(jordan)[0],NOW),[])
+        match=parse_feed(rss(title="Jordanian banks warn of phishing scams"),
+                         jordan,search_queries(jordan)[0],NOW)
+        self.assertEqual(len(match),1)
+        self.assertEqual(match[0]["country_reference_status"],
+                         "country_name_in_headline_not_incident_location")
+
+    def test_old_search_market_records_are_revalidated(self):
+        jordan=country_profile(pycountry.countries.get(alpha_2="JO"))
+        valid=parse_feed(rss(title="Jordanian banks warn about fraud"),
+                         jordan,search_queries(jordan)[0],NOW)[0]
+        old=dict(valid,id="old-jordan-wrong",title="Orlando fraud case",
+                 country_basis="search_market_only_not_confirmed_incident_location")
+        kept=retained([valid,old],NOW)
+        self.assertEqual(len(kept),1)
+        self.assertEqual(kept[0]["id"],valid["id"])
 
     def test_unrelated_headline_not_automatically_accepted(self):
         fr=country_profile(pycountry.countries.get(alpha_2="FR"))
@@ -118,9 +148,7 @@ class WorldCountryTest(unittest.TestCase):
     def test_no_country_metadata_inferred_from_generic_headline(self):
         fr=country_profile(pycountry.countries.get(alpha_2="FR"))
         result=parse_feed(rss(title="Bank phishing attacks on mobile customers"),fr,"fraud",NOW)
-        self.assertEqual(result[0]["country_code"],"FR")
-        self.assertIn("search_market_only",result[0]["country_basis"])
-        self.assertNotIn("verified_incident_location",result[0])
+        self.assertEqual(result,[], "A search market is not evidence of country relevance")
 
 if __name__=="__main__":
     unittest.main()

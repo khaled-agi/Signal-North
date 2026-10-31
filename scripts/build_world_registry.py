@@ -68,6 +68,7 @@ def build():
     "catalogue_type":profile["catalogue_type"],
     "language_strategy":profile["language_strategy"],
     "local_language":profile["local_language"],
+    "local_country_term":profile["local_country_term"],
     "agency_directory":profile["agency_directory"],
     "country_basis":"country_search_market_not_verified_event_location"}
  canada=pycountry.countries.get(alpha_2="CA")
