@@ -1,11 +1,15 @@
 {
-  "last_attempt_at": null,
-  "status": "not_attempted",
+  "last_attempt_at": "2026-10-31T02:05:01+00:00",
   "source": "CFPB public Consumer Complaint Database",
   "endpoint": "https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/",
-  "stored_records": 0,
+  "status": "ok",
   "sample_limit_per_call": 100,
   "retention_days": 90,
-  "latest_window_total": null,
-  "total_basis": "not_available"
+  "methodology": "Only recent, published categorical complaint metadata; not a population sample, findings, fraud incidents, bank losses or regulator enforcement.",
+  "latest_window_total": 1916653,
+  "total_basis": "CFPB API exact search total, not sampled rows",
+  "last_success_at": "2026-10-31T02:05:01+00:00",
+  "query_received_from": "2026-08-02",
+  "returned_in_latest_request": 100,
+  "stored_records": 100
 }
