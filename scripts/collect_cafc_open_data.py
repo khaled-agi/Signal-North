@@ -126,6 +126,7 @@ def aggregate(fileobj):
   out.append({"dimension":kind,"year":year,"label":name,"province":province or None,
     "report_rows":n,"reported_victims_sum":victims if missing_victims==0 else None,
     "reported_dollar_loss_sum":round(loss,2) if missing_loss==0 else None,
+    "known_reported_dollar_loss_subtotal":round(loss,2),
     "rows_without_loss":missing_loss,"rows_without_victims":missing_victims,
     "source":"CAFC official public reports; self-reported unverified",
     "geography_basis":"report_submitter_province_not_verified_incident_site"})
