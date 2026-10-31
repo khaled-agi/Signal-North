@@ -20,6 +20,10 @@ from urllib.parse import urlencode, urlsplit
 import pycountry
 import requests
 try:
+ from .region_query_lenses import MARKET_EXTRA_QUERIES, PRIORITY_MARKETS, PRIORITY_EXTRA_PER_RUN
+except ImportError:
+ from region_query_lenses import MARKET_EXTRA_QUERIES, PRIORITY_MARKETS, PRIORITY_EXTRA_PER_RUN
+try:
     from .world_country_lenses import country_profile, CRIME_TERMS, research_jurisdictions, country_title_reference, LANGUAGE_PROXY_EDITIONS, NEWS_EDITIONS
 except ImportError:
     from world_country_lenses import country_profile, CRIME_TERMS, research_jurisdictions, country_title_reference, LANGUAGE_PROXY_EDITIONS, NEWS_EDITIONS
@@ -75,40 +79,69 @@ def choose_batch(all_markets,cursor,batch_size):
     start=int(cursor)%len(all_markets)
     return [all_markets[(start+i)%len(all_markets)] for i in range(size)],(start+size)%len(all_markets)
 
+def choose_priority_batch(profiles, already_selected, priority_cursor, count=PRIORITY_EXTRA_PER_RUN):
+    """Small supplemental hub rotation; NEVER replaces worldwide ISO coverage."""
+    by_code={p["code"]:p for p in profiles}
+    priorities=[by_code[code] for code in PRIORITY_MARKETS if code in by_code]
+    if not priorities:return [],0
+    n=len(priorities)
+    cursor=int(priority_cursor)%n
+    scheduled=[priorities[(cursor+i)%n] for i in range(min(n,max(0,int(count))))]
+    chosen={p["code"] for p in already_selected}
+    return [p for p in scheduled if p["code"] not in chosen],(cursor+len(scheduled))%n
+
+def local_search_specs(profile):
+    """Extra queries only; English baseline runs for every market.
+
+    Query-language metadata is about the search, NOT independently detected
+    article language or publisher location. Local country names are search
+    targets and never imply the search result happened there.
+    """
+    entries=[]
+    if profile.get("local_term") and profile.get("local_country_term") and profile.get("local_language")!="en":
+        entries.append((profile["local_language"],profile["local_country_term"],profile["local_term"]))
+    entries.extend(MARKET_EXTRA_QUERIES.get(profile["code"],()))
+    by_query={}
+    for language,local_country,term in entries:
+        if not (language and local_country and term):continue
+        query=f'{term} "{local_country}" when:{QUERY_DAYS}d'
+        if query not in by_query:by_query[query]={"language":language,"term":term,"country_term":local_country}
+    return by_query
+
 def search_queries(profile):
     name=profile["name"].replace('"',"")
-    # The country name is a search constraint, NOT proof that a reported incident
-    # took place in that country.
     queries=[
         f'"{name}" (fraud OR scam OR phishing) when:{QUERY_DAYS}d',
         f'"{name}" ("money laundering" OR "financial crime" OR "investment scam" OR "fraud enforcement") when:{QUERY_DAYS}d',
         f'"{name}" (bank fined OR "financial regulator penalty" OR "anti-money laundering fine") when:{QUERY_DAYS}d',
     ]
-    if profile["local_term"] and profile["local_country_term"] and profile["local_language"]!="en":
-        queries.append(f'{profile["local_term"]} "{profile["local_country_term"]}" when:{QUERY_DAYS}d')
-    return queries
+    return list(dict.fromkeys([*queries,*local_search_specs(profile).keys()]))
+
+def local_query_spec(profile,query):
+    return local_search_specs(profile).get(query)
 
 def is_local_query(profile,query):
-    """Whether this query uses curated native-language search terms."""
-    return bool(profile.get("local_language") not in (None,"en")
-        and query==search_queries(profile)[-1])
+    """Does this query search with non-English country-specific terms?"""
+    spec=local_query_spec(profile,query)
+    return bool(spec and spec["language"]!="en")
 
 def query_edition(profile,query):
-    """Google News UI/feed edition, not a claim of article or source language.
+    """Best-effort Google News edition; never proof of publisher or article country.
 
-    English searches deliberately use English editions, while native-language
-    searches use a matching national edition where supported, otherwise a
-    labeled same-language proxy. Unlisted languages fall back to en-US
-    discovery with original native-script keywords.
+    Exact country edition is preferred. When not available, use a documented
+    language proxy; otherwise use the country's English edition before US.
     """
     code=profile["code"]
     known=NEWS_EDITIONS.get(code)
-    if is_local_query(profile,query):
-        language=profile["local_language"]
+    spec=local_query_spec(profile,query)
+    if spec and spec["language"]!="en":
+        language=spec["language"]
         if known and known[0].split("-")[0]==language:
             return known,"local_country_edition"
         proxy=LANGUAGE_PROXY_EDITIONS.get(language)
         if proxy:return proxy,"language_proxy_edition"
+        if known and known[0].split("-")[0]=="en":
+            return known,"native_query_country_english_edition_fallback"
         return ("en-US","US","en"),"native_query_english_edition_fallback"
     if known and known[0].split("-")[0]=="en":
         return known,"english_country_edition"
@@ -140,9 +173,15 @@ def classify(title,profile):
     regulatory=bool(FINANCE_TERMS.search(title) and ENFORCEMENT_TERMS.search(title))
     if regulatory:
         return "Reported financial regulatory enforcement (unverified)"
-    local_term=(profile.get("local_term") or "").casefold()
-    relevant=any(term in t for term in TITLE_RELEVANCE_TERMS) or bool(
-        local_term and re.search(r"(?<!\w)"+re.escape(local_term)+r"(?!\w)",t)
+    # CJK/Southeast Asian local terms often attach to other characters;
+    # Unicode word boundaries incorrectly reject them. Match curated
+    # multi-character fraud phrases by literal substring, without guessing
+    # event geography from their occurrence.
+    local_terms=[profile.get("local_term") or ""]+[
+        term for _language,_country,term in MARKET_EXTRA_QUERIES.get(profile["code"],())
+    ]
+    relevant=any(term in t for term in TITLE_RELEVANCE_TERMS) or any(
+        len(term)>=2 and term.casefold() in t for term in local_terms
     )
     if not relevant:
         return None
@@ -170,10 +209,10 @@ def parse_feed(raw,profile,query,observed_at,unattributed=None):
             # Keep SOME original-language fraud reporting as research candidates,
             # but NEVER attach the country, mark it on the map, or count it as
             # country-backed evidence. Only the search market is known.
-            local_term=profile.get("local_term") or ""
+            spec=local_query_spec(profile,query)
+            local_term=spec["term"] if spec else ""
             if (unattributed is not None and is_local_query(profile,query) and
-                local_term and re.search(r"(?<!\w)"+re.escape(local_term)+r"(?!\w)",
-                                         title,re.IGNORECASE)):
+                len(local_term)>=2 and local_term.casefold() in title.casefold()):
                 src=item.find("source")
                 publisher=" ".join((src.text or "").split())[:100] if src is not None else "RSS discovery"
                 edition,basis=query_edition(profile,query)
@@ -187,7 +226,7 @@ def parse_feed(raw,profile,query,observed_at,unattributed=None):
                     "country_code":None,
                     "country_basis":"search_market_only_country_unverified",
                     "geolocation_accuracy":"none_no_supported_country",
-                    "query_language":profile["local_language"],
+                    "query_language":spec["language"],
                     "query_edition":edition[1]+":"+edition[2],
                     "query_edition_basis":basis,
                     "category":category,"evidence_status":"unattributed_local_language_search_candidate",
@@ -199,6 +238,8 @@ def parse_feed(raw,profile,query,observed_at,unattributed=None):
         publisher=" ".join((src.text or "").split())[:100] if src is not None else "RSS discovery"
         edition,edition_basis=query_edition(profile,query)
         native_query=is_local_query(profile,query)
+        spec=local_query_spec(profile,query)
+        query_language=spec["language"] if spec else "en"
         key=(profile["code"]+"|"+title.casefold()+"|"+publisher.casefold())
         results.append({
             "id":"world-news-"+hashlib.sha256(key.encode()).hexdigest()[:20],
@@ -209,11 +250,11 @@ def parse_feed(raw,profile,query,observed_at,unattributed=None):
             "country_reference_status":"country_name_in_headline_not_incident_location",
             "country_reference_term":country_term,
             "source_market":edition[1],
-            "query_language":profile["local_language"] if native_query else "en",
+            "query_language":query_language,
             "query_edition":edition[1]+":"+edition[2],
             "query_edition_basis":edition_basis,
             "language_strategy":profile["language_strategy"],
-            "search_language":profile["local_language"] if native_query else "en",
+            "search_language":query_language,
             "category":category,"evidence_status":"unverified_news_lead",
             "review_status":"not_source_reviewed",
             "source_kind":"country_localized_news_search",
@@ -233,8 +274,10 @@ def collect_market(profile,observed_at):
     unattributed=[]
     failures=[]
     attempts=0
+    local_attempts=0
     for query in search_queries(profile):
         attempts+=1
+        local_attempts+=int(is_local_query(profile,query))
         try:
             for item in fetch_query(profile,query,observed_at,unattributed):
                 combined[item["id"]]=item
@@ -245,7 +288,7 @@ def collect_market(profile,observed_at):
                 "error" if failures else "reporting_found" if combined else "attempted_empty",
         "attempted_at":iso(observed_at),
         "queries_attempted":attempts,
-        "local_queries_attempted":int(bool(profile.get("local_language") not in (None,"en") and profile.get("local_term"))),
+        "local_queries_attempted":local_attempts,
         "accepted":len(combined),"unattributed_candidates":len(unattributed),"errors":failures[:3],
     },unattributed
 
@@ -308,6 +351,9 @@ def run():
     progress=read(STATE,{"next_cursor":0})
     batch_size=min(64,max(1,int(os.environ.get("WORLD_NEWS_BATCH",str(DEFAULT_BATCH)))))
     chosen,next_cursor=choose_batch(profiles,progress.get("next_cursor",0),batch_size)
+    priority,priority_cursor=choose_priority_batch(
+        profiles,chosen,progress.get("priority_cursor",0))
+    chosen.extend(priority)
     existing={r["id"]:r for r in retained(previous.get("leads",[]),ts)}
     existing_unattributed={r["id"]:r for r in retained_unattributed(
         previous_unattributed.get("leads",[]),ts)}
@@ -315,7 +361,10 @@ def run():
     if os.environ.get("WORLD_NEWS_OFFLINE")=="1":
         # Tests and manual dry runs should not erase historical results or
         # claim discovery was attempted.
-        chosen=[]; next_cursor=progress.get("next_cursor",0)
+        chosen=[]
+        priority=[]
+        next_cursor=progress.get("next_cursor",0)
+        priority_cursor=progress.get("priority_cursor",0)
     with ThreadPoolExecutor(max_workers=8) as pool:
         jobs={pool.submit(collect_market,p,ts):p for p in chosen}
         for fut in as_completed(jobs):
@@ -348,14 +397,16 @@ def run():
         "methodology":"Original-language source-linked search candidates WITHOUT verified country, publisher nationality or incident geography. NEVER plotted on the map. Search-market names are search intent only."})
     save(STATUS,{"last_completed_at":iso(ts),"market_count":len(profiles),
         "markets_attempted":total_attempted,"markets_with_current_news":count_codes,
-        "current_leads":len(final),"unattributed_local_candidates":len(unlocated_final),"batch_size":len(chosen),"next_cursor":next_cursor,
+        "current_leads":len(final),"unattributed_local_candidates":len(unlocated_final),
+        "batch_size":len(chosen),"priority_market_scans":len(priority),
+        "next_cursor":next_cursor,
         "local_language_markets_configured":sum(
             bool(p["local_term"] and p["local_language"]!="en") for p in profiles),
         "markets_with_local_queries_attempted":sum(
             bool(v.get("local_queries_attempted",0)) for v in status.values()),
         "countries":status,
         "coverage_note":"Rotating RSS sampling with explicit headline-country mention checks. Not all local reporting and not incident geography. No accepted results do not imply no fraud."})
-    save(STATE,{"next_cursor":next_cursor})
+    save(STATE,{"next_cursor":next_cursor,"priority_cursor":priority_cursor})
     print(json.dumps({"markets":len(profiles),"attempted":total_attempted,
                       "in_this_batch":len(chosen),"market_news":count_codes,"recent_leads":len(final)}))
 

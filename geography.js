@@ -21,7 +21,13 @@
  const special=".*+?^"+"$"+"{}()|[]\\";
  const esc=s=>String(s).split("").map(ch=>special.includes(ch)?"\\"+ch:ch).join("");
  function termPresent(title,term){
-  if(!term||term.length<3)return false;
+  if(!term)return false;
+  // Chinese/Japanese/Thai/Khmer and other non-spaced writing systems have
+  // no whitespace word boundaries; explicit native country names still count
+  // as mentions (never incident coordinates).
+  const nonspace=/[\u3400-\u9fff\u3040-\u30ff\u0e00-\u0e7f\u1780-\u17ff\u0e80-\u0eff\u1000-\u109f\u0900-\u0d7f]/u.test(term);
+  if(nonspace)return term.length>=2&&String(title||"").normalize("NFC").toLocaleLowerCase().includes(term.normalize("NFC").toLocaleLowerCase());
+  if(term.length<3)return false;
   const pattern="(?:^|[^\\p{L}\\p{N}])"+esc(term)+"(?=$|[^\\p{L}\\p{N}])";
   try{return new RegExp(pattern,"iu").test(String(title||""));}
   catch{return false;}
@@ -29,7 +35,7 @@
  function evaluate(item,country){
   const code=String(item?.country_code||"");
   const name=country?.name||item?.country||"";
-  const terms=[name,country?.local_country_term,...(aliases[code]||[])].filter(Boolean);
+  const terms=[name,country?.local_country_term,...(country?.country_headline_aliases||[]),...(aliases[code]||[])].filter(Boolean);
   const matched=[...new Set(terms)].filter(t=>termPresent(item?.title||"",t));
   return {
    referenced:matched.length>0,
