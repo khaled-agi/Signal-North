@@ -1,77 +1,63 @@
 {
-  "last_attempt_at": "2026-10-31T03:23:25+00:00",
+  "last_attempt_at": "2026-10-31T03:28:21+00:00",
   "sources": {
     "Bank and customer fraud": {
-      "status": "ok",
-      "returned": 46,
-      "accepted": 20
+      "status": "failed",
+      "error": "503 Server Error: Service Unavailable for url: https://news.google.com/rss/search?q=%22bank%22+%22fraud%22+%22Canada%22+when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen"
     },
     "Scams and victims": {
-      "status": "ok",
-      "returned": 15,
-      "accepted": 8
+      "status": "failed",
+      "error": "503 Server Error: Service Unavailable for url: https://news.google.com/rss/search?q=%22scam%22+%22victims%22+%22Canada%22+when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen"
     },
     "Police investigations": {
-      "status": "ok",
-      "returned": 15,
-      "accepted": 13
+      "status": "failed",
+      "error": "503 Server Error: Service Unavailable for url: https://news.google.com/rss/search?q=%22fraud%22+%22charged%22+%22Ontario%22+OR+%22Quebec%22+when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen"
     },
     "Money laundering": {
-      "status": "ok",
-      "returned": 49,
-      "accepted": 12
+      "status": "failed",
+      "error": "503 Server Error: Service Unavailable for url: https://news.google.com/rss/search?q=%22money+laundering%22+%22Canada%22+%22bank%22+when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen"
     },
     "Investment schemes": {
-      "status": "ok",
-      "returned": 8,
-      "accepted": 3
+      "status": "failed",
+      "error": "503 Server Error: Service Unavailable for url: https://news.google.com/rss/search?q=%22investment+scam%22+%22Canada%22+when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen"
     },
     "Qu\u00e9bec fraude": {
-      "status": "empty_feed",
-      "returned": 0,
-      "accepted": 0
+      "status": "failed",
+      "error": "503 Server Error: Service Unavailable for url: https://news.google.com/rss/search?q=%22fraude%22+%22banque%22+%22Qu%C3%A9bec%22+when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen"
     },
     "Credit unions and fintech": {
-      "status": "ok",
-      "returned": 1,
-      "accepted": 1
+      "status": "failed",
+      "error": "503 Server Error: Service Unavailable for url: https://news.google.com/rss/search?q=%22credit+union%22+%22fraud%22+%22Canada%22+when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen"
     },
     "Fraud research and reports": {
-      "status": "ok",
-      "returned": 49,
-      "accepted": 34
+      "status": "failed",
+      "error": "503 Server Error: Service Unavailable for url: https://news.google.com/rss/search?q=%22fraud%22+%22Canada%22+%28%22report%22+OR+%22study%22+OR+%22research%22%29+when%3A30d&hl=en-CA&gl=CA&ceid=CA%3Aen"
     },
     "Digital banking and fintech": {
-      "status": "empty_feed",
-      "returned": 0,
-      "accepted": 0
+      "status": "failed",
+      "error": "503 Server Error: Service Unavailable for url: https://news.google.com/rss/search?q=%22Wealthsimple%22+%22fraud%22+OR+%22scam%22+when%3A30d&hl=en-CA&gl=CA&ceid=CA%3Aen"
     },
     "Crypto investment and exchange": {
-      "status": "ok",
-      "returned": 41,
-      "accepted": 19
+      "status": "failed",
+      "error": "503 Server Error: Service Unavailable for url: https://news.google.com/rss/search?q=%22crypto%22+%22fraud%22+%22Canada%22+when%3A30d&hl=en-CA&gl=CA&ceid=CA%3Aen"
     },
     "Casino and iGaming AML": {
-      "status": "ok",
-      "returned": 10,
-      "accepted": 0
+      "status": "failed",
+      "error": "503 Server Error: Service Unavailable for url: https://news.google.com/rss/search?q=%22casino%22+%22money+laundering%22+%22Canada%22+when%3A30d&hl=en-CA&gl=CA&ceid=CA%3Aen"
     },
     "Online gambling fraud": {
-      "status": "ok",
-      "returned": 7,
-      "accepted": 2
+      "status": "failed",
+      "error": "503 Server Error: Service Unavailable for url: https://news.google.com/rss/search?q=%22online+gambling%22+%22scam%22+%22Canada%22+when%3A30d&hl=en-CA&gl=CA&ceid=CA%3Aen"
     },
     "Securities investigations": {
-      "status": "ok",
-      "returned": 9,
-      "accepted": 2
+      "status": "failed",
+      "error": "503 Server Error: Service Unavailable for url: https://news.google.com/rss/search?q=%22securities%22+%22enforcement%22+%22crypto%22+%22Canada%22+when%3A30d&hl=en-CA&gl=CA&ceid=CA%3Aen"
     },
     "Social media scam reports": {
-      "status": "ok",
-      "returned": 10,
-      "accepted": 7
+      "status": "failed",
+      "error": "503 Server Error: Service Unavailable for url: https://news.google.com/rss/search?q=%22social+media%22+%22fraud%22+%22Canada%22+when%3A30d&hl=en-CA&gl=CA&ceid=CA%3Aen"
     }
   },
   "stored_leads": 260,
-  "last_completed_at": "2026-10-31T03:23:32+00:00"
+  "last_completed_at": "2026-10-31T03:30:13+00:00"
 }
