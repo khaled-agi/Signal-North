@@ -102,7 +102,7 @@ class WorldCountryTest(unittest.TestCase):
         self.assertEqual(record["evidence_status"],"unverified_news_lead")
         self.assertEqual(record["search_language"],"en")
         self.assertEqual(record["category"],"Reported financial regulatory enforcement (unverified)")
-        self.assertEqual(record["country_basis"],"search_market_only_not_confirmed_incident_location")
+        self.assertEqual(record["country_basis"],"country_explicitly_named_in_title_not_incident_location")
 
     def test_jordan_search_excludes_unrelated_international_headlines(self):
         jordan=country_profile(pycountry.countries.get(alpha_2="JO"))
