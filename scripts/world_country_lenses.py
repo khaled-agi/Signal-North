@@ -8,6 +8,10 @@ from __future__ import annotations
 from types import SimpleNamespace
 import pycountry
 import re
+try:
+ from .region_query_lenses import MARKET_EXTRA_QUERIES
+except ImportError:
+ from region_query_lenses import MARKET_EXTRA_QUERIES
 
 # Special research jurisdictions outside ISO 3166-1, not a statement of sovereignty.
 # XK is a widely used user-assigned code, NOT an officially allocated ISO country code.
@@ -185,6 +189,9 @@ def country_profile(country):
         "catalogue_type":"non_iso_user_assigned" if code=="XK" else "iso_3166_1","edition_language":hl,"edition_country":gl,
         "edition_id":ceid,"local_term":local[2] if local else None,
         "local_country_term":local[1] if local else None,
+        "country_headline_aliases":list(dict.fromkeys(
+            x[1] for x in MARKET_EXTRA_QUERIES.get(code,())
+        )),
         "local_language":local[0] if local else None,
         "language_strategy":"country_configured" if local else "english_country_named_fallback",
         "agency_directory":[{"name":n,"url":u} for n,u in AUTHORITIES.get(code,[])],
@@ -211,10 +218,21 @@ def country_title_reference(title, profile):
     stories are ineligible, even if Google News returned them.
     """
     terms=[profile["name"],profile.get("local_country_term"),
+           *profile.get("country_headline_aliases",[]),
            *COUNTRY_HEADLINE_ALIASES.get(profile["code"],[])]
     for raw in terms:
-        if not raw or len(raw)<3:continue
-        if re.search(r"(?<!\w)"+re.escape(raw)+r"(?!\w)",title,re.IGNORECASE):
+        if not raw:continue
+        # CJK/Thai/Khmer and similar scripts don't separate words by spaces.
+        # Using ASCII-style word boundaries silently dropped original-language
+        # China/Thailand stories. Names in these scripts are matched as a
+        # literal substring; they establish a textual mention, never a crime site.
+        nonspace_script=bool(re.search(
+            r"[\u3400-\u9fff\u3040-\u30ff\u0e00-\u0e7f\u1780-\u17ff\u0e80-\u0eff\u1000-\u109f]",raw))
+        if nonspace_script:
+            if len(raw)>=2 and raw.casefold() in title.casefold():return raw
+        elif len(raw)>=3 and re.search(
+            r"(?<!\w)"+re.escape(raw)+r"(?!\w)",title,re.IGNORECASE
+        ):
             return raw
     return None
 
