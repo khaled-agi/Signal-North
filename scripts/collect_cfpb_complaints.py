@@ -15,6 +15,17 @@ ROOT=Path(__file__).resolve().parents[1]
 DATA=ROOT/"data"
 OUT=DATA/"cfpb_complaints.json"
 STATUS=DATA/"cfpb_complaints_status.json"
+STATE=DATA/"cfpb_complaints_state.json"
+# CFPB's documented 'product' parameter distinguishes bank/account complaints
+# from the credit-reporting complaints dominating the generic newest page.
+PRODUCT_QUERIES=[
+ "Checking or savings account",
+ "Credit card",
+ "Money transfer, virtual currency, or money service",
+ "Mortgage",
+ "Vehicle loan or lease",
+]
+PRODUCT_QUERIES_PER_RUN=3
 BASE="https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/"
 DATABASE="https://www.consumerfinance.gov/data-research/consumer-complaints/"
 API_PAGE_SIZE=100 # CFPB documented per-request maximum
@@ -76,7 +87,7 @@ def unpack(body):
  else:total_count=None
  return rows,total_count
 
-def collect(session=None,clock=None):
+def collect(session=None,clock=None,product=None):
  session=session or requests.Session()
  clock=clock or utcnow()
  start=(clock-timedelta(days=WINDOW_DAYS)).date().isoformat()
@@ -87,6 +98,9 @@ def collect(session=None,clock=None):
   "no_aggs":"true",
   "no_highlight":"true",
  }
+ if product is not None:
+  if product not in PRODUCT_QUERIES:raise ValueError("unsupported product sample")
+  params["product"]=product
  response=session.get(BASE,params=params,headers={
    "User-Agent":"SignalNorthResearch/1.0 (+https://github.com/khaled-agi/Signal-North)",
    "Accept":"application/json",
@@ -122,32 +136,51 @@ def run():
  clock=utcnow()
  previous=read(OUT,{"complaints":[]})
  old=retain(previous.get("complaints",[]),clock)
- # Never turn offline tests or API errors into fabricated complaint totals.
+ progress=read(STATE,{"next_product_cursor":0})
+ cursor=int(progress.get("next_product_cursor",0))%len(PRODUCT_QUERIES)
+ chosen=[PRODUCT_QUERIES[(cursor+i)%len(PRODUCT_QUERIES)]
+         for i in range(min(PRODUCT_QUERIES_PER_RUN,len(PRODUCT_QUERIES)))]
  health={"last_attempt_at":stamp(clock),"source":"CFPB public Consumer Complaint Database",
    "endpoint":BASE,"status":"not_attempted",
    "sample_limit_per_call":API_PAGE_SIZE,"retention_days":WINDOW_DAYS,
-   "methodology":"Only recent, published categorical complaint metadata; not a population sample, findings, fraud incidents, bank losses or regulator enforcement.",
-   "latest_window_total":None,
-   "total_basis":"not_available",
+   "methodology":"Bounded rotating published complaint samples, including bank products. NOT a representative sample, findings, or company misconduct rates. No narratives or ZIP codes.",
+   "latest_window_total":None,"total_basis":"not_available",
+   "requested_product_queries":chosen,"queries":{},
  }
  rows=[]
- if os.environ.get("CFPB_OFFLINE")=="1":
+ offline=os.environ.get("CFPB_OFFLINE")=="1"
+ if offline:
   health["status"]="offline_not_scanned"
  else:
-  try:
-   rows,total,start=collect(clock=clock)
-   health.update({"status":"ok" if rows else "empty_response",
-     "last_success_at":stamp(clock),"query_received_from":start,
-     "returned_in_latest_request":len(rows),
-     "latest_window_total":total,
-     "total_basis":"CFPB API exact search total, not sampled rows" if total is not None else "not_available"})
-  except (requests.RequestException,ValueError,KeyError,TypeError) as exc:
-   health.update({"status":"error","error_type":type(exc).__name__})
+  for label,product in [("all_recent",None)]+[(p,p) for p in chosen]:
+   try:
+    batch,total,start=collect(clock=clock,product=product)
+    rows.extend(batch)
+    health["queries"][label]={"status":"ok","returned":len(batch),
+      "exact_window_total":total,"filter":product or "all products",
+      "note":"This is one capped search page, NOT all complaints in category"}
+    if product is None:
+     health["latest_window_total"]=total
+     health["total_basis"]="CFPB exact all-product query total (if supplied); not sampled bank counts" if total is not None else "not_available"
+    health["last_success_at"]=stamp(clock)
+    health["query_received_from"]=start
+   except (requests.RequestException,ValueError,KeyError,TypeError) as exc:
+    health["queries"][label]={"status":"error","error_type":type(exc).__name__,
+      "filter":product or "all products"}
+  ok=sum(q["status"]=="ok" for q in health["queries"].values())
+  health["status"]="ok" if ok==len(health["queries"]) else "partial_error" if ok else "error"
+  # A failed page shouldn't create a fabricated complaint or aggregate.
+  health["returned_in_latest_request"]=len(rows)
+  health["queries_succeeded"]=ok
+  health["queries_attempted"]=len(health["queries"])
+  save(STATE,{"next_product_cursor":(cursor+len(chosen))%len(PRODUCT_QUERIES)})
  merged=retain(old+rows,clock)
  health["stored_records"]=len(merged)
+ health["companies_in_stored_sample"]=len(set(x["company"] for x in merged if x.get("company")))
+ health["banking_product_records_in_sample"]=sum(x.get("product") in PRODUCT_QUERIES for x in merged)
  save(OUT,{"updated_at":stamp(clock),"source":"CFPB","country_code":"US",
   "complaints":merged,
-  "methodology":"Bounded recent CFPB public complaint records; consumer allegations, not validated misconduct. Company/issue/state reflect CFPB categorizations; no narratives, ZIPs or personal details. Counts over stored records are not national totals."})
+  "methodology":"Rotating 100-item public complaint search pages across banking products and general results; consumer allegations only. No narratives, ZIPs or PII. Stored counts are NOT national totals, representative samples, institution rankings or verified fraud."})
  save(STATUS,health)
- print(json.dumps({k:health[k] for k in ("status","stored_records","sample_limit_per_call")}))
+ print(json.dumps({k:health[k] for k in ("status","stored_records","sample_limit_per_call","banking_product_records_in_sample")}))
 if __name__=="__main__":run()
