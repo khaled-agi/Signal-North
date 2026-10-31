@@ -20,4 +20,9 @@ if missing:
     raise SystemExit("Pages bundle missing referenced assets: " + ", ".join(missing))
 for p in required:
     json.loads((root / p).read_text(encoding="utf-8"))
+optional_penalties = root / "data/fintrac_penalties_official.json"
+if optional_penalties.is_file():
+    penalties = json.loads(optional_penalties.read_text(encoding="utf-8"))
+    if penalties.get("count", 0) < 15 or penalties["count"] != len(penalties.get("records", [])):
+        raise SystemExit("FINTRAC index snapshot incomplete; refusing deployment")
 print(f"Pages Canadian bundle verified: {len(scripts)} local scripts, {len(required)} required JSON files")
