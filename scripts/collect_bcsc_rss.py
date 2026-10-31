@@ -8,7 +8,6 @@ import requests
 from pathlib import Path
 from datetime import datetime,timezone
 from urllib.parse import urlparse
-from xml.etree import ElementTree as ET
 
 FEEDS={
  "disciplined_list":"https://www.bcsc.bc.ca/rss/disciplined-list",
@@ -16,21 +15,28 @@ FEEDS={
 }
 OUT=Path("data/bcsc_official_rss.json")
 def parse_feed(xml,kind):
- root=ET.fromstring(xml)
+ import feedparser
+ feed=feedparser.parse(xml)
  items=[]
- for item in root.findall(".//item"):
-  get=lambda k:" ".join((item.findtext(k) or "").split())
-  title,url,date=get("title"),get("link"),get("pubDate")
-  if len(title)<5 or not url.startswith("https://"):continue
+ for item in feed.entries:
+  title=" ".join(str(item.get("title","")).split())
+  url=str(item.get("link","")).strip().split("#")[0]
+  date=str(item.get("published",item.get("updated","")))[:100]
+  if len(title)<5:continue
+  if url.startswith("http://"):url="https://"+url[len("http://"):]
+  if not url.startswith("https://"):continue
   host=urlparse(url).hostname or ""
   if not host.endswith("bcsc.bc.ca"):continue
   k=hashlib.sha256((kind+"|"+url).encode()).hexdigest()[:20]
   items.append({"id":k,"agency":"BCSC","type":kind,
-                "title":title[:350],"url":url,"publication_text":date[:100],
-                "summary":get("description")[:500],
+                "title":title[:350],"url":url,"publication_text":date,
+                "summary":" ".join(str(item.get("summary","")).split())[:500],
                 "classification":"official_disciplinary_publication" if kind=="disciplined_list" else "official_hearing_or_order_notice",
                 "note":"An RSS hearing notice may be an allegation, not an adjudicated sanction."})
+ if not items:
+  raise ValueError("No usable feed records; feedparser bozo="+str(bool(feed.get("bozo"))))
  return list({i["id"]:i for i in items}.values())
+
 def save(data):
  OUT.parent.mkdir(parents=True,exist_ok=True)
  with tempfile.NamedTemporaryFile("w",dir=OUT.parent,encoding="utf-8",delete=False) as f:
