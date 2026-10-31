@@ -23,6 +23,13 @@ class RegulatorPublicationTests(unittest.TestCase):
   self.assertEqual(len(result),1)
   self.assertIn("Enforcement",result[0]["title"])
 
+ def test_occ_official_archive_fallback(self):
+  html='<a href="/news-issuances/news-releases/2026/nr-occ-2026-93.html">OCC Announces Enforcement Actions for October 2026</a><a href="/news-issuances/news-releases/2026/nr-occ-2026-90.html">OCC Releases Interest Rate Report</a>'
+  x=signals.from_occ_archive(html,2026)
+  self.assertEqual(len(x),1)
+  self.assertEqual(x[0]["agency"],"OCC")
+  self.assertIn("occ.gov",x[0]["url"])
+
  def test_ncua_official_enforcement_and_closure_only(self):
   html='''<a href="/newsroom/press-release/2026/ncua-prohibits-individual">NCUA Prohibits Individual</a>
   <a href="/newsroom/press-release/2026/grant">NCUA Awards New Grant</a>
