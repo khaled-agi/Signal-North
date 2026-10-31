@@ -29,6 +29,7 @@ jobs:
           node --check cafc.js
           node --check obsi_history.js
           node --check canadian_provincial.js
+          node --check ciro_sector.js
           node --check connections.js
           node --check fintrac_official.js
           node --check canadian_regulatory_leads.js
