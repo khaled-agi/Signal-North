@@ -1,10 +1,38 @@
 {
-  "generated_at": "2026-10-31T02:41:48+00:00",
+  "generated_at": "2026-10-31T02:43:41+00:00",
   "reporting_groups_analyzed": 2461,
   "groups_with_suggested_connections": 154,
   "candidate_comparisons": 324336,
   "methodology": "Possible links by overlap in named organizations, descriptive headline words, scam themes, source-mentioned city and timing. These are NOT confirmed same incidents, causal relationships, accused parties or corroborated facts. Review original sources.",
   "connections": {
+    "report-979989f2efc666f974d1": [
+      {
+        "group_id": "report-8941a7a3b0993742544e",
+        "title": "Attempted bank fraud stopped by RBC and Lacombe Police - The Stettler Independent",
+        "published_at": "2025-07-08T07:00:00+00:00",
+        "source_url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNWFlnT0dPVUxMSTEtcUR5anlzMGY1eVBSVXRBSE9JRkFiaDNuOVVWNGdtVmpZMlctaXhMT2FXQzN5SnRsTF9VRzNjU3BSSjY4X3FuVVNIVlg5cXc1cGE4ejd5Mm1RTmtCZjlPQnJ1WGJhQW02Y25EMVpOaWVlSlZoS3l4WFRhZ1M1V3hRcGFKalFQZlNXN19ZOHV6NF9iRWs?oc=5",
+        "publisher": "The Stettler Independent",
+        "shared_indicators": [
+          "Same organization explicitly named: RBC",
+          "Published within ten days"
+        ],
+        "research_priority": 7,
+        "relationship_status": "unverified_research_lead"
+      },
+      {
+        "group_id": "report-8fdd0c4bc99491b70c08",
+        "title": "RBC tells customer she's responsible for $14K stolen from account in bank investigator scam - CBC",
+        "published_at": "2025-07-09T07:00:00+00:00",
+        "source_url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFA5VUdwaEk1MmxRVTAtN2x6dkp6amhhWTNvUGZHdDdpR2M5NHRPMDVHMGRQVEg3RFhxaWtEZDB0ZDMzWWJHalN0LTBvSE5Pejd0cEstay0tV040VEhzX3Zrc3BJdTFPS1ZnNUl0dlAzMkFrX1hMU0p1dQ?oc=5",
+        "publisher": "CBC",
+        "shared_indicators": [
+          "Same organization explicitly named: RBC",
+          "Published within ten days"
+        ],
+        "research_priority": 7,
+        "relationship_status": "unverified_research_lead"
+      }
+    ],
     "report-c565b95a0014b06d7364": [
       {
         "group_id": "report-ae0d44dafb6f35e61d05",
@@ -103,34 +131,6 @@
         "relationship_status": "unverified_research_lead"
       }
     ],
-    "report-979989f2efc666f974d1": [
-      {
-        "group_id": "report-8941a7a3b0993742544e",
-        "title": "Attempted bank fraud stopped by RBC and Lacombe Police - The Stettler Independent",
-        "published_at": "2025-07-08T07:00:00+00:00",
-        "source_url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNWFlnT0dPVUxMSTEtcUR5anlzMGY1eVBSVXRBSE9JRkFiaDNuOVVWNGdtVmpZMlctaXhMT2FXQzN5SnRsTF9VRzNjU3BSSjY4X3FuVVNIVlg5cXc1cGE4ejd5Mm1RTmtCZjlPQnJ1WGJhQW02Y25EMVpOaWVlSlZoS3l4WFRhZ1M1V3hRcGFKalFQZlNXN19ZOHV6NF9iRWs?oc=5",
-        "publisher": "The Stettler Independent",
-        "shared_indicators": [
-          "Same organization explicitly named: RBC",
-          "Published within ten days"
-        ],
-        "research_priority": 7,
-        "relationship_status": "unverified_research_lead"
-      },
-      {
-        "group_id": "report-8fdd0c4bc99491b70c08",
-        "title": "RBC tells customer she's responsible for $14K stolen from account in bank investigator scam - CBC",
-        "published_at": "2025-07-09T07:00:00+00:00",
-        "source_url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFA5VUdwaEk1MmxRVTAtN2x6dkp6amhhWTNvUGZHdDdpR2M5NHRPMDVHMGRQVEg3RFhxaWtEZDB0ZDMzWWJHalN0LTBvSE5Pejd0cEstay0tV040VEhzX3Zrc3BJdTFPS1ZnNUl0dlAzMkFrX1hMU0p1dQ?oc=5",
-        "publisher": "CBC",
-        "shared_indicators": [
-          "Same organization explicitly named: RBC",
-          "Published within ten days"
-        ],
-        "research_priority": 7,
-        "relationship_status": "unverified_research_lead"
-      }
-    ],
     "report-019b4220f3f5ea5889b1": [
       {
         "group_id": "report-0b930f8c8dde9a614bb0",
@@ -170,6 +170,66 @@
         "publisher": "Abbotsford News",
         "shared_indicators": [
           "8 shared descriptive headline terms",
+          "Same source-mentioned place",
+          "Published within ten days"
+        ],
+        "research_priority": 8,
+        "relationship_status": "unverified_research_lead"
+      }
+    ],
+    "report-95182a38ae725e384f03": [
+      {
+        "group_id": "report-197cfd2f36991ccb5e22",
+        "title": "Vancouver police officer denies wrongdoing in $3M fraud, theft case - CTV News",
+        "published_at": "2026-09-08T07:00:00+00:00",
+        "source_url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQbkVHRTNrQXo4VFN3akRnMW1SRUhhdU9YWTNKNDRYVl9lTjFuSDVJS2ppNzJyNjhBSGc3SkRzRGg0SzFSVDd1RGZ6LU1Lb3FoSTFLS3lnLTl6ZzdLT3RrZ09rbk5zRXhIQWxWWkF5YmQ1bGZlVjU2angyd0pGZEh0ZjJoV0Zxcnh4dUZPWDM2ZXZ5ZUUzek5tTkNFckN5Wk1KN1phYzJPQmNLMEU4aTM3Q2hDcw?oc=5",
+        "publisher": "CTV News",
+        "shared_indicators": [
+          "6 shared descriptive headline terms",
+          "Same source-mentioned place",
+          "Published within ten days"
+        ],
+        "research_priority": 8,
+        "relationship_status": "unverified_research_lead"
+      },
+      {
+        "group_id": "report-d3f16919f7e8820466f0",
+        "title": "Vancouver officer Kal Dosanjh, charged with theft and fraud, denies wrongdoing - CFJC Today Kamloops",
+        "published_at": "2026-09-08T07:00:00+00:00",
+        "source_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxORTg1YWltUjhMczM4WU1XcXl5dnZ6SnVGZzJ5dDNzM3pnRXdscXJDdVFoTEV2alRqbEZKLU5FVk92WEZWYlZtUDB2SGliZXpBNWdtbmZycEFvX2J4UU5zd0VTZVlndVRVdDdCVVA1a0Y0Zzl5eG9sUE9FYmwyM2dDckdxTEFkQkJRYVBOSENsMnlQUnQzQ3VIWmVtWXRvU3ZIcWlpUXE0dTdlNW9tMFFN?oc=5",
+        "publisher": "CFJC Today Kamloops",
+        "shared_indicators": [
+          "5 shared descriptive headline terms",
+          "Same source-mentioned place",
+          "Published within ten days"
+        ],
+        "research_priority": 8,
+        "relationship_status": "unverified_research_lead"
+      }
+    ],
+    "report-197cfd2f36991ccb5e22": [
+      {
+        "group_id": "report-95182a38ae725e384f03",
+        "title": "Vancouver police officer denies wrongdoing in alleged theft, fraud case - Global News",
+        "published_at": "2026-09-08T07:00:00+00:00",
+        "source_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOZjU5V2NMLU4xVFZhcnZDZmYtZ21QMnBvVE9lc2EzSXRJZDdVZHNXUVZjbWNJdmhicEJsR01MSW9LTkQtRHdRNGN0R0xuWVJuc2pfUWkxX3RQOU9ZOXItMmJmLWRCTE1KcXlwczBhcElNVzFqNWg5ckFSSWc0YXBxMHFjc2laOUU4OWpMdDR3ZXVZZVQxTzVvNlQ4bFRNVHVp?oc=5",
+        "publisher": "Global News",
+        "shared_indicators": [
+          "6 shared descriptive headline terms",
+          "Same source-mentioned place",
+          "Published within ten days"
+        ],
+        "research_priority": 8,
+        "relationship_status": "unverified_research_lead"
+      },
+      {
+        "group_id": "report-d3f16919f7e8820466f0",
+        "title": "Vancouver officer Kal Dosanjh, charged with theft and fraud, denies wrongdoing - CFJC Today Kamloops",
+        "published_at": "2026-09-08T07:00:00+00:00",
+        "source_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxORTg1YWltUjhMczM4WU1XcXl5dnZ6SnVGZzJ5dDNzM3pnRXdscXJDdVFoTEV2alRqbEZKLU5FVk92WEZWYlZtUDB2SGliZXpBNWdtbmZycEFvX2J4UU5zd0VTZVlndVRVdDdCVVA1a0Y0Zzl5eG9sUE9FYmwyM2dDckdxTEFkQkJRYVBOSENsMnlQUnQzQ3VIWmVtWXRvU3ZIcWlpUXE0dTdlNW9tMFFN?oc=5",
+        "publisher": "CFJC Today Kamloops",
+        "shared_indicators": [
+          "5 shared descriptive headline terms",
           "Same source-mentioned place",
           "Published within ten days"
         ],
@@ -253,66 +313,6 @@
           "Published within ten days"
         ],
         "research_priority": 10,
-        "relationship_status": "unverified_research_lead"
-      }
-    ],
-    "report-95182a38ae725e384f03": [
-      {
-        "group_id": "report-197cfd2f36991ccb5e22",
-        "title": "Vancouver police officer denies wrongdoing in $3M fraud, theft case - CTV News",
-        "published_at": "2026-09-08T07:00:00+00:00",
-        "source_url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQbkVHRTNrQXo4VFN3akRnMW1SRUhhdU9YWTNKNDRYVl9lTjFuSDVJS2ppNzJyNjhBSGc3SkRzRGg0SzFSVDd1RGZ6LU1Lb3FoSTFLS3lnLTl6ZzdLT3RrZ09rbk5zRXhIQWxWWkF5YmQ1bGZlVjU2angyd0pGZEh0ZjJoV0Zxcnh4dUZPWDM2ZXZ5ZUUzek5tTkNFckN5Wk1KN1phYzJPQmNLMEU4aTM3Q2hDcw?oc=5",
-        "publisher": "CTV News",
-        "shared_indicators": [
-          "6 shared descriptive headline terms",
-          "Same source-mentioned place",
-          "Published within ten days"
-        ],
-        "research_priority": 8,
-        "relationship_status": "unverified_research_lead"
-      },
-      {
-        "group_id": "report-d3f16919f7e8820466f0",
-        "title": "Vancouver officer Kal Dosanjh, charged with theft and fraud, denies wrongdoing - CFJC Today Kamloops",
-        "published_at": "2026-09-08T07:00:00+00:00",
-        "source_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxORTg1YWltUjhMczM4WU1XcXl5dnZ6SnVGZzJ5dDNzM3pnRXdscXJDdVFoTEV2alRqbEZKLU5FVk92WEZWYlZtUDB2SGliZXpBNWdtbmZycEFvX2J4UU5zd0VTZVlndVRVdDdCVVA1a0Y0Zzl5eG9sUE9FYmwyM2dDckdxTEFkQkJRYVBOSENsMnlQUnQzQ3VIWmVtWXRvU3ZIcWlpUXE0dTdlNW9tMFFN?oc=5",
-        "publisher": "CFJC Today Kamloops",
-        "shared_indicators": [
-          "5 shared descriptive headline terms",
-          "Same source-mentioned place",
-          "Published within ten days"
-        ],
-        "research_priority": 8,
-        "relationship_status": "unverified_research_lead"
-      }
-    ],
-    "report-197cfd2f36991ccb5e22": [
-      {
-        "group_id": "report-95182a38ae725e384f03",
-        "title": "Vancouver police officer denies wrongdoing in alleged theft, fraud case - Global News",
-        "published_at": "2026-09-08T07:00:00+00:00",
-        "source_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOZjU5V2NMLU4xVFZhcnZDZmYtZ21QMnBvVE9lc2EzSXRJZDdVZHNXUVZjbWNJdmhicEJsR01MSW9LTkQtRHdRNGN0R0xuWVJuc2pfUWkxX3RQOU9ZOXItMmJmLWRCTE1KcXlwczBhcElNVzFqNWg5ckFSSWc0YXBxMHFjc2laOUU4OWpMdDR3ZXVZZVQxTzVvNlQ4bFRNVHVp?oc=5",
-        "publisher": "Global News",
-        "shared_indicators": [
-          "6 shared descriptive headline terms",
-          "Same source-mentioned place",
-          "Published within ten days"
-        ],
-        "research_priority": 8,
-        "relationship_status": "unverified_research_lead"
-      },
-      {
-        "group_id": "report-d3f16919f7e8820466f0",
-        "title": "Vancouver officer Kal Dosanjh, charged with theft and fraud, denies wrongdoing - CFJC Today Kamloops",
-        "published_at": "2026-09-08T07:00:00+00:00",
-        "source_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxORTg1YWltUjhMczM4WU1XcXl5dnZ6SnVGZzJ5dDNzM3pnRXdscXJDdVFoTEV2alRqbEZKLU5FVk92WEZWYlZtUDB2SGliZXpBNWdtbmZycEFvX2J4UU5zd0VTZVlndVRVdDdCVVA1a0Y0Zzl5eG9sUE9FYmwyM2dDckdxTEFkQkJRYVBOSENsMnlQUnQzQ3VIWmVtWXRvU3ZIcWlpUXE0dTdlNW9tMFFN?oc=5",
-        "publisher": "CFJC Today Kamloops",
-        "shared_indicators": [
-          "5 shared descriptive headline terms",
-          "Same source-mentioned place",
-          "Published within ten days"
-        ],
-        "research_priority": 8,
         "relationship_status": "unverified_research_lead"
       }
     ],
@@ -429,6 +429,64 @@
         "published_at": "2026-10-29T18:46:57+00:00",
         "source_url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5TNlJFdHEtZzA4bnppRzBGVXNTMUdvelNHMWN5VkJUdkJyYjZXWDRYVUVqVnE3M3Q5b1JULXE3bWg1VTdKb1hNeGJ6WXB1UnM4RXg2bnlYU2NiN1k?oc=5",
         "publisher": "BBC",
+        "shared_indicators": [
+          "6 shared descriptive headline terms",
+          "Overlapping scam method: Investment & crypto scams",
+          "Published within ten days"
+        ],
+        "research_priority": 8,
+        "relationship_status": "unverified_research_lead"
+      }
+    ],
+    "report-39055d44e862e2ede21d": [
+      {
+        "group_id": "report-6c8b842a1521d817f344",
+        "title": "‘Crypto King’ Aiden Pleterski’s fraud trial adjourned until next week due to medical issue - CBC",
+        "published_at": "2026-10-20T07:00:00+00:00",
+        "source_url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOTjI2NFVNMDQ5ZG1KN2lzOE54S1NFX2ZZb0d6aDJBcmtsaE5ZT2RhZ0UyN3BOME1remg0WmlwMTN0MXhwcDFJbk12bUR0TU43X01GMDVmNkRZRnJQZVRrejc3SHh3Q3IxS1U0VTZ6SXRjVzZpNzZwYnZaaFRqUVNKTl9wRTBOZVZsYV9EOUNuSUdxVk1nc0c1V3lyTXRUdnBkM1c5NTlBOFNMSnFZWktBeVZ4RGNxWkJXVVdpY2ZXRHFqVTVZTEU1dTlkY1F1ZUhOcGc?oc=5",
+        "publisher": "CBC",
+        "shared_indicators": [
+          "6 shared descriptive headline terms",
+          "Overlapping scam method: Investment & crypto scams",
+          "Published within ten days"
+        ],
+        "research_priority": 8,
+        "relationship_status": "unverified_research_lead"
+      },
+      {
+        "group_id": "report-b58a8d4914d1a3d157c9",
+        "title": "'Crypto King' Aiden Pleterski tells jury he's innocent in closing statement at fraud trial - CBC",
+        "published_at": "2026-10-28T19:10:07+00:00",
+        "source_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPeFNSR3hPeWhrenozamdfS2l4ZHRiTjV2dVRFNlhNUU9qV0U2V1JYYlNDMTI3MkFtaXpYTHRIYTRsUllmQkF2SkM3UHpEZmhBOFN5WVp0dDhoMWpIVDl6eE9ZUUhYMlFJNm9HOU5kMF9QOHhYRTFmMXFlVXRRMVAtdnpsX1k0UXN5OUNuUG5aaTBXbnFBRnRnZzZqa2JFZkpWRWZZMHo2anlrQQ?oc=5",
+        "publisher": "CBC",
+        "shared_indicators": [
+          "7 shared descriptive headline terms",
+          "Overlapping scam method: Investment & crypto scams",
+          "Published within ten days"
+        ],
+        "research_priority": 8,
+        "relationship_status": "unverified_research_lead"
+      },
+      {
+        "group_id": "report-2f4b6843bc95cde3a28f",
+        "title": "'Crypto King' Aiden Pleterski addresses jury at his fraud trial for first time, says he's innocent - CBC",
+        "published_at": "2026-10-28T20:04:40+00:00",
+        "source_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPeFNSR3hPeWhrenozamdfS2l4ZHRiTjV2dVRFNlhNUU9qV0U2V1JYYlNDMTI3MkFtaXpYTHRIYTRsUllmQkF2SkM3UHpEZmhBOFN5WVp0dDhoMWpIVDl6eE9ZUUhYMlFJNm9HOU5kMF9QOHhYRTFmMXFlVXRRMVAtdnpsX1k0UXN5OUNuUG5aaTBXbnFBRnRnZzZqa2JFZkpWRWZZMHo2anlrQQ?oc=5",
+        "publisher": "CBC",
+        "shared_indicators": [
+          "7 shared descriptive headline terms",
+          "Overlapping scam method: Investment & crypto scams",
+          "Published within ten days"
+        ],
+        "research_priority": 8,
+        "relationship_status": "unverified_research_lead"
+      },
+      {
+        "group_id": "report-4ed6c222cb0453ea4d67",
+        "title": "Canada 'Crypto King' Aiden Pleterski's Ponzi-Fraud Trial Goes to Jury - bloomingbit",
+        "published_at": "2026-10-28T22:47:22+00:00",
+        "source_url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9CZ3EzN1c0aVhPdUltOEpicm9GQXBUUF9DeW5zaTdHZHpxR2xoNFRweW5MdmZRcWFuWkpLX01hZHJKMHJ0REREY2xYZ1ZKNV80QmRoYg?oc=5",
+        "publisher": "bloomingbit",
         "shared_indicators": [
           "6 shared descriptive headline terms",
           "Overlapping scam method: Investment & crypto scams",
@@ -603,64 +661,6 @@
           "Published within 45 days"
         ],
         "research_priority": 9,
-        "relationship_status": "unverified_research_lead"
-      }
-    ],
-    "report-39055d44e862e2ede21d": [
-      {
-        "group_id": "report-6c8b842a1521d817f344",
-        "title": "‘Crypto King’ Aiden Pleterski’s fraud trial adjourned until next week due to medical issue - CBC",
-        "published_at": "2026-10-20T07:00:00+00:00",
-        "source_url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOTjI2NFVNMDQ5ZG1KN2lzOE54S1NFX2ZZb0d6aDJBcmtsaE5ZT2RhZ0UyN3BOME1remg0WmlwMTN0MXhwcDFJbk12bUR0TU43X01GMDVmNkRZRnJQZVRrejc3SHh3Q3IxS1U0VTZ6SXRjVzZpNzZwYnZaaFRqUVNKTl9wRTBOZVZsYV9EOUNuSUdxVk1nc0c1V3lyTXRUdnBkM1c5NTlBOFNMSnFZWktBeVZ4RGNxWkJXVVdpY2ZXRHFqVTVZTEU1dTlkY1F1ZUhOcGc?oc=5",
-        "publisher": "CBC",
-        "shared_indicators": [
-          "6 shared descriptive headline terms",
-          "Overlapping scam method: Investment & crypto scams",
-          "Published within ten days"
-        ],
-        "research_priority": 8,
-        "relationship_status": "unverified_research_lead"
-      },
-      {
-        "group_id": "report-b58a8d4914d1a3d157c9",
-        "title": "'Crypto King' Aiden Pleterski tells jury he's innocent in closing statement at fraud trial - CBC",
-        "published_at": "2026-10-28T19:10:07+00:00",
-        "source_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPeFNSR3hPeWhrenozamdfS2l4ZHRiTjV2dVRFNlhNUU9qV0U2V1JYYlNDMTI3MkFtaXpYTHRIYTRsUllmQkF2SkM3UHpEZmhBOFN5WVp0dDhoMWpIVDl6eE9ZUUhYMlFJNm9HOU5kMF9QOHhYRTFmMXFlVXRRMVAtdnpsX1k0UXN5OUNuUG5aaTBXbnFBRnRnZzZqa2JFZkpWRWZZMHo2anlrQQ?oc=5",
-        "publisher": "CBC",
-        "shared_indicators": [
-          "7 shared descriptive headline terms",
-          "Overlapping scam method: Investment & crypto scams",
-          "Published within ten days"
-        ],
-        "research_priority": 8,
-        "relationship_status": "unverified_research_lead"
-      },
-      {
-        "group_id": "report-2f4b6843bc95cde3a28f",
-        "title": "'Crypto King' Aiden Pleterski addresses jury at his fraud trial for first time, says he's innocent - CBC",
-        "published_at": "2026-10-28T20:04:40+00:00",
-        "source_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPeFNSR3hPeWhrenozamdfS2l4ZHRiTjV2dVRFNlhNUU9qV0U2V1JYYlNDMTI3MkFtaXpYTHRIYTRsUllmQkF2SkM3UHpEZmhBOFN5WVp0dDhoMWpIVDl6eE9ZUUhYMlFJNm9HOU5kMF9QOHhYRTFmMXFlVXRRMVAtdnpsX1k0UXN5OUNuUG5aaTBXbnFBRnRnZzZqa2JFZkpWRWZZMHo2anlrQQ?oc=5",
-        "publisher": "CBC",
-        "shared_indicators": [
-          "7 shared descriptive headline terms",
-          "Overlapping scam method: Investment & crypto scams",
-          "Published within ten days"
-        ],
-        "research_priority": 8,
-        "relationship_status": "unverified_research_lead"
-      },
-      {
-        "group_id": "report-4ed6c222cb0453ea4d67",
-        "title": "Canada 'Crypto King' Aiden Pleterski's Ponzi-Fraud Trial Goes to Jury - bloomingbit",
-        "published_at": "2026-10-28T22:47:22+00:00",
-        "source_url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9CZ3EzN1c0aVhPdUltOEpicm9GQXBUUF9DeW5zaTdHZHpxR2xoNFRweW5MdmZRcWFuWkpLX01hZHJKMHJ0REREY2xYZ1ZKNV80QmRoYg?oc=5",
-        "publisher": "bloomingbit",
-        "shared_indicators": [
-          "6 shared descriptive headline terms",
-          "Overlapping scam method: Investment & crypto scams",
-          "Published within ten days"
-        ],
-        "research_priority": 8,
         "relationship_status": "unverified_research_lead"
       }
     ],
@@ -1706,6 +1706,22 @@
         "relationship_status": "unverified_research_lead"
       }
     ],
+    "report-90a1670649e13a3351f5": [
+      {
+        "group_id": "report-bec4f854b779436bf127",
+        "title": "Mississauga dealership worker charged after 10 vehicles fraudulently sold with intent to ship them out of country - CTV News",
+        "published_at": "2025-05-08T07:00:00+00:00",
+        "source_url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxPelhXRWxUR1NQbEtWeWxkZlhMTE96WWpfaVFVZ3lyNTBmMWF5cFBMQzRGSE90eHRxVGxRTXNMRHlNdUhVcThjQlB6RExoVndmYzRQVEVHTEdGeWZWTDZiMlBjRFRRT29yWjlZeDBDWk9SNG1leXNRTDVyaXlBa3FndkRVYUI4dGctWTZVMXhySWVuZGlmTkluTWlETXdqeDVDck9RWVpBZjBCY1VFMmV6QlVQS05PVkh2WVM1STBLdWVjYUZpZnZiM0pBOE84S1hzYXVWamVLakxNbDR3emZCZ2dqSTdMcXZ0?oc=5",
+        "publisher": "CTV News",
+        "shared_indicators": [
+          "5 shared descriptive headline terms",
+          "Same source-mentioned place",
+          "Published within ten days"
+        ],
+        "research_priority": 8,
+        "relationship_status": "unverified_research_lead"
+      }
+    ],
     "report-4e93905c76e2de8a9119": [
       {
         "group_id": "report-b7d9f83fbf45514b8e2d",
@@ -1720,22 +1736,6 @@
           "Published within ten days"
         ],
         "research_priority": 10,
-        "relationship_status": "unverified_research_lead"
-      }
-    ],
-    "report-90a1670649e13a3351f5": [
-      {
-        "group_id": "report-bec4f854b779436bf127",
-        "title": "Mississauga dealership worker charged after 10 vehicles fraudulently sold with intent to ship them out of country - CTV News",
-        "published_at": "2025-05-08T07:00:00+00:00",
-        "source_url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxPelhXRWxUR1NQbEtWeWxkZlhMTE96WWpfaVFVZ3lyNTBmMWF5cFBMQzRGSE90eHRxVGxRTXNMRHlNdUhVcThjQlB6RExoVndmYzRQVEVHTEdGeWZWTDZiMlBjRFRRT29yWjlZeDBDWk9SNG1leXNRTDVyaXlBa3FndkRVYUI4dGctWTZVMXhySWVuZGlmTkluTWlETXdqeDVDck9RWVpBZjBCY1VFMmV6QlVQS05PVkh2WVM1STBLdWVjYUZpZnZiM0pBOE84S1hzYXVWamVLakxNbDR3emZCZ2dqSTdMcXZ0?oc=5",
-        "publisher": "CTV News",
-        "shared_indicators": [
-          "5 shared descriptive headline terms",
-          "Same source-mentioned place",
-          "Published within ten days"
-        ],
-        "research_priority": 8,
         "relationship_status": "unverified_research_lead"
       }
     ],
@@ -2584,19 +2584,35 @@
         "relationship_status": "unverified_research_lead"
       }
     ],
-    "report-daa89dadea3b315b20e1": [
+    "report-8191a61d23ee548aee3c": [
       {
-        "group_id": "report-77d93a748246d25fc95c",
-        "title": "National Bank of Canada Partners with Sardine to Strengthen Digital Banking Security and Fraud Operations Efficiency - Business Wire",
-        "published_at": "2026-05-20T07:00:00+00:00",
-        "source_url": "https://news.google.com/rss/articles/CBMigwJBVV95cUxOLUxlQ053Q1QtSXpKeWExS0RTaGVtZ0M5S3V0TnVjSmZEQ1NJelY4RXBhTmVQWC1sa1VtbzZKc182NjBGVDZjMUxmdER6UnJDRWVoWmF0b1dIQ0VYZ2FJSWdBay13NUNxX2IzeUkxM0JpcTBta1M0OFJGMGZaQ2hEZkVEdFdRMzI5WHkxVks0cDZrc2dqM0RjcnVuUngzZ2E0eWF6bzRiRm1nUjhkVmp4bnZlMWVBZ1FHcF93a0UtLWIwQ3FZTDRkWkRQV1laM0F2OFlsVDlodzFENDFTWmEzc0hiZVMtSVRuTGtVUkhQSUpQNEdNUUhXcnB4ZlNvamFrOTBn?oc=5",
-        "publisher": "Business Wire",
+        "group_id": "report-c422a126154f2c58ae8a",
+        "title": "Alleged fake nurse who worked on Vancouver Island arrested in U.S.: police - CHEK News",
+        "published_at": "2025-05-06T07:00:00+00:00",
+        "source_url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPVDVBWkd1VW1NaVZabXJ4dEZxRVFrSzFyUlk3NDM2RUtMdW1jSTNxT3IySTh1RUg4d3F5QjNPTUxYSDNIak5hLUdFMnpGOUd0bzFycVUzWVlLU1FFMENOVFA0d2xVeHVvQmtlc2JUMzY2WUk1Y1MzczNNOHRrdTlULVFOOHFzTS1yUGRWbHdmM0RKYU1XZ3haV1ZqVXpLdXNfR2c0?oc=5",
+        "publisher": "CHEK News",
         "shared_indicators": [
-          "Same organization explicitly named: National Bank",
-          "4 shared descriptive headline terms",
+          "6 shared descriptive headline terms",
+          "Same source-mentioned place",
           "Published within ten days"
         ],
-        "research_priority": 10,
+        "research_priority": 8,
+        "relationship_status": "unverified_research_lead"
+      }
+    ],
+    "report-c422a126154f2c58ae8a": [
+      {
+        "group_id": "report-8191a61d23ee548aee3c",
+        "title": "Alleged fake nurse who operated on Vancouver Island arrested in U.S. - CBC",
+        "published_at": "2025-05-07T07:00:00+00:00",
+        "source_url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQaGZRaTlJdDhoeGdhamVvem5iRE9FalhpVVJrV0RUeWtoSzZhSTNtemZuNmhaVE5hOXl2eEJqZUdJZlJCUXAwXzM3LVNkNV9UaHNvR3pCb0o1WTdoRTZYc0JOMEVmV21hbnNkNUpZYXZNVEJCWUdxV29QV29iTmJ0MTNFcG5XX1RvN2RVd3NROUhPQlhHY3lqN1lxQlhJUDY0aXpmWG53?oc=5",
+        "publisher": "CBC",
+        "shared_indicators": [
+          "6 shared descriptive headline terms",
+          "Same source-mentioned place",
+          "Published within ten days"
+        ],
+        "research_priority": 8,
         "relationship_status": "unverified_research_lead"
       }
     ],
@@ -2660,35 +2676,19 @@
         "relationship_status": "unverified_research_lead"
       }
     ],
-    "report-8191a61d23ee548aee3c": [
+    "report-daa89dadea3b315b20e1": [
       {
-        "group_id": "report-c422a126154f2c58ae8a",
-        "title": "Alleged fake nurse who worked on Vancouver Island arrested in U.S.: police - CHEK News",
-        "published_at": "2025-05-06T07:00:00+00:00",
-        "source_url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPVDVBWkd1VW1NaVZabXJ4dEZxRVFrSzFyUlk3NDM2RUtMdW1jSTNxT3IySTh1RUg4d3F5QjNPTUxYSDNIak5hLUdFMnpGOUd0bzFycVUzWVlLU1FFMENOVFA0d2xVeHVvQmtlc2JUMzY2WUk1Y1MzczNNOHRrdTlULVFOOHFzTS1yUGRWbHdmM0RKYU1XZ3haV1ZqVXpLdXNfR2c0?oc=5",
-        "publisher": "CHEK News",
+        "group_id": "report-77d93a748246d25fc95c",
+        "title": "National Bank of Canada Partners with Sardine to Strengthen Digital Banking Security and Fraud Operations Efficiency - Business Wire",
+        "published_at": "2026-05-20T07:00:00+00:00",
+        "source_url": "https://news.google.com/rss/articles/CBMigwJBVV95cUxOLUxlQ053Q1QtSXpKeWExS0RTaGVtZ0M5S3V0TnVjSmZEQ1NJelY4RXBhTmVQWC1sa1VtbzZKc182NjBGVDZjMUxmdER6UnJDRWVoWmF0b1dIQ0VYZ2FJSWdBay13NUNxX2IzeUkxM0JpcTBta1M0OFJGMGZaQ2hEZkVEdFdRMzI5WHkxVks0cDZrc2dqM0RjcnVuUngzZ2E0eWF6bzRiRm1nUjhkVmp4bnZlMWVBZ1FHcF93a0UtLWIwQ3FZTDRkWkRQV1laM0F2OFlsVDlodzFENDFTWmEzc0hiZVMtSVRuTGtVUkhQSUpQNEdNUUhXcnB4ZlNvamFrOTBn?oc=5",
+        "publisher": "Business Wire",
         "shared_indicators": [
-          "6 shared descriptive headline terms",
-          "Same source-mentioned place",
+          "Same organization explicitly named: National Bank",
+          "4 shared descriptive headline terms",
           "Published within ten days"
         ],
-        "research_priority": 8,
-        "relationship_status": "unverified_research_lead"
-      }
-    ],
-    "report-c422a126154f2c58ae8a": [
-      {
-        "group_id": "report-8191a61d23ee548aee3c",
-        "title": "Alleged fake nurse who operated on Vancouver Island arrested in U.S. - CBC",
-        "published_at": "2025-05-07T07:00:00+00:00",
-        "source_url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQaGZRaTlJdDhoeGdhamVvem5iRE9FalhpVVJrV0RUeWtoSzZhSTNtemZuNmhaVE5hOXl2eEJqZUdJZlJCUXAwXzM3LVNkNV9UaHNvR3pCb0o1WTdoRTZYc0JOMEVmV21hbnNkNUpZYXZNVEJCWUdxV29QV29iTmJ0MTNFcG5XX1RvN2RVd3NROUhPQlhHY3lqN1lxQlhJUDY0aXpmWG53?oc=5",
-        "publisher": "CBC",
-        "shared_indicators": [
-          "6 shared descriptive headline terms",
-          "Same source-mentioned place",
-          "Published within ten days"
-        ],
-        "research_priority": 8,
+        "research_priority": 10,
         "relationship_status": "unverified_research_lead"
       }
     ],
@@ -2756,38 +2756,6 @@
         "relationship_status": "unverified_research_lead"
       }
     ],
-    "report-ae0d44dafb6f35e61d05": [
-      {
-        "group_id": "report-c565b95a0014b06d7364",
-        "title": "Toronto man loses $80,000 to romance scam as advocates call for more fraud protection - CTV News",
-        "published_at": "2025-10-10T07:00:00+00:00",
-        "source_url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPcGNPMXZRb0VQQkxuRHFMSmZtWVFiZTZrTndPUmpza2lyM0YxdTQzXzFlQmFHRXpHNWw4bjljN1VtZG1oRXlSOEhsRHNVNjJYSWNIQ05zLWZUY1gtVVlxaUFVcVJrbWd4YWxSaU9iRFJRcXpZSmI2NVBzemtlQ1o4SFZUaGI5ei1aTi01T0N3dVg4S0IzMWlvUjdyMnliMlVzcWlkZjN3Nm1FSXVHX2VNUm0zWEc5ZnBIWXBuY3hNall1R0V0YUJxVGpJVzJoQ3BCaklpNw?oc=5",
-        "publisher": "CTV News",
-        "shared_indicators": [
-          "6 shared descriptive headline terms",
-          "Overlapping scam method: Romance & relationship scams",
-          "Same source-mentioned place"
-        ],
-        "research_priority": 8,
-        "relationship_status": "unverified_research_lead"
-      }
-    ],
-    "report-7fb99199968f9dcd336c": [
-      {
-        "group_id": "report-681abb36d0d5c3c44d4d",
-        "title": "Plus d’une centaine de clients de la RBC victimes d’une fraude - TVA Nouvelles",
-        "published_at": "2026-10-15T07:00:00+00:00",
-        "source_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPSE5RdC1xVXByc0EzeFZtc3haUkRxOUZCZFBUUkZnRWhmNS1lcmcyaVktOC1QcnJWNTFZcVpJTWo0bFo4dm1pWmZZaDhhOUJxNmJtRlJPYzIxYTd6VnNIZjFMUnpYdGpPemZHZkROZkhJeGJDTDVMTElrSWpBblp6MUVOdlNpTDlrSGpDaERnSEJpZEtSbnZveEo4REY?oc=5",
-        "publisher": "TVA Nouvelles",
-        "shared_indicators": [
-          "Same organization explicitly named: RBC",
-          "7 shared descriptive headline terms",
-          "Published within ten days"
-        ],
-        "research_priority": 10,
-        "relationship_status": "unverified_research_lead"
-      }
-    ],
     "report-041aafb445183d35116b": [
       {
         "group_id": "report-666835cd68135d77421e",
@@ -2836,63 +2804,35 @@
         "relationship_status": "unverified_research_lead"
       }
     ],
-    "report-d738f2054ad69508387b": [
+    "report-ae0d44dafb6f35e61d05": [
       {
-        "group_id": "report-021db9535ceaade798d6",
-        "title": "Former RBC employee charged with accessing Canada PM Carney's banking profile, fraud - Reuters",
-        "published_at": "2025-09-24T07:00:00+00:00",
-        "source_url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNWXl5bDNLQmdkNm40eF9nMEo4NnNHUGh2cVoyWmJvS0E5dWF4eGZiU1VTdTNoaENvZHF2UWJIT3A5YjVjR2RSQmpSMjdKcG02bE9DbXpDaXlaTjRqdXpqRUtWLTNxczdWbHpQd2J6SVR1TnlmTG41UzZtZzRFYXByMER3RDVZRUhfNGthSldIdWxzbWYxUTNJZDNpanVLelN1bl95SXhIS2lmaXhVb2hQT0ZPVUh3ODFIcFllNUFfdV9Ec0lla2t5Rg?oc=5",
-        "publisher": "Reuters",
+        "group_id": "report-c565b95a0014b06d7364",
+        "title": "Toronto man loses $80,000 to romance scam as advocates call for more fraud protection - CTV News",
+        "published_at": "2025-10-10T07:00:00+00:00",
+        "source_url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPcGNPMXZRb0VQQkxuRHFMSmZtWVFiZTZrTndPUmpza2lyM0YxdTQzXzFlQmFHRXpHNWw4bjljN1VtZG1oRXlSOEhsRHNVNjJYSWNIQ05zLWZUY1gtVVlxaUFVcVJrbWd4YWxSaU9iRFJRcXpZSmI2NVBzemtlQ1o4SFZUaGI5ei1aTi01T0N3dVg4S0IzMWlvUjdyMnliMlVzcWlkZjN3Nm1FSXVHX2VNUm0zWEc5ZnBIWXBuY3hNall1R0V0YUJxVGpJVzJoQ3BCaklpNw?oc=5",
+        "publisher": "CTV News",
         "shared_indicators": [
-          "Same organization explicitly named: RBC",
-          "5 shared descriptive headline terms",
-          "Published within ten days"
+          "6 shared descriptive headline terms",
+          "Overlapping scam method: Romance & relationship scams",
+          "Same source-mentioned place"
         ],
-        "research_priority": 10,
-        "relationship_status": "unverified_research_lead"
-      },
-      {
-        "group_id": "report-38694fa2be55ee288d0f",
-        "title": "RBC employee charged for allegedly accessing Carney, Trudeau’s banking information | RCI - Radio-Canada",
-        "published_at": "2025-09-24T07:00:00+00:00",
-        "source_url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQNmFlc3lhMFh6VUZWT2x5aUVzTWxCUWRNSURXMC1ZaWx4eHcwY0pzVy13NzBXZEJkRGJrVWl4WTE2dUpzX0gzU3Q4Mm42NEVGRFJ1eVlWRjJYS3JSbFpfMUpMai1ZbFI0ZVNIalFMeXdfOW9Da3Y3SGtkZFlGRHFSRGg3Rjc4M3g4TjZwbHZQNlQtdm5MRlJLNkpPY1Zwc0xTSndzaGpiOUlXblJOMmc3VUxqc0l0d3VMLWJ2dW11S0x4bFd1S1RF?oc=5",
-        "publisher": "Radio-Canada",
-        "shared_indicators": [
-          "Same organization explicitly named: RBC",
-          "5 shared descriptive headline terms",
-          "Published within ten days"
-        ],
-        "research_priority": 10,
-        "relationship_status": "unverified_research_lead"
-      },
-      {
-        "group_id": "report-b79bb7d551ac4baa5b8b",
-        "title": "RBC employee charged for allegedly accessing Carney's banking information - CBC",
-        "published_at": "2025-09-24T07:00:00+00:00",
-        "source_url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPeW5pWDBFYXdNOHBWQVlPakY2d2FaUHZOdlNkaHBFeEU5V2JNdF9pTERPckNXdlRIOEl1aXU3VkdLMVc2dFZ2NVJzVENIeGQ0eGdjZ0RfQ0tvWW9ORFVNRmtSYmoyV2wwcjlCTjY5T2VSc0RyT1I3cHAzalVrUXJzaQ?oc=5",
-        "publisher": "CBC",
-        "shared_indicators": [
-          "Same organization explicitly named: RBC",
-          "5 shared descriptive headline terms",
-          "Published within ten days"
-        ],
-        "research_priority": 10,
+        "research_priority": 8,
         "relationship_status": "unverified_research_lead"
       }
     ],
-    "report-78f55fcd8a73043c0734": [
+    "report-7fb99199968f9dcd336c": [
       {
-        "group_id": "report-c9e2fc0e21d31f470f4c",
-        "title": "Indigo says ransomware attack breached data of current and former employees - Global News",
-        "published_at": "2023-02-24T08:00:00+00:00",
-        "source_url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQamxzVmhNSzRNdnZ6eWx4VVNTajZqcXlzdjRKWTh3R05iaUxhQS1aRVptX3ZGZEFhVk1mTVZCc0pDMngzcVYzVXZmeFdILUtyTTc0LUtwME1YcE1mcWhwVGhETnJ1clBaMnM4XzljRTZDZVZGLUVfSEplV1FVcmRScWlNMDRRaFhTSGc?oc=5",
-        "publisher": "Global News",
+        "group_id": "report-681abb36d0d5c3c44d4d",
+        "title": "Plus d’une centaine de clients de la RBC victimes d’une fraude - TVA Nouvelles",
+        "published_at": "2026-10-15T07:00:00+00:00",
+        "source_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPSE5RdC1xVXByc0EzeFZtc3haUkRxOUZCZFBUUkZnRWhmNS1lcmcyaVktOC1QcnJWNTFZcVpJTWo0bFo4dm1pWmZZaDhhOUJxNmJtRlJPYzIxYTd6VnNIZjFMUnpYdGpPemZHZkROZkhJeGJDTDVMTElrSWpBblp6MUVOdlNpTDlrSGpDaERnSEJpZEtSbnZveEo4REY?oc=5",
+        "publisher": "TVA Nouvelles",
         "shared_indicators": [
-          "5 shared descriptive headline terms",
-          "Overlapping scam method: Digital fraud & cybercrime",
+          "Same organization explicitly named: RBC",
+          "7 shared descriptive headline terms",
           "Published within ten days"
         ],
-        "research_priority": 8,
+        "research_priority": 10,
         "relationship_status": "unverified_research_lead"
       }
     ],
@@ -2909,6 +2849,21 @@
           "Published within ten days"
         ],
         "research_priority": 10,
+        "relationship_status": "unverified_research_lead"
+      }
+    ],
+    "report-27862541184e9885781e": [
+      {
+        "group_id": "report-c0f06d2f6276bcff5022",
+        "title": "RBC pays penalty after over 200K Canadians affected by \"inaccurate\" credit card statements | National - Daily Hive",
+        "published_at": "2026-06-26T07:00:00+00:00",
+        "source_url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5jNDZBM201SlJPdGFUTXlxM0o2cDIxNGg3all0QkR5QTd0d3BlSWVBRk5haHVYcUhscl94MjdDYzlwb2dZM0IxN1FQSmRXZVRVY1RXSHRnWnc2YXdkNlB4ZHVFakFsOGQz?oc=5",
+        "publisher": "Daily Hive",
+        "shared_indicators": [
+          "Same organization explicitly named: RBC",
+          "Published within ten days"
+        ],
+        "research_priority": 7,
         "relationship_status": "unverified_research_lead"
       }
     ],
@@ -3041,6 +2996,50 @@
         "relationship_status": "unverified_research_lead"
       }
     ],
+    "report-d738f2054ad69508387b": [
+      {
+        "group_id": "report-021db9535ceaade798d6",
+        "title": "Former RBC employee charged with accessing Canada PM Carney's banking profile, fraud - Reuters",
+        "published_at": "2025-09-24T07:00:00+00:00",
+        "source_url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNWXl5bDNLQmdkNm40eF9nMEo4NnNHUGh2cVoyWmJvS0E5dWF4eGZiU1VTdTNoaENvZHF2UWJIT3A5YjVjR2RSQmpSMjdKcG02bE9DbXpDaXlaTjRqdXpqRUtWLTNxczdWbHpQd2J6SVR1TnlmTG41UzZtZzRFYXByMER3RDVZRUhfNGthSldIdWxzbWYxUTNJZDNpanVLelN1bl95SXhIS2lmaXhVb2hQT0ZPVUh3ODFIcFllNUFfdV9Ec0lla2t5Rg?oc=5",
+        "publisher": "Reuters",
+        "shared_indicators": [
+          "Same organization explicitly named: RBC",
+          "5 shared descriptive headline terms",
+          "Published within ten days"
+        ],
+        "research_priority": 10,
+        "relationship_status": "unverified_research_lead"
+      },
+      {
+        "group_id": "report-38694fa2be55ee288d0f",
+        "title": "RBC employee charged for allegedly accessing Carney, Trudeau’s banking information | RCI - Radio-Canada",
+        "published_at": "2025-09-24T07:00:00+00:00",
+        "source_url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQNmFlc3lhMFh6VUZWT2x5aUVzTWxCUWRNSURXMC1ZaWx4eHcwY0pzVy13NzBXZEJkRGJrVWl4WTE2dUpzX0gzU3Q4Mm42NEVGRFJ1eVlWRjJYS3JSbFpfMUpMai1ZbFI0ZVNIalFMeXdfOW9Da3Y3SGtkZFlGRHFSRGg3Rjc4M3g4TjZwbHZQNlQtdm5MRlJLNkpPY1Zwc0xTSndzaGpiOUlXblJOMmc3VUxqc0l0d3VMLWJ2dW11S0x4bFd1S1RF?oc=5",
+        "publisher": "Radio-Canada",
+        "shared_indicators": [
+          "Same organization explicitly named: RBC",
+          "5 shared descriptive headline terms",
+          "Published within ten days"
+        ],
+        "research_priority": 10,
+        "relationship_status": "unverified_research_lead"
+      },
+      {
+        "group_id": "report-b79bb7d551ac4baa5b8b",
+        "title": "RBC employee charged for allegedly accessing Carney's banking information - CBC",
+        "published_at": "2025-09-24T07:00:00+00:00",
+        "source_url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPeW5pWDBFYXdNOHBWQVlPakY2d2FaUHZOdlNkaHBFeEU5V2JNdF9pTERPckNXdlRIOEl1aXU3VkdLMVc2dFZ2NVJzVENIeGQ0eGdjZ0RfQ0tvWW9ORFVNRmtSYmoyV2wwcjlCTjY5T2VSc0RyT1I3cHAzalVrUXJzaQ?oc=5",
+        "publisher": "CBC",
+        "shared_indicators": [
+          "Same organization explicitly named: RBC",
+          "5 shared descriptive headline terms",
+          "Published within ten days"
+        ],
+        "research_priority": 10,
+        "relationship_status": "unverified_research_lead"
+      }
+    ],
     "report-8941a7a3b0993742544e": [
       {
         "group_id": "report-8fdd0c4bc99491b70c08",
@@ -3069,18 +3068,19 @@
         "relationship_status": "unverified_research_lead"
       }
     ],
-    "report-27862541184e9885781e": [
+    "report-78f55fcd8a73043c0734": [
       {
-        "group_id": "report-c0f06d2f6276bcff5022",
-        "title": "RBC pays penalty after over 200K Canadians affected by \"inaccurate\" credit card statements | National - Daily Hive",
-        "published_at": "2026-06-26T07:00:00+00:00",
-        "source_url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5jNDZBM201SlJPdGFUTXlxM0o2cDIxNGg3all0QkR5QTd0d3BlSWVBRk5haHVYcUhscl94MjdDYzlwb2dZM0IxN1FQSmRXZVRVY1RXSHRnWnc2YXdkNlB4ZHVFakFsOGQz?oc=5",
-        "publisher": "Daily Hive",
+        "group_id": "report-c9e2fc0e21d31f470f4c",
+        "title": "Indigo says ransomware attack breached data of current and former employees - Global News",
+        "published_at": "2023-02-24T08:00:00+00:00",
+        "source_url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQamxzVmhNSzRNdnZ6eWx4VVNTajZqcXlzdjRKWTh3R05iaUxhQS1aRVptX3ZGZEFhVk1mTVZCc0pDMngzcVYzVXZmeFdILUtyTTc0LUtwME1YcE1mcWhwVGhETnJ1clBaMnM4XzljRTZDZVZGLUVfSEplV1FVcmRScWlNMDRRaFhTSGc?oc=5",
+        "publisher": "Global News",
         "shared_indicators": [
-          "Same organization explicitly named: RBC",
+          "5 shared descriptive headline terms",
+          "Overlapping scam method: Digital fraud & cybercrime",
           "Published within ten days"
         ],
-        "research_priority": 7,
+        "research_priority": 8,
         "relationship_status": "unverified_research_lead"
       }
     ],
@@ -3754,22 +3754,6 @@
         "relationship_status": "unverified_research_lead"
       }
     ],
-    "report-2198959a52777b9df56f": [
-      {
-        "group_id": "report-629f1f6c4f14b2c8818d",
-        "title": "Ontario man loses $90,000 to crypto investment scam - Inside Halton",
-        "published_at": "2025-11-14T08:00:00+00:00",
-        "source_url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPMjBLbGpQRWlPRjdfSHRXdXdieExEYkFaX2htWkpsd3VSUFZvSllEWXhLVHNMeU1ma1l1TVg5SEJhelBlN0owOUptQ1BuamtzR3VMc01iMkpvLTBCUmF1YVV4NjcwMGlaaVVycW9hb003WFRHRDMycm5OdXZoTV9MRnFCZ0FxZ29HaFY5SnBFQWlNc29wck9kTklCRjNqUzJNaXhPbHFaa0Y4UThSZ3ZpSXQwS19sYlFzbGpNdWhQUndtUQ?oc=5",
-        "publisher": "Inside Halton",
-        "shared_indicators": [
-          "5 shared descriptive headline terms",
-          "Overlapping scam method: Investment & crypto scams",
-          "Published within 45 days"
-        ],
-        "research_priority": 7,
-        "relationship_status": "unverified_research_lead"
-      }
-    ],
     "report-bec4f854b779436bf127": [
       {
         "group_id": "report-90a1670649e13a3351f5",
@@ -3783,6 +3767,22 @@
           "Published within ten days"
         ],
         "research_priority": 8,
+        "relationship_status": "unverified_research_lead"
+      }
+    ],
+    "report-2198959a52777b9df56f": [
+      {
+        "group_id": "report-629f1f6c4f14b2c8818d",
+        "title": "Ontario man loses $90,000 to crypto investment scam - Inside Halton",
+        "published_at": "2025-11-14T08:00:00+00:00",
+        "source_url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPMjBLbGpQRWlPRjdfSHRXdXdieExEYkFaX2htWkpsd3VSUFZvSllEWXhLVHNMeU1ma1l1TVg5SEJhelBlN0owOUptQ1BuamtzR3VMc01iMkpvLTBCUmF1YVV4NjcwMGlaaVVycW9hb003WFRHRDMycm5OdXZoTV9MRnFCZ0FxZ29HaFY5SnBFQWlNc29wck9kTklCRjNqUzJNaXhPbHFaa0Y4UThSZ3ZpSXQwS19sYlFzbGpNdWhQUndtUQ?oc=5",
+        "publisher": "Inside Halton",
+        "shared_indicators": [
+          "5 shared descriptive headline terms",
+          "Overlapping scam method: Investment & crypto scams",
+          "Published within 45 days"
+        ],
+        "research_priority": 7,
         "relationship_status": "unverified_research_lead"
       }
     ],
