@@ -51,7 +51,7 @@ TERM=re.compile(
  r"احتيال|نصب|غسل الأموال| धोखाधड़ी|ठगी|"
  r"မလိမ်|လိမ်လည်|mōsadi| மோசடி|"
  r"បោកប្រាស់|หลอกลวง|ฟอกเงิน|lừa đảo|rửa tiền|"
- r"uadilifu|ulaghai|zamba|svindel|",re.I)
+ r"uadilifu|ulaghai|zamba|svindel",re.I)
 # Better relevance for official FMA 'public warning' etc; general policy
 # or macroeconomic bulletins without crime terms should not enter the feed.
 IGNORE=re.compile(r"careers|job opening|contact us|cookie|privacy policy|"
@@ -170,7 +170,11 @@ def fetch_source(source,ts):
  try:
   resp=requests.get(source["url"],headers=UA,timeout=20,allow_redirects=True)
   resp.raise_for_status()
-  if valid_original(resp.url,source) is None:raise ValueError("source redirected outside original publisher domain")
+  final=urlsplit(resp.url)
+  host=(final.hostname or "").lower()
+  expected=source["domain"].lower()
+  if (final.scheme!="https" or not (host==expected or host.endswith("."+expected))):
+   raise ValueError("source redirected outside original publisher domain")
   if len(resp.content)>3_000_000:raise ValueError("source response exceeds size limit")
   ctype=resp.headers.get("content-type","").lower()
   if source["format"]=="rss":
