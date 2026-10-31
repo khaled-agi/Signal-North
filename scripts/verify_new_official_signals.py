@@ -11,6 +11,7 @@ specs={
  "us_occ_enforcement_actions.json":("records",20,"id"),
  "us_ofac_sdn_entities.json":("records",5000,"ofac_ent_num"),
  "us_sec_litigation_releases.json":("records",3,"id"),
+ "uk_sanctions_entities.json":("records",300,"uk_unique_id"),
 }
 for file,(list_key,minimum,id_key) in specs.items():
  path=root/file
@@ -25,7 +26,7 @@ for file,(list_key,minimum,id_key) in specs.items():
  if any(not x for x in ids) or len(ids)!=len(set(ids)):
   raise SystemExit(f"Missing or repeated source IDs in {file}")
  print(f"Validated {file}: {len(records)} original-source records")
-for h in ("us_occ_enforcement_health.json","us_ofac_source_health.json","us_sec_source_health.json"):
+for h in ("us_occ_enforcement_health.json","us_ofac_source_health.json","us_sec_source_health.json","uk_sanctions_source_health.json"):
  path=root/h
  if not path.exists():raise SystemExit(f"Missing required source-health disclosure: {h}")
  d=json.loads(path.read_text("utf-8"))
