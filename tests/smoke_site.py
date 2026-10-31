@@ -173,6 +173,13 @@ try:
         assert page.locator("#worldNewsCategory").count() == 1
         assert page.locator("#worldNewsShown").text_content()
         assert page.locator("#worldNewsMore").count() == 1
+        assert page.locator("#localLanguageDiscovery").count() == 1
+        page.locator("#localLanguageDiscovery > summary").click()
+        assert "Country and article origin NOT established" in page.locator("#localLanguageDiscovery").inner_text()
+        assert page.locator("#localLanguageRows").count() == 1
+        assert page.locator("#localLanguageMore").count() == 1
+        page.locator("#localLanguageDiscovery > summary").click()
+
         page.locator('[data-tab="events"]').click()
         page.wait_for_function("document.querySelector('#worldRegulatorHealth').textContent.includes('agencies scanned')")
         assert page.locator("#worldRegRows").count() == 1
