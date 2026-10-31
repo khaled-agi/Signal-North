@@ -27,6 +27,8 @@ jobs:
           node --check global.js
           node --check cfpb.js
           node --check cafc.js
+          node --check obsi_history.js
+          node --check connections.js
           node --check fintrac_official.js
           node --check canadian_regulatory_leads.js
           node --check canadian_verified_enforcement.js
@@ -50,6 +52,8 @@ jobs:
           python -m unittest discover -s tests -p test_cfpb_complaints.py
           python -m unittest discover -s tests -p test_cfpb_history.py
           python -m unittest discover -s tests -p test_cafc_open_data.py
+          python -m unittest discover -s tests -p test_bank_collector.py
+          python -m unittest discover -s tests -p test_cross_source_graph.py
           python -m unittest discover -s tests -p test_canadian_integrity.py
           python -m unittest discover -s tests -p test_empty_market_recovery.py
           python -m unittest discover -s tests -p test_global_regulator_publications.py
