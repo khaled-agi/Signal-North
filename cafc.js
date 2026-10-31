@@ -26,7 +26,7 @@
     '</strong><span>Visible category/year aggregate groups (≥5 reports)</span></div>';
   el("cafcRows").innerHTML=matches.length?matches.slice(0,100).map(x=>{
    const dollars=x.reported_dollar_loss_sum;
-   const loss=dollars===null?"Partial loss coverage; total not published":
+   const loss=dollars===null?"Known reported subtotal $"+money(x.known_reported_dollar_loss_subtotal||0)+"; "+(x.rows_without_loss||0)+" rows missing loss; total unknown":
       "$"+money(dollars)+" reported dollar loss (not verified)";
    return '<article class="world-reporting-record cafc-row">'+
     '<div class="world-reporting-date">'+html(x.year)+' · '+html(x.dimension)+
