@@ -219,6 +219,12 @@
           <div class="panel-heading"><div><div class="eyebrow">COUNTRY-SPECIFIC DISCOVERY / ORIGINAL LANGUAGE</div><h2>Explore international scam reports</h2></div><span class="small" id="worldReportingHealth">Loading country scan coverage...</span></div>
           <div class="world-reporting-toolbar"><label for="worldNewsCountry">Market <select id="worldNewsCountry" aria-label="Browse international fraud reporting by country"><option value="">All countries</option></select></label><label for="worldNewsCategory">Topic <select id="worldNewsCategory" aria-label="Worldwide fraud topic"><option value="">All topics</option></select></label><label for="worldNewsQuery">Search <input id="worldNewsQuery" type="search" placeholder="Find headlines, banks, publishers..." aria-label="Search international headlines"></label></div>
           <div id="worldReportingRows" class="world-reporting-rows" aria-live="polite"><div class="empty">Checking available public reporting...</div></div><div class="world-results-footer"><span id="worldNewsShown">No matching articles yet</span><button id="worldNewsMore" type="button">Load 50 more</button><button id="worldNewsAll" type="button">Show all matches</button></div>
+          <details class="local-language-discoveries" id="localLanguageDiscovery">
+            <summary><strong>Additional original-language discoveries (location unconfirmed)</strong><span id="localLanguageSummary">Checking source languages…</span></summary>
+            <p class="supporting-disclaimer">These articles were returned by native-language fraud queries, but the headline does not establish the country. Search market is a discovery clue only. None are plotted as national incidents or added to jurisdiction counts.</p>
+            <div id="localLanguageRows" class="world-reporting-rows" aria-live="polite"><div class="empty">Checking local-language reporting…</div></div>
+            <div class="world-results-footer"><span id="localLanguageShown"></span><button type="button" id="localLanguageMore">Load 50 more</button></div>
+          </details>
           <p class="supporting-disclaimer">Country labels identify the <strong>search market</strong>, not an incident location or a verified publisher jurisdiction. Records are unverified article discoveries; local-language headlines are retained as published. These feeds do not measure national fraud levels.</p>
         </section>
       </div>

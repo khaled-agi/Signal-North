@@ -10,7 +10,7 @@
   "Casino / gambling":/(casino|gambling|gaming|betting|lottery)/i,
   "Investor / consumer protection":/(investor|consumer|client.asset|securities|conduct|financial crime controls)/i,
  };
- const model={events:[],countries:[],health:{},canadianEvents:[],worldNews:[],worldNewsStatus:{},regLeads:[],regStatus:{},newsVisible:50,regVisible:50};
+ const model={events:[],countries:[],health:{},canadianEvents:[],worldNews:[],worldNewsStatus:{},regLeads:[],regStatus:{},localCandidates:[],localVisible:50,newsVisible:50,regVisible:50};
  function renderPatterns(){
   const host=get("globalPatterns");
   const themes=Object.entries(THEMES).map(([name,rx])=>{
@@ -125,13 +125,42 @@
     html(x.publisher||"Unknown publisher")+'</div><strong>'+html(x.title)+'</strong>'+
     '<div class="world-reporting-details">'+html(x.category||"News lead")+
     ' · Country explicitly referenced in headline · Unverified; NOT confirmed incident location'+
-    (url?' · <a href="'+html(url)+'" target="_blank" rel="noopener noreferrer">Original source ↗</a>':"")+
+    (url?' · <a href="'+html(url)+'" target="_blank" rel="noopener noreferrer">Open linked article ↗</a>':"")+
     '</div></article>';
   }).join(""):'<div class="empty">No matching reported headlines stored. This does not mean there were no fraud incidents; see the country scan status.</div>';
   get("worldNewsShown").textContent=visible.length+" of "+matches.length+" matching reports shown";
   get("worldNewsMore").hidden=visible.length>=matches.length;
   get("worldNewsAll").hidden=visible.length>=matches.length;
  }
+
+ function renderLocalLanguageCandidates(){
+  const target=get("localLanguageRows");if(!target)return;
+  const market=get("worldNewsCountry")?.value||"";
+  const q=(get("worldNewsQuery")?.value||"").toLocaleLowerCase().trim();
+  const topic=get("worldNewsCategory")?.value||"";
+  const matches=model.localCandidates.filter(x=>
+    (!market||x.search_market_code===market)&&(!topic||x.category===topic)&&
+    (!q||[x.title,x.publisher,x.search_market_name].some(v=>String(v||"").toLocaleLowerCase().includes(q)))
+  ).slice().sort((a,b)=>String(b.published_at||"").localeCompare(String(a.published_at||"")));
+  const visible=matches.slice(0,model.localVisible);
+  target.innerHTML=visible.length?visible.map(x=>{
+   const source=goodUrl(x.url);
+   return '<article class="world-reporting-record">'+
+    '<div class="world-reporting-date">'+html(String(x.published_at||"").slice(0,10))+
+    ' · '+html(x.publisher||"Publisher unknown")+
+    ' · Query language: '+html(x.query_language||"not established")+'</div>'+
+    '<strong>'+html(x.title)+'</strong>'+
+    '<div class="world-reporting-details">Local-language search targeted '+
+    html(x.search_market_name||"an unconfirmed market")+
+    ' · Country and article origin NOT established · No map pin'+
+    (source?' · <a href="'+html(source)+'" target="_blank" rel="noopener noreferrer">Open linked article ↗</a>':"")+
+    '</div></article>';
+  }).join(""):'<div class="empty">No additional original-language candidates stored in this selection. Only matches explicitly supported by their headlines appear in the country-referenced feed above.</div>';
+  get("localLanguageSummary").textContent=model.localCandidates.length+" unlocated source leads";
+  get("localLanguageShown").textContent=visible.length+" of "+matches.length+" candidate reports shown";
+  get("localLanguageMore").hidden=visible.length>=matches.length;
+ }
+
  function renderRegulatorPublications(){
   const country=get("worldRegCountry")?.value||"";
   const agency=get("worldRegAgency")?.value||"";
@@ -170,7 +199,7 @@
    active.length+' jurisdictions with official enforcement records including Canada · '+count+' non-Canadian official actions</span>';
  }
  async function load(){
-  const paths=["world_jurisdictions.json","global_enforcement.json","global_source_status.json","events.json","world_reporting.json","world_reporting_status.json","global_regulator_publications.json","global_regulator_publications_status.json"];
+  const paths=["world_jurisdictions.json","global_enforcement.json","global_source_status.json","events.json","world_reporting.json","world_reporting_status.json","global_regulator_publications.json","global_regulator_publications_status.json","world_local_unattributed.json"];
   const results=await Promise.allSettled(paths.map(async x=>{
     const r=await fetch("./data/"+x+"?ts="+Date.now(),{cache:"no-store"});
     if(!r.ok)throw Error(x+": "+r.status);
@@ -192,6 +221,8 @@
   if(results[5].status==="fulfilled")model.worldNewsStatus=results[5].value||{};
   if(results[6].status==="fulfilled")model.regLeads=results[6].value.leads||[];
   if(results[7].status==="fulfilled")model.regStatus=results[7].value||{};
+  if(results[8].status==="fulfilled")model.localCandidates=(results[8].value.leads||[])
+    .filter(x=>x.country_code===null && x.evidence_status==="unattributed_local_language_search_candidate");
   const country=get("mapCountry"),current=country.value;
   const referencedMarkets=new Set(model.worldNews.map(x=>x.country_code));
   country.innerHTML='<option value="">All countries (worldwide)</option>'+model.countries.map(c=>
@@ -215,16 +246,18 @@
   }
   bindSelect("worldRegAgency",[...new Set(model.regLeads.map(x=>x.regulator).filter(Boolean))].sort(),"All agencies");
   renderWorldReporting();
+  renderLocalLanguageCandidates();
   renderRegulatorPublications();
   renderCoverage();renderPatterns();renderCountryBrief();renderThreads();
   window.dispatchEvent(new CustomEvent("signalnorth:globalready",{detail:{events:model.events,countries:model.countries,health:model.health,worldNews:model.worldNews,worldNewsStatus:model.worldNewsStatus,regLeads:model.regLeads,regStatus:model.regStatus}}));
  }
  get("mapCountry").addEventListener("change",renderCountryBrief);
- get("worldNewsCountry")?.addEventListener("change",()=>{model.newsVisible=50;renderWorldReporting();});
- get("worldNewsCategory")?.addEventListener("change",()=>{model.newsVisible=50;renderWorldReporting();});
- get("worldNewsQuery")?.addEventListener("input",()=>{model.newsVisible=50;renderWorldReporting();});
+ get("worldNewsCountry")?.addEventListener("change",()=>{model.newsVisible=50;model.localVisible=50;renderWorldReporting();renderLocalLanguageCandidates();});
+ get("worldNewsCategory")?.addEventListener("change",()=>{model.newsVisible=50;model.localVisible=50;renderWorldReporting();renderLocalLanguageCandidates();});
+ get("worldNewsQuery")?.addEventListener("input",()=>{model.newsVisible=50;model.localVisible=50;renderWorldReporting();renderLocalLanguageCandidates();});
  get("worldNewsMore")?.addEventListener("click",()=>{model.newsVisible+=50;renderWorldReporting();});
  get("worldNewsAll")?.addEventListener("click",()=>{model.newsVisible=Number.MAX_SAFE_INTEGER;renderWorldReporting();});
+ get("localLanguageMore")?.addEventListener("click",()=>{model.localVisible+=50;renderLocalLanguageCandidates();});
  for(const id of ["worldRegCountry","worldRegAgency","worldRegQuery"]){
   get(id)?.addEventListener(id==="worldRegQuery"?"input":"change",()=>{model.regVisible=50;renderRegulatorPublications();});
  }

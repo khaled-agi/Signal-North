@@ -55,6 +55,59 @@ LOCAL = {
  "KR":("ko","한국","사기"),"KE":("sw","Kenya","utapeli"),
  "TZ":("sw","Tanzania","utapeli"),"ZA":("en","South Africa","scam"),
  "NG":("en","Nigeria","fraud"),"GH":("en","Ghana","fraud"),
+ # Broader country-language discovery; single verified local keyword per market.
+ # This is a curated SEARCH vocabulary, not a guarantee of local publication.
+ "DZ":("ar","الجزائر","احتيال"),"LY":("ar","ليبيا","احتيال"),
+ "SD":("ar","السودان","احتيال"),"IQ":("ar","العراق","احتيال"),
+ "SY":("ar","سوريا","احتيال"),"YE":("ar","اليمن","احتيال"),
+ "MR":("ar","موريتانيا","احتيال"),"DJ":("ar","جيبوتي","احتيال"),
+ "SN":("fr","Sénégal","escroquerie"),"CI":("fr","Côte d'Ivoire","escroquerie"),
+ "CM":("fr","Cameroun","escroquerie"),"BJ":("fr","Bénin","escroquerie"),
+ "TG":("fr","Togo","escroquerie"),"BF":("fr","Burkina Faso","escroquerie"),
+ "ML":("fr","Mali","escroquerie"),"NE":("fr","Niger","escroquerie"),
+ "TD":("fr","Tchad","escroquerie"),"GN":("fr","Guinée","escroquerie"),
+ "GA":("fr","Gabon","escroquerie"),"CG":("fr","Congo-Brazzaville","escroquerie"),
+ "CD":("fr","RDC","escroquerie"),"LU":("fr","Luxembourg","escroquerie"),
+ "MC":("fr","Monaco","escroquerie"),"HT":("fr","Haïti","escroquerie"),
+ "SC":("fr","Seychelles","fraude"),"MU":("fr","Maurice","fraude"),
+ "BI":("fr","Burundi","fraude"),
+ "GT":("es","Guatemala","estafa"),"HN":("es","Honduras","estafa"),
+ "SV":("es","El Salvador","estafa"),"NI":("es","Nicaragua","estafa"),
+ "BO":("es","Bolivia","estafa"),"VE":("es","Venezuela","estafa"),
+ "PY":("es","Paraguay","estafa"),"CU":("es","Cuba","estafa"),
+ "DO":("es","República Dominicana","estafa"),"GQ":("es","Guinea Ecuatorial","estafa"),
+ "PR":("es","Puerto Rico","estafa"),
+ "AO":("pt","Angola","burla"),"MZ":("pt","Moçambique","burla"),
+ "CV":("pt","Cabo Verde","burla"),"GW":("pt","Guiné-Bissau","burla"),
+ "ST":("pt","São Tomé e Príncipe","burla"),"TL":("pt","Timor-Leste","fraude"),
+ "RS":("sr","Srbija","prevara"),"HR":("hr","Hrvatska","prijevara"),
+ "BA":("bs","Bosna i Hercegovina","prevara"),"ME":("sr","Crna Gora","prevara"),
+ "SI":("sl","Slovenija","goljufija"),"AL":("sq","Shqipëria","mashtrim"),
+ "MK":("mk","Северна Македонија","измама"),"BG":("bg","България","измама"),
+ "BY":("be","Беларусь","махлярства"),
+ "LT":("lt","Lietuva","sukčiavimas"),"LV":("lv","Latvija","krāpšana"),
+ "EE":("et","Eesti","pettus"),
+ "SE":("sv","Sverige","bedrägeri"),"NO":("no","Norge","svindel"),
+ "DK":("da","Danmark","svindel"),"FI":("fi","Suomi","huijaus"),
+ "IS":("is","Ísland","svik"),
+ "GE":("ka","საქართველო","თაღლითობა"),"AM":("hy","Հայաստան","խարդախություն"),
+ "AZ":("az","Azərbaycan","dələduzluq"),"KZ":("kk","Қазақстан","алаяқтық"),
+ "UZ":("uz","Oʻzbekiston","firibgarlik"),"KG":("ky","Кыргызстан","алдамчылык"),
+ "TJ":("tg","Тоҷикистон","қаллобӣ"),"TM":("tk","Türkmenistan","galplyk"),
+ "MN":("mn","Монгол","луйвар"),
+ "ET":("am","ኢትዮጵያ","ማጭበርበር"),"SO":("so","Soomaaliya","khiyaano"),
+ "RW":("rw","u Rwanda","uburiganya"),
+ "UG":("en","Uganda","fraud"),"ZM":("en","Zambia","fraud"),
+ "ZW":("en","Zimbabwe","fraud"),"BW":("en","Botswana","fraud"),
+ "NA":("en","Namibia","fraud"),"SZ":("en","Eswatini","fraud"),
+ "LS":("en","Lesotho","fraud"),"MW":("en","Malawi","fraud"),
+ "SL":("en","Sierra Leone","fraud"),"LR":("en","Liberia","fraud"),
+ "GM":("en","Gambia","fraud"),"SS":("en","South Sudan","fraud"),
+ "MM":("my","မြန်မာ","လိမ်လည်မှု"),"KH":("km","កម្ពុជា","បោកប្រាស់"),
+ "LA":("lo","ລາວ","ຫຼອກລວງ"),"BN":("ms","Brunei","penipuan"),
+ "AF":("fa","افغانستان","کلاهبرداری"),
+ "FJ":("en","Fiji","scam"),"WS":("en","Samoa","scam"),
+ "TO":("en","Tonga","scam"),"PG":("en","Papua New Guinea","fraud"),
 }
 COUNTRY_NAMES={
  "XK":"Kosovo","US":"United States","GB":"United Kingdom","KR":"South Korea","KP":"North Korea",
@@ -84,6 +137,18 @@ NEWS_EDITIONS={
  "TW":("zh-TW","TW","zh-Hant"),"HK":("zh-HK","HK","zh-Hant"),
  "TH":("th","TH","th"),"ID":("id","ID","id"),"VN":("vi","VN","vi"),
 }
+# Only observed/curated edition families. A nearby-language edition is a
+# discovery proxy, not evidence of a publisher's nationality or legal country.
+LANGUAGE_PROXY_EDITIONS={
+ "ar":("ar","SA","ar"),"fr":("fr","FR","fr"),"es":("es","ES","es"),
+ "pt":("pt-BR","BR","pt-419"),"de":("de","DE","de"),
+ "it":("it","IT","it"),"nl":("nl","NL","nl"),"pl":("pl","PL","pl"),
+ "tr":("tr","TR","tr"),"ru":("ru","RU","ru"),"uk":("uk","UA","uk"),
+ "zh":("zh-TW","TW","zh-Hant"),"ja":("ja","JP","ja"),
+ "ko":("ko","KR","ko"),"hi":("hi","IN","hi"),"th":("th","TH","th"),
+ "id":("id","ID","id"),"vi":("vi","VN","vi"),
+}
+
 # Human-reviewed authority discovery links. NOT automatic ingestion or verified
 # enforcement feeds. Add jurisdictions only with trusted actual agency URLs.
 AUTHORITIES={
