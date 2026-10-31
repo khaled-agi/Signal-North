@@ -1,0 +1,39 @@
+{
+  "metadata": {
+    "purpose": "Manually verified bank annual complaint disclosures; not automatically collected",
+    "updated_on": "2026-10-30",
+    "warning": "Bank complaint statistics use different units and reporting scopes. No cross-bank ranking."
+  },
+  "records": [
+    {
+      "id": "rbc-2025",
+      "institution": "Royal Bank of Canada",
+      "year": 2025,
+      "report_name": "Client Complaints Appeal Office Annual Report 2025",
+      "office": "CCAO",
+      "scope": "Canadian banking complaints reviewed",
+      "metric_name": "banking_complaints_reviewed",
+      "metric_value": 2978,
+      "average_review_days": 46,
+      "resolved": 282,
+      "closed": 2696,
+      "fraud_nature_pct": 28.9,
+      "fraud_percentage_note": "Percentage from the annual report's volume-by-nature chart; do not calculate an exact fraud count without confirming its denominator.",
+      "source_url": "https://www.rbc.com/ombudsman/_assets-custom/pdf/2025report.pdf"
+    },
+    {
+      "id": "td-2025",
+      "institution": "Toronto-Dominion Bank",
+      "year": 2025,
+      "report_name": "Senior Customer Complaints Office Annual Report 2025",
+      "office": "SCCO",
+      "scope": "Canadian banking, insurance and wealth combined; total closed cases",
+      "metric_name": "cases_closed_all_business_units",
+      "metric_value": 5403,
+      "fraud_nature_count": 909,
+      "fraud_percentage_note": "Fraud 909 (17.64%) is from 'cases closed by nature of concern', which uses the report's classified subset; do not divide by total 5403.",
+      "average_investigation_days": 27,
+      "source_url": "https://www.td.com/content/dam/tdcom/canada/about-td/pdf/2025-annual-report-en.pdf"
+    }
+  ]
+}
