@@ -148,7 +148,7 @@ LANGUAGE_PROXY_EDITIONS={
  "pt":("pt-BR","BR","pt-419"),"de":("de","DE","de"),
  "it":("it","IT","it"),"nl":("nl","NL","nl"),"pl":("pl","PL","pl"),
  "tr":("tr","TR","tr"),"ru":("ru","RU","ru"),"uk":("uk","UA","uk"),
- "zh":("zh-TW","TW","zh-Hant"),"ja":("ja","JP","ja"),
+ "zh":("zh-CN","CN","zh-Hans"),"ja":("ja","JP","ja"),
  "ko":("ko","KR","ko"),"hi":("hi","IN","hi"),"th":("th","TH","th"),
  "id":("id","ID","id"),"vi":("vi","VN","vi"),
 }
