@@ -58,6 +58,7 @@ def verify(base,sha):
         "us_occ_enforcement_actions.json":20,
         "us_ofac_sdn_entities.json":5000,
         "us_sec_litigation_releases.json":3,
+        "uk_sanctions_entities.json":300,
     }.items():
         path="data/"+name
         try:
@@ -67,7 +68,7 @@ def verify(base,sha):
         if len(data.get("records",[]))<minimum:
             raise AssertionError("Invalid optional original source "+path)
         counts[path]=len(data["records"])
-    for name in ("us_occ_enforcement_health.json","us_ofac_source_health.json","us_sec_source_health.json"):
+    for name in ("us_occ_enforcement_health.json","us_ofac_source_health.json","us_sec_source_health.json","uk_sanctions_source_health.json"):
         data=json.loads(read(urljoin(base,"data/"+name)+version))
         if not data.get("status") and not data.get("source_health"):
             raise AssertionError("Source health not published: "+name)
