@@ -7,6 +7,7 @@
  const urls={
   institutions:"./data/us_fdic_institutions.json",
   failures:"./data/us_fdic_failures.json",
+  ncua:"./data/us_ncua_credit_unions.json",
  };
  const state={snapshots:{},health:null};
  function render(){
@@ -26,7 +27,7 @@
       (r.acquirer?' · Acquirer: '+esc(r.acquirer):'') :dataset==="ncua"?' · NCUA quarterly cycle '+esc(r.cycle||"Unknown"):' · Active insured institution')+
     '</div>';
    return head+'<a href="'+(dataset==="failures"?'https://banks.data.fdic.gov/bankfind-suite/failures':dataset==="ncua"?'https://ncua.gov/analysis/credit-union-corporate-call-report-data/quarterly-data':'https://banks.data.fdic.gov/bankfind-suite/')+
-    '" target="_blank" rel="noopener noreferrer">Official FDIC source ↗</a></article>';
+    '" target="_blank" rel="noopener noreferrer">Official federal source ↗</a></article>';
   }).join("")+'<p class="supporting-disclaimer">Showing '+Math.min(90,matches.length)+' of '+
   matches.length.toLocaleString("en-US")+' matching original records; use institution search to narrow results.</p>';
  }
@@ -42,4 +43,8 @@
   .then(d=>{state.health=d;el("usFdicHealth").textContent=Object.entries(d.sources||{})
    .map(([k,v])=>k+": "+v.status+" · "+(v.last_success||v.last_attempt||"not collected")).join(" | ")})
   .catch(()=>{el("usFdicHealth").textContent="FDIC source health has not yet been published.";});
+ fetch("./data/us_ncua_source_health.json?v="+Date.now(),{cache:"no-store"})
+  .then(r=>{if(!r.ok)throw Error("NCUA health missing");return r.json()})
+  .then(d=>{el("usFdicHealth").textContent+=" | NCUA "+d.status+" · "+(d.last_success||d.last_attempt||"unverified")})
+  .catch(()=>{el("usFdicHealth").textContent+=" | NCUA health not yet available";});
 })();
