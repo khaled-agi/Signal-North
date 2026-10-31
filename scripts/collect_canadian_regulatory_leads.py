@@ -7,9 +7,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 SOURCES = [
- {"id":"fintrac","agency":"FINTRAC","url":"https://fintrac-canafe.canada.ca/pen/4-eng","type":"enforcement","keywords":["penalty","monetary","administrative"]},
  {"id":"fcac","agency":"FCAC","url":"https://www.canada.ca/en/financial-consumer-agency/services/industry/commissioner-decisions.html","type":"enforcement","keywords":["decision","proceeding","summary"]},
- {"id":"ciro","agency":"CIRO","url":"https://www.ciro.ca/enforcement","type":"enforcement","keywords":["enforcement","decision","disciplin"]},
+ {"id":"ciro","agency":"CIRO","url":"https://www.ciro.ca/rules-and-enforcement/enforcement/enforcement-proceeding-notices","type":"enforcement","keywords":["enforcement","decision","disciplin","hearing","settlement","sanction"]},
  {"id":"osc","agency":"OSC","url":"https://www.osc.ca/en/enforcement","type":"enforcement","keywords":["enforcement","decision","settlement","proceeding"]},
  {"id":"amf","agency":"AMF","url":"https://lautorite.qc.ca/en/","type":"enforcement","keywords":["decision","sanction","enforcement","penalt"]},
  {"id":"bcsc","agency":"BCSC","url":"https://www.bcsc.bc.ca/","type":"enforcement","keywords":["enforcement","decision","sanction"]},
@@ -40,9 +39,11 @@ def collect(source):
  for href,title in parser.links:
   url=urljoin(source["url"],href);host=urlparse(url).netloc.lower().removeprefix("www.")
   if not url.startswith("https://") or not (host==origin or host.endswith("."+origin)):continue
-  if not title or len(title)<6 or len(title)>350:continue
+  if urlparse(url).fragment:continue
+  if not title or len(title)<12 or len(title)>350:continue
+  if re.search(r"^(skip to|français|english|contact us|privacy|terms of use|back to top|home$)",title,re.I):continue
   if url in seen or url.rstrip("/")==source["url"].rstrip("/"):continue
-  keywords=source["keywords"];hay=(title+" "+url).lower()
+  keywords=source["keywords"];hay=title.lower()
   if not any(k in hay for k in keywords):continue
   seen.add(url)
   out.append({"agency":source["agency"],"source_id":source["id"],"title":title,"url":url,"classification":"official_index_link_unreviewed"})
@@ -56,7 +57,7 @@ def main():
   try:old=json.loads(path.read_text(encoding="utf-8"))
   except (OSError,ValueError):pass
  records={s["id"]:[r for r in old.get("leads",[]) if r.get("source_id")==s["id"]] for s in SOURCES}
- state=dict(old.get("sources",{}));now=datetime.now(timezone.utc).isoformat()
+ state=dict(old.get("sources",{}));state.pop("fintrac",None);now=datetime.now(timezone.utc).isoformat()
  for source in SOURCES:
   sid=source["id"]
   try:
