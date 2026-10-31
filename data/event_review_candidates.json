@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-31T03:18:03+00:00",
+  "generated_at": "2026-10-31T03:20:43+00:00",
   "candidate_pairs": 157,
   "methodology": "Suggested possible article relationships. These are not verified same incidents and require original-source editorial review.",
   "items": [
@@ -721,6 +721,43 @@
       ]
     },
     {
+      "id": "candidate:report-021db9535ceaade798d6:report-b79bb7d551ac4baa5b8b",
+      "group_ids": [
+        "report-021db9535ceaade798d6",
+        "report-b79bb7d551ac4baa5b8b"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-021db9535ceaade798d6",
+          "title": "Former RBC employee charged with accessing Canada PM Carney's banking profile, fraud - Reuters",
+          "source_url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNWXl5bDNLQmdkNm40eF9nMEo4NnNHUGh2cVoyWmJvS0E5dWF4eGZiU1VTdTNoaENvZHF2UWJIT3A5YjVjR2RSQmpSMjdKcG02bE9DbXpDaXlaTjRqdXpqRUtWLTNxczdWbHpQd2J6SVR1TnlmTG41UzZtZzRFYXByMER3RDVZRUhfNGthSldIdWxzbWYxUTNJZDNpanVLelN1bl95SXhIS2lmaXhVb2hQT0ZPVUh3ODFIcFllNUFfdV9Ec0lla2t5Rg?oc=5",
+          "publication_date": "2025-09-24T07:00:00+00:00",
+          "source_count": 1
+        },
+        {
+          "group_id": "report-b79bb7d551ac4baa5b8b",
+          "title": "RBC employee charged for allegedly accessing Carney's banking information - CBC",
+          "source_url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPeW5pWDBFYXdNOHBWQVlPakY2d2FaUHZOdlNkaHBFeEU5V2JNdF9pTERPckNXdlRIOEl1aXU3VkdLMVc2dFZ2NVJzVENIeGQ0eGdjZ0RfQ0tvWW9ORFVNRmtSYmoyV2wwcjlCTjY5T2VSc0RyT1I3cHAzalVrUXJzaQ?oc=5",
+          "publication_date": "2025-09-24T07:00:00+00:00",
+          "source_count": 1
+        }
+      ],
+      "reasons": [
+        "Same organization explicitly named: RBC",
+        "6 shared descriptive headline terms",
+        "Published within ten days"
+      ],
+      "priority": 10,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
       "id": "candidate:report-021db9535ceaade798d6:report-d738f2054ad69508387b",
       "group_ids": [
         "report-021db9535ceaade798d6",
@@ -782,43 +819,6 @@
       "reasons": [
         "Same organization explicitly named: RBC",
         "5 shared descriptive headline terms",
-        "Published within ten days"
-      ],
-      "priority": 10,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
-      "id": "candidate:report-021db9535ceaade798d6:report-b79bb7d551ac4baa5b8b",
-      "group_ids": [
-        "report-021db9535ceaade798d6",
-        "report-b79bb7d551ac4baa5b8b"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-021db9535ceaade798d6",
-          "title": "Former RBC employee charged with accessing Canada PM Carney's banking profile, fraud - Reuters",
-          "source_url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNWXl5bDNLQmdkNm40eF9nMEo4NnNHUGh2cVoyWmJvS0E5dWF4eGZiU1VTdTNoaENvZHF2UWJIT3A5YjVjR2RSQmpSMjdKcG02bE9DbXpDaXlaTjRqdXpqRUtWLTNxczdWbHpQd2J6SVR1TnlmTG41UzZtZzRFYXByMER3RDVZRUhfNGthSldIdWxzbWYxUTNJZDNpanVLelN1bl95SXhIS2lmaXhVb2hQT0ZPVUh3ODFIcFllNUFfdV9Ec0lla2t5Rg?oc=5",
-          "publication_date": "2025-09-24T07:00:00+00:00",
-          "source_count": 1
-        },
-        {
-          "group_id": "report-b79bb7d551ac4baa5b8b",
-          "title": "RBC employee charged for allegedly accessing Carney's banking information - CBC",
-          "source_url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPeW5pWDBFYXdNOHBWQVlPakY2d2FaUHZOdlNkaHBFeEU5V2JNdF9pTERPckNXdlRIOEl1aXU3VkdLMVc2dFZ2NVJzVENIeGQ0eGdjZ0RfQ0tvWW9ORFVNRmtSYmoyV2wwcjlCTjY5T2VSc0RyT1I3cHAzalVrUXJzaQ?oc=5",
-          "publication_date": "2025-09-24T07:00:00+00:00",
-          "source_count": 1
-        }
-      ],
-      "reasons": [
-        "Same organization explicitly named: RBC",
-        "6 shared descriptive headline terms",
         "Published within ten days"
       ],
       "priority": 10,
@@ -1356,6 +1356,43 @@
       ]
     },
     {
+      "id": "candidate:report-662b00510eb22181415b:report-e5a09f3dfb9aacf93c96",
+      "group_ids": [
+        "report-662b00510eb22181415b",
+        "report-e5a09f3dfb9aacf93c96"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-662b00510eb22181415b",
+          "title": "Two arrested in alleged $1M university admission, immigration, loan and investment fraud - Yahoo News Canada",
+          "source_url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPNnJVcWNNMllNU185Q3g2VHIyMzJYWE14dGEzNk1yRXhSMVlPU1dWQnNXRlBJTTNPY21hWC1YUzcwbmZxZDFEMVBqME5ad2VaWVNiMlJhSW9fX21uYXRRM0JqU1lhM1RwNmxOeDNpY0xHR3F3MG5EaU1MSDVuN1VzeA?oc=5",
+          "publication_date": "2026-10-05T07:00:00+00:00",
+          "source_count": 1
+        },
+        {
+          "group_id": "report-e5a09f3dfb9aacf93c96",
+          "title": "Two arrested in alleged $1M university admission, immigration, loan and investment fraud - Calgary Herald",
+          "source_url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxORTlkcEVhZHFRc1VhcGs3a2IxSHFBVi02RE91QWRDV01nXzRNWVBCVTY5T291QjdpblgtQ3NrcGppdE9xc3ZMWV9nZ2NZb2hLZWYzNEZERHduWmZpRXMzNTNvNjkzMlBHbXVvNXhUTm14UlRzUUVrY1h6V2hBZk5DaFZvZXp4d01QRVM5UDBJVFZQMDh4cV9QNDFOR0JqTkt0dnVYenlabkpHUV91SlFkVXR3?oc=5",
+          "publication_date": "2026-10-05T07:00:00+00:00",
+          "source_count": 1
+        }
+      ],
+      "reasons": [
+        "7 shared descriptive headline terms",
+        "Overlapping scam method: Investment & crypto scams",
+        "Published within ten days"
+      ],
+      "priority": 8,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
       "id": "candidate:report-197cfd2f36991ccb5e22:report-95182a38ae725e384f03",
       "group_ids": [
         "report-197cfd2f36991ccb5e22",
@@ -1467,43 +1504,6 @@
       ]
     },
     {
-      "id": "candidate:report-662b00510eb22181415b:report-e5a09f3dfb9aacf93c96",
-      "group_ids": [
-        "report-662b00510eb22181415b",
-        "report-e5a09f3dfb9aacf93c96"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-662b00510eb22181415b",
-          "title": "Two arrested in alleged $1M university admission, immigration, loan and investment fraud - Yahoo News Canada",
-          "source_url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPNnJVcWNNMllNU185Q3g2VHIyMzJYWE14dGEzNk1yRXhSMVlPU1dWQnNXRlBJTTNPY21hWC1YUzcwbmZxZDFEMVBqME5ad2VaWVNiMlJhSW9fX21uYXRRM0JqU1lhM1RwNmxOeDNpY0xHR3F3MG5EaU1MSDVuN1VzeA?oc=5",
-          "publication_date": "2026-10-05T07:00:00+00:00",
-          "source_count": 1
-        },
-        {
-          "group_id": "report-e5a09f3dfb9aacf93c96",
-          "title": "Two arrested in alleged $1M university admission, immigration, loan and investment fraud - Calgary Herald",
-          "source_url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxORTlkcEVhZHFRc1VhcGs3a2IxSHFBVi02RE91QWRDV01nXzRNWVBCVTY5T291QjdpblgtQ3NrcGppdE9xc3ZMWV9nZ2NZb2hLZWYzNEZERHduWmZpRXMzNTNvNjkzMlBHbXVvNXhUTm14UlRzUUVrY1h6V2hBZk5DaFZvZXp4d01QRVM5UDBJVFZQMDh4cV9QNDFOR0JqTkt0dnVYenlabkpHUV91SlFkVXR3?oc=5",
-          "publication_date": "2026-10-05T07:00:00+00:00",
-          "source_count": 1
-        }
-      ],
-      "reasons": [
-        "7 shared descriptive headline terms",
-        "Overlapping scam method: Investment & crypto scams",
-        "Published within ten days"
-      ],
-      "priority": 8,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
       "id": "candidate:report-07c1a25bb3b28d8bea68:report-6c8b842a1521d817f344",
       "group_ids": [
         "report-07c1a25bb3b28d8bea68",
@@ -1560,6 +1560,80 @@
           "source_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOU3JpQmxxcGFIbEEwZHAwaVk3ZGRqV3JaZWlGWDJfRndZb0lYaUlTWVlQX1ZHWENQYTNVNE92SlRrUlI3WjU1M1pBOTJzcmd5QVduTW1rTkMwTTRJMG5JVzd5blNianpXQ1VRbFRBd0Rtams1M213SFdlR25oMFhISE13WGFxaFRlb1dyN1RWMWM0bnh3WXhVTlZKX1V2TGpE?oc=5",
           "publication_date": "2026-10-29T19:44:52+00:00",
           "source_count": 1
+        }
+      ],
+      "reasons": [
+        "6 shared descriptive headline terms",
+        "Overlapping scam method: Investment & crypto scams",
+        "Published within ten days"
+      ],
+      "priority": 8,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
+      "id": "candidate:report-84df458dc36d18b749ac:report-d1cb6f7b67ca5a3c6edf",
+      "group_ids": [
+        "report-84df458dc36d18b749ac",
+        "report-d1cb6f7b67ca5a3c6edf"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-84df458dc36d18b749ac",
+          "title": "Canada 'Crypto King' Aiden Pleterski found guilty of fraud - BBC",
+          "source_url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5TNlJFdHEtZzA4bnppRzBGVXNTMUdvelNHMWN5VkJUdkJyYjZXWDRYVUVqVnE3M3Q5b1JULXE3bWg1VTdKb1hNeGJ6WXB1UnM4RXg2bnlYU2NiN1k?oc=5",
+          "publication_date": "2026-10-29T18:46:57+00:00",
+          "source_count": 2
+        },
+        {
+          "group_id": "report-d1cb6f7b67ca5a3c6edf",
+          "title": "’Crypto King’ Aiden Pleterski found guilty of fraud at his jury trial in Toronto - Radio-Canada",
+          "source_url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPSlFZTVUxd01lSlB1MnRUSEVsMXJmVGxOUnRyXzlOd0IyejdtLXVNTk03U3NjaWRIeHpTWWo0RGJyWUJHQzAwamEtdHVtZDRaa0JUdi1ibWlvWWJxcjFmT0dvOFFVcTVqc05aQzIxSTNhUlA3NlRiSFV2a3BSaTZkMWFGak9jTmN3LVBuM3pCTHZGWWhiejI4ZXdjTFloTmxBcVRudlFoWDQ1S3N6SXZJRTVKTzFMMjd6RHRHNEl3QlZvMGQ1?oc=5",
+          "publication_date": "2026-10-29T16:03:12+00:00",
+          "source_count": 2
+        }
+      ],
+      "reasons": [
+        "6 shared descriptive headline terms",
+        "Overlapping scam method: Investment & crypto scams",
+        "Published within ten days"
+      ],
+      "priority": 8,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
+      "id": "candidate:report-07c1a25bb3b28d8bea68:report-84df458dc36d18b749ac",
+      "group_ids": [
+        "report-07c1a25bb3b28d8bea68",
+        "report-84df458dc36d18b749ac"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-07c1a25bb3b28d8bea68",
+          "title": "'Crypto King' Aiden Pleterski found guilty of fraud at Toronto jury trial | Hanomansing Live - CBC",
+          "source_url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBoNk03TkpWMHhsNGRqdVlfQUhXcmFuLVhMYWpJSGtHWWZMNDZFYk8wUlpLTnNPcWJpR3RhMmZxY051Q25JTDcwMWUxVE4yMktLNTZPV1hFWVk?oc=5",
+          "publication_date": "2026-10-30T00:03:52+00:00",
+          "source_count": 1
+        },
+        {
+          "group_id": "report-84df458dc36d18b749ac",
+          "title": "Canada 'Crypto King' Aiden Pleterski found guilty of fraud - BBC",
+          "source_url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5TNlJFdHEtZzA4bnppRzBGVXNTMUdvelNHMWN5VkJUdkJyYjZXWDRYVUVqVnE3M3Q5b1JULXE3bWg1VTdKb1hNeGJ6WXB1UnM4RXg2bnlYU2NiN1k?oc=5",
+          "publication_date": "2026-10-29T18:46:57+00:00",
+          "source_count": 2
         }
       ],
       "reasons": [
@@ -1708,80 +1782,6 @@
           "source_url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9CZ3EzN1c0aVhPdUltOEpicm9GQXBUUF9DeW5zaTdHZHpxR2xoNFRweW5MdmZRcWFuWkpLX01hZHJKMHJ0REREY2xYZ1ZKNV80QmRoYg?oc=5",
           "publication_date": "2026-10-28T22:47:22+00:00",
           "source_count": 1
-        }
-      ],
-      "reasons": [
-        "6 shared descriptive headline terms",
-        "Overlapping scam method: Investment & crypto scams",
-        "Published within ten days"
-      ],
-      "priority": 8,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
-      "id": "candidate:report-84df458dc36d18b749ac:report-d1cb6f7b67ca5a3c6edf",
-      "group_ids": [
-        "report-84df458dc36d18b749ac",
-        "report-d1cb6f7b67ca5a3c6edf"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-84df458dc36d18b749ac",
-          "title": "Canada 'Crypto King' Aiden Pleterski found guilty of fraud - BBC",
-          "source_url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5TNlJFdHEtZzA4bnppRzBGVXNTMUdvelNHMWN5VkJUdkJyYjZXWDRYVUVqVnE3M3Q5b1JULXE3bWg1VTdKb1hNeGJ6WXB1UnM4RXg2bnlYU2NiN1k?oc=5",
-          "publication_date": "2026-10-29T18:46:57+00:00",
-          "source_count": 2
-        },
-        {
-          "group_id": "report-d1cb6f7b67ca5a3c6edf",
-          "title": "’Crypto King’ Aiden Pleterski found guilty of fraud at his jury trial in Toronto - Radio-Canada",
-          "source_url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPSlFZTVUxd01lSlB1MnRUSEVsMXJmVGxOUnRyXzlOd0IyejdtLXVNTk03U3NjaWRIeHpTWWo0RGJyWUJHQzAwamEtdHVtZDRaa0JUdi1ibWlvWWJxcjFmT0dvOFFVcTVqc05aQzIxSTNhUlA3NlRiSFV2a3BSaTZkMWFGak9jTmN3LVBuM3pCTHZGWWhiejI4ZXdjTFloTmxBcVRudlFoWDQ1S3N6SXZJRTVKTzFMMjd6RHRHNEl3QlZvMGQ1?oc=5",
-          "publication_date": "2026-10-29T16:03:12+00:00",
-          "source_count": 2
-        }
-      ],
-      "reasons": [
-        "6 shared descriptive headline terms",
-        "Overlapping scam method: Investment & crypto scams",
-        "Published within ten days"
-      ],
-      "priority": 8,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
-      "id": "candidate:report-07c1a25bb3b28d8bea68:report-84df458dc36d18b749ac",
-      "group_ids": [
-        "report-07c1a25bb3b28d8bea68",
-        "report-84df458dc36d18b749ac"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-07c1a25bb3b28d8bea68",
-          "title": "'Crypto King' Aiden Pleterski found guilty of fraud at Toronto jury trial | Hanomansing Live - CBC",
-          "source_url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBoNk03TkpWMHhsNGRqdVlfQUhXcmFuLVhMYWpJSGtHWWZMNDZFYk8wUlpLTnNPcWJpR3RhMmZxY051Q25JTDcwMWUxVE4yMktLNTZPV1hFWVk?oc=5",
-          "publication_date": "2026-10-30T00:03:52+00:00",
-          "source_count": 1
-        },
-        {
-          "group_id": "report-84df458dc36d18b749ac",
-          "title": "Canada 'Crypto King' Aiden Pleterski found guilty of fraud - BBC",
-          "source_url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5TNlJFdHEtZzA4bnppRzBGVXNTMUdvelNHMWN5VkJUdkJyYjZXWDRYVUVqVnE3M3Q5b1JULXE3bWg1VTdKb1hNeGJ6WXB1UnM4RXg2bnlYU2NiN1k?oc=5",
-          "publication_date": "2026-10-29T18:46:57+00:00",
-          "source_count": 2
         }
       ],
       "reasons": [
@@ -2910,117 +2910,6 @@
       ]
     },
     {
-      "id": "candidate:report-723af776d0a30e95a947:report-db2f6f65270f82d3fafa",
-      "group_ids": [
-        "report-723af776d0a30e95a947",
-        "report-db2f6f65270f82d3fafa"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-723af776d0a30e95a947",
-          "title": "2 men charged with fraud after probe into $300M St. Michael's Hospital redevelopment - CBC",
-          "source_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOcGcyTFVHWE83TWswOFFWTnNHRlgxRnRqc1ROQVhOQVM2bFoySmdzWVd4eWtPNVJMUFVKZzJBeTJURkgyQk1lYUFKazlNUl90bFFZYUEwa2dUc1lLTm1LSG5IUDRuemJRR25xc01VYUQ0eTd5cnJwd2loV1BNVXZLTnVQOEU5VGJEQ0FSMzRvYUNUaFhLcXpZZTcwVTkxbUJI?oc=5",
-          "publication_date": "2023-03-09T08:00:00+00:00",
-          "source_count": 1
-        },
-        {
-          "group_id": "report-db2f6f65270f82d3fafa",
-          "title": "Two men charged with fraud in probe of $300M Toronto hospital redevelopment contracts - MooseJawToday.com",
-          "source_url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOMVo1d3BHc1pLWDlJS2JjQ0o3d2VHMmpqdEdGNmd3bmJxczBjQXlBWUpiYksxSHBfWU9pNTJLYXR4S3dqUFZzWXdlNHdpV0NOdDliQm40QUFQd1RKaU40MjRFazRCazR4WkhURXh0cHdqbXd6aVJ0ajNKZ3A0T2Zfd21EVW5PUUJFU3FEUFJZNFJ6SnFnZlE2cklGdzcyeHJVLTRVTjJXdjc2NlhTeHhWMkppeUdlQkMtU1B3bGNPdTVqdG82LUU5ZVVuMVlOM1o2?oc=5",
-          "publication_date": "2023-03-09T08:00:00+00:00",
-          "source_count": 1
-        }
-      ],
-      "reasons": [
-        "6 shared descriptive headline terms",
-        "Overlapping scam method: Fraud investigations & enforcement",
-        "Published within ten days"
-      ],
-      "priority": 8,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
-      "id": "candidate:report-8dde1d807a6a822c9894:report-db2f6f65270f82d3fafa",
-      "group_ids": [
-        "report-8dde1d807a6a822c9894",
-        "report-db2f6f65270f82d3fafa"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-8dde1d807a6a822c9894",
-          "title": "2 men charged after $300M project at St. Mike's hospital - CityNews Toronto",
-          "source_url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxORlBydjdTSUdKMVlkS1ZQUVhzQmRLMGtwSGJFSWFtaVFEb2IzZTlGcmZ1ODJiR3FqUkxDcUk4WFRmYWU5dnNnaGw3aUZrd1FGZEJKY0g0aTJjbEtrOVNkUVFLX0NXQW5NQk1pMFYtZ1lvODdKODZEWWp0bmladmgyWDJnY3hXWUFjT0t6cV9oRQ?oc=5",
-          "publication_date": "2023-03-09T08:00:00+00:00",
-          "source_count": 1
-        },
-        {
-          "group_id": "report-db2f6f65270f82d3fafa",
-          "title": "Two men charged with fraud in probe of $300M Toronto hospital redevelopment contracts - MooseJawToday.com",
-          "source_url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOMVo1d3BHc1pLWDlJS2JjQ0o3d2VHMmpqdEdGNmd3bmJxczBjQXlBWUpiYksxSHBfWU9pNTJLYXR4S3dqUFZzWXdlNHdpV0NOdDliQm40QUFQd1RKaU40MjRFazRCazR4WkhURXh0cHdqbXd6aVJ0ajNKZ3A0T2Zfd21EVW5PUUJFU3FEUFJZNFJ6SnFnZlE2cklGdzcyeHJVLTRVTjJXdjc2NlhTeHhWMkppeUdlQkMtU1B3bGNPdTVqdG82LUU5ZVVuMVlOM1o2?oc=5",
-          "publication_date": "2023-03-09T08:00:00+00:00",
-          "source_count": 1
-        }
-      ],
-      "reasons": [
-        "5 shared descriptive headline terms",
-        "Same source-mentioned place",
-        "Published within ten days"
-      ],
-      "priority": 8,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
-      "id": "candidate:report-b63ec7ab9beb5aec69f2:report-fd0ee316e2ca1fda8c5c",
-      "group_ids": [
-        "report-b63ec7ab9beb5aec69f2",
-        "report-fd0ee316e2ca1fda8c5c"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-b63ec7ab9beb5aec69f2",
-          "title": "Canada-wide warrant issued for husband and wife Alberta investment scam - rdnewsnow.com",
-          "source_url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPX0lBU1JCLWE4MUhDeHpHOTcteGxaTTZ4TFI5OEc1V0ZBSkU3OFFVYmlENzR1cVFIa183aTB3Z0VDVHgxUUNMSWFlMWtpQ1YtZkZITTJNb3lxVDREQmkxdUs0NWMtTVBFd1JUeWF3Rm1wZjdjWDZEelYwWG9BenNXR0tncDQ5cEliZ1lOREZIWFJuSWdReklpaWVrLVRvdkhmZGlPRlN4UUU?oc=5",
-          "publication_date": "2021-11-26T08:00:00+00:00",
-          "source_count": 1
-        },
-        {
-          "group_id": "report-fd0ee316e2ca1fda8c5c",
-          "title": "Canada-wide warrant issued for husband and wife in million-dollar investment scam - DiscoverAirdrie",
-          "source_url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOdXZ4ZlNPYkZrNDB4bmdaSFlDbkViQ2ZwSWFVejRZMXRCYUZYSEtHYWtNOVc0dDB1UGl1dnR3NUt3R0VxWldHYmYtWk5GZ2NKVjVWdzNlczJPdTFDTEFWVXBnZkdnM3Z0dmM0a0Z5RmdOa2JXWFM4SHI1eS1YeVpfaEItU01kU1hVUzdrcmRTemhOSWJrOWoyZWxtbVlpbEZka0lKYWltMXhWVGZSbWhDWk5fMjBnV1hmOWI2dFcxaTUyNkRTMTkwZnFWWkJMVTJHYmdaaw?oc=5",
-          "publication_date": "2021-11-26T08:00:00+00:00",
-          "source_count": 1
-        }
-      ],
-      "reasons": [
-        "6 shared descriptive headline terms",
-        "Overlapping scam method: Investment & crypto scams",
-        "Published within ten days"
-      ],
-      "priority": 8,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
       "id": "candidate:report-08e38c6fd8fe945dc640:report-165fcd0c3da973273020",
       "group_ids": [
         "report-08e38c6fd8fe945dc640",
@@ -3119,6 +3008,117 @@
       "reasons": [
         "7 shared descriptive headline terms",
         "Same source-mentioned place",
+        "Published within ten days"
+      ],
+      "priority": 8,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
+      "id": "candidate:report-723af776d0a30e95a947:report-db2f6f65270f82d3fafa",
+      "group_ids": [
+        "report-723af776d0a30e95a947",
+        "report-db2f6f65270f82d3fafa"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-723af776d0a30e95a947",
+          "title": "2 men charged with fraud after probe into $300M St. Michael's Hospital redevelopment - CBC",
+          "source_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOcGcyTFVHWE83TWswOFFWTnNHRlgxRnRqc1ROQVhOQVM2bFoySmdzWVd4eWtPNVJMUFVKZzJBeTJURkgyQk1lYUFKazlNUl90bFFZYUEwa2dUc1lLTm1LSG5IUDRuemJRR25xc01VYUQ0eTd5cnJwd2loV1BNVXZLTnVQOEU5VGJEQ0FSMzRvYUNUaFhLcXpZZTcwVTkxbUJI?oc=5",
+          "publication_date": "2023-03-09T08:00:00+00:00",
+          "source_count": 1
+        },
+        {
+          "group_id": "report-db2f6f65270f82d3fafa",
+          "title": "Two men charged with fraud in probe of $300M Toronto hospital redevelopment contracts - MooseJawToday.com",
+          "source_url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOMVo1d3BHc1pLWDlJS2JjQ0o3d2VHMmpqdEdGNmd3bmJxczBjQXlBWUpiYksxSHBfWU9pNTJLYXR4S3dqUFZzWXdlNHdpV0NOdDliQm40QUFQd1RKaU40MjRFazRCazR4WkhURXh0cHdqbXd6aVJ0ajNKZ3A0T2Zfd21EVW5PUUJFU3FEUFJZNFJ6SnFnZlE2cklGdzcyeHJVLTRVTjJXdjc2NlhTeHhWMkppeUdlQkMtU1B3bGNPdTVqdG82LUU5ZVVuMVlOM1o2?oc=5",
+          "publication_date": "2023-03-09T08:00:00+00:00",
+          "source_count": 1
+        }
+      ],
+      "reasons": [
+        "6 shared descriptive headline terms",
+        "Overlapping scam method: Fraud investigations & enforcement",
+        "Published within ten days"
+      ],
+      "priority": 8,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
+      "id": "candidate:report-8dde1d807a6a822c9894:report-db2f6f65270f82d3fafa",
+      "group_ids": [
+        "report-8dde1d807a6a822c9894",
+        "report-db2f6f65270f82d3fafa"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-8dde1d807a6a822c9894",
+          "title": "2 men charged after $300M project at St. Mike's hospital - CityNews Toronto",
+          "source_url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxORlBydjdTSUdKMVlkS1ZQUVhzQmRLMGtwSGJFSWFtaVFEb2IzZTlGcmZ1ODJiR3FqUkxDcUk4WFRmYWU5dnNnaGw3aUZrd1FGZEJKY0g0aTJjbEtrOVNkUVFLX0NXQW5NQk1pMFYtZ1lvODdKODZEWWp0bmladmgyWDJnY3hXWUFjT0t6cV9oRQ?oc=5",
+          "publication_date": "2023-03-09T08:00:00+00:00",
+          "source_count": 1
+        },
+        {
+          "group_id": "report-db2f6f65270f82d3fafa",
+          "title": "Two men charged with fraud in probe of $300M Toronto hospital redevelopment contracts - MooseJawToday.com",
+          "source_url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOMVo1d3BHc1pLWDlJS2JjQ0o3d2VHMmpqdEdGNmd3bmJxczBjQXlBWUpiYksxSHBfWU9pNTJLYXR4S3dqUFZzWXdlNHdpV0NOdDliQm40QUFQd1RKaU40MjRFazRCazR4WkhURXh0cHdqbXd6aVJ0ajNKZ3A0T2Zfd21EVW5PUUJFU3FEUFJZNFJ6SnFnZlE2cklGdzcyeHJVLTRVTjJXdjc2NlhTeHhWMkppeUdlQkMtU1B3bGNPdTVqdG82LUU5ZVVuMVlOM1o2?oc=5",
+          "publication_date": "2023-03-09T08:00:00+00:00",
+          "source_count": 1
+        }
+      ],
+      "reasons": [
+        "5 shared descriptive headline terms",
+        "Same source-mentioned place",
+        "Published within ten days"
+      ],
+      "priority": 8,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
+      "id": "candidate:report-b63ec7ab9beb5aec69f2:report-fd0ee316e2ca1fda8c5c",
+      "group_ids": [
+        "report-b63ec7ab9beb5aec69f2",
+        "report-fd0ee316e2ca1fda8c5c"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-b63ec7ab9beb5aec69f2",
+          "title": "Canada-wide warrant issued for husband and wife Alberta investment scam - rdnewsnow.com",
+          "source_url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPX0lBU1JCLWE4MUhDeHpHOTcteGxaTTZ4TFI5OEc1V0ZBSkU3OFFVYmlENzR1cVFIa183aTB3Z0VDVHgxUUNMSWFlMWtpQ1YtZkZITTJNb3lxVDREQmkxdUs0NWMtTVBFd1JUeWF3Rm1wZjdjWDZEelYwWG9BenNXR0tncDQ5cEliZ1lOREZIWFJuSWdReklpaWVrLVRvdkhmZGlPRlN4UUU?oc=5",
+          "publication_date": "2021-11-26T08:00:00+00:00",
+          "source_count": 1
+        },
+        {
+          "group_id": "report-fd0ee316e2ca1fda8c5c",
+          "title": "Canada-wide warrant issued for husband and wife in million-dollar investment scam - DiscoverAirdrie",
+          "source_url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOdXZ4ZlNPYkZrNDB4bmdaSFlDbkViQ2ZwSWFVejRZMXRCYUZYSEtHYWtNOVc0dDB1UGl1dnR3NUt3R0VxWldHYmYtWk5GZ2NKVjVWdzNlczJPdTFDTEFWVXBnZkdnM3Z0dmM0a0Z5RmdOa2JXWFM4SHI1eS1YeVpfaEItU01kU1hVUzdrcmRTemhOSWJrOWoyZWxtbVlpbEZka0lKYWltMXhWVGZSbWhDWk5fMjBnV1hmOWI2dFcxaTUyNkRTMTkwZnFWWkJMVTJHYmdaaw?oc=5",
+          "publication_date": "2021-11-26T08:00:00+00:00",
+          "source_count": 1
+        }
+      ],
+      "reasons": [
+        "6 shared descriptive headline terms",
+        "Overlapping scam method: Investment & crypto scams",
         "Published within ten days"
       ],
       "priority": 8,
@@ -3687,43 +3687,6 @@
       ]
     },
     {
-      "id": "candidate:report-9acebf36b6ac1374e625:report-c6590ddf6f96fa6dc425",
-      "group_ids": [
-        "report-9acebf36b6ac1374e625",
-        "report-c6590ddf6f96fa6dc425"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-9acebf36b6ac1374e625",
-          "title": "Former Blue Jay Rich Butler charged with fraud in Ontario - The Globe and Mail",
-          "source_url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPNnZBNHNGeTlRUUV1SkFud3pvcXZDdXhobUN6M2tIY1JWMkRmaHJOU19hZ3p0b21GQlZTamIxbE1qWDNMdTVBc1VWZUVCbk1Oc2g1ZmZZcEFlYUl6R0p4ZG80NnFvdzdnSDZhUjNPeEhlTUNvU1RVcFFaLWZKNkdVMkhvcjczbDdkTVlUQWNjR2MtXzExbmhTWEtXNFdLek04WlVsMzN3dUo?oc=5",
-          "publication_date": "2026-10-20T07:00:00+00:00",
-          "source_count": 1
-        },
-        {
-          "group_id": "report-c6590ddf6f96fa6dc425",
-          "title": "Former Blue Jay, wife charged with fraud linked to Ontario youth baseball program fees: police - CBC",
-          "source_url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNVm01UHpSdTNQdTllM2lJZ1JHdlNLVHRZYnBWcFliR3hkSUpCVHgtS2liTVZzd1RNRzI0dndQdWFibXdxUTVmaW5rNjUxci1TZ01jYk84YUVxUUxEM2M0b2FYYm9QY3d2b3pvdkdKajRIUTV4MzV4dmF6NzJyNVNuWUs2VWhwSy1tajFoQVpKbm5Vdk0?oc=5",
-          "publication_date": "2026-10-20T07:00:00+00:00",
-          "source_count": 1
-        }
-      ],
-      "reasons": [
-        "5 shared descriptive headline terms",
-        "Overlapping scam method: Fraud investigations & enforcement",
-        "Published within ten days"
-      ],
-      "priority": 8,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
       "id": "candidate:report-041aafb445183d35116b:report-666835cd68135d77421e",
       "group_ids": [
         "report-041aafb445183d35116b",
@@ -3858,6 +3821,43 @@
       ],
       "reasons": [
         "Same organization explicitly named: CIBC, RBC",
+        "Published within ten days"
+      ],
+      "priority": 8,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
+      "id": "candidate:report-9acebf36b6ac1374e625:report-c6590ddf6f96fa6dc425",
+      "group_ids": [
+        "report-9acebf36b6ac1374e625",
+        "report-c6590ddf6f96fa6dc425"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-9acebf36b6ac1374e625",
+          "title": "Former Blue Jay Rich Butler charged with fraud in Ontario - The Globe and Mail",
+          "source_url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPNnZBNHNGeTlRUUV1SkFud3pvcXZDdXhobUN6M2tIY1JWMkRmaHJOU19hZ3p0b21GQlZTamIxbE1qWDNMdTVBc1VWZUVCbk1Oc2g1ZmZZcEFlYUl6R0p4ZG80NnFvdzdnSDZhUjNPeEhlTUNvU1RVcFFaLWZKNkdVMkhvcjczbDdkTVlUQWNjR2MtXzExbmhTWEtXNFdLek04WlVsMzN3dUo?oc=5",
+          "publication_date": "2026-10-20T07:00:00+00:00",
+          "source_count": 1
+        },
+        {
+          "group_id": "report-c6590ddf6f96fa6dc425",
+          "title": "Former Blue Jay, wife charged with fraud linked to Ontario youth baseball program fees: police - CBC",
+          "source_url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNVm01UHpSdTNQdTllM2lJZ1JHdlNLVHRZYnBWcFliR3hkSUpCVHgtS2liTVZzd1RNRzI0dndQdWFibXdxUTVmaW5rNjUxci1TZ01jYk84YUVxUUxEM2M0b2FYYm9QY3d2b3pvdkdKajRIUTV4MzV4dmF6NzJyNVNuWUs2VWhwSy1tajFoQVpKbm5Vdk0?oc=5",
+          "publication_date": "2026-10-20T07:00:00+00:00",
+          "source_count": 1
+        }
+      ],
+      "reasons": [
+        "5 shared descriptive headline terms",
+        "Overlapping scam method: Fraud investigations & enforcement",
         "Published within ten days"
       ],
       "priority": 8,
@@ -4056,30 +4056,30 @@
       ]
     },
     {
-      "id": "candidate:report-78f55fcd8a73043c0734:report-c9e2fc0e21d31f470f4c",
+      "id": "candidate:report-558204c34b26b4af16b7:report-e174bd86380af7e8d187",
       "group_ids": [
-        "report-78f55fcd8a73043c0734",
-        "report-c9e2fc0e21d31f470f4c"
+        "report-558204c34b26b4af16b7",
+        "report-e174bd86380af7e8d187"
       ],
       "headlines": [
         {
-          "group_id": "report-78f55fcd8a73043c0734",
-          "title": "Indigo employees’ personal information breached as part of ransomware attack on retailer - The Globe and Mail",
-          "source_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQMlU1WkJueEhGQjN3bFcyaEZ1NmJFeXlJQmtFZElnTlcwbzlBTFVJb3RxQTNJalNCdlQ1SC1Va2RhcGFPSGdnOU1Qdm9hWlV5MW9KSUJTbVlLV1d4eGNMZEZqazNHa1hjelJhOFlLVW5QVXRxcEMtV2lNRzB1ZEduNVNuRFMtaG8yZWJDNEY3UjhaWTJudjZ1bXZzTTQ5TUFBaXZQSGsyTQ?oc=5",
-          "publication_date": "2023-02-24T08:00:00+00:00",
+          "group_id": "report-558204c34b26b4af16b7",
+          "title": "Man faces new charges in $1M romance fraud investigation after more victims step forward: Durham police - CBC",
+          "source_url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPWl9LSmZuZXg1MkNiOTAyeTVYdGlPcHZlRHEyaHZHTVJ4Z1JObDJONXliaFFQUV9LNTZyQmd0ZjVnTTlEUm8zS3oweEY2VUVadmJ2dlBPZzk4UGtia2JJaVphZlh4SEVWc09NakhaeTI4LW9raHF5ekVwQllya0JPSC1UTVVJYTV3M3kwakt0ZW04aVRsRGRrNDFhVHNLZW5TUEJ3M0hR?oc=5",
+          "publication_date": "2026-10-19T07:00:00+00:00",
           "source_count": 1
         },
         {
-          "group_id": "report-c9e2fc0e21d31f470f4c",
-          "title": "Indigo says ransomware attack breached data of current and former employees - Global News",
-          "source_url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQamxzVmhNSzRNdnZ6eWx4VVNTajZqcXlzdjRKWTh3R05iaUxhQS1aRVptX3ZGZEFhVk1mTVZCc0pDMngzcVYzVXZmeFdILUtyTTc0LUtwME1YcE1mcWhwVGhETnJ1clBaMnM4XzljRTZDZVZGLUVfSEplV1FVcmRScWlNMDRRaFhTSGc?oc=5",
-          "publication_date": "2023-02-24T08:00:00+00:00",
+          "group_id": "report-e174bd86380af7e8d187",
+          "title": "Alleged Ontario romance fraud suspect faces new charges after more victims come forward (Salvatore MALANDRINO) - Reddit",
+          "source_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNbmQ3MDdWclNZMmZzUUxHbFR5NWYzVnhpWWs2SjVxRkNiQkJwRk5BMW1HaU1kcmtqTjBXODdDa1NncHRPYl9pamhLQng4akVMT0kya29VSkZTU1p2MXRCbjZLUm5GSjNmUXBPN3dfNTZzaXVmMWlrZTZzbVJUV2t3Ty1WSDVUX1hvNUhBdHpQb1Q3X2xqaEN1NU15a09abDBIVUlRcnM0WQ?oc=5",
+          "publication_date": "2026-10-23T05:02:25+00:00",
           "source_count": 1
         }
       ],
       "reasons": [
-        "5 shared descriptive headline terms",
-        "Overlapping scam method: Digital fraud & cybercrime",
+        "7 shared descriptive headline terms",
+        "Overlapping scam method: Romance & relationship scams",
         "Published within ten days"
       ],
       "priority": 8,
@@ -4093,30 +4093,67 @@
       ]
     },
     {
-      "id": "candidate:report-3609aeb7d82bc43946b3:report-cafb3d65ed80c478faa0",
+      "id": "candidate:report-90796be9b2dc244e6dd0:report-e174bd86380af7e8d187",
       "group_ids": [
-        "report-3609aeb7d82bc43946b3",
-        "report-cafb3d65ed80c478faa0"
+        "report-90796be9b2dc244e6dd0",
+        "report-e174bd86380af7e8d187"
       ],
       "headlines": [
         {
-          "group_id": "report-3609aeb7d82bc43946b3",
-          "title": "P.E.I. woman who lost nearly $10K in bitcoin scam wants bank to reimburse her money - CBC",
-          "source_url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPTDFKall3SmtYNEFWOWgwMlEydG9zNUVNYjJiZWpPWEJPSWFfNTQtVXBkTUVfa0Vfd1l3eXlJa1RRcTA1b3RSZHV1Z2FUZTdNOG9OSVU2eS1KRjJic2loelBjNV82Vl9CQy0xNHdKZVczV3ZoZjZRVzZ0YnZKaFJhUEdwbmd5ZTdFNHNfNmRlbw?oc=5",
-          "publication_date": "2026-09-25T07:00:00+00:00",
+          "group_id": "report-90796be9b2dc244e6dd0",
+          "title": "Alleged Ontario romance fraud suspect faces new charges after more victims come forward - CityNews Toronto",
+          "source_url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOOHpoTjNEb1kwM1NvU2xmVVI0WXFZcmxoZ2V2akZrdlhXVE5zWHA1YUZoMkxYZEpta1Z2VHJNcjlMczc1emJMbzMtdldsX25hNnJGbEZ4aDczczdKTnpjMW93Sm5YUWQ0RXc4SnB1eTBUUTF4bEVrbkkyU1RGWkJVYlQ2cmVrc3ZpU0E?oc=5",
+          "publication_date": "2026-10-19T07:00:00+00:00",
           "source_count": 1
         },
         {
-          "group_id": "report-cafb3d65ed80c478faa0",
-          "title": "Woman who lost almost $10K in bitcoin scam says banks 'don't care about the customer' - CBC",
-          "source_url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9mS2d6cGxCNU44QUNPM2Y1U0JtQ3ZWeVVwWFpUZDVzSWhWSXM4cVZTT2o2U1Y0cmxadGtzMkZxNUlBNXVRR2oxcXVkNFhncGpveXF1QXNka3VRdw?oc=5",
-          "publication_date": "2026-09-25T07:00:00+00:00",
+          "group_id": "report-e174bd86380af7e8d187",
+          "title": "Alleged Ontario romance fraud suspect faces new charges after more victims come forward (Salvatore MALANDRINO) - Reddit",
+          "source_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNbmQ3MDdWclNZMmZzUUxHbFR5NWYzVnhpWWs2SjVxRkNiQkJwRk5BMW1HaU1kcmtqTjBXODdDa1NncHRPYl9pamhLQng4akVMT0kya29VSkZTU1p2MXRCbjZLUm5GSjNmUXBPN3dfNTZzaXVmMWlrZTZzbVJUV2t3Ty1WSDVUX1hvNUhBdHpQb1Q3X2xqaEN1NU15a09abDBIVUlRcnM0WQ?oc=5",
+          "publication_date": "2026-10-23T05:02:25+00:00",
           "source_count": 1
         }
       ],
       "reasons": [
-        "6 shared descriptive headline terms",
-        "Overlapping scam method: Investment & crypto scams",
+        "10 shared descriptive headline terms",
+        "Overlapping scam method: Romance & relationship scams",
+        "Published within ten days"
+      ],
+      "priority": 8,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
+      "id": "candidate:report-558204c34b26b4af16b7:report-90796be9b2dc244e6dd0",
+      "group_ids": [
+        "report-558204c34b26b4af16b7",
+        "report-90796be9b2dc244e6dd0"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-558204c34b26b4af16b7",
+          "title": "Man faces new charges in $1M romance fraud investigation after more victims step forward: Durham police - CBC",
+          "source_url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPWl9LSmZuZXg1MkNiOTAyeTVYdGlPcHZlRHEyaHZHTVJ4Z1JObDJONXliaFFQUV9LNTZyQmd0ZjVnTTlEUm8zS3oweEY2VUVadmJ2dlBPZzk4UGtia2JJaVphZlh4SEVWc09NakhaeTI4LW9raHF5ekVwQllya0JPSC1UTVVJYTV3M3kwakt0ZW04aVRsRGRrNDFhVHNLZW5TUEJ3M0hR?oc=5",
+          "publication_date": "2026-10-19T07:00:00+00:00",
+          "source_count": 1
+        },
+        {
+          "group_id": "report-90796be9b2dc244e6dd0",
+          "title": "Alleged Ontario romance fraud suspect faces new charges after more victims come forward - CityNews Toronto",
+          "source_url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOOHpoTjNEb1kwM1NvU2xmVVI0WXFZcmxoZ2V2akZrdlhXVE5zWHA1YUZoMkxYZEpta1Z2VHJNcjlMczc1emJMbzMtdldsX25hNnJGbEZ4aDczczdKTnpjMW93Sm5YUWQ0RXc4SnB1eTBUUTF4bEVrbkkyU1RGWkJVYlQ2cmVrc3ZpU0E?oc=5",
+          "publication_date": "2026-10-19T07:00:00+00:00",
+          "source_count": 1
+        }
+      ],
+      "reasons": [
+        "7 shared descriptive headline terms",
+        "Overlapping scam method: Romance & relationship scams",
         "Published within ten days"
       ],
       "priority": 8,
@@ -4191,6 +4228,80 @@
       "reasons": [
         "5 shared descriptive headline terms",
         "Overlapping scam method: Fraud investigations & enforcement",
+        "Published within ten days"
+      ],
+      "priority": 8,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
+      "id": "candidate:report-78f55fcd8a73043c0734:report-c9e2fc0e21d31f470f4c",
+      "group_ids": [
+        "report-78f55fcd8a73043c0734",
+        "report-c9e2fc0e21d31f470f4c"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-78f55fcd8a73043c0734",
+          "title": "Indigo employees’ personal information breached as part of ransomware attack on retailer - The Globe and Mail",
+          "source_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQMlU1WkJueEhGQjN3bFcyaEZ1NmJFeXlJQmtFZElnTlcwbzlBTFVJb3RxQTNJalNCdlQ1SC1Va2RhcGFPSGdnOU1Qdm9hWlV5MW9KSUJTbVlLV1d4eGNMZEZqazNHa1hjelJhOFlLVW5QVXRxcEMtV2lNRzB1ZEduNVNuRFMtaG8yZWJDNEY3UjhaWTJudjZ1bXZzTTQ5TUFBaXZQSGsyTQ?oc=5",
+          "publication_date": "2023-02-24T08:00:00+00:00",
+          "source_count": 1
+        },
+        {
+          "group_id": "report-c9e2fc0e21d31f470f4c",
+          "title": "Indigo says ransomware attack breached data of current and former employees - Global News",
+          "source_url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQamxzVmhNSzRNdnZ6eWx4VVNTajZqcXlzdjRKWTh3R05iaUxhQS1aRVptX3ZGZEFhVk1mTVZCc0pDMngzcVYzVXZmeFdILUtyTTc0LUtwME1YcE1mcWhwVGhETnJ1clBaMnM4XzljRTZDZVZGLUVfSEplV1FVcmRScWlNMDRRaFhTSGc?oc=5",
+          "publication_date": "2023-02-24T08:00:00+00:00",
+          "source_count": 1
+        }
+      ],
+      "reasons": [
+        "5 shared descriptive headline terms",
+        "Overlapping scam method: Digital fraud & cybercrime",
+        "Published within ten days"
+      ],
+      "priority": 8,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
+      "id": "candidate:report-3609aeb7d82bc43946b3:report-cafb3d65ed80c478faa0",
+      "group_ids": [
+        "report-3609aeb7d82bc43946b3",
+        "report-cafb3d65ed80c478faa0"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-3609aeb7d82bc43946b3",
+          "title": "P.E.I. woman who lost nearly $10K in bitcoin scam wants bank to reimburse her money - CBC",
+          "source_url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPTDFKall3SmtYNEFWOWgwMlEydG9zNUVNYjJiZWpPWEJPSWFfNTQtVXBkTUVfa0Vfd1l3eXlJa1RRcTA1b3RSZHV1Z2FUZTdNOG9OSVU2eS1KRjJic2loelBjNV82Vl9CQy0xNHdKZVczV3ZoZjZRVzZ0YnZKaFJhUEdwbmd5ZTdFNHNfNmRlbw?oc=5",
+          "publication_date": "2026-09-25T07:00:00+00:00",
+          "source_count": 1
+        },
+        {
+          "group_id": "report-cafb3d65ed80c478faa0",
+          "title": "Woman who lost almost $10K in bitcoin scam says banks 'don't care about the customer' - CBC",
+          "source_url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9mS2d6cGxCNU44QUNPM2Y1U0JtQ3ZWeVVwWFpUZDVzSWhWSXM4cVZTT2o2U1Y0cmxadGtzMkZxNUlBNXVRR2oxcXVkNFhncGpveXF1QXNka3VRdw?oc=5",
+          "publication_date": "2026-09-25T07:00:00+00:00",
+          "source_count": 1
+        }
+      ],
+      "reasons": [
+        "6 shared descriptive headline terms",
+        "Overlapping scam method: Investment & crypto scams",
         "Published within ten days"
       ],
       "priority": 8,
@@ -4352,80 +4463,6 @@
       ]
     },
     {
-      "id": "candidate:report-558204c34b26b4af16b7:report-90796be9b2dc244e6dd0",
-      "group_ids": [
-        "report-558204c34b26b4af16b7",
-        "report-90796be9b2dc244e6dd0"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-558204c34b26b4af16b7",
-          "title": "Man faces new charges in $1M romance fraud investigation after more victims step forward: Durham police - CBC",
-          "source_url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPWl9LSmZuZXg1MkNiOTAyeTVYdGlPcHZlRHEyaHZHTVJ4Z1JObDJONXliaFFQUV9LNTZyQmd0ZjVnTTlEUm8zS3oweEY2VUVadmJ2dlBPZzk4UGtia2JJaVphZlh4SEVWc09NakhaeTI4LW9raHF5ekVwQllya0JPSC1UTVVJYTV3M3kwakt0ZW04aVRsRGRrNDFhVHNLZW5TUEJ3M0hR?oc=5",
-          "publication_date": "2026-10-19T07:00:00+00:00",
-          "source_count": 1
-        },
-        {
-          "group_id": "report-90796be9b2dc244e6dd0",
-          "title": "Alleged Ontario romance fraud suspect faces new charges after more victims come forward - CityNews Toronto",
-          "source_url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOOHpoTjNEb1kwM1NvU2xmVVI0WXFZcmxoZ2V2akZrdlhXVE5zWHA1YUZoMkxYZEpta1Z2VHJNcjlMczc1emJMbzMtdldsX25hNnJGbEZ4aDczczdKTnpjMW93Sm5YUWQ0RXc4SnB1eTBUUTF4bEVrbkkyU1RGWkJVYlQ2cmVrc3ZpU0E?oc=5",
-          "publication_date": "2026-10-19T07:00:00+00:00",
-          "source_count": 1
-        }
-      ],
-      "reasons": [
-        "7 shared descriptive headline terms",
-        "Overlapping scam method: Romance & relationship scams",
-        "Published within ten days"
-      ],
-      "priority": 8,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
-      "id": "candidate:report-90796be9b2dc244e6dd0:report-e174bd86380af7e8d187",
-      "group_ids": [
-        "report-90796be9b2dc244e6dd0",
-        "report-e174bd86380af7e8d187"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-90796be9b2dc244e6dd0",
-          "title": "Alleged Ontario romance fraud suspect faces new charges after more victims come forward - CityNews Toronto",
-          "source_url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOOHpoTjNEb1kwM1NvU2xmVVI0WXFZcmxoZ2V2akZrdlhXVE5zWHA1YUZoMkxYZEpta1Z2VHJNcjlMczc1emJMbzMtdldsX25hNnJGbEZ4aDczczdKTnpjMW93Sm5YUWQ0RXc4SnB1eTBUUTF4bEVrbkkyU1RGWkJVYlQ2cmVrc3ZpU0E?oc=5",
-          "publication_date": "2026-10-19T07:00:00+00:00",
-          "source_count": 1
-        },
-        {
-          "group_id": "report-e174bd86380af7e8d187",
-          "title": "Alleged Ontario romance fraud suspect faces new charges after more victims come forward (Salvatore MALANDRINO) - Reddit",
-          "source_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNbmQ3MDdWclNZMmZzUUxHbFR5NWYzVnhpWWs2SjVxRkNiQkJwRk5BMW1HaU1kcmtqTjBXODdDa1NncHRPYl9pamhLQng4akVMT0kya29VSkZTU1p2MXRCbjZLUm5GSjNmUXBPN3dfNTZzaXVmMWlrZTZzbVJUV2t3Ty1WSDVUX1hvNUhBdHpQb1Q3X2xqaEN1NU15a09abDBIVUlRcnM0WQ?oc=5",
-          "publication_date": "2026-10-23T05:02:25+00:00",
-          "source_count": 1
-        }
-      ],
-      "reasons": [
-        "10 shared descriptive headline terms",
-        "Overlapping scam method: Romance & relationship scams",
-        "Published within ten days"
-      ],
-      "priority": 8,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
       "id": "candidate:report-076feb7a148e5d6ecffd:report-8dde1d807a6a822c9894",
       "group_ids": [
         "report-076feb7a148e5d6ecffd",
@@ -4487,117 +4524,6 @@
       "reasons": [
         "6 shared descriptive headline terms",
         "Overlapping scam method: Fraud investigations & enforcement",
-        "Published within ten days"
-      ],
-      "priority": 8,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
-      "id": "candidate:report-558204c34b26b4af16b7:report-e174bd86380af7e8d187",
-      "group_ids": [
-        "report-558204c34b26b4af16b7",
-        "report-e174bd86380af7e8d187"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-558204c34b26b4af16b7",
-          "title": "Man faces new charges in $1M romance fraud investigation after more victims step forward: Durham police - CBC",
-          "source_url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPWl9LSmZuZXg1MkNiOTAyeTVYdGlPcHZlRHEyaHZHTVJ4Z1JObDJONXliaFFQUV9LNTZyQmd0ZjVnTTlEUm8zS3oweEY2VUVadmJ2dlBPZzk4UGtia2JJaVphZlh4SEVWc09NakhaeTI4LW9raHF5ekVwQllya0JPSC1UTVVJYTV3M3kwakt0ZW04aVRsRGRrNDFhVHNLZW5TUEJ3M0hR?oc=5",
-          "publication_date": "2026-10-19T07:00:00+00:00",
-          "source_count": 1
-        },
-        {
-          "group_id": "report-e174bd86380af7e8d187",
-          "title": "Alleged Ontario romance fraud suspect faces new charges after more victims come forward (Salvatore MALANDRINO) - Reddit",
-          "source_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNbmQ3MDdWclNZMmZzUUxHbFR5NWYzVnhpWWs2SjVxRkNiQkJwRk5BMW1HaU1kcmtqTjBXODdDa1NncHRPYl9pamhLQng4akVMT0kya29VSkZTU1p2MXRCbjZLUm5GSjNmUXBPN3dfNTZzaXVmMWlrZTZzbVJUV2t3Ty1WSDVUX1hvNUhBdHpQb1Q3X2xqaEN1NU15a09abDBIVUlRcnM0WQ?oc=5",
-          "publication_date": "2026-10-23T05:02:25+00:00",
-          "source_count": 1
-        }
-      ],
-      "reasons": [
-        "7 shared descriptive headline terms",
-        "Overlapping scam method: Romance & relationship scams",
-        "Published within ten days"
-      ],
-      "priority": 8,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
-      "id": "candidate:report-9b06da84d8731fd36f33:report-a2fc5df07bd9a7dc58e0",
-      "group_ids": [
-        "report-9b06da84d8731fd36f33",
-        "report-a2fc5df07bd9a7dc58e0"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-9b06da84d8731fd36f33",
-          "title": "Senior charged after allegedly claiming group's $1M lottery winnings for himself - CBC",
-          "source_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNVHhnYkd6SGw2UTdwM3B5X2V0R1BCVWxZbnRmX3hBSGxyalBoUGFlMDFNV0pPNDcxU3ZFZzVBazZBaXhPOURSU0xLa3VYcmlmZHNJdGt1bkZ1cVdYM19yaUhNQ1RlSjVxUVdBYjVUZi1FUWdtY2wwajlrT09VQnhtS1ozX24?oc=5",
-          "publication_date": "2025-11-25T08:00:00+00:00",
-          "source_count": 1
-        },
-        {
-          "group_id": "report-a2fc5df07bd9a7dc58e0",
-          "title": "Man charged after $1M lottery winnings from ‘group arrangement’ claimed for himself: police - Global News",
-          "source_url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9CZVdwWU5SNzFXZ2VkT29DZkpoc0E1bElxcUduMWFDWnNLNkpUVkdhUUlpbjZiWno3dXo3TGdPcGsybXBlM2JyVEJGUGJBdW9NdzV4ZnV0VEhnM0JNYkJ1cDQyUEh5ZFFLamRqOUF2ZVBBZmtnWDItLUF6dTl3dw?oc=5",
-          "publication_date": "2025-11-25T08:00:00+00:00",
-          "source_count": 1
-        }
-      ],
-      "reasons": [
-        "5 shared descriptive headline terms",
-        "Overlapping scam method: Gambling, gaming & casino",
-        "Published within ten days"
-      ],
-      "priority": 8,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
-      "id": "candidate:report-00f2ab79e9241900066b:report-30c3f7199967f5471b12",
-      "group_ids": [
-        "report-00f2ab79e9241900066b",
-        "report-30c3f7199967f5471b12"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-00f2ab79e9241900066b",
-          "title": "Ontario recovers $11M allegedly taken by senior civil servant accused of fraud - CBC",
-          "source_url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNUVJiOVl3UXhvSnNVd005TzZpaXFiZW1pNWJaRmZCQmItdElabDBGcFVNWmVpa0tTWVByYlota0tQNC0yYjM5QmZJbmZBTTNrMWxKRVZRQng0V0JrOUhCbmFnaTJycXBtYURtLS01eUdrOEo2YXp3UXJMN1NaaFBxMnNTSGxVaUdoMHdVZ240bkI0cWQwcFdkMjBSMWF6WDFmenhWRnljVk9JQXFrZlE?oc=5",
-          "publication_date": "2021-01-23T08:00:00+00:00",
-          "source_count": 1
-        },
-        {
-          "group_id": "report-30c3f7199967f5471b12",
-          "title": "Ontario recovers $11M in COVID-19 benefits allegedly taken by senior civil servant accused of fraud - Global News",
-          "source_url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNRzN5cUxraWNzQkxmVVFmalJPV3owZVlUM1lEWDZRX0E0RlpLb0hOaDJDVGtwbnd2S3BEcTUyT0JfVW5fQm9vbFN5NGNQZm5OM21KQzRSOEU0elJiVTY5OXFIcS1XbV9lUzRjSWxMSkJodC1OcFVxbVo5cXJZYms3TVVCNFIxY0g2cHhGajdkYVp3eHM?oc=5",
-          "publication_date": "2021-01-22T08:00:00+00:00",
-          "source_count": 1
-        }
-      ],
-      "reasons": [
-        "9 shared descriptive headline terms",
-        "Overlapping scam method: Seniors & vulnerable victims",
         "Published within ten days"
       ],
       "priority": 8,
@@ -4894,6 +4820,80 @@
       "reasons": [
         "5 shared descriptive headline terms",
         "Same source-mentioned place",
+        "Published within ten days"
+      ],
+      "priority": 8,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
+      "id": "candidate:report-9b06da84d8731fd36f33:report-a2fc5df07bd9a7dc58e0",
+      "group_ids": [
+        "report-9b06da84d8731fd36f33",
+        "report-a2fc5df07bd9a7dc58e0"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-9b06da84d8731fd36f33",
+          "title": "Senior charged after allegedly claiming group's $1M lottery winnings for himself - CBC",
+          "source_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNVHhnYkd6SGw2UTdwM3B5X2V0R1BCVWxZbnRmX3hBSGxyalBoUGFlMDFNV0pPNDcxU3ZFZzVBazZBaXhPOURSU0xLa3VYcmlmZHNJdGt1bkZ1cVdYM19yaUhNQ1RlSjVxUVdBYjVUZi1FUWdtY2wwajlrT09VQnhtS1ozX24?oc=5",
+          "publication_date": "2025-11-25T08:00:00+00:00",
+          "source_count": 1
+        },
+        {
+          "group_id": "report-a2fc5df07bd9a7dc58e0",
+          "title": "Man charged after $1M lottery winnings from ‘group arrangement’ claimed for himself: police - Global News",
+          "source_url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9CZVdwWU5SNzFXZ2VkT29DZkpoc0E1bElxcUduMWFDWnNLNkpUVkdhUUlpbjZiWno3dXo3TGdPcGsybXBlM2JyVEJGUGJBdW9NdzV4ZnV0VEhnM0JNYkJ1cDQyUEh5ZFFLamRqOUF2ZVBBZmtnWDItLUF6dTl3dw?oc=5",
+          "publication_date": "2025-11-25T08:00:00+00:00",
+          "source_count": 1
+        }
+      ],
+      "reasons": [
+        "5 shared descriptive headline terms",
+        "Overlapping scam method: Gambling, gaming & casino",
+        "Published within ten days"
+      ],
+      "priority": 8,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
+      "id": "candidate:report-00f2ab79e9241900066b:report-30c3f7199967f5471b12",
+      "group_ids": [
+        "report-00f2ab79e9241900066b",
+        "report-30c3f7199967f5471b12"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-00f2ab79e9241900066b",
+          "title": "Ontario recovers $11M allegedly taken by senior civil servant accused of fraud - CBC",
+          "source_url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNUVJiOVl3UXhvSnNVd005TzZpaXFiZW1pNWJaRmZCQmItdElabDBGcFVNWmVpa0tTWVByYlota0tQNC0yYjM5QmZJbmZBTTNrMWxKRVZRQng0V0JrOUhCbmFnaTJycXBtYURtLS01eUdrOEo2YXp3UXJMN1NaaFBxMnNTSGxVaUdoMHdVZ240bkI0cWQwcFdkMjBSMWF6WDFmenhWRnljVk9JQXFrZlE?oc=5",
+          "publication_date": "2021-01-23T08:00:00+00:00",
+          "source_count": 1
+        },
+        {
+          "group_id": "report-30c3f7199967f5471b12",
+          "title": "Ontario recovers $11M in COVID-19 benefits allegedly taken by senior civil servant accused of fraud - Global News",
+          "source_url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNRzN5cUxraWNzQkxmVVFmalJPV3owZVlUM1lEWDZRX0E0RlpLb0hOaDJDVGtwbnd2S3BEcTUyT0JfVW5fQm9vbFN5NGNQZm5OM21KQzRSOEU0elJiVTY5OXFIcS1XbV9lUzRjSWxMSkJodC1OcFVxbVo5cXJZYms3TVVCNFIxY0g2cHhGajdkYVp3eHM?oc=5",
+          "publication_date": "2021-01-22T08:00:00+00:00",
+          "source_count": 1
+        }
+      ],
+      "reasons": [
+        "9 shared descriptive headline terms",
+        "Overlapping scam method: Seniors & vulnerable victims",
         "Published within ten days"
       ],
       "priority": 8,

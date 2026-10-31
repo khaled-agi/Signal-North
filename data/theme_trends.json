@@ -15,7 +15,7 @@
     "2023": 322,
     "2024": 328,
     "2025": 482,
-    "2026": 752
+    "2026": 753
   },
   "themes": [
     {
@@ -2281,9 +2281,9 @@
         "2023": 2,
         "2024": 6,
         "2025": 2,
-        "2026": 11
+        "2026": 12
       },
-      "total_headlines": 32,
+      "total_headlines": 33,
       "publisher_count": 12,
       "examples": [
         {
@@ -2306,6 +2306,17 @@
           "geography": null,
           "source_channels": [
             "rcmp_official_rss"
+          ]
+        },
+        {
+          "id": "0da69899268ef7697b67",
+          "title": "New penalties for fraudulent and unauthorized immigration and citizenship representatives - Canada.ca",
+          "date": "2026-10-28T20:37:33+00:00",
+          "publisher": "Canada.ca",
+          "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxPdHJBOTc0QVZ3RDJfMjJadnRvU09UdExjYkxtN2g5R3FQUUpLd1Jjb28tamhRaTNqdzd0SnoySjZTWEVRRjh5Ml9qMEVUdEc5N3V0X1I1TlpMT1JkNXNIR1FaSXRsZWswcWdjckhXbnRScE5VMGoycWctMFFvMWtQUTBwalV0UTR6NjVwemtfYVlGUGFBUnpqTExHMDhqQ0hoY2lNeUw2UUtocGZPLU5pVVdaLTZfRjlyMWJvV290eTZKSl9Za2xwdzUxdFVVYTlQRXpsMDVzd3BzZ0swajdGYzdadEt2dkhrZzJWTzNVdHRLeUwtcktTMw?oc=5",
+          "geography": null,
+          "source_channels": [
+            "recent"
           ]
         },
         {
@@ -2535,17 +2546,6 @@
           "publisher": "CTV News",
           "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNU2VDaVBfYUd1WFNKZm43elo2NjdzQTRBaFB6SGFEYjliaHo4RG5Rbzh0SVRFMzhMejd6OGpmaW1kWHVVSVhBaG9vS3FaV3ZEZ3pac3JaakM0M1dDT0JNdlhsTGNienFFSGdnNl8xX2d3SnBLUGdYcVFLdG56Uk1iRkpfOG52YjItS21KeC1mUlNCZFpkak5oRGxKemJGRnVjYldJOGJjWTRZS3FYck5QV3JBbDA1cWpMUGE4?oc=5",
           "geography": null,
-          "source_channels": [
-            "historical"
-          ]
-        },
-        {
-          "id": "767e423481e219b1d722",
-          "title": "Preventing fraud and identity theft among Côte Saint-Luc Seniors - Service de Police de la Ville de Montréal",
-          "date": "2022-04-25T07:00:00+00:00",
-          "publisher": "Service de Police de la Ville de Montréal",
-          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9HNUNYb0NjWGIxWW1EZ2E2TF9QSHNvQmw2M09qX0xtVHlVaHYzWDZJWDc3Ykg3c2RwTlNLVUtaM21XQXo5Mk9hQXp0LW9XUmZEbFBSYmF5X1pMUQ?oc=5",
-          "geography": "Montréal, Québec",
           "source_channels": [
             "historical"
           ]
@@ -3138,8 +3138,8 @@
       }
     }
   ],
-  "generated_at": "2026-10-31T03:18:03+00:00",
-  "articles_analyzed": 2473,
+  "generated_at": "2026-10-31T03:20:43+00:00",
+  "articles_analyzed": 2474,
   "methodology": "MULTI-LABEL keyword classification of unique article TITLES by publication year; multiple theme counts can arise from one headline. Year-to-year article counts reflect discovery methods, changing news coverage, and archived source availability, NOT measured changes in fraud incidence. Bank/platform mentions are not accusations and never counted as confirmed enforcement.",
   "scope": "Canadian financial-crime news discovery",
   "data_quality": "Headlines only; no full-article automated fact checking. Counts can change as the archive expands."

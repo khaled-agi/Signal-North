@@ -1,25 +1,25 @@
 {
-  "last_attempt_at": "2026-10-31T03:17:29+00:00",
+  "last_attempt_at": "2026-10-31T03:20:12+00:00",
   "status": "ok",
   "months_available": 178,
-  "months_with_results": 30,
+  "months_with_results": 36,
   "first_possible_month": "2011-12",
   "source": "CFPB Consumer Complaint Database API",
   "methodology": "Month totals only when API hits.total relation=eq; issue/product breakdown is capped first-page sample, NOT a total or representative sample",
   "monthly_request_cap": 100,
   "selected_months": [
-    "2024-09",
-    "2024-08",
-    "2024-07",
-    "2024-06",
-    "2024-05",
-    "2024-04"
+    "2024-03",
+    "2024-02",
+    "2024-01",
+    "2023-12",
+    "2023-11",
+    "2023-10"
   ],
   "errors": {},
   "months_fetched_this_run": 6,
   "months_failed_this_run": 0,
   "months_with_exact_totals": 0,
-  "months_with_unverified_counts": 30,
-  "earliest_fetched_month": "2024-04",
+  "months_with_unverified_counts": 36,
+  "earliest_fetched_month": "2023-10",
   "latest_fetched_month": "2026-09"
 }
