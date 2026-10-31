@@ -176,6 +176,7 @@ def generate():
  bank_disclosures=load("bank_complaint_disclosures.json","records")
  fintrac=load("fintrac_penalties_official.json","records")
  fcac=[x for x in load("canadian_enforcement_verified.json","records") if x.get("agency")=="FCAC"]
+ amf=load("amf_quebec_entities.json","records")
  obsi_sector=load("obsi_annual_banking.json","rows")
  for row in osfi:
   fields=row.get("fields") or {}
@@ -205,6 +206,19 @@ def generate():
    "date":action.get("published"),"penalty_cad":action.get("penalty_cad"),
    "topic":action.get("topic"),"source_url":action.get("url"),
    "source_kind":"manually_transcribed_FCAC_index"})
+ # Québec AMF institution register joins only on an exact recognized legal name.
+ # The complete provincial directory remains browsable separately. Do not
+ # guess that similarly named firms are the same regulated legal entity.
+ for row in amf:
+  fields=row.get("fields") or {}
+  matches=[str(v).strip() for k,v in fields.items() if v and any(t in normalize(k) for t in ("nom","d nomination","d nomination sociale","raison sociale","institution","company name"))]
+  for name in matches[:2]:
+   key=bank_key(name)
+   if key not in by_key:continue
+   by_key[key].setdefault("official_data",{}).setdefault("amf_registrations",[]).append({
+     "name":name,"source":"AMF Québec open data","source_url":"https://www.donneesquebec.ca/recherche/dataset/liste-des-institutions-financieres-et-agences-d-evaluation-du-credit",
+     "entity_record_id":row.get("id")})
+   break
  for entry in by_key.values():
   official=entry.setdefault("official_data",{})
   entry["counts"]["fintrac_public_notices"]=len(official.get("fintrac_notices",[]))
@@ -239,7 +253,7 @@ def generate():
   "source_counts":{"enforcement":len(events),"reviewed_incidents":len(incidents),"unverified_report_groups":len(articles),
     "osfi_institution_rows":len(osfi),"fintrac_index_notices":len(fintrac),
     "bank_disclosure_records":len(bank_disclosures),"fcac_manual_sample":len(fcac),
-    "obsi_banking_years":len(obsi_sector)},
+    "obsi_banking_years":len(obsi_sector),"amf_quebec_entity_rows":len(amf)},
   "sector_context":{"obsi_banking":obsi_sector,"note":"OBSI annual sector totals must not be attributed to individual institutions."},
   "institutions":ranked
  }
