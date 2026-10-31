@@ -1,5 +1,5 @@
 {
-  "last_completed_at": "2026-10-31T03:46:48+00:00",
+  "last_completed_at": "2026-10-31T03:52:08+00:00",
   "regulators_configured": 30,
   "regulators_attempted": 30,
   "countries_with_publication_leads": 0,
@@ -54,25 +54,25 @@
       "regulator": "HKMA"
     },
     "DE:BaFin": {
-      "status": "empty",
-      "accepted": 0,
-      "checked_at": "2026-10-31T03:22:50+00:00",
+      "status": "error",
+      "error_type": "HTTPError",
+      "checked_at": "2026-10-31T03:51:58+00:00",
       "source_domain": "bafin.de",
       "country_code": "DE",
       "regulator": "BaFin"
     },
     "IN:SEBI": {
-      "status": "empty",
-      "accepted": 0,
-      "checked_at": "2026-10-31T03:22:45+00:00",
+      "status": "error",
+      "error_type": "HTTPError",
+      "checked_at": "2026-10-31T03:51:58+00:00",
       "source_domain": "sebi.gov.in",
       "country_code": "IN",
       "regulator": "SEBI"
     },
     "FR:AMF": {
-      "status": "empty",
-      "accepted": 0,
-      "checked_at": "2026-10-31T03:22:46+00:00",
+      "status": "error",
+      "error_type": "HTTPError",
+      "checked_at": "2026-10-31T03:51:58+00:00",
       "source_domain": "amf-france.org",
       "country_code": "FR",
       "regulator": "AMF"
@@ -80,23 +80,23 @@
     "ZA:FSCA": {
       "status": "error",
       "error_type": "HTTPError",
-      "checked_at": "2026-10-31T03:23:03+00:00",
+      "checked_at": "2026-10-31T03:52:08+00:00",
       "source_domain": "fsca.co.za",
       "country_code": "ZA",
       "regulator": "FSCA"
     },
     "IN:RBI": {
-      "status": "empty",
-      "accepted": 0,
-      "checked_at": "2026-10-31T03:23:07+00:00",
+      "status": "error",
+      "error_type": "HTTPError",
+      "checked_at": "2026-10-31T03:52:08+00:00",
       "source_domain": "rbi.org.in",
       "country_code": "IN",
       "regulator": "RBI"
     },
     "JP:FSA": {
-      "status": "empty",
-      "accepted": 0,
-      "checked_at": "2026-10-31T03:23:11+00:00",
+      "status": "error",
+      "error_type": "HTTPError",
+      "checked_at": "2026-10-31T03:52:08+00:00",
       "source_domain": "fsa.go.jp",
       "country_code": "JP",
       "regulator": "FSA"
