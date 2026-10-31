@@ -96,6 +96,7 @@ class CFPBHistoryTests(unittest.TestCase):
     health=json.loads(h.STATUS.read_text())
     self.assertEqual(health["status"],"offline_not_scanned")
     self.assertEqual(data["months"][0]["month"],"2011-12")
-    self.assertEqual(data["months"][0]["exact_published_complaint_total"],123)
+    self.assertIsNone(data["months"][0]["exact_published_complaint_total"])
+    self.assertEqual(data["months"][0]["monthly_total_status"],"unverified_date_scope")
 
 if __name__=="__main__":unittest.main()
