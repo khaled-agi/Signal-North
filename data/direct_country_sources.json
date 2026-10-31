@@ -1,5 +1,54 @@
 {
-  "updated_at": null,
-  "leads": [],
-  "methodology": "Not collected yet; official-domain publication leads remain distinct from verified enforcement."
+  "updated_at": "2026-10-31T01:44:27+00:00",
+  "leads": [
+    {
+      "id": "direct-734e71580d0a10c6fde7",
+      "country_code": "CH",
+      "source_id": "ch-finma-news",
+      "source_name": "FINMA news",
+      "source_kind": "regulator",
+      "title": "FINMA publishes supplementary guidance on money laundering risk analysis",
+      "url": "https://www.finma.ch/en/news/2026/06/20260604-mm-am-04-26/",
+      "published_at": "2026-06-04T08:59:00+00:00",
+      "evidence_status": "direct_publisher_publication_unverified",
+      "country_basis": "publisher_source_market_not_verified_incident_location",
+      "geographic_note": "Source market or regulator jurisdiction, not a verified offence location",
+      "is_official_source": true,
+      "review_status": "not_source_reviewed",
+      "legal_status": "not_assessed_not_final_enforcement"
+    },
+    {
+      "id": "direct-a105930b2e94624c6dd0",
+      "country_code": "CH",
+      "source_id": "ch-finma-sanctions",
+      "source_name": "FINMA international sanctions",
+      "source_kind": "regulator",
+      "title": "FINMA publishes supplementary guidance on money laundering risk analysis",
+      "url": "https://www.finma.ch/en/news/2026/06/20260604-mm-am-04-26/",
+      "published_at": "2026-06-04T08:59:00+00:00",
+      "evidence_status": "direct_publisher_publication_unverified",
+      "country_basis": "publisher_source_market_not_verified_incident_location",
+      "geographic_note": "Source market or regulator jurisdiction, not a verified offence location",
+      "is_official_source": true,
+      "review_status": "not_source_reviewed",
+      "legal_status": "not_assessed_not_final_enforcement"
+    },
+    {
+      "id": "direct-afe3821dfc336feef4c9",
+      "country_code": "CH",
+      "source_id": "ch-finma-sanctions",
+      "source_name": "FINMA international sanctions",
+      "source_kind": "regulator",
+      "title": "FINMA launches consultation on partial revision of the FINMA Anti-Money Laundering Ordinance",
+      "url": "https://www.finma.ch/en/news/2026/05/20260512-mm-anh-gwv-finma/",
+      "published_at": "2026-05-12T07:59:00+00:00",
+      "evidence_status": "direct_publisher_publication_unverified",
+      "country_basis": "publisher_source_market_not_verified_incident_location",
+      "geographic_note": "Source market or regulator jurisdiction, not a verified offence location",
+      "is_official_source": true,
+      "review_status": "not_source_reviewed",
+      "legal_status": "not_assessed_not_final_enforcement"
+    }
+  ],
+  "methodology": "Direct original-domain RSS/Atom metadata. Source country does not imply incident geography. Regulators/police/FIUs yield publication leads, not confirmed final enforcement."
 }

@@ -1,9 +1,56 @@
 {
-  "updated_at": null,
+  "updated_at": "2026-10-31T01:44:27+00:00",
   "sources_configured": 5,
-  "sources_attempted": 0,
-  "sources_with_results": 0,
+  "sources_attempted": 5,
+  "sources_with_results": 2,
   "countries_configured": 3,
-  "stored_leads": 0,
-  "sources": {}
+  "stored_leads": 3,
+  "sources": {
+    "gh-citi-business": {
+      "status": "error",
+      "accepted": 0,
+      "checked_at": "2026-10-31T01:44:27+00:00",
+      "error_type": "HTTPError",
+      "source_kind": "newspaper",
+      "country_code": "GH",
+      "name": "Citi Newsroom Business"
+    },
+    "gh-citi-general": {
+      "status": "error",
+      "accepted": 0,
+      "checked_at": "2026-10-31T01:44:27+00:00",
+      "error_type": "HTTPError",
+      "source_kind": "newspaper",
+      "country_code": "GH",
+      "name": "Citi Newsroom General"
+    },
+    "ch-finma-news": {
+      "status": "ok",
+      "accepted": 1,
+      "checked_at": "2026-10-31T01:44:27+00:00",
+      "feed_http_status": 200,
+      "source_kind": "regulator",
+      "country_code": "CH",
+      "name": "FINMA news"
+    },
+    "ch-finma-sanctions": {
+      "status": "ok",
+      "accepted": 2,
+      "checked_at": "2026-10-31T01:44:27+00:00",
+      "feed_http_status": 200,
+      "source_kind": "regulator",
+      "country_code": "CH",
+      "name": "FINMA international sanctions"
+    },
+    "in-sebi": {
+      "status": "empty",
+      "accepted": 0,
+      "checked_at": "2026-10-31T01:44:27+00:00",
+      "feed_http_status": 200,
+      "source_kind": "regulator",
+      "country_code": "IN",
+      "name": "Securities and Exchange Board of India"
+    }
+  },
+  "coverage_note": "Only verified URL configurations are targeted. No result never means no national news/enforcement."
 }
