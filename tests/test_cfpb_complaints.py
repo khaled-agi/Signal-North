@@ -74,11 +74,16 @@ class CFPBCollectorTests(unittest.TestCase):
   self.assertEqual(kwargs["params"]["no_aggs"],"true")
   self.assertNotIn("format",kwargs["params"])
   self.assertIn("application/json",kwargs["headers"]["Accept"])
+  bank,_,_=c.collect(session,NOW,product="Checking or savings account")
+  self.assertEqual(len(bank),1)
+  self.assertEqual(session.get.call_args.kwargs["params"]["product"],"Checking or savings account")
+  with self.assertRaises(ValueError):
+   c.collect(session,NOW,product="not-a-real-structured-product")
 
  def test_offline_preserves_existing_and_no_fake_success(self):
   with tempfile.TemporaryDirectory() as folder:
    dest=Path(folder)
-   with patch.object(c,"OUT",dest/"data.json"),patch.object(c,"STATUS",dest/"status.json"),patch.object(c,"utcnow",lambda:NOW),patch.dict(os.environ,{"CFPB_OFFLINE":"1"}):
+   with patch.object(c,"OUT",dest/"data.json"),patch.object(c,"STATUS",dest/"status.json"),patch.object(c,"STATE",dest/"state.json"),patch.object(c,"utcnow",lambda:NOW),patch.dict(os.environ,{"CFPB_OFFLINE":"1"}):
     c.save(c.OUT,{"complaints":[c.record(hit())]})
     c.run()
     status=json.loads(c.STATUS.read_text())
@@ -88,15 +93,43 @@ class CFPBCollectorTests(unittest.TestCase):
     self.assertIsNone(status["latest_window_total"])
     self.assertEqual(len(rows),1)
 
+ def test_banking_product_rotates_and_keeps_named_bank_rows(self):
+  with tempfile.TemporaryDirectory() as folder:
+   dest=Path(folder)
+   calls=[]
+   def fake_collect(session=None,clock=None,product=None):
+    calls.append(product)
+    cid=str(12345678+len(calls))
+    row=c.record(hit(cid))
+    row["company"]="JPMORGAN CHASE & CO." if product else "Reporting agency example"
+    row["product"]=product or "Credit reporting or other personal consumer reports"
+    return [row],100,"2026-08-01"
+   with patch.object(c,"OUT",dest/"data.json"),patch.object(c,"STATUS",dest/"status.json"),patch.object(c,"STATE",dest/"state.json"),patch.object(c,"utcnow",lambda:NOW),patch.object(c,"collect",side_effect=fake_collect),patch.dict(os.environ,{"CFPB_OFFLINE":"0"}):
+    c.run()
+    first=json.loads(c.STATUS.read_text())
+    rows=json.loads(c.OUT.read_text())["complaints"]
+    self.assertEqual(first["status"],"ok")
+    self.assertEqual(first["queries_attempted"],4)
+    self.assertEqual(first["banking_product_records_in_sample"],3)
+    self.assertEqual(first["companies_in_stored_sample"],2)
+    self.assertEqual(calls[1:],[p for p in c.PRODUCT_QUERIES[:3]])
+    self.assertEqual(len(rows),4)
+    self.assertTrue(any(x["company"]=="JPMORGAN CHASE & CO." for x in rows))
+    self.assertEqual(json.loads(c.STATE.read_text())["next_product_cursor"],3)
+    c.run()
+    self.assertEqual(json.loads(c.STATE.read_text())["next_product_cursor"],1)
+    self.assertEqual(len(json.loads(c.OUT.read_text())["complaints"]),8)
+
  def test_external_response_failures_do_not_replace_existing_records(self):
   with tempfile.TemporaryDirectory() as folder:
    dest=Path(folder)
-   with patch.object(c,"OUT",dest/"data.json"),patch.object(c,"STATUS",dest/"status.json"),patch.object(c,"utcnow",lambda:NOW),patch.object(c,"collect",side_effect=ValueError("Upstream HTML not JSON")),patch.dict(os.environ,{"CFPB_OFFLINE":"0"}):
+   with patch.object(c,"OUT",dest/"data.json"),patch.object(c,"STATUS",dest/"status.json"),patch.object(c,"STATE",dest/"state.json"),patch.object(c,"utcnow",lambda:NOW),patch.object(c,"collect",side_effect=ValueError("Upstream HTML not JSON")),patch.dict(os.environ,{"CFPB_OFFLINE":"0"}):
     c.save(c.OUT,{"complaints":[c.record(hit())]})
     c.run()
     status=json.loads(c.STATUS.read_text())
     self.assertEqual(status["status"],"error")
-    self.assertEqual(status["error_type"],"ValueError")
+    self.assertEqual(status["queries"]["all_recent"]["error_type"],"ValueError")
+    self.assertEqual(status["queries_attempted"],1+c.PRODUCT_QUERIES_PER_RUN)
     self.assertEqual(status["stored_records"],1)
     self.assertIsNone(status["latest_window_total"])
 if __name__=="__main__":unittest.main()
