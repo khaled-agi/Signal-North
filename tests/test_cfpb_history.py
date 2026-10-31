@@ -33,6 +33,14 @@ class CFPBHistoryTests(unittest.TestCase):
   }}
   session=Mock();session.get.return_value=response
   row=h.monthly_query("2011-12",session=session)
+  self.assertIsNone(row["exact_published_complaint_total"])
+  self.assertEqual(row["monthly_total_status"],"unverified_date_scope")
+  self.assertEqual(row["api_hits_outside_requested_month"],1)
+  # CFPB may return a non-month sample despite the requested date bounds.
+  # Never label the associated numeric total as a verified month's count.
+  response.json.return_value["hits"]["hits"]=[
+    item(1,"2011-12-18"),item(2,"2011-12-19")]
+  row=h.monthly_query("2011-12",session=session)
   self.assertEqual(row["exact_published_complaint_total"],3456)
   self.assertEqual(row["sample_size"],2)
   self.assertEqual(row["sample_issue_breakdown"][0]["sample_count"],2)
@@ -47,6 +55,13 @@ class CFPBHistoryTests(unittest.TestCase):
   row=h.monthly_query("2011-12",session=session)
   self.assertIsNone(row["exact_published_complaint_total"])
   self.assertEqual(row["monthly_total_status"],"unknown_api_total")
+  # A positive hit total with no reconstructable published examples must be
+  # marked unverified, not asserted as an exact historical count.
+  response.json.return_value["hits"]["total"]={"value":999,"relation":"eq"}
+  response.json.return_value["hits"]["hits"]=[]
+  row=h.monthly_query("2011-12",session=session)
+  self.assertEqual(row["monthly_total_status"],"unverified_date_scope")
+  self.assertIsNone(row["exact_published_complaint_total"])
 
  def test_rotating_month_cursor_and_failures_preserve_completed_months(self):
   with tempfile.TemporaryDirectory() as folder:
@@ -81,6 +96,7 @@ class CFPBHistoryTests(unittest.TestCase):
     health=json.loads(h.STATUS.read_text())
     self.assertEqual(health["status"],"offline_not_scanned")
     self.assertEqual(data["months"][0]["month"],"2011-12")
-    self.assertEqual(data["months"][0]["exact_published_complaint_total"],123)
+    self.assertIsNone(data["months"][0]["exact_published_complaint_total"])
+    self.assertEqual(data["months"][0]["monthly_total_status"],"unverified_date_scope")
 
 if __name__=="__main__":unittest.main()
