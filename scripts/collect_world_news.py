@@ -362,6 +362,7 @@ def run():
         # Tests and manual dry runs should not erase historical results or
         # claim discovery was attempted.
         chosen=[]
+        priority=[]
         next_cursor=progress.get("next_cursor",0)
         priority_cursor=progress.get("priority_cursor",0)
     with ThreadPoolExecutor(max_workers=8) as pool:
