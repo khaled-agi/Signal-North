@@ -1,8 +1,288 @@
 {
-  "updated_at": "2026-10-31T19:30:36+00:00",
+  "updated_at": "2026-10-31T22:45:02+00:00",
   "source": "CFPB Consumer Complaint Database API",
   "earliest_possible_month": "2011-12",
   "months": [
+    {
+      "month": "2012-10",
+      "date_received_min": "2012-10-01",
+      "date_received_max_exclusive": "2012-11-01",
+      "exact_published_complaint_total": null,
+      "monthly_total_status": "unverified_date_scope",
+      "api_returned_count": 100,
+      "api_returned_date_min": "2012-11-01",
+      "api_returned_date_max": "2012-11-01",
+      "api_hits_outside_requested_month": 100,
+      "scope_warning": "CFPB page date scope not verified; count withheld",
+      "sample_size": 0,
+      "page_limit": 100,
+      "sample_issue_breakdown": [],
+      "sample_product_breakdown": [],
+      "sample_basis": "Most recently indexed <=100 public complaints for month; NOT full issue/product counts",
+      "source": "CFPB Consumer Complaint Database API",
+      "source_url": "https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/",
+      "last_checked_at": "2026-10-31T22:45:09+00:00"
+    },
+    {
+      "month": "2012-11",
+      "date_received_min": "2012-11-01",
+      "date_received_max_exclusive": "2012-12-01",
+      "exact_published_complaint_total": null,
+      "monthly_total_status": "unverified_date_scope",
+      "api_returned_count": 100,
+      "api_returned_date_min": "2012-11-30",
+      "api_returned_date_max": "2012-12-01",
+      "api_hits_outside_requested_month": 50,
+      "scope_warning": "CFPB page date scope not verified; count withheld",
+      "sample_size": 50,
+      "page_limit": 100,
+      "sample_issue_breakdown": [
+        {
+          "issue": "Loan modification,collection,foreclosure",
+          "sub_issue": "",
+          "sample_count": 13
+        },
+        {
+          "issue": "Account opening, closing, or management",
+          "sub_issue": "",
+          "sample_count": 7
+        },
+        {
+          "issue": "Deposits and withdrawals",
+          "sub_issue": "",
+          "sample_count": 6
+        },
+        {
+          "issue": "Billing disputes",
+          "sub_issue": "",
+          "sample_count": 4
+        },
+        {
+          "issue": "Loan servicing, payments, escrow account",
+          "sub_issue": "",
+          "sample_count": 3
+        },
+        {
+          "issue": "Application, originator, mortgage broker",
+          "sub_issue": "",
+          "sample_count": 3
+        },
+        {
+          "issue": "Credit determination",
+          "sub_issue": "",
+          "sample_count": 2
+        },
+        {
+          "issue": "Managing the loan or lease",
+          "sub_issue": "",
+          "sample_count": 2
+        },
+        {
+          "issue": "Problems caused by my funds being low",
+          "sub_issue": "",
+          "sample_count": 2
+        },
+        {
+          "issue": "Unable to get credit report/credit score",
+          "sub_issue": "Problem getting report or credit score",
+          "sample_count": 1
+        },
+        {
+          "issue": "Collection debt dispute",
+          "sub_issue": "",
+          "sample_count": 1
+        },
+        {
+          "issue": "Credit reporting",
+          "sub_issue": "",
+          "sample_count": 1
+        }
+      ],
+      "sample_product_breakdown": [
+        {
+          "product": "Mortgage",
+          "sample_count": 19
+        },
+        {
+          "product": "Bank account or service",
+          "sample_count": 16
+        },
+        {
+          "product": "Credit card",
+          "sample_count": 12
+        },
+        {
+          "product": "Consumer Loan",
+          "sample_count": 2
+        },
+        {
+          "product": "Credit reporting",
+          "sample_count": 1
+        }
+      ],
+      "sample_basis": "Most recently indexed <=100 public complaints for month; NOT full issue/product counts",
+      "source": "CFPB Consumer Complaint Database API",
+      "source_url": "https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/",
+      "last_checked_at": "2026-10-31T22:45:08+00:00"
+    },
+    {
+      "month": "2012-12",
+      "date_received_min": "2012-12-01",
+      "date_received_max_exclusive": "2013-01-01",
+      "exact_published_complaint_total": null,
+      "monthly_total_status": "unverified_date_scope",
+      "api_returned_count": 100,
+      "api_returned_date_min": "2012-12-31",
+      "api_returned_date_max": "2013-01-01",
+      "api_hits_outside_requested_month": 83,
+      "scope_warning": "CFPB page date scope not verified; count withheld",
+      "sample_size": 17,
+      "page_limit": 100,
+      "sample_issue_breakdown": [
+        {
+          "issue": "Loan modification,collection,foreclosure",
+          "sub_issue": "",
+          "sample_count": 3
+        },
+        {
+          "issue": "Incorrect information on credit report",
+          "sub_issue": "Account status",
+          "sample_count": 3
+        },
+        {
+          "issue": "Credit decision / Underwriting",
+          "sub_issue": "",
+          "sample_count": 2
+        },
+        {
+          "issue": "Loan servicing, payments, escrow account",
+          "sub_issue": "",
+          "sample_count": 1
+        },
+        {
+          "issue": "Credit line increase/decrease",
+          "sub_issue": "",
+          "sample_count": 1
+        },
+        {
+          "issue": "Unable to get credit report/credit score",
+          "sub_issue": "Problem getting my free annual report",
+          "sample_count": 1
+        },
+        {
+          "issue": "Identity theft / Fraud / Embezzlement",
+          "sub_issue": "",
+          "sample_count": 1
+        },
+        {
+          "issue": "Deposits and withdrawals",
+          "sub_issue": "",
+          "sample_count": 1
+        },
+        {
+          "issue": "Closing/Cancelling account",
+          "sub_issue": "",
+          "sample_count": 1
+        },
+        {
+          "issue": "Credit card protection / Debt protection",
+          "sub_issue": "",
+          "sample_count": 1
+        },
+        {
+          "issue": "Incorrect information on credit report",
+          "sub_issue": "Information is not mine",
+          "sample_count": 1
+        },
+        {
+          "issue": "Settlement process and costs",
+          "sub_issue": "",
+          "sample_count": 1
+        }
+      ],
+      "sample_product_breakdown": [
+        {
+          "product": "Mortgage",
+          "sample_count": 7
+        },
+        {
+          "product": "Credit reporting",
+          "sample_count": 5
+        },
+        {
+          "product": "Credit card",
+          "sample_count": 4
+        },
+        {
+          "product": "Bank account or service",
+          "sample_count": 1
+        }
+      ],
+      "sample_basis": "Most recently indexed <=100 public complaints for month; NOT full issue/product counts",
+      "source": "CFPB Consumer Complaint Database API",
+      "source_url": "https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/",
+      "last_checked_at": "2026-10-31T22:45:08+00:00"
+    },
+    {
+      "month": "2013-01",
+      "date_received_min": "2013-01-01",
+      "date_received_max_exclusive": "2013-02-01",
+      "exact_published_complaint_total": null,
+      "monthly_total_status": "unverified_date_scope",
+      "api_returned_count": 100,
+      "api_returned_date_min": "2013-02-01",
+      "api_returned_date_max": "2013-02-01",
+      "api_hits_outside_requested_month": 100,
+      "scope_warning": "CFPB page date scope not verified; count withheld",
+      "sample_size": 0,
+      "page_limit": 100,
+      "sample_issue_breakdown": [],
+      "sample_product_breakdown": [],
+      "sample_basis": "Most recently indexed <=100 public complaints for month; NOT full issue/product counts",
+      "source": "CFPB Consumer Complaint Database API",
+      "source_url": "https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/",
+      "last_checked_at": "2026-10-31T22:45:06+00:00"
+    },
+    {
+      "month": "2013-02",
+      "date_received_min": "2013-02-01",
+      "date_received_max_exclusive": "2013-03-01",
+      "exact_published_complaint_total": null,
+      "monthly_total_status": "unverified_date_scope",
+      "api_returned_count": 100,
+      "api_returned_date_min": "2013-03-01",
+      "api_returned_date_max": "2013-03-01",
+      "api_hits_outside_requested_month": 100,
+      "scope_warning": "CFPB page date scope not verified; count withheld",
+      "sample_size": 0,
+      "page_limit": 100,
+      "sample_issue_breakdown": [],
+      "sample_product_breakdown": [],
+      "sample_basis": "Most recently indexed <=100 public complaints for month; NOT full issue/product counts",
+      "source": "CFPB Consumer Complaint Database API",
+      "source_url": "https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/",
+      "last_checked_at": "2026-10-31T22:45:05+00:00"
+    },
+    {
+      "month": "2013-03",
+      "date_received_min": "2013-03-01",
+      "date_received_max_exclusive": "2013-04-01",
+      "exact_published_complaint_total": null,
+      "monthly_total_status": "unverified_date_scope",
+      "api_returned_count": 100,
+      "api_returned_date_min": "2013-04-01",
+      "api_returned_date_max": "2013-04-01",
+      "api_hits_outside_requested_month": 100,
+      "scope_warning": "CFPB page date scope not verified; count withheld",
+      "sample_size": 0,
+      "page_limit": 100,
+      "sample_issue_breakdown": [],
+      "sample_product_breakdown": [],
+      "sample_basis": "Most recently indexed <=100 public complaints for month; NOT full issue/product counts",
+      "source": "CFPB Consumer Complaint Database API",
+      "source_url": "https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/",
+      "last_checked_at": "2026-10-31T22:45:04+00:00"
+    },
     {
       "month": "2013-04",
       "date_received_min": "2013-04-01",
