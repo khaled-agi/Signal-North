@@ -263,3 +263,41 @@ contains the original source URLs and evidence labels.
 
 **Do not use the absence of accepted results to conclude the absence of
 financial crime**, or publish claims of comprehensive country coverage.
+
+## Direct local publisher, regulator, central bank, police and FIU monitoring
+
+Alongside country-language Google News RSS discovery, scripts/collect_direct_sources.py scans
+original publisher/authority RSS and HTML announcement indexes. The separately
+maintained scripts/direct_source_catalogue.py initially configures 25 source
+websites across 18 countries, including verified original news and authority
+webpages in China, India, Malaysia, Indonesia, Singapore, Thailand, Nigeria,
+Kenya, Mauritius, Ghana, Botswana, Bolivia, Papua New Guinea and others.
+
+Original-source categories include local newspapers, central banks, securities
+regulators, financial-intelligence units, police and law enforcement agencies.
+SEBI India publishes original RSS for press releases, orders and rulings;
+AMF France publishes official sanctions and warnings RSS; Premium Times Nigeria
+and the Royal Papua New Guinea Constabulary expose first-party RSS. Other
+configured sources use bounded HTML index link extraction, which can fail
+if pages change. Source status distinguishes not-attempted, error,
+success-without-relevant-title and successful-source-records.
+
+The source origin country is NEVER represented as a proven incident location.
+Direct publisher records also never become proven final enforcement orders
+without source review. RSS publication timestamps are used if available;
+HTML index records without dates show FIRST INDEXED (not published).
+All direct article URLs must belong to the original configured publisher host.
+Some publishers may require further permissions for commercial feed use.
+
+Each workflow run rotates through 12 source configurations. Public outputs:
+- data/world_direct_sources.json (bounded original titles, links, provenance)
+- data/world_direct_source_status.json (per-source scan results and failures)
+- data/world_direct_source_state.json (collector rotation cursor)
+
+The News & Reporting page has a dedicated original-source browser with
+country, region, category and text filters and per-source health. The
+world-jurisdiction registry separates source count CONFIGURED, source
+count successfully checked, and actual original publications collected.
+Unconfigured countries have no direct-source coverage; a zero-output source
+cannot substantiate a claim of no fraud news. Country-by-country onboarding
+is incremental, not a claim of universal direct-feed ingestion.
