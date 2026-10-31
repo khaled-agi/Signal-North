@@ -6,7 +6,7 @@ from datetime import datetime, timedelta, timezone
 import pycountry
 from scripts.collect_world_news import (
     markets, choose_batch, search_queries, feed_url, classify,
-    parse_feed, retained, safe_link, MAX_AGE_DAYS,
+    parse_feed, retained, retained_unattributed, safe_link, query_edition, is_local_query, MAX_AGE_DAYS,
 )
 from scripts.world_country_lenses import country_profile, country_title_reference
 
@@ -67,13 +67,65 @@ class WorldCountryTest(unittest.TestCase):
         france=country_profile(pycountry.countries.get(alpha_2="FR"))
         saudi=country_profile(pycountry.countries.get(alpha_2="SA"))
         tanzania=country_profile(pycountry.countries.get(alpha_2="TZ"))
+        bhutan=country_profile(pycountry.countries.get(alpha_2="BT"))
         angola=country_profile(pycountry.countries.get(alpha_2="AO"))
         self.assertIn("escroquerie",search_queries(france)[3])
         self.assertIn("احتيال",search_queries(saudi)[3])
         self.assertIn("utapeli",search_queries(tanzania)[3])
-        self.assertEqual(angola["language_strategy"],"english_country_named_fallback")
+        self.assertEqual(bhutan["language_strategy"],"english_country_named_fallback")
+        self.assertEqual(angola["local_language"],"pt")
         self.assertIn("gl=FR",feed_url(france,search_queries(france)[3]))
         self.assertIn("gl=US",feed_url(angola,search_queries(angola)[0]))
+        self.assertIn("gl=BR",feed_url(angola,search_queries(angola)[3]))
+
+    def test_local_language_query_expansion_and_correct_editions(self):
+        profiles=markets()
+        non_english=[p for p in profiles if p["local_term"] and p["local_language"]!="en"]
+        self.assertGreaterEqual(len(non_english),130)
+        self.assertEqual(len(profiles),250)
+        for code,term in [("DZ","احتيال"),("SN","escroquerie"),
+                           ("DO","estafa"),("AO","burla"),("SE","bedrägeri"),
+                           ("KZ","алаяқтық"),("MM","လိမ်လည်မှု"),
+                           ("RW","uburiganya")]:
+            p=next(x for x in profiles if x["code"]==code)
+            self.assertIn(term,search_queries(p)[3])
+            self.assertTrue(is_local_query(p,search_queries(p)[3]))
+            self.assertIsNotNone(classify(term+" "+p["local_country_term"],p))
+        france=next(x for x in profiles if x["code"]=="FR")
+        jordan=next(x for x in profiles if x["code"]=="JO")
+        self.assertEqual(query_edition(france,search_queries(france)[0])[0][1],"US")
+        self.assertEqual(query_edition(france,search_queries(france)[3])[0][1],"FR")
+        self.assertEqual(query_edition(jordan,search_queries(jordan)[3])[0][1],"SA")
+        self.assertEqual(query_edition(jordan,search_queries(jordan)[3])[1],
+                         "language_proxy_edition")
+        self.assertEqual(query_edition(jordan,search_queries(jordan)[0])[0][1],"US")
+
+    def test_unlocated_local_headline_is_not_mapped_or_assigned(self):
+        france=country_profile(pycountry.countries.get(alpha_2="FR"))
+        title="Une escroquerie bancaire frappe des clients"
+        local=search_queries(france)[3]
+        unmatched=[]
+        located=parse_feed(rss(title=title),france,local,NOW,unmatched)
+        self.assertEqual(located,[])
+        self.assertEqual(len(unmatched),1)
+        item=unmatched[0]
+        self.assertIsNone(item["country_code"])
+        self.assertEqual(item["search_market_code"],"FR")
+        self.assertEqual(item["query_language"],"fr")
+        self.assertEqual(item["evidence_status"],"unattributed_local_language_search_candidate")
+        self.assertNotIn("map_latitude",item)
+        self.assertNotIn("latitude",item)
+        self.assertEqual(len(retained_unattributed(unmatched,NOW)),1)
+        self.assertEqual(retained(unmatched,NOW),[])
+        # Even a local edition may return unrelated foreign headlines. Neither
+        # English nor local query results can become an invented map location.
+        jordan=country_profile(pycountry.countries.get(alpha_2="JO"))
+        not_jordan=[]
+        parse_feed(rss(title="Orlando woman targeted by scam"),
+                   jordan,search_queries(jordan)[3],NOW,not_jordan)
+        self.assertEqual(not_jordan,[])
+        bad=dict(item,country_code="FR")
+        self.assertEqual(retained_unattributed([bad],NOW),[])
 
     def test_rss_discovery_has_no_claims_about_incident_location(self):
         fr=country_profile(pycountry.countries.get(alpha_2="FR"))
