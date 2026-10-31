@@ -43,6 +43,7 @@ jobs:
           python -m unittest discover -s tests -p test_world_reporting.py
           python -m unittest discover -s tests -p test_direct_country_sources.py
           python -m unittest discover -s tests -p test_cfpb_complaints.py
+          python -m unittest discover -s tests -p test_cfpb_history.py
           python -m unittest discover -s tests -p test_empty_market_recovery.py
           python -m unittest discover -s tests -p test_global_regulator_publications.py
       - name: Test real browser interactions
