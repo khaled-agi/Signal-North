@@ -34,7 +34,7 @@ FEEDS={
  },
 }
 OUTPUT=Path("data/us_regulatory_signal_publications.json")
-KEYWORDS=re.compile(r"enforcement|sanction|consent order|civil money penal|prohibit|cease.and.desist|closes|closure|conservator|liquidat",re.I)
+KEYWORDS=re.compile(r"enforcement|sanction|consent order|civil money penal|prohibit|cease.and.desist|closes|closure|conservator|liquidat|imposes|assess.{0,45}penalt|bsa/aml",re.I)
 
 def host_safe(url,domain):
  parsed=urlparse(url)
@@ -61,6 +61,27 @@ def from_feed(xml,source):
  if not records:
   raise ValueError("Official RSS contained no relevant entries")
  return list(records.values())
+
+def from_occ_archive(html,year):
+ """Use OCC official dated newsroom archive when RSS redirects for maintenance."""
+ soup=BeautifulSoup(html,"html.parser")
+ out={}
+ for anchor in soup.select("a[href]"):
+  url=urljoin(f"https://www.occ.gov/news-events/newsroom/news-issuances-by-year/news-releases/{year}-news-releases.html",anchor["href"]).split("#")[0]
+  title=" ".join(anchor.get_text(" ",strip=True).split())
+  if not host_safe(url,"occ.gov") or not re.search(r"/news-(?:issuances|events)/news-releases/20\d\d/nr-occ-20\d\d-\d+\.html",url,re.I):
+   continue
+  if not KEYWORDS.search(title) or len(title)<15:
+   continue
+  id=hashlib.sha256(("OCC|"+url).encode()).hexdigest()[:22]
+  out[id]={"id":id,"agency":"OCC","jurisdiction":"US",
+          "title":title[:320],"url":url,"publication_date":None,
+          "signal_type":"enforcement_publication",
+          "evidence_status":"official_publication_unreviewed",
+          "scope_note":"OCC official newsroom release. Some notices cover individuals, terminated orders or proposed actions, not newly final bank actions."}
+ if not out:
+  raise ValueError("OCC official year archive has no enforcement-related releases")
+ return list(out.values())
 
 def from_ncua(html,source):
  soup=BeautifulSoup(html,"html.parser")
@@ -104,13 +125,26 @@ def main():
   try:
    r=session.get(source["url"],timeout=35);r.raise_for_status()
    if len(r.content)>3_000_000:raise ValueError("Unexpectedly large regulator source")
-   additions=from_ncua(r.text,source) if key=="ncua_press" else from_feed(r.content,source)
+   try:
+    additions=from_ncua(r.text,source) if key=="ncua_press" else from_feed(r.content,source)
+    method="official_rss" if key!="ncua_press" else "official_html"
+   except ValueError:
+    if key!="occ_news":
+     raise
+    # OCC RSS has redirected to a maintenance/homepage in October 2026.
+    # Its official yearly newsroom archive is public and contains exact releases.
+    additions=[]
+    for year in (2026,2025):
+     archive=f"https://www.occ.gov/news-events/newsroom/news-issuances-by-year/news-releases/{year}-news-releases.html"
+     page=session.get(archive,timeout=35);page.raise_for_status()
+     additions.extend(from_occ_archive(page.text,year))
+    method="official_yearly_html_archive"
    for item in additions:records[item["id"]]=item
-   health[key]={"status":"success","last_success":now,"latest_items":len(additions),"source_url":source["url"]}
+   health[key]={"status":"success","last_success":now,"latest_items":len(additions),"source_url":source["url"],"collection_method":method}
    print(key,len(additions),"official publication leads",flush=True)
   except Exception as exc:
    health[key]={"status":"failed_last_good_preserved" if any(x["agency"]==source["agency"] for x in records.values()) else "unavailable",
-                "last_attempt":now,"error_type":type(exc).__name__,"source_url":source["url"]}
+                "last_attempt":now,"error_type":type(exc).__name__,"detail":str(exc)[:160],"source_url":source["url"]}
    print(key,"FAILED",type(exc).__name__,str(exc)[:100],flush=True)
  result={"generated_at":now,"records":sorted(records.values(),key=lambda x:x.get("publication_date") or "",reverse=True)[:3000],
          "source_health":health,

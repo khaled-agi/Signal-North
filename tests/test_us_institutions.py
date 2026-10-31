@@ -36,6 +36,12 @@ class USInstitutionIngestionTests(unittest.TestCase):
   self.assertEqual(value["source_kind"],"fdic_failure_or_assistance")
   self.assertIn("NOT a financial-crime finding",value["classification_note"])
 
+ def test_fdic_legacy_failure_without_certificate_preserves_record_id(self):
+  row=fdic.normalize({"data":{"ID":9876,"CERT":None,"NAME":"Legacy Assisted Bank","FAILDATE":"1987-01-01","CITY":"Town"}},"failures")
+  self.assertEqual(row["fdic_event_id"],"9876")
+  self.assertIsNone(row["fdic_cert"])
+  self.assertEqual(row["institution"],"Legacy Assisted Bank")
+
  def test_ncua_zip_foicu_parsed_by_charter(self):
   rows="CU_NUMBER,CU_NAME,CITY,STATE,CU_TYPE,RSSD\n"
   rows+="\n".join(f"{i},Demo Credit Union {i},Chicago,IL,1,{i+120}" for i in range(1,3701))
