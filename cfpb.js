@@ -87,7 +87,7 @@
    " months with exact totals · last scan "+String(status.last_attempt_at||"not yet").slice(0,16);
   $("cfpbHistoryRows").innerHTML=matches.length?matches.map(m=>{
    const exactTotal=m.monthly_total_status==="exact_api_total" &&
-    Number.isInteger(m.exact_published_complaint_total)?
+    m.sample_size>0 && Number.isInteger(m.exact_published_complaint_total)?
     m.exact_published_complaint_total.toLocaleString()+" exact published complaints":
     "Exact monthly total unavailable";
    const reasons=(m.sample_issue_breakdown||[]).slice(0,6);
