@@ -240,6 +240,15 @@
         </section>
       </div>
     </details>
+    <details class="overview-deepdive bank-disclosure-panel" id="bankDisclosure">
+      <summary><div><strong>Canadian bank annual complaint disclosures</strong><span>Institution-level figures from primary-source annual reports</span></div><span class="overview-expand">Expand ↓</span></summary>
+      <div class="overview-deepdive-content"><section class="panel">
+        <div class="panel-heading"><div><div class="eyebrow">BANK PUBLISHED / CANADIAN COMPLAINT REPORTS</div><h2>Complaints, fraud concerns and resolution</h2></div><span class="small">Original published figures · 2025 seed</span></div>
+        <p class="supporting-disclaimer">Source-verified annual disclosure figures from bank-designated complaints offices. <strong>Scopes differ between banks</strong> (RBC Canadian banking vs TD Canadian banking, insurance and wealth combined). These are escalated internal cases, not all consumer complaints or proven misconduct. Percentages may apply to a different stated subset than overall totals. Do not rank banks by raw counts.</p>
+        <div class="world-reporting-toolbar"><label for="bankDisclosureFilter">Institution <select id="bankDisclosureFilter"><option value="">All available banks</option></select></label></div>
+        <div id="bankDisclosureRows" class="world-reporting-rows" aria-live="polite"><div class="empty">Loading public annual disclosures…</div></div>
+      </section></div>
+    </details>
     <details class="overview-deepdive obsi-complaints-panel" id="obsiComplaints">
       <summary><div><strong>Canadian banking complaints · OBSI</strong><span>Named financial institutions · Official external complaints source</span></div><span class="overview-expand">Expand ↓</span></summary>
       <div class="overview-deepdive-content">
@@ -388,6 +397,7 @@
 <script src="./cfpb.js?v=__BUILD_SHA__" defer></script>
 <script src="./cafc.js?v=__BUILD_SHA__" defer></script>
 <script src="./obsi.js?v=__BUILD_SHA__" defer></script>
+<script src="./bank_disclosures.js?v=__BUILD_SHA__" defer></script>
 <script src="./reviewed.js?v=__BUILD_SHA__" defer></script>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" async crossorigin="" onload="window.dispatchEvent(new Event('signalnorth:mapready'))"></script>
 </body></html>
