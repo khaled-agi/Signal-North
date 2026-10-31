@@ -76,7 +76,7 @@
   const fcacRows=fcac.map(r=>'<article class="evidence-entry"><div class="evidence-top"><strong>FCAC · '+esc(r.date)+'</strong><span>'+esc(money(r.penalty_cad))+'</span></div><div class="small">'+esc(r.topic||"Published action")+' · Source is agency index</div>'+safeLink(r.source_url,"Original FCAC index")+'</article>').join('');
   const quebec=amf.length?'<div class="evidence-entry"><strong>Québec AMF registered entity</strong><div class="small">'+esc(amf.length)+' official registry matches · not enforcement findings</div>'+safeLink(amf[0].source_url,"Québec AMF open data")+'</div>':'';
   const obsiRows=obsi.slice().sort((a,b)=>b.fiscal_year-a.fiscal_year).map(r=>'<article class="evidence-entry"><div class="evidence-top"><strong>OBSI external complaints · FY'+esc(r.fiscal_year)+'</strong><span>'+Number(r.opened_cases).toLocaleString("en-CA")+' opened</span></div>'+
-   '<div class="small">Received '+Number(r.complaints_received).toLocaleString("en-CA")+' · Closed '+Number(r.closed_cases).toLocaleString("en-CA")+' · Resolved to complainant satisfaction '+Number(r.resolved_satisfaction).toLocaleString("en-CA")+'</div>'+
+   '<div class="small">Received '+Number(r.complaints_received).toLocaleString("en-CA")+' · Closed '+(r.closed_cases==null?'not published per firm':Number(r.closed_cases).toLocaleString("en-CA"))+' · Resolved to complainant satisfaction '+(r.resolved_satisfaction==null?'not published per firm':Number(r.resolved_satisfaction).toLocaleString("en-CA"))+'</div>'+
    '<div class="small">Official OBSI annual report, '+esc(r.sector||"regulated banking")+' · distinct from internal bank complaints</div>'+
    safeLink(r.source_url,"OBSI annual source table")+'</article>').join("");
   return head+identity+quebec+
