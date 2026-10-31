@@ -73,13 +73,28 @@ def monthly_query(month,session=None):
  if len(response.content)>3_000_000:raise ValueError("unusually large CFPB response")
  rows,total=c.unpack(response.json())
  # API filters may be subject to implementation changes: verify the date range.
+ returned_rows=len(rows)
+ raw_dates=[r["date_received"] for r in rows]
+ outside_window=sum(not (start<=r["date_received"]<end) for r in rows)
  rows=[r for r in rows if start<=r["date_received"]<end]
+ # The official API says date_received_max is exclusive, but do NOT assume
+ # the returned hit total is date-correct if its example rows contradict it
+ # or if it reports records yet the reconstructed public examples are empty.
+ verified_scope=outside_window==0 and (bool(rows) or total==0)
+ count_status=("exact_api_total" if verified_scope and total is not None else
+   "unverified_date_scope" if not verified_scope else "unknown_api_total")
+ reported_total=total if count_status=="exact_api_total" else None
  by_issue=Counter((r.get("issue") or "Not specified",r.get("sub_issue") or "") for r in rows)
  by_product=Counter(r.get("product") or "Not specified" for r in rows)
  return {
   "month":month,"date_received_min":start,"date_received_max_exclusive":end,
-  "exact_published_complaint_total":total,
-  "monthly_total_status":"exact_api_total" if total is not None else "unknown_api_total",
+  "exact_published_complaint_total":reported_total,
+  "monthly_total_status":count_status,
+  "api_returned_count":returned_rows,
+  "api_returned_date_min":min(raw_dates) if raw_dates else None,
+  "api_returned_date_max":max(raw_dates) if raw_dates else None,
+  "api_hits_outside_requested_month":outside_window,
+  "scope_warning":"CFPB page date scope not verified; count withheld" if not verified_scope else None,
   "sample_size":len(rows),"page_limit":c.API_PAGE_SIZE,
   "sample_issue_breakdown":[{"issue":issue,"sub_issue":sub,"sample_count":n}
     for (issue,sub),n in by_issue.most_common(12)],
@@ -97,8 +112,19 @@ def run():
  valid=set(months)
  # Refresh any previous entries when queried again; retain exact historical
  # results rather than rolling them off after 90 days.
- stored={x["month"]:x for x in prev.get("months",[])
-         if isinstance(x,dict) and x.get("month") in valid}
+ stored={}
+ for entry in prev.get("months",[]):
+  if not isinstance(entry,dict) or entry.get("month") not in valid:continue
+  entry=dict(entry)
+  # Prior backfill accepted a monthly hits.total even when no dated complaint
+  # from its first page matched that month. Such counts are not defensible.
+  if (entry.get("monthly_total_status")=="exact_api_total"
+      and (entry.get("sample_size") or 0)==0
+      and (entry.get("exact_published_complaint_total") or 0)>0):
+   entry["monthly_total_status"]="unverified_date_scope"
+   entry["exact_published_complaint_total"]=None
+   entry["scope_warning"]="Prior API month count withheld: page had no matching dated examples"
+  stored[entry["month"]]=entry
  progress=c.read(STATE,{"next_cursor":0})
  cursor=int(progress.get("next_cursor",0))%len(months) if months else 0
  batch=min(max(int(os.environ.get("CFPB_HISTORY_BATCH",str(BATCH))),0),12)
@@ -128,6 +154,7 @@ def run():
  results=sorted(stored.values(),key=lambda x:x["month"])
  health["months_with_results"]=len(results)
  health["months_with_exact_totals"]=sum(x.get("monthly_total_status")=="exact_api_total" for x in results)
+ health["months_with_unverified_counts"]=sum(x.get("monthly_total_status")=="unverified_date_scope" for x in results)
  health["earliest_fetched_month"]=results[0]["month"] if results else None
  health["latest_fetched_month"]=results[-1]["month"] if results else None
  c.save(OUT,{
