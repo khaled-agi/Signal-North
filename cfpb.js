@@ -17,10 +17,11 @@
   if(!$("cfpbRows"))return;
   const source=model.status;
   const state=$("cfpbState").value;
+  const company=$("cfpbCompany").value;
   const product=$("cfpbProduct").value;
   const q=$("cfpbQuery").value.toLocaleLowerCase().trim();
   const filtered=model.records.filter(x=>
-   (!state||x.state===state)&&(!product||x.product===product)&&
+   (!state||x.state===state)&&(!company||x.company===company)&&(!product||x.product===product)&&
    (!q||[x.company,x.issue,x.sub_issue,x.sub_product].some(t=>
      String(t||"").toLocaleLowerCase().includes(q))))
    .slice().sort((a,b)=>String(b.date_received||"").localeCompare(String(a.date_received||"")) ||
@@ -37,8 +38,14 @@
    counts.set(name,(counts.get(name)||0)+1);
   }
   const groups=[...counts].sort((a,b)=>b[1]-a[1]).slice(0,4);
+  const companies=new Set(model.records.map(x=>x.company).filter(Boolean));
+  const bankingProducts=new Set(["Checking or savings account","Credit card",
+    "Money transfer, virtual currency, or money service","Mortgage","Vehicle loan or lease"]);
+  const bankingRecords=model.records.filter(x=>bankingProducts.has(x.product));
   $("cfpbStats").innerHTML='<div class="cfpb-sample-count"><strong>'+
    model.records.length.toLocaleString()+'</strong><span>Stored complaint records (sample)</span></div>'+
+   '<div class="cfpb-mini-stat"><strong>'+companies.size+'</strong><span>Named companies in sample (not all banks)</span></div>'+
+   '<div class="cfpb-mini-stat"><strong>'+bankingRecords.length+'</strong><span>Banking-product complaints in sample</span></div>'+
    groups.map(([product,n])=>'<div class="cfpb-mini-stat"><strong>'+n+
     '</strong><span>'+html(product)+'</span></div>').join("");
   $("cfpbRows").innerHTML=visible.length?visible.map(x=>{
@@ -75,10 +82,11 @@
     x.evidence_status==="published_consumer_complaint_not_verified" && /^\d+$/.test(x.id));
   if(results[1].status==="fulfilled")model.status=results[1].value||{};
   else model.status={status:"status_unavailable"};
+  setOptions("cfpbCompany",[...new Set(model.records.map(x=>x.company).filter(Boolean))].sort(),"All companies");
   setOptions("cfpbProduct",[...new Set(model.records.map(x=>x.product).filter(Boolean))].sort(),"All products");
   setOptions("cfpbState",[...new Set(model.records.map(x=>x.state).filter(Boolean))].sort(),"All states");
   render();
-  for(const id of ["cfpbProduct","cfpbState","cfpbQuery"]){
+  for(const id of ["cfpbCompany","cfpbProduct","cfpbState","cfpbQuery"]){
    $(id)?.addEventListener(id==="cfpbQuery"?"input":"change",()=>{
     model.visible=30;render();
    });

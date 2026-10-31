@@ -83,6 +83,10 @@ try:
         assert page.locator("#cfpbRows .cfpb-record").count() == 0
         page.locator("#cfpbQuery").fill("Example")
         assert page.locator("#cfpbRows .cfpb-record").count() == 1
+        assert page.locator('#cfpbCompany option[value="Example Financial Services"]').count() == 1
+        page.locator("#cfpbCompany").select_option("Example Financial Services")
+        assert page.locator("#cfpbRows .cfpb-record").count() == 1
+        assert "Named companies in sample" in page.locator("#cfpbStats").inner_text()
         page.locator("#cfpbState").select_option("NY")
         assert page.locator("#cfpbRows .cfpb-record").count() == 1
         page.locator("#cfpbComplaints > summary").click()
