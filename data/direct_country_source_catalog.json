@@ -1,0 +1,50 @@
+{
+  "methodology": "First-party RSS endpoints confirmed on publisher/regulator sites. A configured feed is only a candidate until a successful GitHub collection run. Extend country-by-country after checking official endpoint and terms.",
+  "sources": [
+    {
+      "id": "gh-citi-business",
+      "country_code": "GH",
+      "name": "Citi Newsroom Business",
+      "kind": "newspaper",
+      "domain": "citinewsroom.com",
+      "feed_url": "https://citinewsroom.com/rss/business.rss",
+      "verified_page": "https://www.citinewsroom.com/rss-service/"
+    },
+    {
+      "id": "gh-citi-general",
+      "country_code": "GH",
+      "name": "Citi Newsroom General",
+      "kind": "newspaper",
+      "domain": "citinewsroom.com",
+      "feed_url": "https://citinewsroom.com/rss/general.rss",
+      "verified_page": "https://www.citinewsroom.com/rss-service/"
+    },
+    {
+      "id": "in-sebi",
+      "country_code": "IN",
+      "name": "Securities and Exchange Board of India",
+      "kind": "regulator",
+      "domain": "sebi.gov.in",
+      "feed_url": "https://www.sebi.gov.in/sebirss.xml",
+      "verified_page": "https://www.sebi.gov.in/rss.html"
+    },
+    {
+      "id": "ch-finma-news",
+      "country_code": "CH",
+      "name": "FINMA news",
+      "kind": "regulator",
+      "domain": "finma.ch",
+      "feed_url": "https://www.finma.ch/en/rss/news/",
+      "verified_page": "https://www.finma.ch/en/rss/"
+    },
+    {
+      "id": "ch-finma-sanctions",
+      "country_code": "CH",
+      "name": "FINMA international sanctions",
+      "kind": "regulator",
+      "domain": "finma.ch",
+      "feed_url": "https://www.finma.ch/en/rss/sanktionen/",
+      "verified_page": "https://www.finma.ch/en/rss/"
+    }
+  ]
+}
