@@ -54,13 +54,14 @@ jobs:
           node --check cafc.js
           node --check obsi.js
           node --check obsi_history.js
+          node --check canadian_provincial.js
           node --check bank_disclosures.js
           node --check canadian_sources.js
           node --check canadian_regulatory_leads.js
           node --check canadian_verified_enforcement.js
           node --check osfi_register.js
           node --check fintrac_official.js
-          python -m py_compile scripts/collect_canadian_regulatory_leads.py scripts/collect_osfi_institutions.py scripts/collect_fintrac_penalties.py scripts/collect_obsi_public_reports.py scripts/collect_bank_complaints.py
+          python -m py_compile scripts/collect_canadian_regulatory_leads.py scripts/collect_osfi_institutions.py scripts/collect_fintrac_penalties.py scripts/collect_obsi_public_reports.py scripts/collect_bank_complaints.py scripts/collect_bcsc_rss.py scripts/collect_amf_open_data.py
           python -m unittest discover -s tests -p 'test_logic.py'
           node tests/test_supporting_intelligence.js
           python -m unittest discover -s tests -p 'test_community_signals.py'
@@ -72,6 +73,7 @@ jobs:
           python -m unittest discover -s tests -p test_canadian_integrity.py
           python -m unittest discover -s tests -p test_bank_collector.py
           python -m unittest discover -s tests -p test_cross_source_graph.py
+          python -m unittest discover -s tests -p test_provincial_sources.py
           python -m unittest discover -s tests -p test_empty_market_recovery.py
           python -m unittest discover -s tests -p 'test_global_regulator_publications.py'
       - name: Collect global enforcement from primary regulators
@@ -118,6 +120,12 @@ jobs:
       - name: Refresh official bank-published annual complaint data
         continue-on-error: true
         run: python scripts/collect_bank_complaints.py
+      - name: Collect BCSC disciplinary and hearing RSS notices
+        continue-on-error: true
+        run: python scripts/collect_bcsc_rss.py
+      - name: Collect Québec AMF official open financial institution register
+        continue-on-error: true
+        run: python scripts/collect_amf_open_data.py
       - name: Prepare worldwide country coverage registry
         run: python scripts/build_world_registry.py
       - name: Collect regulator publications
@@ -161,7 +169,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/events.json data/status.json data/news.json data/news_status.json data/article_index.json data/reporting_groups.json data/related_reporting.json data/reviewed_events.json data/event_review_candidates.json data/institution_intelligence.json data/review_queue.json data/theme_trends.json data/global_enforcement.json data/global_source_status.json data/world_jurisdictions.json data/community_signals.json data/community_status.json data/community_state.json data/world_reporting.json data/world_reporting_status.json data/world_reporting_state.json data/world_local_unattributed.json data/direct_country_sources.json data/direct_country_source_status.json data/direct_country_source_state.json data/cfpb_complaints.json data/cfpb_complaints_status.json data/cfpb_complaints_state.json data/cfpb_monthly_history.json data/cfpb_monthly_history_status.json data/cfpb_monthly_history_state.json data/cafc_aggregates.json data/cafc_source_status.json data/global_regulator_publications.json data/global_regulator_publications_status.json data/global_regulator_publications_state.json
-          for file in data/canadian_regulatory_leads.json data/osfi_institutions.json data/fintrac_penalties_official.json data/obsi_public_report_catalog.json data/bank_complaint_disclosures.json data/bank_disclosure_source_health.json; do
+          for file in data/canadian_regulatory_leads.json data/osfi_institutions.json data/fintrac_penalties_official.json data/obsi_public_report_catalog.json data/bank_complaint_disclosures.json data/bank_disclosure_source_health.json data/bcsc_official_rss.json data/amf_quebec_entities.json data/amf_quebec_source_health.json; do
             if [ -f "$file" ]; then git add "$file"; fi
           done
           if [ -f data/publisher_news.json ]; then git add data/publisher_news.json; fi
@@ -186,7 +194,7 @@ jobs:
       - name: Assemble cache-busted static website
         run: |
           mkdir -p _site/data
-          cp index.html styles.css light.css editorial.css connections.css research.css network.css refine.css global.css reviewed.css product_redesign.css map_upgrade.js geography.js app.js supporting_intelligence.js community_signals.js intel.js workspace.js connections.js research.js network.js global.js reviewed.js cfpb.js cafc.js obsi.js obsi_history.js bank_disclosures.js canadian_sources.js canadian_regulatory_leads.js canadian_verified_enforcement.js osfi_register.js fintrac_official.js .nojekyll _site/
+          cp index.html styles.css light.css editorial.css connections.css research.css network.css refine.css global.css reviewed.css product_redesign.css map_upgrade.js geography.js app.js supporting_intelligence.js community_signals.js intel.js workspace.js connections.js research.js network.js global.js reviewed.js cfpb.js cafc.js obsi.js obsi_history.js bank_disclosures.js canadian_sources.js canadian_provincial.js canadian_regulatory_leads.js canadian_verified_enforcement.js osfi_register.js fintrac_official.js .nojekyll _site/
           cp data/events.json data/status.json data/news.json data/news_status.json data/fraud_stats.json data/bank_disclosures.json data/incidents.json _site/data/
           if [ -f data/news_archive.json ]; then cp data/news_archive.json _site/data/; fi
           if [ -f data/archive_status.json ]; then cp data/archive_status.json _site/data/; fi
