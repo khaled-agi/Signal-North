@@ -20,7 +20,7 @@ DATA=Path(__file__).resolve().parents[1]/"data"
 
 BANKS={
  "rbc":{"name":"Royal Bank of Canada","aliases":["Royal Bank of Canada","RBC"]},
- "td":{"name":"Toronto-Dominion Bank","aliases":["The Toronto-Dominion Bank","Toronto-Dominion Bank (The)","Toronto-Dominion Bank","TD Bank","TD Canada Trust","TD"]},
+ "td":{"name":"Toronto-Dominion Bank","aliases":["The Toronto-Dominion Bank","Toronto-Dominion Bank (The)","Toronto-Dominion Bank","TD Bank","TD Bank Group","TD Canada Trust","TD"]},
  "bmo":{"name":"Bank of Montreal","aliases":["Bank of Montreal","BMO","BMO Bank of Montreal"]},
  "scotiabank":{"name":"Scotiabank","aliases":["Bank of Nova Scotia (The)","Bank of Nova Scotia","The Bank of Nova Scotia","Scotiabank"]},
  "cibc":{"name":"Canadian Imperial Bank of Commerce","aliases":["Canadian Imperial Bank of Commerce","CIBC"]},
@@ -178,6 +178,11 @@ def generate():
  fcac=[x for x in load("canadian_enforcement_verified.json","records") if x.get("agency")=="FCAC"]
  amf=load("amf_quebec_entities.json","records")
  obsi_sector=load("obsi_annual_banking.json","rows")
+ obsi_firms=load("obsi_firm_complaints.json","records")
+ for row in obsi_firms:
+  entry=ensure(row.get("institution"))
+  if entry:
+   entry.setdefault("official_data",{}).setdefault("obsi_firm_complaints",[]).append(row)
  for row in osfi:
   fields=row.get("fields") or {}
   name=fields.get("Company Name","").strip()
@@ -223,7 +228,8 @@ def generate():
   official=entry.setdefault("official_data",{})
   official["counts"]={"fintrac_public_notices":len(official.get("fintrac_notices",[])),
      "fcac_index_notices":len(official.get("fcac_notices",[])),
-     "bank_disclosure_years":len(official.get("bank_disclosures",[]))}
+     "bank_disclosure_years":len(official.get("bank_disclosures",[])),
+     "obsi_firm_years":len(official.get("obsi_firm_complaints",[]))}
   if official.get("bank_disclosures"):
    official["bank_disclosures"].sort(key=lambda x:x.get("year",0),reverse=True)
   if official.get("fintrac_notices"):
@@ -253,7 +259,7 @@ def generate():
   "source_counts":{"enforcement":len(events),"reviewed_incidents":len(incidents),"unverified_report_groups":len(articles),
     "osfi_institution_rows":len(osfi),"fintrac_index_notices":len(fintrac),
     "bank_disclosure_records":len(bank_disclosures),"fcac_manual_sample":len(fcac),
-    "obsi_banking_years":len(obsi_sector),"amf_quebec_entity_rows":len(amf)},
+    "obsi_banking_years":len(obsi_sector),"obsi_firm_records":len(obsi_firms),"amf_quebec_entity_rows":len(amf)},
   "sector_context":{"obsi_banking":obsi_sector,"note":"OBSI annual sector totals must not be attributed to individual institutions."},
   "institutions":ranked
  }

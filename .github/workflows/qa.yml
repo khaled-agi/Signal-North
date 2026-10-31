@@ -28,6 +28,7 @@ jobs:
           node --check cfpb.js
           node --check cafc.js
           node --check obsi_history.js
+          node --check obsi_firms.js
           node --check canadian_provincial.js
           node --check ciro_sector.js
           node --check connections.js
@@ -56,6 +57,7 @@ jobs:
           python -m unittest discover -s tests -p test_cafc_open_data.py
           python -m unittest discover -s tests -p test_bank_collector.py
           python -m unittest discover -s tests -p test_cross_source_graph.py
+          python -m unittest discover -s tests -p test_obsi_firm_data.py
           python -m unittest discover -s tests -p test_provincial_sources.py
           python -m unittest discover -s tests -p test_canadian_integrity.py
           python -m unittest discover -s tests -p test_empty_market_recovery.py

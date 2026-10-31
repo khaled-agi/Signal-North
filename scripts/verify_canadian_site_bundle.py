@@ -15,6 +15,7 @@ required = [
     "data/cafc_aggregates.json",
     "data/cafc_source_status.json",
     "data/obsi_annual_banking.json",
+    "data/obsi_firm_complaints.json",
 ]
 missing += [p for p in required if not (root / p).is_file()]
 if missing:
@@ -32,4 +33,11 @@ if len(obsi.get("rows", [])) < 5:
 banks = json.loads((root / "data/bank_complaint_disclosures.json").read_text(encoding="utf-8"))
 if len(banks.get("records", [])) < 15:
     raise SystemExit("Bank disclosure archive is incomplete")
+firm = json.loads((root / "data/obsi_firm_complaints.json").read_text(encoding="utf-8"))
+if len(firm.get("records", [])) < 53:
+    raise SystemExit("OBSI firm-level source rows missing")
+for measure, reported in [("complaints_received", 6329),("opened_cases",5375),("closed_cases",4373),("resolved_satisfaction",1051)]:
+    fy2025 = [r for r in firm["records"] if r.get("fiscal_year") == 2025]
+    if sum(r.get(measure,0) for r in fy2025)!=reported:
+        raise SystemExit("OBSI FY2025 totals mismatch: "+measure)
 print(f"Pages Canadian bundle verified: {len(scripts)} local scripts, {len(required)} required JSON files")
