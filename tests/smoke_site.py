@@ -46,13 +46,11 @@ try:
                 "geography_basis":"consumer_reported_state_not_incident_location"
               }]
             })))
-        )
         page.route("**/data/cfpb_complaints_status.json*",lambda route:route.fulfill(
             status=200,content_type="application/json",body=json.dumps({
               "status":"ok","stored_records":1,
               "last_attempt_at":"2026-10-30T12:00:00+00:00"
             })))
-        )
         page.goto(url, wait_until="domcontentloaded", timeout=20000)
         try:
             page.wait_for_function("document.querySelectorAll('.metric').length === 4", timeout=20000)
