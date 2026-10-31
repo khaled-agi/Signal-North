@@ -1,5 +1,5 @@
 {
-  "last_attempt_at": "2026-10-31T09:28:58+00:00",
+  "last_attempt_at": "2026-10-31T12:52:10+00:00",
   "source": "CFPB public Consumer Complaint Database",
   "endpoint": "https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/",
   "status": "ok",
@@ -9,9 +9,9 @@
   "latest_window_total": 1947470,
   "total_basis": "CFPB exact all-product query total (if supplied); not sampled bank counts",
   "requested_product_queries": [
-    "Money transfer, virtual currency, or money service",
-    "Mortgage",
-    "Vehicle loan or lease"
+    "Checking or savings account",
+    "Credit card",
+    "Money transfer, virtual currency, or money service"
   ],
   "queries": {
     "all_recent": {
@@ -21,34 +21,34 @@
       "filter": "all products",
       "note": "This is one capped search page, NOT all complaints in category"
     },
+    "Checking or savings account": {
+      "status": "ok",
+      "returned": 100,
+      "exact_window_total": 21346,
+      "filter": "Checking or savings account",
+      "note": "This is one capped search page, NOT all complaints in category"
+    },
+    "Credit card": {
+      "status": "ok",
+      "returned": 100,
+      "exact_window_total": 22805,
+      "filter": "Credit card",
+      "note": "This is one capped search page, NOT all complaints in category"
+    },
     "Money transfer, virtual currency, or money service": {
       "status": "ok",
       "returned": 100,
       "exact_window_total": 9148,
       "filter": "Money transfer, virtual currency, or money service",
       "note": "This is one capped search page, NOT all complaints in category"
-    },
-    "Mortgage": {
-      "status": "ok",
-      "returned": 100,
-      "exact_window_total": 8061,
-      "filter": "Mortgage",
-      "note": "This is one capped search page, NOT all complaints in category"
-    },
-    "Vehicle loan or lease": {
-      "status": "ok",
-      "returned": 100,
-      "exact_window_total": 6038,
-      "filter": "Vehicle loan or lease",
-      "note": "This is one capped search page, NOT all complaints in category"
     }
   },
-  "last_success_at": "2026-10-31T09:28:58+00:00",
+  "last_success_at": "2026-10-31T12:52:10+00:00",
   "query_received_from": "2026-08-02",
   "returned_in_latest_request": 400,
   "queries_succeeded": 4,
   "queries_attempted": 4,
-  "stored_records": 790,
-  "companies_in_stored_sample": 129,
-  "banking_product_records_in_sample": 601
+  "stored_records": 873,
+  "companies_in_stored_sample": 137,
+  "banking_product_records_in_sample": 684
 }

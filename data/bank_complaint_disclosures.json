@@ -2,7 +2,8 @@
   "metadata": {
     "purpose": "Original-source annual bank disclosures. Distinct count definitions; the institution and years are specific to the cited reports.",
     "updated_on": "2026-10-31",
-    "warning": "Never compare raw totals across banks without their distinct scope, office mandate, and metric units. Historical rows extracted from cited year-over-year charts are not guaranteed to have identical definitions."
+    "warning": "Never compare raw totals across banks without their distinct scope, office mandate, and metric units. Historical rows extracted from cited year-over-year charts are not guaranteed to have identical definitions.",
+    "last_live_update": "2026-10-31T12:53:01+00:00"
   },
   "records": [
     {
@@ -36,9 +37,9 @@
       "id": "national-bank-2025",
       "institution": "National Bank of Canada",
       "year": 2025,
-      "report_name": "CCAO annual complaints report 2025",
+      "report_name": "Client Complaint Appeal Office Annual Data 2025",
       "office": "CCAO",
-      "scope": "Complaints reviewed, including 925 outside office mandate",
+      "scope": "Complaints reviewed including those outside mandate",
       "metric_name": "complaints_reviewed_including_out_of_mandate",
       "metric_value": 2704,
       "source_url": "https://www.nbc.ca/about-us/governance/complaint-settlement.html",
@@ -47,7 +48,7 @@
       "resolved": 810,
       "closed": 967,
       "average_review_days": 26,
-      "fraud_nature_pct": 15
+      "fraud_nature_pct": 15.0
     },
     {
       "id": "rbc-2022",
