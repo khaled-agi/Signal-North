@@ -54,6 +54,7 @@ jobs:
           node tests/test_supporting_intelligence.js
           python -m unittest discover -s tests -p 'test_community_signals.py'
           python -m unittest discover -s tests -p 'test_world_reporting.py'
+          python -m unittest discover -s tests -p test_direct_country_sources.py
           python -m unittest discover -s tests -p test_empty_market_recovery.py
           python -m unittest discover -s tests -p 'test_global_regulator_publications.py'
       - name: Collect global enforcement from primary regulators
