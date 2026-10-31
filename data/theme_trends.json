@@ -15,7 +15,7 @@
     "2023": 322,
     "2024": 328,
     "2025": 482,
-    "2026": 758
+    "2026": 759
   },
   "themes": [
     {
@@ -27,9 +27,9 @@
         "2023": 21,
         "2024": 27,
         "2025": 48,
-        "2026": 84
+        "2026": 85
       },
-      "total_headlines": 201,
+      "total_headlines": 202,
       "publisher_count": 59,
       "examples": [
         {
@@ -93,6 +93,17 @@
           "date": "2026-10-29T18:46:57+00:00",
           "publisher": "BBC",
           "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5wZ21XVDFZdkRRTFFNSUd4OHdjRlcwV3Z5aDhUOWFvMS12WUg1Qk42SWpSdUJmUUY3dVF0RmsxU0IzMnhsV0NOLU9WTDZ1cndiUm5Sd3FtSTd5eU1rVUE?oc=5",
+          "geography": null,
+          "source_channels": [
+            "recent"
+          ]
+        },
+        {
+          "id": "c1298275f8d70d73ebb1",
+          "title": "Ontario's 'Crypto King' Guilty of Fraud: Investor Impact - UL Lawyers",
+          "date": "2026-10-29T17:15:05+00:00",
+          "publisher": "UL Lawyers",
+          "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5NaGpvQnpIWVZNd3BSYmw2NW9IOVg2Z3ZkNE9zUXlPNHUwRFRfYkVnVWdaV1lZMTF6di0tVWpxWE4zOGRIVEllRzAyeTVUcWU4NElXQi1YeV82bTFnamE5SktBOTVWQTRUdW1B?oc=5",
           "geography": null,
           "source_channels": [
             "recent"
@@ -187,17 +198,6 @@
           ]
         },
         {
-          "id": "78063881ce3acb2cd9d1",
-          "title": "Argentinian judge drops fraud investigation into Milei over crypto scandal - Yahoo News Canada",
-          "date": "2026-10-24T01:21:00+00:00",
-          "publisher": "Yahoo News Canada",
-          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOVkViVE1ENHJHQzRZN1JNVFNtekEzUlphaUVvclJCTklSdUMydkJuQW1UX2dnWmcyNlhneW9qdDBhb1FRcVh6V1V3ei1GS0U1bFdudzJBMEh1VGlGTFZhYTdGWUp6RHJpOXFSaHk5Z2gzUGZtczRGTmwweUh2M1JPSTNRcHpUc1pGQ05wMw?oc=5",
-          "geography": null,
-          "source_channels": [
-            "recent"
-          ]
-        },
-        {
           "id": "b3c91dc67902dc915bed",
           "title": "Guelph woman loses $140K to cryptocurrency scam - CTV News",
           "date": "2026-10-23T16:12:10+00:00",
@@ -206,6 +206,17 @@
           "geography": null,
           "source_channels": [
             "historical",
+            "recent"
+          ]
+        },
+        {
+          "id": "78063881ce3acb2cd9d1",
+          "title": "Argentinian judge drops fraud investigation into Milei over crypto scandal - Yahoo News Canada",
+          "date": "2026-10-23T07:00:00+00:00",
+          "publisher": "Yahoo News Canada",
+          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOVkViVE1ENHJHQzRZN1JNVFNtekEzUlphaUVvclJCTklSdUMydkJuQW1UX2dnWmcyNlhneW9qdDBhb1FRcVh6V1V3ei1GS0U1bFdudzJBMEh1VGlGTFZhYTdGWUp6RHJpOXFSaHk5Z2gzUGZtczRGTmwweUh2M1JPSTNRcHpUc1pGQ05wMw?oc=5",
+          "geography": null,
+          "source_channels": [
             "recent"
           ]
         },
@@ -286,17 +297,6 @@
           "geography": null,
           "source_channels": [
             "historical",
-            "recent"
-          ]
-        },
-        {
-          "id": "c533e8588e96cdf5df15",
-          "title": "‘I need a lawyer,’ Crypto King tells his Ontario fraud trial - Toronto Star",
-          "date": "2026-10-08T07:00:00+00:00",
-          "publisher": "Toronto Star",
-          "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxOUmhubk9rYXNYbnJ4eTV5b0RWZkNsR3hxYmRpT21taWU0cE5HQXEyLUpQRFlSNUhhaGhyZ3NCVFZ3R2ZsRlIxeDZFYmJyd2xSQ1k0RVhrZ2tKWVBBeS1EVGU1OFZkUnpUbUp2VTluajNQNzJqaE1qcDNkdGdPS2dIUWlpU013N2FtWVNOc2pEZDdaVE9OMjl4M0JjNUhPU0RUeVF1VVF6WHo0WS16bzVyTThqdkQ3NEx3QnRaZXdHTGROMmwxSlpTbDczYTlkdDl2b1FhT0VCVXlrTkRXQ1dXY0VwS3RlWlhFbnlOVEJ3?oc=5",
-          "geography": "Toronto, Ontario",
-          "source_channels": [
             "recent"
           ]
         }
@@ -3138,8 +3138,8 @@
       }
     }
   ],
-  "generated_at": "2026-10-31T12:53:31+00:00",
-  "articles_analyzed": 2479,
+  "generated_at": "2026-10-31T12:57:51+00:00",
+  "articles_analyzed": 2480,
   "methodology": "MULTI-LABEL keyword classification of unique article TITLES by publication year; multiple theme counts can arise from one headline. Year-to-year article counts reflect discovery methods, changing news coverage, and archived source availability, NOT measured changes in fraud incidence. Bank/platform mentions are not accusations and never counted as confirmed enforcement.",
   "scope": "Canadian financial-crime news discovery",
   "data_quality": "Headlines only; no full-article automated fact checking. Counts can change as the archive expands."

@@ -1,17 +1,40 @@
 {
-  "generated_at": "2026-10-31T12:53:02+00:00",
-  "records": [],
+  "generated_at": "2026-10-31T12:57:22+00:00",
+  "records": [
+    {
+      "id": "0279734eec95cf9200c3",
+      "agency": "BCSC",
+      "type": "disciplined_list",
+      "title": "Dhillon, Avtar Singh",
+      "url": "https://www.bcsc.bc.ca/enforcement/administrative-enforcement/administrative-sanctions/disciplined-list/2026/dhillon-avtar-singh",
+      "publication_text": "Mon, 19 Oct 2026 07:00:00 Z",
+      "summary": "Disciplined List Dhillon, Avtar Singh",
+      "classification": "official_disciplinary_publication",
+      "note": "An RSS hearing notice may be an allegation, not an adjudicated sanction."
+    },
+    {
+      "id": "5cb418147e46c27eb71c",
+      "agency": "BCSC",
+      "type": "hearing_notices",
+      "title": "Rona-Joanne Galeon Rafal [Hearing Notice – Hearing Dates]",
+      "url": "https://www.bcsc.bc.ca/enforcement/administrative-enforcement/notices-of-hearing-and-temporary-orders/2026/ronajoanne-galeon-rafal-hearing-notice-hearing-dates",
+      "publication_text": "Thu, 15 Oct 2026 07:00:00 Z",
+      "summary": "Rona-Joanne Galeon Rafal [Hearing Notice – Hearing Dates]",
+      "classification": "official_hearing_or_order_notice",
+      "note": "An RSS hearing notice may be an allegation, not an adjudicated sanction."
+    }
+  ],
   "health": {
     "disciplined_list": {
-      "status": "failed_last_good_preserved",
-      "error_type": "ParseError",
-      "last_attempt": "2026-10-31T12:53:02+00:00",
+      "status": "success",
+      "count_new_feed_items": 1,
+      "last_success": "2026-10-31T12:57:22+00:00",
       "url": "https://www.bcsc.bc.ca/rss/disciplined-list"
     },
     "hearing_notices": {
-      "status": "failed_last_good_preserved",
-      "error_type": "ParseError",
-      "last_attempt": "2026-10-31T12:53:02+00:00",
+      "status": "success",
+      "count_new_feed_items": 1,
+      "last_success": "2026-10-31T12:57:22+00:00",
       "url": "https://www.bcsc.bc.ca/rss/notices-of-hearing-and-temporary-orders"
     }
   },
