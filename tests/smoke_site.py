@@ -169,6 +169,23 @@ try:
         page.locator('[data-mapmode="all"]').click()
         page.locator('[data-tab="fraud"]').click()
         assert page.locator("#worldNewsCountry option").count() >= 240
+        assert page.locator("#worldNewsRegion option").count() == 5
+        page.locator("#worldNewsRegion").select_option("africa")
+        assert "matching reports shown" in page.locator("#worldNewsShown").inner_text()
+        page.locator("#worldNewsRegion").select_option("southeast-asia")
+        assert page.locator("#worldNewsRegion").input_value() == "southeast-asia"
+        page.locator("#worldNewsRegion").select_option("")
+        # The prior ASCII-boundary checker dropped concatenated Chinese
+        # and Southeast Asian script headlines even when names were explicit.
+        assert page.evaluate("""() => {
+          const examples=[
+            [{country_code:"CN",title:"中国网络诈骗案件"},{name:"China",local_country_term:"中国"}],
+            [{country_code:"MY",title:"马来西亚银行诈骗"},{name:"Malaysia",local_country_term:"Malaysia",country_headline_aliases:["马来西亚"]}],
+            [{country_code:"IN",title:"இந்தியா வங்கி மோசடி"},{name:"India",local_country_term:"भारत",country_headline_aliases:["இந்தியா"]}]
+          ];
+          return examples.every(([record,place])=>SignalNorthGeo.evaluate(record,place).referenced);
+        }""")
+
         assert page.locator("#worldNewsQuery").count() == 1
         assert page.locator("#worldNewsCategory").count() == 1
         assert page.locator("#worldNewsShown").text_content()
