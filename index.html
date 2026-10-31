@@ -240,6 +240,20 @@
         </section>
       </div>
     </details>
+    <details class="overview-deepdive obsi-complaints-panel" id="obsiComplaints">
+      <summary><div><strong>Canadian banking complaints · OBSI</strong><span>Named financial institutions · Official external complaints source</span></div><span class="overview-expand">Expand ↓</span></summary>
+      <div class="overview-deepdive-content">
+        <section class="panel obsi-content">
+          <div class="panel-heading"><div><div class="eyebrow">OMBUDSMAN FOR BANKING SERVICES AND INVESTMENTS / CANADA</div><h2>Bank-level complaint intelligence</h2></div><span class="small">OBSI fiscal year: Nov 1–Oct 31</span></div>
+          <p class="supporting-disclaimer"><strong>Source integration — direct official views; automated bank-level ingestion not yet enabled.</strong> OBSI publishes cases and outcomes by named banking firm in a Power BI Data Cube, and separately publishes anonymized consumer case summaries naming federally regulated banks. These are unresolved disputes escalated to OBSI, not all complaints made to a bank, and not established fraud or regulatory violations. Firm totals should not be interpreted as bank rankings or misconduct rates.</p>
+          <div class="world-reporting-toolbar">
+            <label for="obsiFirmSearch">Find institution <input id="obsiFirmSearch" type="search" placeholder="e.g. RBC, TD, Scotiabank…" aria-label="Filter OBSI source links by financial institution"></label>
+          </div>
+          <div id="obsiSourceLinks" class="world-reporting-rows" aria-live="polite"></div>
+          <p class="supporting-disclaimer"><strong>Historical scope:</strong> OBSI's Data Cube provides historical reporting from November 1, 2016, updated quarterly. Individual bank case summaries cover closed federally regulated bank cases from June 30, 2022. Scope and bank participation have changed over time, especially with the single banking external complaints body effective November 2024. Do not add OBSI cases to CAFC fraud reports or CFPB complaint counts.</p>
+        </section>
+      </div>
+    </details>
     <details class="overview-deepdive cafc-open-data-panel" id="cafcOpenData">
       <summary><div><strong>Canadian fraud reports · CAFC</strong><span id="cafcSummary">Official RCMP / CAFC dataset · Checking source…</span></div><span class="overview-expand">Expand ↓</span></summary>
       <div class="overview-deepdive-content">
@@ -373,6 +387,7 @@
 <script src="./global.js?v=__BUILD_SHA__" defer></script>
 <script src="./cfpb.js?v=__BUILD_SHA__" defer></script>
 <script src="./cafc.js?v=__BUILD_SHA__" defer></script>
+<script src="./obsi.js?v=__BUILD_SHA__" defer></script>
 <script src="./reviewed.js?v=__BUILD_SHA__" defer></script>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" async crossorigin="" onload="window.dispatchEvent(new Event('signalnorth:mapready'))"></script>
 </body></html>
