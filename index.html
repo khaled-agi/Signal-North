@@ -421,6 +421,19 @@
     </section>
   </section>
   <section id="institutions" class="tab hidden">
+    <section class="panel" id="usInstitutionExplorer">
+      <div class="panel-heading">
+        <div><div class="eyebrow">UNITED STATES / OFFICIAL INSTITUTION INTELLIGENCE</div><h2>FDIC institution registry and bank resolution signals</h2></div>
+        <span class="small" id="usFdicStatus">Checking published source snapshots…</span>
+      </div>
+      <p class="supporting-disclaimer"><strong>Identity is not an allegation.</strong> The FDIC registry identifies U.S.-insured banks by certificate number. Historical failures and FDIC-assisted resolutions are separate institution lifecycle signals; they are not fraud, AML enforcement or customer complaint counts. Canadian institutions are not merged with U.S. banks on name alone.</p>
+      <div class="world-reporting-toolbar">
+        <label for="usFdicDataset">Source <select id="usFdicDataset"><option value="institutions">Active insured banks</option><option value="failures">Historical bank failures / assistance</option></select></label>
+        <label for="usFdicSearch">Institution <input id="usFdicSearch" type="search" placeholder="Name, state, FDIC certificate…" aria-label="Search U.S. insured institutions"></label>
+      </div>
+      <div id="usFdicRows" class="world-reporting-rows" aria-live="polite"><div class="empty">Loading official FDIC data…</div></div>
+      <p class="supporting-disclaimer" id="usFdicHealth">Each source reports its last successful collection. A failed collector never means zero institutions.</p>
+    </section>
     <div class="panel"><div class="panel-heading"><div><div class="eyebrow">ORGANIZATION RESEARCH</div><h2>Institution radar</h2></div></div><div class="notice"><strong>Institutional involvement does not mean institutional fraud.</strong> Records here are published enforcement notices; a count of records does not measure culpability or actual demand for consulting services.</div><div id="institutionRows"></div></div>
   </section>
   <section id="sources" class="tab hidden">
@@ -458,6 +471,7 @@
 <script src="./fintrac_official.js?v=__BUILD_SHA__" defer></script>
 <script src="./canadian_regulatory_leads.js?v=__BUILD_SHA__" defer></script>
 <script src="./osfi_register.js?v=__BUILD_SHA__" defer></script>
+<script src="./us_fdic.js?v=__BUILD_SHA__" defer></script>
 <script src="./reviewed.js?v=__BUILD_SHA__" defer></script>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" async crossorigin="" onload="window.dispatchEvent(new Event('signalnorth:mapready'))"></script>
 </body></html>
