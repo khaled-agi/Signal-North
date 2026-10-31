@@ -79,6 +79,17 @@ def choose_batch(all_markets,cursor,batch_size):
     start=int(cursor)%len(all_markets)
     return [all_markets[(start+i)%len(all_markets)] for i in range(size)],(start+size)%len(all_markets)
 
+def choose_priority_batch(profiles, already_selected, priority_cursor, count=PRIORITY_EXTRA_PER_RUN):
+    """Small supplemental hub rotation; NEVER replaces worldwide ISO coverage."""
+    by_code={p["code"]:p for p in profiles}
+    priorities=[by_code[code] for code in PRIORITY_MARKETS if code in by_code]
+    if not priorities:return [],0
+    n=len(priorities)
+    cursor=int(priority_cursor)%n
+    scheduled=[priorities[(cursor+i)%n] for i in range(min(n,max(0,int(count))))]
+    chosen={p["code"] for p in already_selected}
+    return [p for p in scheduled if p["code"] not in chosen],(cursor+len(scheduled))%n
+
 def local_search_specs(profile):
     """Extra queries only; English baseline runs for every market.
 
@@ -340,6 +351,9 @@ def run():
     progress=read(STATE,{"next_cursor":0})
     batch_size=min(64,max(1,int(os.environ.get("WORLD_NEWS_BATCH",str(DEFAULT_BATCH)))))
     chosen,next_cursor=choose_batch(profiles,progress.get("next_cursor",0),batch_size)
+    priority,priority_cursor=choose_priority_batch(
+        profiles,chosen,progress.get("priority_cursor",0))
+    chosen.extend(priority)
     existing={r["id"]:r for r in retained(previous.get("leads",[]),ts)}
     existing_unattributed={r["id"]:r for r in retained_unattributed(
         previous_unattributed.get("leads",[]),ts)}
@@ -347,7 +361,9 @@ def run():
     if os.environ.get("WORLD_NEWS_OFFLINE")=="1":
         # Tests and manual dry runs should not erase historical results or
         # claim discovery was attempted.
-        chosen=[]; next_cursor=progress.get("next_cursor",0)
+        chosen=[]
+        next_cursor=progress.get("next_cursor",0)
+        priority_cursor=progress.get("priority_cursor",0)
     with ThreadPoolExecutor(max_workers=8) as pool:
         jobs={pool.submit(collect_market,p,ts):p for p in chosen}
         for fut in as_completed(jobs):
@@ -380,14 +396,16 @@ def run():
         "methodology":"Original-language source-linked search candidates WITHOUT verified country, publisher nationality or incident geography. NEVER plotted on the map. Search-market names are search intent only."})
     save(STATUS,{"last_completed_at":iso(ts),"market_count":len(profiles),
         "markets_attempted":total_attempted,"markets_with_current_news":count_codes,
-        "current_leads":len(final),"unattributed_local_candidates":len(unlocated_final),"batch_size":len(chosen),"next_cursor":next_cursor,
+        "current_leads":len(final),"unattributed_local_candidates":len(unlocated_final),
+        "batch_size":len(chosen),"priority_market_scans":len(priority),
+        "next_cursor":next_cursor,
         "local_language_markets_configured":sum(
             bool(p["local_term"] and p["local_language"]!="en") for p in profiles),
         "markets_with_local_queries_attempted":sum(
             bool(v.get("local_queries_attempted",0)) for v in status.values()),
         "countries":status,
         "coverage_note":"Rotating RSS sampling with explicit headline-country mention checks. Not all local reporting and not incident geography. No accepted results do not imply no fraud."})
-    save(STATE,{"next_cursor":next_cursor})
+    save(STATE,{"next_cursor":next_cursor,"priority_cursor":priority_cursor})
     print(json.dumps({"markets":len(profiles),"attempted":total_attempted,
                       "in_this_batch":len(chosen),"market_news":count_codes,"recent_leads":len(final)}))
 
