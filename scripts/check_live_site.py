@@ -12,6 +12,7 @@ REQUIRED = {
     "data/bank_complaint_disclosures.json": ("records", 15),
     "data/canadian_source_registry.json": ("sources", 18),
     "data/obsi_annual_banking.json": ("rows", 5),
+    "data/obsi_firm_complaints.json": ("records", 53),
     "data/ciro_enforcement_activity.json": ("firm_sanctions", 4),
     "data/cafc_aggregates.json": ("rows", 1000),
     "data/osfi_institutions.json": ("records", 300),
@@ -31,7 +32,7 @@ def verify(base,sha):
     if "__BUILD_SHA__" in page or (sha and sha not in page):
         raise AssertionError("Old build or unreplaced placeholder served")
     for marker in ['id="canadianSourceHub"','id="fintracOfficialPenalties"',
-                   'id="bankDisclosure"','id="osfiRegisterPanel"','id="obsiHistoricalSeries"','id="provincialFeeds"']:
+                   'id="bankDisclosure"','id="osfiRegisterPanel"','id="obsiHistoricalSeries"','id="obsiFirmRows"','id="provincialFeeds"']:
         if marker not in page:raise AssertionError("Missing section "+marker)
     scripts=sorted(set(re.findall(r'<script[^>]+src="\./([^"?]+)',page)))
     if len(scripts)<20:raise AssertionError(f"Only {len(scripts)} scripts referenced")
