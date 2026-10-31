@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-31T13:23:10+00:00",
+  "updated_at": "2026-10-31T13:25:12+00:00",
   "sources_configured": 5,
   "sources_attempted": 5,
   "sources_with_results": 2,
@@ -9,7 +9,7 @@
     "gh-citi-business": {
       "status": "error",
       "accepted": 0,
-      "checked_at": "2026-10-31T13:23:10+00:00",
+      "checked_at": "2026-10-31T13:25:12+00:00",
       "error_type": "HTTPError",
       "source_kind": "newspaper",
       "country_code": "GH",
@@ -18,7 +18,7 @@
     "gh-citi-general": {
       "status": "error",
       "accepted": 0,
-      "checked_at": "2026-10-31T13:23:10+00:00",
+      "checked_at": "2026-10-31T13:25:12+00:00",
       "error_type": "HTTPError",
       "source_kind": "newspaper",
       "country_code": "GH",
@@ -27,7 +27,7 @@
     "ch-finma-news": {
       "status": "ok",
       "accepted": 1,
-      "checked_at": "2026-10-31T13:23:10+00:00",
+      "checked_at": "2026-10-31T13:25:12+00:00",
       "feed_http_status": 200,
       "source_kind": "regulator",
       "country_code": "CH",
@@ -36,17 +36,17 @@
     "ch-finma-sanctions": {
       "status": "ok",
       "accepted": 2,
-      "checked_at": "2026-10-31T13:23:10+00:00",
+      "checked_at": "2026-10-31T13:25:12+00:00",
       "feed_http_status": 200,
       "source_kind": "regulator",
       "country_code": "CH",
       "name": "FINMA international sanctions"
     },
     "in-sebi": {
-      "status": "empty",
+      "status": "error",
       "accepted": 0,
-      "checked_at": "2026-10-31T13:23:10+00:00",
-      "feed_http_status": 200,
+      "checked_at": "2026-10-31T13:25:12+00:00",
+      "error_type": "ReadTimeout",
       "source_kind": "regulator",
       "country_code": "IN",
       "name": "Securities and Exchange Board of India"
