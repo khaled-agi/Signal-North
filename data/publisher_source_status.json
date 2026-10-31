@@ -1,5 +1,5 @@
 {
-  "completed_at": "2026-10-31T03:55:01+00:00",
+  "completed_at": "2026-10-31T09:29:26+00:00",
   "sources": {
     "Global News Canada": {
       "status": "ok",
@@ -8,15 +8,13 @@
       "url": "https://globalnews.ca/canada/feed/"
     },
     "Financial Post": {
-      "status": "ok",
-      "feed_items": 10,
-      "accepted": 0,
+      "status": "failed",
+      "error": "syntax error: line 1, column 0",
       "url": "https://financialpost.com/feed/"
     },
     "National Post": {
-      "status": "ok",
-      "feed_items": 10,
-      "accepted": 0,
+      "status": "failed",
+      "error": "syntax error: line 1, column 0",
       "url": "https://nationalpost.com/feed/"
     }
   },
