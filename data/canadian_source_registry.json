@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-30",
+  "updated": "2026-10-31",
   "description": "Curated official-source inventory. A linked source is not an ingested dataset.",
   "sources": [
     {
@@ -81,7 +81,7 @@
       "dataset": "Disciplined list (SEDAR+)",
       "url": "https://www.securities-administrators.ca/csa-activities/enforcement/disciplined-list/",
       "status": "linked_only",
-      "notes": "Companies and individuals sanctioned by participating regulators"
+      "notes": "SEDAR+ disciplined-list interface; no verified public bulk export, link retained for source context"
     },
     {
       "agency": "OSC",
@@ -126,7 +126,7 @@
       "dataset": "Canadian Investment Regulatory Organization enforcement",
       "url": "https://www.ciro.ca/",
       "status": "linked_only",
-      "notes": "Dealer and individual disciplinary proceedings"
+      "notes": "Direct site collection returned HTTP 403. Use CIRO published enforcement activity and BCSC/CSA source publications until accessible"
     },
     {
       "agency": "Payments Canada",
@@ -136,6 +136,33 @@
       "url": "https://www.payments.ca/",
       "status": "linked_only",
       "notes": "System-level payments trends; not bank-specific fraud totals"
+    },
+    {
+      "agency": "AMF",
+      "type": "institutions",
+      "jurisdiction": "Quebec",
+      "dataset": "Official Québec regulated financial institutions and credit-agency CSV",
+      "url": "https://www.donneesquebec.ca/recherche/dataset/liste-des-institutions-financieres-et-agences-d-evaluation-du-credit",
+      "status": "collector_configured",
+      "notes": "Official AMF open data published by Données Québec; registry, not enforcement"
+    },
+    {
+      "agency": "BCSC",
+      "type": "enforcement",
+      "jurisdiction": "British Columbia",
+      "dataset": "BCSC disciplined list and hearing notices RSS",
+      "url": "https://www.bcsc.bc.ca/about/reports-publications/rss",
+      "status": "collector_configured",
+      "notes": "RSS distinguishes published discipline from hearing allegations"
+    },
+    {
+      "agency": "OBSI",
+      "type": "complaints",
+      "jurisdiction": "Canada",
+      "dataset": "Official annual and quarterly historical reporting PDFs",
+      "url": "https://www.obsi.ca/en/case-data-insights/quarterly-case-data/",
+      "status": "collector_configured",
+      "notes": "Historical public report document feed is sector-level, not company Data Cube export"
     }
   ]
 }
