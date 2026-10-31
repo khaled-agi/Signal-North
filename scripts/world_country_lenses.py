@@ -137,6 +137,18 @@ NEWS_EDITIONS={
  "TW":("zh-TW","TW","zh-Hant"),"HK":("zh-HK","HK","zh-Hant"),
  "TH":("th","TH","th"),"ID":("id","ID","id"),"VN":("vi","VN","vi"),
 }
+# Only observed/curated edition families. A nearby-language edition is a
+# discovery proxy, not evidence of a publisher's nationality or legal country.
+LANGUAGE_PROXY_EDITIONS={
+ "ar":("ar","SA","ar"),"fr":("fr","FR","fr"),"es":("es","ES","es"),
+ "pt":("pt-BR","BR","pt-419"),"de":("de","DE","de"),
+ "it":("it","IT","it"),"nl":("nl","NL","nl"),"pl":("pl","PL","pl"),
+ "tr":("tr","TR","tr"),"ru":("ru","RU","ru"),"uk":("uk","UA","uk"),
+ "zh":("zh-TW","TW","zh-Hant"),"ja":("ja","JP","ja"),
+ "ko":("ko","KR","ko"),"hi":("hi","IN","hi"),"th":("th","TH","th"),
+ "id":("id","ID","id"),"vi":("vi","VN","vi"),
+}
+
 # Human-reviewed authority discovery links. NOT automatic ingestion or verified
 # enforcement feeds. Add jurisdictions only with trusted actual agency URLs.
 AUTHORITIES={
