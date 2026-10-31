@@ -64,8 +64,8 @@
  }
  function officialSections(x){
   const o=x.official_data||{}, reports=o.bank_disclosures||[], fintrac=o.fintrac_notices||[], fcac=o.fcac_notices||[];
-  const osfi=o.osfi,amf=o.amf_registrations||[],obsi=o.obsi_firm_complaints||[],ciro=o.ciro_concluded_cases||[];
-  if(!osfi&&!amf.length&&!obsi.length&&!ciro.length&&!reports.length&&!fintrac.length&&!fcac.length)return '';
+  const osfi=o.osfi,amf=o.amf_registrations||[],obsi=o.obsi_firm_complaints||[],ciro=o.ciro_concluded_cases||[],fdic=o.fdic,fdicFailures=o.fdic_failure_events||[];
+  if(!osfi&&!fdic&&!fdicFailures.length&&!amf.length&&!obsi.length&&!ciro.length&&!reports.length&&!fintrac.length&&!fcac.length)return '';
   const head='<div class="connection-timeline-title"><h4>Official institution data</h4><span class="small">Different sources and denominators · never sum the figures</span></div>';
   const identity=osfi?'<div class="evidence-entry"><strong>OSFI regulated institution</strong><div class="small">'+esc(osfi.name)+' · '+esc(osfi.group||osfi.industry||"Federal institution registry")+'</div>'+safeLink(osfi.source_url,"Official OSFI directory")+'</div>':'';
   const complaintRows=reports.map(r=>'<article class="evidence-entry"><div class="evidence-top"><strong>'+esc(r.year)+' · '+esc(r.office||"Complaints office")+'</strong><span>'+Number(r.metric_value).toLocaleString("en-CA")+' records</span></div><div class="small">'+esc(r.scope||r.metric_name)+'</div>'+
@@ -82,7 +82,11 @@
   const ciroRows=ciro.map(r=>'<article class="evidence-entry"><div class="evidence-top"><strong>CIRO concluded proceeding · '+esc(r.date||r.publication_date||"date not in index")+'</strong><span>Fine '+esc(money(r.fine_cad))+'</span></div>'+
     '<div class="small">'+esc(r.topic||"Official proceeding")+' · costs '+esc(money(r.costs_cad))+' · disgorgement '+esc(money(r.disgorgement_cad))+'</div>'+
     '<div class="small">Exact investment-dealer entity, not automatically the parent bank</div>'+safeLink(r.source_url,"CIRO case page")+'</article>').join("");
-  return head+identity+quebec+
+  const fdicIdentity=fdic?'<div class="evidence-entry"><strong>FDIC U.S. regulated institution</strong><div class="small">FDIC CERT '+esc(fdic.cert)+' · '+esc(fdic.city||"")+', '+esc(fdic.state||"")+' · '+esc(fdic.active?"Active bank":"Listing status unconfirmed")+'</div>'+safeLink(fdic.source_url,"FDIC BankFind")+'</div>':'';
+  const failureRows=fdicFailures.map(r=>'<article class="evidence-entry"><div class="evidence-top"><strong>FDIC bank resolution / failure</strong><span>'+esc(r.date||"Date not supplied")+'</span></div><div class="small">'+esc(r.resolution_type||"Resolution type unavailable")+(r.acquirer?' · Acquired by '+esc(r.acquirer):'')+'</div>'+
+   '<div class="small">Institution lifecycle event only; NOT an enforcement or fraud finding.</div>'+safeLink(r.source_url,"FDIC failure history")+'</article>').join('');
+  return head+identity+fdicIdentity+quebec+
+   (fdicFailures.length?'<details class="supporting-reviewed-details"><summary>FDIC bank resolution events · '+fdicFailures.length+'</summary>'+failureRows+'</details>':'')+
    (ciro.length?'<details class="supporting-reviewed-details"><summary>Concluded CIRO investment-dealer proceedings · '+ciro.length+'</summary>'+ciroRows+'</details>':'')+
    (obsi.length?'<details class="supporting-reviewed-details"><summary>OBSI external escalated complaints · '+obsi.length+' firm-year records</summary>'+obsiRows+'</details>':'')+
    (reports.length?'<details class="supporting-reviewed-details"><summary>Internal bank complaints · '+reports.length+' fiscal years</summary>'+complaintRows+'</details>':'')+
