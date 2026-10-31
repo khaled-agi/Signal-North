@@ -25,7 +25,7 @@ MAX_BYTES=20_000_000
 # vessel_type, tonnage, grt, vessel_flag, vessel_owner, remarks.
 NULL="-0-"
 
-def parse(data):
+def parse(data, minimum=5000):
  try:
   text=data.decode("utf-8-sig")
  except UnicodeDecodeError:
@@ -61,7 +61,7 @@ def parse(data):
    "source_data_url":URL,
    "scope_note":"OFAC designation, not necessarily a financial institution. Entity naming alone must never be treated as a confirmed match to another legal person.",
   })
- if len(records)<5000 or total<10000:
+ if len(records)<minimum or total<minimum:
   raise ValueError(f"Unusually small OFAC SDN dataset: {len(records)} organizations / {total} rows")
  return records,{"all_sdn_rows":total,"entity_rows":len(records),"excluded_types":excluded}
 
