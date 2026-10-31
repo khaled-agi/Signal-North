@@ -52,6 +52,13 @@ jobs:
           node --check global.js
           node --check cfpb.js
           node --check cafc.js
+          node --check obsi.js
+          node --check bank_disclosures.js
+          node --check canadian_sources.js
+          node --check canadian_regulatory_leads.js
+          node --check canadian_verified_enforcement.js
+          node --check osfi_register.js
+          python -m py_compile scripts/collect_canadian_regulatory_leads.py scripts/collect_osfi_institutions.py
           python -m unittest discover -s tests -p 'test_logic.py'
           node tests/test_supporting_intelligence.js
           python -m unittest discover -s tests -p 'test_community_signals.py'
@@ -91,6 +98,12 @@ jobs:
       - name: Refresh official Canadian Anti-Fraud Centre reporting aggregates
         continue-on-error: true
         run: python scripts/collect_cafc_open_data.py
+      - name: Refresh official Canadian regulatory source index links
+        continue-on-error: true
+        run: python scripts/collect_canadian_regulatory_leads.py
+      - name: Refresh OSFI regulated institution directory
+        continue-on-error: true
+        run: python scripts/collect_osfi_institutions.py
       - name: Prepare worldwide country coverage registry
         run: python scripts/build_world_registry.py
       - name: Collect regulator publications
@@ -134,6 +147,9 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/events.json data/status.json data/news.json data/news_status.json data/article_index.json data/reporting_groups.json data/related_reporting.json data/reviewed_events.json data/event_review_candidates.json data/institution_intelligence.json data/review_queue.json data/theme_trends.json data/global_enforcement.json data/global_source_status.json data/world_jurisdictions.json data/community_signals.json data/community_status.json data/community_state.json data/world_reporting.json data/world_reporting_status.json data/world_reporting_state.json data/world_local_unattributed.json data/direct_country_sources.json data/direct_country_source_status.json data/direct_country_source_state.json data/cfpb_complaints.json data/cfpb_complaints_status.json data/cfpb_complaints_state.json data/cfpb_monthly_history.json data/cfpb_monthly_history_status.json data/cfpb_monthly_history_state.json data/cafc_aggregates.json data/cafc_source_status.json data/global_regulator_publications.json data/global_regulator_publications_status.json data/global_regulator_publications_state.json
+          for file in data/canadian_regulatory_leads.json data/osfi_institutions.json; do
+            if [ -f "$file" ]; then git add "$file"; fi
+          done
           if [ -f data/publisher_news.json ]; then git add data/publisher_news.json; fi
           if [ -f data/publisher_source_status.json ]; then git add data/publisher_source_status.json; fi
           if [ -f data/external_source_status.json ]; then git add data/external_source_status.json; fi
@@ -156,7 +172,7 @@ jobs:
       - name: Assemble cache-busted static website
         run: |
           mkdir -p _site/data
-          cp index.html styles.css light.css editorial.css connections.css research.css network.css refine.css global.css reviewed.css product_redesign.css map_upgrade.js geography.js app.js supporting_intelligence.js community_signals.js intel.js workspace.js connections.js research.js network.js global.js reviewed.js cfpb.js .nojekyll _site/
+          cp index.html styles.css light.css editorial.css connections.css research.css network.css refine.css global.css reviewed.css product_redesign.css map_upgrade.js geography.js app.js supporting_intelligence.js community_signals.js intel.js workspace.js connections.js research.js network.js global.js reviewed.js cfpb.js cafc.js obsi.js bank_disclosures.js canadian_sources.js canadian_regulatory_leads.js canadian_verified_enforcement.js osfi_register.js .nojekyll _site/
           cp data/events.json data/status.json data/news.json data/news_status.json data/fraud_stats.json data/bank_disclosures.json data/incidents.json _site/data/
           if [ -f data/news_archive.json ]; then cp data/news_archive.json _site/data/; fi
           if [ -f data/archive_status.json ]; then cp data/archive_status.json _site/data/; fi
@@ -171,6 +187,11 @@ jobs:
           cp data/research_library.json _site/data/
           cp data/theme_trends.json data/sector_watch.json _site/data/
           cp data/global_enforcement.json data/global_enforcement_seed.json data/global_source_status.json data/world_jurisdictions.json data/world_reporting.json data/world_reporting_status.json data/world_local_unattributed.json data/world_coverage_counterexamples.json data/direct_country_sources.json data/direct_country_source_status.json data/direct_country_source_catalog.json data/cfpb_complaints.json data/cfpb_complaints_status.json data/cfpb_monthly_history.json data/cfpb_monthly_history_status.json data/cafc_aggregates.json data/cafc_source_status.json data/global_regulator_publications.json data/global_regulator_publications_status.json _site/data/
+          cp data/bank_complaint_disclosures.json data/canadian_source_registry.json data/canadian_enforcement_verified.json _site/data/
+          for file in data/canadian_regulatory_leads.json data/osfi_institutions.json; do
+            if [ -f "$file" ]; then cp "$file" _site/data/; fi
+          done
+          python scripts/verify_canadian_site_bundle.py
           sed -i "s/__BUILD_SHA__/${GITHUB_SHA}/g" _site/index.html
       - name: Configure Pages
         uses: actions/configure-pages@v5
