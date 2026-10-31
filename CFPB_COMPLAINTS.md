@@ -73,3 +73,27 @@ Checks:
 
 Browser tests inject a fixture in their own sandboxed HTTP response;
 no synthetic complaint is included in the deployed JSON data.
+
+## Banking-product discovery (October 30 expansion)
+
+The original recent-only CFPB collector ran successfully on October 31 UTC
+and populated 100 genuine records. That first page was dominated by credit
+reporting and debt collection (95 of 100), with only two checking/savings
+complaints. Therefore, using the newest 100 general complaints alone would
+mislead bank-focused users.
+
+The next collection release uses documented CFPB product filters and makes
+FOUR bounded API requests per run: one all-products recent page, plus three
+rotated banking-product pages. The configured sectors are checking/savings,
+credit card, money transfer/virtual currency, mortgage, and vehicle loans.
+Each request is limited to 100; query success, filters, error states and
+returned page counts are tracked separately. The rotation cursor persists in
+data/cfpb_complaints_state.json. Category windows are not complete censuses.
+
+The browser adds a company-name dropdown using names actually returned by
+CFPB. Exact company names are retained: no guessed parent-company grouping
+or inference that every named company is a chartered bank. Complaints are
+still allegations, not confirmed misconduct. Comparing raw complaint counts
+across institutions with different customer counts or business models is
+inappropriate. Newly published records appear only after a successful live
+CFPB scan; CI tests use fictitious fixture data exclusively inside tests.
