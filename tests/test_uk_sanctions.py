@@ -5,7 +5,7 @@ from scripts.collect_uk_sanctions import parse_csv
 
 class UKSanctionsPrimarySourceTests(unittest.TestCase):
  def test_uk_fcdos_csv_first_date_header_and_primary_names(self):
-  header=["Unique ID","Name 6","Individual, Entity, Ship","Regime Name","Name type","Sanctions Imposed","Date Designated"]
+  header=["Unique ID","Name 6","Designation Type","Regime Name","Name type","Sanctions Imposed","Date Designated"]
   rows=[
    ["2026-10-30 official FCDO report"],
    header,

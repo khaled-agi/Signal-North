@@ -36,7 +36,9 @@ def parse_csv(data,minimum=300):
    break
  if not header:raise ValueError("UK Sanctions List CSV header not identified")
  columns={x.strip().casefold():i for i,x in enumerate(header)}
- required=("unique id","name 6","individual, entity, ship","regime name")
+ required=("unique id","name 6","regime name")
+ if not ("designation type" in columns or "individual, entity, ship" in columns):
+  raise ValueError("UK sanctions designation-type column missing")
  if not all(x in columns for x in required):
   raise ValueError("UK FCDO CSV schema changed")
  def get(row,k):
@@ -47,7 +49,7 @@ def parse_csv(data,minimum=300):
  for row in rows:
   if not row:continue
   total+=1
-  if get(row,"individual, entity, ship").casefold()!="entity":continue
+  if (get(row,"designation type") or get(row,"individual, entity, ship")).casefold()!="entity":continue
   uid=get(row,"unique id")
   if not uid:continue
   name=get(row,"name 6")
