@@ -64,8 +64,8 @@
  }
  function officialSections(x){
   const o=x.official_data||{}, reports=o.bank_disclosures||[], fintrac=o.fintrac_notices||[], fcac=o.fcac_notices||[];
-  const osfi=o.osfi,amf=o.amf_registrations||[],obsi=o.obsi_firm_complaints||[],ciro=o.ciro_concluded_cases||[],fdic=o.fdic,fdicFailures=o.fdic_failure_events||[],ncua=o.ncua;
-  if(!osfi&&!fdic&&!ncua&&!fdicFailures.length&&!amf.length&&!obsi.length&&!ciro.length&&!reports.length&&!fintrac.length&&!fcac.length)return '';
+  const osfi=o.osfi,amf=o.amf_registrations||[],obsi=o.obsi_firm_complaints||[],ciro=o.ciro_concluded_cases||[],fdic=o.fdic,fdicFailures=o.fdic_failure_events||[],ncua=o.ncua,occ=o.occ,occActions=o.occ_institution_actions||[],occIndividuals=o.occ_individual_matters||[];
+  if(!osfi&&!fdic&&!ncua&&!occ&&!occActions.length&&!occIndividuals.length&&!fdicFailures.length&&!amf.length&&!obsi.length&&!ciro.length&&!reports.length&&!fintrac.length&&!fcac.length)return '';
   const head='<div class="connection-timeline-title"><h4>Official institution data</h4><span class="small">Different sources and denominators · never sum the figures</span></div>';
   const identity=osfi?'<div class="evidence-entry"><strong>OSFI regulated institution</strong><div class="small">'+esc(osfi.name)+' · '+esc(osfi.group||osfi.industry||"Federal institution registry")+'</div>'+safeLink(osfi.source_url,"Official OSFI directory")+'</div>':'';
   const complaintRows=reports.map(r=>'<article class="evidence-entry"><div class="evidence-top"><strong>'+esc(r.year)+' · '+esc(r.office||"Complaints office")+'</strong><span>'+Number(r.metric_value).toLocaleString("en-CA")+' records</span></div><div class="small">'+esc(r.scope||r.metric_name)+'</div>'+
@@ -86,7 +86,15 @@
   const failureRows=fdicFailures.map(r=>'<article class="evidence-entry"><div class="evidence-top"><strong>FDIC bank resolution / failure</strong><span>'+esc(r.date||"Date not supplied")+'</span></div><div class="small">'+esc(r.resolution_type||"Resolution type unavailable")+(r.acquirer?' · Acquired by '+esc(r.acquirer):'')+'</div>'+
    '<div class="small">Institution lifecycle event only; NOT an enforcement or fraud finding.</div>'+safeLink(r.source_url,"FDIC failure history")+'</article>').join('');
   const ncuaIdentity=ncua?'<div class="evidence-entry"><strong>NCUA U.S. federally insured credit union</strong><div class="small">Charter '+esc(ncua.charter)+' · '+esc(ncua.city||"")+', '+esc(ncua.state||"")+' · '+esc(ncua.cycle||"latest recorded cycle")+'</div>'+safeLink(ncua.source_url,"Official NCUA roster")+'</div>':'';
-  return head+identity+fdicIdentity+ncuaIdentity+quebec+
+  const occIdentity=occ?'<div class="evidence-entry"><strong>OCC charter '+esc(occ.charter)+'</strong><div class="small">'+esc(occ.legal_name)+' · distinct from FDIC certificate numbers</div>'+safeLink(occ.source_url,"Official OCC enforcement search")+'</div>':'';
+  const occCases=occActions.concat(occIndividuals).sort((a,b)=>String(b.start_date||"").localeCompare(String(a.start_date||""))).slice(0,60);
+  const occRows=occCases.map(r=>'<article class="evidence-entry"><div class="evidence-top"><strong>OCC · '+esc(r.start_date||"Date unspecified")+' · '+esc(r.case_type)+'</strong><span>'+esc(r.amount_raw||"Amount unavailable")+'</span></div>'+
+   '<div class="small">'+esc(r.type_description||"Enforcement action")+(r.individual_party?' · Named individual: '+esc(r.individual_party):' · Institution action')+'</div>'+
+   '<div class="small">Subjects: '+esc((r.subject_matters||[]).join(", ")||"No specific topics published")+(r.termination_date?' · Terminated: '+esc(r.termination_date):'')+'</div>'+
+   safeLink(r.source_url,"Original OCC action search")+'</article>').join('');
+  return head+identity+fdicIdentity+ncuaIdentity+occIdentity+quebec+
+    (occCases.length?'<details class="supporting-reviewed-details"><summary>OCC actions · '+occActions.length+' institution / '+occIndividuals.length+' individual-related (separate)</summary>'+occRows+'</details>':'')+
+
    (fdicFailures.length?'<details class="supporting-reviewed-details"><summary>FDIC bank resolution events · '+fdicFailures.length+'</summary>'+failureRows+'</details>':'')+
    (ciro.length?'<details class="supporting-reviewed-details"><summary>Concluded CIRO investment-dealer proceedings · '+ciro.length+'</summary>'+ciroRows+'</details>':'')+
    (obsi.length?'<details class="supporting-reviewed-details"><summary>OBSI external escalated complaints · '+obsi.length+' firm-year records</summary>'+obsiRows+'</details>':'')+
