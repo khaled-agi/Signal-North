@@ -1,8 +1,18 @@
 {
-  "status": "not_attempted",
-  "last_attempt_at": null,
-  "last_success_at": null,
+  "status": "ok",
+  "last_attempt_at": "2026-10-31T02:35:28+00:00",
+  "source": "Royal Canadian Mounted Police / Canadian Anti-Fraud Centre",
+  "dataset_url": "https://open.canada.ca/data/dataset/6a09c998-cddb-4a22-beff-4dca67ab892f",
   "dataset_end_date": "2025-09-30",
-  "source": "RCMP / Canadian Anti-Fraud Centre",
-  "methodology": "Official reporting data aggregation; source URL configured but not yet fetched."
+  "last_success_at": "2026-10-31T02:35:28+00:00",
+  "methodology": "Official reported fraud intake, not adjudicated crime; aggregate Canada-only reports, suppress cells under 5; never publish individual report IDs or demographics",
+  "bytes_downloaded": 75503029,
+  "aggregated_cells": 1491,
+  "rows_read": 350361,
+  "canada_rows": 266553,
+  "outside_canada_rows": 83808,
+  "invalid_date": 0,
+  "missing_province": 0,
+  "missing_loss": 0,
+  "missing_category": 0
 }
