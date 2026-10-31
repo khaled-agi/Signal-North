@@ -421,9 +421,30 @@
     </section>
   </section>
   <section id="institutions" class="tab hidden">
+    <section class="panel" id="usInstitutionExplorer">
+      <div class="panel-heading">
+        <div><div class="eyebrow">UNITED STATES / OFFICIAL INSTITUTION INTELLIGENCE</div><h2>U.S. bank and credit union registry · lifecycle signals</h2></div>
+        <span class="small" id="usFdicStatus">Checking published source snapshots…</span>
+      </div>
+      <p class="supporting-disclaimer"><strong>Identity is not an allegation.</strong> FDIC and NCUA registries identify U.S. insured banks and credit unions by separate federal certificate/charter identifiers. Historical failures and FDIC-assisted resolutions are separate institution lifecycle signals; they are not fraud, AML enforcement or customer complaint counts. Canadian institutions are not merged with U.S. banks on name alone.</p>
+      <div class="world-reporting-toolbar">
+        <label for="usFdicDataset">Source <select id="usFdicDataset"><option value="institutions">Active insured banks</option><option value="failures">Historical bank failures / assistance</option><option value="ncua">NCUA federally insured credit unions</option></select></label>
+        <label for="usFdicSearch">Institution <input id="usFdicSearch" type="search" placeholder="Name, state, FDIC certificate…" aria-label="Search U.S. insured institutions"></label>
+      </div>
+      <div id="usFdicRows" class="world-reporting-rows" aria-live="polite"><div class="empty">Loading official FDIC data…</div></div>
+      <p class="supporting-disclaimer" id="usFdicHealth">Each source reports its last successful collection. Unavailable feeds never mean zero institutions.</p>
+    </section>
     <div class="panel"><div class="panel-heading"><div><div class="eyebrow">ORGANIZATION RESEARCH</div><h2>Institution radar</h2></div></div><div class="notice"><strong>Institutional involvement does not mean institutional fraud.</strong> Records here are published enforcement notices; a count of records does not measure culpability or actual demand for consulting services.</div><div id="institutionRows"></div></div>
   </section>
   <section id="sources" class="tab hidden">
+    <section class="panel" id="usAgencySignalHub">
+      <div class="panel-heading"><div><div class="eyebrow">UNITED STATES / MULTI-AGENCY PUBLIC SOURCE FEEDS</div><h2>Official enforcement and closure publications</h2></div><span class="small" id="usAgencySignalStatus">Checking live agency sources…</span></div>
+      <p class="supporting-disclaimer">These are regulator-issued publication links collected from the Federal Reserve, OCC, and NCUA. <strong>Publication is not a final enforcement judgment.</strong> Notices may concern an individual or an institution; closure notices concern bank or credit-union lifecycle events. No institution wrongdoing is inferred by the collector.</p>
+      <div class="world-reporting-toolbar"><label for="usSignalAgency">Regulator <select id="usSignalAgency"><option value="">All official sources</option><option value="Federal Reserve">Federal Reserve</option><option value="OCC">OCC</option><option value="NCUA">NCUA</option></select></label><label for="usSignalSearch">Search <input id="usSignalSearch" type="search" placeholder="Agency statement, topic, institution…" aria-label="Search official US regulatory publications"></label></div>
+      <div id="usSignalRows" class="world-reporting-rows" aria-live="polite"><div class="empty">Loading regulator publications…</div></div>
+      <p class="supporting-disclaimer" id="usAgencySignalHealth">Source statuses will appear after collection.</p>
+    </section>
+
     <div class="panel"><div class="panel-heading"><div><div class="eyebrow">COLLECTION HEALTH</div><h2>Source monitoring</h2></div></div><div class="notice">Collectors run on a GitHub Actions schedule. The page displays the latest committed snapshot. Refresh snapshot reloads it; a new collection requires GitHub Actions or the next scheduled scan. Google News items are unverified research leads.</div><div id="sourceRows"></div><div id="externalSourceHealth" aria-label="Additional source scan status"></div></div>
     <div class="panel"><div class="panel-heading"><div><div class="eyebrow">ADDITIONAL CANADIAN SOURCES</div><h2>Expansion priorities</h2></div></div><div id="sourceCatalog" class="source-catalog"></div></div>
     <div class="panel"><div class="panel-heading"><div><div class="eyebrow">RESEARCH METHOD</div><h2>What the data can and cannot tell you</h2></div></div><div class="method"><p><strong>Sources.</strong> FINTRAC public administrative monetary penalties and FCAC published proceedings. Records are source-linked and subject to the limitations of the originating regulator.</p><p><strong>Identity.</strong> Institutions are grouped by the explicitly named entity; subsidiaries and parents are not automatically merged.</p><p><strong>Geography.</strong> Only explicitly supported institution-location clauses get map markers. Missing locations remain in the list, not assigned to an inferred headquarters.</p><p><strong>Enforcement status.</strong> Imposed, paid, and appealed are distinguished. This dashboard does not publish unverified accusations from general news automatically.</p><p><strong>Coverage.</strong> Regulators can revise or remove notices. Parser changes and access failures can also result in incomplete or stale coverage. Missing records do not imply clean compliance.</p><p><strong>Consulting application.</strong> A publicly documented event may indicate a topic worth researching; it never establishes that a firm currently needs outside consultants.</p></div></div>
@@ -458,6 +479,8 @@
 <script src="./fintrac_official.js?v=__BUILD_SHA__" defer></script>
 <script src="./canadian_regulatory_leads.js?v=__BUILD_SHA__" defer></script>
 <script src="./osfi_register.js?v=__BUILD_SHA__" defer></script>
+<script src="./us_fdic.js?v=__BUILD_SHA__" defer></script>
+<script src="./us_regulatory_signals.js?v=__BUILD_SHA__" defer></script>
 <script src="./reviewed.js?v=__BUILD_SHA__" defer></script>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" async crossorigin="" onload="window.dispatchEvent(new Event('signalnorth:mapready'))"></script>
 </body></html>

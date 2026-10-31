@@ -15,6 +15,10 @@ REQUIRED = {
     "data/obsi_firm_complaints.json": ("records", 91),
     "data/ciro_enforcement_activity.json": ("firm_sanctions", 4),
     "data/ciro_named_enforcement.json": ("records", 5),
+    "data/us_fdic_institutions.json": ("records", 2500),
+    "data/us_fdic_failures.json": ("records", 3500),
+    "data/us_ncua_credit_unions.json": ("records", 3500),
+    "data/us_regulatory_signal_publications.json": ("records", 0),
     "data/cafc_aggregates.json": ("rows", 1000),
     "data/osfi_institutions.json": ("records", 300),
     "data/canadian_regulatory_leads.json": ("leads", 0),
@@ -33,7 +37,7 @@ def verify(base,sha):
     if "__BUILD_SHA__" in page or (sha and sha not in page):
         raise AssertionError("Old build or unreplaced placeholder served")
     for marker in ['id="canadianSourceHub"','id="fintracOfficialPenalties"',
-                   'id="bankDisclosure"','id="osfiRegisterPanel"','id="obsiHistoricalSeries"','id="obsiFirmRows"','id="ciroNamedRows"','id="provincialFeeds"']:
+                   'id="bankDisclosure"','id="osfiRegisterPanel"','id="obsiHistoricalSeries"','id="obsiFirmRows"','id="ciroNamedRows"','id="usFdicRows"','id="usSignalRows"','id="provincialFeeds"']:
         if marker not in page:raise AssertionError("Missing section "+marker)
     scripts=sorted(set(re.findall(r'<script[^>]+src="\./([^"?]+)',page)))
     if len(scripts)<20:raise AssertionError(f"Only {len(scripts)} scripts referenced")

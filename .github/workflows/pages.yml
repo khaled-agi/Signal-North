@@ -64,7 +64,9 @@ jobs:
           node --check canadian_verified_enforcement.js
           node --check osfi_register.js
           node --check fintrac_official.js
-          python -m py_compile scripts/collect_canadian_regulatory_leads.py scripts/collect_osfi_institutions.py scripts/collect_fintrac_penalties.py scripts/collect_obsi_public_reports.py scripts/collect_bank_complaints.py scripts/collect_bcsc_rss.py scripts/collect_amf_open_data.py
+          node --check us_fdic.js
+          node --check us_regulatory_signals.js
+          python -m py_compile scripts/collect_canadian_regulatory_leads.py scripts/collect_osfi_institutions.py scripts/collect_fintrac_penalties.py scripts/collect_obsi_public_reports.py scripts/collect_bank_complaints.py scripts/collect_bcsc_rss.py scripts/collect_amf_open_data.py scripts/collect_us_fdic.py scripts/collect_us_ncua.py scripts/collect_us_regulatory_signals.py
           python -m unittest discover -s tests -p 'test_logic.py'
           node tests/test_supporting_intelligence.js
           python -m unittest discover -s tests -p 'test_community_signals.py'
@@ -78,6 +80,8 @@ jobs:
           python -m unittest discover -s tests -p test_cross_source_graph.py
           python -m unittest discover -s tests -p test_obsi_firm_data.py
           python -m unittest discover -s tests -p test_ciro_named.py
+          python -m unittest discover -s tests -p test_us_institutions.py
+          python -m unittest discover -s tests -p test_us_regulator_signals.py
           python -m unittest discover -s tests -p test_provincial_sources.py
           python -m unittest discover -s tests -p test_empty_market_recovery.py
           python -m unittest discover -s tests -p 'test_global_regulator_publications.py'
@@ -131,6 +135,15 @@ jobs:
       - name: Collect Québec AMF official open financial institution register
         continue-on-error: true
         run: python scripts/collect_amf_open_data.py
+      - name: Collect official FDIC active banks and historical failure events
+        continue-on-error: true
+        run: python scripts/collect_us_fdic.py
+      - name: Collect official NCUA federally insured credit union roster
+        continue-on-error: true
+        run: python scripts/collect_us_ncua.py
+      - name: Collect Federal Reserve OCC and NCUA official publication signals
+        continue-on-error: true
+        run: python scripts/collect_us_regulatory_signals.py
       - name: Prepare worldwide country coverage registry
         run: python scripts/build_world_registry.py
       - name: Collect regulator publications
@@ -174,7 +187,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/events.json data/status.json data/news.json data/news_status.json data/article_index.json data/reporting_groups.json data/related_reporting.json data/reviewed_events.json data/event_review_candidates.json data/institution_intelligence.json data/review_queue.json data/theme_trends.json data/global_enforcement.json data/global_source_status.json data/world_jurisdictions.json data/community_signals.json data/community_status.json data/community_state.json data/world_reporting.json data/world_reporting_status.json data/world_reporting_state.json data/world_local_unattributed.json data/direct_country_sources.json data/direct_country_source_status.json data/direct_country_source_state.json data/cfpb_complaints.json data/cfpb_complaints_status.json data/cfpb_complaints_state.json data/cfpb_monthly_history.json data/cfpb_monthly_history_status.json data/cfpb_monthly_history_state.json data/cafc_aggregates.json data/cafc_source_status.json data/global_regulator_publications.json data/global_regulator_publications_status.json data/global_regulator_publications_state.json
-          for file in data/canadian_regulatory_leads.json data/osfi_institutions.json data/fintrac_penalties_official.json data/obsi_public_report_catalog.json data/bank_complaint_disclosures.json data/bank_disclosure_source_health.json data/bcsc_official_rss.json data/amf_quebec_entities.json data/amf_quebec_source_health.json; do
+          for file in data/canadian_regulatory_leads.json data/osfi_institutions.json data/fintrac_penalties_official.json data/obsi_public_report_catalog.json data/bank_complaint_disclosures.json data/bank_disclosure_source_health.json data/bcsc_official_rss.json data/amf_quebec_entities.json data/amf_quebec_source_health.json data/us_fdic_institutions.json data/us_fdic_failures.json data/us_fdic_source_health.json data/us_ncua_credit_unions.json data/us_ncua_source_health.json data/us_regulatory_signal_publications.json; do
             if [ -f "$file" ]; then git add "$file"; fi
           done
           if [ -f data/publisher_news.json ]; then git add data/publisher_news.json; fi
@@ -199,7 +212,7 @@ jobs:
       - name: Assemble cache-busted static website
         run: |
           mkdir -p _site/data
-          cp index.html styles.css light.css editorial.css connections.css research.css network.css refine.css global.css reviewed.css product_redesign.css map_upgrade.js geography.js app.js supporting_intelligence.js community_signals.js intel.js workspace.js connections.js research.js network.js global.js reviewed.js cfpb.js cafc.js obsi.js obsi_history.js obsi_firms.js bank_disclosures.js canadian_sources.js canadian_provincial.js ciro_sector.js ciro_named.js canadian_regulatory_leads.js canadian_verified_enforcement.js osfi_register.js fintrac_official.js .nojekyll _site/
+          cp index.html styles.css light.css editorial.css connections.css research.css network.css refine.css global.css reviewed.css product_redesign.css map_upgrade.js geography.js app.js supporting_intelligence.js community_signals.js intel.js workspace.js connections.js research.js network.js global.js reviewed.js cfpb.js cafc.js obsi.js obsi_history.js obsi_firms.js bank_disclosures.js canadian_sources.js canadian_provincial.js ciro_sector.js ciro_named.js canadian_regulatory_leads.js canadian_verified_enforcement.js osfi_register.js fintrac_official.js us_fdic.js us_regulatory_signals.js .nojekyll _site/
           cp data/events.json data/status.json data/news.json data/news_status.json data/fraud_stats.json data/bank_disclosures.json data/incidents.json _site/data/
           if [ -f data/news_archive.json ]; then cp data/news_archive.json _site/data/; fi
           if [ -f data/archive_status.json ]; then cp data/archive_status.json _site/data/; fi
@@ -218,6 +231,10 @@ jobs:
           for file in data/canadian_regulatory_leads.json data/osfi_institutions.json data/fintrac_penalties_official.json; do
             if [ -f "$file" ]; then cp "$file" _site/data/; fi
           done
+          for file in data/us_fdic_institutions.json data/us_fdic_failures.json data/us_fdic_source_health.json data/us_ncua_credit_unions.json data/us_ncua_source_health.json data/us_regulatory_signal_publications.json; do
+            if [ -f "$file" ]; then cp "$file" _site/data/; fi
+          done
+          python scripts/verify_us_site_bundle.py
           python scripts/verify_canadian_site_bundle.py
           sed -i "s/__BUILD_SHA__/${GITHUB_SHA}/g" _site/index.html
       - name: Configure Pages

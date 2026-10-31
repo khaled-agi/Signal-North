@@ -180,6 +180,9 @@ def generate():
  amf=load("amf_quebec_entities.json","records")
  obsi_sector=load("obsi_annual_banking.json","rows")
  obsi_firms=load("obsi_firm_complaints.json","records")
+ fdic_banks=load("us_fdic_institutions.json","records")
+ fdic_failures=load("us_fdic_failures.json","records")
+ ncua_credit_unions=load("us_ncua_credit_unions.json","records")
  for row in obsi_firms:
   entry=ensure(row.get("institution"))
   if entry:
@@ -235,13 +238,78 @@ def generate():
      "name":name,"source":"AMF Québec open data","source_url":"https://www.donneesquebec.ca/recherche/dataset/liste-des-institutions-financieres-et-agences-d-evaluation-du-credit",
      "entity_record_id":row.get("id")})
    break
+ # United States: FDIC CERT is the stable institution identifier.
+ # Never merge an American institution into a Canadian institution on name.
+ # A resolution/failure event is not proof of fraud or poor AML controls.
+ def ensure_fdic(row):
+  cert=str(row.get("fdic_cert") or "").strip()
+  if not cert.isdigit():return None
+  key="us-fdic-"+cert
+  if key not in by_key:
+   name=str(row.get("institution") or "").strip()
+   if not name:return None
+   by_key[key]={
+    "id":key,"name":name+" (US · "+str(row.get("state") or "FDIC")+")",
+    "legal_name":name,"jurisdiction":"US","country":"US",
+    "aliases":[name,name+" FDIC "+cert],
+    "counts":{"enforcement":0,"incidents":0,"headlines":0},
+    "evidence":[],"themes":[],"annual_penalties_cad":{},
+    "recent_activity":None,
+   }
+  return by_key[key]
+ for bank in fdic_banks:
+  entry=ensure_fdic(bank)
+  if not entry:continue
+  entry.setdefault("official_data",{})["fdic"]={
+   "cert":bank.get("fdic_cert"),"legal_name":bank.get("institution"),
+   "state":bank.get("state"),"city":bank.get("city"),
+   "active":bank.get("active"),"fed_rssd":bank.get("fed_rssd"),
+   "source_url":"https://banks.data.fdic.gov/bankfind-suite/",
+   "source_kind":"official_FDIC_active_institution_register",
+  }
+ for failure in fdic_failures:
+  entry=ensure_fdic(failure)
+  if not entry:continue
+  entry.setdefault("official_data",{}).setdefault("fdic_failure_events",[]).append({
+   "date":failure.get("failure_date"),"resolution_type":failure.get("resolution_type"),
+   "acquirer":failure.get("acquirer"),"state":failure.get("state"),
+   "assets_thousands_usd":failure.get("assets_thousands_usd"),
+   "deposits_thousands_usd":failure.get("deposits_thousands_usd"),
+   "fdic_cert":failure.get("fdic_cert"),
+   "source_url":"https://banks.data.fdic.gov/bankfind-suite/failures",
+   "source_kind":"FDIC_bank_failure_or_assistance_event",
+   "note":"Bank failure / assistance is NOT an enforcement or fraud allegation.",
+  })
+ # NCUA charter numbers are independent of FDIC certificates.
+ # Two institutions with identical names must not be merged by string alone.
+ for cu in ncua_credit_unions:
+  charter=str(cu.get("ncua_charter") or "").strip()
+  name=str(cu.get("institution") or "").strip()
+  if not charter.isdigit() or not name:continue
+  key="us-ncua-"+charter
+  if key not in by_key:
+   by_key[key]={
+    "id":key,"name":name+" (US credit union · "+str(cu.get("state") or "NCUA")+")",
+    "legal_name":name,"jurisdiction":"US","country":"US",
+    "aliases":[name,name+" NCUA "+charter],
+    "counts":{"enforcement":0,"incidents":0,"headlines":0},
+    "evidence":[],"themes":[],"annual_penalties_cad":{},
+    "recent_activity":None,
+   }
+  by_key[key].setdefault("official_data",{})["ncua"]={
+   "charter":charter,"legal_name":name,"city":cu.get("city"),"state":cu.get("state"),
+   "cycle":cu.get("cycle"),"cu_type":cu.get("cu_type"),
+   "source_url":"https://ncua.gov/analysis/credit-union-corporate-call-report-data/quarterly-data",
+   "source_kind":"official_NCUA_quarterly_credit_union_roster",
+  }
  for entry in by_key.values():
   official=entry.setdefault("official_data",{})
   official["counts"]={"fintrac_public_notices":len(official.get("fintrac_notices",[])),
      "fcac_index_notices":len(official.get("fcac_notices",[])),
      "bank_disclosure_years":len(official.get("bank_disclosures",[])),
      "obsi_firm_years":len(official.get("obsi_firm_complaints",[])),
-     "ciro_concluded_cases":len(official.get("ciro_concluded_cases",[]))}
+     "ciro_concluded_cases":len(official.get("ciro_concluded_cases",[])),
+     "fdic_failures":len(official.get("fdic_failure_events",[]))}
   if official.get("bank_disclosures"):
    official["bank_disclosures"].sort(key=lambda x:x.get("year",0),reverse=True)
   if official.get("fintrac_notices"):
@@ -271,7 +339,9 @@ def generate():
   "source_counts":{"enforcement":len(events),"reviewed_incidents":len(incidents),"unverified_report_groups":len(articles),
     "osfi_institution_rows":len(osfi),"fintrac_index_notices":len(fintrac),
     "bank_disclosure_records":len(bank_disclosures),"fcac_manual_sample":len(fcac),
-    "obsi_banking_years":len(obsi_sector),"obsi_firm_records":len(obsi_firms),"ciro_confirmed_cases":len(ciro_cases),"amf_quebec_entity_rows":len(amf)},
+    "obsi_banking_years":len(obsi_sector),"obsi_firm_records":len(obsi_firms),"ciro_confirmed_cases":len(ciro_cases),"amf_quebec_entity_rows":len(amf),
+    "us_fdic_active_entities":len(fdic_banks),"us_fdic_failure_events":len(fdic_failures),
+    "us_ncua_credit_union_entities":len(ncua_credit_unions)},
   "sector_context":{"obsi_banking":obsi_sector,"note":"OBSI annual sector totals must not be attributed to individual institutions."},
   "institutions":ranked
  }
