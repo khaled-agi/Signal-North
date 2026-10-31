@@ -278,3 +278,15 @@ box-shadow:0 2px 9px #12364830,0 0 0 1px #176f7950;transition:transform .13s eas
 .cfpb-record p{font-size:11px;line-height:1.5;color:#536f7c;margin:6px 0}
 .cfpb-record .world-reporting-details{margin-top:7px}
 @media(max-width:760px){.cfpb-stats{padding:0 12px 12px}.cfpb-complaints-panel .overview-deepdive-content{padding:6px}}
+
+
+/* CFPB historical month totals are distinct from first-page reason samples */
+.cfpb-history{margin:5px 18px 18px;border:1px solid #d9e6e9;border-radius:9px;background:#fbfdfd}
+.cfpb-history>summary{padding:14px 16px;cursor:pointer;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:#205366}
+.cfpb-history>summary span{color:#617f88;font-size:11px}
+.cfpb-history>.supporting-disclaimer{padding:12px 15px;font-size:11px;line-height:1.55}
+.cfpb-history .world-reporting-toolbar{padding:4px 15px 15px}
+.cfpb-history .world-reporting-rows{max-height:470px}
+.cfpb-history-reasons{display:flex;gap:5px;flex-wrap:wrap;margin-top:9px}
+.cfpb-history-reasons span{padding:5px 7px;border-radius:6px;background:#edf6f7;border:1px solid #d2e5e9;color:#355b6a;font-size:10px;line-height:1.4}
+@media(max-width:730px){.cfpb-history{margin:4px 9px 10px}}

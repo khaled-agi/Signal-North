@@ -51,6 +51,21 @@ try:
               "status":"ok","stored_records":1,
               "last_attempt_at":"2026-10-30T12:00:00+00:00"
             })))
+        page.route("**/data/cfpb_monthly_history.json*",lambda route:route.fulfill(
+            status=200,content_type="application/json",body=json.dumps({
+              "earliest_possible_month":"2011-12","months":[{
+                "month":"2011-12","monthly_total_status":"exact_api_total",
+                "exact_published_complaint_total":1234,
+                "sample_size":2,
+                "sample_issue_breakdown":[{"issue":"Managing an account","sub_issue":"Problem with a transaction","sample_count":2}],
+                "sample_product_breakdown":[{"product":"Checking or savings account","sample_count":2}]
+              }]
+            })))
+        page.route("**/data/cfpb_monthly_history_status.json*",lambda route:route.fulfill(
+            status=200,content_type="application/json",body=json.dumps({
+              "status":"ok","months_available":178,"months_with_results":1,
+              "last_attempt_at":"2026-10-30T12:00:00+00:00"
+            })))
         page.goto(url, wait_until="domcontentloaded", timeout=20000)
         try:
             page.wait_for_function("document.querySelectorAll('.metric').length === 4", timeout=20000)
@@ -89,6 +104,17 @@ try:
         assert "Named companies in sample" in page.locator("#cfpbStats").inner_text()
         page.locator("#cfpbState").select_option("NY")
         assert page.locator("#cfpbRows .cfpb-record").count() == 1
+        page.locator('#cfpbIssue').select_option("Managing an account")
+        assert page.locator("#cfpbRows .cfpb-record").count() == 1
+        page.locator("#cfpbHistoricalPanel > summary").click()
+        assert "1/178 months" in page.locator("#cfpbHistorySummary").inner_text()
+        assert "1,234 exact published complaints" in page.locator("#cfpbHistoryRows").inner_text()
+        assert "2 sampled" in page.locator("#cfpbHistoryRows").inner_text()
+        page.locator("#cfpbHistoryYear").select_option("2011")
+        assert page.locator("#cfpbHistoryRows .cfpb-history-row").count() == 1
+        page.locator("#cfpbHistoryIssue").select_option("Managing an account")
+        assert page.locator("#cfpbHistoryRows .cfpb-history-row").count() == 1
+        page.locator("#cfpbHistoricalPanel > summary").click()
         page.locator("#cfpbComplaints > summary").click()
         print("CFPB public structured complaint record and safe search/filter display: PASS")
 

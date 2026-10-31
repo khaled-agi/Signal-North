@@ -97,3 +97,54 @@ still allegations, not confirmed misconduct. Comparing raw complaint counts
 across institutions with different customer counts or business models is
 inappropriate. Newly published records appear only after a successful live
 CFPB scan; CI tests use fictitious fixture data exclusively inside tests.
+
+## CFPB historical collection: December 2011 onward
+
+The CFPB archive identifies December 1, 2011 as the earliest historical
+complaint date. Early CFPB product categories arrived on different dates,
+and product and issue choices changed over time; do not infer changing
+fraud prevalence directly from raw complaint counts.
+
+Official source:
+https://www.consumerfinance.gov/foia-requests/foia-electronic-reading-room/cfpb-consumer-complaint-database-narratives-archive/
+
+The monthly collector (scripts/collect_cfpb_history.py) queries six complete
+calendar months per GitHub Actions run, proceeding from the most recent
+eligible month back to December 2011, with stateful cursor rotation.
+Only when the CFPB API provides an EXACT hits.total value do we publish
+an official month-level published-complaint count. Otherwise we say unknown.
+
+The first 100 matching public records per month are used strictly as
+nonrepresentative illustrative issue/sub-issue and product samples. Their
+percentages are not population percentages. A completed CFPB month count
+must NOT be multiplied by sampled issue proportions. The latest month
+must pass at least a 17-day post-month lag before it is queried, but all
+historical months can still be revised subsequently by CFPB.
+
+Stored files:
+- data/cfpb_monthly_history.json
+- data/cfpb_monthly_history_status.json
+- data/cfpb_monthly_history_state.json
+
+Historical backfill in progress is not a claim that every month or complaint
+has been downloaded. No complaint narratives or private consumer details.
+
+## Richer reason and company response information
+
+Individual recent public complaint records retain optional company public
+response, channel submitted via, and date sent to company, in addition
+to the existing product, subproduct, issue and subissue, company response,
+response timeliness, and mailing-state fields. A user may now filter by
+the selected issue. Classification labels have changed over time.
+Consumers' allegations remain unverified.
+
+## Next, Canadian complaints
+
+The planned next independent official source is Canadian Anti-Fraud Centre
+(CAFC) Fraud Reporting System data:
+https://open.canada.ca/data/dataset/6a09c998-cddb-4a22-beff-4dca67ab892f
+
+Its currently published dataset reaches September 2025 and dates to 2021.
+CAFC reporting is a different complaint population and not directly
+comparable with CFPB. Any CAFC ingestion must keep definitions, limitations,
+publication lag and reporting geography separate from U.S. records.

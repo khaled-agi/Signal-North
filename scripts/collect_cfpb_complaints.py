@@ -67,6 +67,9 @@ def record(hit):
   "sub_issue":text(src.get("sub_issue"),180),
   "state":text(src.get("state"),5),
   "company_response":text(src.get("company_response"),100),
+  "company_public_response":text(src.get("company_public_response"),140),
+  "submitted_via":text(src.get("submitted_via"),35),
+  "date_sent_to_company":valid_date(src.get("date_sent_to_company")),
   "timely":text(src.get("timely"),12),
   "source":"CFPB Consumer Complaint Database",
   "source_url":BASE+str(int(cid)),
@@ -123,7 +126,8 @@ def retain(rows,clock=None):
   if not cid.isdigit() or not dt or dt<cutoff or dt>clock.date().isoformat():continue
   cleaned={k:item.get(k,"") for k in (
    "id","date_received","company","product","sub_product","issue",
-   "sub_issue","state","company_response","timely","source",
+   "sub_issue","state","company_response","company_public_response",
+   "submitted_via","date_sent_to_company","timely","source",
    "source_url","evidence_status","geography_basis")}
   cleaned["source_url"]=BASE+cid
   cleaned["source"]="CFPB Consumer Complaint Database"

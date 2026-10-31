@@ -222,11 +222,21 @@
           <div class="world-reporting-toolbar">
             <label for="cfpbCompany">Bank / company <select id="cfpbCompany" aria-label="CFPB complaint company"><option value="">All companies</option></select></label>
             <label for="cfpbProduct">Product <select id="cfpbProduct" aria-label="CFPB complaint product"><option value="">All products</option></select></label>
+            <label for="cfpbIssue">Reason / issue <select id="cfpbIssue" aria-label="CFPB issue reason"><option value="">All issues</option></select></label>
             <label for="cfpbState">State <select id="cfpbState" aria-label="Consumer mailing state"><option value="">All states</option></select></label>
             <label for="cfpbQuery">Search <input id="cfpbQuery" type="search" placeholder="Company or complaint issue…" aria-label="Search CFPB company and issue"></label>
           </div>
           <div id="cfpbRows" class="world-reporting-rows" aria-live="polite"><div class="empty">No CFPB records collected yet.</div></div>
           <div class="world-results-footer"><span id="cfpbShown">0 records</span><button id="cfpbMore" type="button" hidden>Load 30 more</button><a href="https://www.consumerfinance.gov/data-research/consumer-complaints/" target="_blank" rel="noopener noreferrer">CFPB database and methodology ↗</a></div>
+          <details class="cfpb-history" id="cfpbHistoricalPanel">
+            <summary><strong>Historical complaints: December 2011 onward</strong><span id="cfpbHistorySummary">Checking monthly source coverage…</span></summary>
+            <p class="supporting-disclaimer">CFPB monthly complaint totals are displayed only when the API reports an <strong>exact count</strong>. Reasons below are breakdowns of at most 100 returned complaints in each month, not the full month's issue distribution. Only fetched months are shown; missing months have not been verified as empty.</p>
+            <div class="world-reporting-toolbar">
+              <label for="cfpbHistoryYear">Year <select id="cfpbHistoryYear" aria-label="CFPB historical complaint year"><option value="">All fetched years</option></select></label>
+              <label for="cfpbHistoryIssue">Sampled reason <select id="cfpbHistoryIssue" aria-label="Historical sampled issue category"><option value="">All sampled reasons</option></select></label>
+            </div>
+            <div id="cfpbHistoryRows" class="world-reporting-rows" aria-live="polite"><div class="empty">Historical monthly scans have not populated data yet.</div></div>
+          </details>
         </section>
       </div>
     </details>
