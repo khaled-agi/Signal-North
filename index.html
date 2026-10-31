@@ -297,6 +297,13 @@
           <div id="obsiSourceLinks" class="world-reporting-rows" aria-live="polite"></div>
           <div class="panel-heading"><div><div class="eyebrow">OBSI FISCAL-YEAR HISTORY / SECTOR-WIDE</div><h2>Published banking complaint trends</h2></div><span id="obsiHistoricStatus" class="small">Checking official banking history…</span></div>
           <p class="supporting-disclaimer">These are OBSI banking-sector totals, not complaints attributed to individual banks. The 2025 expansion to all federally regulated banks creates a coverage break; do not treat it as purely organic complaint growth. Institution-by-institution historical totals remain unverified without a Power BI data export.</p>
+          <div class="panel-heading"><div><div class="eyebrow">OBSI PRIMARY SOURCE / BANK BY BANK</div><h2>Escalated complaints by named institution</h2></div><span id="obsiFirmStatus" class="small">Loading verified firm metrics…</span></div>
+          <p class="supporting-disclaimer">Actual firm-by-firm figures extracted from the OBSI Annual Report, pp. 35–36. Four distinct measures: complaints received, cases opened, cases closed and cases resolved to complainant satisfaction. Firm names may identify subsidiaries and group entities. Do not add these figures to internal bank complaint totals or rank banks by raw volumes.</p>
+          <div class="world-reporting-toolbar">
+            <label for="obsiFirmYear">Fiscal year <select id="obsiFirmYear"><option value="">All published years</option></select></label>
+            <label for="obsiFirmName">Institution <input id="obsiFirmName" type="search" placeholder="Bank or federal credit union…" aria-label="Filter named OBSI institutions"></label>
+          </div>
+          <div id="obsiFirmRows" class="world-reporting-rows"><div class="empty">Loading OBSI named-institution case records…</div></div>
           <div id="obsiHistoricalSeries" class="world-reporting-rows"><div class="empty">Loading published OBSI historical figures…</div></div>
           <details class="cfpb-history"><summary>Historical OBSI official report documents <span id="obsiReportCount">Checking report catalog…</span></summary><div id="obsiReportLinks" class="world-reporting-rows"><div class="empty">Official report downloads pending…</div></div></details>
           <p class="supporting-disclaimer"><strong>Historical scope:</strong> OBSI's Data Cube provides historical reporting from November 1, 2016, updated quarterly. Individual bank case summaries cover closed federally regulated bank cases from June 30, 2022. Scope and bank participation have changed over time, especially with the single banking external complaints body effective November 2024. Do not add OBSI cases to CAFC fraud reports or CFPB complaint counts.</p>
@@ -438,6 +445,7 @@
 <script src="./cafc.js?v=__BUILD_SHA__" defer></script>
 <script src="./obsi.js?v=__BUILD_SHA__" defer></script>
 <script src="./obsi_history.js?v=__BUILD_SHA__" defer></script>
+<script src="./obsi_firms.js?v=__BUILD_SHA__" defer></script>
 <script src="./bank_disclosures.js?v=__BUILD_SHA__" defer></script>
 <script src="./canadian_sources.js?v=__BUILD_SHA__" defer></script>
 <script src="./canadian_provincial.js?v=__BUILD_SHA__" defer></script>
