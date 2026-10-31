@@ -181,7 +181,7 @@ def classify(title,profile):
         term for _language,_country,term in MARKET_EXTRA_QUERIES.get(profile["code"],())
     ]
     relevant=any(term in t for term in TITLE_RELEVANCE_TERMS) or any(
-        len(term)>=3 and term.casefold() in t for term in local_terms
+        len(term)>=2 and term.casefold() in t for term in local_terms
     )
     if not relevant:
         return None
@@ -212,7 +212,7 @@ def parse_feed(raw,profile,query,observed_at,unattributed=None):
             spec=local_query_spec(profile,query)
             local_term=spec["term"] if spec else ""
             if (unattributed is not None and is_local_query(profile,query) and
-                len(local_term)>=3 and local_term.casefold() in title.casefold()):
+                len(local_term)>=2 and local_term.casefold() in title.casefold()):
                 src=item.find("source")
                 publisher=" ".join((src.text or "").split())[:100] if src is not None else "RSS discovery"
                 edition,basis=query_edition(profile,query)
