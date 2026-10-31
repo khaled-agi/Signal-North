@@ -175,7 +175,7 @@ try:
         assert page.locator("#worldNewsMore").count() == 1
         assert page.locator("#localLanguageDiscovery").count() == 1
         page.locator("#localLanguageDiscovery > summary").click()
-        assert "Country and article origin NOT established" in page.locator("#localLanguageDiscovery").inner_text()
+        assert "Search market is a discovery clue only" in page.locator("#localLanguageDiscovery").inner_text()
         assert page.locator("#localLanguageRows").count() == 1
         assert page.locator("#localLanguageMore").count() == 1
         page.locator("#localLanguageDiscovery > summary").click()
