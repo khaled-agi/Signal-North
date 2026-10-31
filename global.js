@@ -99,11 +99,26 @@
    '<option value="'+html(x)+'">'+html(x)+'</option>').join("");
   if(values.includes(prior))el.value=prior;
  }
+
+ // Geographic regions select *which country-mentioned records* to display;
+ // these lists are not proof of event location or publisher nationality.
+ const REGION_MARKETS={
+  "africa":"DZ AO BJ BW BF BI CM CV CF TD KM CG CD CI DJ EG GQ ER SZ ET GA GM GH GN GW KE LS LR LY MG MW ML MR MU YT MA MZ NA NE NG RE RW ST SN SC SL SO ZA SS SH SD TZ TG TN UG EH ZM ZW",
+  "southeast-asia":"BN KH ID LA MY MM PH SG TH TL VN",
+  "south-asia":"AF BD BT IN MV NP PK LK",
+  "east-asia":"CN HK JP KP KR MO MN TW"
+ };
+ const IN_REGIONS=Object.fromEntries(Object.entries(REGION_MARKETS).map(([k,v])=>[k,new Set(v.split(" "))]));
+ function matchesRegion(code){
+  const region=get("worldNewsRegion")?.value||"";
+  return !region||Boolean(IN_REGIONS[region]?.has(code));
+ }
+
  function renderWorldReporting(){
   const code=get("worldNewsCountry")?.value||"";
   const topic=get("worldNewsCategory")?.value||"";
   const q=(get("worldNewsQuery")?.value||"").trim().toLocaleLowerCase();
-  const matches=model.worldNews.filter(x=>(!code||x.country_code===code) &&
+  const matches=model.worldNews.filter(x=>(!code||x.country_code===code) && matchesRegion(x.country_code) &&
     (!topic||x.category===topic) &&
     (!q||[x.title,x.country,x.publisher,x.category].some(v=>String(v||"").toLocaleLowerCase().includes(q))))
     .slice().sort((a,b)=>String(b.published_at||"").localeCompare(String(a.published_at||"")));
@@ -116,7 +131,7 @@
     (model.countries.find(x=>x.code===code)?.name||code)+" · "+(scan?.state||"not attempted")+
       " · Last scan "+String(scan?.attempted_at||"never").slice(0,16):
     (model.worldNewsStatus.markets_attempted||0)+" / "+model.countries.length+
-      " markets attempted · "+model.worldNews.length+" country-referenced unverified articles";
+      " markets attempted · "+model.worldNews.length+" country-referenced unverified articles · "+(get("worldNewsRegion")?.selectedOptions?.[0]?.textContent||"All regions");
   const visible=matches.slice(0,model.newsVisible);
   get("worldReportingRows").innerHTML=visible.length?visible.map(x=>{
    const url=goodUrl(x.url);
@@ -139,7 +154,7 @@
   const q=(get("worldNewsQuery")?.value||"").toLocaleLowerCase().trim();
   const topic=get("worldNewsCategory")?.value||"";
   const matches=model.localCandidates.filter(x=>
-    (!market||x.search_market_code===market)&&(!topic||x.category===topic)&&
+    (!market||x.search_market_code===market)&&matchesRegion(x.search_market_code)&&(!topic||x.category===topic)&&
     (!q||[x.title,x.publisher,x.search_market_name].some(v=>String(v||"").toLocaleLowerCase().includes(q)))
   ).slice().sort((a,b)=>String(b.published_at||"").localeCompare(String(a.published_at||"")));
   const visible=matches.slice(0,model.localVisible);
@@ -252,7 +267,16 @@
   window.dispatchEvent(new CustomEvent("signalnorth:globalready",{detail:{events:model.events,countries:model.countries,health:model.health,worldNews:model.worldNews,worldNewsStatus:model.worldNewsStatus,regLeads:model.regLeads,regStatus:model.regStatus}}));
  }
  get("mapCountry").addEventListener("change",renderCountryBrief);
- get("worldNewsCountry")?.addEventListener("change",()=>{model.newsVisible=50;model.localVisible=50;renderWorldReporting();renderLocalLanguageCandidates();});
+ get("worldNewsRegion")?.addEventListener("change",()=>{
+  if(get("worldNewsCountry"))get("worldNewsCountry").value="";
+  model.newsVisible=50;model.localVisible=50;
+  renderWorldReporting();renderLocalLanguageCandidates();
+ });
+ get("worldNewsCountry")?.addEventListener("change",()=>{
+  if(get("worldNewsRegion"))get("worldNewsRegion").value="";
+  model.newsVisible=50;model.localVisible=50;
+  renderWorldReporting();renderLocalLanguageCandidates();
+ });
  get("worldNewsCategory")?.addEventListener("change",()=>{model.newsVisible=50;model.localVisible=50;renderWorldReporting();renderLocalLanguageCandidates();});
  get("worldNewsQuery")?.addEventListener("input",()=>{model.newsVisible=50;model.localVisible=50;renderWorldReporting();renderLocalLanguageCandidates();});
  get("worldNewsMore")?.addEventListener("click",()=>{model.newsVisible+=50;renderWorldReporting();});
