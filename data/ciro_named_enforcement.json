@@ -1,0 +1,82 @@
+{
+  "updated_on": "2026-10-31",
+  "source": "CIRO direct case pages and official decision notices",
+  "records": [
+    {
+      "id": "ciro-2026-rbc-ds-futures",
+      "institution": "RBC Dominion Securities Inc.",
+      "regulator": "CIRO",
+      "publication_date": "2026-07-02",
+      "concluded_date": "2026-06-18",
+      "status": "concluded_settlement",
+      "topic": "Inadequate system supervising futures trading activities of registered representatives",
+      "fine_cad": 1500000,
+      "disgorgement_cad": 1800000,
+      "costs_cad": 100000,
+      "case_url": "https://www.ciro.ca/rules-and-enforcement/enforcement/rbc-dominion-securities",
+      "notice_url": "https://www.ciro.ca/newsroom/publications/ciro-sanctions-rbc-dominion-securities-inc",
+      "source_kind": "official_CIRO_concluded_proceeding"
+    },
+    {
+      "id": "ciro-2026-national-bank-financial-supervision",
+      "institution": "National Bank Financial Inc.",
+      "regulator": "CIRO",
+      "publication_date": "2026-03-13",
+      "concluded_date": "2026-03-03",
+      "status": "concluded_settlement",
+      "topic": "Inadequate supervision of a registered representative: note-taking and suitability",
+      "fine_cad": 1000000,
+      "disgorgement_cad": 0,
+      "costs_cad": 50000,
+      "case_url": "https://www.ciro.ca/rules-and-enforcement/enforcement/national-bank-financial-inc-2",
+      "notice_url": "https://www.ciro.ca/newsroom/publications/ciro-sanctions-national-bank-financial-inc",
+      "source_kind": "official_CIRO_concluded_proceeding"
+    },
+    {
+      "id": "ciro-2023-scotia-securities",
+      "institution": "Scotia Securities Inc.",
+      "regulator": "CIRO",
+      "publication_date": null,
+      "concluded_date": null,
+      "status": "concluded",
+      "topic": "Published CIRO proceeding; consult decision for the detailed findings",
+      "fine_cad": 1000000,
+      "disgorgement_cad": 0,
+      "costs_cad": 75000,
+      "case_url": "https://www.ciro.ca/rules-and-enforcement/enforcement/scotia-securities-inc",
+      "notice_url": null,
+      "source_kind": "official_CIRO_concluded_proceeding"
+    },
+    {
+      "id": "ciro-legacy-rbc-ds-500k",
+      "institution": "RBC Dominion Securities Inc.",
+      "regulator": "CIRO / predecessor IIROC",
+      "publication_date": null,
+      "concluded_date": null,
+      "status": "concluded",
+      "topic": "Legacy IIROC decision; consult official proceeding for the findings",
+      "fine_cad": 500000,
+      "disgorgement_cad": 0,
+      "costs_cad": 10000,
+      "case_url": "https://www.ciro.ca/rules-and-enforcement/enforcement/rbc-dominion-securities-inc",
+      "notice_url": null,
+      "source_kind": "official_predecessor_IIROC_concluded_proceeding"
+    },
+    {
+      "id": "ciro-legacy-national-bank-financial-110k",
+      "institution": "National Bank Financial Inc.",
+      "regulator": "CIRO / predecessor IIROC",
+      "publication_date": null,
+      "concluded_date": null,
+      "status": "concluded",
+      "topic": "Legacy IIROC decision; consult official proceeding for the findings",
+      "fine_cad": 110000,
+      "disgorgement_cad": 0,
+      "costs_cad": 10000,
+      "case_url": "https://www.ciro.ca/rules-and-enforcement/enforcement/national-bank-financial-inc",
+      "notice_url": null,
+      "source_kind": "official_predecessor_IIROC_concluded_proceeding"
+    }
+  ],
+  "methodology": "Individual concluded cases from regulator pages; firm-level legal entities are not automatically consolidated with bank parents. Fines, costs and disgorgement are separate amounts. No allegations or pending hearings are counted as sanctions. Legacy IIROC proceedings retained separately."
+}
