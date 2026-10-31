@@ -1,7 +1,7 @@
 {
-  "last_completed_at": "2026-10-31T00:03:15+00:00",
+  "last_completed_at": "2026-10-31T00:19:19+00:00",
   "regulators_configured": 30,
-  "regulators_attempted": 24,
+  "regulators_attempted": 30,
   "countries_with_publication_leads": 0,
   "leads_count": 0,
   "agencies": {
@@ -196,6 +196,54 @@
       "source_domain": "gov.br",
       "country_code": "BR",
       "regulator": "CVM"
+    },
+    "ES:CNMV": {
+      "status": "empty",
+      "accepted": 0,
+      "checked_at": "2026-10-31T00:19:04+00:00",
+      "source_domain": "cnmv.es",
+      "country_code": "ES",
+      "regulator": "CNMV"
+    },
+    "NL:AFM": {
+      "status": "empty",
+      "accepted": 0,
+      "checked_at": "2026-10-31T00:19:06+00:00",
+      "source_domain": "afm.nl",
+      "country_code": "NL",
+      "regulator": "AFM"
+    },
+    "NO:Finanstilsynet": {
+      "status": "empty",
+      "accepted": 0,
+      "checked_at": "2026-10-31T00:19:06+00:00",
+      "source_domain": "finanstilsynet.no",
+      "country_code": "NO",
+      "regulator": "Finanstilsynet"
+    },
+    "BE:FSMA": {
+      "status": "error",
+      "error_type": "HTTPError",
+      "checked_at": "2026-10-31T00:19:15+00:00",
+      "source_domain": "fsma.be",
+      "country_code": "BE",
+      "regulator": "FSMA"
+    },
+    "CA:FINTRAC": {
+      "status": "error",
+      "error_type": "HTTPError",
+      "checked_at": "2026-10-31T00:19:18+00:00",
+      "source_domain": "fintrac-canafe.canada.ca",
+      "country_code": "CA",
+      "regulator": "FINTRAC"
+    },
+    "KR:FSC": {
+      "status": "empty",
+      "accepted": 0,
+      "checked_at": "2026-10-31T00:19:19+00:00",
+      "source_domain": "fsc.go.kr",
+      "country_code": "KR",
+      "regulator": "FSC"
     }
   },
   "coverage_note": "Configured agencies are a small subset of world regulators, not comprehensive enforcement. Official-domain publication leads require individual legal status confirmation."
