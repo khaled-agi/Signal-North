@@ -229,12 +229,14 @@ try:
         assert page.locator("#mapCountry").input_value() == ""
         page.locator("#mapCountry").select_option("US")
         assert "Jurisdiction: United States" in page.locator("#mapCaption").inner_text()
+        page.locator('[data-mapmode="enforcement"]').click()
         assert page.locator("#mappedStories .map-story").count() >= 2
         assert "international agency" in page.locator("#mappedStories").inner_text().lower()
         page.locator("#mapAgency").select_option("FinCEN")
         assert "Agency: FinCEN" in page.locator("#mapCaption").inner_text()
         assert "FinCEN" in page.locator("#mappedStories").inner_text()
         page.locator("#mapAgency").select_option("")
+        page.locator('[data-mapmode="all"]').click()
         page.locator("#mapCountry").select_option("GB")
         assert "Jurisdiction: United Kingdom" in page.locator("#mapCaption").inner_text()
         for code,agency in [("HK","HKMA"),("SG","MAS"),("IE","Central Bank of Ireland")]:
