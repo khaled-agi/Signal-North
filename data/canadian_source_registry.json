@@ -1,0 +1,141 @@
+{
+  "updated": "2026-10-30",
+  "description": "Curated official-source inventory. A linked source is not an ingested dataset.",
+  "sources": [
+    {
+      "agency": "OBSI",
+      "type": "complaints",
+      "jurisdiction": "Canada",
+      "dataset": "Data Cube: cases by banking services firms",
+      "url": "https://www.obsi.ca/en/case-data-insights/data-cube/cases-by-banking-services-firms/",
+      "status": "linked_only",
+      "notes": "Interactive Power BI, no verified stable public bulk API"
+    },
+    {
+      "agency": "Canadian bank annual complaints",
+      "type": "complaints",
+      "jurisdiction": "Canada",
+      "dataset": "Institution-published designated office annual complaints",
+      "url": "https://www.canada.ca/en/financial-consumer-agency/services/banking/complaints.html",
+      "status": "partial_ingestion",
+      "notes": "RBC and TD 2025 report figures already seeded; expand bank by bank"
+    },
+    {
+      "agency": "CAFC",
+      "type": "complaints",
+      "jurisdiction": "Canada",
+      "dataset": "Open Government fraud reporting data",
+      "url": "https://open.canada.ca/data/dataset/6a09c998-cddb-4a22-beff-4dca67ab892f",
+      "status": "active_collection",
+      "notes": "Aggregated 2021–September 2025; not named-bank complaints"
+    },
+    {
+      "agency": "FCAC",
+      "type": "enforcement",
+      "jurisdiction": "Canada",
+      "dataset": "Commissioner decisions and summaries of proceedings",
+      "url": "https://www.canada.ca/en/financial-consumer-agency/services/industry/commissioner-decisions.html",
+      "status": "linked_only",
+      "notes": "Named decisions with dates, findings and sometimes penalties; extract case by case"
+    },
+    {
+      "agency": "FINTRAC",
+      "type": "enforcement",
+      "jurisdiction": "Canada",
+      "dataset": "Public notices of administrative monetary penalties",
+      "url": "https://fintrac-canafe.canada.ca/pen/4-eng",
+      "status": "linked_only",
+      "notes": "Named reporting entities, violation details and monetary penalties"
+    },
+    {
+      "agency": "FINTRAC",
+      "type": "sector",
+      "jurisdiction": "Canada",
+      "dataset": "News releases and AML typology updates",
+      "url": "https://fintrac-canafe.canada.ca/new-neuf/1-eng",
+      "status": "linked_only",
+      "notes": "Official news and indicators; separate guidance from enforcement"
+    },
+    {
+      "agency": "OSFI",
+      "type": "institutions",
+      "jurisdiction": "Canada",
+      "dataset": "Who we regulate — federal financial institutions",
+      "url": "https://open.canada.ca/data/en/dataset/b27ec3ef-7338-4e76-a6fd-128339a92df5",
+      "status": "machine_readable",
+      "notes": "Monthly official CSV available; exact entity master needs reconciliation"
+    },
+    {
+      "agency": "OSFI",
+      "type": "sector",
+      "jurisdiction": "Canada",
+      "dataset": "Financial data (FINDAT) published through Open Government",
+      "url": "https://www.osfi-bsif.gc.ca/en/data-forms/open-government-osfi-financial-data/working-open-government-data",
+      "status": "machine_readable",
+      "notes": "Monthly and quarterly regulatory financial metrics, not fraud incidents"
+    },
+    {
+      "agency": "CSA",
+      "type": "enforcement",
+      "jurisdiction": "Canada",
+      "dataset": "Disciplined list (SEDAR+)",
+      "url": "https://www.securities-administrators.ca/csa-activities/enforcement/disciplined-list/",
+      "status": "linked_only",
+      "notes": "Companies and individuals sanctioned by participating regulators"
+    },
+    {
+      "agency": "OSC",
+      "type": "enforcement",
+      "jurisdiction": "Ontario",
+      "dataset": "Ontario Securities Commission enforcement",
+      "url": "https://www.osc.ca/en/enforcement",
+      "status": "linked_only",
+      "notes": "Ontario enforcement proceedings, orders and decisions"
+    },
+    {
+      "agency": "AMF",
+      "type": "enforcement",
+      "jurisdiction": "Quebec",
+      "dataset": "Autorité des marchés financiers",
+      "url": "https://lautorite.qc.ca/en/",
+      "status": "linked_only",
+      "notes": "Quebec regulatory actions; French and English original records"
+    },
+    {
+      "agency": "BCSC",
+      "type": "enforcement",
+      "jurisdiction": "British Columbia",
+      "dataset": "British Columbia Securities Commission",
+      "url": "https://www.bcsc.bc.ca/",
+      "status": "linked_only",
+      "notes": "BC securities enforcement notices and orders"
+    },
+    {
+      "agency": "ASC",
+      "type": "enforcement",
+      "jurisdiction": "Alberta",
+      "dataset": "Alberta Securities Commission",
+      "url": "https://www.asc.ca/",
+      "status": "linked_only",
+      "notes": "Alberta securities enforcement and warnings"
+    },
+    {
+      "agency": "CIRO",
+      "type": "enforcement",
+      "jurisdiction": "Canada",
+      "dataset": "Canadian Investment Regulatory Organization enforcement",
+      "url": "https://www.ciro.ca/",
+      "status": "linked_only",
+      "notes": "Dealer and individual disciplinary proceedings"
+    },
+    {
+      "agency": "Payments Canada",
+      "type": "sector",
+      "jurisdiction": "Canada",
+      "dataset": "Payment system reports and statistics",
+      "url": "https://www.payments.ca/",
+      "status": "linked_only",
+      "notes": "System-level payments trends; not bank-specific fraud totals"
+    }
+  ]
+}
