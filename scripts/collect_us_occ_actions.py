@@ -101,7 +101,7 @@ def main():
   except (OSError,ValueError):pass
  health=dict(old.get("source_health",{}))
  records={x["id"]:x for x in old.get("records",[])}
- key=os.getenv("OCC_API_KEY","DEMO_KEY")
+ key=os.getenv("OCC_API_KEY") or "DEMO_KEY"
  budget=int(os.getenv("OCC_SEARCH_BATCH","12"))
  if budget<1 or budget>len(SEARCH_TERMS):raise ValueError("OCC_SEARCH_BATCH invalid")
  session=requests.Session()
