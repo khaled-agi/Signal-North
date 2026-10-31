@@ -44,10 +44,10 @@ TERM=re.compile(
  r"enforcement|penalt|sanction|settlement|market manipul|money mule|"
  r"prohibition order|warning against|unlicensed|identity theft|"
  r"financial crime|financial intelligence|embezzl|forger|"
- r"arrest|charged|convict|indict|investigat|securities order|"
+ r"securities order|financial misconduct|money laundering|fraudster|"
  r"escroquer|arnaque|fraude|estafa|estafas|burla|golpe|"
  r"mashtrim|penipuan|pencucian uang|dugaan tindak pidana|"
- r"诈骗|詐騙|造假|洗钱|洗錢|处罚|處罰|罚款|罰款|"
+ r"诈骗|詐騙|造假|洗钱|洗錢|处罚|處罰|罚款|罰款|行政处罚|违法违规|"
  r"احتيال|نصب|غسل الأموال| धोखाधड़ी|ठगी|"
  r"မလိမ်|လိမ်လည်|mōsadi| மோசடி|"
  r"បោកប្រាស់|หลอกลวง|ฟอกเงิน|lừa đảo|rửa tiền|"
@@ -221,7 +221,13 @@ def run():
  selected=[SOURCES[(cursor+i)%len(SOURCES)] for i in range(batch)]
  if os.getenv("DIRECT_SOURCE_OFFLINE")=="1":selected=[]
  known={r["id"]:r for r in retained(previous.get("records",[]),ts)}
- health=dict(old.get("sources",{}))
+ health={
+  src["id"]:{**old.get("source_health",{}).get(src["id"],{}),
+       "country_code":src["country"],"name":src["name"],
+       "source_type":src["kind"],"source_url":src["url"],
+       "status":old.get("source_health",{}).get(src["id"],{}).get("status","not_attempted")}
+  for src in SOURCES
+ }
  with ThreadPoolExecutor(max_workers=5) as pool:
   jobs={pool.submit(fetch_source,src,ts):src for src in selected}
   for fut in as_completed(jobs):
