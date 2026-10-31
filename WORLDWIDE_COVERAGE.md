@@ -236,3 +236,30 @@ The actual number of successful searches and accepted article leads is
 reported by the latest source-status snapshots, not predicted from the
 configured country or query count. Cross-language event deduplication is
 intentionally deferred.
+
+
+## Empty-market recovery and evidence of omissions
+
+An unattempted market is not the same as a successful empty query. Neither
+status means there are no fraud incidents or no published reports.
+
+The collector continues the exhaustive 250-market rotation, with extra
+deterministic retries for unattempted and empty/error markets. Recovery
+uses alternate market names (e.g. Bolivia/boliviana, Mauritius/Maurice,
+PNG/Papua New Guinea) and a longer 90-day search query. The retry count,
+last attempted time, error/partial status and accepted headline counts remain
+visible. All mapped reports must still explicitly mention their country in
+the headline; local search matches alone are never incident-location proof.
+Some genuine local headlines without country mentions remain excluded or
+in the separately unlocated research queue.
+
+The public collapsed 'Audit the countries with missing or empty news coverage'
+panel shows exactly what the collector checked and when, and links directly
+to four separately source-reviewed public reports from Bolivia, Botswana,
+Mauritius and Papua New Guinea. These editorial examples illustrate real
+data-source gaps; they are NOT silently promoted to a country-mapped headline
+or to a final regulator decision. `data/world_coverage_counterexamples.json`
+contains the original source URLs and evidence labels.
+
+**Do not use the absence of accepted results to conclude the absence of
+financial crime**, or publish claims of comprehensive country coverage.

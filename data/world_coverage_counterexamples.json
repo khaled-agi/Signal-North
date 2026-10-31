@@ -1,0 +1,50 @@
+{
+  "reviewed_at": "2026-10-30",
+  "methodology": "Directly inspected public source pages. These demonstrate that an empty automated RSS collection result does not establish absence of fraud reporting. Curated country context is supported by page content, not necessarily headline. NOT confirmed crime locations or adjudicated findings.",
+  "examples": [
+    {
+      "country_code": "BO",
+      "country": "Bolivia",
+      "title": "Policía boliviana atendió 2.826 denuncias de estafa en 6 meses",
+      "published_at": "2026-10-12",
+      "source": "El País Bolivia",
+      "url": "https://elpais.bo/seguridad/20261012_policia-boliviana-atendio-2-826-denuncias-de-estafa-en-6-meses.html",
+      "type": "local_media_reporting",
+      "evidence_status": "source_page_reviewed_not_incident_verified",
+      "notes": "News report discussing police fraud complaints, not verification of each allegation"
+    },
+    {
+      "country_code": "MU",
+      "country": "Mauritius",
+      "title": "Scam Alert: Social media post pertaining to investment scheme",
+      "published_at": "2026-08-29",
+      "source": "Bank of Mauritius",
+      "url": "https://www.bom.mu/financial-stability/supervision/scam-alerts/scam-alert-social-media-post-pertaining-investment-scheme",
+      "type": "official_public_warning",
+      "evidence_status": "original_agency_warning_not_enforcement",
+      "notes": "Agency warning about fraudulent investment promotion; not an adjudicated financial penalty"
+    },
+    {
+      "country_code": "PG",
+      "country": "Papua New Guinea",
+      "title": "A former UPNG bursar arrested and charged",
+      "published_at": "2026-08-18",
+      "source": "Royal Papua New Guinea Constabulary",
+      "url": "https://rpngc.gov.pg/a-former-upng-bursar-arrested-charged/",
+      "type": "official_police_allegations",
+      "evidence_status": "original_police_report_allegations",
+      "notes": "Police report of alleged financial fraud; charges do not establish guilt"
+    },
+    {
+      "country_code": "BW",
+      "country": "Botswana",
+      "title": "Balopi and co-accused to appear on October 28",
+      "published_at": "2026-09-16",
+      "source": "Botswana Daily News",
+      "url": "https://dailynews.gov.bw/news-detail/93284",
+      "type": "official_news_reporting_of_charges",
+      "evidence_status": "source_page_reviewed_charges_not_conviction",
+      "notes": "Reported charges of fraud and money laundering; allegations remain allegations"
+    }
+  ]
+}

@@ -10,7 +10,7 @@
   "Casino / gambling":/(casino|gambling|gaming|betting|lottery)/i,
   "Investor / consumer protection":/(investor|consumer|client.asset|securities|conduct|financial crime controls)/i,
  };
- const model={events:[],countries:[],health:{},canadianEvents:[],worldNews:[],worldNewsStatus:{},regLeads:[],regStatus:{},localCandidates:[],localVisible:50,newsVisible:50,regVisible:50};
+ const model={events:[],countries:[],health:{},canadianEvents:[],worldNews:[],worldNewsStatus:{},regLeads:[],regStatus:{},coverageExamples:[],localCandidates:[],localVisible:50,newsVisible:50,regVisible:50};
  function renderPatterns(){
   const host=get("globalPatterns");
   const themes=Object.entries(THEMES).map(([name,rx])=>{
@@ -148,6 +148,41 @@
   get("worldNewsAll").hidden=visible.length>=matches.length;
  }
 
+
+ function renderCoverageAudit(){
+  const root=get("worldCoverageAuditRows");if(!root)return;
+  const statuses=model.worldNewsStatus.countries||{};
+  const countries=model.countries.filter(c=>matchesRegion(c.code));
+  const empty=countries.filter(c=>statuses[c.code]?.state==="attempted_empty");
+  const unscanned=countries.filter(c=>!statuses[c.code]?.attempted_at);
+  const errors=countries.filter(c=>["partial_error","error"].includes(statuses[c.code]?.state));
+  const unresolved=[
+   ...unscanned.map(c=>({c,sort:0,state:"Not yet scanned"})),
+   ...errors.map(c=>({c,sort:1,state:"Collection failed / partial"})),
+   ...empty.map(c=>({c,sort:2,state:"Scanned; no accepted headlines"}))
+  ].sort((a,b)=>a.sort-b.sort||a.c.name.localeCompare(b.c.name));
+  get("worldCoverageAuditSummary").textContent=
+    unscanned.length+" not scanned · "+empty.length+" empty last scan · "+errors.length+" errors";
+  root.innerHTML=unresolved.length?unresolved.map(({c,state})=>{
+   const health=statuses[c.code]||{};
+   return '<div class="world-coverage-audit-row"><strong>'+html(c.name)+
+    ' <small>'+html(c.code)+'</small></strong><span>'+html(state)+'</span>'+
+    '<small>Last checked: '+html(String(health.attempted_at||"Never").slice(0,16))+
+    ' · '+(health.queries_attempted||0)+' queries'+
+    (health.recovery_queries_attempted?' · '+health.recovery_queries_attempted+' recovery queries':'')+
+    '</small></div>';
+  }).join(""):'<p class="supporting-disclaimer">Every market shown has a scan with accepted news. That is not proof of full news coverage.</p>';
+  const examples=model.coverageExamples.filter(x=>matchesRegion(x.country_code));
+  get("worldCoverageExamples").innerHTML=examples.map(x=>{
+   const source=goodUrl(x.url);
+   return '<article class="world-coverage-example"><span>'+html(x.country)+
+    ' · '+html(x.published_at)+' · '+html(x.source)+'</span>'+
+    '<strong>'+html(x.title)+'</strong><small>'+html(x.notes||"")+'</small>'+
+    (source?'<a href="'+html(source)+'" target="_blank" rel="noopener noreferrer">Inspect published source ↗</a>':"")+
+    '</article>';
+  }).join("")||'<p class="supporting-disclaimer">No independently checked examples in this region yet; that is not proof of no fraud reporting.</p>';
+ }
+
  function renderLocalLanguageCandidates(){
   const target=get("localLanguageRows");if(!target)return;
   const market=get("worldNewsCountry")?.value||"";
@@ -214,7 +249,7 @@
    active.length+' jurisdictions with official enforcement records including Canada · '+count+' non-Canadian official actions</span>';
  }
  async function load(){
-  const paths=["world_jurisdictions.json","global_enforcement.json","global_source_status.json","events.json","world_reporting.json","world_reporting_status.json","global_regulator_publications.json","global_regulator_publications_status.json","world_local_unattributed.json"];
+  const paths=["world_jurisdictions.json","global_enforcement.json","global_source_status.json","events.json","world_reporting.json","world_reporting_status.json","global_regulator_publications.json","global_regulator_publications_status.json","world_local_unattributed.json","world_coverage_counterexamples.json"];
   const results=await Promise.allSettled(paths.map(async x=>{
     const r=await fetch("./data/"+x+"?ts="+Date.now(),{cache:"no-store"});
     if(!r.ok)throw Error(x+": "+r.status);
@@ -238,6 +273,7 @@
   if(results[7].status==="fulfilled")model.regStatus=results[7].value||{};
   if(results[8].status==="fulfilled")model.localCandidates=(results[8].value.leads||[])
     .filter(x=>x.country_code===null && x.evidence_status==="unattributed_local_language_search_candidate");
+  if(results[9].status==="fulfilled")model.coverageExamples=results[9].value.examples||[];
   const country=get("mapCountry"),current=country.value;
   const referencedMarkets=new Set(model.worldNews.map(x=>x.country_code));
   country.innerHTML='<option value="">All countries (worldwide)</option>'+model.countries.map(c=>
@@ -261,6 +297,7 @@
   }
   bindSelect("worldRegAgency",[...new Set(model.regLeads.map(x=>x.regulator).filter(Boolean))].sort(),"All agencies");
   renderWorldReporting();
+  renderCoverageAudit();
   renderLocalLanguageCandidates();
   renderRegulatorPublications();
   renderCoverage();renderPatterns();renderCountryBrief();renderThreads();
@@ -270,12 +307,12 @@
  get("worldNewsRegion")?.addEventListener("change",()=>{
   if(get("worldNewsCountry"))get("worldNewsCountry").value="";
   model.newsVisible=50;model.localVisible=50;
-  renderWorldReporting();renderLocalLanguageCandidates();
+  renderWorldReporting();renderCoverageAudit();renderLocalLanguageCandidates();
  });
  get("worldNewsCountry")?.addEventListener("change",()=>{
   if(get("worldNewsRegion"))get("worldNewsRegion").value="";
   model.newsVisible=50;model.localVisible=50;
-  renderWorldReporting();renderLocalLanguageCandidates();
+  renderWorldReporting();renderCoverageAudit();renderLocalLanguageCandidates();
  });
  get("worldNewsCategory")?.addEventListener("change",()=>{model.newsVisible=50;model.localVisible=50;renderWorldReporting();renderLocalLanguageCandidates();});
  get("worldNewsQuery")?.addEventListener("input",()=>{model.newsVisible=50;model.localVisible=50;renderWorldReporting();renderLocalLanguageCandidates();});

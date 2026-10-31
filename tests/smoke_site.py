@@ -169,6 +169,18 @@ try:
         page.locator('[data-mapmode="all"]').click()
         page.locator('[data-tab="fraud"]').click()
         assert page.locator("#worldNewsCountry option").count() >= 240
+        # The gap audit distinguishes unscanned and empty feeds from genuine
+        # proof of absent fraud reporting, and links real counterexamples.
+        page.locator("#worldCoverageAudit > summary").click()
+        assert "empty last scan" in page.locator("#worldCoverageAuditSummary").inner_text()
+        assert "not scanned" in page.locator("#worldCoverageAuditSummary").inner_text()
+        assert page.locator("#worldCoverageExamples .world-coverage-example").count() == 4
+        assert page.locator('#worldCoverageExamples a[href*="elpais.bo/seguridad/"]').count() == 1
+        assert page.locator('#worldCoverageExamples a[href*="bom.mu/"]').count() == 1
+        assert page.locator('#worldCoverageExamples a[href*="rpngc.gov.pg/"]').count() == 1
+        assert page.locator('#worldCoverageExamples a[href*="dailynews.gov.bw/"]').count() == 1
+        page.locator("#worldCoverageAudit > summary").click()
+
         assert page.locator("#worldNewsRegion option").count() == 5
         page.locator("#worldNewsRegion").select_option("africa")
         assert "matching reports shown" in page.locator("#worldNewsShown").inner_text()

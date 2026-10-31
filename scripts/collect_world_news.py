@@ -20,6 +20,10 @@ from urllib.parse import urlencode, urlsplit
 import pycountry
 import requests
 try:
+    from .empty_country_recovery import RECOVERY_ALIASES, recovery_queries, choose_gap_batch
+except ImportError:
+    from empty_country_recovery import RECOVERY_ALIASES, recovery_queries, choose_gap_batch
+try:
  from .region_query_lenses import MARKET_EXTRA_QUERIES, PRIORITY_MARKETS, PRIORITY_EXTRA_PER_RUN
 except ImportError:
  from region_query_lenses import MARKET_EXTRA_QUERIES, PRIORITY_MARKETS, PRIORITY_EXTRA_PER_RUN
@@ -118,7 +122,14 @@ def search_queries(profile):
     return list(dict.fromkeys([*queries,*local_search_specs(profile).keys()]))
 
 def local_query_spec(profile,query):
-    return local_search_specs(profile).get(query)
+    candidate=local_search_specs(profile).get(query)
+    if candidate:return candidate
+    if query in recovery_queries(profile) and len(recovery_queries(profile))>1 and query==recovery_queries(profile)[1]:
+        alias=RECOVERY_ALIASES.get(profile["code"])
+        return {"language":profile.get("local_language") or "en",
+                "term":alias[2] if alias else profile.get("local_term") or "fraud",
+                "country_term":alias[1] if alias else profile.get("local_country_term") or profile["name"]}
+    return None
 
 def is_local_query(profile,query):
     """Does this query search with non-English country-specific terms?"""
@@ -179,7 +190,7 @@ def classify(title,profile):
     # event geography from their occurrence.
     local_terms=[profile.get("local_term") or ""]+[
         term for _language,_country,term in MARKET_EXTRA_QUERIES.get(profile["code"],())
-    ]
+    ]+([RECOVERY_ALIASES[profile["code"]][2]] if profile["code"] in RECOVERY_ALIASES else [])
     relevant=any(term in t for term in TITLE_RELEVANCE_TERMS) or any(
         len(term)>=2 and term.casefold() in t for term in local_terms
     )
@@ -269,13 +280,15 @@ def fetch_query(profile,query,observed_at,unattributed=None):
     if len(response.content)>1_500_000:raise ValueError("feed too large")
     return parse_feed(response.content,profile,query,observed_at,unattributed)
 
-def collect_market(profile,observed_at):
+def collect_market(profile,observed_at,recovery=False):
     combined={}
     unattributed=[]
     failures=[]
     attempts=0
     local_attempts=0
-    for query in search_queries(profile):
+    recovery_queries_added=[q for q in recovery_queries(profile) if q not in search_queries(profile)] if recovery else []
+    queries=[*search_queries(profile),*recovery_queries_added]
+    for query in queries:
         attempts+=1
         local_attempts+=int(is_local_query(profile,query))
         try:
@@ -289,6 +302,8 @@ def collect_market(profile,observed_at):
         "attempted_at":iso(observed_at),
         "queries_attempted":attempts,
         "local_queries_attempted":local_attempts,
+        "recovery_queries_attempted":len(recovery_queries_added),
+        "recovery_scan":bool(recovery),
         "accepted":len(combined),"unattributed_candidates":len(unattributed),"errors":failures[:3],
     },unattributed
 
@@ -358,6 +373,10 @@ def run():
     existing_unattributed={r["id"]:r for r in retained_unattributed(
         previous_unattributed.get("leads",[]),ts)}
     status={**last.get("countries",{})}
+    extra,gap_cursor=choose_gap_batch(
+        profiles,status,chosen,progress.get("gap_cursor",0))
+    selected_recovery={p["code"] for p in extra}
+    chosen.extend(extra)
     if os.environ.get("WORLD_NEWS_OFFLINE")=="1":
         # Tests and manual dry runs should not erase historical results or
         # claim discovery was attempted.
@@ -365,8 +384,11 @@ def run():
         priority=[]
         next_cursor=progress.get("next_cursor",0)
         priority_cursor=progress.get("priority_cursor",0)
+        gap_cursor=progress.get("gap_cursor",0)
+        extra=[]
+        selected_recovery=set()
     with ThreadPoolExecutor(max_workers=8) as pool:
-        jobs={pool.submit(collect_market,p,ts):p for p in chosen}
+        jobs={pool.submit(collect_market,p,ts,p["code"] in selected_recovery):p for p in chosen}
         for fut in as_completed(jobs):
             profile=jobs[fut];code=profile["code"]
             try:
@@ -399,14 +421,18 @@ def run():
         "markets_attempted":total_attempted,"markets_with_current_news":count_codes,
         "current_leads":len(final),"unattributed_local_candidates":len(unlocated_final),
         "batch_size":len(chosen),"priority_market_scans":len(priority),
+        "gap_recovery_scans":len(extra),
+        "gap_not_attempted":sum(not (status.get(p["code"],{}).get("attempted_at")) for p in profiles),
+        "gap_last_scan_empty":sum(status.get(p["code"],{}).get("state")=="attempted_empty" for p in profiles),
+        "gap_last_scan_error":sum(status.get(p["code"],{}).get("state") in ("error","partial_error") for p in profiles),
         "next_cursor":next_cursor,
         "local_language_markets_configured":sum(
             bool(p["local_term"] and p["local_language"]!="en") for p in profiles),
         "markets_with_local_queries_attempted":sum(
             bool(v.get("local_queries_attempted",0)) for v in status.values()),
         "countries":status,
-        "coverage_note":"Rotating RSS sampling with explicit headline-country mention checks. Not all local reporting and not incident geography. No accepted results do not imply no fraud."})
-    save(STATE,{"next_cursor":next_cursor,"priority_cursor":priority_cursor})
+        "coverage_note":"All markets rotate; additional empty/unscanned recovery uses alternate local names and 90-day search hints. Empty scan results are not evidence that no fraud was reported. Headlines must explicitly reference their country; no inferred incident location."})
+    save(STATE,{"next_cursor":next_cursor,"priority_cursor":priority_cursor,"gap_cursor":gap_cursor})
     print(json.dumps({"markets":len(profiles),"attempted":total_attempted,
                       "in_this_batch":len(chosen),"market_news":count_codes,"recent_leads":len(final)}))
 

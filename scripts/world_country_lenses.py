@@ -209,6 +209,18 @@ COUNTRY_HEADLINE_ALIASES={
  "KR":["South Korean","Korean"],"BR":["Brazilian","Brasil"],
  "AU":["Australian"],"MX":["Mexican","México"],"TW":["Taiwanese"],
  "XK":["Kosovar"],
+ "BO":["Bolivian","boliviana","boliviano","bolivianos"],
+ "MU":["Mauritian","Mauricien","mauricienne"],
+ "PG":["PNG","Papua New Guinea","Papua New Guinean"],
+ "NI":["Nicaraguan","nicaragüense","nicaragüenses"],
+ "BW":["Botswanan","Botswana"],
+ "CV":["Cabo Verdean","Cape Verde"],
+ "TT":["Trinidadian","Tobagonian","Trinidad & Tobago"],
+ "SI":["Slovene","Slovenian","Slovenija"],
+ "ST":["São Tomé","Sao Tome"],
+ "MR":["Mauritanian","موريتانيا"],
+ "GF":["Guyane française"],
+ "PF":["Polynésie française"],
 }
 def country_title_reference(title, profile):
     """Explicit country-name/demonym in a headline; NOT verified event geography.

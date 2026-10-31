@@ -240,3 +240,25 @@ box-shadow:0 2px 9px #12364830,0 0 0 1px #176f7950;transition:transform .13s eas
 .local-language-discoveries .world-reporting-rows{max-height:440px;padding-top:10px}
 .local-language-discoveries .supporting-disclaimer{padding:12px 16px 5px;font-size:11px}
 .local-language-discoveries .world-results-footer{padding-bottom:15px}
+
+
+/* Observable collection health: "no accepted matches" is not "no fraud news". */
+.world-coverage-audit{margin:0 18px 15px;border:1px solid #d5e4e8;border-radius:9px;background:#fafdfe}
+.world-coverage-audit>summary{cursor:pointer;padding:13px 15px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;color:#275764;font-size:12px}
+.world-coverage-audit>summary span{font-size:11px;color:#68828f}
+.world-coverage-audit[open]>summary{border-bottom:1px solid #dce8eb}
+.world-coverage-audit .supporting-disclaimer{padding:10px 15px;font-size:11px}
+.world-coverage-audit-rows{margin:0 15px 14px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;max-height:370px;overflow:auto}
+.world-coverage-audit-row{border:1px solid #e0ebef;border-radius:7px;background:white;padding:10px;display:flex;flex-wrap:wrap;gap:4px;justify-content:space-between;font-size:11px;color:#476b7a}
+.world-coverage-audit-row strong{font-size:12px;color:#1d5161}
+.world-coverage-audit-row small{color:#738e99}
+.world-coverage-audit-row>small{width:100%;font-size:10px}
+.world-coverage-verified{padding:12px 15px;border-top:1px solid #dce8eb}
+.world-coverage-verified>strong{font-size:12px;color:#21566a}
+.world-coverage-verified>p{font-size:11px;color:#647e89}
+#worldCoverageExamples{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.world-coverage-example{padding:12px;border:1px solid #d9e6e8;border-radius:8px;background:white;display:flex;flex-direction:column;gap:6px}
+.world-coverage-example span,.world-coverage-example small{font-size:10px;color:#6a8490}
+.world-coverage-example strong{font-size:12px;color:#245366}
+.world-coverage-example a{color:#146b7b;font-size:11px;font-weight:700}
+@media(max-width:730px){.world-coverage-audit-rows,#worldCoverageExamples{grid-template-columns:1fr}}
