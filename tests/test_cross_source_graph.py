@@ -5,6 +5,10 @@ from pathlib import Path
 import scripts.build_intelligence_graph as g
 
 class InstitutionJoinTest(unittest.TestCase):
+ def test_osfi_parenthetical_names_resolve(self):
+  self.assertEqual(g.bank_key("Toronto-Dominion Bank (The)"),"td")
+  self.assertEqual(g.bank_key("Bank of Nova Scotia (The)"),"scotiabank")
+
  def test_source_specific_data_joins_without_inflating_regulator_event_count(self):
   original=g.DATA
   with tempfile.TemporaryDirectory() as temporary:
