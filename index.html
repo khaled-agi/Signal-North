@@ -250,6 +250,10 @@
           <label for="canadianHubQuery">Search <input id="canadianHubQuery" type="search" placeholder="Regulator, province, dataset…" aria-label="Search Canadian source registry"></label>
         </div>
         <div id="canadianHubRows" class="world-reporting-rows" aria-live="polite"><div class="empty">Loading official source coverage…</div></div>
+        <details class="cfpb-history" id="provincialFeeds"><summary><strong>Provincial regulator open data · BCSC / AMF</strong><span id="provincialFeedStatus">Checking official feeds…</span></summary>
+        <p class="supporting-disclaimer">BCSC official RSS reports published discipline and hearing notices in separate categories. A hearing is not a final finding. AMF open data lists regulated Québec institutions, not enforcement outcomes; the datasets must never be combined into a misconduct ranking.</p>
+        <div class="world-reporting-toolbar"><label for="provincialFeedType">Dataset <select id="provincialFeedType"><option value="bcsc">BCSC regulatory notices</option><option value="amf">AMF licensed organizations</option></select></label><label for="provincialFeedSearch">Find <input id="provincialFeedSearch" type="search" placeholder="Firm, subject, notice…" aria-label="Search official provincial data"></label></div>
+        <div id="provincialFeedRows" class="world-reporting-rows"><div class="empty">Loading official published data…</div></div></details>
         <details class="cfpb-history" id="verifiedCanadaEnforcement"><summary><strong>Official-index sourced Canadian enforcement sample</strong><span id="verifiedCanadaCount">Loading sourced cases…</span></summary>
         <p class="supporting-disclaimer">Non-exhaustive manually transcribed index-based case sample. Links may lead to an agency index rather than an individual decision. Date of penalty and date of publication may differ. Each record represents a regulator notice; do not equate penalties with fraud losses or unreviewed allegations.</p>
         <div class="world-reporting-toolbar"><label for="verifiedCanadaAgency">Agency <select id="verifiedCanadaAgency"><option value="">All agencies</option></select></label><label for="verifiedCanadaSearch">Institution <input id="verifiedCanadaSearch" type="search" placeholder="Bank or credit union…" aria-label="Filter verified Canadian enforcement cases"></label></div>
@@ -433,6 +437,7 @@
 <script src="./obsi_history.js?v=__BUILD_SHA__" defer></script>
 <script src="./bank_disclosures.js?v=__BUILD_SHA__" defer></script>
 <script src="./canadian_sources.js?v=__BUILD_SHA__" defer></script>
+<script src="./canadian_provincial.js?v=__BUILD_SHA__" defer></script>
 <script src="./canadian_verified_enforcement.js?v=__BUILD_SHA__" defer></script>
 <script src="./fintrac_official.js?v=__BUILD_SHA__" defer></script>
 <script src="./canadian_regulatory_leads.js?v=__BUILD_SHA__" defer></script>
