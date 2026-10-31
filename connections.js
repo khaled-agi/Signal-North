@@ -64,8 +64,8 @@
  }
  function officialSections(x){
   const o=x.official_data||{}, reports=o.bank_disclosures||[], fintrac=o.fintrac_notices||[], fcac=o.fcac_notices||[];
-  const osfi=o.osfi,amf=o.amf_registrations||[];
-  if(!osfi&&!amf.length&&!reports.length&&!fintrac.length&&!fcac.length)return '';
+  const osfi=o.osfi,amf=o.amf_registrations||[],obsi=o.obsi_firm_complaints||[];
+  if(!osfi&&!amf.length&&!obsi.length&&!reports.length&&!fintrac.length&&!fcac.length)return '';
   const head='<div class="connection-timeline-title"><h4>Official institution data</h4><span class="small">Different sources and denominators · never sum the figures</span></div>';
   const identity=osfi?'<div class="evidence-entry"><strong>OSFI regulated institution</strong><div class="small">'+esc(osfi.name)+' · '+esc(osfi.group||osfi.industry||"Federal institution registry")+'</div>'+safeLink(osfi.source_url,"Official OSFI directory")+'</div>':'';
   const complaintRows=reports.map(r=>'<article class="evidence-entry"><div class="evidence-top"><strong>'+esc(r.year)+' · '+esc(r.office||"Complaints office")+'</strong><span>'+Number(r.metric_value).toLocaleString("en-CA")+' records</span></div><div class="small">'+esc(r.scope||r.metric_name)+'</div>'+
@@ -75,7 +75,12 @@
   const penaltyRows=fintrac.slice(0,35).map(r=>'<article class="evidence-entry"><div class="evidence-top"><strong>FINTRAC · '+esc(r.date)+'</strong><span>'+esc(money(r.penalty_cad))+'</span></div><div class="small">Official-index notice · '+esc(r.violation_count==null?"Violation count unavailable":r.violation_count+" violations")+' · '+esc(r.status_summary||"Status not confirmed")+'</div>'+safeLink(r.source_url,"Original FINTRAC index")+'</article>').join('');
   const fcacRows=fcac.map(r=>'<article class="evidence-entry"><div class="evidence-top"><strong>FCAC · '+esc(r.date)+'</strong><span>'+esc(money(r.penalty_cad))+'</span></div><div class="small">'+esc(r.topic||"Published action")+' · Source is agency index</div>'+safeLink(r.source_url,"Original FCAC index")+'</article>').join('');
   const quebec=amf.length?'<div class="evidence-entry"><strong>Québec AMF registered entity</strong><div class="small">'+esc(amf.length)+' official registry matches · not enforcement findings</div>'+safeLink(amf[0].source_url,"Québec AMF open data")+'</div>':'';
+  const obsiRows=obsi.slice().sort((a,b)=>b.fiscal_year-a.fiscal_year).map(r=>'<article class="evidence-entry"><div class="evidence-top"><strong>OBSI external complaints · FY'+esc(r.fiscal_year)+'</strong><span>'+Number(r.opened_cases).toLocaleString("en-CA")+' opened</span></div>'+
+   '<div class="small">Received '+Number(r.complaints_received).toLocaleString("en-CA")+' · Closed '+Number(r.closed_cases).toLocaleString("en-CA")+' · Resolved to complainant satisfaction '+Number(r.resolved_satisfaction).toLocaleString("en-CA")+'</div>'+
+   '<div class="small">Official OBSI annual report, '+esc(r.sector||"regulated banking")+' · distinct from internal bank complaints</div>'+
+   safeLink(r.source_url,"OBSI annual source table")+'</article>').join("");
   return head+identity+quebec+
+   (obsi.length?'<details class="supporting-reviewed-details"><summary>OBSI external escalated complaints · '+obsi.length+' firm-year records</summary>'+obsiRows+'</details>':'')+
    (reports.length?'<details class="supporting-reviewed-details"><summary>Internal bank complaints · '+reports.length+' fiscal years</summary>'+complaintRows+'</details>':'')+
    (fintrac.length?'<details class="supporting-reviewed-details"><summary>FINTRAC monetary penalty notices · '+fintrac.length+' (may overlap other enforcement feeds)</summary>'+penaltyRows+'</details>':'')+
    (fcac.length?'<details class="supporting-reviewed-details"><summary>FCAC index-sourced actions · '+fcac.length+' (not deduplicated against existing event tracker)</summary>'+fcacRows+'</details>':'');
