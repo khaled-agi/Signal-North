@@ -269,6 +269,18 @@ def generate():
   }
  for failure in fdic_failures:
   entry=ensure_fdic(failure)
+  if entry is None and failure.get("fdic_event_id"):
+   # Legacy FDIC assistance can lack a current insured CERT.
+   # Preserve it as a separate historical entity, never guess a name match.
+   key="us-fdic-historical-"+str(failure["fdic_event_id"])
+   if key not in by_key:
+    rawname=str(failure.get("institution") or "FDIC historical record")
+    by_key[key]={"id":key,"name":rawname+" (historical FDIC resolution)",
+      "jurisdiction":"US","country":"US","aliases":[rawname],
+      "counts":{"enforcement":0,"incidents":0,"headlines":0},
+      "evidence":[],"themes":[],"annual_penalties_cad":{},
+      "recent_activity":None}
+   entry=by_key[key]
   if not entry:continue
   entry.setdefault("official_data",{}).setdefault("fdic_failure_events",[]).append({
    "date":failure.get("failure_date"),"resolution_type":failure.get("resolution_type"),
