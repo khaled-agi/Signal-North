@@ -35,13 +35,21 @@ See scripts/world_country_lenses.py for edits to the curated source settings.
 
 ## Scheduled rotation and retention
 
-The collector scripts/collect_world_news.py scans 16 rotating country lenses per
-nominal 30-minute Github Actions job. A full pass is approximately eight hours
-IF every scheduled job runs; actual timing varies. Up to two searches are used
-per market: country-named English and a curated local-language term.
+The collector scripts/collect_world_news.py scans 32 rotating country lenses per
+nominal 30-minute GitHub Actions job. All 250 markets are covered in its
+rotation, but not all will have completed a scan at any given time. At the
+nominal schedule, a full rotation takes approximately four hours, subject to
+actual Actions execution and source failures. Three English thematic queries
+run for every market. Where configured, an additional native-language query
+runs with a national or same-language edition (when supported), or an
+explicitly labeled fallback.
 
-Only up to 21 days of recent discovered reporting are retained, maximum 18
-records per market and 2,500 total. Snapshots and the rotating cursor are in:
+Up to 120 days of previously discovered reporting are retained (not 120 days
+of historical backfill), maximum 90 geographically referenced reports per
+market and 12,000 total. The separate, strictly **unlocated** local-language
+candidate feed holds up to 25 per search market and 3,500 total. Its records
+must never be used as country-enforcement or incident-map data.
+Snapshots and the rotating cursor are in:
 - data/world_reporting.json
 - data/world_reporting_status.json
 - data/world_reporting_state.json
@@ -97,6 +105,13 @@ filter. No browsing coordinate is a verified incident address.
 
 ## 2026 worldwide content ingestion expansion
 
+The website distinguishes **three** core evidence classes plus a separate
+unattributed native-language discovery queue. The country-lens expansion
+configures 157 LOCAL search profiles in addition to 250 English baselines;
+some profiles have English as their local language and therefore avoid
+redundant extra English queries. Original headline language is not inferred
+from the language of the search query.
+
 The website distinguishes **three** source classes:
 
 - **Unverified news headlines:** country-aware Google News RSS searches for all
@@ -139,3 +154,33 @@ The worldwide news browser under News & Reporting supports search, typology,
 country selection, load more and all matches. The Enforcement tab has a
 **separate** original-regulator-domain publication browser with country,
 agency and text filters. The map keeps the three evidence categories distinct.
+
+
+## Local-language coverage expansion and geography integrity
+
+**New native-language terms:** the curated research vocabulary now includes
+additional markets in North and West Africa, Eastern and Northern Europe, Latin
+America, Central Asia, the Caucasus, the Pacific and Southeast Asia. A profile
+means a search is configured; it does not guarantee an edition exists, that
+the returned publisher is domestic, or that every story is relevant.
+
+**Edition selection:** the three English queries use an English-language Google
+News edition. Local-script queries use a same-language country edition where
+known, a *labeled language-proxy edition* where available, or an English edition
+fallback with native keywords. The site preserves the headline as received.
+The field `query_language` identifies the SEARCH language, not independently
+detected source language. The `query_edition_basis` field records how the
+edition was selected.
+
+**Two distinct original-language outputs:**
+1. If the article headline explicitly names the country or a curated local name,
+   it may be included in country-referenced news. Even then it is **not a
+   verified incident location**, and no offence is inferred.
+2. If a native-language query finds a fraud headline that does not name its
+   target country, the article is instead stored in
+   `data/world_local_unattributed.json`. It is accessible in a collapsed
+   source-research list, labeled with the search market only. It gets **no
+   map marker, no attributed country, and no place in official enforcement**.
+
+English and local-language versions of the same reporting may both appear.
+Full cross-language event merging is intentionally deferred.
