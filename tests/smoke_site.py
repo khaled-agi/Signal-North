@@ -66,6 +66,20 @@ try:
               "status":"ok","months_available":178,"months_with_results":1,
               "last_attempt_at":"2026-10-30T12:00:00+00:00"
             })))
+        page.route("**/data/cafc_aggregates.json*",lambda route:route.fulfill(
+            status=200,content_type="application/json",body=json.dumps({
+              "dataset_coverage":"2021-01-01 through 2025-09-30","minimum_public_cell_size":5,
+              "rows":[{"dimension":"category","year":"2025","label":"Investment Fraud",
+                "province":None,"report_rows":12,"reported_victims_sum":12,
+                "reported_dollar_loss_sum":75000,"rows_without_loss":0},
+               {"dimension":"province","year":"2025","label":"Ontario",
+                "province":None,"report_rows":17,"reported_victims_sum":17,
+                "reported_dollar_loss_sum":75000,"rows_without_loss":0}]
+            })))
+        page.route("**/data/cafc_source_status.json*",lambda route:route.fulfill(
+            status=200,content_type="application/json",body=json.dumps({
+              "status":"ok","canada_rows":100,"dataset_end_date":"2025-09-30"
+            })))
         page.goto(url, wait_until="domcontentloaded", timeout=20000)
         try:
             page.wait_for_function("document.querySelectorAll('.metric').length === 4", timeout=20000)
@@ -117,6 +131,19 @@ try:
         page.locator("#cfpbHistoricalPanel > summary").click()
         page.locator("#cfpbComplaints > summary").click()
         print("CFPB public structured complaint record and safe search/filter display: PASS")
+        page.locator("#cafcOpenData > summary").click()
+        page.wait_for_function("document.querySelectorAll('#cafcRows .cafc-row').length === 1")
+        assert "Investment Fraud" in page.locator("#cafcRows").inner_text()
+        assert "2025-09-30" in page.locator("#cafcOpenData").inner_text()
+        assert "not confirmed crimes" in page.locator("#cafcOpenData").inner_text().lower()
+        assert page.locator("#cafcRows").locator("text=Number ID").count() == 0
+        page.locator("#cafcDimension").select_option("province")
+        assert "Ontario" in page.locator("#cafcRows").inner_text()
+        page.locator("#cafcSearch").fill("Not a category")
+        assert page.locator("#cafcRows .cafc-row").count() == 0
+        page.locator("#cafcSearch").fill("")
+        page.locator("#cafcOpenData > summary").click()
+        print("CAFC Canadian official reporting aggregate and evidence labels: PASS")
 
         page.wait_for_function("document.querySelectorAll('#fraudNational .fraud-amount').length >= 2", timeout=10000)
         print("National fraud statistics:", page.locator("#fraudNational .fraud-amount").count())

@@ -26,6 +26,7 @@ jobs:
           node --check app.js
           node --check global.js
           node --check cfpb.js
+          node --check cafc.js
           node --check geography.js
           node --check intel.js
           node --check supporting_intelligence.js
@@ -44,6 +45,7 @@ jobs:
           python -m unittest discover -s tests -p test_direct_country_sources.py
           python -m unittest discover -s tests -p test_cfpb_complaints.py
           python -m unittest discover -s tests -p test_cfpb_history.py
+          python -m unittest discover -s tests -p test_cafc_open_data.py
           python -m unittest discover -s tests -p test_empty_market_recovery.py
           python -m unittest discover -s tests -p test_global_regulator_publications.py
       - name: Test real browser interactions

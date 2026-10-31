@@ -240,6 +240,23 @@
         </section>
       </div>
     </details>
+    <details class="overview-deepdive cafc-open-data-panel" id="cafcOpenData">
+      <summary><div><strong>Canadian fraud reports · CAFC</strong><span id="cafcSummary">Official RCMP / CAFC dataset · Checking source…</span></div><span class="overview-expand">Expand ↓</span></summary>
+      <div class="overview-deepdive-content">
+        <section class="panel cafc-content">
+          <div class="panel-heading"><div><div class="eyebrow">CANADIAN ANTI-FRAUD CENTRE / OPEN GOVERNMENT</div><h2>Fraud reports, methods and reported losses</h2></div><span id="cafcHealth" class="small">Checking data availability…</span></div>
+          <p class="supporting-disclaimer">Official CAFC reporting data are <strong>self-reported allegations, not confirmed crimes or losses</strong>. This dataset currently covers 2021 through September 2025, with later publication delayed during a system transition. Only aggregate results are shown; small cells are suppressed. Province is a reporter/location field, not a verified offence location. CAFC reporting is not directly comparable with CFPB consumer financial complaints.</p>
+          <div id="cafcStats" class="cfpb-stats" aria-live="polite"></div>
+          <div class="world-reporting-toolbar">
+            <label for="cafcDimension">Analyze by <select id="cafcDimension"><option value="category">Fraud category</option><option value="province">Province / territory</option><option value="method">Solicitation method</option><option value="year">Year</option></select></label>
+            <label for="cafcYear">Year <select id="cafcYear"><option value="">All available years</option></select></label>
+            <label for="cafcSearch">Search <input id="cafcSearch" type="search" placeholder="Fraud type, province, method…" aria-label="Search CAFC aggregate categories"></label>
+          </div>
+          <div id="cafcRows" class="world-reporting-rows" aria-live="polite"><div class="empty">CAFC source collection not attempted yet.</div></div>
+          <div class="world-results-footer"><span id="cafcShown">No CAFC aggregates yet</span><a href="https://open.canada.ca/data/dataset/6a09c998-cddb-4a22-beff-4dca67ab892f" rel="noopener noreferrer" target="_blank">CAFC official dataset and definitions ↗</a></div>
+        </section>
+      </div>
+    </details>
     <details class="overview-deepdive world-reporting-panel" id="worldReportingPanel" open>
       <summary><div><strong>Worldwide fraud reporting</strong><span id="worldReportingSummary">Country-aware searches · Local languages · Unverified headlines</span></div><span class="overview-expand">Expand ↓</span></summary>
       <div class="overview-deepdive-content">
@@ -355,6 +372,7 @@
 <script src="./network.js?v=__BUILD_SHA__" defer></script>
 <script src="./global.js?v=__BUILD_SHA__" defer></script>
 <script src="./cfpb.js?v=__BUILD_SHA__" defer></script>
+<script src="./cafc.js?v=__BUILD_SHA__" defer></script>
 <script src="./reviewed.js?v=__BUILD_SHA__" defer></script>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" async crossorigin="" onload="window.dispatchEvent(new Event('signalnorth:mapready'))"></script>
 </body></html>
