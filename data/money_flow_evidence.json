@@ -1,0 +1,209 @@
+{
+  "schema_version": "1.0",
+  "dataset": "public_money_flow_evidence",
+  "updated_at": "2026-10-31",
+  "status": "curated_seed_not_live_ingestion",
+  "methodology": "Each edge represents a payment-flow stage explicitly described in the cited original source. Nodes are archetypes unless a legal entity or public address is specifically disclosed. Do not infer exact transaction amounts, wallet identifiers, owners, or named banks. An edge is not a transaction record.",
+  "cases": [
+    {
+      "id": "doj-edva-2025-03-21",
+      "title": "Investment fraud proceeds laundered through shell-company bank accounts",
+      "source_url": "https://www.justice.gov/usao-edva/pr/united-states-uses-civil-asset-forfeiture-recover-7m-investment-fraud-proceeds",
+      "source_published": "2025-03-21",
+      "source_type": "official_doj_press_release",
+      "legal_status": "civil_forfeiture_settlement",
+      "mechanisms": [
+        "social_engineering",
+        "fake_investment_platform",
+        "withdrawal_fee_demand",
+        "shell_company_accounts",
+        "layered_bank_transfers",
+        "international_wires"
+      ],
+      "quantities": [
+        {
+          "kind": "recovered_forfeited_proceeds",
+          "amount": 7000000,
+          "currency": "USD",
+          "qualifier": "settlement amount"
+        },
+        {
+          "kind": "receiving_accounts",
+          "count_minimum": 76,
+          "qualifier": "press release states over 75 bank accounts"
+        }
+      ],
+      "nodes": [
+        {
+          "id": "victims",
+          "type": "victim_group"
+        },
+        {
+          "id": "fake_platforms",
+          "type": "fraudulent_platform_group"
+        },
+        {
+          "id": "shell_accounts",
+          "type": "bank_account_group",
+          "details": "Over 75 accounts in names of shell companies; institutions not named"
+        },
+        {
+          "id": "layering_accounts",
+          "type": "bank_account_group",
+          "details": "Intermediary bank accounts, count undisclosed"
+        },
+        {
+          "id": "foreign_bank_account",
+          "type": "bank_account",
+          "details": "Foreign bank account referred to by DOJ; bank not named"
+        }
+      ],
+      "edges": [
+        {
+          "from": "victims",
+          "to": "fake_platforms",
+          "type": "induced_investment",
+          "evidence": "Victims directed to spoofed investment websites"
+        },
+        {
+          "from": "victims",
+          "to": "shell_accounts",
+          "type": "reported_money_flow",
+          "evidence": "Victim funds funneled through shell-company accounts"
+        },
+        {
+          "from": "shell_accounts",
+          "to": "layering_accounts",
+          "type": "reported_money_flow",
+          "evidence": "Transfers through series of other bank accounts"
+        },
+        {
+          "from": "layering_accounts",
+          "to": "foreign_bank_account",
+          "type": "reported_money_flow",
+          "evidence": "Funds ultimately sent abroad through misleading wiring instructions"
+        }
+      ],
+      "limitations": [
+        "No specific banks, transaction identifiers, destinations or individual payment amounts published in this release",
+        "Do not assume all recovered proceeds represent the entire scheme's losses"
+      ]
+    },
+    {
+      "id": "doj-ednc-2026-02-24",
+      "title": "Romance-led crypto investment fraud with wallet layering",
+      "source_url": "https://www.justice.gov/usao-ednc/pr/us-attorneys-office-ednc-announces-seizure-61-million-dollars-worth-cryptocurrency",
+      "source_published": "2026-02-24",
+      "source_type": "official_doj_press_release",
+      "legal_status": "announced_seizure",
+      "mechanisms": [
+        "relationship_grooming",
+        "fake_crypto_investment_platform",
+        "withdrawal_fee_demand",
+        "multi_wallet_laundering"
+      ],
+      "quantities": [
+        {
+          "kind": "seized_crypto_announced_value",
+          "amount": 61000000,
+          "currency": "USD",
+          "qualifier": "over $61 million worth of USDT"
+        }
+      ],
+      "nodes": [
+        {
+          "id": "victims",
+          "type": "victim_group"
+        },
+        {
+          "id": "fake_platforms",
+          "type": "fraudulent_platform_group"
+        },
+        {
+          "id": "scammer_wallets",
+          "type": "crypto_wallet_group",
+          "details": "Wallet identifiers not disclosed in press release"
+        },
+        {
+          "id": "layering_wallets",
+          "type": "crypto_wallet_group",
+          "details": "Multiple additional wallets"
+        }
+      ],
+      "edges": [
+        {
+          "from": "victims",
+          "to": "fake_platforms",
+          "type": "induced_investment",
+          "evidence": "Victims directed to fake crypto trading platforms"
+        },
+        {
+          "from": "victims",
+          "to": "scammer_wallets",
+          "type": "reported_money_flow",
+          "evidence": "Victim funds transferred to wallet under scammers' control"
+        },
+        {
+          "from": "scammer_wallets",
+          "to": "layering_wallets",
+          "type": "reported_money_flow",
+          "evidence": "Funds routed through many other wallets"
+        }
+      ],
+      "limitations": [
+        "Public release does not disclose addresses or transaction hashes",
+        "Seized amount is not total victim loss"
+      ]
+    }
+  ],
+  "candidate_sources": [
+    {
+      "id": "CAFC",
+      "url": "https://open.canada.ca/data/dataset/6a09c998-cddb-4a22-beff-4dca67ab892f",
+      "signal": "fraud type, solicitation method, geography, victim counts and reported loss",
+      "access": "official_public_csv",
+      "level": "aggregate_or_deidentified_complaint",
+      "priority": "P0"
+    },
+    {
+      "id": "CFPB",
+      "url": "https://www.consumerfinance.gov/data-research/consumer-complaints/",
+      "signal": "product/issue/company/state/response; no individual transaction trails",
+      "access": "official_public_download",
+      "level": "complaint",
+      "priority": "P0"
+    },
+    {
+      "id": "DOJ",
+      "url": "https://www.justice.gov/news",
+      "signal": "court-linked payment flow stages, forfeitures, intermediaries",
+      "access": "public_press_release_and_court_filings",
+      "level": "case_and_money_flow",
+      "priority": "P0"
+    },
+    {
+      "id": "OFAC",
+      "url": "https://ofac.treasury.gov/sanctions-list-service",
+      "signal": "designated entities, aliases and in some cases crypto addresses",
+      "access": "official_download",
+      "level": "entity_and_wallet",
+      "priority": "P1"
+    },
+    {
+      "id": "FINTRAC",
+      "url": "https://fintrac-canafe.canada.ca/guidance-directives/transaction-operation/indicators-indicateurs/vc_mltf-eng",
+      "signal": "money laundering typology indicators, not public STRs or transaction feeds",
+      "access": "guidance_publication",
+      "level": "typology",
+      "priority": "P1"
+    },
+    {
+      "id": "IC3",
+      "url": "https://www.ic3.gov/AnnualReport/Reports/2025_IC3Report.pdf",
+      "signal": "fraud and payment-type aggregate trends; not a public individual complaint API",
+      "access": "official_report",
+      "level": "aggregate",
+      "priority": "P1"
+    }
+  ]
+}
