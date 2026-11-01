@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-01T15:56:23+00:00",
+  "updated_at": "2026-11-01T20:25:17+00:00",
   "source": "CFPB Consumer Complaint Database API",
   "earliest_possible_month": "2011-12",
   "months": [
@@ -3928,7 +3928,7 @@
       "sample_basis": "Most recently indexed <=100 public complaints for month; NOT full issue/product counts",
       "source": "CFPB Consumer Complaint Database API",
       "source_url": "https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/",
-      "last_checked_at": "2026-10-31T02:41:20+00:00"
+      "last_checked_at": "2026-11-01T20:25:24+00:00"
     },
     {
       "month": "2025-09",
@@ -3948,7 +3948,7 @@
       "sample_basis": "Most recently indexed <=100 public complaints for month; NOT full issue/product counts",
       "source": "CFPB Consumer Complaint Database API",
       "source_url": "https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/",
-      "last_checked_at": "2026-10-31T02:41:18+00:00"
+      "last_checked_at": "2026-11-01T20:25:22+00:00"
     },
     {
       "month": "2025-10",
@@ -3956,6 +3956,11 @@
       "date_received_max_exclusive": "2025-11-01",
       "exact_published_complaint_total": null,
       "monthly_total_status": "unverified_date_scope",
+      "api_returned_count": 100,
+      "api_returned_date_min": "2025-11-01",
+      "api_returned_date_max": "2025-11-01",
+      "api_hits_outside_requested_month": 100,
+      "scope_warning": "CFPB page date scope not verified; count withheld",
       "sample_size": 0,
       "page_limit": 100,
       "sample_issue_breakdown": [],
@@ -3963,8 +3968,7 @@
       "sample_basis": "Most recently indexed <=100 public complaints for month; NOT full issue/product counts",
       "source": "CFPB Consumer Complaint Database API",
       "source_url": "https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/",
-      "last_checked_at": "2026-10-31T02:35:28+00:00",
-      "scope_warning": "Prior API month count withheld: page had no matching dated examples"
+      "last_checked_at": "2026-11-01T20:25:21+00:00"
     },
     {
       "month": "2025-11",
@@ -3972,6 +3976,11 @@
       "date_received_max_exclusive": "2025-12-01",
       "exact_published_complaint_total": null,
       "monthly_total_status": "unverified_date_scope",
+      "api_returned_count": 100,
+      "api_returned_date_min": "2025-12-01",
+      "api_returned_date_max": "2025-12-01",
+      "api_hits_outside_requested_month": 100,
+      "scope_warning": "CFPB page date scope not verified; count withheld",
       "sample_size": 0,
       "page_limit": 100,
       "sample_issue_breakdown": [],
@@ -3979,8 +3988,7 @@
       "sample_basis": "Most recently indexed <=100 public complaints for month; NOT full issue/product counts",
       "source": "CFPB Consumer Complaint Database API",
       "source_url": "https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/",
-      "last_checked_at": "2026-10-31T02:35:24+00:00",
-      "scope_warning": "Prior API month count withheld: page had no matching dated examples"
+      "last_checked_at": "2026-11-01T20:25:20+00:00"
     },
     {
       "month": "2025-12",
@@ -3988,6 +3996,11 @@
       "date_received_max_exclusive": "2026-01-01",
       "exact_published_complaint_total": null,
       "monthly_total_status": "unverified_date_scope",
+      "api_returned_count": 100,
+      "api_returned_date_min": "2026-01-01",
+      "api_returned_date_max": "2026-01-01",
+      "api_hits_outside_requested_month": 100,
+      "scope_warning": "CFPB page date scope not verified; count withheld",
       "sample_size": 0,
       "page_limit": 100,
       "sample_issue_breakdown": [],
@@ -3995,8 +4008,7 @@
       "sample_basis": "Most recently indexed <=100 public complaints for month; NOT full issue/product counts",
       "source": "CFPB Consumer Complaint Database API",
       "source_url": "https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/",
-      "last_checked_at": "2026-10-31T02:35:22+00:00",
-      "scope_warning": "Prior API month count withheld: page had no matching dated examples"
+      "last_checked_at": "2026-11-01T20:25:19+00:00"
     },
     {
       "month": "2026-01",
@@ -4004,6 +4016,11 @@
       "date_received_max_exclusive": "2026-02-01",
       "exact_published_complaint_total": null,
       "monthly_total_status": "unverified_date_scope",
+      "api_returned_count": 100,
+      "api_returned_date_min": "2026-02-01",
+      "api_returned_date_max": "2026-02-01",
+      "api_hits_outside_requested_month": 100,
+      "scope_warning": "CFPB page date scope not verified; count withheld",
       "sample_size": 0,
       "page_limit": 100,
       "sample_issue_breakdown": [],
@@ -4011,8 +4028,7 @@
       "sample_basis": "Most recently indexed <=100 public complaints for month; NOT full issue/product counts",
       "source": "CFPB Consumer Complaint Database API",
       "source_url": "https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/",
-      "last_checked_at": "2026-10-31T02:35:18+00:00",
-      "scope_warning": "Prior API month count withheld: page had no matching dated examples"
+      "last_checked_at": "2026-11-01T20:25:18+00:00"
     },
     {
       "month": "2026-02",
