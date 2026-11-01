@@ -15,7 +15,7 @@
     "2023": 322,
     "2024": 328,
     "2025": 482,
-    "2026": 762
+    "2026": 764
   },
   "themes": [
     {
@@ -27,9 +27,9 @@
         "2023": 21,
         "2024": 27,
         "2025": 48,
-        "2026": 85
+        "2026": 86
       },
-      "total_headlines": 202,
+      "total_headlines": 203,
       "publisher_count": 59,
       "examples": [
         {
@@ -38,6 +38,17 @@
           "date": "2026-10-30T00:03:52+00:00",
           "publisher": "CBC",
           "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBoNk03TkpWMHhsNGRqdVlfQUhXcmFuLVhMYWpJSGtHWWZMNDZFYk8wUlpLTnNPcWJpR3RhMmZxY051Q25JTDcwMWUxVE4yMktLNTZPV1hFWVk?oc=5",
+          "geography": "Toronto, Ontario",
+          "source_channels": [
+            "recent"
+          ]
+        },
+        {
+          "id": "72d4aac8cafa9fd2be90",
+          "title": "'Crypto King' Aiden Pleterski found guilty of fraud at Toronto jury trial | Hanomansing Live - Yahoo News Canada",
+          "date": "2026-10-30T00:03:00+00:00",
+          "publisher": "Yahoo News Canada",
+          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9tQUhxTDlIdWdIbng4LXJNMjI3QmlYLVcwU1NIMXY4QkNHX25LdzN3S1ZEMVFKM3pzOG95TndUODVmaHFYcmdVVlNfbWJpVFFvTDlYbVYzM21UTV9yN1BLcHFDNmF4eFBaX1BPMTdETVRBRFMzdzVuLUhrOTdhNVE?oc=5",
           "geography": "Toronto, Ontario",
           "source_channels": [
             "recent"
@@ -282,18 +293,6 @@
           "date": "2026-10-13T08:43:28+00:00",
           "publisher": "cotidianul.md",
           "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxPVmZNMVNjNXJWUkpMd3hHMTAzZTgyZ1FhUWdKRDdrZ1ZESmk1aGFRZUdNUGpXdVVmaDRxRzA5aXh4TFNHeklJTFpiNU9DMHI4YmUwOFd3N1V0VWVYcFljVTlZOUhFUkYtbUZtcGg5ajJ4WE9FT3cyZG1tUFJtQTVLaVpBTGxvN29DXzNqdFVqcEFoLVB1bm9LdnpNWXJSRjhKdDJNeWdLRTlqOVhCaTFQcUprcXNDSzRUdE9VYllFU0huaUNXeFMyYk1WLU9HamRfQWctWDVXd201UGh2U0s0Nms3VHFpb0Fwa2RuZUZ5cTR2bDY3ZFE?oc=5",
-          "geography": null,
-          "source_channels": [
-            "historical",
-            "recent"
-          ]
-        },
-        {
-          "id": "1e1794a09401865af403",
-          "title": "US, UK and Canada Freeze $12M in Crypto Phishing Operation - CoinMarketCap",
-          "date": "2026-10-10T12:55:44+00:00",
-          "publisher": "CoinMarketCap",
-          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQLXhodGJNSDBrODJtc2xmX20tOV9HNnktYVVNeU1tcUFJbHl1X0xZbW9OZ01iTnhvbW8zeHFXUE9wMk53SVdpLVlYdjQ5eU1pTXpGOUREVTV6YU5rR2NyeFgxOGFkclAybnFibGIxbUZMeG9fOEIwWTAwOUFHbGIxSTAzRWEzdmNQanpjR1VON3dFaUNrMnFGOEMzSUp6MlctcU4xTWlaQQ?oc=5",
           "geography": null,
           "source_channels": [
             "historical",
@@ -884,7 +883,7 @@
         {
           "id": "d86ef5656810cf7a2f64",
           "title": "OSBI investigating cybercrime scam affecting state, region & Canada - The Lawton Constitution",
-          "date": "2026-10-28T16:49:08+00:00",
+          "date": "2026-10-28T16:45:00+00:00",
           "publisher": "The Lawton Constitution",
           "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQVldNZlhOMURac056dUZmLVV5djY0eUZwLVdOeDRqR3Z2aGRaWjJ3NWM1bHZORWtabWFQWDYxYVBrbjVNanZNLS1YTHJhLWk3Q2xnMDFycXpuU1pYTTk2VGVyaFBJSjBybWpJRFE3cWU4cVdRVG1USnRfaGt5U0h6aldBT0xTME5OSVVwXzdjUTd1Q0xtWnhTNC1pR3V4S2lGUXd2ZmVUWHVoWXFUM2pGNS02bDgzaEo0Q0UzVzlBQ0d2Z0QtZXZndFB1eGg4TzYzX2dnSkZXR0FldGNH?oc=5",
           "geography": null,
@@ -3138,8 +3137,8 @@
       }
     }
   ],
-  "generated_at": "2026-11-01T02:03:56+00:00",
-  "articles_analyzed": 2483,
+  "generated_at": "2026-11-01T09:01:09+00:00",
+  "articles_analyzed": 2485,
   "methodology": "MULTI-LABEL keyword classification of unique article TITLES by publication year; multiple theme counts can arise from one headline. Year-to-year article counts reflect discovery methods, changing news coverage, and archived source availability, NOT measured changes in fraud incidence. Bank/platform mentions are not accusations and never counted as confirmed enforcement.",
   "scope": "Canadian financial-crime news discovery",
   "data_quality": "Headlines only; no full-article automated fact checking. Counts can change as the archive expands."
