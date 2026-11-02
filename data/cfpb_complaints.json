@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-02T13:47:45+00:00",
+  "updated_at": "2026-11-02T22:41:13+00:00",
   "source": "CFPB",
   "country_code": "US",
   "complaints": [
@@ -1900,6 +1900,25 @@
       "timely": "Yes",
       "source": "CFPB Consumer Complaint Database",
       "source_url": "https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/31632776",
+      "evidence_status": "published_consumer_complaint_not_verified",
+      "geography_basis": "consumer_reported_state_not_incident_location"
+    },
+    {
+      "id": "31629736",
+      "date_received": "2026-11-02",
+      "company": "TRANSUNION INTERMEDIATE HOLDINGS, INC.",
+      "product": "Mortgage",
+      "sub_product": "FHA mortgage",
+      "issue": "Applying for a mortgage or refinancing an existing mortgage",
+      "sub_issue": "Application denials",
+      "state": "FL",
+      "company_response": "In progress",
+      "company_public_response": "",
+      "submitted_via": "Web",
+      "date_sent_to_company": "2026-11-02",
+      "timely": "Yes",
+      "source": "CFPB Consumer Complaint Database",
+      "source_url": "https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/31629736",
       "evidence_status": "published_consumer_complaint_not_verified",
       "geography_basis": "consumer_reported_state_not_incident_location"
     },
@@ -11799,6 +11818,25 @@
       "timely": "Yes",
       "source": "CFPB Consumer Complaint Database",
       "source_url": "https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/31196626",
+      "evidence_status": "published_consumer_complaint_not_verified",
+      "geography_basis": "consumer_reported_state_not_incident_location"
+    },
+    {
+      "id": "31196200",
+      "date_received": "2026-10-28",
+      "company": "Westlake Services, LLC",
+      "product": "Vehicle loan or lease",
+      "sub_product": "Lease",
+      "issue": "Repossession",
+      "sub_issue": "Account reinstatement or redemption after repossession",
+      "state": "TX",
+      "company_response": "Closed with explanation",
+      "company_public_response": "",
+      "submitted_via": "Web",
+      "date_sent_to_company": "2026-10-28",
+      "timely": "Yes",
+      "source": "CFPB Consumer Complaint Database",
+      "source_url": "https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/31196200",
       "evidence_status": "published_consumer_complaint_not_verified",
       "geography_basis": "consumer_reported_state_not_incident_location"
     },
