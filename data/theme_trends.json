@@ -15,7 +15,7 @@
     "2023": 322,
     "2024": 328,
     "2025": 482,
-    "2026": 791
+    "2026": 797
   },
   "themes": [
     {
@@ -310,10 +310,10 @@
         "2023": 24,
         "2024": 10,
         "2025": 39,
-        "2026": 25
+        "2026": 26
       },
-      "total_headlines": 131,
-      "publisher_count": 36,
+      "total_headlines": 132,
+      "publisher_count": 37,
       "examples": [
         {
           "id": "949ae64f534e74feb2a5",
@@ -344,6 +344,17 @@
           "publisher": "Montreal Gazette",
           "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOcTdJTml3N1ZVX1RRT25YanQ1bktPWjI4QXQ1QlpqNEdPUnF5d3NDWk9Nd1NXVUkta2h0ejlzckNFVE5jTV9vd1J4Uk9YSHlwaWNDbTl2LUtlWEVwSHhYbUNISEpVa2hIVVdYTUJ2SHVlT1NsSzN0c3QwRnJlTWNZSUVTdFZES2RWOG9oRkRTM01Wd1FQZGJwNVZWSWtkMmY5?oc=5",
           "geography": "Montreal, Quebec",
+          "source_channels": [
+            "recent"
+          ]
+        },
+        {
+          "id": "9fd97b720e1355ae91ea",
+          "title": "Former Toronto Blue Jays Outfielder Charged in Fraud Case - Sports Illustrated",
+          "date": "2026-10-21T07:00:00+00:00",
+          "publisher": "Sports Illustrated",
+          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQYnpNNVFDVHlPcHVjWTBSMzduLUlzYnlCUXB4UFpsT0VXSHZtcFlqeDBXRldlZ1hkVmJyTl80Q0xoRFhfUzBlWU5ITEE1OHV3NlYwQUVxck01b0dBZkloR0hOcDVOUUNqdmxLb0xiZ241MlczSnZxMHhoSzN2dGptaU94b0x1WlA2VzNTYmh6OUlBM0hCMERpZGdR?oc=5",
+          "geography": "Toronto, Ontario",
           "source_channels": [
             "recent"
           ]
@@ -564,17 +575,6 @@
           "date": "2026-01-21T08:00:00+00:00",
           "publisher": "CTV News",
           "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNZ1F2bWxjcndsTlc0c3lBWTJoVlVZODhFa2lrWExxMlBRd0xNdHp2VW1UNi1FUXE1Vk5mYVR2dlJsOUFFZHFpZi0wRk1BNTZzaEpDbThEaXNCV2dub3dFaFdod1JwU0Q0NG1YVTV6ZUJEZGtVTU9sSmlJR25yamt1V0NCVkxCTEstQ3ZqeTJJQXNxbGJmN1NZelc3ZGlrVXp5QXpkbzZneTYtWlhWcWRmLWdCV3N5U1FzOUZ6NGxKVlJKSVVqcmxtOHBneVdzUnNCZUlz?oc=5",
-          "geography": null,
-          "source_channels": [
-            "historical"
-          ]
-        },
-        {
-          "id": "3cc5d4601a8c608e029f",
-          "title": "How Canadian seniors can stay ahead of cyber scams - The Globe and Mail",
-          "date": "2026-01-20T08:00:00+00:00",
-          "publisher": "The Globe and Mail",
-          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQa0dOQmIwcEd6VEowdF9SSnk5bzdQbmZSRVNZRW5YN2c3TXlWTGhuYTN5MXZueHR1Vm1vZHVKYVpQLTdRQVVSTmFqeHR2MEJ5ek5ZV1locXZJNUVjME5vTzBnMzRXZVFVNkk2YWR1enB6a0xrRXhNSUFRYjJZMm9VdEszRGxBUy1xeWt5T0J4NGIyWXk5d1VlLTdCSXk?oc=5",
           "geography": null,
           "source_channels": [
             "historical"
@@ -3137,8 +3137,8 @@
       }
     }
   ],
-  "generated_at": "2026-11-03T11:48:39+00:00",
-  "articles_analyzed": 2595,
+  "generated_at": "2026-11-03T19:23:47+00:00",
+  "articles_analyzed": 2601,
   "methodology": "MULTI-LABEL keyword classification of unique article TITLES by publication year; multiple theme counts can arise from one headline. Year-to-year article counts reflect discovery methods, changing news coverage, and archived source availability, NOT measured changes in fraud incidence. Bank/platform mentions are not accusations and never counted as confirmed enforcement.",
   "scope": "Canadian financial-crime news discovery",
   "data_quality": "Headlines only; no full-article automated fact checking. Counts can change as the archive expands."

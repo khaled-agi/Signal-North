@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-03T11:48:40+00:00",
+  "generated_at": "2026-11-03T19:23:47+00:00",
   "methodology": "Institution names are canonically grouped using explicit aliases. Headline entries are conservative reporting groups, not distinct or independently verified fraud incidents; multiple publisher headlines are retained under each group. An institution mention is not proof of wrongdoing.",
   "source_counts": {
     "enforcement": 98,
     "reviewed_incidents": 6,
-    "unverified_report_groups": 2577,
+    "unverified_report_groups": 2583,
     "osfi_institution_rows": 345,
     "fintrac_index_notices": 90,
     "bank_disclosure_records": 15,
@@ -16,7 +16,7 @@
     "us_fdic_active_entities": 4213,
     "us_fdic_failure_events": 4117,
     "us_ncua_credit_union_entities": 4214,
-    "us_occ_enforcement_actions": 2302,
+    "us_occ_enforcement_actions": 2311,
     "us_ofac_sdn_entity_designations": 0,
     "us_sec_litigation_publications": 0,
     "uk_sanctions_entity_designations": 1667
@@ -644182,6 +644182,334 @@
           "fdic_failures": 0,
           "occ_institution_actions": 1,
           "occ_individual_matters": 0
+        }
+      },
+      "evidence_count_shown": 0
+    },
+    {
+      "id": "us-occ-21963",
+      "name": "Fifth Third Bank, National Association (OCC charter 21963)",
+      "legal_name": "Fifth Third Bank, National Association",
+      "jurisdiction": "US",
+      "country": "US",
+      "aliases": [
+        "Fifth Third Bank, National Association OCC 21963"
+      ],
+      "counts": {
+        "enforcement": 0,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [],
+      "themes": [],
+      "annual_penalties_cad": {},
+      "recent_activity": null,
+      "official_data": {
+        "occ_institution_actions": [
+          {
+            "id": "06ffa8cc527da0eb0463ed6b",
+            "start_date": "2005-09-07",
+            "case_type": "CMP",
+            "type_description": "Civil Money Penalty (CMP)",
+            "amount_usd": 1400.0,
+            "amount_raw": "1400.00",
+            "docket": null,
+            "subject_matters": [],
+            "individual_party": null,
+            "termination_date": null,
+            "source_url": "https://apps.occ.gov/EASearch",
+            "start_documents": [
+              "2005-127"
+            ],
+            "source_kind": "OCC_official_case_record"
+          }
+        ],
+        "occ": {
+          "charter": "21963",
+          "legal_name": "Fifth Third Bank, National Association",
+          "source_url": "https://apps.occ.gov/EASearch",
+          "note": "OCC charter identifier. No speculative FDIC CERT or Canadian entity merge."
+        },
+        "counts": {
+          "fintrac_public_notices": 0,
+          "fcac_index_notices": 0,
+          "bank_disclosure_years": 0,
+          "obsi_firm_years": 0,
+          "ciro_concluded_cases": 0,
+          "fdic_failures": 0,
+          "occ_institution_actions": 1,
+          "occ_individual_matters": 0
+        }
+      },
+      "evidence_count_shown": 0
+    },
+    {
+      "id": "us-occ-25190",
+      "name": "Fifth Third Bank, National Association (OCC charter 25190)",
+      "legal_name": "Fifth Third Bank, National Association",
+      "jurisdiction": "US",
+      "country": "US",
+      "aliases": [
+        "Fifth Third Bank, National Association OCC 25190"
+      ],
+      "counts": {
+        "enforcement": 0,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [],
+      "themes": [],
+      "annual_penalties_cad": {},
+      "recent_activity": null,
+      "official_data": {
+        "occ_individual_matters": [
+          {
+            "id": "4a8e42b401b956f91b82591b",
+            "start_date": "2025-12-17",
+            "case_type": "1829",
+            "type_description": "1829 Prohibition Notification",
+            "amount_usd": 0.0,
+            "amount_raw": "0.00",
+            "docket": null,
+            "subject_matters": [
+              "Violation Cited (Criminal Statute)"
+            ],
+            "individual_party": "Jamie Briceno",
+            "termination_date": null,
+            "source_url": "https://apps.occ.gov/EASearch",
+            "start_documents": [
+              "2025-15"
+            ],
+            "source_kind": "OCC_official_case_record"
+          },
+          {
+            "id": "97fd55a4d7da00af15ec502c",
+            "start_date": "2026-09-29",
+            "case_type": "Prohibition",
+            "type_description": "Prohibition/Removal Orders",
+            "amount_usd": 0.0,
+            "amount_raw": "0.00",
+            "docket": "AA-ENF-2026-43",
+            "subject_matters": [
+              "Insider Issues",
+              "Theft / Misappropriation of Funds"
+            ],
+            "individual_party": "Jennifer Hamblin",
+            "termination_date": null,
+            "source_url": "https://apps.occ.gov/EASearch",
+            "start_documents": [
+              "AA-ENF-2026-43"
+            ],
+            "source_kind": "OCC_official_case_record"
+          },
+          {
+            "id": "724f58160f65916acdd9cb70",
+            "start_date": "2025-12-10",
+            "case_type": "1829",
+            "type_description": "1829 Prohibition Notification",
+            "amount_usd": 0.0,
+            "amount_raw": "0.00",
+            "docket": null,
+            "subject_matters": [
+              "Violation Cited (Criminal Statute)"
+            ],
+            "individual_party": "Edward Jenkinson",
+            "termination_date": null,
+            "source_url": "https://apps.occ.gov/EASearch",
+            "start_documents": [
+              "2025-14"
+            ],
+            "source_kind": "OCC_official_case_record"
+          },
+          {
+            "id": "60888721a966e05cae08ab39",
+            "start_date": "2024-12-04",
+            "case_type": "Prohibition",
+            "type_description": "Prohibition/Removal Orders",
+            "amount_usd": 0.0,
+            "amount_raw": "0.00",
+            "docket": "AA-ENF-2024-97",
+            "subject_matters": [
+              "Elder Abuse",
+              "Insider Issues",
+              "Theft / Misappropriation of Funds"
+            ],
+            "individual_party": "Cassandra Meadows",
+            "termination_date": null,
+            "source_url": "https://apps.occ.gov/EASearch",
+            "start_documents": [
+              "AA-ENF-2024-97"
+            ],
+            "source_kind": "OCC_official_case_record"
+          },
+          {
+            "id": "e89c7ac10e5561baa7eeefed",
+            "start_date": "2025-01-27",
+            "case_type": "1829",
+            "type_description": "1829 Prohibition Notification",
+            "amount_usd": 0.0,
+            "amount_raw": "0.00",
+            "docket": null,
+            "subject_matters": [
+              "Violation Cited (Criminal Statute)"
+            ],
+            "individual_party": "Kindra Roach",
+            "termination_date": null,
+            "source_url": "https://apps.occ.gov/EASearch",
+            "start_documents": [
+              "2025-02"
+            ],
+            "source_kind": "OCC_official_case_record"
+          },
+          {
+            "id": "0067e3a1467852109185d321",
+            "start_date": "2024-12-09",
+            "case_type": "1829",
+            "type_description": "1829 Prohibition Notification",
+            "amount_usd": 0.0,
+            "amount_raw": "0.00",
+            "docket": null,
+            "subject_matters": [
+              "Violation Cited (Criminal Statute)"
+            ],
+            "individual_party": "Ljiljana Zivanovic",
+            "termination_date": null,
+            "source_url": "https://apps.occ.gov/EASearch",
+            "start_documents": [
+              "2024-40"
+            ],
+            "source_kind": "OCC_official_case_record"
+          }
+        ],
+        "occ": {
+          "charter": "25190",
+          "legal_name": "Fifth Third Bank, National Association",
+          "source_url": "https://apps.occ.gov/EASearch",
+          "note": "OCC charter identifier. No speculative FDIC CERT or Canadian entity merge."
+        },
+        "counts": {
+          "fintrac_public_notices": 0,
+          "fcac_index_notices": 0,
+          "bank_disclosure_years": 0,
+          "obsi_firm_years": 0,
+          "ciro_concluded_cases": 0,
+          "fdic_failures": 0,
+          "occ_institution_actions": 0,
+          "occ_individual_matters": 6
+        }
+      },
+      "evidence_count_shown": 0
+    },
+    {
+      "id": "us-occ-22154",
+      "name": "Fifth Third Trust Company, N.A. (OCC charter 22154)",
+      "legal_name": "Fifth Third Trust Company, N.A.",
+      "jurisdiction": "US",
+      "country": "US",
+      "aliases": [
+        "Fifth Third Trust Company, N.A. OCC 22154"
+      ],
+      "counts": {
+        "enforcement": 0,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [],
+      "themes": [],
+      "annual_penalties_cad": {},
+      "recent_activity": null,
+      "official_data": {
+        "occ_institution_actions": [
+          {
+            "id": "1e9672adf7b38de1cfaca2de",
+            "start_date": "1991-01-15",
+            "case_type": "CMP",
+            "type_description": "Civil Money Penalty (CMP)",
+            "amount_usd": 5700.0,
+            "amount_raw": "5700.00",
+            "docket": "AA-EC-91-05",
+            "subject_matters": [],
+            "individual_party": null,
+            "termination_date": null,
+            "source_url": "https://apps.occ.gov/EASearch",
+            "start_documents": [
+              "1010"
+            ],
+            "source_kind": "OCC_official_case_record"
+          }
+        ],
+        "occ": {
+          "charter": "22154",
+          "legal_name": "Fifth Third Trust Company, N.A.",
+          "source_url": "https://apps.occ.gov/EASearch",
+          "note": "OCC charter identifier. No speculative FDIC CERT or Canadian entity merge."
+        },
+        "counts": {
+          "fintrac_public_notices": 0,
+          "fcac_index_notices": 0,
+          "bank_disclosure_years": 0,
+          "obsi_firm_years": 0,
+          "ciro_concluded_cases": 0,
+          "fdic_failures": 0,
+          "occ_institution_actions": 1,
+          "occ_individual_matters": 0
+        }
+      },
+      "evidence_count_shown": 0
+    },
+    {
+      "id": "us-occ-36",
+      "name": "The Fifth Third Bank of Northwestern Ohio, National Association (OCC charter 36)",
+      "legal_name": "The Fifth Third Bank of Northwestern Ohio, National Association",
+      "jurisdiction": "US",
+      "country": "US",
+      "aliases": [
+        "The Fifth Third Bank of Northwestern Ohio, National Association OCC 36"
+      ],
+      "counts": {
+        "enforcement": 0,
+        "incidents": 0,
+        "headlines": 0
+      },
+      "evidence": [],
+      "themes": [],
+      "annual_penalties_cad": {},
+      "recent_activity": null,
+      "official_data": {
+        "occ_individual_matters": [
+          {
+            "id": "9728a0e2948e1393d76d1e0a",
+            "start_date": "2001-12-14",
+            "case_type": "Prohibition",
+            "type_description": "Prohibition/Removal Orders",
+            "amount_usd": 0.0,
+            "amount_raw": "0.00",
+            "docket": null,
+            "subject_matters": [],
+            "individual_party": "Darren A. Lossia",
+            "termination_date": null,
+            "source_url": "https://apps.occ.gov/EASearch",
+            "start_documents": [
+              "2001-119"
+            ],
+            "source_kind": "OCC_official_case_record"
+          }
+        ],
+        "occ": {
+          "charter": "36",
+          "legal_name": "The Fifth Third Bank of Northwestern Ohio, National Association",
+          "source_url": "https://apps.occ.gov/EASearch",
+          "note": "OCC charter identifier. No speculative FDIC CERT or Canadian entity merge."
+        },
+        "counts": {
+          "fintrac_public_notices": 0,
+          "fcac_index_notices": 0,
+          "bank_disclosure_years": 0,
+          "obsi_firm_years": 0,
+          "ciro_concluded_cases": 0,
+          "fdic_failures": 0,
+          "occ_institution_actions": 0,
+          "occ_individual_matters": 1
         }
       },
       "evidence_count_shown": 0
