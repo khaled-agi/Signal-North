@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-04T15:19:23+00:00",
+  "generated_at": "2026-11-04T21:28:55+00:00",
   "records": [
     {
       "id": "0279734eec95cf9200c3",
@@ -37,15 +37,15 @@
   ],
   "health": {
     "disciplined_list": {
-      "status": "success",
-      "count_new_feed_items": 1,
-      "last_success": "2026-11-04T15:19:23+00:00",
+      "status": "failed_last_good_preserved",
+      "error_type": "ValueError",
+      "last_attempt": "2026-11-04T21:28:55+00:00",
       "url": "https://www.bcsc.bc.ca/rss/disciplined-list"
     },
     "hearing_notices": {
       "status": "success",
       "count_new_feed_items": 2,
-      "last_success": "2026-11-04T15:19:23+00:00",
+      "last_success": "2026-11-04T21:28:55+00:00",
       "url": "https://www.bcsc.bc.ca/rss/notices-of-hearing-and-temporary-orders"
     }
   },
