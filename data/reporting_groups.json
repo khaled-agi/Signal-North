@@ -1,12 +1,134 @@
 {
-  "generated_at": "2026-11-05T09:18:09+00:00",
-  "original_index_headlines": 2634,
-  "reporting_groups": 2616,
-  "multi_report_groups": 16,
-  "groups_with_multiple_sources": 29,
-  "headline_variation_groups": 27,
+  "generated_at": "2026-11-05T17:37:29+00:00",
+  "original_index_headlines": 2637,
+  "reporting_groups": 2618,
+  "multi_report_groups": 17,
+  "groups_with_multiple_sources": 30,
+  "headline_variation_groups": 28,
   "methodology": "Display-only high-similarity headline grouping within ten days; original article index preserved. Publisher-specific title wording and original links are retained in each detail view. Groups are not independently verified fraud incidents.",
   "groups": [
+    {
+      "id": "report-01107c211a8a1eb2385b",
+      "title": "Sentencing update - RCMP charges federal consultant for fraudulent billing",
+      "url": "https://rcmp.ca/en/news/2026/11/4358545",
+      "publisher": "Royal Canadian Mounted Police",
+      "published_at": "2026-11-05T15:07:09+00:00",
+      "date_basis": "official_feed_publication",
+      "topics": [
+        "Police-reported financial crime"
+      ],
+      "category": "Reported fraud",
+      "evidence_status": "unverified_grouped_reporting",
+      "discovery_source": "rcmp_official_rss",
+      "institution": null,
+      "reported_loss": null,
+      "content_kind": "news_lead",
+      "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "organizations_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": false,
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
+      "first_seen_at": "2026-11-05T17:37:25+00:00",
+      "last_observed_at": "2026-11-05T17:37:25+00:00",
+      "notice": "Article metadata / headline discovery only. Any mentioned bank, sum or location is not independently corroborated.",
+      "article_links": [
+        {
+          "title": "Sentencing update - RCMP charges federal consultant for fraudulent billing",
+          "publisher": "Royal Canadian Mounted Police",
+          "url": "https://rcmp.ca/en/news/2026/11/4358545",
+          "published_at": "2026-11-05T15:07:09+00:00",
+          "discovery_channel": "rcmp_official_rss"
+        }
+      ],
+      "number_of_article_links": 1,
+      "source_channels": [
+        "rcmp_official_rss"
+      ],
+      "review_status": "requires_source_review",
+      "index_note": "Article discovery record, not a confirmed individual incident or bank loss.",
+      "article_ids": [
+        "397f901180be85f0de82"
+      ],
+      "fraud_themes": [],
+      "headline_variations": [
+        {
+          "title": "Sentencing update - RCMP charges federal consultant for fraudulent billing",
+          "publisher": "Royal Canadian Mounted Police",
+          "url": "https://rcmp.ca/en/news/2026/11/4358545",
+          "published_at": "2026-11-05T15:07:09+00:00",
+          "discovery_channel": "rcmp_official_rss"
+        }
+      ],
+      "variation_count": 1,
+      "source_count": 1,
+      "underlying_headline_count": 1,
+      "geographic_relevance": "geography_unresolved",
+      "geographic_relevance_basis": "Headline alone does not establish incident geography. No inference from publisher domain.",
+      "grouping_basis": "conservative_headline_similarity_within_10_days",
+      "grouping_disclaimer": "Grouped reporting is not independently verified as one event; similarity does not prove the same underlying victim, incident, loss or misconduct."
+    },
+    {
+      "id": "report-94f0bc9f1d26fd903c7a",
+      "title": "Ex-RBC worker admits fraud after opening at least 43 accounts - Human Resources Director",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOTGkzLU5waG5mMmJpV2lKUWcycUZUX2o4NjFNYlJZNGJJTjdaeC1WZmFOTkRqa0NwREplMjVnVVExbEtDOEJBYVNfb2E4ZDBaVFFhQm1BcEhTS0VvODdJdFdDNV80OEVOSnhXRS1PMkVMSk5UZVhRa0YtOTBrN2liZFJ1OUR3ZEs3OVloWDFpVEZBOHBXQmFZVkZ5UGVnM1hVbFRhUDdIcmUzVVRFV21rZnNVZHN0bmkxcklFbGtUanNCZw?oc=5",
+      "publisher": "Human Resources Director",
+      "published_at": "2026-11-05T13:58:09+00:00",
+      "first_seen_at": "2026-11-05T17:37:14+00:00",
+      "last_observed_at": "2026-11-05T17:37:14+00:00",
+      "topics": [
+        "Bank and customer fraud"
+      ],
+      "category": "Reported fraud",
+      "evidence_status": "unverified_grouped_reporting",
+      "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [
+        "RBC"
+      ],
+      "organizations_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": true,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
+      "institution": null,
+      "reported_loss": null,
+      "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness.",
+      "article_links": [
+        {
+          "title": "Ex-RBC worker admits fraud after opening at least 43 accounts - Human Resources Director",
+          "publisher": "Human Resources Director",
+          "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOTGkzLU5waG5mMmJpV2lKUWcycUZUX2o4NjFNYlJZNGJJTjdaeC1WZmFOTkRqa0NwREplMjVnVVExbEtDOEJBYVNfb2E4ZDBaVFFhQm1BcEhTS0VvODdJdFdDNV80OEVOSnhXRS1PMkVMSk5UZVhRa0YtOTBrN2liZFJ1OUR3ZEs3OVloWDFpVEZBOHBXQmFZVkZ5UGVnM1hVbFRhUDdIcmUzVVRFV21rZnNVZHN0bmkxcklFbGtUanNCZw?oc=5",
+          "published_at": "2026-11-05T13:58:09+00:00",
+          "discovery_channel": "recent"
+        }
+      ],
+      "number_of_article_links": 1,
+      "source_channels": [
+        "recent"
+      ],
+      "review_status": "requires_source_review",
+      "index_note": "Article discovery record, not a confirmed individual incident or bank loss.",
+      "article_ids": [
+        "fe0de942344804b905cf"
+      ],
+      "fraud_themes": [],
+      "headline_variations": [
+        {
+          "title": "Ex-RBC worker admits fraud after opening at least 43 accounts - Human Resources Director",
+          "publisher": "Human Resources Director",
+          "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOTGkzLU5waG5mMmJpV2lKUWcycUZUX2o4NjFNYlJZNGJJTjdaeC1WZmFOTkRqa0NwREplMjVnVVExbEtDOEJBYVNfb2E4ZDBaVFFhQm1BcEhTS0VvODdJdFdDNV80OEVOSnhXRS1PMkVMSk5UZVhRa0YtOTBrN2liZFJ1OUR3ZEs3OVloWDFpVEZBOHBXQmFZVkZ5UGVnM1hVbFRhUDdIcmUzVVRFV21rZnNVZHN0bmkxcklFbGtUanNCZw?oc=5",
+          "published_at": "2026-11-05T13:58:09+00:00",
+          "discovery_channel": "recent"
+        }
+      ],
+      "variation_count": 1,
+      "source_count": 1,
+      "underlying_headline_count": 1,
+      "geographic_relevance": "geography_unresolved",
+      "geographic_relevance_basis": "Headline alone does not establish incident geography. No inference from publisher domain.",
+      "grouping_basis": "conservative_headline_similarity_within_10_days",
+      "grouping_disclaimer": "Grouped reporting is not independently verified as one event; similarity does not prove the same underlying victim, incident, loss or misconduct."
+    },
     {
       "id": "report-39aebf4c8502c968e6e2",
       "title": "Judge rejects grandparent scammer's bid to back out of guilty plea, sends her to jail instead - CBC",
@@ -14,7 +136,7 @@
       "publisher": "CBC",
       "published_at": "2026-11-05T01:37:00+00:00",
       "first_seen_at": "2026-11-05T01:45:15+00:00",
-      "last_observed_at": "2026-11-05T01:45:15+00:00",
+      "last_observed_at": "2026-11-05T17:37:14+00:00",
       "topics": [
         "Scams and victims"
       ],
@@ -73,7 +195,7 @@
       "publisher": "Global News",
       "published_at": "2026-11-05T00:00:06+00:00",
       "first_seen_at": "2026-11-05T01:45:17+00:00",
-      "last_observed_at": "2026-11-05T09:17:58+00:00",
+      "last_observed_at": "2026-11-05T17:37:15+00:00",
       "topics": [
         "Fraud research and reports"
       ],
@@ -126,7 +248,7 @@
       "grouping_disclaimer": "Grouped reporting is not independently verified as one event; similarity does not prove the same underlying victim, incident, loss or misconduct."
     },
     {
-      "id": "report-0c8ed0aff8cc672132f9",
+      "id": "report-da82cd723c68520af1f7",
       "title": "Ontario court certifies class-action suit against TD Bank regarding money laundering - CP24",
       "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOVVZlUzVlRW44Vzl3SVU0STdLVmllc2lvMTcwbEVTd2U5M2s3YTgxb2Rzc1cxOGRxbzJ6RFNZMHd1MFN0d0tTN3FpSnJBcm0xN3ZIUHlXSDYyYmVoS1NBcFd0eHFxT1ZHUExyOVBVY2VZTlkySlF3d2UwdFh4SUxBTkl5Q2N0WHM0dzhZVWhNS3NkVnNuMXVwMVdBODc3dHRZT0kxbkx0UVpBdU1fSkxvdTdFa0xvbWFGSzhCYkdmMEt2enhWSTM4d1hQMA?oc=5",
       "publisher": "CP24",
@@ -152,26 +274,12 @@
       "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness.",
       "article_links": [
         {
-          "title": "Ontario court certifies class-action suit against TD Bank regarding money laundering - CP24",
-          "publisher": "CP24",
-          "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOVVZlUzVlRW44Vzl3SVU0STdLVmllc2lvMTcwbEVTd2U5M2s3YTgxb2Rzc1cxOGRxbzJ6RFNZMHd1MFN0d0tTN3FpSnJBcm0xN3ZIUHlXSDYyYmVoS1NBcFd0eHFxT1ZHUExyOVBVY2VZTlkySlF3d2UwdFh4SUxBTkl5Q2N0WHM0dzhZVWhNS3NkVnNuMXVwMVdBODc3dHRZT0kxbkx0UVpBdU1fSkxvdTdFa0xvbWFGSzhCYkdmMEt2enhWSTM4d1hQMA?oc=5",
+          "title": "Ontario court certifies class-action suit against TD Bank regarding money laundering - CTV News",
+          "publisher": "CTV News",
+          "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOYWV2cUU4emNhNHdjaUcwMkk4aDdKYk1IWEtyNFZjdHpGU1RWT0JteXBLbFFUWDF6OHlsVnZMTFJVcHgySllxd0VLU2VtN0ZiMnpORlRFOW1wc2dIbUliZ0hTTXAwOVdGbkF1RTVIZENWWFN3UFgzUkY0X2ZGTm4zT2ktMnZ3c1lPWEdtLS1sazh2eE5PMjhkZlozTmpQbERTTFh0X2FIbGJuZmRFd0FhOFNPTnRXVEdLRlFZcUQ0QndaZw?oc=5",
           "published_at": "2026-11-04T22:45:45+00:00",
           "discovery_channel": "recent"
-        }
-      ],
-      "number_of_article_links": 1,
-      "source_channels": [
-        "recent"
-      ],
-      "review_status": "requires_source_review",
-      "index_note": "Article discovery record, not a confirmed individual incident or bank loss.",
-      "article_ids": [
-        "f7383394b3029e54c4c9"
-      ],
-      "fraud_themes": [
-        "Money mules & laundering"
-      ],
-      "headline_variations": [
+        },
         {
           "title": "Ontario court certifies class-action suit against TD Bank regarding money laundering - CP24",
           "publisher": "CP24",
@@ -180,9 +288,38 @@
           "discovery_channel": "recent"
         }
       ],
-      "variation_count": 1,
-      "source_count": 1,
-      "underlying_headline_count": 1,
+      "number_of_article_links": 2,
+      "source_channels": [
+        "recent"
+      ],
+      "review_status": "requires_source_review",
+      "index_note": "Article discovery record, not a confirmed individual incident or bank loss.",
+      "article_ids": [
+        "f7383394b3029e54c4c9",
+        "993f57a34fdb0f6869d7"
+      ],
+      "fraud_themes": [
+        "Money mules & laundering"
+      ],
+      "headline_variations": [
+        {
+          "title": "Ontario court certifies class-action suit against TD Bank regarding money laundering - CTV News",
+          "publisher": "CTV News",
+          "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOYWV2cUU4emNhNHdjaUcwMkk4aDdKYk1IWEtyNFZjdHpGU1RWT0JteXBLbFFUWDF6OHlsVnZMTFJVcHgySllxd0VLU2VtN0ZiMnpORlRFOW1wc2dIbUliZ0hTTXAwOVdGbkF1RTVIZENWWFN3UFgzUkY0X2ZGTm4zT2ktMnZ3c1lPWEdtLS1sazh2eE5PMjhkZlozTmpQbERTTFh0X2FIbGJuZmRFd0FhOFNPTnRXVEdLRlFZcUQ0QndaZw?oc=5",
+          "published_at": "2026-11-04T22:45:45+00:00",
+          "discovery_channel": "recent"
+        },
+        {
+          "title": "Ontario court certifies class-action suit against TD Bank regarding money laundering - CP24",
+          "publisher": "CP24",
+          "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOVVZlUzVlRW44Vzl3SVU0STdLVmllc2lvMTcwbEVTd2U5M2s3YTgxb2Rzc1cxOGRxbzJ6RFNZMHd1MFN0d0tTN3FpSnJBcm0xN3ZIUHlXSDYyYmVoS1NBcFd0eHFxT1ZHUExyOVBVY2VZTlkySlF3d2UwdFh4SUxBTkl5Q2N0WHM0dzhZVWhNS3NkVnNuMXVwMVdBODc3dHRZT0kxbkx0UVpBdU1fSkxvdTdFa0xvbWFGSzhCYkdmMEt2enhWSTM4d1hQMA?oc=5",
+          "published_at": "2026-11-04T22:45:45+00:00",
+          "discovery_channel": "recent"
+        }
+      ],
+      "variation_count": 2,
+      "source_count": 2,
+      "underlying_headline_count": 2,
       "geographic_relevance": "canadian_location_or_reference",
       "geographic_relevance_basis": "Canadian geographic clue in title or curated headline city reference; not verified incident location.",
       "grouping_basis": "conservative_headline_similarity_within_10_days",
@@ -270,7 +407,7 @@
       "headline_case_candidate": false,
       "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "first_seen_at": "2026-11-04T21:29:31+00:00",
-      "last_observed_at": "2026-11-05T09:18:01+00:00",
+      "last_observed_at": "2026-11-05T17:37:20+00:00",
       "notice": "Article metadata / headline discovery only. Any mentioned bank, sum or location is not independently corroborated.",
       "article_links": [
         {
@@ -318,7 +455,7 @@
       "publisher": "RED FM Canada",
       "published_at": "2026-11-04T19:23:29+00:00",
       "first_seen_at": "2026-11-04T21:29:26+00:00",
-      "last_observed_at": "2026-11-05T09:17:57+00:00",
+      "last_observed_at": "2026-11-05T17:37:14+00:00",
       "topics": [
         "Police investigations"
       ],
@@ -379,7 +516,7 @@
       "publisher": "CTV News",
       "published_at": "2026-11-04T19:02:54+00:00",
       "first_seen_at": "2026-11-04T21:29:26+00:00",
-      "last_observed_at": "2026-11-05T09:17:58+00:00",
+      "last_observed_at": "2026-11-05T17:37:15+00:00",
       "topics": [
         "Bank and customer fraud",
         "Fraud research and reports",
@@ -442,7 +579,7 @@
       "publisher": "CTV News",
       "published_at": "2026-11-04T18:56:52+00:00",
       "first_seen_at": "2026-11-05T01:45:17+00:00",
-      "last_observed_at": "2026-11-05T01:45:17+00:00",
+      "last_observed_at": "2026-11-05T17:37:15+00:00",
       "topics": [
         "Fraud research and reports"
       ],
@@ -503,7 +640,7 @@
       "publisher": "CTV News",
       "published_at": "2026-11-04T17:05:02+00:00",
       "first_seen_at": "2026-11-05T01:45:17+00:00",
-      "last_observed_at": "2026-11-05T09:17:58+00:00",
+      "last_observed_at": "2026-11-05T17:37:15+00:00",
       "topics": [
         "Fraud research and reports"
       ],
@@ -566,7 +703,7 @@
       "publisher": "South Muskoka Doppler",
       "published_at": "2026-11-04T15:48:26+00:00",
       "first_seen_at": "2026-11-04T21:29:26+00:00",
-      "last_observed_at": "2026-11-05T09:17:57+00:00",
+      "last_observed_at": "2026-11-05T17:37:14+00:00",
       "topics": [
         "Police investigations"
       ],
@@ -747,10 +884,12 @@
       "publisher": "CBC",
       "published_at": "2026-11-04T14:01:31+00:00",
       "first_seen_at": "2026-11-05T01:45:15+00:00",
-      "last_observed_at": "2026-11-05T09:17:57+00:00",
+      "last_observed_at": "2026-11-05T17:37:17+00:00",
       "topics": [
         "Bank and customer fraud",
-        "Police investigations"
+        "Fraud research and reports",
+        "Police investigations",
+        "Social media scam reports"
       ],
       "category": "Reported fraud",
       "evidence_status": "unverified_grouped_reporting",
@@ -805,9 +944,9 @@
       "title": "Edmonton Police Disrupt $20M Fake Carrier Phone Scam - iPhone in Canada",
       "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPekMzUHhjZy1VQUhCUE5faUNUdXhpNkZWQk42YkhaMVpNYkFsNi1Sa0F2RUt3cG5XcDJXaTE2QmwtRGpNeDVEMGZXdXZqOFhyRURwM0VLNHNuMThyWnIxLXBLcGl4LUJBWGw3bGNYdW1GV2hCWDd0RW9fRmNhOXAxTTNkTy12ZmxFelBZ?oc=5",
       "publisher": "iPhone in Canada",
-      "published_at": "2026-11-04T13:25:16+00:00",
+      "published_at": "2026-11-04T13:00:51+00:00",
       "first_seen_at": "2026-11-04T15:19:55+00:00",
-      "last_observed_at": "2026-11-05T09:17:56+00:00",
+      "last_observed_at": "2026-11-05T17:37:14+00:00",
       "topics": [
         "Scams and victims"
       ],
@@ -835,7 +974,7 @@
           "title": "Edmonton Police Disrupt $20M Fake Carrier Phone Scam - iPhone in Canada",
           "publisher": "iPhone in Canada",
           "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPekMzUHhjZy1VQUhCUE5faUNUdXhpNkZWQk42YkhaMVpNYkFsNi1Sa0F2RUt3cG5XcDJXaTE2QmwtRGpNeDVEMGZXdXZqOFhyRURwM0VLNHNuMThyWnIxLXBLcGl4LUJBWGw3bGNYdW1GV2hCWDd0RW9fRmNhOXAxTTNkTy12ZmxFelBZ?oc=5",
-          "published_at": "2026-11-04T13:25:16+00:00",
+          "published_at": "2026-11-04T13:00:51+00:00",
           "discovery_channel": "recent"
         }
       ],
@@ -854,7 +993,7 @@
           "title": "Edmonton Police Disrupt $20M Fake Carrier Phone Scam - iPhone in Canada",
           "publisher": "iPhone in Canada",
           "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPekMzUHhjZy1VQUhCUE5faUNUdXhpNkZWQk42YkhaMVpNYkFsNi1Sa0F2RUt3cG5XcDJXaTE2QmwtRGpNeDVEMGZXdXZqOFhyRURwM0VLNHNuMThyWnIxLXBLcGl4LUJBWGw3bGNYdW1GV2hCWDd0RW9fRmNhOXAxTTNkTy12ZmxFelBZ?oc=5",
-          "published_at": "2026-11-04T13:25:16+00:00",
+          "published_at": "2026-11-04T13:00:51+00:00",
           "discovery_channel": "recent"
         }
       ],
@@ -922,6 +1061,70 @@
           "publisher": "Winnipeg Sun",
           "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPenJTN3FMc0phNzE2YkUyMHllZXZkZTVuUElUQ1NwanBGVWR2WTFQcmw5R1dIdXYzblg5ejJhdHQwQk1nRFRCZVRib19CZ3lHSkVSaWxuTW5uTkZSdzNNQ1E4T0QwYUs4NHRpdXdzTDhtME1yTW9pTE5tNEx0RG8xbUJISG4tdXhRazJjM2RrTWpOdXlWOE5hcEFUVXY0UnhYV3ptOUd1MW1pMm5ZVThoOHpjc2drRzA1TW5MLVRlTF9zdnliZ3BqVFd0N2xYcC0tT2ozcC14YndVaXdDNm1HQjZSYlJoSG8?oc=5",
           "published_at": "2026-11-04T10:55:00+00:00",
+          "discovery_channel": "recent"
+        }
+      ],
+      "variation_count": 1,
+      "source_count": 1,
+      "underlying_headline_count": 1,
+      "geographic_relevance": "canadian_location_or_reference",
+      "geographic_relevance_basis": "Canadian geographic clue in title or curated headline city reference; not verified incident location.",
+      "grouping_basis": "conservative_headline_similarity_within_10_days",
+      "grouping_disclaimer": "Grouped reporting is not independently verified as one event; similarity does not prove the same underlying victim, incident, loss or misconduct."
+    },
+    {
+      "id": "report-d205be7903af051d52b8",
+      "title": "U.S., U.K., Canada Target Crypto Phishing in Joint Operation - CoinMarketCap",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQMWhYMkJkbWYyT1ZoaTNoY3dwTmRYbTNheVNla0NCNnZtb3FDempfekNpRGpzQVZIQndaQW42b0lxSTB2SWdIYW02VU95a0lUWEJjQ0lxNzUtVzZsd3ExajdGY09La1h1dG9YRUV3bVRMVE1yS2hfY0dldkE4dXR1SHByY1p0dEY3Y3hLTlZqeGlwSURpcTl3eW5yOTc?oc=5",
+      "publisher": "CoinMarketCap",
+      "published_at": "2026-11-04T05:43:14+00:00",
+      "first_seen_at": "2026-10-24T01:27:42+00:00",
+      "last_observed_at": "2026-11-05T17:37:17+00:00",
+      "topics": [
+        "Crypto investment and exchange",
+        "Scams and victims",
+        "Securities investigations"
+      ],
+      "category": "Investment fraud",
+      "evidence_status": "unverified_grouped_reporting",
+      "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "organizations_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
+      "institution": null,
+      "reported_loss": null,
+      "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness.",
+      "article_links": [
+        {
+          "title": "U.S., U.K., Canada Target Crypto Phishing in Joint Operation - CoinMarketCap",
+          "publisher": "CoinMarketCap",
+          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQMWhYMkJkbWYyT1ZoaTNoY3dwTmRYbTNheVNla0NCNnZtb3FDempfekNpRGpzQVZIQndaQW42b0lxSTB2SWdIYW02VU95a0lUWEJjQ0lxNzUtVzZsd3ExajdGY09La1h1dG9YRUV3bVRMVE1yS2hfY0dldkE4dXR1SHByY1p0dEY3Y3hLTlZqeGlwSURpcTl3eW5yOTc?oc=5",
+          "published_at": "2026-11-04T05:43:14+00:00",
+          "discovery_channel": "recent"
+        }
+      ],
+      "number_of_article_links": 1,
+      "source_channels": [
+        "recent"
+      ],
+      "review_status": "requires_source_review",
+      "index_note": "Article discovery record, not a confirmed individual incident or bank loss.",
+      "article_ids": [
+        "1b417fcc9b01c3f6d3dd"
+      ],
+      "fraud_themes": [
+        "Bank impersonation & phishing",
+        "Investment & crypto scams"
+      ],
+      "headline_variations": [
+        {
+          "title": "U.S., U.K., Canada Target Crypto Phishing in Joint Operation - CoinMarketCap",
+          "publisher": "CoinMarketCap",
+          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQMWhYMkJkbWYyT1ZoaTNoY3dwTmRYbTNheVNla0NCNnZtb3FDempfekNpRGpzQVZIQndaQW42b0lxSTB2SWdIYW02VU95a0lUWEJjQ0lxNzUtVzZsd3ExajdGY09La1h1dG9YRUV3bVRMVE1yS2hfY0dldkE4dXR1SHByY1p0dEY3Y3hLTlZqeGlwSURpcTl3eW5yOTc?oc=5",
+          "published_at": "2026-11-04T05:43:14+00:00",
           "discovery_channel": "recent"
         }
       ],
@@ -1015,8 +1218,8 @@
       "amount_strings_in_headline": [],
       "headline_case_candidate": false,
       "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
-      "first_seen_at": "2026-11-05T09:18:00+00:00",
-      "last_observed_at": "2026-11-05T09:18:00+00:00",
+      "first_seen_at": "2026-11-05T17:37:19+00:00",
+      "last_observed_at": "2026-11-05T17:37:19+00:00",
       "notice": "Article metadata / headline discovery only. Any mentioned bank, sum or location is not independently corroborated.",
       "article_links": [
         {
@@ -1195,7 +1398,7 @@
       "publisher": "CTV News",
       "published_at": "2026-11-03T20:24:45+00:00",
       "first_seen_at": "2026-11-05T01:45:17+00:00",
-      "last_observed_at": "2026-11-05T09:17:58+00:00",
+      "last_observed_at": "2026-11-05T17:37:15+00:00",
       "topics": [
         "Fraud research and reports"
       ],
@@ -1256,7 +1459,7 @@
       "publisher": "insauga.com",
       "published_at": "2026-11-03T19:46:47+00:00",
       "first_seen_at": "2026-11-04T00:11:09+00:00",
-      "last_observed_at": "2026-11-05T09:17:57+00:00",
+      "last_observed_at": "2026-11-05T17:37:14+00:00",
       "topics": [
         "Police investigations"
       ],
@@ -1315,8 +1518,9 @@
       "publisher": "CBC",
       "published_at": "2026-11-03T18:18:00+00:00",
       "first_seen_at": "2026-11-04T21:29:26+00:00",
-      "last_observed_at": "2026-11-05T09:17:57+00:00",
+      "last_observed_at": "2026-11-05T17:37:15+00:00",
       "topics": [
+        "Fraud research and reports",
         "Police investigations"
       ],
       "category": "Reported fraud",
@@ -1503,7 +1707,7 @@
       "publisher": "The Cool Down",
       "published_at": "2026-11-03T08:23:00+00:00",
       "first_seen_at": "2026-11-03T11:48:16+00:00",
-      "last_observed_at": "2026-11-05T09:17:56+00:00",
+      "last_observed_at": "2026-11-05T17:37:14+00:00",
       "topics": [
         "Scams and victims"
       ],
@@ -1625,7 +1829,7 @@
       "publisher": "CTV News",
       "published_at": "2026-11-02T21:01:35+00:00",
       "first_seen_at": "2026-11-02T22:43:09+00:00",
-      "last_observed_at": "2026-11-05T01:45:15+00:00",
+      "last_observed_at": "2026-11-05T17:37:14+00:00",
       "topics": [
         "Online gambling fraud",
         "Police investigations",
@@ -1687,7 +1891,7 @@
       "publisher": "Canadian Mortgage Trends",
       "published_at": "2026-11-02T20:31:19+00:00",
       "first_seen_at": "2026-11-02T22:43:08+00:00",
-      "last_observed_at": "2026-11-05T09:17:56+00:00",
+      "last_observed_at": "2026-11-05T17:37:14+00:00",
       "topics": [
         "Bank and customer fraud"
       ],
@@ -1805,7 +2009,7 @@
       "publisher": "The Globe and Mail",
       "published_at": "2026-11-02T12:00:00+00:00",
       "first_seen_at": "2026-11-02T13:48:24+00:00",
-      "last_observed_at": "2026-11-05T09:17:57+00:00",
+      "last_observed_at": "2026-11-05T17:37:14+00:00",
       "topics": [
         "Police investigations"
       ],
@@ -1864,7 +2068,7 @@
       "publisher": "Arbiterz",
       "published_at": "2026-11-02T11:20:50+00:00",
       "first_seen_at": "2026-11-02T13:48:26+00:00",
-      "last_observed_at": "2026-11-05T09:17:58+00:00",
+      "last_observed_at": "2026-11-05T17:37:15+00:00",
       "topics": [
         "Fraud research and reports"
       ],
@@ -2362,7 +2566,7 @@
       "publisher": "BayToday.ca",
       "published_at": "2026-10-30T23:16:05+00:00",
       "first_seen_at": "2026-10-31T19:32:15+00:00",
-      "last_observed_at": "2026-11-05T09:17:57+00:00",
+      "last_observed_at": "2026-11-05T17:37:14+00:00",
       "topics": [
         "Police investigations"
       ],
@@ -2489,7 +2693,7 @@
       "publisher": "CTV News",
       "published_at": "2026-10-30T20:32:17+00:00",
       "first_seen_at": "2026-10-30T22:30:31+00:00",
-      "last_observed_at": "2026-11-05T09:17:57+00:00",
+      "last_observed_at": "2026-11-05T17:37:14+00:00",
       "topics": [
         "Police investigations"
       ],
@@ -2804,7 +3008,7 @@
       "publisher": "ImmigCanada Immigration Consulting Services",
       "published_at": "2026-10-30T12:38:59+00:00",
       "first_seen_at": "2026-10-30T20:03:24+00:00",
-      "last_observed_at": "2026-11-05T09:17:58+00:00",
+      "last_observed_at": "2026-11-05T17:37:15+00:00",
       "topics": [
         "Fraud research and reports",
         "Police investigations"
@@ -3065,7 +3269,7 @@
       "publisher": "CTV News",
       "published_at": "2026-10-29T20:44:49+00:00",
       "first_seen_at": "2026-11-05T09:17:59+00:00",
-      "last_observed_at": "2026-11-05T09:17:59+00:00",
+      "last_observed_at": "2026-11-05T17:37:17+00:00",
       "topics": [
         "Online gambling fraud"
       ],
@@ -3190,7 +3394,7 @@
       "publisher": "Financial Post",
       "published_at": "2026-10-29T19:34:33+00:00",
       "first_seen_at": "2026-10-29T16:49:04+00:00",
-      "last_observed_at": "2026-11-05T09:17:57+00:00",
+      "last_observed_at": "2026-11-05T17:37:14+00:00",
       "topics": [
         "Money laundering"
       ],
@@ -3311,7 +3515,7 @@
       "publisher": "CBC",
       "published_at": "2026-10-29T18:57:15+00:00",
       "first_seen_at": "2026-10-29T16:49:05+00:00",
-      "last_observed_at": "2026-11-05T09:17:58+00:00",
+      "last_observed_at": "2026-11-05T17:37:16+00:00",
       "topics": [
         "Crypto investment and exchange"
       ],
@@ -3693,7 +3897,7 @@
       "publisher": "CBC",
       "published_at": "2026-10-29T16:03:12+00:00",
       "first_seen_at": "2026-10-29T21:42:54+00:00",
-      "last_observed_at": "2026-11-05T09:17:58+00:00",
+      "last_observed_at": "2026-11-05T17:37:16+00:00",
       "topics": [
         "Crypto investment and exchange"
       ],
@@ -4269,7 +4473,7 @@
       "publisher": "Yahoo News Canada",
       "published_at": "2026-10-29T00:57:00+00:00",
       "first_seen_at": "2026-10-29T09:43:10+00:00",
-      "last_observed_at": "2026-11-05T09:17:56+00:00",
+      "last_observed_at": "2026-11-05T17:37:14+00:00",
       "topics": [
         "Scams and victims"
       ],
@@ -4709,7 +4913,7 @@
       "publisher": "CBC",
       "published_at": "2026-10-28T20:04:40+00:00",
       "first_seen_at": "2026-10-28T23:27:33+00:00",
-      "last_observed_at": "2026-11-05T09:17:58+00:00",
+      "last_observed_at": "2026-11-05T17:37:16+00:00",
       "topics": [
         "Crypto investment and exchange"
       ],
@@ -4770,7 +4974,7 @@
       "publisher": "CTV News",
       "published_at": "2026-10-28T19:38:27+00:00",
       "first_seen_at": "2026-10-30T01:46:53+00:00",
-      "last_observed_at": "2026-11-05T09:17:56+00:00",
+      "last_observed_at": "2026-11-05T17:37:14+00:00",
       "topics": [
         "Bank and customer fraud",
         "Fraud research and reports",
@@ -5129,71 +5333,6 @@
       "grouping_disclaimer": "Grouped reporting is not independently verified as one event; similarity does not prove the same underlying victim, incident, loss or misconduct."
     },
     {
-      "id": "report-bc3020e13244d5f248ba",
-      "title": "Montreal grandparent scammer who fled to Central America pleads guilty in U.S. court - CBC",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPSlQ4d3E1RS0tZWgtSEJWTWI3YlVTYm1iaV9uR0lZbi1UdG9wUnI0ZmZyOWM5Z2RyZ3Z0eDhRUlJjSHVRdHZyVFVCajlWWERET2RzSTFfd19aQ2tnVXFBUDJQWVYyLXRzVkxDbHRwcVRhRTcybl9QbWF3bTNIb1FiZWNEUGt6NnpQ?oc=5",
-      "publisher": "CBC",
-      "published_at": "2026-10-28T17:27:12+00:00",
-      "first_seen_at": "2026-10-28T19:25:31+00:00",
-      "last_observed_at": "2026-11-05T09:17:56+00:00",
-      "topics": [
-        "Police investigations",
-        "Scams and victims"
-      ],
-      "category": "Scam and victim reports",
-      "evidence_status": "unverified_grouped_reporting",
-      "geographic_accuracy": "headline_only",
-      "banks_mentioned_in_headline": [],
-      "organizations_mentioned_in_headline": [],
-      "amount_strings_in_headline": [],
-      "headline_case_candidate": false,
-      "content_kind": "news_lead",
-      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
-      "institution": null,
-      "reported_loss": null,
-      "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness.",
-      "map_location": "Montreal, Quebec",
-      "map_latitude": 45.5019,
-      "map_longitude": -73.5674,
-      "map_province": "QC",
-      "map_role": "headline city mention only; incident location unverified",
-      "article_links": [
-        {
-          "title": "Montreal grandparent scammer who fled to Central America pleads guilty in U.S. court - CBC",
-          "publisher": "CBC",
-          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPSlQ4d3E1RS0tZWgtSEJWTWI3YlVTYm1iaV9uR0lZbi1UdG9wUnI0ZmZyOWM5Z2RyZ3Z0eDhRUlJjSHVRdHZyVFVCajlWWERET2RzSTFfd19aQ2tnVXFBUDJQWVYyLXRzVkxDbHRwcVRhRTcybl9QbWF3bTNIb1FiZWNEUGt6NnpQ?oc=5",
-          "published_at": "2026-10-28T17:27:12+00:00",
-          "discovery_channel": "recent"
-        }
-      ],
-      "number_of_article_links": 1,
-      "source_channels": [
-        "recent"
-      ],
-      "review_status": "requires_source_review",
-      "index_note": "Article discovery record, not a confirmed individual incident or bank loss.",
-      "article_ids": [
-        "ecb1e294f91e87991ce5"
-      ],
-      "fraud_themes": [],
-      "headline_variations": [
-        {
-          "title": "Montreal grandparent scammer who fled to Central America pleads guilty in U.S. court - CBC",
-          "publisher": "CBC",
-          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPSlQ4d3E1RS0tZWgtSEJWTWI3YlVTYm1iaV9uR0lZbi1UdG9wUnI0ZmZyOWM5Z2RyZ3Z0eDhRUlJjSHVRdHZyVFVCajlWWERET2RzSTFfd19aQ2tnVXFBUDJQWVYyLXRzVkxDbHRwcVRhRTcybl9QbWF3bTNIb1FiZWNEUGt6NnpQ?oc=5",
-          "published_at": "2026-10-28T17:27:12+00:00",
-          "discovery_channel": "recent"
-        }
-      ],
-      "variation_count": 1,
-      "source_count": 1,
-      "underlying_headline_count": 1,
-      "geographic_relevance": "canadian_location_or_reference",
-      "geographic_relevance_basis": "Canadian geographic clue in title or curated headline city reference; not verified incident location.",
-      "grouping_basis": "conservative_headline_similarity_within_10_days",
-      "grouping_disclaimer": "Grouped reporting is not independently verified as one event; similarity does not prove the same underlying victim, incident, loss or misconduct."
-    },
-    {
       "id": "report-9068e7f1bfa742b7db11",
       "title": "Vancouver men face possible prison terms after pleading guilty in U.S. stock fraud schemes - CTV News",
       "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPal9JRmd6M1ZnZ2xBSnNMSEotQ0o2VVg4Zy1HYUE0eWxrTGFQN2dLdkw1QkstS3E1WHZxTzlOMXBZUGE4ZXhkNUFaSHBnRXJlY0VnUTM0R2doT3BkRno1LUVreEJuX0ZPcnpRNnRuVXpMa0V2R3pnR1lRUUNuRi1aYXhXNW11NUlYX3lHOEg4aDlvZzhLVE1JQ1lNZTJVNGozR3BOX2JVMlF0NnhRRlY5R3EzM2RiN28?oc=5",
@@ -5378,66 +5517,6 @@
       "grouping_disclaimer": "Grouped reporting is not independently verified as one event; similarity does not prove the same underlying victim, incident, loss or misconduct."
     },
     {
-      "id": "report-0d0432dc0b1dc8a031bd",
-      "title": "Canadian RCMP: Report fraud and cyber crime - Rossland Telegraph",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNU0w5UUdMOWc1X2F2MkhibEp4djRkTElTd3JrcURHTnhfNEhfQWZMSnVSSEk0dE5udURjNW94Z3RacGFtcEdLRnFwLXV0R01xMU56ODQ2aExwUnJQR2ZDVmh4NlpMZFBiWkhqQ3NRcjkxWVFWTTVqSEZ4cDIxZ2ZKQjhsUnp3LWZWUVpJWg?oc=5",
-      "publisher": "Rossland Telegraph",
-      "published_at": "2026-10-28T15:58:01+00:00",
-      "first_seen_at": "2026-10-28T19:25:33+00:00",
-      "last_observed_at": "2026-11-05T09:17:58+00:00",
-      "topics": [
-        "Fraud research and reports",
-        "Social media scam reports"
-      ],
-      "category": "Reported fraud",
-      "evidence_status": "unverified_grouped_reporting",
-      "geographic_accuracy": "not_geocoded",
-      "banks_mentioned_in_headline": [],
-      "organizations_mentioned_in_headline": [],
-      "amount_strings_in_headline": [],
-      "headline_case_candidate": false,
-      "content_kind": "news_lead",
-      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
-      "institution": null,
-      "reported_loss": null,
-      "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness.",
-      "article_links": [
-        {
-          "title": "Canadian RCMP: Report fraud and cyber crime - Rossland Telegraph",
-          "publisher": "Rossland Telegraph",
-          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNU0w5UUdMOWc1X2F2MkhibEp4djRkTElTd3JrcURHTnhfNEhfQWZMSnVSSEk0dE5udURjNW94Z3RacGFtcEdLRnFwLXV0R01xMU56ODQ2aExwUnJQR2ZDVmh4NlpMZFBiWkhqQ3NRcjkxWVFWTTVqSEZ4cDIxZ2ZKQjhsUnp3LWZWUVpJWg?oc=5",
-          "published_at": "2026-10-28T15:58:01+00:00",
-          "discovery_channel": "recent"
-        }
-      ],
-      "number_of_article_links": 1,
-      "source_channels": [
-        "recent"
-      ],
-      "review_status": "requires_source_review",
-      "index_note": "Article discovery record, not a confirmed individual incident or bank loss.",
-      "article_ids": [
-        "82275f7c483fba720a97"
-      ],
-      "fraud_themes": [],
-      "headline_variations": [
-        {
-          "title": "Canadian RCMP: Report fraud and cyber crime - Rossland Telegraph",
-          "publisher": "Rossland Telegraph",
-          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNU0w5UUdMOWc1X2F2MkhibEp4djRkTElTd3JrcURHTnhfNEhfQWZMSnVSSEk0dE5udURjNW94Z3RacGFtcEdLRnFwLXV0R01xMU56ODQ2aExwUnJQR2ZDVmh4NlpMZFBiWkhqQ3NRcjkxWVFWTTVqSEZ4cDIxZ2ZKQjhsUnp3LWZWUVpJWg?oc=5",
-          "published_at": "2026-10-28T15:58:01+00:00",
-          "discovery_channel": "recent"
-        }
-      ],
-      "variation_count": 1,
-      "source_count": 1,
-      "underlying_headline_count": 1,
-      "geographic_relevance": "canadian_location_or_reference",
-      "geographic_relevance_basis": "Canadian geographic clue in title or curated headline city reference; not verified incident location.",
-      "grouping_basis": "conservative_headline_similarity_within_10_days",
-      "grouping_disclaimer": "Grouped reporting is not independently verified as one event; similarity does not prove the same underlying victim, incident, loss or misconduct."
-    },
-    {
       "id": "report-4c165b2f71f68e6406c3",
       "title": "Calgary man facing fraud charges in bank card scam investigation - Yahoo News Canada",
       "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1xZFhsdHRrLXFIREhRSUczSTBycGg3QUtIQ2hxajhqc0ZHU09ubnRNMzk1WVdFM0ttc202WkY0SjhnNWFvMGlIeGlabEFRZzJjSXFBWWZJMFdxZFMzcUI4RjZyY19obE9hMEo0eks4UmtzSFNoZzBpelJCUERUUQ?oc=5",
@@ -5509,7 +5588,7 @@
       "publisher": "CTV News",
       "published_at": "2026-10-28T14:46:52+00:00",
       "first_seen_at": "2026-10-28T19:25:31+00:00",
-      "last_observed_at": "2026-11-05T09:17:56+00:00",
+      "last_observed_at": "2026-11-05T17:37:14+00:00",
       "topics": [
         "Bank and customer fraud",
         "Police investigations",
@@ -5636,7 +5715,7 @@
       "publisher": "Money.ca",
       "published_at": "2026-10-28T12:58:03+00:00",
       "first_seen_at": "2026-10-28T13:55:44+00:00",
-      "last_observed_at": "2026-11-05T09:17:56+00:00",
+      "last_observed_at": "2026-11-05T17:37:14+00:00",
       "topics": [
         "Bank and customer fraud"
       ],
@@ -5866,6 +5945,131 @@
       "underlying_headline_count": 1,
       "geographic_relevance": "geography_unresolved",
       "geographic_relevance_basis": "Headline alone does not establish incident geography. No inference from publisher domain.",
+      "grouping_basis": "conservative_headline_similarity_within_10_days",
+      "grouping_disclaimer": "Grouped reporting is not independently verified as one event; similarity does not prove the same underlying victim, incident, loss or misconduct."
+    },
+    {
+      "id": "report-bc3020e13244d5f248ba",
+      "title": "Montreal grandparent scammer who fled to Central America pleads guilty in U.S. court - CBC",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPSlQ4d3E1RS0tZWgtSEJWTWI3YlVTYm1iaV9uR0lZbi1UdG9wUnI0ZmZyOWM5Z2RyZ3Z0eDhRUlJjSHVRdHZyVFVCajlWWERET2RzSTFfd19aQ2tnVXFBUDJQWVYyLXRzVkxDbHRwcVRhRTcybl9QbWF3bTNIb1FiZWNEUGt6NnpQ?oc=5",
+      "publisher": "CBC",
+      "published_at": "2026-10-28T07:00:00+00:00",
+      "first_seen_at": "2026-10-28T19:25:31+00:00",
+      "last_observed_at": "2026-11-05T17:37:14+00:00",
+      "topics": [
+        "Police investigations",
+        "Scams and victims"
+      ],
+      "category": "Scam and victim reports",
+      "evidence_status": "unverified_grouped_reporting",
+      "geographic_accuracy": "headline_only",
+      "banks_mentioned_in_headline": [],
+      "organizations_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
+      "institution": null,
+      "reported_loss": null,
+      "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness.",
+      "map_location": "Montreal, Quebec",
+      "map_latitude": 45.5019,
+      "map_longitude": -73.5674,
+      "map_province": "QC",
+      "map_role": "headline city mention only; incident location unverified",
+      "article_links": [
+        {
+          "title": "Montreal grandparent scammer who fled to Central America pleads guilty in U.S. court - CBC",
+          "publisher": "CBC",
+          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPSlQ4d3E1RS0tZWgtSEJWTWI3YlVTYm1iaV9uR0lZbi1UdG9wUnI0ZmZyOWM5Z2RyZ3Z0eDhRUlJjSHVRdHZyVFVCajlWWERET2RzSTFfd19aQ2tnVXFBUDJQWVYyLXRzVkxDbHRwcVRhRTcybl9QbWF3bTNIb1FiZWNEUGt6NnpQ?oc=5",
+          "published_at": "2026-10-28T07:00:00+00:00",
+          "discovery_channel": "recent"
+        }
+      ],
+      "number_of_article_links": 1,
+      "source_channels": [
+        "recent"
+      ],
+      "review_status": "requires_source_review",
+      "index_note": "Article discovery record, not a confirmed individual incident or bank loss.",
+      "article_ids": [
+        "ecb1e294f91e87991ce5"
+      ],
+      "fraud_themes": [],
+      "headline_variations": [
+        {
+          "title": "Montreal grandparent scammer who fled to Central America pleads guilty in U.S. court - CBC",
+          "publisher": "CBC",
+          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPSlQ4d3E1RS0tZWgtSEJWTWI3YlVTYm1iaV9uR0lZbi1UdG9wUnI0ZmZyOWM5Z2RyZ3Z0eDhRUlJjSHVRdHZyVFVCajlWWERET2RzSTFfd19aQ2tnVXFBUDJQWVYyLXRzVkxDbHRwcVRhRTcybl9QbWF3bTNIb1FiZWNEUGt6NnpQ?oc=5",
+          "published_at": "2026-10-28T07:00:00+00:00",
+          "discovery_channel": "recent"
+        }
+      ],
+      "variation_count": 1,
+      "source_count": 1,
+      "underlying_headline_count": 1,
+      "geographic_relevance": "canadian_location_or_reference",
+      "geographic_relevance_basis": "Canadian geographic clue in title or curated headline city reference; not verified incident location.",
+      "grouping_basis": "conservative_headline_similarity_within_10_days",
+      "grouping_disclaimer": "Grouped reporting is not independently verified as one event; similarity does not prove the same underlying victim, incident, loss or misconduct."
+    },
+    {
+      "id": "report-0d0432dc0b1dc8a031bd",
+      "title": "Canadian RCMP: Report fraud and cyber crime - Rossland Telegraph",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNU0w5UUdMOWc1X2F2MkhibEp4djRkTElTd3JrcURHTnhfNEhfQWZMSnVSSEk0dE5udURjNW94Z3RacGFtcEdLRnFwLXV0R01xMU56ODQ2aExwUnJQR2ZDVmh4NlpMZFBiWkhqQ3NRcjkxWVFWTTVqSEZ4cDIxZ2ZKQjhsUnp3LWZWUVpJWg?oc=5",
+      "publisher": "Rossland Telegraph",
+      "published_at": "2026-10-28T07:00:00+00:00",
+      "first_seen_at": "2026-10-28T19:25:33+00:00",
+      "last_observed_at": "2026-11-05T17:37:15+00:00",
+      "topics": [
+        "Fraud research and reports",
+        "Social media scam reports"
+      ],
+      "category": "Reported fraud",
+      "evidence_status": "unverified_grouped_reporting",
+      "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "organizations_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
+      "institution": null,
+      "reported_loss": null,
+      "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness.",
+      "article_links": [
+        {
+          "title": "Canadian RCMP: Report fraud and cyber crime - Rossland Telegraph",
+          "publisher": "Rossland Telegraph",
+          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNU0w5UUdMOWc1X2F2MkhibEp4djRkTElTd3JrcURHTnhfNEhfQWZMSnVSSEk0dE5udURjNW94Z3RacGFtcEdLRnFwLXV0R01xMU56ODQ2aExwUnJQR2ZDVmh4NlpMZFBiWkhqQ3NRcjkxWVFWTTVqSEZ4cDIxZ2ZKQjhsUnp3LWZWUVpJWg?oc=5",
+          "published_at": "2026-10-28T07:00:00+00:00",
+          "discovery_channel": "recent"
+        }
+      ],
+      "number_of_article_links": 1,
+      "source_channels": [
+        "recent"
+      ],
+      "review_status": "requires_source_review",
+      "index_note": "Article discovery record, not a confirmed individual incident or bank loss.",
+      "article_ids": [
+        "82275f7c483fba720a97"
+      ],
+      "fraud_themes": [],
+      "headline_variations": [
+        {
+          "title": "Canadian RCMP: Report fraud and cyber crime - Rossland Telegraph",
+          "publisher": "Rossland Telegraph",
+          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNU0w5UUdMOWc1X2F2MkhibEp4djRkTElTd3JrcURHTnhfNEhfQWZMSnVSSEk0dE5udURjNW94Z3RacGFtcEdLRnFwLXV0R01xMU56ODQ2aExwUnJQR2ZDVmh4NlpMZFBiWkhqQ3NRcjkxWVFWTTVqSEZ4cDIxZ2ZKQjhsUnp3LWZWUVpJWg?oc=5",
+          "published_at": "2026-10-28T07:00:00+00:00",
+          "discovery_channel": "recent"
+        }
+      ],
+      "variation_count": 1,
+      "source_count": 1,
+      "underlying_headline_count": 1,
+      "geographic_relevance": "canadian_location_or_reference",
+      "geographic_relevance_basis": "Canadian geographic clue in title or curated headline city reference; not verified incident location.",
       "grouping_basis": "conservative_headline_similarity_within_10_days",
       "grouping_disclaimer": "Grouped reporting is not independently verified as one event; similarity does not prove the same underlying victim, incident, loss or misconduct."
     },
@@ -6186,65 +6390,6 @@
       "grouping_disclaimer": "Grouped reporting is not independently verified as one event; similarity does not prove the same underlying victim, incident, loss or misconduct."
     },
     {
-      "id": "report-94d0eb10cf03d7c228fb",
-      "title": "Arrest follows alleged immigration fraud involving work permits in Ontario - insauga.com",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPYWE1bTZuaG1JWmREUEdhd2N1RUpGLWpORjhMVlNNOFh5Ml9mTHhEVWxxMHBGTlA3cVBCc1kycnBaMW94Sk0ydUpJd0VXQlJkUkJtTmdEQmJLMThYd0JCMjNCZXRFcTBKOWluM3hYckpNSUVUeHJjRHZBNzNmNW0ya1cxX1ZhNG1rYzIxcEtJYTZGSkhfUUQwSVJJMllSQjdj?oc=5",
-      "publisher": "insauga.com",
-      "published_at": "2026-10-27T20:59:51+00:00",
-      "first_seen_at": "2026-11-03T11:48:16+00:00",
-      "last_observed_at": "2026-11-05T09:17:57+00:00",
-      "topics": [
-        "Police investigations"
-      ],
-      "category": "Reported fraud",
-      "evidence_status": "unverified_grouped_reporting",
-      "geographic_accuracy": "not_geocoded",
-      "banks_mentioned_in_headline": [],
-      "organizations_mentioned_in_headline": [],
-      "amount_strings_in_headline": [],
-      "headline_case_candidate": false,
-      "content_kind": "news_lead",
-      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
-      "institution": null,
-      "reported_loss": null,
-      "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness.",
-      "article_links": [
-        {
-          "title": "Arrest follows alleged immigration fraud involving work permits in Ontario - insauga.com",
-          "publisher": "insauga.com",
-          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPYWE1bTZuaG1JWmREUEdhd2N1RUpGLWpORjhMVlNNOFh5Ml9mTHhEVWxxMHBGTlA3cVBCc1kycnBaMW94Sk0ydUpJd0VXQlJkUkJtTmdEQmJLMThYd0JCMjNCZXRFcTBKOWluM3hYckpNSUVUeHJjRHZBNzNmNW0ya1cxX1ZhNG1rYzIxcEtJYTZGSkhfUUQwSVJJMllSQjdj?oc=5",
-          "published_at": "2026-10-27T20:59:51+00:00",
-          "discovery_channel": "recent"
-        }
-      ],
-      "number_of_article_links": 1,
-      "source_channels": [
-        "recent"
-      ],
-      "review_status": "requires_source_review",
-      "index_note": "Article discovery record, not a confirmed individual incident or bank loss.",
-      "article_ids": [
-        "b28f0ab476105026da58"
-      ],
-      "fraud_themes": [],
-      "headline_variations": [
-        {
-          "title": "Arrest follows alleged immigration fraud involving work permits in Ontario - insauga.com",
-          "publisher": "insauga.com",
-          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPYWE1bTZuaG1JWmREUEdhd2N1RUpGLWpORjhMVlNNOFh5Ml9mTHhEVWxxMHBGTlA3cVBCc1kycnBaMW94Sk0ydUpJd0VXQlJkUkJtTmdEQmJLMThYd0JCMjNCZXRFcTBKOWluM3hYckpNSUVUeHJjRHZBNzNmNW0ya1cxX1ZhNG1rYzIxcEtJYTZGSkhfUUQwSVJJMllSQjdj?oc=5",
-          "published_at": "2026-10-27T20:59:51+00:00",
-          "discovery_channel": "recent"
-        }
-      ],
-      "variation_count": 1,
-      "source_count": 1,
-      "underlying_headline_count": 1,
-      "geographic_relevance": "canadian_location_or_reference",
-      "geographic_relevance_basis": "Canadian geographic clue in title or curated headline city reference; not verified incident location.",
-      "grouping_basis": "conservative_headline_similarity_within_10_days",
-      "grouping_disclaimer": "Grouped reporting is not independently verified as one event; similarity does not prove the same underlying victim, incident, loss or misconduct."
-    },
-    {
       "id": "report-3acc4a5bd233242d244d",
       "title": "RCMP investigating Alberta health procurement for possible fraud, money laundering - Global News",
       "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPR1Rva2NxOHdUZXRoakZib045UzJLUGZSZDhVRHlwVWZHSktTamlJVmxua1lEdkFIYWxxOV9CLVQyZjRLVUFlOE1zWGFvWGJLWmdYeXNTOWdlcEZ2SWd3ZUxwandsZU8tOXNRa25BN0tsZWdhS0Rlem01aGcxUVoyZm5pdmRQelJrZFdoZGFiOVdLdlV0V3FucTMwdmlwLTh1S2dfODFsQ24xQndJeWo1VVV2VHo0eGd4UWc?oc=5",
@@ -6326,7 +6471,7 @@
       "publisher": "Durham Regional Police Service",
       "published_at": "2026-10-27T18:11:25+00:00",
       "first_seen_at": "2026-10-28T01:04:48+00:00",
-      "last_observed_at": "2026-11-05T09:17:57+00:00",
+      "last_observed_at": "2026-11-05T17:37:14+00:00",
       "topics": [
         "Police investigations"
       ],
@@ -6874,13 +7019,72 @@
       "grouping_disclaimer": "Grouped reporting is not independently verified as one event; similarity does not prove the same underlying victim, incident, loss or misconduct."
     },
     {
+      "id": "report-94d0eb10cf03d7c228fb",
+      "title": "Arrest follows alleged immigration fraud involving work permits in Ontario - insauga.com",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPYWE1bTZuaG1JWmREUEdhd2N1RUpGLWpORjhMVlNNOFh5Ml9mTHhEVWxxMHBGTlA3cVBCc1kycnBaMW94Sk0ydUpJd0VXQlJkUkJtTmdEQmJLMThYd0JCMjNCZXRFcTBKOWluM3hYckpNSUVUeHJjRHZBNzNmNW0ya1cxX1ZhNG1rYzIxcEtJYTZGSkhfUUQwSVJJMllSQjdj?oc=5",
+      "publisher": "insauga.com",
+      "published_at": "2026-10-27T07:00:00+00:00",
+      "first_seen_at": "2026-11-03T11:48:16+00:00",
+      "last_observed_at": "2026-11-05T17:37:14+00:00",
+      "topics": [
+        "Police investigations"
+      ],
+      "category": "Reported fraud",
+      "evidence_status": "unverified_grouped_reporting",
+      "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "organizations_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
+      "institution": null,
+      "reported_loss": null,
+      "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness.",
+      "article_links": [
+        {
+          "title": "Arrest follows alleged immigration fraud involving work permits in Ontario - insauga.com",
+          "publisher": "insauga.com",
+          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPYWE1bTZuaG1JWmREUEdhd2N1RUpGLWpORjhMVlNNOFh5Ml9mTHhEVWxxMHBGTlA3cVBCc1kycnBaMW94Sk0ydUpJd0VXQlJkUkJtTmdEQmJLMThYd0JCMjNCZXRFcTBKOWluM3hYckpNSUVUeHJjRHZBNzNmNW0ya1cxX1ZhNG1rYzIxcEtJYTZGSkhfUUQwSVJJMllSQjdj?oc=5",
+          "published_at": "2026-10-27T07:00:00+00:00",
+          "discovery_channel": "recent"
+        }
+      ],
+      "number_of_article_links": 1,
+      "source_channels": [
+        "recent"
+      ],
+      "review_status": "requires_source_review",
+      "index_note": "Article discovery record, not a confirmed individual incident or bank loss.",
+      "article_ids": [
+        "b28f0ab476105026da58"
+      ],
+      "fraud_themes": [],
+      "headline_variations": [
+        {
+          "title": "Arrest follows alleged immigration fraud involving work permits in Ontario - insauga.com",
+          "publisher": "insauga.com",
+          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPYWE1bTZuaG1JWmREUEdhd2N1RUpGLWpORjhMVlNNOFh5Ml9mTHhEVWxxMHBGTlA3cVBCc1kycnBaMW94Sk0ydUpJd0VXQlJkUkJtTmdEQmJLMThYd0JCMjNCZXRFcTBKOWluM3hYckpNSUVUeHJjRHZBNzNmNW0ya1cxX1ZhNG1rYzIxcEtJYTZGSkhfUUQwSVJJMllSQjdj?oc=5",
+          "published_at": "2026-10-27T07:00:00+00:00",
+          "discovery_channel": "recent"
+        }
+      ],
+      "variation_count": 1,
+      "source_count": 1,
+      "underlying_headline_count": 1,
+      "geographic_relevance": "canadian_location_or_reference",
+      "geographic_relevance_basis": "Canadian geographic clue in title or curated headline city reference; not verified incident location.",
+      "grouping_basis": "conservative_headline_similarity_within_10_days",
+      "grouping_disclaimer": "Grouped reporting is not independently verified as one event; similarity does not prove the same underlying victim, incident, loss or misconduct."
+    },
+    {
       "id": "report-129a2a36a8d5714c8ed5",
       "title": "Scammers exchanging envelopes full of ‘worthless paper’ for pricey goods, police warn - CTV News",
       "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQUlFObW9VWllHUHZJdEhqOTFHRnVZanhUOWpsbWRGVzE4aVdyWlR3LUJTcWpYcDFCNG9UTVJrTHV2eTFMc2JVVWo2NWVhVW94TVByZDZybGtHZjlQa0JQLTVMU1NxMnk4SzRkcHViS1h1S3pTazhub1VkRG83V2ZCamJGWkFIVHhKS1cxUTFGZm9pYUVMMnoxLThsTXB4WC1DRFd1NjV6WVhkay1zOFhYVzdxNTE5NUtuUGJxYnJpZ1N2QQ?oc=5",
       "publisher": "CTV News",
       "published_at": "2026-10-27T07:00:00+00:00",
       "first_seen_at": "2026-10-27T22:01:49+00:00",
-      "last_observed_at": "2026-11-05T09:17:56+00:00",
+      "last_observed_at": "2026-11-05T17:37:14+00:00",
       "topics": [
         "Online gambling fraud",
         "Scams and victims"
@@ -6940,7 +7144,7 @@
       "publisher": "CBC",
       "published_at": "2026-10-27T07:00:00+00:00",
       "first_seen_at": "2026-10-27T12:02:00+00:00",
-      "last_observed_at": "2026-11-05T09:17:57+00:00",
+      "last_observed_at": "2026-11-05T17:37:14+00:00",
       "topics": [
         "Bank and customer fraud",
         "Money laundering",
@@ -7064,7 +7268,7 @@
       "publisher": "CTV News",
       "published_at": "2026-10-27T07:00:00+00:00",
       "first_seen_at": "2026-10-27T17:50:26+00:00",
-      "last_observed_at": "2026-11-05T09:17:57+00:00",
+      "last_observed_at": "2026-11-05T17:37:14+00:00",
       "topics": [
         "Bank and customer fraud",
         "Police investigations",
@@ -7127,7 +7331,7 @@
       "publisher": "CTV News",
       "published_at": "2026-10-27T07:00:00+00:00",
       "first_seen_at": "2026-10-28T13:55:45+00:00",
-      "last_observed_at": "2026-11-05T09:17:57+00:00",
+      "last_observed_at": "2026-11-05T17:37:14+00:00",
       "topics": [
         "Police investigations"
       ],
@@ -7186,7 +7390,7 @@
       "publisher": "Toronto Star",
       "published_at": "2026-10-27T07:00:00+00:00",
       "first_seen_at": "2026-11-03T11:48:16+00:00",
-      "last_observed_at": "2026-11-05T09:17:57+00:00",
+      "last_observed_at": "2026-11-05T17:37:14+00:00",
       "topics": [
         "Police investigations"
       ],
@@ -7358,65 +7562,6 @@
           "publisher": "iPhone in Canada",
           "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPSS1ZOUlvaFdYSDM5T0hfYU9LYVluY2RvbGxqc1U1ZEthb3p3UEJfY0wxVDc2SmtUQS1La3lXYTA2RnlLeDhtTmhOVGE2UFRRTzM2WWxOZS1FZEZPT2V2ZWVVYng0cGNyWWN1QUF6bkEwQmlxYllBSTRJSmJzVGE2RFlKb2RFTTRtZDd2RWFqcVBVR1M1T1FSZFNjejVyNmhkY2M0MERqTXI?oc=5",
           "published_at": "2026-10-27T07:00:00+00:00",
-          "discovery_channel": "recent"
-        }
-      ],
-      "variation_count": 1,
-      "source_count": 1,
-      "underlying_headline_count": 1,
-      "geographic_relevance": "canadian_location_or_reference",
-      "geographic_relevance_basis": "Canadian geographic clue in title or curated headline city reference; not verified incident location.",
-      "grouping_basis": "conservative_headline_similarity_within_10_days",
-      "grouping_disclaimer": "Grouped reporting is not independently verified as one event; similarity does not prove the same underlying victim, incident, loss or misconduct."
-    },
-    {
-      "id": "report-535809dcfaf9091de48c",
-      "title": "5 Bangladeshis charged in Canadian visa fraud probe - The Daily Star",
-      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOcEVobDdDODRaNXUzQUdVMHh3MldHeS1uR3RZN09MXzd5aEpHbjVkYlpYX2JDYmZieGpKWnAyRU1nbTBxZndwQ081S3ZGUVRTWFZTUnJBODZxdkhoaDlzbkN3TGZuQ09DLXVYMzFuQlNlRFdHLURZQk9CbUs0YWVOU2prdm5pVzZmYlNTUTIzVXkxSkZyR2MtWDBvUnVPX2RleGsyZ3hoc3lHMDFydUE?oc=5",
-      "publisher": "The Daily Star",
-      "published_at": "2026-10-27T04:01:09+00:00",
-      "first_seen_at": "2026-10-24T07:05:30+00:00",
-      "last_observed_at": "2026-10-28T01:04:50+00:00",
-      "topics": [
-        "Fraud research and reports"
-      ],
-      "category": "Reported fraud",
-      "evidence_status": "unverified_grouped_reporting",
-      "geographic_accuracy": "not_geocoded",
-      "banks_mentioned_in_headline": [],
-      "organizations_mentioned_in_headline": [],
-      "amount_strings_in_headline": [],
-      "headline_case_candidate": false,
-      "content_kind": "news_lead",
-      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
-      "institution": null,
-      "reported_loss": null,
-      "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness.",
-      "article_links": [
-        {
-          "title": "5 Bangladeshis charged in Canadian visa fraud probe - The Daily Star",
-          "publisher": "The Daily Star",
-          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOcEVobDdDODRaNXUzQUdVMHh3MldHeS1uR3RZN09MXzd5aEpHbjVkYlpYX2JDYmZieGpKWnAyRU1nbTBxZndwQ081S3ZGUVRTWFZTUnJBODZxdkhoaDlzbkN3TGZuQ09DLXVYMzFuQlNlRFdHLURZQk9CbUs0YWVOU2prdm5pVzZmYlNTUTIzVXkxSkZyR2MtWDBvUnVPX2RleGsyZ3hoc3lHMDFydUE?oc=5",
-          "published_at": "2026-10-27T04:01:09+00:00",
-          "discovery_channel": "recent"
-        }
-      ],
-      "number_of_article_links": 1,
-      "source_channels": [
-        "recent"
-      ],
-      "review_status": "requires_source_review",
-      "index_note": "Article discovery record, not a confirmed individual incident or bank loss.",
-      "article_ids": [
-        "074ca1281d7ec8f052ba"
-      ],
-      "fraud_themes": [],
-      "headline_variations": [
-        {
-          "title": "5 Bangladeshis charged in Canadian visa fraud probe - The Daily Star",
-          "publisher": "The Daily Star",
-          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOcEVobDdDODRaNXUzQUdVMHh3MldHeS1uR3RZN09MXzd5aEpHbjVkYlpYX2JDYmZieGpKWnAyRU1nbTBxZndwQ081S3ZGUVRTWFZTUnJBODZxdkhoaDlzbkN3TGZuQ09DLXVYMzFuQlNlRFdHLURZQk9CbUs0YWVOU2prdm5pVzZmYlNTUTIzVXkxSkZyR2MtWDBvUnVPX2RleGsyZ3hoc3lHMDFydUE?oc=5",
-          "published_at": "2026-10-27T04:01:09+00:00",
           "discovery_channel": "recent"
         }
       ],
@@ -7679,7 +7824,7 @@
       "publisher": "insauga.com",
       "published_at": "2026-10-26T19:25:24+00:00",
       "first_seen_at": "2026-10-26T21:31:41+00:00",
-      "last_observed_at": "2026-11-05T09:17:57+00:00",
+      "last_observed_at": "2026-11-05T17:37:14+00:00",
       "topics": [
         "Bank and customer fraud",
         "Police investigations"
@@ -8462,6 +8607,66 @@
       "grouping_disclaimer": "Grouped reporting is not independently verified as one event; similarity does not prove the same underlying victim, incident, loss or misconduct."
     },
     {
+      "id": "report-535809dcfaf9091de48c",
+      "title": "5 Bangladeshis charged in Canadian visa fraud probe - The Daily Star",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOcEVobDdDODRaNXUzQUdVMHh3MldHeS1uR3RZN09MXzd5aEpHbjVkYlpYX2JDYmZieGpKWnAyRU1nbTBxZndwQ081S3ZGUVRTWFZTUnJBODZxdkhoaDlzbkN3TGZuQ09DLXVYMzFuQlNlRFdHLURZQk9CbUs0YWVOU2prdm5pVzZmYlNTUTIzVXkxSkZyR2MtWDBvUnVPX2RleGsyZ3hoc3lHMDFydUE?oc=5",
+      "publisher": "The Daily Star",
+      "published_at": "2026-10-24T07:00:00+00:00",
+      "first_seen_at": "2026-10-24T07:05:30+00:00",
+      "last_observed_at": "2026-11-05T17:37:14+00:00",
+      "topics": [
+        "Fraud research and reports",
+        "Police investigations"
+      ],
+      "category": "Reported fraud",
+      "evidence_status": "unverified_grouped_reporting",
+      "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "organizations_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
+      "institution": null,
+      "reported_loss": null,
+      "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness.",
+      "article_links": [
+        {
+          "title": "5 Bangladeshis charged in Canadian visa fraud probe - The Daily Star",
+          "publisher": "The Daily Star",
+          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOcEVobDdDODRaNXUzQUdVMHh3MldHeS1uR3RZN09MXzd5aEpHbjVkYlpYX2JDYmZieGpKWnAyRU1nbTBxZndwQ081S3ZGUVRTWFZTUnJBODZxdkhoaDlzbkN3TGZuQ09DLXVYMzFuQlNlRFdHLURZQk9CbUs0YWVOU2prdm5pVzZmYlNTUTIzVXkxSkZyR2MtWDBvUnVPX2RleGsyZ3hoc3lHMDFydUE?oc=5",
+          "published_at": "2026-10-24T07:00:00+00:00",
+          "discovery_channel": "recent"
+        }
+      ],
+      "number_of_article_links": 1,
+      "source_channels": [
+        "recent"
+      ],
+      "review_status": "requires_source_review",
+      "index_note": "Article discovery record, not a confirmed individual incident or bank loss.",
+      "article_ids": [
+        "074ca1281d7ec8f052ba"
+      ],
+      "fraud_themes": [],
+      "headline_variations": [
+        {
+          "title": "5 Bangladeshis charged in Canadian visa fraud probe - The Daily Star",
+          "publisher": "The Daily Star",
+          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOcEVobDdDODRaNXUzQUdVMHh3MldHeS1uR3RZN09MXzd5aEpHbjVkYlpYX2JDYmZieGpKWnAyRU1nbTBxZndwQ081S3ZGUVRTWFZTUnJBODZxdkhoaDlzbkN3TGZuQ09DLXVYMzFuQlNlRFdHLURZQk9CbUs0YWVOU2prdm5pVzZmYlNTUTIzVXkxSkZyR2MtWDBvUnVPX2RleGsyZ3hoc3lHMDFydUE?oc=5",
+          "published_at": "2026-10-24T07:00:00+00:00",
+          "discovery_channel": "recent"
+        }
+      ],
+      "variation_count": 1,
+      "source_count": 1,
+      "underlying_headline_count": 1,
+      "geographic_relevance": "canadian_location_or_reference",
+      "geographic_relevance_basis": "Canadian geographic clue in title or curated headline city reference; not verified incident location.",
+      "grouping_basis": "conservative_headline_similarity_within_10_days",
+      "grouping_disclaimer": "Grouped reporting is not independently verified as one event; similarity does not prove the same underlying victim, incident, loss or misconduct."
+    },
+    {
       "id": "report-0b5c80f8109d1f394aa0",
       "title": "5 Bangladeshis charged in Canadian immigration fraud case, 1 faces arrest warrant - Prothom Alo English",
       "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFA1Mi1PRkRVeXB3RndHUVZwdEo0QWQwM2J3cXB0VVpqeFdGbjRPNDFIbllkN2dxb1NTWXNqczNPdFdyaGxPTWotNWlQaEY2bHRvZTlyczZfYlZ1bjDSAWhBVV95cUxQWmJWamZOM2t5VWtfVUFsYzZzcnVBY3pFYnpYWjZnTWFPeGNNa2tPM21KcGRIMWhmOEhQT3g3T240ZUhtUmdnNXM3RkVJYjFabDJhZWxHWVlVM2xqNEp1VGNpLTBpR1A5Qg?oc=5",
@@ -9199,7 +9404,7 @@
       "publisher": "CBC",
       "published_at": "2026-10-23T07:00:00+00:00",
       "first_seen_at": "2026-10-24T01:27:42+00:00",
-      "last_observed_at": "2026-11-05T09:17:56+00:00",
+      "last_observed_at": "2026-11-05T17:37:14+00:00",
       "topics": [
         "Bank and customer fraud",
         "Scams and victims"
@@ -9394,7 +9599,7 @@
       "publisher": "Yahoo News Canada",
       "published_at": "2026-10-23T07:00:00+00:00",
       "first_seen_at": "2026-10-24T03:02:28+00:00",
-      "last_observed_at": "2026-11-05T09:17:57+00:00",
+      "last_observed_at": "2026-11-05T17:37:15+00:00",
       "topics": [
         "Investment schemes",
         "Scams and victims"
@@ -9704,7 +9909,7 @@
       "publisher": "Reddit",
       "published_at": "2026-10-23T07:00:00+00:00",
       "first_seen_at": "2026-10-28T01:04:48+00:00",
-      "last_observed_at": "2026-11-05T09:17:57+00:00",
+      "last_observed_at": "2026-11-05T17:37:14+00:00",
       "topics": [
         "Police investigations"
       ],
@@ -9765,7 +9970,7 @@
       "publisher": "RED FM Canada",
       "published_at": "2026-10-23T07:00:00+00:00",
       "first_seen_at": "2026-11-03T19:23:21+00:00",
-      "last_observed_at": "2026-11-05T09:17:57+00:00",
+      "last_observed_at": "2026-11-05T17:37:14+00:00",
       "topics": [
         "Police investigations"
       ],
@@ -9824,7 +10029,7 @@
       "publisher": "CBC",
       "published_at": "2026-10-23T07:00:00+00:00",
       "first_seen_at": "2026-11-04T00:11:08+00:00",
-      "last_observed_at": "2026-11-05T09:17:56+00:00",
+      "last_observed_at": "2026-11-05T17:37:14+00:00",
       "topics": [
         "Bank and customer fraud",
         "Scams and victims"
@@ -10183,7 +10388,7 @@
       "publisher": "Radio-Canada",
       "published_at": "2026-10-22T07:00:00+00:00",
       "first_seen_at": "2026-10-24T01:47:46+00:00",
-      "last_observed_at": "2026-11-05T09:17:58+00:00",
+      "last_observed_at": "2026-11-05T17:37:15+00:00",
       "topics": [
         "Fraud research and reports",
         "Social media scam reports"
@@ -11688,7 +11893,7 @@
       "publisher": "Wealth Professional",
       "published_at": "2026-10-20T10:42:24+00:00",
       "first_seen_at": "2026-10-24T01:47:46+00:00",
-      "last_observed_at": "2026-11-05T09:17:58+00:00",
+      "last_observed_at": "2026-11-05T17:37:15+00:00",
       "topics": [
         "Fraud research and reports"
       ],
@@ -11926,7 +12131,7 @@
       "publisher": "CBC",
       "published_at": "2026-10-20T07:00:00+00:00",
       "first_seen_at": "2026-10-24T03:02:30+00:00",
-      "last_observed_at": "2026-11-05T09:17:58+00:00",
+      "last_observed_at": "2026-11-05T17:37:16+00:00",
       "topics": [
         "Crypto investment and exchange"
       ],
@@ -12181,7 +12386,7 @@
       "publisher": "CTV News",
       "published_at": "2026-10-20T07:00:00+00:00",
       "first_seen_at": "2026-10-28T06:48:04+00:00",
-      "last_observed_at": "2026-11-05T09:17:58+00:00",
+      "last_observed_at": "2026-11-05T17:37:15+00:00",
       "topics": [
         "Fraud research and reports"
       ],
@@ -12382,7 +12587,7 @@
       "publisher": "Global News",
       "published_at": "2026-10-20T07:00:00+00:00",
       "first_seen_at": "2026-10-24T01:47:46+00:00",
-      "last_observed_at": "2026-11-05T09:17:58+00:00",
+      "last_observed_at": "2026-11-05T17:37:15+00:00",
       "topics": [
         "Fraud research and reports"
       ],
@@ -12762,7 +12967,7 @@
       "publisher": "CBC",
       "published_at": "2026-10-20T07:00:00+00:00",
       "first_seen_at": "2026-10-24T01:27:43+00:00",
-      "last_observed_at": "2026-11-05T09:17:58+00:00",
+      "last_observed_at": "2026-11-05T17:37:15+00:00",
       "topics": [
         "Bank and customer fraud",
         "Fraud research and reports",
@@ -13143,70 +13348,6 @@
       "underlying_headline_count": 1,
       "geographic_relevance": "geography_unresolved",
       "geographic_relevance_basis": "Headline alone does not establish incident geography. No inference from publisher domain.",
-      "grouping_basis": "conservative_headline_similarity_within_10_days",
-      "grouping_disclaimer": "Grouped reporting is not independently verified as one event; similarity does not prove the same underlying victim, incident, loss or misconduct."
-    },
-    {
-      "id": "report-35acb95b235521475bcf",
-      "title": "U.S., U.K., Canada Target Crypto Phishing in Joint Operation - CoinMarketCap",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQMWhYMkJkbWYyT1ZoaTNoY3dwTmRYbTNheVNla0NCNnZtb3FDempfekNpRGpzQVZIQndaQW42b0lxSTB2SWdIYW02VU95a0lUWEJjQ0lxNzUtVzZsd3ExajdGY09La1h1dG9YRUV3bVRMVE1yS2hfY0dldkE4dXR1SHByY1p0dEY3Y3hLTlZqeGlwSURpcTl3eW5yOTc?oc=5",
-      "publisher": "CoinMarketCap",
-      "published_at": "2026-10-19T22:04:01+00:00",
-      "first_seen_at": "2026-10-24T01:27:42+00:00",
-      "last_observed_at": "2026-11-04T06:56:11+00:00",
-      "topics": [
-        "Crypto investment and exchange",
-        "Scams and victims",
-        "Securities investigations"
-      ],
-      "category": "Investment fraud",
-      "evidence_status": "unverified_grouped_reporting",
-      "geographic_accuracy": "not_geocoded",
-      "banks_mentioned_in_headline": [],
-      "organizations_mentioned_in_headline": [],
-      "amount_strings_in_headline": [],
-      "headline_case_candidate": false,
-      "content_kind": "news_lead",
-      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
-      "institution": null,
-      "reported_loss": null,
-      "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness.",
-      "article_links": [
-        {
-          "title": "U.S., U.K., Canada Target Crypto Phishing in Joint Operation - CoinMarketCap",
-          "publisher": "CoinMarketCap",
-          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQMWhYMkJkbWYyT1ZoaTNoY3dwTmRYbTNheVNla0NCNnZtb3FDempfekNpRGpzQVZIQndaQW42b0lxSTB2SWdIYW02VU95a0lUWEJjQ0lxNzUtVzZsd3ExajdGY09La1h1dG9YRUV3bVRMVE1yS2hfY0dldkE4dXR1SHByY1p0dEY3Y3hLTlZqeGlwSURpcTl3eW5yOTc?oc=5",
-          "published_at": "2026-10-19T22:04:01+00:00",
-          "discovery_channel": "recent"
-        }
-      ],
-      "number_of_article_links": 1,
-      "source_channels": [
-        "recent"
-      ],
-      "review_status": "requires_source_review",
-      "index_note": "Article discovery record, not a confirmed individual incident or bank loss.",
-      "article_ids": [
-        "f5f8748a49108293296b"
-      ],
-      "fraud_themes": [
-        "Bank impersonation & phishing",
-        "Investment & crypto scams"
-      ],
-      "headline_variations": [
-        {
-          "title": "U.S., U.K., Canada Target Crypto Phishing in Joint Operation - CoinMarketCap",
-          "publisher": "CoinMarketCap",
-          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQMWhYMkJkbWYyT1ZoaTNoY3dwTmRYbTNheVNla0NCNnZtb3FDempfekNpRGpzQVZIQndaQW42b0lxSTB2SWdIYW02VU95a0lUWEJjQ0lxNzUtVzZsd3ExajdGY09La1h1dG9YRUV3bVRMVE1yS2hfY0dldkE4dXR1SHByY1p0dEY3Y3hLTlZqeGlwSURpcTl3eW5yOTc?oc=5",
-          "published_at": "2026-10-19T22:04:01+00:00",
-          "discovery_channel": "recent"
-        }
-      ],
-      "variation_count": 1,
-      "source_count": 1,
-      "underlying_headline_count": 1,
-      "geographic_relevance": "canadian_location_or_reference",
-      "geographic_relevance_basis": "Canadian geographic clue in title or curated headline city reference; not verified incident location.",
       "grouping_basis": "conservative_headline_similarity_within_10_days",
       "grouping_disclaimer": "Grouped reporting is not independently verified as one event; similarity does not prove the same underlying victim, incident, loss or misconduct."
     },
@@ -14535,8 +14676,9 @@
       "publisher": "CTV News",
       "published_at": "2026-10-15T07:00:00+00:00",
       "first_seen_at": "2026-10-24T01:27:43+00:00",
-      "last_observed_at": "2026-10-29T02:43:30+00:00",
+      "last_observed_at": "2026-11-05T17:37:15+00:00",
       "topics": [
+        "Fraud research and reports",
         "Police investigations",
         "Social media scam reports"
       ],
@@ -16796,7 +16938,7 @@
       "publisher": "CoinMarketCap",
       "published_at": "2026-10-10T12:55:44+00:00",
       "first_seen_at": "2026-10-24T01:27:42+00:00",
-      "last_observed_at": "2026-11-05T09:17:59+00:00",
+      "last_observed_at": "2026-11-05T17:37:17+00:00",
       "topics": [
         "Crypto investment and exchange",
         "Scams and victims",
@@ -17048,7 +17190,7 @@
       "publisher": "CBC",
       "published_at": "2026-10-09T07:00:00+00:00",
       "first_seen_at": "2026-10-24T01:47:46+00:00",
-      "last_observed_at": "2026-11-05T09:17:58+00:00",
+      "last_observed_at": "2026-11-05T17:37:15+00:00",
       "topics": [
         "Fraud research and reports"
       ],
@@ -17171,7 +17313,7 @@
       "publisher": "CTV News",
       "published_at": "2026-10-09T07:00:00+00:00",
       "first_seen_at": "2026-11-05T09:17:59+00:00",
-      "last_observed_at": "2026-11-05T09:17:59+00:00",
+      "last_observed_at": "2026-11-05T17:37:17+00:00",
       "topics": [
         "Online gambling fraud"
       ],
@@ -17424,7 +17566,7 @@
       "publisher": "Yahoo! Finance Canada",
       "published_at": "2026-10-08T07:00:00+00:00",
       "first_seen_at": "2026-10-24T12:28:58+00:00",
-      "last_observed_at": "2026-11-05T09:17:58+00:00",
+      "last_observed_at": "2026-11-05T17:37:16+00:00",
       "topics": [
         "Crypto investment and exchange"
       ],
@@ -17673,7 +17815,7 @@
       "publisher": "INC News",
       "published_at": "2026-10-07T07:00:00+00:00",
       "first_seen_at": "2026-10-24T01:47:46+00:00",
-      "last_observed_at": "2026-11-05T09:17:58+00:00",
+      "last_observed_at": "2026-11-05T17:37:15+00:00",
       "topics": [
         "Fraud research and reports"
       ],
@@ -34527,7 +34669,7 @@
       "headline_case_candidate": false,
       "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "first_seen_at": "2026-10-24T02:16:56+00:00",
-      "last_observed_at": "2026-11-05T09:18:03+00:00",
+      "last_observed_at": "2026-11-05T17:37:25+00:00",
       "notice": "Article metadata / headline discovery only. Any mentioned bank, sum or location is not independently corroborated.",
       "organizations_mentioned_in_headline": [],
       "article_links": [
@@ -37633,7 +37775,7 @@
       "headline_case_candidate": false,
       "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "first_seen_at": "2026-10-24T02:16:56+00:00",
-      "last_observed_at": "2026-11-05T09:18:03+00:00",
+      "last_observed_at": "2026-11-05T17:37:25+00:00",
       "notice": "Article metadata / headline discovery only. Any mentioned bank, sum or location is not independently corroborated.",
       "organizations_mentioned_in_headline": [],
       "article_links": [
@@ -38869,8 +39011,8 @@
       "amount_strings_in_headline": [],
       "headline_case_candidate": false,
       "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
-      "first_seen_at": "2026-11-05T09:18:03+00:00",
-      "last_observed_at": "2026-11-05T09:18:03+00:00",
+      "first_seen_at": "2026-11-05T17:37:25+00:00",
+      "last_observed_at": "2026-11-05T17:37:25+00:00",
       "notice": "Article metadata / headline discovery only. Any mentioned bank, sum or location is not independently corroborated.",
       "article_links": [
         {
@@ -39931,7 +40073,7 @@
       "headline_case_candidate": false,
       "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "first_seen_at": "2026-10-24T02:16:56+00:00",
-      "last_observed_at": "2026-11-05T09:18:03+00:00",
+      "last_observed_at": "2026-11-05T17:37:25+00:00",
       "notice": "Article metadata / headline discovery only. Any mentioned bank, sum or location is not independently corroborated.",
       "organizations_mentioned_in_headline": [],
       "article_links": [
@@ -40234,7 +40376,7 @@
       "headline_case_candidate": false,
       "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "first_seen_at": "2026-10-24T02:16:56+00:00",
-      "last_observed_at": "2026-11-05T09:18:03+00:00",
+      "last_observed_at": "2026-11-05T17:37:25+00:00",
       "notice": "Article metadata / headline discovery only. Any mentioned bank, sum or location is not independently corroborated.",
       "organizations_mentioned_in_headline": [],
       "article_links": [
@@ -41612,7 +41754,7 @@
       "headline_case_candidate": false,
       "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "first_seen_at": "2026-10-24T02:16:56+00:00",
-      "last_observed_at": "2026-11-05T09:18:03+00:00",
+      "last_observed_at": "2026-11-05T17:37:25+00:00",
       "notice": "Article metadata / headline discovery only. Any mentioned bank, sum or location is not independently corroborated.",
       "organizations_mentioned_in_headline": [],
       "article_links": [
