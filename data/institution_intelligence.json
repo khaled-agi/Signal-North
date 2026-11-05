@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-04T21:29:50+00:00",
+  "generated_at": "2026-11-05T01:45:40+00:00",
   "methodology": "Institution names are canonically grouped using explicit aliases. Headline entries are conservative reporting groups, not distinct or independently verified fraud incidents; multiple publisher headlines are retained under each group. An institution mention is not proof of wrongdoing.",
   "source_counts": {
     "enforcement": 98,
     "reviewed_incidents": 6,
-    "unverified_report_groups": 2603,
+    "unverified_report_groups": 2613,
     "osfi_institution_rows": 345,
     "fintrac_index_notices": 90,
     "bank_disclosure_records": 15,
@@ -87,9 +87,36 @@
       "counts": {
         "enforcement": 3,
         "incidents": 1,
-        "headlines": 14
+        "headlines": 15
       },
       "evidence": [
+        {
+          "kind": "headline",
+          "id": "report-0c8ed0aff8cc672132f9",
+          "date": "2026-11-04T22:45:45+00:00",
+          "title": "Ontario court certifies class-action suit against TD Bank regarding money laundering - CP24",
+          "source_url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOVVZlUzVlRW44Vzl3SVU0STdLVmllc2lvMTcwbEVTd2U5M2s3YTgxb2Rzc1cxOGRxbzJ6RFNZMHd1MFN0d0tTN3FpSnJBcm0xN3ZIUHlXSDYyYmVoS1NBcFd0eHFxT1ZHUExyOVBVY2VZTlkySlF3d2UwdFh4SUxBTkl5Q2N0WHM0dzhZVWhNS3NkVnNuMXVwMVdBODc3dHRZT0kxbkx0UVpBdU1fSkxvdTdFa0xvbWFGSzhCYkdmMEt2enhWSTM4d1hQMA?oc=5",
+          "source": "CP24",
+          "category": "AML and laundering",
+          "source_count": 1,
+          "source_channels": [
+            "recent"
+          ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "Ontario court certifies class-action suit against TD Bank regarding money laundering - CP24",
+              "publisher": "CP24",
+              "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOVVZlUzVlRW44Vzl3SVU0STdLVmllc2lvMTcwbEVTd2U5M2s3YTgxb2Rzc1cxOGRxbzJ6RFNZMHd1MFN0d0tTN3FpSnJBcm0xN3ZIUHlXSDYyYmVoS1NBcFd0eHFxT1ZHUExyOVBVY2VZTlkySlF3d2UwdFh4SUxBTkl5Q2N0WHM0dzhZVWhNS3NkVnNuMXVwMVdBODc3dHRZT0kxbkx0UVpBdU1fSkxvdTdFa0xvbWFGSzhCYkdmMEt2enhWSTM4d1hQMA?oc=5",
+              "published_at": "2026-11-04T22:45:45+00:00",
+              "discovery_channel": "recent"
+            }
+          ],
+          "amount_text": [],
+          "location": null,
+          "evidence": "unverified_headline",
+          "role": "mentioned_in_headline_only"
+        },
         {
           "kind": "incident",
           "id": "ca-2026-10-21-td-deepfake-investment",
@@ -545,7 +572,7 @@
       "themes": [
         {
           "name": "Money laundering controls",
-          "matching_records": 5,
+          "matching_records": 6,
           "interpretation": "shared keyword, not established causation"
         },
         {
@@ -563,7 +590,7 @@
         "2025": 5500000.0,
         "2024": 15685000.0
       },
-      "recent_activity": "2026-10-21",
+      "recent_activity": "2026-11-04T22:45:45+00:00",
       "official_data": {
         "obsi_firm_complaints": [
           {
@@ -679,7 +706,7 @@
           "occ_individual_matters": 0
         }
       },
-      "evidence_count_shown": 18
+      "evidence_count_shown": 19
     },
     {
       "id": "rbc",
@@ -691,9 +718,36 @@
       "counts": {
         "enforcement": 2,
         "incidents": 1,
-        "headlines": 27
+        "headlines": 28
       },
       "evidence": [
+        {
+          "kind": "headline",
+          "id": "report-013cbf9ef1252db14726",
+          "date": "2026-11-04T14:10:16+00:00",
+          "title": "Ex-RBC employee found guilty after viewing PM’s data, opening fraudulent accounts - The Globe and Mail",
+          "source_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPclVqR1pybmZNU0hNQnF2R0NaTmw2ellZTkMyb0ZQUzFoR0xIMTl3RlVzblo2ckxzaVctYlkyZF9TZS10SEx5YzBlSXA3RkpYT0ZYNnl3NkpOQWtXRVFwdV9Cemw4MmlyanNFQ3ZFcUVXTkgxeUtDc1NvWlltRlB0TUVnRU42OGtjdktZTXpNSVJpcXRQbTA3RURvZ0FOWmZfMnZWcEFRTXhNYS01dGRHdQ?oc=5",
+          "source": "The Globe and Mail",
+          "category": "Reported fraud",
+          "source_count": 1,
+          "source_channels": [
+            "recent"
+          ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "Ex-RBC employee found guilty after viewing PM’s data, opening fraudulent accounts - The Globe and Mail",
+              "publisher": "The Globe and Mail",
+              "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPclVqR1pybmZNU0hNQnF2R0NaTmw2ellZTkMyb0ZQUzFoR0xIMTl3RlVzblo2ckxzaVctYlkyZF9TZS10SEx5YzBlSXA3RkpYT0ZYNnl3NkpOQWtXRVFwdV9Cemw4MmlyanNFQ3ZFcUVXTkgxeUtDc1NvWlltRlB0TUVnRU42OGtjdktZTXpNSVJpcXRQbTA3RURvZ0FOWmZfMnZWcEFRTXhNYS01dGRHdQ?oc=5",
+              "published_at": "2026-11-04T14:10:16+00:00",
+              "discovery_channel": "recent"
+            }
+          ],
+          "amount_text": [],
+          "location": null,
+          "evidence": "unverified_headline",
+          "role": "mentioned_in_headline_only"
+        },
         {
           "kind": "headline",
           "id": "report-07b08225fd1625b58776",
@@ -1523,7 +1577,7 @@
         "2026": 4250000.0,
         "2023": 7475000.0
       },
-      "recent_activity": "2026-10-28T19:14:29+00:00",
+      "recent_activity": "2026-11-04T14:10:16+00:00",
       "official_data": {
         "obsi_firm_complaints": [
           {
@@ -1633,7 +1687,7 @@
           "occ_individual_matters": 0
         }
       },
-      "evidence_count_shown": 30
+      "evidence_count_shown": 31
     },
     {
       "id": "bmo",
