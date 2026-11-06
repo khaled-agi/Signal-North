@@ -1,10 +1,26 @@
 {
-  "generated_at": "2026-11-06T03:26:29+00:00",
-  "reporting_groups_analyzed": 2620,
+  "generated_at": "2026-11-06T11:25:41+00:00",
+  "reporting_groups_analyzed": 2623,
   "groups_with_suggested_connections": 173,
-  "candidate_comparisons": 348638,
+  "candidate_comparisons": 349104,
   "methodology": "Possible links by overlap in named organizations, descriptive headline words, scam themes, source-mentioned city and timing. These are NOT confirmed same incidents, causal relationships, accused parties or corroborated facts. Review original sources.",
   "connections": {
+    "report-12c116b0c9dbb8b645a5": [
+      {
+        "group_id": "report-08d6bc7319fa42606313",
+        "title": "Toronto couple charged after defrauding hundreds of Canadians out of millions of dollars: police - CBC",
+        "published_at": "2025-02-20T08:00:00+00:00",
+        "source_url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOUmV3RVFMa083eUlrZWNLemRoeFVTeFF1NGplem8weUJHY2htWkZlY0R4X0Q1Q3RfcmNVdzBNNXhfMFZ3ekliaHR5OTBYSTVHQ2tHMlI4d0pNU1JlaTFxd011WDlFblg2VzNod3N6MW8yNHAyTGN2eFBUbk5rXzJDb29MclpLU1NyVmc?oc=5",
+        "publisher": "CBC",
+        "shared_indicators": [
+          "6 shared descriptive headline terms",
+          "Same source-mentioned place",
+          "Published within ten days"
+        ],
+        "research_priority": 8,
+        "relationship_status": "unverified_research_lead"
+      }
+    ],
     "report-8eff830c3517d52fe183": [
       {
         "group_id": "report-71ec157251e5939a2200",
@@ -95,6 +111,21 @@
         "relationship_status": "unverified_research_lead"
       }
     ],
+    "report-85b0f0634acbc76abf96": [
+      {
+        "group_id": "report-364d35087e558eecb398",
+        "title": "TD Bank fined $3bn in historic money laundering settlement - BBC",
+        "published_at": "2024-10-10T07:00:00+00:00",
+        "source_url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9Fb2NISi1jU0FRUlRsZ1pvY3FRLVVReHU0WVE4N3NZbkVXam1DT3lYQUZEOUxUdnFfTzNrdG4tSUV5UmhORURPSjFoRDg1RmZFS0pkMm5VVXpRQQ?oc=5",
+        "publisher": "BBC",
+        "shared_indicators": [
+          "Same organization explicitly named: TD",
+          "Overlapping scam method: Money mules & laundering"
+        ],
+        "research_priority": 7,
+        "relationship_status": "unverified_research_lead"
+      }
+    ],
     "report-194a6f8a120316b73b31": [
       {
         "group_id": "report-da82cd723c68520af1f7",
@@ -124,13 +155,27 @@
         "relationship_status": "unverified_research_lead"
       }
     ],
-    "report-85b0f0634acbc76abf96": [
+    "report-da82cd723c68520af1f7": [
       {
-        "group_id": "report-364d35087e558eecb398",
-        "title": "TD Bank fined $3bn in historic money laundering settlement - BBC",
-        "published_at": "2024-10-10T07:00:00+00:00",
-        "source_url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9Fb2NISi1jU0FRUlRsZ1pvY3FRLVVReHU0WVE4N3NZbkVXam1DT3lYQUZEOUxUdnFfTzNrdG4tSUV5UmhORURPSjFoRDg1RmZFS0pkMm5VVXpRQQ?oc=5",
-        "publisher": "BBC",
+        "group_id": "report-194a6f8a120316b73b31",
+        "title": "TD Bank Investors Advance Suit Over Money Laundering Issues - Bloomberg Law News",
+        "published_at": "2026-10-14T07:00:00+00:00",
+        "source_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQSzV1bTYydlpNUWt6OEE2Q2diNzZWOXFYa0tOTUgwZE16NGhWZWd2aWxrRFB5VHJxUFJlQ081TkYyYTZGTzdCZW5FMnEtMG9EMUdwcWdjaWw2a3V6bDdmZzduX0V5SkJFYUtsNDd0aFBrRDdfT1luS0RPenlvRFRYSW4zVjhHSW5MbHdKUlNsWW9YMTR5XzBJSkdGUVFIUk9rYWtubGJxcw?oc=5",
+        "publisher": "Bloomberg Law News",
+        "shared_indicators": [
+          "Same organization explicitly named: TD",
+          "Overlapping scam method: Money mules & laundering",
+          "Published within 45 days"
+        ],
+        "research_priority": 9,
+        "relationship_status": "unverified_research_lead"
+      },
+      {
+        "group_id": "report-5831b04a2938a773c003",
+        "title": "NEWS: Former TD Bank employee sentenced for role in money laundering scheme - AML Intelligence",
+        "published_at": "2026-07-20T07:00:00+00:00",
+        "source_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPbTJOMjM4djlBSF9jR0lZVGI3bHRNWVVObnBhd0x4VEd6c3NvN0RJQ3dIVG1WOWYyUmNVZnItUEhwTnlYZUdqQTdTUXBsanZBczlBdGtxMUZzc0h1MXpSVTdtc0NlVUtOUFlERmJMaktPVTFHb3p0QWsyS2lzcUI2TGlhaWhjTjc1Tks0MGdoeUQzdk1KQkkxbnlnMi1uSDNxMEZSZzZyaEl5Vzc0NXA0?oc=5",
+        "publisher": "AML Intelligence",
         "shared_indicators": [
           "Same organization explicitly named: TD",
           "Overlapping scam method: Money mules & laundering"
@@ -184,35 +229,6 @@
         "relationship_status": "unverified_research_lead"
       }
     ],
-    "report-da82cd723c68520af1f7": [
-      {
-        "group_id": "report-194a6f8a120316b73b31",
-        "title": "TD Bank Investors Advance Suit Over Money Laundering Issues - Bloomberg Law News",
-        "published_at": "2026-10-14T07:00:00+00:00",
-        "source_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQSzV1bTYydlpNUWt6OEE2Q2diNzZWOXFYa0tOTUgwZE16NGhWZWd2aWxrRFB5VHJxUFJlQ081TkYyYTZGTzdCZW5FMnEtMG9EMUdwcWdjaWw2a3V6bDdmZzduX0V5SkJFYUtsNDd0aFBrRDdfT1luS0RPenlvRFRYSW4zVjhHSW5MbHdKUlNsWW9YMTR5XzBJSkdGUVFIUk9rYWtubGJxcw?oc=5",
-        "publisher": "Bloomberg Law News",
-        "shared_indicators": [
-          "Same organization explicitly named: TD",
-          "Overlapping scam method: Money mules & laundering",
-          "Published within 45 days"
-        ],
-        "research_priority": 9,
-        "relationship_status": "unverified_research_lead"
-      },
-      {
-        "group_id": "report-5831b04a2938a773c003",
-        "title": "NEWS: Former TD Bank employee sentenced for role in money laundering scheme - AML Intelligence",
-        "published_at": "2026-07-20T07:00:00+00:00",
-        "source_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPbTJOMjM4djlBSF9jR0lZVGI3bHRNWVVObnBhd0x4VEd6c3NvN0RJQ3dIVG1WOWYyUmNVZnItUEhwTnlYZUdqQTdTUXBsanZBczlBdGtxMUZzc0h1MXpSVTdtc0NlVUtOUFlERmJMaktPVTFHb3p0QWsyS2lzcUI2TGlhaWhjTjc1Tks0MGdoeUQzdk1KQkkxbnlnMi1uSDNxMEZSZzZyaEl5Vzc0NXA0?oc=5",
-        "publisher": "AML Intelligence",
-        "shared_indicators": [
-          "Same organization explicitly named: TD",
-          "Overlapping scam method: Money mules & laundering"
-        ],
-        "research_priority": 7,
-        "relationship_status": "unverified_research_lead"
-      }
-    ],
     "report-364d35087e558eecb398": [
       {
         "group_id": "report-85b0f0634acbc76abf96",
@@ -228,13 +244,13 @@
         "relationship_status": "unverified_research_lead"
       }
     ],
-    "report-27862541184e9885781e": [
+    "report-c0f06d2f6276bcff5022": [
       {
-        "group_id": "report-c0f06d2f6276bcff5022",
-        "title": "RBC pays penalty after over 200K Canadians affected by \"inaccurate\" credit card statements | National - Daily Hive",
-        "published_at": "2026-06-26T07:00:00+00:00",
-        "source_url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5jNDZBM201SlJPdGFUTXlxM0o2cDIxNGg3all0QkR5QTd0d3BlSWVBRk5haHVYcUhscl94MjdDYzlwb2dZM0IxN1FQSmRXZVRVY1RXSHRnWnc2YXdkNlB4ZHVFakFsOGQz?oc=5",
-        "publisher": "Daily Hive",
+        "group_id": "report-27862541184e9885781e",
+        "title": "Royal Bank of Canada ordered to pay $4.25M penalty for consumer violation - CTV News",
+        "published_at": "2026-06-25T07:00:00+00:00",
+        "source_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNNi04LWpRa3JBcXpXZzR5OHA0ams4TWpfTWJVUDdHazBsLVNXX0M4Z1pKRHNHYURWSVVkYzdjc08zRU1pVkVfRDVXMkJfS21mbDhsRGtveEtRWnJpRTlYYjhHVzhaUVNzRGtpUXlZVnZhZ0RVMGxxZzcyRFBHY240Y1NQT0JZam1CV0VZaGpRbTc0TTJCQ0hKX1c3dExzMThKOTdic2lNTHQ2X21TNjZz?oc=5",
+        "publisher": "CTV News",
         "shared_indicators": [
           "Same organization explicitly named: RBC",
           "Published within ten days"
@@ -333,21 +349,6 @@
         "relationship_status": "unverified_research_lead"
       }
     ],
-    "report-c0f06d2f6276bcff5022": [
-      {
-        "group_id": "report-27862541184e9885781e",
-        "title": "Royal Bank of Canada ordered to pay $4.25M penalty for consumer violation - CTV News",
-        "published_at": "2026-06-25T07:00:00+00:00",
-        "source_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNNi04LWpRa3JBcXpXZzR5OHA0ams4TWpfTWJVUDdHazBsLVNXX0M4Z1pKRHNHYURWSVVkYzdjc08zRU1pVkVfRDVXMkJfS21mbDhsRGtveEtRWnJpRTlYYjhHVzhaUVNzRGtpUXlZVnZhZ0RVMGxxZzcyRFBHY240Y1NQT0JZam1CV0VZaGpRbTc0TTJCQ0hKX1c3dExzMThKOTdic2lNTHQ2X21TNjZz?oc=5",
-        "publisher": "CTV News",
-        "shared_indicators": [
-          "Same organization explicitly named: RBC",
-          "Published within ten days"
-        ],
-        "research_priority": 7,
-        "relationship_status": "unverified_research_lead"
-      }
-    ],
     "report-019b4220f3f5ea5889b1": [
       {
         "group_id": "report-0b930f8c8dde9a614bb0",
@@ -391,6 +392,21 @@
           "Published within ten days"
         ],
         "research_priority": 8,
+        "relationship_status": "unverified_research_lead"
+      }
+    ],
+    "report-27862541184e9885781e": [
+      {
+        "group_id": "report-c0f06d2f6276bcff5022",
+        "title": "RBC pays penalty after over 200K Canadians affected by \"inaccurate\" credit card statements | National - Daily Hive",
+        "published_at": "2026-06-26T07:00:00+00:00",
+        "source_url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5jNDZBM201SlJPdGFUTXlxM0o2cDIxNGg3all0QkR5QTd0d3BlSWVBRk5haHVYcUhscl94MjdDYzlwb2dZM0IxN1FQSmRXZVRVY1RXSHRnWnc2YXdkNlB4ZHVFakFsOGQz?oc=5",
+        "publisher": "Daily Hive",
+        "shared_indicators": [
+          "Same organization explicitly named: RBC",
+          "Published within ten days"
+        ],
+        "research_priority": 7,
         "relationship_status": "unverified_research_lead"
       }
     ],
@@ -862,6 +878,160 @@
         "relationship_status": "unverified_research_lead"
       }
     ],
+    "report-fb5b82e1f5408dd917cf": [
+      {
+        "group_id": "report-0029f35724755361f2a2",
+        "title": "’Crypto King’ Aiden Pleterski will represent himself at his fraud trial next week - Radio-Canada",
+        "published_at": "2026-09-28T07:00:00+00:00",
+        "source_url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNQnc5V1RoTjB6VmsteVBLTDNyZWNSR2RxdEhqQkpsNmVJVHVwZEt3azJZUElBaG1LQmhUQ1BmaFFSb010UXpWYmRWa2Y3djlkclZEaXlPTGpSUHBvTUwzdjZBQnZHYnozX1lXN21mUDZJbmRaaW5OX3VWb0dqUWkwb1hjY1dVQnhOdUFJd0hvNWtZRzdORzV6eENJc2x2RFlHc205eHNzYm1ZTnByalVNX3Uydkl0emVZaV9rc185eDNCd1ZkTlE?oc=5",
+        "publisher": "Radio-Canada",
+        "shared_indicators": [
+          "5 shared descriptive headline terms",
+          "Overlapping scam method: Investment & crypto scams",
+          "Published within ten days"
+        ],
+        "research_priority": 8,
+        "relationship_status": "unverified_research_lead"
+      },
+      {
+        "group_id": "report-d67111cf2ca6723ae2a6",
+        "title": "Canada's 'Crypto King' Aiden Pleterski to Represent Himself at Fraud Trial - Decrypt",
+        "published_at": "2026-09-29T07:00:00+00:00",
+        "source_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPV0xzOXUyMFBFMmpZeHI5aGxESjB6dk5TLUZ3VkZGUk00akQzVXZ1YktMUmtxSHJQS2M3OUFzOFpRY3k2N2pKMFRzUUdQZjc0SGU1QVlwTHJYamNrMXBwMlBsQ3pVV0d5LTdPZnFTb1lGY0ZJVFNDZko3aXVvRTYyTDZJMnNySzBqMVlTQ3o3bEd6U0xMN2ZvWkl6ZTJwQQ?oc=5",
+        "publisher": "Decrypt",
+        "shared_indicators": [
+          "5 shared descriptive headline terms",
+          "Overlapping scam method: Investment & crypto scams",
+          "Published within ten days"
+        ],
+        "research_priority": 8,
+        "relationship_status": "unverified_research_lead"
+      },
+      {
+        "group_id": "report-d1c8901a78309fba833f",
+        "title": "Canadian 'Crypto King' Aiden Pleterski to Represent Himself in Fraud Trial - Bitcoin News",
+        "published_at": "2026-09-30T07:00:00+00:00",
+        "source_url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQUlBJYVFTclhyejliZFdzMnZHS2toOEpsc1ExQThneHVqdmV0M19JQmZtaUVRdm9pUlZDaGFsbGc1M0swb3JRLTA5TVdmT0c3SEVOY3lBRUpzNVpBVkVOajVsMVZZSHdzOFZZTkNoSkxhVmduTGk0UUZCQk9Udl9TcEx2NUlVd2ExNU16UG9YX2RZM2k5ZVpidi1PblVTWXhVTXBQRFFvSlFEQmpONGI4Yms1UnZFSXVRVi0w?oc=5",
+        "publisher": "Bitcoin News",
+        "shared_indicators": [
+          "5 shared descriptive headline terms",
+          "Overlapping scam method: Investment & crypto scams",
+          "Published within ten days"
+        ],
+        "research_priority": 8,
+        "relationship_status": "unverified_research_lead"
+      },
+      {
+        "group_id": "report-6c8b842a1521d817f344",
+        "title": "‘Crypto King’ Aiden Pleterski’s fraud trial adjourned until next week due to medical issue - CBC",
+        "published_at": "2026-10-20T07:00:00+00:00",
+        "source_url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOTjI2NFVNMDQ5ZG1KN2lzOE54S1NFX2ZZb0d6aDJBcmtsaE5ZT2RhZ0UyN3BOME1remg0WmlwMTN0MXhwcDFJbk12bUR0TU43X01GMDVmNkRZRnJQZVRrejc3SHh3Q3IxS1U0VTZ6SXRjVzZpNzZwYnZaaFRqUVNKTl9wRTBOZVZsYV9EOUNuSUdxVk1nc0c1V3lyTXRUdnBkM1c5NTlBOFNMSnFZWktBeVZ4RGNxWkJXVVdpY2ZXRHFqVTVZTEU1dTlkY1F1ZUhOcGc?oc=5",
+        "publisher": "CBC",
+        "shared_indicators": [
+          "5 shared descriptive headline terms",
+          "Overlapping scam method: Investment & crypto scams",
+          "Published within 45 days"
+        ],
+        "research_priority": 7,
+        "relationship_status": "unverified_research_lead"
+      }
+    ],
+    "report-94460a528fe83032c1f6": [
+      {
+        "group_id": "report-bc3020e13244d5f248ba",
+        "title": "Montreal grandparent scammer who fled to Central America pleads guilty in U.S. court - CBC",
+        "published_at": "2026-10-28T07:00:00+00:00",
+        "source_url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPSlQ4d3E1RS0tZWgtSEJWTWI3YlVTYm1iaV9uR0lZbi1UdG9wUnI0ZmZyOWM5Z2RyZ3Z0eDhRUlJjSHVRdHZyVFVCajlWWERET2RzSTFfd19aQ2tnVXFBUDJQWVYyLXRzVkxDbHRwcVRhRTcybl9QbWF3bTNIb1FiZWNEUGt6NnpQ?oc=5",
+        "publisher": "CBC",
+        "shared_indicators": [
+          "5 shared descriptive headline terms",
+          "Same source-mentioned place",
+          "Published within ten days"
+        ],
+        "research_priority": 8,
+        "relationship_status": "unverified_research_lead"
+      }
+    ],
+    "report-bc3020e13244d5f248ba": [
+      {
+        "group_id": "report-94460a528fe83032c1f6",
+        "title": "Quebec man pleads guilty in U.S. court to defrauding American seniors in grandparent scam - Montreal Gazette",
+        "published_at": "2026-10-28T22:46:27+00:00",
+        "source_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOcTdJTml3N1ZVX1RRT25YanQ1bktPWjI4QXQ1QlpqNEdPUnF5d3NDWk9Nd1NXVUkta2h0ejlzckNFVE5jTV9vd1J4Uk9YSHlwaWNDbTl2LUtlWEVwSHhYbUNISEpVa2hIVVdYTUJ2SHVlT1NsSzN0c3QwRnJlTWNZSUVTdFZES2RWOG9oRkRTM01Wd1FQZGJwNVZWSWtkMmY5?oc=5",
+        "publisher": "Montreal Gazette",
+        "shared_indicators": [
+          "5 shared descriptive headline terms",
+          "Same source-mentioned place",
+          "Published within ten days"
+        ],
+        "research_priority": 8,
+        "relationship_status": "unverified_research_lead"
+      }
+    ],
+    "report-041aafb445183d35116b": [
+      {
+        "group_id": "report-666835cd68135d77421e",
+        "title": "Moncton, N.B., man gets prison time in U.S. for participating in grandparent scam - Yahoo News Canada",
+        "published_at": "2026-10-10T07:00:00+00:00",
+        "source_url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9FNnVjRjE1TmJVdUxvTmRTM20yUzY1dnczSS1GUXhpSlBLSEtXV0NITGJRelRmX0p4eXNjNFZiWlQxcDNuVzlNX2lsZUQtbEFIb2hjUERaeHFRZWVNRFktSV9UR2ZYU3VDTXRJamtR?oc=5",
+        "publisher": "Yahoo News Canada",
+        "shared_indicators": [
+          "7 shared descriptive headline terms",
+          "Same source-mentioned place",
+          "Published within ten days"
+        ],
+        "research_priority": 8,
+        "relationship_status": "unverified_research_lead"
+      }
+    ],
+    "report-666835cd68135d77421e": [
+      {
+        "group_id": "report-041aafb445183d35116b",
+        "title": "Moncton man gets prison time in U.S. for participating in 'grandparent scam' - CBC",
+        "published_at": "2026-10-11T07:00:00+00:00",
+        "source_url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9vOVltY1JUZVBzVzlMcEZuWnEydG1KOWpYeTRIWGNuQmpVRWgyd3ZTSEs0ckdtS0xOd2U5Tm1qZFpSbGl6TmxpUDRNOW95WkxOYU9RQlFOX3lhTmlmcC1peGdTVkhCTHRhNVpLOTBMSWJNZ3BHTE9xMXVZS0NVVXc?oc=5",
+        "publisher": "CBC",
+        "shared_indicators": [
+          "7 shared descriptive headline terms",
+          "Same source-mentioned place",
+          "Published within ten days"
+        ],
+        "research_priority": 8,
+        "relationship_status": "unverified_research_lead"
+      }
+    ],
+    "report-8981de4a574d5de74142": [
+      {
+        "group_id": "report-8cb9c0d9b1be583abb5d",
+        "title": "Toronto police make another arrest in widespread 'grandparent scam,' fraud totals over $1.1M - CTV News",
+        "published_at": "2022-03-31T07:00:00+00:00",
+        "source_url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNS0hiQUdPRW0tWmwyeGxkTTBwb09BNG1RVGJHeXdkc1ZNTmlheTlYTVVwUUxBdmhIc0JmTDFTWHExY2RxWXNOTjdjNl9sNlNMcVppekRjUnF6RFg2VjdyWVpqYWtTUFZzdEdsNnJhdzVjSjZ3U2g5bHF3X05kVHlhaVQxLXRDd3BxeEdmX19uM1VGTUhGdU9sUEh1ODVWcVJMTldZVGxVbndMcjJOQjRIS1EweDRKU2hYQzNEX2lxRGloajQ3dkE?oc=5",
+        "publisher": "CTV News",
+        "shared_indicators": [
+          "7 shared descriptive headline terms",
+          "Same source-mentioned place",
+          "Published within ten days"
+        ],
+        "research_priority": 8,
+        "relationship_status": "unverified_research_lead"
+      }
+    ],
+    "report-8cb9c0d9b1be583abb5d": [
+      {
+        "group_id": "report-8981de4a574d5de74142",
+        "title": "Toronto police make another arrest in widespread 'grandparent scam,' fraud totals over $1.1M - CP24",
+        "published_at": "2022-03-31T07:00:00+00:00",
+        "source_url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQY29WbWFrVXJ3c2JLOGI5ZGYyQVRJNE8zeEpHNFFTQ0IyeUtVRnBhWG5mVWZSRE0wNDF6RVlKN1dCam5hQXRmUlJYdWJyMGdXYjdFQmk1WWt3eGZFUHJnUnItQWNRdXZHcWstcURNZlFlcTM5LTFHZGt3YWNjQkRIeDMzd2c0a2NTN1JPdlJCUTZ5bzNwaW9ER1J0THZ3Sy1Xb3BSd2djeGEyellpbUdXZUtrSjE3QXIxR0hROWc5ZjFJX0U?oc=5",
+        "publisher": "CP24",
+        "shared_indicators": [
+          "7 shared descriptive headline terms",
+          "Same source-mentioned place",
+          "Published within ten days"
+        ],
+        "research_priority": 8,
+        "relationship_status": "unverified_research_lead"
+      }
+    ],
     "report-d633f3a12921dc7c2c4e": [
       {
         "group_id": "report-9e0a0d1d3c203a067c6a",
@@ -880,10 +1050,10 @@
       },
       {
         "group_id": "report-d1cb6f7b67ca5a3c6edf",
-        "title": "'Crypto King' Aiden Pleterski found guilty of fraud at his jury trial in Toronto - CBC",
+        "title": "’Crypto King’ Aiden Pleterski found guilty of fraud at his jury trial in Toronto - Radio-Canada",
         "published_at": "2026-10-29T16:03:12+00:00",
-        "source_url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE45WjBKQWNUT2JtS3RjckJDRnIwaWxPWUlUbFZYWXFjdGhvSnpSUmI5QWd6REpLTV9IbWRmbWJYU1FlT3p2STA4MzVaeGQzaFI5aGI5RDFab0MwaU83M0QxNUZwNDhMY21objYzc00xVi1NMFRBTGI4?oc=5",
-        "publisher": "CBC",
+        "source_url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPSlFZTVUxd01lSlB1MnRUSEVsMXJmVGxOUnRyXzlOd0IyejdtLXVNTk03U3NjaWRIeHpTWWo0RGJyWUJHQzAwamEtdHVtZDRaa0JUdi1ibWlvWWJxcjFmT0dvOFFVcTVqc05aQzIxSTNhUlA3NlRiSFV2a3BSaTZkMWFGak9jTmN3LVBuM3pCTHZGWWhiejI4ZXdjTFloTmxBcVRudlFoWDQ1S3N6SXZJRTVKTzFMMjd6RHRHNEl3QlZvMGQ1?oc=5",
+        "publisher": "Radio-Canada",
         "shared_indicators": [
           "9 shared descriptive headline terms",
           "Overlapping scam method: Investment & crypto scams",
@@ -941,10 +1111,10 @@
       },
       {
         "group_id": "report-d1cb6f7b67ca5a3c6edf",
-        "title": "'Crypto King' Aiden Pleterski found guilty of fraud at his jury trial in Toronto - CBC",
+        "title": "’Crypto King’ Aiden Pleterski found guilty of fraud at his jury trial in Toronto - Radio-Canada",
         "published_at": "2026-10-29T16:03:12+00:00",
-        "source_url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE45WjBKQWNUT2JtS3RjckJDRnIwaWxPWUlUbFZYWXFjdGhvSnpSUmI5QWd6REpLTV9IbWRmbWJYU1FlT3p2STA4MzVaeGQzaFI5aGI5RDFab0MwaU83M0QxNUZwNDhMY21objYzc00xVi1NMFRBTGI4?oc=5",
-        "publisher": "CBC",
+        "source_url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPSlFZTVUxd01lSlB1MnRUSEVsMXJmVGxOUnRyXzlOd0IyejdtLXVNTk03U3NjaWRIeHpTWWo0RGJyWUJHQzAwamEtdHVtZDRaa0JUdi1ibWlvWWJxcjFmT0dvOFFVcTVqc05aQzIxSTNhUlA3NlRiSFV2a3BSaTZkMWFGak9jTmN3LVBuM3pCTHZGWWhiejI4ZXdjTFloTmxBcVRudlFoWDQ1S3N6SXZJRTVKTzFMMjd6RHRHNEl3QlZvMGQ1?oc=5",
+        "publisher": "Radio-Canada",
         "shared_indicators": [
           "7 shared descriptive headline terms",
           "Overlapping scam method: Investment & crypto scams",
@@ -987,10 +1157,10 @@
     "report-84df458dc36d18b749ac": [
       {
         "group_id": "report-d1cb6f7b67ca5a3c6edf",
-        "title": "'Crypto King' Aiden Pleterski found guilty of fraud at his jury trial in Toronto - CBC",
+        "title": "’Crypto King’ Aiden Pleterski found guilty of fraud at his jury trial in Toronto - Radio-Canada",
         "published_at": "2026-10-29T16:03:12+00:00",
-        "source_url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE45WjBKQWNUT2JtS3RjckJDRnIwaWxPWUlUbFZYWXFjdGhvSnpSUmI5QWd6REpLTV9IbWRmbWJYU1FlT3p2STA4MzVaeGQzaFI5aGI5RDFab0MwaU83M0QxNUZwNDhMY21objYzc00xVi1NMFRBTGI4?oc=5",
-        "publisher": "CBC",
+        "source_url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPSlFZTVUxd01lSlB1MnRUSEVsMXJmVGxOUnRyXzlOd0IyejdtLXVNTk03U3NjaWRIeHpTWWo0RGJyWUJHQzAwamEtdHVtZDRaa0JUdi1ibWlvWWJxcjFmT0dvOFFVcTVqc05aQzIxSTNhUlA3NlRiSFV2a3BSaTZkMWFGak9jTmN3LVBuM3pCTHZGWWhiejI4ZXdjTFloTmxBcVRudlFoWDQ1S3N6SXZJRTVKTzFMMjd6RHRHNEl3QlZvMGQ1?oc=5",
+        "publisher": "Radio-Canada",
         "shared_indicators": [
           "6 shared descriptive headline terms",
           "Overlapping scam method: Investment & crypto scams",
@@ -1093,10 +1263,10 @@
     "report-9e0a0d1d3c203a067c6a": [
       {
         "group_id": "report-d1cb6f7b67ca5a3c6edf",
-        "title": "'Crypto King' Aiden Pleterski found guilty of fraud at his jury trial in Toronto - CBC",
+        "title": "’Crypto King’ Aiden Pleterski found guilty of fraud at his jury trial in Toronto - Radio-Canada",
         "published_at": "2026-10-29T16:03:12+00:00",
-        "source_url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE45WjBKQWNUT2JtS3RjckJDRnIwaWxPWUlUbFZYWXFjdGhvSnpSUmI5QWd6REpLTV9IbWRmbWJYU1FlT3p2STA4MzVaeGQzaFI5aGI5RDFab0MwaU83M0QxNUZwNDhMY21objYzc00xVi1NMFRBTGI4?oc=5",
-        "publisher": "CBC",
+        "source_url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPSlFZTVUxd01lSlB1MnRUSEVsMXJmVGxOUnRyXzlOd0IyejdtLXVNTk03U3NjaWRIeHpTWWo0RGJyWUJHQzAwamEtdHVtZDRaa0JUdi1ibWlvWWJxcjFmT0dvOFFVcTVqc05aQzIxSTNhUlA3NlRiSFV2a3BSaTZkMWFGak9jTmN3LVBuM3pCTHZGWWhiejI4ZXdjTFloTmxBcVRudlFoWDQ1S3N6SXZJRTVKTzFMMjd6RHRHNEl3QlZvMGQ1?oc=5",
+        "publisher": "Radio-Canada",
         "shared_indicators": [
           "6 shared descriptive headline terms",
           "Overlapping scam method: Investment & crypto scams",
@@ -1152,38 +1322,6 @@
         "relationship_status": "unverified_research_lead"
       }
     ],
-    "report-94460a528fe83032c1f6": [
-      {
-        "group_id": "report-bc3020e13244d5f248ba",
-        "title": "Montreal grandparent scammer who fled to Central America pleads guilty in U.S. court - CBC",
-        "published_at": "2026-10-28T07:00:00+00:00",
-        "source_url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPSlQ4d3E1RS0tZWgtSEJWTWI3YlVTYm1iaV9uR0lZbi1UdG9wUnI0ZmZyOWM5Z2RyZ3Z0eDhRUlJjSHVRdHZyVFVCajlWWERET2RzSTFfd19aQ2tnVXFBUDJQWVYyLXRzVkxDbHRwcVRhRTcybl9QbWF3bTNIb1FiZWNEUGt6NnpQ?oc=5",
-        "publisher": "CBC",
-        "shared_indicators": [
-          "5 shared descriptive headline terms",
-          "Same source-mentioned place",
-          "Published within ten days"
-        ],
-        "research_priority": 8,
-        "relationship_status": "unverified_research_lead"
-      }
-    ],
-    "report-bc3020e13244d5f248ba": [
-      {
-        "group_id": "report-94460a528fe83032c1f6",
-        "title": "Quebec man pleads guilty in U.S. court to defrauding American seniors in grandparent scam - Montreal Gazette",
-        "published_at": "2026-10-28T22:46:27+00:00",
-        "source_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOcTdJTml3N1ZVX1RRT25YanQ1bktPWjI4QXQ1QlpqNEdPUnF5d3NDWk9Nd1NXVUkta2h0ejlzckNFVE5jTV9vd1J4Uk9YSHlwaWNDbTl2LUtlWEVwSHhYbUNISEpVa2hIVVdYTUJ2SHVlT1NsSzN0c3QwRnJlTWNZSUVTdFZES2RWOG9oRkRTM01Wd1FQZGJwNVZWSWtkMmY5?oc=5",
-        "publisher": "Montreal Gazette",
-        "shared_indicators": [
-          "5 shared descriptive headline terms",
-          "Same source-mentioned place",
-          "Published within ten days"
-        ],
-        "research_priority": 8,
-        "relationship_status": "unverified_research_lead"
-      }
-    ],
     "report-74a2e50be57947d127d4": [
       {
         "group_id": "report-680913daedd51c56fc5e",
@@ -1229,128 +1367,6 @@
           "Published within 45 days"
         ],
         "research_priority": 7,
-        "relationship_status": "unverified_research_lead"
-      }
-    ],
-    "report-fb5b82e1f5408dd917cf": [
-      {
-        "group_id": "report-0029f35724755361f2a2",
-        "title": "’Crypto King’ Aiden Pleterski will represent himself at his fraud trial next week - Radio-Canada",
-        "published_at": "2026-09-28T07:00:00+00:00",
-        "source_url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNQnc5V1RoTjB6VmsteVBLTDNyZWNSR2RxdEhqQkpsNmVJVHVwZEt3azJZUElBaG1LQmhUQ1BmaFFSb010UXpWYmRWa2Y3djlkclZEaXlPTGpSUHBvTUwzdjZBQnZHYnozX1lXN21mUDZJbmRaaW5OX3VWb0dqUWkwb1hjY1dVQnhOdUFJd0hvNWtZRzdORzV6eENJc2x2RFlHc205eHNzYm1ZTnByalVNX3Uydkl0emVZaV9rc185eDNCd1ZkTlE?oc=5",
-        "publisher": "Radio-Canada",
-        "shared_indicators": [
-          "5 shared descriptive headline terms",
-          "Overlapping scam method: Investment & crypto scams",
-          "Published within ten days"
-        ],
-        "research_priority": 8,
-        "relationship_status": "unverified_research_lead"
-      },
-      {
-        "group_id": "report-d67111cf2ca6723ae2a6",
-        "title": "Canada's 'Crypto King' Aiden Pleterski to Represent Himself at Fraud Trial - Decrypt",
-        "published_at": "2026-09-29T07:00:00+00:00",
-        "source_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPV0xzOXUyMFBFMmpZeHI5aGxESjB6dk5TLUZ3VkZGUk00akQzVXZ1YktMUmtxSHJQS2M3OUFzOFpRY3k2N2pKMFRzUUdQZjc0SGU1QVlwTHJYamNrMXBwMlBsQ3pVV0d5LTdPZnFTb1lGY0ZJVFNDZko3aXVvRTYyTDZJMnNySzBqMVlTQ3o3bEd6U0xMN2ZvWkl6ZTJwQQ?oc=5",
-        "publisher": "Decrypt",
-        "shared_indicators": [
-          "5 shared descriptive headline terms",
-          "Overlapping scam method: Investment & crypto scams",
-          "Published within ten days"
-        ],
-        "research_priority": 8,
-        "relationship_status": "unverified_research_lead"
-      },
-      {
-        "group_id": "report-d1c8901a78309fba833f",
-        "title": "Canadian 'Crypto King' Aiden Pleterski to Represent Himself in Fraud Trial - Bitcoin News",
-        "published_at": "2026-09-30T07:00:00+00:00",
-        "source_url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQUlBJYVFTclhyejliZFdzMnZHS2toOEpsc1ExQThneHVqdmV0M19JQmZtaUVRdm9pUlZDaGFsbGc1M0swb3JRLTA5TVdmT0c3SEVOY3lBRUpzNVpBVkVOajVsMVZZSHdzOFZZTkNoSkxhVmduTGk0UUZCQk9Udl9TcEx2NUlVd2ExNU16UG9YX2RZM2k5ZVpidi1PblVTWXhVTXBQRFFvSlFEQmpONGI4Yms1UnZFSXVRVi0w?oc=5",
-        "publisher": "Bitcoin News",
-        "shared_indicators": [
-          "5 shared descriptive headline terms",
-          "Overlapping scam method: Investment & crypto scams",
-          "Published within ten days"
-        ],
-        "research_priority": 8,
-        "relationship_status": "unverified_research_lead"
-      },
-      {
-        "group_id": "report-6c8b842a1521d817f344",
-        "title": "‘Crypto King’ Aiden Pleterski’s fraud trial adjourned until next week due to medical issue - CBC",
-        "published_at": "2026-10-20T07:00:00+00:00",
-        "source_url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOTjI2NFVNMDQ5ZG1KN2lzOE54S1NFX2ZZb0d6aDJBcmtsaE5ZT2RhZ0UyN3BOME1remg0WmlwMTN0MXhwcDFJbk12bUR0TU43X01GMDVmNkRZRnJQZVRrejc3SHh3Q3IxS1U0VTZ6SXRjVzZpNzZwYnZaaFRqUVNKTl9wRTBOZVZsYV9EOUNuSUdxVk1nc0c1V3lyTXRUdnBkM1c5NTlBOFNMSnFZWktBeVZ4RGNxWkJXVVdpY2ZXRHFqVTVZTEU1dTlkY1F1ZUhOcGc?oc=5",
-        "publisher": "CBC",
-        "shared_indicators": [
-          "5 shared descriptive headline terms",
-          "Overlapping scam method: Investment & crypto scams",
-          "Published within 45 days"
-        ],
-        "research_priority": 7,
-        "relationship_status": "unverified_research_lead"
-      }
-    ],
-    "report-041aafb445183d35116b": [
-      {
-        "group_id": "report-666835cd68135d77421e",
-        "title": "Moncton, N.B., man gets prison time in U.S. for participating in grandparent scam - Yahoo News Canada",
-        "published_at": "2026-10-10T07:00:00+00:00",
-        "source_url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9FNnVjRjE1TmJVdUxvTmRTM20yUzY1dnczSS1GUXhpSlBLSEtXV0NITGJRelRmX0p4eXNjNFZiWlQxcDNuVzlNX2lsZUQtbEFIb2hjUERaeHFRZWVNRFktSV9UR2ZYU3VDTXRJamtR?oc=5",
-        "publisher": "Yahoo News Canada",
-        "shared_indicators": [
-          "7 shared descriptive headline terms",
-          "Same source-mentioned place",
-          "Published within ten days"
-        ],
-        "research_priority": 8,
-        "relationship_status": "unverified_research_lead"
-      }
-    ],
-    "report-666835cd68135d77421e": [
-      {
-        "group_id": "report-041aafb445183d35116b",
-        "title": "Moncton man gets prison time in U.S. for participating in 'grandparent scam' - CBC",
-        "published_at": "2026-10-11T07:00:00+00:00",
-        "source_url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9vOVltY1JUZVBzVzlMcEZuWnEydG1KOWpYeTRIWGNuQmpVRWgyd3ZTSEs0ckdtS0xOd2U5Tm1qZFpSbGl6TmxpUDRNOW95WkxOYU9RQlFOX3lhTmlmcC1peGdTVkhCTHRhNVpLOTBMSWJNZ3BHTE9xMXVZS0NVVXc?oc=5",
-        "publisher": "CBC",
-        "shared_indicators": [
-          "7 shared descriptive headline terms",
-          "Same source-mentioned place",
-          "Published within ten days"
-        ],
-        "research_priority": 8,
-        "relationship_status": "unverified_research_lead"
-      }
-    ],
-    "report-8981de4a574d5de74142": [
-      {
-        "group_id": "report-8cb9c0d9b1be583abb5d",
-        "title": "Toronto police make another arrest in widespread 'grandparent scam,' fraud totals over $1.1M - CTV News",
-        "published_at": "2022-03-31T07:00:00+00:00",
-        "source_url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNS0hiQUdPRW0tWmwyeGxkTTBwb09BNG1RVGJHeXdkc1ZNTmlheTlYTVVwUUxBdmhIc0JmTDFTWHExY2RxWXNOTjdjNl9sNlNMcVppekRjUnF6RFg2VjdyWVpqYWtTUFZzdEdsNnJhdzVjSjZ3U2g5bHF3X05kVHlhaVQxLXRDd3BxeEdmX19uM1VGTUhGdU9sUEh1ODVWcVJMTldZVGxVbndMcjJOQjRIS1EweDRKU2hYQzNEX2lxRGloajQ3dkE?oc=5",
-        "publisher": "CTV News",
-        "shared_indicators": [
-          "7 shared descriptive headline terms",
-          "Same source-mentioned place",
-          "Published within ten days"
-        ],
-        "research_priority": 8,
-        "relationship_status": "unverified_research_lead"
-      }
-    ],
-    "report-8cb9c0d9b1be583abb5d": [
-      {
-        "group_id": "report-8981de4a574d5de74142",
-        "title": "Toronto police make another arrest in widespread 'grandparent scam,' fraud totals over $1.1M - CP24",
-        "published_at": "2022-03-31T07:00:00+00:00",
-        "source_url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQY29WbWFrVXJ3c2JLOGI5ZGYyQVRJNE8zeEpHNFFTQ0IyeUtVRnBhWG5mVWZSRE0wNDF6RVlKN1dCam5hQXRmUlJYdWJyMGdXYjdFQmk1WWt3eGZFUHJnUnItQWNRdXZHcWstcURNZlFlcTM5LTFHZGt3YWNjQkRIeDMzd2c0a2NTN1JPdlJCUTZ5bzNwaW9ER1J0THZ3Sy1Xb3BSd2djeGEyellpbUdXZUtrSjE3QXIxR0hROWc5ZjFJX0U?oc=5",
-        "publisher": "CP24",
-        "shared_indicators": [
-          "7 shared descriptive headline terms",
-          "Same source-mentioned place",
-          "Published within ten days"
-        ],
-        "research_priority": 8,
         "relationship_status": "unverified_research_lead"
       }
     ],
@@ -1547,6 +1563,38 @@
           "Published within ten days"
         ],
         "research_priority": 9,
+        "relationship_status": "unverified_research_lead"
+      }
+    ],
+    "report-c34af3837568a319b32c": [
+      {
+        "group_id": "report-08a32e2e2986b0403470",
+        "title": "Police: Elderly man loses 200K in cryptocurrency investment scam - CTV News",
+        "published_at": "2026-09-21T07:00:00+00:00",
+        "source_url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNN3MwWmJudUJXTnYtTDZERE5mc2E4NVFIT21iVmhsSzVhcnh3T3JiaEh4OUJiY1psNlRERkpUbE9YVmdobk1XSkNHbWhzV2xNb1FIcTZfR3JGeTduQi1uTFZ2bVFzTTk2VnRHTm1BcVhtbmh0NW9INXNyTlktVGk5ZzZtd01uU0stdUZNSjJVRUpDUGlwdFhMSnpIV0czbnRuaGNqSQ?oc=5",
+        "publisher": "CTV News",
+        "shared_indicators": [
+          "5 shared descriptive headline terms",
+          "Overlapping scam method: Investment & crypto scams",
+          "Published within ten days"
+        ],
+        "research_priority": 8,
+        "relationship_status": "unverified_research_lead"
+      }
+    ],
+    "report-7a717e9d4474e9cba638": [
+      {
+        "group_id": "report-428fd9e3aabcfd90c710",
+        "title": "Ontario senior bilked out of $900K after falling victim to crypto scam that used AI deepfake of PM Carney - CTV News",
+        "published_at": "2026-06-26T07:00:00+00:00",
+        "source_url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPVks5QzR5ZnhvaEV3TzJFYkNHQzFZeXlRNThYT1dWVGwteGVKbVB6R3ZDeWdOVEJuRFhLYWUzd0pBeW1LbkIwWjRIWWxiU21rVll4WDY5WWpQTFRnd1FPWnNsa3FpMVlGWE9PanI4NEpHVFJTcUszcVYzLWgyN2RkUW5PVFB3cTVuZFlZT2RFek55bXNNN09nbFMzdWZQaWdlQndiVVNOZlRBd3ZUaEdPSHhVVGVDOGlqbFo5YWthTEQtODJ2U2FnbzlHMkV6OGJoeWhMYjdJMkI?oc=5",
+        "publisher": "CTV News",
+        "shared_indicators": [
+          "5 shared descriptive headline terms",
+          "Overlapping scam method: Digital fraud & cybercrime",
+          "Published within ten days"
+        ],
+        "research_priority": 8,
         "relationship_status": "unverified_research_lead"
       }
     ],
@@ -1756,32 +1804,48 @@
         "relationship_status": "unverified_research_lead"
       }
     ],
-    "report-c34af3837568a319b32c": [
+    "report-1769a811a3677ece5f25": [
       {
-        "group_id": "report-08a32e2e2986b0403470",
-        "title": "Police: Elderly man loses 200K in cryptocurrency investment scam - CTV News",
-        "published_at": "2026-09-21T07:00:00+00:00",
-        "source_url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNN3MwWmJudUJXTnYtTDZERE5mc2E4NVFIT21iVmhsSzVhcnh3T3JiaEh4OUJiY1psNlRERkpUbE9YVmdobk1XSkNHbWhzV2xNb1FIcTZfR3JGeTduQi1uTFZ2bVFzTTk2VnRHTm1BcVhtbmh0NW9INXNyTlktVGk5ZzZtd01uU0stdUZNSjJVRUpDUGlwdFhMSnpIV0czbnRuaGNqSQ?oc=5",
+        "group_id": "report-e9b504b3ad2510980f0f",
+        "title": "RCMP investigating possible money laundering related to Alberta health-care contracts - CTV News",
+        "published_at": "2026-10-27T23:19:23+00:00",
+        "source_url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPX09QY0V0MDV4U2VxWmJHQ01IN3VVQno2R3VPdnRDX0xubmlfaVVjbk1HTS00TU91c3ltNkp0UHZXTXl0VXZTU20tZk5GbThBNXBMZ0dUYlBNbTNHUk1ydW01VnNkUHBYeTI1SDhWeFFDcjQ4elYxT0pHaXJCMXg3dEh4b2ZBVl9hSzhMVlJBeXMwVUVMdi1iZnBRT1RfRnNHRWd4ZENPVkU2RWl1RGhqVjZOUlJYRHg2WVlZQUwzSXhzZjBMaFM2TTdjZjJiY0Iz?oc=5",
         "publisher": "CTV News",
         "shared_indicators": [
           "5 shared descriptive headline terms",
-          "Overlapping scam method: Investment & crypto scams",
+          "Overlapping scam method: Money mules & laundering",
           "Published within ten days"
         ],
         "research_priority": 8,
         "relationship_status": "unverified_research_lead"
       }
     ],
-    "report-7a717e9d4474e9cba638": [
+    "report-07b878b4dc2484407054": [
       {
-        "group_id": "report-428fd9e3aabcfd90c710",
-        "title": "Ontario senior bilked out of $900K after falling victim to crypto scam that used AI deepfake of PM Carney - CTV News",
-        "published_at": "2026-06-26T07:00:00+00:00",
-        "source_url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPVks5QzR5ZnhvaEV3TzJFYkNHQzFZeXlRNThYT1dWVGwteGVKbVB6R3ZDeWdOVEJuRFhLYWUzd0pBeW1LbkIwWjRIWWxiU21rVll4WDY5WWpQTFRnd1FPWnNsa3FpMVlGWE9PanI4NEpHVFJTcUszcVYzLWgyN2RkUW5PVFB3cTVuZFlZT2RFek55bXNNN09nbFMzdWZQaWdlQndiVVNOZlRBd3ZUaEdPSHhVVGVDOGlqbFo5YWthTEQtODJ2U2FnbzlHMkV6OGJoeWhMYjdJMkI?oc=5",
+        "group_id": "report-90b289bed8c24d200244",
+        "title": "Canada can do more to prosecute sophisticated money laundering cases: watchdog report - CTV News",
+        "published_at": "2026-09-29T07:00:00+00:00",
+        "source_url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQT3NvY0UzbWpPTnJhMlU4ZU5DWWNBZ2xfOGxrUVNHYUcxakpodHFCNXlpenhSNGFuRlFSX2xHZHRaREpUdUdaSUxoWEpMMURBM1hCeElVY0tlSlJ5ZWQxWFNRdjBSdW45UmRBSHkzajdTRmVacXF5Rk1GaXBTNGFSclpJU1NjWjI5VDhPOTFMbTRVZGM1WlJTc2VRMXZlOWd1Uy0wcS1wWGd2TU9CRF9vWE5Pdjk5aXoxSG13RDJ1aVRtSUE?oc=5",
         "publisher": "CTV News",
         "shared_indicators": [
-          "5 shared descriptive headline terms",
-          "Overlapping scam method: Digital fraud & cybercrime",
+          "6 shared descriptive headline terms",
+          "Overlapping scam method: Money mules & laundering",
+          "Published within ten days"
+        ],
+        "research_priority": 8,
+        "relationship_status": "unverified_research_lead"
+      }
+    ],
+    "report-90b289bed8c24d200244": [
+      {
+        "group_id": "report-07b878b4dc2484407054",
+        "title": "Canada can do more to prosecute sophisticated money laundering cases: watchdog report - CFJC Today Kamloops",
+        "published_at": "2026-09-29T07:00:00+00:00",
+        "source_url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOZHpIMksybERTNEw0ZHlZTGtXemQxQWhjX1pWLXJQSzFrZU5UaXVYYm5kRXpfa0RJbjlVRXNSUGJ6ZU5xQnVxUW9XWHBlMHdZYktzb3VVVkVBb2g2RVQ2aGo1d1JOWnlfYm5RLVZhTHBLQ0k0czh3RlJaTGNsQzhJNVBYeXJGT19USnFmOGN5R3lQWVltTTUtYzNhcEwwdWJVM0p5bzJqVWMtdUo5WVlia1dpdW9SM19YS2c?oc=5",
+        "publisher": "CFJC Today Kamloops",
+        "shared_indicators": [
+          "6 shared descriptive headline terms",
+          "Overlapping scam method: Money mules & laundering",
           "Published within ten days"
         ],
         "research_priority": 8,
@@ -1843,54 +1907,6 @@
           "Published within ten days"
         ],
         "research_priority": 9,
-        "relationship_status": "unverified_research_lead"
-      }
-    ],
-    "report-1769a811a3677ece5f25": [
-      {
-        "group_id": "report-e9b504b3ad2510980f0f",
-        "title": "RCMP investigating possible money laundering related to Alberta health-care contracts - CTV News",
-        "published_at": "2026-10-27T23:19:23+00:00",
-        "source_url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPX09QY0V0MDV4U2VxWmJHQ01IN3VVQno2R3VPdnRDX0xubmlfaVVjbk1HTS00TU91c3ltNkp0UHZXTXl0VXZTU20tZk5GbThBNXBMZ0dUYlBNbTNHUk1ydW01VnNkUHBYeTI1SDhWeFFDcjQ4elYxT0pHaXJCMXg3dEh4b2ZBVl9hSzhMVlJBeXMwVUVMdi1iZnBRT1RfRnNHRWd4ZENPVkU2RWl1RGhqVjZOUlJYRHg2WVlZQUwzSXhzZjBMaFM2TTdjZjJiY0Iz?oc=5",
-        "publisher": "CTV News",
-        "shared_indicators": [
-          "5 shared descriptive headline terms",
-          "Overlapping scam method: Money mules & laundering",
-          "Published within ten days"
-        ],
-        "research_priority": 8,
-        "relationship_status": "unverified_research_lead"
-      }
-    ],
-    "report-07b878b4dc2484407054": [
-      {
-        "group_id": "report-90b289bed8c24d200244",
-        "title": "Canada can do more to prosecute sophisticated money laundering cases: watchdog report - CTV News",
-        "published_at": "2026-09-29T07:00:00+00:00",
-        "source_url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQT3NvY0UzbWpPTnJhMlU4ZU5DWWNBZ2xfOGxrUVNHYUcxakpodHFCNXlpenhSNGFuRlFSX2xHZHRaREpUdUdaSUxoWEpMMURBM1hCeElVY0tlSlJ5ZWQxWFNRdjBSdW45UmRBSHkzajdTRmVacXF5Rk1GaXBTNGFSclpJU1NjWjI5VDhPOTFMbTRVZGM1WlJTc2VRMXZlOWd1Uy0wcS1wWGd2TU9CRF9vWE5Pdjk5aXoxSG13RDJ1aVRtSUE?oc=5",
-        "publisher": "CTV News",
-        "shared_indicators": [
-          "6 shared descriptive headline terms",
-          "Overlapping scam method: Money mules & laundering",
-          "Published within ten days"
-        ],
-        "research_priority": 8,
-        "relationship_status": "unverified_research_lead"
-      }
-    ],
-    "report-90b289bed8c24d200244": [
-      {
-        "group_id": "report-07b878b4dc2484407054",
-        "title": "Canada can do more to prosecute sophisticated money laundering cases: watchdog report - CFJC Today Kamloops",
-        "published_at": "2026-09-29T07:00:00+00:00",
-        "source_url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOZHpIMksybERTNEw0ZHlZTGtXemQxQWhjX1pWLXJQSzFrZU5UaXVYYm5kRXpfa0RJbjlVRXNSUGJ6ZU5xQnVxUW9XWHBlMHdZYktzb3VVVkVBb2g2RVQ2aGo1d1JOWnlfYm5RLVZhTHBLQ0k0czh3RlJaTGNsQzhJNVBYeXJGT19USnFmOGN5R3lQWVltTTUtYzNhcEwwdWJVM0p5bzJqVWMtdUo5WVlia1dpdW9SM19YS2c?oc=5",
-        "publisher": "CFJC Today Kamloops",
-        "shared_indicators": [
-          "6 shared descriptive headline terms",
-          "Overlapping scam method: Money mules & laundering",
-          "Published within ten days"
-        ],
-        "research_priority": 8,
         "relationship_status": "unverified_research_lead"
       }
     ],
@@ -2050,6 +2066,22 @@
         "shared_indicators": [
           "6 shared descriptive headline terms",
           "Overlapping scam method: Account takeover & identity, Bank impersonation & phishing",
+          "Published within ten days"
+        ],
+        "research_priority": 8,
+        "relationship_status": "unverified_research_lead"
+      }
+    ],
+    "report-08a32e2e2986b0403470": [
+      {
+        "group_id": "report-c34af3837568a319b32c",
+        "title": "A 78-year-old Barrie man has lost $200K in an online cryptocurrency investment scam - CTV News",
+        "published_at": "2026-09-21T07:00:00+00:00",
+        "source_url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOT2VpS3NZVFdodDREVkU5cEhYODZSalpVT1IwM0JiSnZ1cEhPa1paU0M0NElteTlzTkdXN0tkRTRnLXI4QWhBbnFxRXp2a181LVBkVUtCcHpEQjZZWUFSOWJfOUx6MmhVMGY1UW9zaXhNTEpnV0tDQ24zclkzSVFqbHFYd0tBTWRzQmh0eTFVT2pVX2VLS3RnOWJucFlyZUh6Snk3S2s4V3YzQWtFVEFzWjRPTDZLb0dadm1OOHlXdm4zU3Zkd09CVDZB?oc=5",
+        "publisher": "CTV News",
+        "shared_indicators": [
+          "5 shared descriptive headline terms",
+          "Overlapping scam method: Investment & crypto scams",
           "Published within ten days"
         ],
         "research_priority": 8,
@@ -2660,22 +2692,6 @@
         "relationship_status": "unverified_research_lead"
       }
     ],
-    "report-08a32e2e2986b0403470": [
-      {
-        "group_id": "report-c34af3837568a319b32c",
-        "title": "A 78-year-old Barrie man has lost $200K in an online cryptocurrency investment scam - CTV News",
-        "published_at": "2026-09-21T07:00:00+00:00",
-        "source_url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOT2VpS3NZVFdodDREVkU5cEhYODZSalpVT1IwM0JiSnZ1cEhPa1paU0M0NElteTlzTkdXN0tkRTRnLXI4QWhBbnFxRXp2a181LVBkVUtCcHpEQjZZWUFSOWJfOUx6MmhVMGY1UW9zaXhNTEpnV0tDQ24zclkzSVFqbHFYd0tBTWRzQmh0eTFVT2pVX2VLS3RnOWJucFlyZUh6Snk3S2s4V3YzQWtFVEFzWjRPTDZLb0dadm1OOHlXdm4zU3Zkd09CVDZB?oc=5",
-        "publisher": "CTV News",
-        "shared_indicators": [
-          "5 shared descriptive headline terms",
-          "Overlapping scam method: Investment & crypto scams",
-          "Published within ten days"
-        ],
-        "research_priority": 8,
-        "relationship_status": "unverified_research_lead"
-      }
-    ],
     "report-95182a38ae725e384f03": [
       {
         "group_id": "report-197cfd2f36991ccb5e22",
@@ -2978,22 +2994,6 @@
         "relationship_status": "unverified_research_lead"
       }
     ],
-    "report-15a8b863815f11493a6a": [
-      {
-        "group_id": "report-8c68aeb5960c47ffc28d",
-        "title": "B.C. crime news: Police seize 8,000 pieces of stolen mail, bank cards, guns - Vancouver Sun",
-        "published_at": "2024-09-22T07:00:00+00:00",
-        "source_url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9DVzVaNTZOdFJSdGN1V1BQT0dXX204OTk3R2ZZbUdqWmNiNWJvLUs2cXRlOWtuNEFKSnZFTHdFanpFd1dmWThtWXJicTE3VjdBMDZZMWlqMnlSVVFxdlQ2V05CWHZkaTdDZl9WaEh2V2MtVlVxX2xKWFV0WQ?oc=5",
-        "publisher": "Vancouver Sun",
-        "shared_indicators": [
-          "5 shared descriptive headline terms",
-          "Same source-mentioned place",
-          "Published within ten days"
-        ],
-        "research_priority": 8,
-        "relationship_status": "unverified_research_lead"
-      }
-    ],
     "report-e5a09f3dfb9aacf93c96": [
       {
         "group_id": "report-662b00510eb22181415b",
@@ -3026,32 +3026,16 @@
         "relationship_status": "unverified_research_lead"
       }
     ],
-    "report-8c68aeb5960c47ffc28d": [
+    "report-15a8b863815f11493a6a": [
       {
-        "group_id": "report-15a8b863815f11493a6a",
-        "title": "Credit cards, passports, licences: Metro Vancouver police find thousands of pieces of stolen mail - CTV News",
-        "published_at": "2024-09-18T07:00:00+00:00",
-        "source_url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQeVJZdUFqOGFGM213TTRtRDhQMjlscEZyNEFud0lhcU9lNThOU1RVaXhNOWROR3lUWUE5NFJKSFVrZ3ktSDhFWWhVNlpsdlptcWtqcExfWGhEQ3RGQWZQSXdwNXRCdG1ZQVFyUVhZR3c4V2FxenRTdHozN2J2WDRQRnRHMjNzVzFRbHZ3YWF5Rk1ibGlVVmxId0ZILVFVWUREcmtGVzQzRXRYc0U5eERPXzg0bl9FeGluRWZ5UXlSLUJSMkZ5Sm1DTXczT3YtTGduLUE?oc=5",
-        "publisher": "CTV News",
+        "group_id": "report-8c68aeb5960c47ffc28d",
+        "title": "B.C. crime news: Police seize 8,000 pieces of stolen mail, bank cards, guns - Vancouver Sun",
+        "published_at": "2024-09-22T07:00:00+00:00",
+        "source_url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9DVzVaNTZOdFJSdGN1V1BQT0dXX204OTk3R2ZZbUdqWmNiNWJvLUs2cXRlOWtuNEFKSnZFTHdFanpFd1dmWThtWXJicTE3VjdBMDZZMWlqMnlSVVFxdlQ2V05CWHZkaTdDZl9WaEh2V2MtVlVxX2xKWFV0WQ?oc=5",
+        "publisher": "Vancouver Sun",
         "shared_indicators": [
           "5 shared descriptive headline terms",
           "Same source-mentioned place",
-          "Published within ten days"
-        ],
-        "research_priority": 8,
-        "relationship_status": "unverified_research_lead"
-      }
-    ],
-    "report-78f55fcd8a73043c0734": [
-      {
-        "group_id": "report-c9e2fc0e21d31f470f4c",
-        "title": "Indigo says ransomware attack breached data of current and former employees - Global News",
-        "published_at": "2023-02-24T08:00:00+00:00",
-        "source_url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQamxzVmhNSzRNdnZ6eWx4VVNTajZqcXlzdjRKWTh3R05iaUxhQS1aRVptX3ZGZEFhVk1mTVZCc0pDMngzcVYzVXZmeFdILUtyTTc0LUtwME1YcE1mcWhwVGhETnJ1clBaMnM4XzljRTZDZVZGLUVfSEplV1FVcmRScWlNMDRRaFhTSGc?oc=5",
-        "publisher": "Global News",
-        "shared_indicators": [
-          "5 shared descriptive headline terms",
-          "Overlapping scam method: Digital fraud & cybercrime",
           "Published within ten days"
         ],
         "research_priority": 8,
@@ -3120,6 +3104,38 @@
         "relationship_status": "unverified_research_lead"
       }
     ],
+    "report-8c68aeb5960c47ffc28d": [
+      {
+        "group_id": "report-15a8b863815f11493a6a",
+        "title": "Credit cards, passports, licences: Metro Vancouver police find thousands of pieces of stolen mail - CTV News",
+        "published_at": "2024-09-18T07:00:00+00:00",
+        "source_url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQeVJZdUFqOGFGM213TTRtRDhQMjlscEZyNEFud0lhcU9lNThOU1RVaXhNOWROR3lUWUE5NFJKSFVrZ3ktSDhFWWhVNlpsdlptcWtqcExfWGhEQ3RGQWZQSXdwNXRCdG1ZQVFyUVhZR3c4V2FxenRTdHozN2J2WDRQRnRHMjNzVzFRbHZ3YWF5Rk1ibGlVVmxId0ZILVFVWUREcmtGVzQzRXRYc0U5eERPXzg0bl9FeGluRWZ5UXlSLUJSMkZ5Sm1DTXczT3YtTGduLUE?oc=5",
+        "publisher": "CTV News",
+        "shared_indicators": [
+          "5 shared descriptive headline terms",
+          "Same source-mentioned place",
+          "Published within ten days"
+        ],
+        "research_priority": 8,
+        "relationship_status": "unverified_research_lead"
+      }
+    ],
+    "report-78f55fcd8a73043c0734": [
+      {
+        "group_id": "report-c9e2fc0e21d31f470f4c",
+        "title": "Indigo says ransomware attack breached data of current and former employees - Global News",
+        "published_at": "2023-02-24T08:00:00+00:00",
+        "source_url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQamxzVmhNSzRNdnZ6eWx4VVNTajZqcXlzdjRKWTh3R05iaUxhQS1aRVptX3ZGZEFhVk1mTVZCc0pDMngzcVYzVXZmeFdILUtyTTc0LUtwME1YcE1mcWhwVGhETnJ1clBaMnM4XzljRTZDZVZGLUVfSEplV1FVcmRScWlNMDRRaFhTSGc?oc=5",
+        "publisher": "Global News",
+        "shared_indicators": [
+          "5 shared descriptive headline terms",
+          "Overlapping scam method: Digital fraud & cybercrime",
+          "Published within ten days"
+        ],
+        "research_priority": 8,
+        "relationship_status": "unverified_research_lead"
+      }
+    ],
     "report-428fd9e3aabcfd90c710": [
       {
         "group_id": "report-f45a57948bab2a2739d9",
@@ -3166,38 +3182,6 @@
         "relationship_status": "unverified_research_lead"
       }
     ],
-    "report-8191a61d23ee548aee3c": [
-      {
-        "group_id": "report-c422a126154f2c58ae8a",
-        "title": "Alleged fake nurse who worked on Vancouver Island arrested in U.S.: police - CHEK News",
-        "published_at": "2025-05-06T07:00:00+00:00",
-        "source_url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPVDVBWkd1VW1NaVZabXJ4dEZxRVFrSzFyUlk3NDM2RUtMdW1jSTNxT3IySTh1RUg4d3F5QjNPTUxYSDNIak5hLUdFMnpGOUd0bzFycVUzWVlLU1FFMENOVFA0d2xVeHVvQmtlc2JUMzY2WUk1Y1MzczNNOHRrdTlULVFOOHFzTS1yUGRWbHdmM0RKYU1XZ3haV1ZqVXpLdXNfR2c0?oc=5",
-        "publisher": "CHEK News",
-        "shared_indicators": [
-          "6 shared descriptive headline terms",
-          "Same source-mentioned place",
-          "Published within ten days"
-        ],
-        "research_priority": 8,
-        "relationship_status": "unverified_research_lead"
-      }
-    ],
-    "report-c422a126154f2c58ae8a": [
-      {
-        "group_id": "report-8191a61d23ee548aee3c",
-        "title": "Alleged fake nurse who operated on Vancouver Island arrested in U.S. - CBC",
-        "published_at": "2025-05-07T07:00:00+00:00",
-        "source_url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQaGZRaTlJdDhoeGdhamVvem5iRE9FalhpVVJrV0RUeWtoSzZhSTNtemZuNmhaVE5hOXl2eEJqZUdJZlJCUXAwXzM3LVNkNV9UaHNvR3pCb0o1WTdoRTZYc0JOMEVmV21hbnNkNUpZYXZNVEJCWUdxV29QV29iTmJ0MTNFcG5XX1RvN2RVd3NROUhPQlhHY3lqN1lxQlhJUDY0aXpmWG53?oc=5",
-        "publisher": "CBC",
-        "shared_indicators": [
-          "6 shared descriptive headline terms",
-          "Same source-mentioned place",
-          "Published within ten days"
-        ],
-        "research_priority": 8,
-        "relationship_status": "unverified_research_lead"
-      }
-    ],
     "report-cb61d4a9c7db76ed7943": [
       {
         "group_id": "report-27fe2b5cfc5e39ab9561",
@@ -3231,6 +3215,38 @@
         "relationship_status": "unverified_research_lead"
       }
     ],
+    "report-8191a61d23ee548aee3c": [
+      {
+        "group_id": "report-c422a126154f2c58ae8a",
+        "title": "Alleged fake nurse who worked on Vancouver Island arrested in U.S.: police - CHEK News",
+        "published_at": "2025-05-06T07:00:00+00:00",
+        "source_url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPVDVBWkd1VW1NaVZabXJ4dEZxRVFrSzFyUlk3NDM2RUtMdW1jSTNxT3IySTh1RUg4d3F5QjNPTUxYSDNIak5hLUdFMnpGOUd0bzFycVUzWVlLU1FFMENOVFA0d2xVeHVvQmtlc2JUMzY2WUk1Y1MzczNNOHRrdTlULVFOOHFzTS1yUGRWbHdmM0RKYU1XZ3haV1ZqVXpLdXNfR2c0?oc=5",
+        "publisher": "CHEK News",
+        "shared_indicators": [
+          "6 shared descriptive headline terms",
+          "Same source-mentioned place",
+          "Published within ten days"
+        ],
+        "research_priority": 8,
+        "relationship_status": "unverified_research_lead"
+      }
+    ],
+    "report-c422a126154f2c58ae8a": [
+      {
+        "group_id": "report-8191a61d23ee548aee3c",
+        "title": "Alleged fake nurse who operated on Vancouver Island arrested in U.S. - CBC",
+        "published_at": "2025-05-07T07:00:00+00:00",
+        "source_url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQaGZRaTlJdDhoeGdhamVvem5iRE9FalhpVVJrV0RUeWtoSzZhSTNtemZuNmhaVE5hOXl2eEJqZUdJZlJCUXAwXzM3LVNkNV9UaHNvR3pCb0o1WTdoRTZYc0JOMEVmV21hbnNkNUpZYXZNVEJCWUdxV29QV29iTmJ0MTNFcG5XX1RvN2RVd3NROUhPQlhHY3lqN1lxQlhJUDY0aXpmWG53?oc=5",
+        "publisher": "CBC",
+        "shared_indicators": [
+          "6 shared descriptive headline terms",
+          "Same source-mentioned place",
+          "Published within ten days"
+        ],
+        "research_priority": 8,
+        "relationship_status": "unverified_research_lead"
+      }
+    ],
     "report-39055d44e862e2ede21d": [
       {
         "group_id": "report-6c8b842a1521d817f344",
@@ -3247,9 +3263,9 @@
         "relationship_status": "unverified_research_lead"
       },
       {
-        "group_id": "report-b58a8d4914d1a3d157c9",
-        "title": "'Crypto King' Aiden Pleterski tells jury he's innocent in closing statement at fraud trial - CBC",
-        "published_at": "2026-10-28T19:10:07+00:00",
+        "group_id": "report-2f4b6843bc95cde3a28f",
+        "title": "'Crypto King' Aiden Pleterski addresses jury at his fraud trial for first time, says he's innocent - CBC",
+        "published_at": "2026-10-28T07:00:00+00:00",
         "source_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPeFNSR3hPeWhrenozamdfS2l4ZHRiTjV2dVRFNlhNUU9qV0U2V1JYYlNDMTI3MkFtaXpYTHRIYTRsUllmQkF2SkM3UHpEZmhBOFN5WVp0dDhoMWpIVDl6eE9ZUUhYMlFJNm9HOU5kMF9QOHhYRTFmMXFlVXRRMVAtdnpsX1k0UXN5OUNuUG5aaTBXbnFBRnRnZzZqa2JFZkpWRWZZMHo2anlrQQ?oc=5",
         "publisher": "CBC",
         "shared_indicators": [
@@ -3261,9 +3277,9 @@
         "relationship_status": "unverified_research_lead"
       },
       {
-        "group_id": "report-2f4b6843bc95cde3a28f",
-        "title": "'Crypto King' Aiden Pleterski addresses jury at his fraud trial for first time, says he's innocent - CBC",
-        "published_at": "2026-10-28T20:04:40+00:00",
+        "group_id": "report-b58a8d4914d1a3d157c9",
+        "title": "'Crypto King' Aiden Pleterski tells jury he's innocent in closing statement at fraud trial - CBC",
+        "published_at": "2026-10-28T19:10:07+00:00",
         "source_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPeFNSR3hPeWhrenozamdfS2l4ZHRiTjV2dVRFNlhNUU9qV0U2V1JYYlNDMTI3MkFtaXpYTHRIYTRsUllmQkF2SkM3UHpEZmhBOFN5WVp0dDhoMWpIVDl6eE9ZUUhYMlFJNm9HOU5kMF9QOHhYRTFmMXFlVXRRMVAtdnpsX1k0UXN5OUNuUG5aaTBXbnFBRnRnZzZqa2JFZkpWRWZZMHo2anlrQQ?oc=5",
         "publisher": "CBC",
         "shared_indicators": [
@@ -3305,6 +3321,20 @@
         "relationship_status": "unverified_research_lead"
       },
       {
+        "group_id": "report-2f4b6843bc95cde3a28f",
+        "title": "'Crypto King' Aiden Pleterski addresses jury at his fraud trial for first time, says he's innocent - CBC",
+        "published_at": "2026-10-28T07:00:00+00:00",
+        "source_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPeFNSR3hPeWhrenozamdfS2l4ZHRiTjV2dVRFNlhNUU9qV0U2V1JYYlNDMTI3MkFtaXpYTHRIYTRsUllmQkF2SkM3UHpEZmhBOFN5WVp0dDhoMWpIVDl6eE9ZUUhYMlFJNm9HOU5kMF9QOHhYRTFmMXFlVXRRMVAtdnpsX1k0UXN5OUNuUG5aaTBXbnFBRnRnZzZqa2JFZkpWRWZZMHo2anlrQQ?oc=5",
+        "publisher": "CBC",
+        "shared_indicators": [
+          "6 shared descriptive headline terms",
+          "Overlapping scam method: Investment & crypto scams",
+          "Published within ten days"
+        ],
+        "research_priority": 8,
+        "relationship_status": "unverified_research_lead"
+      },
+      {
         "group_id": "report-b58a8d4914d1a3d157c9",
         "title": "'Crypto King' Aiden Pleterski tells jury he's innocent in closing statement at fraud trial - CBC",
         "published_at": "2026-10-28T19:10:07+00:00",
@@ -3319,10 +3349,26 @@
         "relationship_status": "unverified_research_lead"
       },
       {
-        "group_id": "report-2f4b6843bc95cde3a28f",
-        "title": "'Crypto King' Aiden Pleterski addresses jury at his fraud trial for first time, says he's innocent - CBC",
-        "published_at": "2026-10-28T20:04:40+00:00",
-        "source_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPeFNSR3hPeWhrenozamdfS2l4ZHRiTjV2dVRFNlhNUU9qV0U2V1JYYlNDMTI3MkFtaXpYTHRIYTRsUllmQkF2SkM3UHpEZmhBOFN5WVp0dDhoMWpIVDl6eE9ZUUhYMlFJNm9HOU5kMF9QOHhYRTFmMXFlVXRRMVAtdnpsX1k0UXN5OUNuUG5aaTBXbnFBRnRnZzZqa2JFZkpWRWZZMHo2anlrQQ?oc=5",
+        "group_id": "report-d1cb6f7b67ca5a3c6edf",
+        "title": "’Crypto King’ Aiden Pleterski found guilty of fraud at his jury trial in Toronto - Radio-Canada",
+        "published_at": "2026-10-29T16:03:12+00:00",
+        "source_url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPSlFZTVUxd01lSlB1MnRUSEVsMXJmVGxOUnRyXzlOd0IyejdtLXVNTk03U3NjaWRIeHpTWWo0RGJyWUJHQzAwamEtdHVtZDRaa0JUdi1ibWlvWWJxcjFmT0dvOFFVcTVqc05aQzIxSTNhUlA3NlRiSFV2a3BSaTZkMWFGak9jTmN3LVBuM3pCTHZGWWhiejI4ZXdjTFloTmxBcVRudlFoWDQ1S3N6SXZJRTVKTzFMMjd6RHRHNEl3QlZvMGQ1?oc=5",
+        "publisher": "Radio-Canada",
+        "shared_indicators": [
+          "6 shared descriptive headline terms",
+          "Overlapping scam method: Investment & crypto scams",
+          "Published within ten days"
+        ],
+        "research_priority": 8,
+        "relationship_status": "unverified_research_lead"
+      }
+    ],
+    "report-b58a8d4914d1a3d157c9": [
+      {
+        "group_id": "report-6c8b842a1521d817f344",
+        "title": "‘Crypto King’ Aiden Pleterski’s fraud trial adjourned until next week due to medical issue - CBC",
+        "published_at": "2026-10-20T07:00:00+00:00",
+        "source_url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOTjI2NFVNMDQ5ZG1KN2lzOE54S1NFX2ZZb0d6aDJBcmtsaE5ZT2RhZ0UyN3BOME1remg0WmlwMTN0MXhwcDFJbk12bUR0TU43X01GMDVmNkRZRnJQZVRrejc3SHh3Q3IxS1U0VTZ6SXRjVzZpNzZwYnZaaFRqUVNKTl9wRTBOZVZsYV9EOUNuSUdxVk1nc0c1V3lyTXRUdnBkM1c5NTlBOFNMSnFZWktBeVZ4RGNxWkJXVVdpY2ZXRHFqVTVZTEU1dTlkY1F1ZUhOcGc?oc=5",
         "publisher": "CBC",
         "shared_indicators": [
           "6 shared descriptive headline terms",
@@ -3333,11 +3379,39 @@
         "relationship_status": "unverified_research_lead"
       },
       {
-        "group_id": "report-d1cb6f7b67ca5a3c6edf",
-        "title": "'Crypto King' Aiden Pleterski found guilty of fraud at his jury trial in Toronto - CBC",
-        "published_at": "2026-10-29T16:03:12+00:00",
-        "source_url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE45WjBKQWNUT2JtS3RjckJDRnIwaWxPWUlUbFZYWXFjdGhvSnpSUmI5QWd6REpLTV9IbWRmbWJYU1FlT3p2STA4MzVaeGQzaFI5aGI5RDFab0MwaU83M0QxNUZwNDhMY21objYzc00xVi1NMFRBTGI4?oc=5",
+        "group_id": "report-2f4b6843bc95cde3a28f",
+        "title": "'Crypto King' Aiden Pleterski addresses jury at his fraud trial for first time, says he's innocent - CBC",
+        "published_at": "2026-10-28T07:00:00+00:00",
+        "source_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPeFNSR3hPeWhrenozamdfS2l4ZHRiTjV2dVRFNlhNUU9qV0U2V1JYYlNDMTI3MkFtaXpYTHRIYTRsUllmQkF2SkM3UHpEZmhBOFN5WVp0dDhoMWpIVDl6eE9ZUUhYMlFJNm9HOU5kMF9QOHhYRTFmMXFlVXRRMVAtdnpsX1k0UXN5OUNuUG5aaTBXbnFBRnRnZzZqa2JFZkpWRWZZMHo2anlrQQ?oc=5",
         "publisher": "CBC",
+        "shared_indicators": [
+          "8 shared descriptive headline terms",
+          "Overlapping scam method: Investment & crypto scams",
+          "Published within ten days"
+        ],
+        "research_priority": 8,
+        "relationship_status": "unverified_research_lead"
+      },
+      {
+        "group_id": "report-4ed6c222cb0453ea4d67",
+        "title": "Canada 'Crypto King' Aiden Pleterski's Ponzi-Fraud Trial Goes to Jury - bloomingbit",
+        "published_at": "2026-10-28T22:47:22+00:00",
+        "source_url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9CZ3EzN1c0aVhPdUltOEpicm9GQXBUUF9DeW5zaTdHZHpxR2xoNFRweW5MdmZRcWFuWkpLX01hZHJKMHJ0REREY2xYZ1ZKNV80QmRoYg?oc=5",
+        "publisher": "bloomingbit",
+        "shared_indicators": [
+          "6 shared descriptive headline terms",
+          "Overlapping scam method: Investment & crypto scams",
+          "Published within ten days"
+        ],
+        "research_priority": 8,
+        "relationship_status": "unverified_research_lead"
+      },
+      {
+        "group_id": "report-d1cb6f7b67ca5a3c6edf",
+        "title": "’Crypto King’ Aiden Pleterski found guilty of fraud at his jury trial in Toronto - Radio-Canada",
+        "published_at": "2026-10-29T16:03:12+00:00",
+        "source_url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPSlFZTVUxd01lSlB1MnRUSEVsMXJmVGxOUnRyXzlOd0IyejdtLXVNTk03U3NjaWRIeHpTWWo0RGJyWUJHQzAwamEtdHVtZDRaa0JUdi1ibWlvWWJxcjFmT0dvOFFVcTVqc05aQzIxSTNhUlA3NlRiSFV2a3BSaTZkMWFGak9jTmN3LVBuM3pCTHZGWWhiejI4ZXdjTFloTmxBcVRudlFoWDQ1S3N6SXZJRTVKTzFMMjd6RHRHNEl3QlZvMGQ1?oc=5",
+        "publisher": "Radio-Canada",
         "shared_indicators": [
           "6 shared descriptive headline terms",
           "Overlapping scam method: Investment & crypto scams",
@@ -3392,68 +3466,10 @@
       },
       {
         "group_id": "report-d1cb6f7b67ca5a3c6edf",
-        "title": "'Crypto King' Aiden Pleterski found guilty of fraud at his jury trial in Toronto - CBC",
+        "title": "’Crypto King’ Aiden Pleterski found guilty of fraud at his jury trial in Toronto - Radio-Canada",
         "published_at": "2026-10-29T16:03:12+00:00",
-        "source_url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE45WjBKQWNUT2JtS3RjckJDRnIwaWxPWUlUbFZYWXFjdGhvSnpSUmI5QWd6REpLTV9IbWRmbWJYU1FlT3p2STA4MzVaeGQzaFI5aGI5RDFab0MwaU83M0QxNUZwNDhMY21objYzc00xVi1NMFRBTGI4?oc=5",
-        "publisher": "CBC",
-        "shared_indicators": [
-          "8 shared descriptive headline terms",
-          "Overlapping scam method: Investment & crypto scams",
-          "Published within ten days"
-        ],
-        "research_priority": 8,
-        "relationship_status": "unverified_research_lead"
-      }
-    ],
-    "report-b58a8d4914d1a3d157c9": [
-      {
-        "group_id": "report-6c8b842a1521d817f344",
-        "title": "‘Crypto King’ Aiden Pleterski’s fraud trial adjourned until next week due to medical issue - CBC",
-        "published_at": "2026-10-20T07:00:00+00:00",
-        "source_url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOTjI2NFVNMDQ5ZG1KN2lzOE54S1NFX2ZZb0d6aDJBcmtsaE5ZT2RhZ0UyN3BOME1remg0WmlwMTN0MXhwcDFJbk12bUR0TU43X01GMDVmNkRZRnJQZVRrejc3SHh3Q3IxS1U0VTZ6SXRjVzZpNzZwYnZaaFRqUVNKTl9wRTBOZVZsYV9EOUNuSUdxVk1nc0c1V3lyTXRUdnBkM1c5NTlBOFNMSnFZWktBeVZ4RGNxWkJXVVdpY2ZXRHFqVTVZTEU1dTlkY1F1ZUhOcGc?oc=5",
-        "publisher": "CBC",
-        "shared_indicators": [
-          "6 shared descriptive headline terms",
-          "Overlapping scam method: Investment & crypto scams",
-          "Published within ten days"
-        ],
-        "research_priority": 8,
-        "relationship_status": "unverified_research_lead"
-      },
-      {
-        "group_id": "report-2f4b6843bc95cde3a28f",
-        "title": "'Crypto King' Aiden Pleterski addresses jury at his fraud trial for first time, says he's innocent - CBC",
-        "published_at": "2026-10-28T20:04:40+00:00",
-        "source_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPeFNSR3hPeWhrenozamdfS2l4ZHRiTjV2dVRFNlhNUU9qV0U2V1JYYlNDMTI3MkFtaXpYTHRIYTRsUllmQkF2SkM3UHpEZmhBOFN5WVp0dDhoMWpIVDl6eE9ZUUhYMlFJNm9HOU5kMF9QOHhYRTFmMXFlVXRRMVAtdnpsX1k0UXN5OUNuUG5aaTBXbnFBRnRnZzZqa2JFZkpWRWZZMHo2anlrQQ?oc=5",
-        "publisher": "CBC",
-        "shared_indicators": [
-          "8 shared descriptive headline terms",
-          "Overlapping scam method: Investment & crypto scams",
-          "Published within ten days"
-        ],
-        "research_priority": 8,
-        "relationship_status": "unverified_research_lead"
-      },
-      {
-        "group_id": "report-4ed6c222cb0453ea4d67",
-        "title": "Canada 'Crypto King' Aiden Pleterski's Ponzi-Fraud Trial Goes to Jury - bloomingbit",
-        "published_at": "2026-10-28T22:47:22+00:00",
-        "source_url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9CZ3EzN1c0aVhPdUltOEpicm9GQXBUUF9DeW5zaTdHZHpxR2xoNFRweW5MdmZRcWFuWkpLX01hZHJKMHJ0REREY2xYZ1ZKNV80QmRoYg?oc=5",
-        "publisher": "bloomingbit",
-        "shared_indicators": [
-          "6 shared descriptive headline terms",
-          "Overlapping scam method: Investment & crypto scams",
-          "Published within ten days"
-        ],
-        "research_priority": 8,
-        "relationship_status": "unverified_research_lead"
-      },
-      {
-        "group_id": "report-d1cb6f7b67ca5a3c6edf",
-        "title": "'Crypto King' Aiden Pleterski found guilty of fraud at his jury trial in Toronto - CBC",
-        "published_at": "2026-10-29T16:03:12+00:00",
-        "source_url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE45WjBKQWNUT2JtS3RjckJDRnIwaWxPWUlUbFZYWXFjdGhvSnpSUmI5QWd6REpLTV9IbWRmbWJYU1FlT3p2STA4MzVaeGQzaFI5aGI5RDFab0MwaU83M0QxNUZwNDhMY21objYzc00xVi1NMFRBTGI4?oc=5",
-        "publisher": "CBC",
+        "source_url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPSlFZTVUxd01lSlB1MnRUSEVsMXJmVGxOUnRyXzlOd0IyejdtLXVNTk03U3NjaWRIeHpTWWo0RGJyWUJHQzAwamEtdHVtZDRaa0JUdi1ibWlvWWJxcjFmT0dvOFFVcTVqc05aQzIxSTNhUlA3NlRiSFV2a3BSaTZkMWFGak9jTmN3LVBuM3pCTHZGWWhiejI4ZXdjTFloTmxBcVRudlFoWDQ1S3N6SXZJRTVKTzFMMjd6RHRHNEl3QlZvMGQ1?oc=5",
+        "publisher": "Radio-Canada",
         "shared_indicators": [
           "7 shared descriptive headline terms",
           "Overlapping scam method: Investment & crypto scams",
@@ -3465,9 +3481,9 @@
     ],
     "report-6c8b842a1521d817f344": [
       {
-        "group_id": "report-b58a8d4914d1a3d157c9",
-        "title": "'Crypto King' Aiden Pleterski tells jury he's innocent in closing statement at fraud trial - CBC",
-        "published_at": "2026-10-28T19:10:07+00:00",
+        "group_id": "report-2f4b6843bc95cde3a28f",
+        "title": "'Crypto King' Aiden Pleterski addresses jury at his fraud trial for first time, says he's innocent - CBC",
+        "published_at": "2026-10-28T07:00:00+00:00",
         "source_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPeFNSR3hPeWhrenozamdfS2l4ZHRiTjV2dVRFNlhNUU9qV0U2V1JYYlNDMTI3MkFtaXpYTHRIYTRsUllmQkF2SkM3UHpEZmhBOFN5WVp0dDhoMWpIVDl6eE9ZUUhYMlFJNm9HOU5kMF9QOHhYRTFmMXFlVXRRMVAtdnpsX1k0UXN5OUNuUG5aaTBXbnFBRnRnZzZqa2JFZkpWRWZZMHo2anlrQQ?oc=5",
         "publisher": "CBC",
         "shared_indicators": [
@@ -3479,9 +3495,9 @@
         "relationship_status": "unverified_research_lead"
       },
       {
-        "group_id": "report-2f4b6843bc95cde3a28f",
-        "title": "'Crypto King' Aiden Pleterski addresses jury at his fraud trial for first time, says he's innocent - CBC",
-        "published_at": "2026-10-28T20:04:40+00:00",
+        "group_id": "report-b58a8d4914d1a3d157c9",
+        "title": "'Crypto King' Aiden Pleterski tells jury he's innocent in closing statement at fraud trial - CBC",
+        "published_at": "2026-10-28T19:10:07+00:00",
         "source_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPeFNSR3hPeWhrenozamdfS2l4ZHRiTjV2dVRFNlhNUU9qV0U2V1JYYlNDMTI3MkFtaXpYTHRIYTRsUllmQkF2SkM3UHpEZmhBOFN5WVp0dDhoMWpIVDl6eE9ZUUhYMlFJNm9HOU5kMF9QOHhYRTFmMXFlVXRRMVAtdnpsX1k0UXN5OUNuUG5aaTBXbnFBRnRnZzZqa2JFZkpWRWZZMHo2anlrQQ?oc=5",
         "publisher": "CBC",
         "shared_indicators": [
@@ -3508,12 +3524,12 @@
       },
       {
         "group_id": "report-d1cb6f7b67ca5a3c6edf",
-        "title": "'Crypto King' Aiden Pleterski found guilty of fraud at his jury trial in Toronto - CBC",
+        "title": "’Crypto King’ Aiden Pleterski found guilty of fraud at his jury trial in Toronto - Radio-Canada",
         "published_at": "2026-10-29T16:03:12+00:00",
-        "source_url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE45WjBKQWNUT2JtS3RjckJDRnIwaWxPWUlUbFZYWXFjdGhvSnpSUmI5QWd6REpLTV9IbWRmbWJYU1FlT3p2STA4MzVaeGQzaFI5aGI5RDFab0MwaU83M0QxNUZwNDhMY21objYzc00xVi1NMFRBTGI4?oc=5",
-        "publisher": "CBC",
+        "source_url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPSlFZTVUxd01lSlB1MnRUSEVsMXJmVGxOUnRyXzlOd0IyejdtLXVNTk03U3NjaWRIeHpTWWo0RGJyWUJHQzAwamEtdHVtZDRaa0JUdi1ibWlvWWJxcjFmT0dvOFFVcTVqc05aQzIxSTNhUlA3NlRiSFV2a3BSaTZkMWFGak9jTmN3LVBuM3pCTHZGWWhiejI4ZXdjTFloTmxBcVRudlFoWDQ1S3N6SXZJRTVKTzFMMjd6RHRHNEl3QlZvMGQ1?oc=5",
+        "publisher": "Radio-Canada",
         "shared_indicators": [
-          "6 shared descriptive headline terms",
+          "5 shared descriptive headline terms",
           "Overlapping scam method: Investment & crypto scams",
           "Published within ten days"
         ],
@@ -3539,10 +3555,10 @@
       },
       {
         "group_id": "report-d1cb6f7b67ca5a3c6edf",
-        "title": "'Crypto King' Aiden Pleterski found guilty of fraud at his jury trial in Toronto - CBC",
+        "title": "’Crypto King’ Aiden Pleterski found guilty of fraud at his jury trial in Toronto - Radio-Canada",
         "published_at": "2026-10-29T16:03:12+00:00",
-        "source_url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE45WjBKQWNUT2JtS3RjckJDRnIwaWxPWUlUbFZYWXFjdGhvSnpSUmI5QWd6REpLTV9IbWRmbWJYU1FlT3p2STA4MzVaeGQzaFI5aGI5RDFab0MwaU83M0QxNUZwNDhMY21objYzc00xVi1NMFRBTGI4?oc=5",
-        "publisher": "CBC",
+        "source_url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPSlFZTVUxd01lSlB1MnRUSEVsMXJmVGxOUnRyXzlOd0IyejdtLXVNTk03U3NjaWRIeHpTWWo0RGJyWUJHQzAwamEtdHVtZDRaa0JUdi1ibWlvWWJxcjFmT0dvOFFVcTVqc05aQzIxSTNhUlA3NlRiSFV2a3BSaTZkMWFGak9jTmN3LVBuM3pCTHZGWWhiejI4ZXdjTFloTmxBcVRudlFoWDQ1S3N6SXZJRTVKTzFMMjd6RHRHNEl3QlZvMGQ1?oc=5",
+        "publisher": "Radio-Canada",
         "shared_indicators": [
           "5 shared descriptive headline terms",
           "Overlapping scam method: Investment & crypto scams",
@@ -3833,54 +3849,6 @@
         "relationship_status": "unverified_research_lead"
       }
     ],
-    "report-12c116b0c9dbb8b645a5": [
-      {
-        "group_id": "report-08d6bc7319fa42606313",
-        "title": "Toronto couple charged after defrauding hundreds of Canadians out of millions of dollars: police - CBC",
-        "published_at": "2025-02-20T08:00:00+00:00",
-        "source_url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOUmV3RVFMa083eUlrZWNLemRoeFVTeFF1NGplem8weUJHY2htWkZlY0R4X0Q1Q3RfcmNVdzBNNXhfMFZ3ekliaHR5OTBYSTVHQ2tHMlI4d0pNU1JlaTFxd011WDlFblg2VzNod3N6MW8yNHAyTGN2eFBUbk5rXzJDb29MclpLU1NyVmc?oc=5",
-        "publisher": "CBC",
-        "shared_indicators": [
-          "6 shared descriptive headline terms",
-          "Same source-mentioned place",
-          "Published within ten days"
-        ],
-        "research_priority": 8,
-        "relationship_status": "unverified_research_lead"
-      }
-    ],
-    "report-08d6bc7319fa42606313": [
-      {
-        "group_id": "report-12c116b0c9dbb8b645a5",
-        "title": "RCMP charge 2 Toronto residents with defrauding almost 600 Canadians out of millions of dollars - CityNews Toronto",
-        "published_at": "2025-02-20T08:00:00+00:00",
-        "source_url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQUUF3Ym04YW9mQTVpdHN6OFF5X3l0T2lnYXRtNjhna1BCaW45cVBCa3NqREwwNkJCb043N3dHNkhENXR1TzhqOFNRamFMRVBpU28zdE1hMzh5Y0hfcmtNUlQ5enJfNzJ5UTFPcE1KeDhneUk5X05VNjBpMkdDdURrdXprSWlUNzZZNVRORzN1Q2JBaXA2RjFlYjA2NU9Jc3N3ZFFvSlFJTElKOTk5Vmlhd2pqZUdDSXRIX0p6b3lvczdNOVlXbllMMG9nbUtoUldr?oc=5",
-        "publisher": "CityNews Toronto",
-        "shared_indicators": [
-          "6 shared descriptive headline terms",
-          "Same source-mentioned place",
-          "Published within ten days"
-        ],
-        "research_priority": 8,
-        "relationship_status": "unverified_research_lead"
-      }
-    ],
-    "report-a461429fd23149bce13b": [
-      {
-        "group_id": "report-42817df3555ca3e5dbf3",
-        "title": "Russian-Canadian man living in Simcoe County fights extradition after arrest for global ransomware attacks - CTV News",
-        "published_at": "2022-12-01T08:00:00+00:00",
-        "source_url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPVmtCQzRmQVEyMVNkRzA2cWtBNHVIekE0enl6SWs3TzhwTTI5ZmwxTWN4WGM4UkgyUWgzZWNVRS1ZZ196c0RQYWU1ZUZJdGlYT1BrVnYzLWMxNUlkdFNaTjdpWlZiX0lUV09LOFZsVm15SUdmSmRnUU1pMlVuaGdlSTJGNy1jUU8wN3p1LWZfT2tBUkJuUGloNk12aWt6QlNVMHFabERWUzlGUU9yR252X0tTWWwwYTVvRU4zVFp5SkVQWEFnWTlZZlFSbXVuSGxnaV9kU0wxRnQ5Rl9sTGc?oc=5",
-        "publisher": "CTV News",
-        "shared_indicators": [
-          "6 shared descriptive headline terms",
-          "Overlapping scam method: Digital fraud & cybercrime",
-          "Published within 45 days"
-        ],
-        "research_priority": 7,
-        "relationship_status": "unverified_research_lead"
-      }
-    ],
     "report-5853093e3de4700a6862": [
       {
         "group_id": "report-91d10bbd18899a742fd8",
@@ -3942,6 +3910,38 @@
           "Published within ten days"
         ],
         "research_priority": 8,
+        "relationship_status": "unverified_research_lead"
+      }
+    ],
+    "report-08d6bc7319fa42606313": [
+      {
+        "group_id": "report-12c116b0c9dbb8b645a5",
+        "title": "RCMP charge 2 Toronto residents with defrauding almost 600 Canadians out of millions of dollars - CityNews Toronto",
+        "published_at": "2025-02-20T08:00:00+00:00",
+        "source_url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQUUF3Ym04YW9mQTVpdHN6OFF5X3l0T2lnYXRtNjhna1BCaW45cVBCa3NqREwwNkJCb043N3dHNkhENXR1TzhqOFNRamFMRVBpU28zdE1hMzh5Y0hfcmtNUlQ5enJfNzJ5UTFPcE1KeDhneUk5X05VNjBpMkdDdURrdXprSWlUNzZZNVRORzN1Q2JBaXA2RjFlYjA2NU9Jc3N3ZFFvSlFJTElKOTk5Vmlhd2pqZUdDSXRIX0p6b3lvczdNOVlXbllMMG9nbUtoUldr?oc=5",
+        "publisher": "CityNews Toronto",
+        "shared_indicators": [
+          "6 shared descriptive headline terms",
+          "Same source-mentioned place",
+          "Published within ten days"
+        ],
+        "research_priority": 8,
+        "relationship_status": "unverified_research_lead"
+      }
+    ],
+    "report-a461429fd23149bce13b": [
+      {
+        "group_id": "report-42817df3555ca3e5dbf3",
+        "title": "Russian-Canadian man living in Simcoe County fights extradition after arrest for global ransomware attacks - CTV News",
+        "published_at": "2022-12-01T08:00:00+00:00",
+        "source_url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPVmtCQzRmQVEyMVNkRzA2cWtBNHVIekE0enl6SWs3TzhwTTI5ZmwxTWN4WGM4UkgyUWgzZWNVRS1ZZ196c0RQYWU1ZUZJdGlYT1BrVnYzLWMxNUlkdFNaTjdpWlZiX0lUV09LOFZsVm15SUdmSmRnUU1pMlVuaGdlSTJGNy1jUU8wN3p1LWZfT2tBUkJuUGloNk12aWt6QlNVMHFabERWUzlGUU9yR252X0tTWWwwYTVvRU4zVFp5SkVQWEFnWTlZZlFSbXVuSGxnaV9kU0wxRnQ5Rl9sTGc?oc=5",
+        "publisher": "CTV News",
+        "shared_indicators": [
+          "6 shared descriptive headline terms",
+          "Overlapping scam method: Digital fraud & cybercrime",
+          "Published within 45 days"
+        ],
+        "research_priority": 7,
         "relationship_status": "unverified_research_lead"
       }
     ],
@@ -4035,22 +4035,6 @@
         "relationship_status": "unverified_research_lead"
       }
     ],
-    "report-29f3965d61a1342cf04a": [
-      {
-        "group_id": "report-9a2895eb8cc197ba51b3",
-        "title": "Ottawa contractor pleads guilty to uttering threats, fraud - CTV News",
-        "published_at": "2022-02-02T08:00:00+00:00",
-        "source_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQQVpoNHcySWJzNUlfMHlndXJ4bzJjUWUxMk55dFlxSjBmaHpvNXNlNi1NOHA5RzB3RmNVb1RLcGR4SVljRUlJaHdDdFRGVFhzNXVYaVUwczA3YmJNb3l1TmtnakFXcUJVWmN2cFVGZ004Wnh1TVZmYlBnN085SURWU2N2THctUG1qaF9VVy1XUDhxSlBUdDlXNENPMXM?oc=5",
-        "publisher": "CTV News",
-        "shared_indicators": [
-          "5 shared descriptive headline terms",
-          "Same source-mentioned place",
-          "Published within 45 days"
-        ],
-        "research_priority": 7,
-        "relationship_status": "unverified_research_lead"
-      }
-    ],
     "report-9b06da84d8731fd36f33": [
       {
         "group_id": "report-a2fc5df07bd9a7dc58e0",
@@ -4096,6 +4080,22 @@
           "Published within ten days"
         ],
         "research_priority": 8,
+        "relationship_status": "unverified_research_lead"
+      }
+    ],
+    "report-29f3965d61a1342cf04a": [
+      {
+        "group_id": "report-9a2895eb8cc197ba51b3",
+        "title": "Ottawa contractor pleads guilty to uttering threats, fraud - CTV News",
+        "published_at": "2022-02-02T08:00:00+00:00",
+        "source_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQQVpoNHcySWJzNUlfMHlndXJ4bzJjUWUxMk55dFlxSjBmaHpvNXNlNi1NOHA5RzB3RmNVb1RLcGR4SVljRUlJaHdDdFRGVFhzNXVYaVUwczA3YmJNb3l1TmtnakFXcUJVWmN2cFVGZ004Wnh1TVZmYlBnN085SURWU2N2THctUG1qaF9VVy1XUDhxSlBUdDlXNENPMXM?oc=5",
+        "publisher": "CTV News",
+        "shared_indicators": [
+          "5 shared descriptive headline terms",
+          "Same source-mentioned place",
+          "Published within 45 days"
+        ],
+        "research_priority": 7,
         "relationship_status": "unverified_research_lead"
       }
     ],
@@ -4399,22 +4399,6 @@
         "relationship_status": "unverified_research_lead"
       }
     ],
-    "report-42817df3555ca3e5dbf3": [
-      {
-        "group_id": "report-a461429fd23149bce13b",
-        "title": "Russian-Canadian man arrested, awaiting U.S. extradition for alleged global ransomware crimes - CTV News",
-        "published_at": "2022-11-10T08:00:00+00:00",
-        "source_url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQWUdfYTRUZ0JMbmUtaUZUNVE3akQ3UFJxN2U4aTBBNXJqZGhoOXd4RlNtbFZIRVo1UjFielM1dUtFSTAzdnRhNU9fUFVjc0xDYm5EWE05azA4Z2FXd0pHejJVaXlnalZNWFE1dDRkcGtneTdmSktlVF9TV1JPOTEzZ1VJV2s3LTVsQ25ON0NSSW1fY3BjbFdZd2pGVElhQVp1SjQzeXZQN1pmVUFpQVlraXpGNlF4QVZrejVmSWlrTDFWdThPVks3Rg?oc=5",
-        "publisher": "CTV News",
-        "shared_indicators": [
-          "6 shared descriptive headline terms",
-          "Overlapping scam method: Digital fraud & cybercrime",
-          "Published within 45 days"
-        ],
-        "research_priority": 7,
-        "relationship_status": "unverified_research_lead"
-      }
-    ],
     "report-7b438c0073ecf4a0c186": [
       {
         "group_id": "report-e7207bd817bac03fdddb",
@@ -4428,6 +4412,22 @@
           "Published within ten days"
         ],
         "research_priority": 8,
+        "relationship_status": "unverified_research_lead"
+      }
+    ],
+    "report-42817df3555ca3e5dbf3": [
+      {
+        "group_id": "report-a461429fd23149bce13b",
+        "title": "Russian-Canadian man arrested, awaiting U.S. extradition for alleged global ransomware crimes - CTV News",
+        "published_at": "2022-11-10T08:00:00+00:00",
+        "source_url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQWUdfYTRUZ0JMbmUtaUZUNVE3akQ3UFJxN2U4aTBBNXJqZGhoOXd4RlNtbFZIRVo1UjFielM1dUtFSTAzdnRhNU9fUFVjc0xDYm5EWE05azA4Z2FXd0pHejJVaXlnalZNWFE1dDRkcGtneTdmSktlVF9TV1JPOTEzZ1VJV2s3LTVsQ25ON0NSSW1fY3BjbFdZd2pGVElhQVp1SjQzeXZQN1pmVUFpQVlraXpGNlF4QVZrejVmSWlrTDFWdThPVks3Rg?oc=5",
+        "publisher": "CTV News",
+        "shared_indicators": [
+          "6 shared descriptive headline terms",
+          "Overlapping scam method: Digital fraud & cybercrime",
+          "Published within 45 days"
+        ],
+        "research_priority": 7,
         "relationship_status": "unverified_research_lead"
       }
     ],
