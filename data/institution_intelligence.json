@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-06T23:27:45+00:00",
+  "generated_at": "2026-11-07T03:07:44+00:00",
   "methodology": "Institution names are canonically grouped using explicit aliases. Headline entries are conservative reporting groups, not distinct or independently verified fraud incidents; multiple publisher headlines are retained under each group. An institution mention is not proof of wrongdoing.",
   "source_counts": {
     "enforcement": 98,
@@ -13,7 +13,7 @@
     "obsi_firm_records": 91,
     "ciro_confirmed_cases": 5,
     "amf_quebec_entity_rows": 945,
-    "us_fdic_active_entities": 4213,
+    "us_fdic_active_entities": 4212,
     "us_fdic_failure_events": 4117,
     "us_ncua_credit_union_entities": 4214,
     "us_occ_enforcement_actions": 2311,
@@ -137077,49 +137077,6 @@
           "city": "Pigeon Forge",
           "active": true,
           "fed_rssd": "479839",
-          "source_url": "https://banks.data.fdic.gov/bankfind-suite/",
-          "source_kind": "official_FDIC_active_institution_register"
-        },
-        "counts": {
-          "fintrac_public_notices": 0,
-          "fcac_index_notices": 0,
-          "bank_disclosure_years": 0,
-          "obsi_firm_years": 0,
-          "ciro_concluded_cases": 0,
-          "fdic_failures": 0,
-          "occ_institution_actions": 0,
-          "occ_individual_matters": 0
-        }
-      },
-      "evidence_count_shown": 0
-    },
-    {
-      "id": "us-fdic-20727",
-      "name": "Dallas Capital Bank, National Association (US · TX)",
-      "legal_name": "Dallas Capital Bank, National Association",
-      "jurisdiction": "US",
-      "country": "US",
-      "aliases": [
-        "Dallas Capital Bank, National Association",
-        "Dallas Capital Bank, National Association FDIC 20727"
-      ],
-      "counts": {
-        "enforcement": 0,
-        "incidents": 0,
-        "headlines": 0
-      },
-      "evidence": [],
-      "themes": [],
-      "annual_penalties_cad": {},
-      "recent_activity": null,
-      "official_data": {
-        "fdic": {
-          "cert": "20727",
-          "legal_name": "Dallas Capital Bank, National Association",
-          "state": "TX",
-          "city": "Dallas",
-          "active": true,
-          "fed_rssd": "384652",
           "source_url": "https://banks.data.fdic.gov/bankfind-suite/",
           "source_kind": "official_FDIC_active_institution_register"
         },
