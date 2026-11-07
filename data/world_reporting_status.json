@@ -1,17 +1,17 @@
 {
-  "last_completed_at": "2026-11-07T09:55:47+00:00",
+  "last_completed_at": "2026-11-07T16:14:09+00:00",
   "market_count": 250,
   "markets_attempted": 250,
   "markets_with_current_news": 186,
-  "current_leads": 4516,
-  "unattributed_local_candidates": 1538,
+  "current_leads": 4551,
+  "unattributed_local_candidates": 1541,
   "batch_size": 44,
   "priority_market_scans": 4,
   "gap_recovery_scans": 8,
   "gap_not_attempted": 0,
-  "gap_last_scan_empty": 66,
+  "gap_last_scan_empty": 63,
   "gap_last_scan_error": 17,
-  "next_cursor": 64,
+  "next_cursor": 96,
   "local_language_markets_configured": 137,
   "markets_with_local_queries_attempted": 142,
   "countries": {
@@ -479,11 +479,11 @@
     },
     "BV": {
       "state": "attempted_empty",
-      "attempted_at": "2026-11-07T09:55:47+00:00",
-      "queries_attempted": 3,
+      "attempted_at": "2026-11-07T16:14:09+00:00",
+      "queries_attempted": 4,
       "local_queries_attempted": 0,
-      "recovery_queries_attempted": 0,
-      "recovery_scan": false,
+      "recovery_queries_attempted": 1,
+      "recovery_scan": true,
       "accepted": 0,
       "unattributed_candidates": 0,
       "errors": [],
@@ -492,18 +492,18 @@
       "last_nonempty_at": null
     },
     "BW": {
-      "state": "attempted_empty",
-      "attempted_at": "2026-11-07T09:55:47+00:00",
-      "queries_attempted": 3,
+      "state": "reporting_found",
+      "attempted_at": "2026-11-07T16:14:09+00:00",
+      "queries_attempted": 5,
       "local_queries_attempted": 0,
-      "recovery_queries_attempted": 0,
-      "recovery_scan": false,
-      "accepted": 0,
+      "recovery_queries_attempted": 2,
+      "recovery_scan": true,
+      "accepted": 3,
       "unattributed_candidates": 0,
       "errors": [],
       "name": "Botswana",
       "language_strategy": "country_configured",
-      "last_nonempty_at": "2026-11-07T03:05:57+00:00"
+      "last_nonempty_at": "2026-11-07T16:14:09+00:00"
     },
     "BY": {
       "state": "reporting_found",
@@ -535,11 +535,11 @@
     },
     "CC": {
       "state": "attempted_empty",
-      "attempted_at": "2026-11-07T09:55:47+00:00",
-      "queries_attempted": 3,
+      "attempted_at": "2026-11-07T16:14:09+00:00",
+      "queries_attempted": 4,
       "local_queries_attempted": 0,
-      "recovery_queries_attempted": 0,
-      "recovery_scan": false,
+      "recovery_queries_attempted": 1,
+      "recovery_scan": true,
       "accepted": 0,
       "unattributed_candidates": 0,
       "errors": [],
@@ -577,11 +577,11 @@
     },
     "CF": {
       "state": "attempted_empty",
-      "attempted_at": "2026-11-07T09:55:47+00:00",
-      "queries_attempted": 3,
+      "attempted_at": "2026-11-07T16:14:09+00:00",
+      "queries_attempted": 4,
       "local_queries_attempted": 0,
-      "recovery_queries_attempted": 0,
-      "recovery_scan": false,
+      "recovery_queries_attempted": 1,
+      "recovery_scan": true,
       "accepted": 0,
       "unattributed_candidates": 0,
       "errors": [],
@@ -688,26 +688,26 @@
       "last_nonempty_at": "2026-11-07T09:55:47+00:00"
     },
     "CV": {
-      "state": "attempted_empty",
-      "attempted_at": "2026-11-07T09:55:47+00:00",
-      "queries_attempted": 4,
-      "local_queries_attempted": 1,
-      "recovery_queries_attempted": 0,
-      "recovery_scan": false,
-      "accepted": 0,
-      "unattributed_candidates": 3,
+      "state": "reporting_found",
+      "attempted_at": "2026-11-07T16:14:09+00:00",
+      "queries_attempted": 6,
+      "local_queries_attempted": 2,
+      "recovery_queries_attempted": 2,
+      "recovery_scan": true,
+      "accepted": 1,
+      "unattributed_candidates": 10,
       "errors": [],
       "name": "Cabo Verde",
       "language_strategy": "country_configured",
-      "last_nonempty_at": "2026-11-03T11:47:04+00:00"
+      "last_nonempty_at": "2026-11-07T16:14:09+00:00"
     },
     "CX": {
       "state": "attempted_empty",
-      "attempted_at": "2026-11-07T09:55:47+00:00",
-      "queries_attempted": 3,
+      "attempted_at": "2026-11-07T16:14:09+00:00",
+      "queries_attempted": 4,
       "local_queries_attempted": 0,
-      "recovery_queries_attempted": 0,
-      "recovery_scan": false,
+      "recovery_queries_attempted": 1,
+      "recovery_scan": true,
       "accepted": 0,
       "unattributed_candidates": 0,
       "errors": [],
@@ -758,18 +758,18 @@
       "last_nonempty_at": "2026-11-07T09:55:47+00:00"
     },
     "CZ": {
-      "state": "attempted_empty",
-      "attempted_at": "2026-11-07T09:55:47+00:00",
-      "queries_attempted": 4,
-      "local_queries_attempted": 1,
-      "recovery_queries_attempted": 0,
-      "recovery_scan": false,
-      "accepted": 0,
+      "state": "reporting_found",
+      "attempted_at": "2026-11-07T16:14:09+00:00",
+      "queries_attempted": 6,
+      "local_queries_attempted": 2,
+      "recovery_queries_attempted": 2,
+      "recovery_scan": true,
+      "accepted": 1,
       "unattributed_candidates": 0,
       "errors": [],
       "name": "Czechia",
       "language_strategy": "country_configured",
-      "last_nonempty_at": "2026-11-05T09:16:33+00:00"
+      "last_nonempty_at": "2026-11-07T16:14:09+00:00"
     },
     "CR": {
       "state": "reporting_found",
@@ -787,11 +787,11 @@
     },
     "DJ": {
       "state": "attempted_empty",
-      "attempted_at": "2026-11-07T09:55:47+00:00",
-      "queries_attempted": 4,
-      "local_queries_attempted": 1,
-      "recovery_queries_attempted": 0,
-      "recovery_scan": false,
+      "attempted_at": "2026-11-07T16:14:09+00:00",
+      "queries_attempted": 6,
+      "local_queries_attempted": 2,
+      "recovery_queries_attempted": 2,
+      "recovery_scan": true,
       "accepted": 0,
       "unattributed_candidates": 0,
       "errors": [],
@@ -913,7 +913,7 @@
     },
     "ER": {
       "state": "attempted_empty",
-      "attempted_at": "2026-11-05T17:35:47+00:00",
+      "attempted_at": "2026-11-07T16:14:09+00:00",
       "queries_attempted": 3,
       "local_queries_attempted": 0,
       "recovery_queries_attempted": 0,
@@ -927,7 +927,7 @@
     },
     "EH": {
       "state": "attempted_empty",
-      "attempted_at": "2026-11-05T17:35:47+00:00",
+      "attempted_at": "2026-11-07T16:14:09+00:00",
       "queries_attempted": 3,
       "local_queries_attempted": 0,
       "recovery_queries_attempted": 0,
@@ -941,21 +941,21 @@
     },
     "EG": {
       "state": "reporting_found",
-      "attempted_at": "2026-11-06T23:25:41+00:00",
+      "attempted_at": "2026-11-07T16:14:09+00:00",
       "queries_attempted": 5,
       "local_queries_attempted": 2,
       "recovery_queries_attempted": 0,
       "recovery_scan": false,
-      "accepted": 15,
-      "unattributed_candidates": 7,
+      "accepted": 12,
+      "unattributed_candidates": 10,
       "errors": [],
       "name": "Egypt",
       "language_strategy": "country_configured",
-      "last_nonempty_at": "2026-11-06T23:25:41+00:00"
+      "last_nonempty_at": "2026-11-07T16:14:09+00:00"
     },
     "FI": {
       "state": "reporting_found",
-      "attempted_at": "2026-11-05T17:35:47+00:00",
+      "attempted_at": "2026-11-07T16:14:09+00:00",
       "queries_attempted": 4,
       "local_queries_attempted": 1,
       "recovery_queries_attempted": 0,
@@ -965,11 +965,11 @@
       "errors": [],
       "name": "Finland",
       "language_strategy": "country_configured",
-      "last_nonempty_at": "2026-11-05T17:35:47+00:00"
+      "last_nonempty_at": "2026-11-07T16:14:09+00:00"
     },
     "ET": {
       "state": "reporting_found",
-      "attempted_at": "2026-11-06T23:25:41+00:00",
+      "attempted_at": "2026-11-07T16:14:09+00:00",
       "queries_attempted": 5,
       "local_queries_attempted": 2,
       "recovery_queries_attempted": 0,
@@ -979,11 +979,11 @@
       "errors": [],
       "name": "Ethiopia",
       "language_strategy": "country_configured",
-      "last_nonempty_at": "2026-11-06T23:25:41+00:00"
+      "last_nonempty_at": "2026-11-07T16:14:09+00:00"
     },
     "FJ": {
       "state": "reporting_found",
-      "attempted_at": "2026-11-05T17:35:47+00:00",
+      "attempted_at": "2026-11-07T16:14:09+00:00",
       "queries_attempted": 3,
       "local_queries_attempted": 0,
       "recovery_queries_attempted": 0,
@@ -993,11 +993,11 @@
       "errors": [],
       "name": "Fiji",
       "language_strategy": "country_configured",
-      "last_nonempty_at": "2026-11-05T17:35:47+00:00"
+      "last_nonempty_at": "2026-11-07T16:14:09+00:00"
     },
     "FK": {
       "state": "attempted_empty",
-      "attempted_at": "2026-11-05T17:35:47+00:00",
+      "attempted_at": "2026-11-07T16:14:09+00:00",
       "queries_attempted": 3,
       "local_queries_attempted": 0,
       "recovery_queries_attempted": 0,
@@ -1011,7 +1011,7 @@
     },
     "FO": {
       "state": "attempted_empty",
-      "attempted_at": "2026-11-05T17:35:47+00:00",
+      "attempted_at": "2026-11-07T16:14:09+00:00",
       "queries_attempted": 3,
       "local_queries_attempted": 0,
       "recovery_queries_attempted": 0,
@@ -1025,7 +1025,7 @@
     },
     "FM": {
       "state": "attempted_empty",
-      "attempted_at": "2026-11-05T17:35:47+00:00",
+      "attempted_at": "2026-11-07T16:14:09+00:00",
       "queries_attempted": 3,
       "local_queries_attempted": 0,
       "recovery_queries_attempted": 0,
@@ -1039,21 +1039,21 @@
     },
     "ES": {
       "state": "reporting_found",
-      "attempted_at": "2026-11-05T17:35:47+00:00",
+      "attempted_at": "2026-11-07T16:14:09+00:00",
       "queries_attempted": 4,
       "local_queries_attempted": 1,
       "recovery_queries_attempted": 0,
       "recovery_scan": false,
-      "accepted": 27,
-      "unattributed_candidates": 10,
+      "accepted": 46,
+      "unattributed_candidates": 13,
       "errors": [],
       "name": "Spain",
       "language_strategy": "country_configured",
-      "last_nonempty_at": "2026-11-05T17:35:47+00:00"
+      "last_nonempty_at": "2026-11-07T16:14:09+00:00"
     },
     "GA": {
       "state": "reporting_found",
-      "attempted_at": "2026-11-05T17:35:47+00:00",
+      "attempted_at": "2026-11-07T16:14:09+00:00",
       "queries_attempted": 4,
       "local_queries_attempted": 1,
       "recovery_queries_attempted": 0,
@@ -1063,11 +1063,11 @@
       "errors": [],
       "name": "Gabon",
       "language_strategy": "country_configured",
-      "last_nonempty_at": "2026-11-05T17:35:47+00:00"
+      "last_nonempty_at": "2026-11-07T16:14:09+00:00"
     },
     "GD": {
       "state": "attempted_empty",
-      "attempted_at": "2026-11-05T17:35:47+00:00",
+      "attempted_at": "2026-11-07T16:14:09+00:00",
       "queries_attempted": 3,
       "local_queries_attempted": 0,
       "recovery_queries_attempted": 0,
@@ -1081,21 +1081,21 @@
     },
     "GE": {
       "state": "reporting_found",
-      "attempted_at": "2026-11-05T17:35:47+00:00",
+      "attempted_at": "2026-11-07T16:14:09+00:00",
       "queries_attempted": 4,
       "local_queries_attempted": 1,
       "recovery_queries_attempted": 0,
       "recovery_scan": false,
-      "accepted": 28,
+      "accepted": 24,
       "unattributed_candidates": 0,
       "errors": [],
       "name": "Georgia",
       "language_strategy": "country_configured",
-      "last_nonempty_at": "2026-11-05T17:35:47+00:00"
+      "last_nonempty_at": "2026-11-07T16:14:09+00:00"
     },
     "FR": {
       "state": "reporting_found",
-      "attempted_at": "2026-11-05T17:35:47+00:00",
+      "attempted_at": "2026-11-07T16:14:09+00:00",
       "queries_attempted": 4,
       "local_queries_attempted": 1,
       "recovery_queries_attempted": 0,
@@ -1105,11 +1105,11 @@
       "errors": [],
       "name": "France",
       "language_strategy": "country_configured",
-      "last_nonempty_at": "2026-11-05T17:35:47+00:00"
+      "last_nonempty_at": "2026-11-07T16:14:09+00:00"
     },
     "GB": {
       "state": "reporting_found",
-      "attempted_at": "2026-11-05T17:35:47+00:00",
+      "attempted_at": "2026-11-07T16:14:09+00:00",
       "queries_attempted": 3,
       "local_queries_attempted": 0,
       "recovery_queries_attempted": 0,
@@ -1119,15 +1119,15 @@
       "errors": [],
       "name": "United Kingdom",
       "language_strategy": "english_country_named_fallback",
-      "last_nonempty_at": "2026-11-05T17:35:47+00:00"
+      "last_nonempty_at": "2026-11-07T16:14:09+00:00"
     },
     "GF": {
       "state": "attempted_empty",
-      "attempted_at": "2026-11-05T22:48:25+00:00",
-      "queries_attempted": 5,
+      "attempted_at": "2026-11-07T16:14:09+00:00",
+      "queries_attempted": 3,
       "local_queries_attempted": 0,
-      "recovery_queries_attempted": 2,
-      "recovery_scan": true,
+      "recovery_queries_attempted": 0,
+      "recovery_scan": false,
       "accepted": 0,
       "unattributed_candidates": 0,
       "errors": [],
@@ -1137,11 +1137,11 @@
     },
     "GP": {
       "state": "attempted_empty",
-      "attempted_at": "2026-11-05T22:48:25+00:00",
-      "queries_attempted": 5,
+      "attempted_at": "2026-11-07T16:14:09+00:00",
+      "queries_attempted": 3,
       "local_queries_attempted": 0,
-      "recovery_queries_attempted": 2,
-      "recovery_scan": true,
+      "recovery_queries_attempted": 0,
+      "recovery_scan": false,
       "accepted": 0,
       "unattributed_candidates": 0,
       "errors": [],
@@ -1151,21 +1151,21 @@
     },
     "GI": {
       "state": "reporting_found",
-      "attempted_at": "2026-11-05T17:35:47+00:00",
+      "attempted_at": "2026-11-07T16:14:09+00:00",
       "queries_attempted": 3,
       "local_queries_attempted": 0,
       "recovery_queries_attempted": 0,
       "recovery_scan": false,
-      "accepted": 5,
+      "accepted": 4,
       "unattributed_candidates": 0,
       "errors": [],
       "name": "Gibraltar",
       "language_strategy": "english_country_named_fallback",
-      "last_nonempty_at": "2026-11-05T17:35:47+00:00"
+      "last_nonempty_at": "2026-11-07T16:14:09+00:00"
     },
     "GM": {
       "state": "reporting_found",
-      "attempted_at": "2026-11-05T17:35:47+00:00",
+      "attempted_at": "2026-11-07T16:14:09+00:00",
       "queries_attempted": 3,
       "local_queries_attempted": 0,
       "recovery_queries_attempted": 0,
@@ -1175,11 +1175,11 @@
       "errors": [],
       "name": "Gambia",
       "language_strategy": "country_configured",
-      "last_nonempty_at": "2026-11-05T17:35:47+00:00"
+      "last_nonempty_at": "2026-11-07T16:14:09+00:00"
     },
     "GG": {
       "state": "reporting_found",
-      "attempted_at": "2026-11-05T17:35:47+00:00",
+      "attempted_at": "2026-11-07T16:14:09+00:00",
       "queries_attempted": 3,
       "local_queries_attempted": 0,
       "recovery_queries_attempted": 0,
@@ -1189,15 +1189,15 @@
       "errors": [],
       "name": "Guernsey",
       "language_strategy": "english_country_named_fallback",
-      "last_nonempty_at": "2026-11-05T17:35:47+00:00"
+      "last_nonempty_at": "2026-11-07T16:14:09+00:00"
     },
     "GQ": {
       "state": "attempted_empty",
-      "attempted_at": "2026-11-05T22:48:25+00:00",
-      "queries_attempted": 6,
-      "local_queries_attempted": 2,
-      "recovery_queries_attempted": 2,
-      "recovery_scan": true,
+      "attempted_at": "2026-11-07T16:14:09+00:00",
+      "queries_attempted": 4,
+      "local_queries_attempted": 1,
+      "recovery_queries_attempted": 0,
+      "recovery_scan": false,
       "accepted": 0,
       "unattributed_candidates": 0,
       "errors": [],
@@ -1207,81 +1207,81 @@
     },
     "GN": {
       "state": "reporting_found",
-      "attempted_at": "2026-11-05T17:35:47+00:00",
+      "attempted_at": "2026-11-07T16:14:09+00:00",
       "queries_attempted": 4,
       "local_queries_attempted": 1,
       "recovery_queries_attempted": 0,
       "recovery_scan": false,
       "accepted": 2,
-      "unattributed_candidates": 5,
+      "unattributed_candidates": 6,
       "errors": [],
       "name": "Guinea",
       "language_strategy": "country_configured",
-      "last_nonempty_at": "2026-11-05T17:35:47+00:00"
+      "last_nonempty_at": "2026-11-07T16:14:09+00:00"
     },
     "GL": {
       "state": "reporting_found",
-      "attempted_at": "2026-11-05T17:35:47+00:00",
+      "attempted_at": "2026-11-07T16:14:09+00:00",
       "queries_attempted": 3,
       "local_queries_attempted": 0,
       "recovery_queries_attempted": 0,
       "recovery_scan": false,
-      "accepted": 1,
+      "accepted": 2,
       "unattributed_candidates": 0,
       "errors": [],
       "name": "Greenland",
       "language_strategy": "english_country_named_fallback",
-      "last_nonempty_at": "2026-11-05T17:35:47+00:00"
+      "last_nonempty_at": "2026-11-07T16:14:09+00:00"
     },
     "GH": {
       "state": "reporting_found",
-      "attempted_at": "2026-11-06T23:25:41+00:00",
+      "attempted_at": "2026-11-07T16:14:09+00:00",
       "queries_attempted": 4,
       "local_queries_attempted": 0,
       "recovery_queries_attempted": 0,
       "recovery_scan": false,
-      "accepted": 54,
+      "accepted": 37,
       "unattributed_candidates": 0,
       "errors": [],
       "name": "Ghana",
       "language_strategy": "country_configured",
-      "last_nonempty_at": "2026-11-06T23:25:41+00:00"
+      "last_nonempty_at": "2026-11-07T16:14:09+00:00"
     },
     "GT": {
       "state": "reporting_found",
-      "attempted_at": "2026-11-05T22:48:25+00:00",
+      "attempted_at": "2026-11-07T16:14:09+00:00",
       "queries_attempted": 4,
       "local_queries_attempted": 1,
       "recovery_queries_attempted": 0,
       "recovery_scan": false,
-      "accepted": 5,
-      "unattributed_candidates": 4,
+      "accepted": 8,
+      "unattributed_candidates": 3,
       "errors": [],
       "name": "Guatemala",
       "language_strategy": "country_configured",
-      "last_nonempty_at": "2026-11-05T22:48:25+00:00"
+      "last_nonempty_at": "2026-11-07T16:14:09+00:00"
     },
     "GU": {
       "state": "reporting_found",
-      "attempted_at": "2026-11-05T22:48:25+00:00",
+      "attempted_at": "2026-11-07T16:14:09+00:00",
       "queries_attempted": 3,
       "local_queries_attempted": 0,
       "recovery_queries_attempted": 0,
       "recovery_scan": false,
-      "accepted": 1,
+      "accepted": 2,
       "unattributed_candidates": 0,
       "errors": [],
       "name": "Guam",
       "language_strategy": "english_country_named_fallback",
-      "last_nonempty_at": "2026-11-05T22:48:25+00:00"
+      "last_nonempty_at": "2026-11-07T16:14:09+00:00"
     },
     "GS": {
       "state": "attempted_empty",
-      "attempted_at": "2026-11-05T22:48:25+00:00",
-      "queries_attempted": 4,
+      "attempted_at": "2026-11-07T16:14:09+00:00",
+      "queries_attempted": 3,
       "local_queries_attempted": 0,
-      "recovery_queries_attempted": 1,
-      "recovery_scan": true,
+      "recovery_queries_attempted": 0,
+      "recovery_scan": false,
       "accepted": 0,
       "unattributed_candidates": 0,
       "errors": [],
@@ -1291,63 +1291,63 @@
     },
     "GY": {
       "state": "reporting_found",
-      "attempted_at": "2026-11-05T22:48:25+00:00",
+      "attempted_at": "2026-11-07T16:14:09+00:00",
       "queries_attempted": 3,
       "local_queries_attempted": 0,
       "recovery_queries_attempted": 0,
       "recovery_scan": false,
-      "accepted": 7,
+      "accepted": 9,
       "unattributed_candidates": 0,
       "errors": [],
       "name": "Guyana",
       "language_strategy": "english_country_named_fallback",
-      "last_nonempty_at": "2026-11-05T22:48:25+00:00"
+      "last_nonempty_at": "2026-11-07T16:14:09+00:00"
     },
     "GW": {
       "state": "reporting_found",
-      "attempted_at": "2026-11-05T22:48:25+00:00",
+      "attempted_at": "2026-11-07T16:14:09+00:00",
       "queries_attempted": 4,
       "local_queries_attempted": 1,
       "recovery_queries_attempted": 0,
       "recovery_scan": false,
-      "accepted": 2,
+      "accepted": 1,
       "unattributed_candidates": 1,
       "errors": [],
       "name": "Guinea-Bissau",
       "language_strategy": "country_configured",
-      "last_nonempty_at": "2026-11-05T22:48:25+00:00"
+      "last_nonempty_at": "2026-11-07T16:14:09+00:00"
     },
     "GR": {
       "state": "reporting_found",
-      "attempted_at": "2026-11-05T17:35:47+00:00",
+      "attempted_at": "2026-11-07T16:14:09+00:00",
       "queries_attempted": 4,
       "local_queries_attempted": 1,
       "recovery_queries_attempted": 0,
       "recovery_scan": false,
-      "accepted": 8,
+      "accepted": 6,
       "unattributed_candidates": 0,
       "errors": [],
       "name": "Greece",
       "language_strategy": "country_configured",
-      "last_nonempty_at": "2026-11-05T17:35:47+00:00"
+      "last_nonempty_at": "2026-11-07T16:14:09+00:00"
     },
     "HK": {
       "state": "reporting_found",
-      "attempted_at": "2026-11-05T22:48:25+00:00",
+      "attempted_at": "2026-11-07T16:14:09+00:00",
       "queries_attempted": 5,
       "local_queries_attempted": 2,
       "recovery_queries_attempted": 0,
       "recovery_scan": false,
-      "accepted": 57,
-      "unattributed_candidates": 6,
+      "accepted": 54,
+      "unattributed_candidates": 4,
       "errors": [],
       "name": "Hong Kong",
       "language_strategy": "country_configured",
-      "last_nonempty_at": "2026-11-05T22:48:25+00:00"
+      "last_nonempty_at": "2026-11-07T16:14:09+00:00"
     },
     "HM": {
       "state": "attempted_empty",
-      "attempted_at": "2026-11-05T22:48:25+00:00",
+      "attempted_at": "2026-11-07T16:14:09+00:00",
       "queries_attempted": 3,
       "local_queries_attempted": 0,
       "recovery_queries_attempted": 0,
@@ -1663,17 +1663,17 @@
     },
     "KH": {
       "state": "reporting_found",
-      "attempted_at": "2026-11-06T18:18:14+00:00",
+      "attempted_at": "2026-11-07T16:14:09+00:00",
       "queries_attempted": 5,
       "local_queries_attempted": 2,
       "recovery_queries_attempted": 0,
       "recovery_scan": false,
-      "accepted": 47,
+      "accepted": 49,
       "unattributed_candidates": 0,
       "errors": [],
       "name": "Cambodia",
       "language_strategy": "country_configured",
-      "last_nonempty_at": "2026-11-06T18:18:14+00:00"
+      "last_nonempty_at": "2026-11-07T16:14:09+00:00"
     },
     "JO": {
       "state": "reporting_found",
@@ -1691,7 +1691,7 @@
     },
     "KE": {
       "state": "reporting_found",
-      "attempted_at": "2026-11-06T18:18:14+00:00",
+      "attempted_at": "2026-11-07T16:14:09+00:00",
       "queries_attempted": 6,
       "local_queries_attempted": 2,
       "recovery_queries_attempted": 0,
@@ -1701,7 +1701,7 @@
       "errors": [],
       "name": "Kenya",
       "language_strategy": "country_configured",
-      "last_nonempty_at": "2026-11-06T18:18:14+00:00"
+      "last_nonempty_at": "2026-11-07T16:14:09+00:00"
     },
     "KP": {
       "state": "reporting_found",
@@ -2437,17 +2437,17 @@
     },
     "NG": {
       "state": "reporting_found",
-      "attempted_at": "2026-11-06T18:18:14+00:00",
+      "attempted_at": "2026-11-07T16:14:09+00:00",
       "queries_attempted": 5,
       "local_queries_attempted": 1,
       "recovery_queries_attempted": 0,
       "recovery_scan": false,
-      "accepted": 75,
+      "accepted": 72,
       "unattributed_candidates": 0,
       "errors": [],
       "name": "Nigeria",
       "language_strategy": "country_configured",
-      "last_nonempty_at": "2026-11-06T18:18:14+00:00"
+      "last_nonempty_at": "2026-11-07T16:14:09+00:00"
     },
     "NP": {
       "state": "reporting_found",
@@ -3529,7 +3529,7 @@
     },
     "ZA": {
       "state": "reporting_found",
-      "attempted_at": "2026-11-06T23:25:41+00:00",
+      "attempted_at": "2026-11-07T16:14:09+00:00",
       "queries_attempted": 5,
       "local_queries_attempted": 1,
       "recovery_queries_attempted": 0,
@@ -3539,7 +3539,7 @@
       "errors": [],
       "name": "South Africa",
       "language_strategy": "country_configured",
-      "last_nonempty_at": "2026-11-06T23:25:41+00:00"
+      "last_nonempty_at": "2026-11-07T16:14:09+00:00"
     },
     "ZM": {
       "state": "reporting_found",
