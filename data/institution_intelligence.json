@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-08T05:37:17+00:00",
+  "generated_at": "2026-11-08T12:10:20+00:00",
   "methodology": "Institution names are canonically grouped using explicit aliases. Headline entries are conservative reporting groups, not distinct or independently verified fraud incidents; multiple publisher headlines are retained under each group. An institution mention is not proof of wrongdoing.",
   "source_counts": {
     "enforcement": 98,
     "reviewed_incidents": 6,
-    "unverified_report_groups": 2635,
+    "unverified_report_groups": 2733,
     "osfi_institution_rows": 345,
     "fintrac_index_notices": 90,
     "bank_disclosure_records": 15,
@@ -2705,6 +2705,108 @@
             "date": "2025-08-28",
             "penalty_cad": 1075000.0,
             "violation_count": 3,
+            "status_summary": "appealed_or_appeal_reported",
+            "source_url": "https://fintrac-canafe.canada.ca/pen/4-eng",
+            "source_kind": "official_FINTRAC_index"
+          }
+        ],
+        "counts": {
+          "fintrac_public_notices": 1,
+          "fcac_index_notices": 0,
+          "bank_disclosure_years": 0,
+          "obsi_firm_years": 0,
+          "ciro_concluded_cases": 0,
+          "fdic_failures": 0,
+          "occ_institution_actions": 0,
+          "occ_individual_matters": 0
+        }
+      },
+      "evidence_count_shown": 2
+    },
+    {
+      "id": "binance",
+      "name": "Binance",
+      "aliases": [
+        "Binance",
+        "Binance Holdings Limited"
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 1
+      },
+      "evidence": [
+        {
+          "kind": "enforcement",
+          "id": "99393fab1d720acfa37e",
+          "date": "2024-05-09",
+          "event_date": null,
+          "title": "Binance Holdings Limited: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2024-05-09-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty appealed",
+          "penalty_cad": 6002000.0,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        },
+        {
+          "kind": "headline",
+          "id": "report-b973a2c87b4fbdb22174",
+          "date": "2023-09-25T07:00:00+00:00",
+          "title": "Ontario Resident Falls Victim to Impersonators in a Daring Crypto ATM Scam - Binance",
+          "source_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFAtczdkLUxmVzU1elFyX085TDRVQWF0akRPSUIxUkRfcjNVSF9LUm5tOTVha1lXTHQ0eGcySGZDRTlwMVM5VXBaUGo2cGFfOUNZc25KbW5aSTRucldiWEE?oc=5",
+          "source": "Binance",
+          "category": "Investment fraud",
+          "source_count": 1,
+          "source_channels": [
+            "historical"
+          ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "Ontario Resident Falls Victim to Impersonators in a Daring Crypto ATM Scam - Binance",
+              "publisher": "Binance",
+              "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFAtczdkLUxmVzU1elFyX085TDRVQWF0akRPSUIxUkRfcjNVSF9LUm5tOTVha1lXTHQ0eGcySGZDRTlwMVM5VXBaUGo2cGFfOUNZc25KbW5aSTRucldiWEE?oc=5",
+              "published_at": "2023-09-25T07:00:00+00:00",
+              "discovery_channel": "historical"
+            }
+          ],
+          "amount_text": [],
+          "location": null,
+          "evidence": "unverified_headline",
+          "role": "mentioned_in_headline_only"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        },
+        {
+          "name": "Impersonation / social engineering",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        },
+        {
+          "name": "Investment and crypto scams",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2024": 6002000.0
+      },
+      "recent_activity": "2024-05-09",
+      "official_data": {
+        "fintrac_notices": [
+          {
+            "record_id": "bebd39ba990db4d1f4c8",
+            "date": "2024-05-09",
+            "penalty_cad": 6002000.0,
+            "violation_count": 2,
             "status_summary": "appealed_or_appeal_reported",
             "source_url": "https://fintrac-canafe.canada.ca/pen/4-eng",
             "source_kind": "official_FINTRAC_index"
@@ -6246,71 +6348,6 @@
             "penalty_cad": 252285.0,
             "violation_count": 7,
             "status_summary": "not_confirmed",
-            "source_url": "https://fintrac-canafe.canada.ca/pen/4-eng",
-            "source_kind": "official_FINTRAC_index"
-          }
-        ],
-        "counts": {
-          "fintrac_public_notices": 1,
-          "fcac_index_notices": 0,
-          "bank_disclosure_years": 0,
-          "obsi_firm_years": 0,
-          "ciro_concluded_cases": 0,
-          "fdic_failures": 0,
-          "occ_institution_actions": 0,
-          "occ_individual_matters": 0
-        }
-      },
-      "evidence_count_shown": 1
-    },
-    {
-      "id": "binance",
-      "name": "Binance",
-      "aliases": [
-        "Binance",
-        "Binance Holdings Limited"
-      ],
-      "counts": {
-        "enforcement": 1,
-        "incidents": 0,
-        "headlines": 0
-      },
-      "evidence": [
-        {
-          "kind": "enforcement",
-          "id": "99393fab1d720acfa37e",
-          "date": "2024-05-09",
-          "event_date": null,
-          "title": "Binance Holdings Limited: FINTRAC administrative monetary penalty",
-          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2024-05-09-eng",
-          "source": "FINTRAC",
-          "category": "AML enforcement",
-          "status": "penalty appealed",
-          "penalty_cad": 6002000.0,
-          "location": null,
-          "evidence": "regulator_published_action",
-          "role": "subject_of_enforcement"
-        }
-      ],
-      "themes": [
-        {
-          "name": "Money laundering controls",
-          "matching_records": 1,
-          "interpretation": "shared keyword, not established causation"
-        }
-      ],
-      "annual_penalties_cad": {
-        "2024": 6002000.0
-      },
-      "recent_activity": "2024-05-09",
-      "official_data": {
-        "fintrac_notices": [
-          {
-            "record_id": "bebd39ba990db4d1f4c8",
-            "date": "2024-05-09",
-            "penalty_cad": 6002000.0,
-            "violation_count": 2,
-            "status_summary": "appealed_or_appeal_reported",
             "source_url": "https://fintrac-canafe.canada.ca/pen/4-eng",
             "source_kind": "official_FINTRAC_index"
           }

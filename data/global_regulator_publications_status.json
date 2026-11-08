@@ -1,5 +1,5 @@
 {
-  "last_completed_at": "2026-11-08T05:35:22+00:00",
+  "last_completed_at": "2026-11-08T12:09:20+00:00",
   "regulators_configured": 30,
   "regulators_attempted": 30,
   "countries_with_publication_leads": 0,
@@ -102,33 +102,33 @@
       "regulator": "FSA"
     },
     "KE:Central Bank of Kenya": {
-      "status": "empty",
-      "accepted": 0,
-      "checked_at": "2026-11-07T09:56:08+00:00",
+      "status": "error",
+      "error_type": "HTTPError",
+      "checked_at": "2026-11-08T12:09:09+00:00",
       "source_domain": "centralbank.go.ke",
       "country_code": "KE",
       "regulator": "Central Bank of Kenya"
     },
     "ZA:FIC": {
-      "status": "empty",
-      "accepted": 0,
-      "checked_at": "2026-11-07T09:56:07+00:00",
+      "status": "error",
+      "error_type": "HTTPError",
+      "checked_at": "2026-11-08T12:09:09+00:00",
       "source_domain": "fic.gov.za",
       "country_code": "ZA",
       "regulator": "FIC"
     },
     "NG:EFCC": {
-      "status": "empty",
-      "accepted": 0,
-      "checked_at": "2026-11-07T09:56:09+00:00",
+      "status": "error",
+      "error_type": "HTTPError",
+      "checked_at": "2026-11-08T12:09:09+00:00",
       "source_domain": "efcc.gov.ng",
       "country_code": "NG",
       "regulator": "EFCC"
     },
     "AE:Central Bank of UAE": {
-      "status": "empty",
-      "accepted": 0,
-      "checked_at": "2026-11-07T09:56:19+00:00",
+      "status": "error",
+      "error_type": "HTTPError",
+      "checked_at": "2026-11-08T12:09:20+00:00",
       "source_domain": "centralbank.ae",
       "country_code": "AE",
       "regulator": "Central Bank of UAE"
@@ -136,7 +136,7 @@
     "GB:FCA": {
       "status": "error",
       "error_type": "HTTPError",
-      "checked_at": "2026-11-07T09:56:18+00:00",
+      "checked_at": "2026-11-08T12:09:20+00:00",
       "source_domain": "fca.org.uk",
       "country_code": "GB",
       "regulator": "FCA"
@@ -144,7 +144,7 @@
     "US:CFTC": {
       "status": "error",
       "error_type": "HTTPError",
-      "checked_at": "2026-11-07T09:56:18+00:00",
+      "checked_at": "2026-11-08T12:09:20+00:00",
       "source_domain": "cftc.gov",
       "country_code": "US",
       "regulator": "CFTC"
