@@ -15,7 +15,7 @@
     "2023": 322,
     "2024": 328,
     "2025": 482,
-    "2026": 849
+    "2026": 850
   },
   "themes": [
     {
@@ -309,9 +309,9 @@
         "2023": 24,
         "2024": 10,
         "2025": 39,
-        "2026": 27
+        "2026": 28
       },
-      "total_headlines": 133,
+      "total_headlines": 134,
       "publisher_count": 37,
       "examples": [
         {
@@ -331,6 +331,17 @@
           "date": "2026-10-30T21:18:57+00:00",
           "publisher": "On Common Ground News",
           "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOdkxDMGpZNHp0cVdyS1Y2Sk0tbkJ5RHhmOW9FaVF6UzVpaFpROXA5d2xBdzRVWDFLLU1KTVptTWZzSElERXpDX2wwbGxuSDNib2ZCclRjN2FqcG83XzJmeDBVUjYxckJYVnlvb1NrcGV4MjNRZlZ0cTc1UEhGTVlVdThva3RrUXdtSkUwd3ZsajFlV3oxVEtHaFUzWE0yWjNudkhKNlpNVWxmQzRMSlJpR2tpWGg?oc=5",
+          "geography": null,
+          "source_channels": [
+            "recent"
+          ]
+        },
+        {
+          "id": "c8bcb3b411f69d8c33c9",
+          "title": "Guelph police warn of banking scam targeting seniors - CTV News",
+          "date": "2026-10-29T07:00:00+00:00",
+          "publisher": "CTV News",
+          "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNRjhyc21MMzdPRnNGVW9VNC0ydVQwSWVxS0FidUd4cWZjOVBvd3VjZjZPWDFETl8xSnlNTjBFTkhxcU5BSzZVQ0FxSnhyaEZnc2s5NkpvdG5jY21BUlBxY3NmbFo1XzNyTXo1T045LWdXcWVMRHZnbjdhSzZzN2NBTzdLeVItU211NllOMmNvcmhkTXNDaTEtX3VHSndLZlRoUTZF?oc=5",
           "geography": null,
           "source_channels": [
             "recent"
@@ -563,17 +574,6 @@
           "date": "2026-03-20T07:00:00+00:00",
           "publisher": "CTV News",
           "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNOUVaaUh2MVk0c2pKYjVfam5CblU3cmZVNzgzVENrOG55N2dOODhlS1I0cEFvQ1drRlRsSlhrYjhWczlkQU1ZTVdZa1NGcTRTMkx5OEdZZXRZZUNRYUNzeWdkLUxLVmlOdzkyU1JDY1hiRkFIdE01WEtGQjlzbmtteQ?oc=5",
-          "geography": null,
-          "source_channels": [
-            "historical"
-          ]
-        },
-        {
-          "id": "d14307661da7845bc9ad",
-          "title": "Senior couple loses $300K after falling victim to ‘despicable’ scam: Burnaby RCMP - CTV News",
-          "date": "2026-02-18T08:00:00+00:00",
-          "publisher": "CTV News",
-          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPaVdRelVsbFhxdm5GSzI1Tk5oUHd2c3VRVDdOaThqZm14SWNpckJYVVB5MGpGT3N0Z0haMlY0TmFxNC1uaEg0OVpwYkZyQkRPWkhFNjVqU0kxcU1ncXFiQW8xOEZVQXc0NDF6TlF1U2hTbURaSllPQUZadFRBcVlMUkdMMnNORHJOSEJrS25rLU1ueEFGOV9BcGtfbWtYUG5zLUczU2diUFBSSWlyZlhKa2JFSFo1b055eUNJ?oc=5",
           "geography": null,
           "source_channels": [
             "historical"
@@ -3136,8 +3136,8 @@
       }
     }
   ],
-  "generated_at": "2026-11-07T23:53:54+00:00",
-  "articles_analyzed": 2653,
+  "generated_at": "2026-11-08T05:37:16+00:00",
+  "articles_analyzed": 2654,
   "methodology": "MULTI-LABEL keyword classification of unique article TITLES by publication year; multiple theme counts can arise from one headline. Year-to-year article counts reflect discovery methods, changing news coverage, and archived source availability, NOT measured changes in fraud incidence. Bank/platform mentions are not accusations and never counted as confirmed enforcement.",
   "scope": "Canadian financial-crime news discovery",
   "data_quality": "Headlines only; no full-article automated fact checking. Counts can change as the archive expands."
