@@ -15,7 +15,7 @@
     "2023": 419,
     "2024": 328,
     "2025": 482,
-    "2026": 859
+    "2026": 864
   },
   "themes": [
     {
@@ -927,7 +927,7 @@
         {
           "id": "f82472e1ae2844fd7416",
           "title": "One in four fraud losses in Canada now involves AI-generated techniques - Wealth Professional",
-          "date": "2026-10-20T10:42:24+00:00",
+          "date": "2026-10-20T07:00:00+00:00",
           "publisher": "Wealth Professional",
           "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQVFhQZ2RCQ1NoN3dmamxTZWdyMFVvVGVxbGlpZVVIM0xxaENSelVpdzBLV1BZVHVfLVVNcDUxdFdmVUZBSHRiTUk0ZkVveDhWeUJwa1JGT0VhRHo3enc0bFZNdUtyLUZNaTY5bDdUaEJJT3VobUtIMmotTzdRdTJfSVlkWlRNY0JDMkRmZmt5OHJWRkt4TWs0ZlRScTBqMk5NcjM5TWJ0NzRreFNNcFJKRk1iYjNfYmpZQjNOVmsyS25PcEJXQV96QWEwNA?oc=5",
           "geography": null,
@@ -1155,11 +1155,22 @@
         "2023": 12,
         "2024": 5,
         "2025": 17,
-        "2026": 31
+        "2026": 32
       },
-      "total_headlines": 80,
+      "total_headlines": 81,
       "publisher_count": 31,
       "examples": [
+        {
+          "id": "688d6b111f45290ab2c3",
+          "title": "Parkland RCMP advise of phone number and caller ID spoofing scam calls",
+          "date": "2026-11-09T19:44:39+00:00",
+          "publisher": "Royal Canadian Mounted Police",
+          "url": "https://rcmp.ca/en/alberta/news/2026/11/4358644",
+          "geography": null,
+          "source_channels": [
+            "rcmp_official_rss"
+          ]
+        },
         {
           "id": "4f75015f7045128d0dc3",
           "title": "Enoch RCMP advise of phone number and caller ID spoofing scam calls",
@@ -1409,17 +1420,6 @@
           "date": "2026-03-26T07:00:00+00:00",
           "publisher": "CBC",
           "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPdVBNSTJfOVE3N21RVUFKdzluTWZfSTlGb01TMklDeE5NZHFKQ1VnTjlsMGdqSW1qaWpYVGJ6bjdoRndka0pnVVVPUmZQWjZQU0t1UXRJejBWaUExLU9BR0JEMzg2amhsVGM1SGktbngzVXlQYTBoTkI1YmxUb1lEU2NEVm9JZWxadXZlNVlVTmdMcXhu?oc=5",
-          "geography": null,
-          "source_channels": [
-            "historical"
-          ]
-        },
-        {
-          "id": "41b3cbc2a2099472940d",
-          "title": "Gatineau, Que. police say vigilant citizens help stop police impersonation fraud - CTV News",
-          "date": "2026-03-26T07:00:00+00:00",
-          "publisher": "CTV News",
-          "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQbGxCTUN4TEpabDVOUFhsMko3ejgzdnl2ODJzdFJFUXpQbG10cGRBQzVDMkpsT01Kajl4OVlhYU5PYl9vNjBHbXlvcUlhMzlaWWJ4dDdFYm1GbTZGcnVZMVNJYVJ4VDdYWi1WUlBVMlJCcWp4anNIQlJEbGlNOTk5bW1vODE3eWJkclN3UVVfRWIxQVljY0VqV1E1V1BuTl9saVQ3UVEwejEwUk8zVDFVSEVDcV9uN09J?oc=5",
           "geography": null,
           "source_channels": [
             "historical"
@@ -3148,8 +3148,8 @@
       }
     }
   ],
-  "generated_at": "2026-11-09T19:43:51+00:00",
-  "articles_analyzed": 2760,
+  "generated_at": "2026-11-10T02:39:54+00:00",
+  "articles_analyzed": 2765,
   "methodology": "MULTI-LABEL keyword classification of unique article TITLES by publication year; multiple theme counts can arise from one headline. Year-to-year article counts reflect discovery methods, changing news coverage, and archived source availability, NOT measured changes in fraud incidence. Bank/platform mentions are not accusations and never counted as confirmed enforcement.",
   "scope": "Canadian financial-crime news discovery",
   "data_quality": "Headlines only; no full-article automated fact checking. Counts can change as the archive expands."

@@ -1,5 +1,5 @@
 {
-  "last_completed_at": "2026-11-09T19:42:34+00:00",
+  "last_completed_at": "2026-11-10T02:38:32+00:00",
   "regulators_configured": 30,
   "regulators_attempted": 30,
   "countries_with_publication_leads": 0,
@@ -150,41 +150,41 @@
       "regulator": "CFTC"
     },
     "US:CFPB": {
-      "status": "empty",
-      "accepted": 0,
-      "checked_at": "2026-11-08T18:03:00+00:00",
+      "status": "error",
+      "error_type": "HTTPError",
+      "checked_at": "2026-11-10T02:38:14+00:00",
       "source_domain": "consumerfinance.gov",
       "country_code": "US",
       "regulator": "CFPB"
     },
     "US:Federal Reserve": {
-      "status": "empty",
-      "accepted": 0,
-      "checked_at": "2026-11-08T18:03:01+00:00",
+      "status": "error",
+      "error_type": "HTTPError",
+      "checked_at": "2026-11-10T02:38:14+00:00",
       "source_domain": "federalreserve.gov",
       "country_code": "US",
       "regulator": "Federal Reserve"
     },
     "US:SEC": {
-      "status": "empty",
-      "accepted": 0,
-      "checked_at": "2026-11-08T18:03:05+00:00",
+      "status": "error",
+      "error_type": "HTTPError",
+      "checked_at": "2026-11-10T02:38:14+00:00",
       "source_domain": "sec.gov",
       "country_code": "US",
       "regulator": "SEC"
     },
     "US:OFAC": {
-      "status": "error",
-      "error_type": "HTTPError",
-      "checked_at": "2026-11-08T18:03:13+00:00",
+      "status": "empty",
+      "accepted": 0,
+      "checked_at": "2026-11-10T02:38:29+00:00",
       "source_domain": "ofac.treasury.gov",
       "country_code": "US",
       "regulator": "OFAC"
     },
     "BR:Banco Central do Brasil": {
-      "status": "error",
-      "error_type": "HTTPError",
-      "checked_at": "2026-11-08T18:03:14+00:00",
+      "status": "empty",
+      "accepted": 0,
+      "checked_at": "2026-11-10T02:38:29+00:00",
       "source_domain": "bcb.gov.br",
       "country_code": "BR",
       "regulator": "Banco Central do Brasil"
@@ -192,7 +192,7 @@
     "BR:CVM": {
       "status": "empty",
       "accepted": 0,
-      "checked_at": "2026-11-08T18:03:22+00:00",
+      "checked_at": "2026-11-10T02:38:32+00:00",
       "source_domain": "gov.br",
       "country_code": "BR",
       "regulator": "CVM"
