@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-11T05:43:29+00:00",
+  "generated_at": "2026-11-11T13:57:39+00:00",
   "candidate_pairs": 182,
   "methodology": "Suggested possible article relationships. These are not verified same incidents and require original-source editorial review.",
   "items": [
@@ -1171,44 +1171,6 @@
       ]
     },
     {
-      "id": "candidate:report-7794bf3fe0cb2817d2ca:report-c2dbaa8bbd1bc1faf4f0",
-      "group_ids": [
-        "report-7794bf3fe0cb2817d2ca",
-        "report-c2dbaa8bbd1bc1faf4f0"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-7794bf3fe0cb2817d2ca",
-          "title": "Elderly Ottawa couple loses $460,000 in gold investment scam - CTV News",
-          "source_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPRkNDLWJ3REpsYURNZkdzaTdXUklJaFhTZ0pSV05sN2RKT09fQ3R5UUlJR3NTMllKbGl2YkN6bzc4ZzRFRFUwc2NpT0o0d2JieWtWUW9RYWhsMkJHWmJGYnVZd0ZHaksyVnkyT25OSDMwNHg2eDdzbnh6NlpLNVFRN1RKUnZ5aTViN29idEkwS21ESTJqOTZBNkdIbEs?oc=5",
-          "publication_date": "2025-10-23T07:00:00+00:00",
-          "source_count": 1
-        },
-        {
-          "group_id": "report-c2dbaa8bbd1bc1faf4f0",
-          "title": "Ottawa couple loses $300,000 in alleged investment fraud - CTV News",
-          "source_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNdFN6Ul9lUXdLZk41b29NS0JGM0JzeVJydUI2Y0w1Sl9lS3ZfUTVuODdmMDNweGt2SjZzXzlCY2xoSkcyOE02Um5WTFZNU2VaZG5GZUtJd2I2NGh1aVhNOTBOUGFwWDZ1SU1BMnZuY29HNW9TMWQyM3htMlBtMk5zVUFnUlNtanNRbVNTS1c0VnpNMFhEcDhZbw?oc=5",
-          "publication_date": "2025-11-17T08:00:00+00:00",
-          "source_count": 1
-        }
-      ],
-      "reasons": [
-        "6 shared descriptive headline terms",
-        "Overlapping scam method: Investment & crypto scams",
-        "Same source-mentioned place",
-        "Published within 45 days"
-      ],
-      "priority": 9,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
       "id": "candidate:report-194a6f8a120316b73b31:report-da82cd723c68520af1f7",
       "group_ids": [
         "report-194a6f8a120316b73b31",
@@ -1271,6 +1233,44 @@
         "Same organization explicitly named: TD",
         "3 shared descriptive headline terms",
         "Published within ten days"
+      ],
+      "priority": 9,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
+      "id": "candidate:report-7794bf3fe0cb2817d2ca:report-c2dbaa8bbd1bc1faf4f0",
+      "group_ids": [
+        "report-7794bf3fe0cb2817d2ca",
+        "report-c2dbaa8bbd1bc1faf4f0"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-7794bf3fe0cb2817d2ca",
+          "title": "Elderly Ottawa couple loses $460,000 in gold investment scam - CTV News",
+          "source_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPRkNDLWJ3REpsYURNZkdzaTdXUklJaFhTZ0pSV05sN2RKT09fQ3R5UUlJR3NTMllKbGl2YkN6bzc4ZzRFRFUwc2NpT0o0d2JieWtWUW9RYWhsMkJHWmJGYnVZd0ZHaksyVnkyT25OSDMwNHg2eDdzbnh6NlpLNVFRN1RKUnZ5aTViN29idEkwS21ESTJqOTZBNkdIbEs?oc=5",
+          "publication_date": "2025-10-23T07:00:00+00:00",
+          "source_count": 1
+        },
+        {
+          "group_id": "report-c2dbaa8bbd1bc1faf4f0",
+          "title": "Ottawa couple loses $300,000 in alleged investment fraud - CTV News",
+          "source_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNdFN6Ul9lUXdLZk41b29NS0JGM0JzeVJydUI2Y0w1Sl9lS3ZfUTVuODdmMDNweGt2SjZzXzlCY2xoSkcyOE02Um5WTFZNU2VaZG5GZUtJd2I2NGh1aVhNOTBOUGFwWDZ1SU1BMnZuY29HNW9TMWQyM3htMlBtMk5zVUFnUlNtanNRbVNTS1c0VnpNMFhEcDhZbw?oc=5",
+          "publication_date": "2025-11-17T08:00:00+00:00",
+          "source_count": 1
+        }
+      ],
+      "reasons": [
+        "6 shared descriptive headline terms",
+        "Overlapping scam method: Investment & crypto scams",
+        "Same source-mentioned place",
+        "Published within 45 days"
       ],
       "priority": 9,
       "status": "unverified_suggested_connection",
@@ -1690,6 +1690,43 @@
       ]
     },
     {
+      "id": "candidate:report-041aafb445183d35116b:report-666835cd68135d77421e",
+      "group_ids": [
+        "report-041aafb445183d35116b",
+        "report-666835cd68135d77421e"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-041aafb445183d35116b",
+          "title": "Moncton man gets prison time in U.S. for participating in 'grandparent scam' - CBC",
+          "source_url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9vOVltY1JUZVBzVzlMcEZuWnEydG1KOWpYeTRIWGNuQmpVRWgyd3ZTSEs0ckdtS0xOd2U5Tm1qZFpSbGl6TmxpUDRNOW95WkxOYU9RQlFOX3lhTmlmcC1peGdTVkhCTHRhNVpLOTBMSWJNZ3BHTE9xMXVZS0NVVXc?oc=5",
+          "publication_date": "2026-10-11T07:00:00+00:00",
+          "source_count": 1
+        },
+        {
+          "group_id": "report-666835cd68135d77421e",
+          "title": "Moncton, N.B., man gets prison time in U.S. for participating in grandparent scam - Yahoo News Canada",
+          "source_url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9FNnVjRjE1TmJVdUxvTmRTM20yUzY1dnczSS1GUXhpSlBLSEtXV0NITGJRelRmX0p4eXNjNFZiWlQxcDNuVzlNX2lsZUQtbEFIb2hjUERaeHFRZWVNRFktSV9UR2ZYU3VDTXRJamtR?oc=5",
+          "publication_date": "2026-10-10T07:00:00+00:00",
+          "source_count": 1
+        }
+      ],
+      "reasons": [
+        "7 shared descriptive headline terms",
+        "Same source-mentioned place",
+        "Published within ten days"
+      ],
+      "priority": 8,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
       "id": "candidate:report-08a32e2e2986b0403470:report-c34af3837568a319b32c",
       "group_ids": [
         "report-08a32e2e2986b0403470",
@@ -1787,43 +1824,6 @@
       ],
       "reasons": [
         "Same organization explicitly named: CIBC, RBC",
-        "Published within ten days"
-      ],
-      "priority": 8,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
-      "id": "candidate:report-041aafb445183d35116b:report-666835cd68135d77421e",
-      "group_ids": [
-        "report-041aafb445183d35116b",
-        "report-666835cd68135d77421e"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-041aafb445183d35116b",
-          "title": "Moncton man gets prison time in U.S. for participating in 'grandparent scam' - CBC",
-          "source_url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9vOVltY1JUZVBzVzlMcEZuWnEydG1KOWpYeTRIWGNuQmpVRWgyd3ZTSEs0ckdtS0xOd2U5Tm1qZFpSbGl6TmxpUDRNOW95WkxOYU9RQlFOX3lhTmlmcC1peGdTVkhCTHRhNVpLOTBMSWJNZ3BHTE9xMXVZS0NVVXc?oc=5",
-          "publication_date": "2026-10-11T07:00:00+00:00",
-          "source_count": 1
-        },
-        {
-          "group_id": "report-666835cd68135d77421e",
-          "title": "Moncton, N.B., man gets prison time in U.S. for participating in grandparent scam - Yahoo News Canada",
-          "source_url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9FNnVjRjE1TmJVdUxvTmRTM20yUzY1dnczSS1GUXhpSlBLSEtXV0NITGJRelRmX0p4eXNjNFZiWlQxcDNuVzlNX2lsZUQtbEFIb2hjUERaeHFRZWVNRFktSV9UR2ZYU3VDTXRJamtR?oc=5",
-          "publication_date": "2026-10-10T07:00:00+00:00",
-          "source_count": 1
-        }
-      ],
-      "reasons": [
-        "7 shared descriptive headline terms",
-        "Same source-mentioned place",
         "Published within ten days"
       ],
       "priority": 8,
@@ -3132,6 +3132,43 @@
       ]
     },
     {
+      "id": "candidate:report-15a8b863815f11493a6a:report-8c68aeb5960c47ffc28d",
+      "group_ids": [
+        "report-15a8b863815f11493a6a",
+        "report-8c68aeb5960c47ffc28d"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-15a8b863815f11493a6a",
+          "title": "Credit cards, passports, licences: Metro Vancouver police find thousands of pieces of stolen mail - CTV News",
+          "source_url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQeVJZdUFqOGFGM213TTRtRDhQMjlscEZyNEFud0lhcU9lNThOU1RVaXhNOWROR3lUWUE5NFJKSFVrZ3ktSDhFWWhVNlpsdlptcWtqcExfWGhEQ3RGQWZQSXdwNXRCdG1ZQVFyUVhZR3c4V2FxenRTdHozN2J2WDRQRnRHMjNzVzFRbHZ3YWF5Rk1ibGlVVmxId0ZILVFVWUREcmtGVzQzRXRYc0U5eERPXzg0bl9FeGluRWZ5UXlSLUJSMkZ5Sm1DTXczT3YtTGduLUE?oc=5",
+          "publication_date": "2024-09-18T07:00:00+00:00",
+          "source_count": 1
+        },
+        {
+          "group_id": "report-8c68aeb5960c47ffc28d",
+          "title": "B.C. crime news: Police seize 8,000 pieces of stolen mail, bank cards, guns - Vancouver Sun",
+          "source_url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9DVzVaNTZOdFJSdGN1V1BQT0dXX204OTk3R2ZZbUdqWmNiNWJvLUs2cXRlOWtuNEFKSnZFTHdFanpFd1dmWThtWXJicTE3VjdBMDZZMWlqMnlSVVFxdlQ2V05CWHZkaTdDZl9WaEh2V2MtVlVxX2xKWFV0WQ?oc=5",
+          "publication_date": "2024-09-22T07:00:00+00:00",
+          "source_count": 1
+        }
+      ],
+      "reasons": [
+        "5 shared descriptive headline terms",
+        "Same source-mentioned place",
+        "Published within ten days"
+      ],
+      "priority": 8,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
       "id": "candidate:report-08d6bc7319fa42606313:report-12c116b0c9dbb8b645a5",
       "group_ids": [
         "report-08d6bc7319fa42606313",
@@ -3193,43 +3230,6 @@
       "reasons": [
         "5 shared descriptive headline terms",
         "Overlapping scam method: Bank impersonation & phishing",
-        "Published within ten days"
-      ],
-      "priority": 8,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
-      "id": "candidate:report-15a8b863815f11493a6a:report-8c68aeb5960c47ffc28d",
-      "group_ids": [
-        "report-15a8b863815f11493a6a",
-        "report-8c68aeb5960c47ffc28d"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-15a8b863815f11493a6a",
-          "title": "Credit cards, passports, licences: Metro Vancouver police find thousands of pieces of stolen mail - CTV News",
-          "source_url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQeVJZdUFqOGFGM213TTRtRDhQMjlscEZyNEFud0lhcU9lNThOU1RVaXhNOWROR3lUWUE5NFJKSFVrZ3ktSDhFWWhVNlpsdlptcWtqcExfWGhEQ3RGQWZQSXdwNXRCdG1ZQVFyUVhZR3c4V2FxenRTdHozN2J2WDRQRnRHMjNzVzFRbHZ3YWF5Rk1ibGlVVmxId0ZILVFVWUREcmtGVzQzRXRYc0U5eERPXzg0bl9FeGluRWZ5UXlSLUJSMkZ5Sm1DTXczT3YtTGduLUE?oc=5",
-          "publication_date": "2024-09-18T07:00:00+00:00",
-          "source_count": 1
-        },
-        {
-          "group_id": "report-8c68aeb5960c47ffc28d",
-          "title": "B.C. crime news: Police seize 8,000 pieces of stolen mail, bank cards, guns - Vancouver Sun",
-          "source_url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9DVzVaNTZOdFJSdGN1V1BQT0dXX204OTk3R2ZZbUdqWmNiNWJvLUs2cXRlOWtuNEFKSnZFTHdFanpFd1dmWThtWXJicTE3VjdBMDZZMWlqMnlSVVFxdlQ2V05CWHZkaTdDZl9WaEh2V2MtVlVxX2xKWFV0WQ?oc=5",
-          "publication_date": "2024-09-22T07:00:00+00:00",
-          "source_count": 1
-        }
-      ],
-      "reasons": [
-        "5 shared descriptive headline terms",
-        "Same source-mentioned place",
         "Published within ten days"
       ],
       "priority": 8,
@@ -5315,80 +5315,6 @@
       ]
     },
     {
-      "id": "candidate:report-5853093e3de4700a6862:report-91d10bbd18899a742fd8",
-      "group_ids": [
-        "report-5853093e3de4700a6862",
-        "report-91d10bbd18899a742fd8"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-5853093e3de4700a6862",
-          "title": "Woman faces 65 additional charges for fraud, theft at multiple hospitals: OPP - Toronto Star",
-          "source_url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQaTFXU24wZk0xVmVadmpQX05FaEU1M3duUjFQeXV0UnRzNkx0X0tLWWxyWnk0R1lFR1d3NFpoRW9uUTVROEtNMldIQXVmLWRvcTJYdXd4aWNnU2VweHgzQ0VfN1RDOFNQa3VKbVNlZ0k1LUpuX1VEMnhtcV80NHRRY3J4X0NzZWpsNjJ6TC1FSXZFNVJxMDFvTkVlRnZrZHBsdV8xaFBFZ1Y4TS1sMXdfRnlPNXVVTHd0Q204aDMta3FaWGduV0NtN3pqTmp3Ukh1VnctanN5YWx1dURjekROSUtFRGc2NTRTX1NvaFd5c20tbEpj?oc=5",
-          "publication_date": "2026-09-26T07:00:00+00:00",
-          "source_count": 1
-        },
-        {
-          "group_id": "report-91d10bbd18899a742fd8",
-          "title": "Burlington woman faces 65 additional charges for fraud, theft at multiple hospitals - CityNews Toronto",
-          "source_url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNY3psTXlBT2xyZzRJeXduODNHQW5QNks2ZkpUZHlNekRUY1pxU1oyTk91OUJ0ZjhsNWhCWS1QRGZxTEhEUHFHcXl6LWFVZDMxazlKbUVEcXo5VjlVenljaWdINUZBbF9SZ2czVEpjVnBEdlJ6SV8xcXNhN2F1RnNCRVI4UE9aQy0ydmpzVlg5c0JXZG94TEhoS3NzY3RUcVFlODRvb2VMbDNpOHVHWDdWU3pCaTZXRUg2Tjl4eWFzdw?oc=5",
-          "publication_date": "2026-09-26T07:00:00+00:00",
-          "source_count": 1
-        }
-      ],
-      "reasons": [
-        "8 shared descriptive headline terms",
-        "Same source-mentioned place",
-        "Published within ten days"
-      ],
-      "priority": 8,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
-      "id": "candidate:report-656170ac300ba913d287:report-ebbb63909e007cff1984",
-      "group_ids": [
-        "report-656170ac300ba913d287",
-        "report-ebbb63909e007cff1984"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-656170ac300ba913d287",
-          "title": "Twice-disbarred B.C. lawyer facing multiple fraud, theft charges - Business in Vancouver",
-          "source_url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPazF2VEt0WS0wbDRLcWJQaEI4dGlSQkRkT3NsM3VwcW8waFBzd3NpSmhWU2R3dFBCVVNGWWhpUjNjZEx3VzVaVndsSXd3cmI3S0VVdlJsb0hKclRSWVpQQUF6WFpvX1pnQW1xLWYyM2ZiT1ZXdDJvQVNhXzhNU1RpaVVpU2dWRmlHY3kwc2toRmM4MkhuSTVBbFBjNENJT2FORlhnR2tlTHd3WElybWxfQUQxbHZvZw?oc=5",
-          "publication_date": "2022-07-15T07:00:00+00:00",
-          "source_count": 1
-        },
-        {
-          "group_id": "report-ebbb63909e007cff1984",
-          "title": "Twice-disbarred B.C. lawyer facing multiple fraud, theft charges - Vancouver Is Awesome",
-          "source_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOSXpUY0tIbkRtNWtDLW5ud1pUd1ZhdXRldjIyeHcwekFFM3BCVTlDcFk4TnhOR005cGpmTTdERi0tZV93UUl5ZnpyUGFyV2x0aUtuRXNNRHczdndtRzhvejNoWDJIWlJmZDlBOXFDR0hFSkdZOGJiTVVyVGFkU09wMERyZGVZVzNzMHpuU1JsUzdtcHhXYUV2OHd2SXEzNXV4cjgtQUE3LVFxVnRNMEtJ?oc=5",
-          "publication_date": "2022-07-15T07:00:00+00:00",
-          "source_count": 1
-        }
-      ],
-      "reasons": [
-        "8 shared descriptive headline terms",
-        "Same source-mentioned place",
-        "Published within ten days"
-      ],
-      "priority": 8,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
       "id": "candidate:report-9b06da84d8731fd36f33:report-a2fc5df07bd9a7dc58e0",
       "group_ids": [
         "report-9b06da84d8731fd36f33",
@@ -5524,6 +5450,80 @@
       "reasons": [
         "5 shared descriptive headline terms",
         "Overlapping scam method: Romance & relationship scams",
+        "Published within ten days"
+      ],
+      "priority": 8,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
+      "id": "candidate:report-5853093e3de4700a6862:report-91d10bbd18899a742fd8",
+      "group_ids": [
+        "report-5853093e3de4700a6862",
+        "report-91d10bbd18899a742fd8"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-5853093e3de4700a6862",
+          "title": "Woman faces 65 additional charges for fraud, theft at multiple hospitals: OPP - Toronto Star",
+          "source_url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQaTFXU24wZk0xVmVadmpQX05FaEU1M3duUjFQeXV0UnRzNkx0X0tLWWxyWnk0R1lFR1d3NFpoRW9uUTVROEtNMldIQXVmLWRvcTJYdXd4aWNnU2VweHgzQ0VfN1RDOFNQa3VKbVNlZ0k1LUpuX1VEMnhtcV80NHRRY3J4X0NzZWpsNjJ6TC1FSXZFNVJxMDFvTkVlRnZrZHBsdV8xaFBFZ1Y4TS1sMXdfRnlPNXVVTHd0Q204aDMta3FaWGduV0NtN3pqTmp3Ukh1VnctanN5YWx1dURjekROSUtFRGc2NTRTX1NvaFd5c20tbEpj?oc=5",
+          "publication_date": "2026-09-26T07:00:00+00:00",
+          "source_count": 1
+        },
+        {
+          "group_id": "report-91d10bbd18899a742fd8",
+          "title": "Burlington woman faces 65 additional charges for fraud, theft at multiple hospitals - CityNews Toronto",
+          "source_url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNY3psTXlBT2xyZzRJeXduODNHQW5QNks2ZkpUZHlNekRUY1pxU1oyTk91OUJ0ZjhsNWhCWS1QRGZxTEhEUHFHcXl6LWFVZDMxazlKbUVEcXo5VjlVenljaWdINUZBbF9SZ2czVEpjVnBEdlJ6SV8xcXNhN2F1RnNCRVI4UE9aQy0ydmpzVlg5c0JXZG94TEhoS3NzY3RUcVFlODRvb2VMbDNpOHVHWDdWU3pCaTZXRUg2Tjl4eWFzdw?oc=5",
+          "publication_date": "2026-09-26T07:00:00+00:00",
+          "source_count": 1
+        }
+      ],
+      "reasons": [
+        "8 shared descriptive headline terms",
+        "Same source-mentioned place",
+        "Published within ten days"
+      ],
+      "priority": 8,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
+      "id": "candidate:report-656170ac300ba913d287:report-ebbb63909e007cff1984",
+      "group_ids": [
+        "report-656170ac300ba913d287",
+        "report-ebbb63909e007cff1984"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-656170ac300ba913d287",
+          "title": "Twice-disbarred B.C. lawyer facing multiple fraud, theft charges - Business in Vancouver",
+          "source_url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPazF2VEt0WS0wbDRLcWJQaEI4dGlSQkRkT3NsM3VwcW8waFBzd3NpSmhWU2R3dFBCVVNGWWhpUjNjZEx3VzVaVndsSXd3cmI3S0VVdlJsb0hKclRSWVpQQUF6WFpvX1pnQW1xLWYyM2ZiT1ZXdDJvQVNhXzhNU1RpaVVpU2dWRmlHY3kwc2toRmM4MkhuSTVBbFBjNENJT2FORlhnR2tlTHd3WElybWxfQUQxbHZvZw?oc=5",
+          "publication_date": "2022-07-15T07:00:00+00:00",
+          "source_count": 1
+        },
+        {
+          "group_id": "report-ebbb63909e007cff1984",
+          "title": "Twice-disbarred B.C. lawyer facing multiple fraud, theft charges - Vancouver Is Awesome",
+          "source_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOSXpUY0tIbkRtNWtDLW5ud1pUd1ZhdXRldjIyeHcwekFFM3BCVTlDcFk4TnhOR005cGpmTTdERi0tZV93UUl5ZnpyUGFyV2x0aUtuRXNNRHczdndtRzhvejNoWDJIWlJmZDlBOXFDR0hFSkdZOGJiTVVyVGFkU09wMERyZGVZVzNzMHpuU1JsUzdtcHhXYUV2OHd2SXEzNXV4cjgtQUE3LVFxVnRNMEtJ?oc=5",
+          "publication_date": "2022-07-15T07:00:00+00:00",
+          "source_count": 1
+        }
+      ],
+      "reasons": [
+        "8 shared descriptive headline terms",
+        "Same source-mentioned place",
         "Published within ten days"
       ],
       "priority": 8,
@@ -6162,6 +6162,43 @@
       ]
     },
     {
+      "id": "candidate:report-0e6dd7c424b5cc98aa69:report-1b567fc3e156b58c117d",
+      "group_ids": [
+        "report-0e6dd7c424b5cc98aa69",
+        "report-1b567fc3e156b58c117d"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-0e6dd7c424b5cc98aa69",
+          "title": "Former B.C. gaming minister agrees he was 'unfair' to Mountie who raised alarm on money laundering - CBC",
+          "source_url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQQ0o1WXZsVkJZdUgyV3JjTUM2UUhpNWRTeWRoaVpVX3NRLVFzYmRlc0FoR1BEcEQ1VkNqQmdvOVh0ZjlIVEpXajVKX01sSzhRT2RVaWcyNzVaRWZlaHZacTdZRVJ4VTItQlh0NEU3UzNHT0lfa3BUQ1NvYVotYW5vZXE3NFBvcVItLXd5TUxpVUxERmVYN0o5Rm9QU2xZV1hZbDc5blFmTU04QllmbFctMjU5UEZaaHNuNTYyN2VkbzYzcklfVlE?oc=5",
+          "publication_date": "2021-05-15T07:00:00+00:00",
+          "source_count": 1
+        },
+        {
+          "group_id": "report-1b567fc3e156b58c117d",
+          "title": "Allegations B.C. prioritized gaming revenue over money laundering are 'offensive,' former minister says - CBC",
+          "source_url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOQUF0MzUtX0FkWFBDd1FQQXRtVFROb3k3ZkEwU0YycTdrNlVfM1dsMTcxSkdJVm14cUZxal9jeDJFb3VDSnd3clVjTkZXYUI2VXJ6MGtZMXRDakZqMTVpb1h2OWFRU0I3djFUaXFpb25aUnFrSWRHbl9BRzVEUU9lTjRPZDQtWTJRZXlIaVRHSWlscFFGdkFzVUVGYWZsVDA?oc=5",
+          "publication_date": "2021-04-23T07:00:00+00:00",
+          "source_count": 2
+        }
+      ],
+      "reasons": [
+        "5 shared descriptive headline terms",
+        "Overlapping scam method: Money mules & laundering",
+        "Published within 45 days"
+      ],
+      "priority": 7,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
       "id": "candidate:report-013cbf9ef1252db14726:report-07b08225fd1625b58776",
       "group_ids": [
         "report-013cbf9ef1252db14726",
@@ -6222,43 +6259,6 @@
       "reasons": [
         "5 shared descriptive headline terms",
         "Same source-mentioned place",
-        "Published within 45 days"
-      ],
-      "priority": 7,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
-      "id": "candidate:report-0e6dd7c424b5cc98aa69:report-1b567fc3e156b58c117d",
-      "group_ids": [
-        "report-0e6dd7c424b5cc98aa69",
-        "report-1b567fc3e156b58c117d"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-0e6dd7c424b5cc98aa69",
-          "title": "Former B.C. gaming minister agrees he was 'unfair' to Mountie who raised alarm on money laundering - CBC",
-          "source_url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQQ0o1WXZsVkJZdUgyV3JjTUM2UUhpNWRTeWRoaVpVX3NRLVFzYmRlc0FoR1BEcEQ1VkNqQmdvOVh0ZjlIVEpXajVKX01sSzhRT2RVaWcyNzVaRWZlaHZacTdZRVJ4VTItQlh0NEU3UzNHT0lfa3BUQ1NvYVotYW5vZXE3NFBvcVItLXd5TUxpVUxERmVYN0o5Rm9QU2xZV1hZbDc5blFmTU04QllmbFctMjU5UEZaaHNuNTYyN2VkbzYzcklfVlE?oc=5",
-          "publication_date": "2021-05-15T07:00:00+00:00",
-          "source_count": 1
-        },
-        {
-          "group_id": "report-1b567fc3e156b58c117d",
-          "title": "Allegations B.C. prioritized gaming revenue over money laundering are 'offensive,' former minister says - CBC",
-          "source_url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOQUF0MzUtX0FkWFBDd1FQQXRtVFROb3k3ZkEwU0YycTdrNlVfM1dsMTcxSkdJVm14cUZxal9jeDJFb3VDSnd3clVjTkZXYUI2VXJ6MGtZMXRDakZqMTVpb1h2OWFRU0I3djFUaXFpb25aUnFrSWRHbl9BRzVEUU9lTjRPZDQtWTJRZXlIaVRHSWlscFFGdkFzVUVGYWZsVDA?oc=5",
-          "publication_date": "2021-04-23T07:00:00+00:00",
-          "source_count": 2
-        }
-      ],
-      "reasons": [
-        "5 shared descriptive headline terms",
-        "Overlapping scam method: Money mules & laundering",
         "Published within 45 days"
       ],
       "priority": 7,

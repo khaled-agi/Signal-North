@@ -1,54 +1,54 @@
 {
-  "last_attempt_at": "2026-11-11T05:42:14+00:00",
+  "last_attempt_at": "2026-11-11T13:56:37+00:00",
   "source": "CFPB public Consumer Complaint Database",
   "endpoint": "https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/",
   "status": "ok",
   "sample_limit_per_call": 100,
   "retention_days": 90,
   "methodology": "Bounded rotating published complaint samples, including bank products. NOT a representative sample, findings, or company misconduct rates. No narratives or ZIP codes.",
-  "latest_window_total": 1938174,
+  "latest_window_total": 1973401,
   "total_basis": "CFPB exact all-product query total (if supplied); not sampled bank counts",
   "requested_product_queries": [
-    "Vehicle loan or lease",
-    "Checking or savings account",
-    "Credit card"
+    "Money transfer, virtual currency, or money service",
+    "Mortgage",
+    "Vehicle loan or lease"
   ],
   "queries": {
     "all_recent": {
       "status": "ok",
       "returned": 100,
-      "exact_window_total": 1938174,
+      "exact_window_total": 1973401,
       "filter": "all products",
+      "note": "This is one capped search page, NOT all complaints in category"
+    },
+    "Money transfer, virtual currency, or money service": {
+      "status": "ok",
+      "returned": 100,
+      "exact_window_total": 9272,
+      "filter": "Money transfer, virtual currency, or money service",
+      "note": "This is one capped search page, NOT all complaints in category"
+    },
+    "Mortgage": {
+      "status": "ok",
+      "returned": 100,
+      "exact_window_total": 8153,
+      "filter": "Mortgage",
       "note": "This is one capped search page, NOT all complaints in category"
     },
     "Vehicle loan or lease": {
       "status": "ok",
       "returned": 100,
-      "exact_window_total": 6061,
+      "exact_window_total": 6182,
       "filter": "Vehicle loan or lease",
-      "note": "This is one capped search page, NOT all complaints in category"
-    },
-    "Checking or savings account": {
-      "status": "ok",
-      "returned": 100,
-      "exact_window_total": 21314,
-      "filter": "Checking or savings account",
-      "note": "This is one capped search page, NOT all complaints in category"
-    },
-    "Credit card": {
-      "status": "ok",
-      "returned": 100,
-      "exact_window_total": 22709,
-      "filter": "Credit card",
       "note": "This is one capped search page, NOT all complaints in category"
     }
   },
-  "last_success_at": "2026-11-11T05:42:14+00:00",
+  "last_success_at": "2026-11-11T13:56:37+00:00",
   "query_received_from": "2026-08-13",
   "returned_in_latest_request": 400,
   "queries_succeeded": 4,
   "queries_attempted": 4,
   "stored_records": 2500,
-  "companies_in_stored_sample": 157,
-  "banking_product_records_in_sample": 1319
+  "companies_in_stored_sample": 159,
+  "banking_product_records_in_sample": 1243
 }
