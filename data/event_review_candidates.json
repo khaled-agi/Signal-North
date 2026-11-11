@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-10T23:41:51+00:00",
-  "candidate_pairs": 181,
+  "generated_at": "2026-11-11T05:43:29+00:00",
+  "candidate_pairs": 182,
   "methodology": "Suggested possible article relationships. These are not verified same incidents and require original-source editorial review.",
   "items": [
     {
@@ -66,6 +66,120 @@
       "reasons": [
         "8 shared descriptive headline terms",
         "Overlapping scam method: Fraud investigations & enforcement",
+        "Same source-mentioned place",
+        "Published within ten days"
+      ],
+      "priority": 10,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
+      "id": "candidate:report-9e0a0d1d3c203a067c6a:report-d633f3a12921dc7c2c4e",
+      "group_ids": [
+        "report-9e0a0d1d3c203a067c6a",
+        "report-d633f3a12921dc7c2c4e"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-9e0a0d1d3c203a067c6a",
+          "title": "Ontario ‘Crypto King’ is found guilty of fraud. Jury takes just hour and a half to reach verdict - Toronto Star",
+          "source_url": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxNY3VSZEVxcTJxeTd2VEViQ09US29MRTJFcFVwelZfUncyajZHWGM5eldnMHRsX01mbDJyVkxPQ0ZZdW9IeGdsVHlJQU5kZDJWLVFSNjczV2VxVlUwQzY3QUFzMG5tX2JFSEhSUG5Rb29pdmd1YWtjaHdSeW5XT01uVl9IM1lIV2VHekc0bko4YmQxU1Vfc0J5X0s1a1pWcXYxaE81RkF2QmxENWI1VXlWa2oybWl2UkJaSHoxMm9ZM21fNDRUUkt5UVBDQk0wR3RhREQ1cG1ZQnpUN0pubUJ1NW9XQVNOQXlWN2tGcjhVUVlsN2hkTjN3am9qS0QzRWMxM3IwZTR1NU1BcWc?oc=5",
+          "publication_date": "2026-10-29T07:00:00+00:00",
+          "source_count": 1
+        },
+        {
+          "group_id": "report-d633f3a12921dc7c2c4e",
+          "title": "'Crypto King' Aiden Pleterski found guilty of fraud at Toronto jury trial | Hanomansing Live - Yahoo News Canada",
+          "source_url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9tQUhxTDlIdWdIbng4LXJNMjI3QmlYLVcwU1NIMXY4QkNHX25LdzN3S1ZEMVFKM3pzOG95TndUODVmaHFYcmdVVlNfbWJpVFFvTDlYbVYzM21UTV9yN1BLcHFDNmF4eFBaX1BPMTdETVRBRFMzdzVuLUhrOTdhNVE?oc=5",
+          "publication_date": "2026-10-30T00:03:00+00:00",
+          "source_count": 2
+        }
+      ],
+      "reasons": [
+        "6 shared descriptive headline terms",
+        "Overlapping scam method: Investment & crypto scams",
+        "Same source-mentioned place",
+        "Published within ten days"
+      ],
+      "priority": 10,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
+      "id": "candidate:report-d1cb6f7b67ca5a3c6edf:report-d633f3a12921dc7c2c4e",
+      "group_ids": [
+        "report-d1cb6f7b67ca5a3c6edf",
+        "report-d633f3a12921dc7c2c4e"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-d1cb6f7b67ca5a3c6edf",
+          "title": "’Crypto King’ Aiden Pleterski found guilty of fraud at his jury trial in Toronto - Radio-Canada",
+          "source_url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPSlFZTVUxd01lSlB1MnRUSEVsMXJmVGxOUnRyXzlOd0IyejdtLXVNTk03U3NjaWRIeHpTWWo0RGJyWUJHQzAwamEtdHVtZDRaa0JUdi1ibWlvWWJxcjFmT0dvOFFVcTVqc05aQzIxSTNhUlA3NlRiSFV2a3BSaTZkMWFGak9jTmN3LVBuM3pCTHZGWWhiejI4ZXdjTFloTmxBcVRudlFoWDQ1S3N6SXZJRTVKTzFMMjd6RHRHNEl3QlZvMGQ1?oc=5",
+          "publication_date": "2026-10-29T07:00:00+00:00",
+          "source_count": 2
+        },
+        {
+          "group_id": "report-d633f3a12921dc7c2c4e",
+          "title": "'Crypto King' Aiden Pleterski found guilty of fraud at Toronto jury trial | Hanomansing Live - Yahoo News Canada",
+          "source_url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9tQUhxTDlIdWdIbng4LXJNMjI3QmlYLVcwU1NIMXY4QkNHX25LdzN3S1ZEMVFKM3pzOG95TndUODVmaHFYcmdVVlNfbWJpVFFvTDlYbVYzM21UTV9yN1BLcHFDNmF4eFBaX1BPMTdETVRBRFMzdzVuLUhrOTdhNVE?oc=5",
+          "publication_date": "2026-10-30T00:03:00+00:00",
+          "source_count": 2
+        }
+      ],
+      "reasons": [
+        "9 shared descriptive headline terms",
+        "Overlapping scam method: Investment & crypto scams",
+        "Same source-mentioned place",
+        "Published within ten days"
+      ],
+      "priority": 10,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
+      "id": "candidate:report-a0a3a10b402848bda631:report-d633f3a12921dc7c2c4e",
+      "group_ids": [
+        "report-a0a3a10b402848bda631",
+        "report-d633f3a12921dc7c2c4e"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-a0a3a10b402848bda631",
+          "title": "‘Crypto King’ Aiden Pleterski Found Guilty of Fraud in Toronto - The Crypto Times",
+          "source_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOU3JpQmxxcGFIbEEwZHAwaVk3ZGRqV3JaZWlGWDJfRndZb0lYaUlTWVlQX1ZHWENQYTNVNE92SlRrUlI3WjU1M1pBOTJzcmd5QVduTW1rTkMwTTRJMG5JVzd5blNianpXQ1VRbFRBd0Rtams1M213SFdlR25oMFhISE13WGFxaFRlb1dyN1RWMWM0bnh3WXhVTlZKX1V2TGpE?oc=5",
+          "publication_date": "2026-10-29T19:44:52+00:00",
+          "source_count": 1
+        },
+        {
+          "group_id": "report-d633f3a12921dc7c2c4e",
+          "title": "'Crypto King' Aiden Pleterski found guilty of fraud at Toronto jury trial | Hanomansing Live - Yahoo News Canada",
+          "source_url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9tQUhxTDlIdWdIbng4LXJNMjI3QmlYLVcwU1NIMXY4QkNHX25LdzN3S1ZEMVFKM3pzOG95TndUODVmaHFYcmdVVlNfbWJpVFFvTDlYbVYzM21UTV9yN1BLcHFDNmF4eFBaX1BPMTdETVRBRFMzdzVuLUhrOTdhNVE?oc=5",
+          "publication_date": "2026-10-30T00:03:00+00:00",
+          "source_count": 2
+        }
+      ],
+      "reasons": [
+        "7 shared descriptive headline terms",
+        "Overlapping scam method: Investment & crypto scams",
         "Same source-mentioned place",
         "Published within ten days"
       ],
@@ -156,29 +270,29 @@
       ]
     },
     {
-      "id": "candidate:report-a0a3a10b402848bda631:report-d633f3a12921dc7c2c4e",
+      "id": "candidate:report-9e0a0d1d3c203a067c6a:report-d1cb6f7b67ca5a3c6edf",
       "group_ids": [
-        "report-a0a3a10b402848bda631",
-        "report-d633f3a12921dc7c2c4e"
+        "report-9e0a0d1d3c203a067c6a",
+        "report-d1cb6f7b67ca5a3c6edf"
       ],
       "headlines": [
         {
-          "group_id": "report-a0a3a10b402848bda631",
-          "title": "‘Crypto King’ Aiden Pleterski Found Guilty of Fraud in Toronto - The Crypto Times",
-          "source_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOU3JpQmxxcGFIbEEwZHAwaVk3ZGRqV3JaZWlGWDJfRndZb0lYaUlTWVlQX1ZHWENQYTNVNE92SlRrUlI3WjU1M1pBOTJzcmd5QVduTW1rTkMwTTRJMG5JVzd5blNianpXQ1VRbFRBd0Rtams1M213SFdlR25oMFhISE13WGFxaFRlb1dyN1RWMWM0bnh3WXhVTlZKX1V2TGpE?oc=5",
-          "publication_date": "2026-10-29T19:44:52+00:00",
+          "group_id": "report-9e0a0d1d3c203a067c6a",
+          "title": "Ontario ‘Crypto King’ is found guilty of fraud. Jury takes just hour and a half to reach verdict - Toronto Star",
+          "source_url": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxNY3VSZEVxcTJxeTd2VEViQ09US29MRTJFcFVwelZfUncyajZHWGM5eldnMHRsX01mbDJyVkxPQ0ZZdW9IeGdsVHlJQU5kZDJWLVFSNjczV2VxVlUwQzY3QUFzMG5tX2JFSEhSUG5Rb29pdmd1YWtjaHdSeW5XT01uVl9IM1lIV2VHekc0bko4YmQxU1Vfc0J5X0s1a1pWcXYxaE81RkF2QmxENWI1VXlWa2oybWl2UkJaSHoxMm9ZM21fNDRUUkt5UVBDQk0wR3RhREQ1cG1ZQnpUN0pubUJ1NW9XQVNOQXlWN2tGcjhVUVlsN2hkTjN3am9qS0QzRWMxM3IwZTR1NU1BcWc?oc=5",
+          "publication_date": "2026-10-29T07:00:00+00:00",
           "source_count": 1
         },
         {
-          "group_id": "report-d633f3a12921dc7c2c4e",
-          "title": "'Crypto King' Aiden Pleterski found guilty of fraud at Toronto jury trial | Hanomansing Live - Yahoo News Canada",
-          "source_url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9tQUhxTDlIdWdIbng4LXJNMjI3QmlYLVcwU1NIMXY4QkNHX25LdzN3S1ZEMVFKM3pzOG95TndUODVmaHFYcmdVVlNfbWJpVFFvTDlYbVYzM21UTV9yN1BLcHFDNmF4eFBaX1BPMTdETVRBRFMzdzVuLUhrOTdhNVE?oc=5",
-          "publication_date": "2026-10-30T00:03:00+00:00",
+          "group_id": "report-d1cb6f7b67ca5a3c6edf",
+          "title": "’Crypto King’ Aiden Pleterski found guilty of fraud at his jury trial in Toronto - Radio-Canada",
+          "source_url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPSlFZTVUxd01lSlB1MnRUSEVsMXJmVGxOUnRyXzlOd0IyejdtLXVNTk03U3NjaWRIeHpTWWo0RGJyWUJHQzAwamEtdHVtZDRaa0JUdi1ibWlvWWJxcjFmT0dvOFFVcTVqc05aQzIxSTNhUlA3NlRiSFV2a3BSaTZkMWFGak9jTmN3LVBuM3pCTHZGWWhiejI4ZXdjTFloTmxBcVRudlFoWDQ1S3N6SXZJRTVKTzFMMjd6RHRHNEl3QlZvMGQ1?oc=5",
+          "publication_date": "2026-10-29T07:00:00+00:00",
           "source_count": 2
         }
       ],
       "reasons": [
-        "7 shared descriptive headline terms",
+        "6 shared descriptive headline terms",
         "Overlapping scam method: Investment & crypto scams",
         "Same source-mentioned place",
         "Published within ten days"
@@ -270,120 +384,6 @@
       ]
     },
     {
-      "id": "candidate:report-9e0a0d1d3c203a067c6a:report-d633f3a12921dc7c2c4e",
-      "group_ids": [
-        "report-9e0a0d1d3c203a067c6a",
-        "report-d633f3a12921dc7c2c4e"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-9e0a0d1d3c203a067c6a",
-          "title": "Ontario ‘Crypto King’ is found guilty of fraud. Jury takes just hour and a half to reach verdict - Toronto Star",
-          "source_url": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxNY3VSZEVxcTJxeTd2VEViQ09US29MRTJFcFVwelZfUncyajZHWGM5eldnMHRsX01mbDJyVkxPQ0ZZdW9IeGdsVHlJQU5kZDJWLVFSNjczV2VxVlUwQzY3QUFzMG5tX2JFSEhSUG5Rb29pdmd1YWtjaHdSeW5XT01uVl9IM1lIV2VHekc0bko4YmQxU1Vfc0J5X0s1a1pWcXYxaE81RkF2QmxENWI1VXlWa2oybWl2UkJaSHoxMm9ZM21fNDRUUkt5UVBDQk0wR3RhREQ1cG1ZQnpUN0pubUJ1NW9XQVNOQXlWN2tGcjhVUVlsN2hkTjN3am9qS0QzRWMxM3IwZTR1NU1BcWc?oc=5",
-          "publication_date": "2026-10-29T07:00:00+00:00",
-          "source_count": 1
-        },
-        {
-          "group_id": "report-d633f3a12921dc7c2c4e",
-          "title": "'Crypto King' Aiden Pleterski found guilty of fraud at Toronto jury trial | Hanomansing Live - Yahoo News Canada",
-          "source_url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9tQUhxTDlIdWdIbng4LXJNMjI3QmlYLVcwU1NIMXY4QkNHX25LdzN3S1ZEMVFKM3pzOG95TndUODVmaHFYcmdVVlNfbWJpVFFvTDlYbVYzM21UTV9yN1BLcHFDNmF4eFBaX1BPMTdETVRBRFMzdzVuLUhrOTdhNVE?oc=5",
-          "publication_date": "2026-10-30T00:03:00+00:00",
-          "source_count": 2
-        }
-      ],
-      "reasons": [
-        "6 shared descriptive headline terms",
-        "Overlapping scam method: Investment & crypto scams",
-        "Same source-mentioned place",
-        "Published within ten days"
-      ],
-      "priority": 10,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
-      "id": "candidate:report-d1cb6f7b67ca5a3c6edf:report-d633f3a12921dc7c2c4e",
-      "group_ids": [
-        "report-d1cb6f7b67ca5a3c6edf",
-        "report-d633f3a12921dc7c2c4e"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-d1cb6f7b67ca5a3c6edf",
-          "title": "’Crypto King’ Aiden Pleterski found guilty of fraud at his jury trial in Toronto - Radio-Canada",
-          "source_url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPSlFZTVUxd01lSlB1MnRUSEVsMXJmVGxOUnRyXzlOd0IyejdtLXVNTk03U3NjaWRIeHpTWWo0RGJyWUJHQzAwamEtdHVtZDRaa0JUdi1ibWlvWWJxcjFmT0dvOFFVcTVqc05aQzIxSTNhUlA3NlRiSFV2a3BSaTZkMWFGak9jTmN3LVBuM3pCTHZGWWhiejI4ZXdjTFloTmxBcVRudlFoWDQ1S3N6SXZJRTVKTzFMMjd6RHRHNEl3QlZvMGQ1?oc=5",
-          "publication_date": "2026-10-29T07:00:00+00:00",
-          "source_count": 2
-        },
-        {
-          "group_id": "report-d633f3a12921dc7c2c4e",
-          "title": "'Crypto King' Aiden Pleterski found guilty of fraud at Toronto jury trial | Hanomansing Live - Yahoo News Canada",
-          "source_url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9tQUhxTDlIdWdIbng4LXJNMjI3QmlYLVcwU1NIMXY4QkNHX25LdzN3S1ZEMVFKM3pzOG95TndUODVmaHFYcmdVVlNfbWJpVFFvTDlYbVYzM21UTV9yN1BLcHFDNmF4eFBaX1BPMTdETVRBRFMzdzVuLUhrOTdhNVE?oc=5",
-          "publication_date": "2026-10-30T00:03:00+00:00",
-          "source_count": 2
-        }
-      ],
-      "reasons": [
-        "9 shared descriptive headline terms",
-        "Overlapping scam method: Investment & crypto scams",
-        "Same source-mentioned place",
-        "Published within ten days"
-      ],
-      "priority": 10,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
-      "id": "candidate:report-9e0a0d1d3c203a067c6a:report-d1cb6f7b67ca5a3c6edf",
-      "group_ids": [
-        "report-9e0a0d1d3c203a067c6a",
-        "report-d1cb6f7b67ca5a3c6edf"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-9e0a0d1d3c203a067c6a",
-          "title": "Ontario ‘Crypto King’ is found guilty of fraud. Jury takes just hour and a half to reach verdict - Toronto Star",
-          "source_url": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxNY3VSZEVxcTJxeTd2VEViQ09US29MRTJFcFVwelZfUncyajZHWGM5eldnMHRsX01mbDJyVkxPQ0ZZdW9IeGdsVHlJQU5kZDJWLVFSNjczV2VxVlUwQzY3QUFzMG5tX2JFSEhSUG5Rb29pdmd1YWtjaHdSeW5XT01uVl9IM1lIV2VHekc0bko4YmQxU1Vfc0J5X0s1a1pWcXYxaE81RkF2QmxENWI1VXlWa2oybWl2UkJaSHoxMm9ZM21fNDRUUkt5UVBDQk0wR3RhREQ1cG1ZQnpUN0pubUJ1NW9XQVNOQXlWN2tGcjhVUVlsN2hkTjN3am9qS0QzRWMxM3IwZTR1NU1BcWc?oc=5",
-          "publication_date": "2026-10-29T07:00:00+00:00",
-          "source_count": 1
-        },
-        {
-          "group_id": "report-d1cb6f7b67ca5a3c6edf",
-          "title": "’Crypto King’ Aiden Pleterski found guilty of fraud at his jury trial in Toronto - Radio-Canada",
-          "source_url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPSlFZTVUxd01lSlB1MnRUSEVsMXJmVGxOUnRyXzlOd0IyejdtLXVNTk03U3NjaWRIeHpTWWo0RGJyWUJHQzAwamEtdHVtZDRaa0JUdi1ibWlvWWJxcjFmT0dvOFFVcTVqc05aQzIxSTNhUlA3NlRiSFV2a3BSaTZkMWFGak9jTmN3LVBuM3pCTHZGWWhiejI4ZXdjTFloTmxBcVRudlFoWDQ1S3N6SXZJRTVKTzFMMjd6RHRHNEl3QlZvMGQ1?oc=5",
-          "publication_date": "2026-10-29T07:00:00+00:00",
-          "source_count": 2
-        }
-      ],
-      "reasons": [
-        "6 shared descriptive headline terms",
-        "Overlapping scam method: Investment & crypto scams",
-        "Same source-mentioned place",
-        "Published within ten days"
-      ],
-      "priority": 10,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
       "id": "candidate:report-114dac84889eb9024014:report-6a4ddaa419767a7605a4",
       "group_ids": [
         "report-114dac84889eb9024014",
@@ -460,43 +460,6 @@
       ]
     },
     {
-      "id": "candidate:report-77d93a748246d25fc95c:report-daa89dadea3b315b20e1",
-      "group_ids": [
-        "report-77d93a748246d25fc95c",
-        "report-daa89dadea3b315b20e1"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-77d93a748246d25fc95c",
-          "title": "National Bank of Canada Partners with Sardine to Strengthen Digital Banking Security and Fraud Operations Efficiency - Business Wire",
-          "source_url": "https://news.google.com/rss/articles/CBMigwJBVV95cUxOLUxlQ053Q1QtSXpKeWExS0RTaGVtZ0M5S3V0TnVjSmZEQ1NJelY4RXBhTmVQWC1sa1VtbzZKc182NjBGVDZjMUxmdER6UnJDRWVoWmF0b1dIQ0VYZ2FJSWdBay13NUNxX2IzeUkxM0JpcTBta1M0OFJGMGZaQ2hEZkVEdFdRMzI5WHkxVks0cDZrc2dqM0RjcnVuUngzZ2E0eWF6bzRiRm1nUjhkVmp4bnZlMWVBZ1FHcF93a0UtLWIwQ3FZTDRkWkRQV1laM0F2OFlsVDlodzFENDFTWmEzc0hiZVMtSVRuTGtVUkhQSUpQNEdNUUhXcnB4ZlNvamFrOTBn?oc=5",
-          "publication_date": "2026-05-20T07:00:00+00:00",
-          "source_count": 1
-        },
-        {
-          "group_id": "report-daa89dadea3b315b20e1",
-          "title": "Sardine: National Bank Of Canada Partnership Expands Digital Banking Fraud Prevention Capabilities - Pulse 2.0",
-          "source_url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQSDVzSktaWUFyOGN4TUhveWJKNW91MGppdlFDT1dXV2EzbENYY3NUaXdBOEZnaE5oclRYeU1hejVMMzFxV1hJbUcxY0ZNZTVOQS03WDVCVmp1bXlCYmwyVlNtVzZqNDhHenFJWndnb0NCV3drLTdEY0cxMzl4dWtXQmVrQm9CNHBDN1o3Q1Z5V0l0YUJodFktUGpnQlNjZU9uTVlZcnlVcGJsSm5QWjBMd29jQXZjaFZm0gG-AUFVX3lxTE9hVUdiOWd1d053eEpOTVFMS0FrUnhLREhYWGtwV3pMeTE5UjhlNzY4a1BucG1KUHRLQnpCb0YyUDFTY0hXMjR3SFBkZDJkTUdISTRZNzFPd1dTdnBpUHl2OUJpQ1VITm5idTZZdlRMeW0wLV9ZNWxjOGhGcHluRC0taUc1UWZVV1FxNmVtc1dPS1lpdUVSOEtRV21obXo3RkVYZzJtclBUSThGOHFRdzUxdlVQcWJuVFdub2ppenc?oc=5",
-          "publication_date": "2026-05-22T07:00:00+00:00",
-          "source_count": 1
-        }
-      ],
-      "reasons": [
-        "Same organization explicitly named: National Bank",
-        "4 shared descriptive headline terms",
-        "Published within ten days"
-      ],
-      "priority": 10,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
       "id": "candidate:report-27fe2b5cfc5e39ab9561:report-cb61d4a9c7db76ed7943",
       "group_ids": [
         "report-27fe2b5cfc5e39ab9561",
@@ -522,6 +485,43 @@
         "5 shared descriptive headline terms",
         "Overlapping scam method: Fraud investigations & enforcement",
         "Same source-mentioned place",
+        "Published within ten days"
+      ],
+      "priority": 10,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
+      "id": "candidate:report-77d93a748246d25fc95c:report-daa89dadea3b315b20e1",
+      "group_ids": [
+        "report-77d93a748246d25fc95c",
+        "report-daa89dadea3b315b20e1"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-77d93a748246d25fc95c",
+          "title": "National Bank of Canada Partners with Sardine to Strengthen Digital Banking Security and Fraud Operations Efficiency - Business Wire",
+          "source_url": "https://news.google.com/rss/articles/CBMigwJBVV95cUxOLUxlQ053Q1QtSXpKeWExS0RTaGVtZ0M5S3V0TnVjSmZEQ1NJelY4RXBhTmVQWC1sa1VtbzZKc182NjBGVDZjMUxmdER6UnJDRWVoWmF0b1dIQ0VYZ2FJSWdBay13NUNxX2IzeUkxM0JpcTBta1M0OFJGMGZaQ2hEZkVEdFdRMzI5WHkxVks0cDZrc2dqM0RjcnVuUngzZ2E0eWF6bzRiRm1nUjhkVmp4bnZlMWVBZ1FHcF93a0UtLWIwQ3FZTDRkWkRQV1laM0F2OFlsVDlodzFENDFTWmEzc0hiZVMtSVRuTGtVUkhQSUpQNEdNUUhXcnB4ZlNvamFrOTBn?oc=5",
+          "publication_date": "2026-05-20T07:00:00+00:00",
+          "source_count": 1
+        },
+        {
+          "group_id": "report-daa89dadea3b315b20e1",
+          "title": "Sardine: National Bank Of Canada Partnership Expands Digital Banking Fraud Prevention Capabilities - Pulse 2.0",
+          "source_url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQSDVzSktaWUFyOGN4TUhveWJKNW91MGppdlFDT1dXV2EzbENYY3NUaXdBOEZnaE5oclRYeU1hejVMMzFxV1hJbUcxY0ZNZTVOQS03WDVCVmp1bXlCYmwyVlNtVzZqNDhHenFJWndnb0NCV3drLTdEY0cxMzl4dWtXQmVrQm9CNHBDN1o3Q1Z5V0l0YUJodFktUGpnQlNjZU9uTVlZcnlVcGJsSm5QWjBMd29jQXZjaFZm0gG-AUFVX3lxTE9hVUdiOWd1d053eEpOTVFMS0FrUnhLREhYWGtwV3pMeTE5UjhlNzY4a1BucG1KUHRLQnpCb0YyUDFTY0hXMjR3SFBkZDJkTUdISTRZNzFPd1dTdnBpUHl2OUJpQ1VITm5idTZZdlRMeW0wLV9ZNWxjOGhGcHluRC0taUc1UWZVV1FxNmVtc1dPS1lpdUVSOEtRV21obXo3RkVYZzJtclBUSThGOHFRdzUxdlVQcWJuVFdub2ppenc?oc=5",
+          "publication_date": "2026-05-22T07:00:00+00:00",
+          "source_count": 1
+        }
+      ],
+      "reasons": [
+        "Same organization explicitly named: National Bank",
+        "4 shared descriptive headline terms",
         "Published within ten days"
       ],
       "priority": 10,
@@ -1058,43 +1058,6 @@
       ]
     },
     {
-      "id": "candidate:report-013cbf9ef1252db14726:report-94f0bc9f1d26fd903c7a",
-      "group_ids": [
-        "report-013cbf9ef1252db14726",
-        "report-94f0bc9f1d26fd903c7a"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-013cbf9ef1252db14726",
-          "title": "Ex-RBC employee found guilty after viewing PM’s data, opening fraudulent accounts - The Globe and Mail",
-          "source_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPclVqR1pybmZNU0hNQnF2R0NaTmw2ellZTkMyb0ZQUzFoR0xIMTl3RlVzblo2ckxzaVctYlkyZF9TZS10SEx5YzBlSXA3RkpYT0ZYNnl3NkpOQWtXRVFwdV9Cemw4MmlyanNFQ3ZFcUVXTkgxeUtDc1NvWlltRlB0TUVnRU42OGtjdktZTXpNSVJpcXRQbTA3RURvZ0FOWmZfMnZWcEFRTXhNYS01dGRHdQ?oc=5",
-          "publication_date": "2026-11-04T14:10:16+00:00",
-          "source_count": 1
-        },
-        {
-          "group_id": "report-94f0bc9f1d26fd903c7a",
-          "title": "Ex-RBC worker admits fraud after opening at least 43 accounts - Human Resources Director",
-          "source_url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOTGkzLU5waG5mMmJpV2lKUWcycUZUX2o4NjFNYlJZNGJJTjdaeC1WZmFOTkRqa0NwREplMjVnVVExbEtDOEJBYVNfb2E4ZDBaVFFhQm1BcEhTS0VvODdJdFdDNV80OEVOSnhXRS1PMkVMSk5UZVhRa0YtOTBrN2liZFJ1OUR3ZEs3OVloWDFpVEZBOHBXQmFZVkZ5UGVnM1hVbFRhUDdIcmUzVVRFV21rZnNVZHN0bmkxcklFbGtUanNCZw?oc=5",
-          "publication_date": "2026-11-05T13:58:09+00:00",
-          "source_count": 1
-        }
-      ],
-      "reasons": [
-        "Same organization explicitly named: RBC",
-        "3 shared descriptive headline terms",
-        "Published within ten days"
-      ],
-      "priority": 9,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
       "id": "candidate:report-4073c7770390dc5dba09:report-d1cb6f7b67ca5a3c6edf",
       "group_ids": [
         "report-4073c7770390dc5dba09",
@@ -1156,6 +1119,81 @@
       ],
       "reasons": [
         "5 shared descriptive headline terms",
+        "Overlapping scam method: Investment & crypto scams",
+        "Same source-mentioned place",
+        "Published within 45 days"
+      ],
+      "priority": 9,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
+      "id": "candidate:report-013cbf9ef1252db14726:report-94f0bc9f1d26fd903c7a",
+      "group_ids": [
+        "report-013cbf9ef1252db14726",
+        "report-94f0bc9f1d26fd903c7a"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-013cbf9ef1252db14726",
+          "title": "Ex-RBC employee found guilty after viewing PM’s data, opening fraudulent accounts - The Globe and Mail",
+          "source_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPclVqR1pybmZNU0hNQnF2R0NaTmw2ellZTkMyb0ZQUzFoR0xIMTl3RlVzblo2ckxzaVctYlkyZF9TZS10SEx5YzBlSXA3RkpYT0ZYNnl3NkpOQWtXRVFwdV9Cemw4MmlyanNFQ3ZFcUVXTkgxeUtDc1NvWlltRlB0TUVnRU42OGtjdktZTXpNSVJpcXRQbTA3RURvZ0FOWmZfMnZWcEFRTXhNYS01dGRHdQ?oc=5",
+          "publication_date": "2026-11-04T14:10:16+00:00",
+          "source_count": 1
+        },
+        {
+          "group_id": "report-94f0bc9f1d26fd903c7a",
+          "title": "Ex-RBC worker admits fraud after opening at least 43 accounts - Human Resources Director",
+          "source_url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOTGkzLU5waG5mMmJpV2lKUWcycUZUX2o4NjFNYlJZNGJJTjdaeC1WZmFOTkRqa0NwREplMjVnVVExbEtDOEJBYVNfb2E4ZDBaVFFhQm1BcEhTS0VvODdJdFdDNV80OEVOSnhXRS1PMkVMSk5UZVhRa0YtOTBrN2liZFJ1OUR3ZEs3OVloWDFpVEZBOHBXQmFZVkZ5UGVnM1hVbFRhUDdIcmUzVVRFV21rZnNVZHN0bmkxcklFbGtUanNCZw?oc=5",
+          "publication_date": "2026-11-05T13:58:09+00:00",
+          "source_count": 1
+        }
+      ],
+      "reasons": [
+        "Same organization explicitly named: RBC",
+        "3 shared descriptive headline terms",
+        "Published within ten days"
+      ],
+      "priority": 9,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
+      "id": "candidate:report-7794bf3fe0cb2817d2ca:report-c2dbaa8bbd1bc1faf4f0",
+      "group_ids": [
+        "report-7794bf3fe0cb2817d2ca",
+        "report-c2dbaa8bbd1bc1faf4f0"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-7794bf3fe0cb2817d2ca",
+          "title": "Elderly Ottawa couple loses $460,000 in gold investment scam - CTV News",
+          "source_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPRkNDLWJ3REpsYURNZkdzaTdXUklJaFhTZ0pSV05sN2RKT09fQ3R5UUlJR3NTMllKbGl2YkN6bzc4ZzRFRFUwc2NpT0o0d2JieWtWUW9RYWhsMkJHWmJGYnVZd0ZHaksyVnkyT25OSDMwNHg2eDdzbnh6NlpLNVFRN1RKUnZ5aTViN29idEkwS21ESTJqOTZBNkdIbEs?oc=5",
+          "publication_date": "2025-10-23T07:00:00+00:00",
+          "source_count": 1
+        },
+        {
+          "group_id": "report-c2dbaa8bbd1bc1faf4f0",
+          "title": "Ottawa couple loses $300,000 in alleged investment fraud - CTV News",
+          "source_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNdFN6Ul9lUXdLZk41b29NS0JGM0JzeVJydUI2Y0w1Sl9lS3ZfUTVuODdmMDNweGt2SjZzXzlCY2xoSkcyOE02Um5WTFZNU2VaZG5GZUtJd2I2NGh1aVhNOTBOUGFwWDZ1SU1BMnZuY29HNW9TMWQyM3htMlBtMk5zVUFnUlNtanNRbVNTS1c0VnpNMFhEcDhZbw?oc=5",
+          "publication_date": "2025-11-17T08:00:00+00:00",
+          "source_count": 1
+        }
+      ],
+      "reasons": [
+        "6 shared descriptive headline terms",
         "Overlapping scam method: Investment & crypto scams",
         "Same source-mentioned place",
         "Published within 45 days"
@@ -1233,44 +1271,6 @@
         "Same organization explicitly named: TD",
         "3 shared descriptive headline terms",
         "Published within ten days"
-      ],
-      "priority": 9,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
-      "id": "candidate:report-7794bf3fe0cb2817d2ca:report-c2dbaa8bbd1bc1faf4f0",
-      "group_ids": [
-        "report-7794bf3fe0cb2817d2ca",
-        "report-c2dbaa8bbd1bc1faf4f0"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-7794bf3fe0cb2817d2ca",
-          "title": "Elderly Ottawa couple loses $460,000 in gold investment scam - CTV News",
-          "source_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPRkNDLWJ3REpsYURNZkdzaTdXUklJaFhTZ0pSV05sN2RKT09fQ3R5UUlJR3NTMllKbGl2YkN6bzc4ZzRFRFUwc2NpT0o0d2JieWtWUW9RYWhsMkJHWmJGYnVZd0ZHaksyVnkyT25OSDMwNHg2eDdzbnh6NlpLNVFRN1RKUnZ5aTViN29idEkwS21ESTJqOTZBNkdIbEs?oc=5",
-          "publication_date": "2025-10-23T07:00:00+00:00",
-          "source_count": 1
-        },
-        {
-          "group_id": "report-c2dbaa8bbd1bc1faf4f0",
-          "title": "Ottawa couple loses $300,000 in alleged investment fraud - CTV News",
-          "source_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNdFN6Ul9lUXdLZk41b29NS0JGM0JzeVJydUI2Y0w1Sl9lS3ZfUTVuODdmMDNweGt2SjZzXzlCY2xoSkcyOE02Um5WTFZNU2VaZG5GZUtJd2I2NGh1aVhNOTBOUGFwWDZ1SU1BMnZuY29HNW9TMWQyM3htMlBtMk5zVUFnUlNtanNRbVNTS1c0VnpNMFhEcDhZbw?oc=5",
-          "publication_date": "2025-11-17T08:00:00+00:00",
-          "source_count": 1
-        }
-      ],
-      "reasons": [
-        "6 shared descriptive headline terms",
-        "Overlapping scam method: Investment & crypto scams",
-        "Same source-mentioned place",
-        "Published within 45 days"
       ],
       "priority": 9,
       "status": "unverified_suggested_connection",
@@ -1690,43 +1690,6 @@
       ]
     },
     {
-      "id": "candidate:report-041aafb445183d35116b:report-666835cd68135d77421e",
-      "group_ids": [
-        "report-041aafb445183d35116b",
-        "report-666835cd68135d77421e"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-041aafb445183d35116b",
-          "title": "Moncton man gets prison time in U.S. for participating in 'grandparent scam' - CBC",
-          "source_url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9vOVltY1JUZVBzVzlMcEZuWnEydG1KOWpYeTRIWGNuQmpVRWgyd3ZTSEs0ckdtS0xOd2U5Tm1qZFpSbGl6TmxpUDRNOW95WkxOYU9RQlFOX3lhTmlmcC1peGdTVkhCTHRhNVpLOTBMSWJNZ3BHTE9xMXVZS0NVVXc?oc=5",
-          "publication_date": "2026-10-11T07:00:00+00:00",
-          "source_count": 1
-        },
-        {
-          "group_id": "report-666835cd68135d77421e",
-          "title": "Moncton, N.B., man gets prison time in U.S. for participating in grandparent scam - Yahoo News Canada",
-          "source_url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9FNnVjRjE1TmJVdUxvTmRTM20yUzY1dnczSS1GUXhpSlBLSEtXV0NITGJRelRmX0p4eXNjNFZiWlQxcDNuVzlNX2lsZUQtbEFIb2hjUERaeHFRZWVNRFktSV9UR2ZYU3VDTXRJamtR?oc=5",
-          "publication_date": "2026-10-10T07:00:00+00:00",
-          "source_count": 1
-        }
-      ],
-      "reasons": [
-        "7 shared descriptive headline terms",
-        "Same source-mentioned place",
-        "Published within ten days"
-      ],
-      "priority": 8,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
       "id": "candidate:report-08a32e2e2986b0403470:report-c34af3837568a319b32c",
       "group_ids": [
         "report-08a32e2e2986b0403470",
@@ -1824,6 +1787,43 @@
       ],
       "reasons": [
         "Same organization explicitly named: CIBC, RBC",
+        "Published within ten days"
+      ],
+      "priority": 8,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
+      "id": "candidate:report-041aafb445183d35116b:report-666835cd68135d77421e",
+      "group_ids": [
+        "report-041aafb445183d35116b",
+        "report-666835cd68135d77421e"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-041aafb445183d35116b",
+          "title": "Moncton man gets prison time in U.S. for participating in 'grandparent scam' - CBC",
+          "source_url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9vOVltY1JUZVBzVzlMcEZuWnEydG1KOWpYeTRIWGNuQmpVRWgyd3ZTSEs0ckdtS0xOd2U5Tm1qZFpSbGl6TmxpUDRNOW95WkxOYU9RQlFOX3lhTmlmcC1peGdTVkhCTHRhNVpLOTBMSWJNZ3BHTE9xMXVZS0NVVXc?oc=5",
+          "publication_date": "2026-10-11T07:00:00+00:00",
+          "source_count": 1
+        },
+        {
+          "group_id": "report-666835cd68135d77421e",
+          "title": "Moncton, N.B., man gets prison time in U.S. for participating in grandparent scam - Yahoo News Canada",
+          "source_url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9FNnVjRjE1TmJVdUxvTmRTM20yUzY1dnczSS1GUXhpSlBLSEtXV0NITGJRelRmX0p4eXNjNFZiWlQxcDNuVzlNX2lsZUQtbEFIb2hjUERaeHFRZWVNRFktSV9UR2ZYU3VDTXRJamtR?oc=5",
+          "publication_date": "2026-10-10T07:00:00+00:00",
+          "source_count": 1
+        }
+      ],
+      "reasons": [
+        "7 shared descriptive headline terms",
+        "Same source-mentioned place",
         "Published within ten days"
       ],
       "priority": 8,
@@ -2059,17 +2059,54 @@
       ]
     },
     {
-      "id": "candidate:report-2f4b6843bc95cde3a28f:report-6c8b842a1521d817f344",
+      "id": "candidate:report-6c8b842a1521d817f344:report-d633f3a12921dc7c2c4e",
       "group_ids": [
-        "report-2f4b6843bc95cde3a28f",
+        "report-6c8b842a1521d817f344",
+        "report-d633f3a12921dc7c2c4e"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-6c8b842a1521d817f344",
+          "title": "‘Crypto King’ Aiden Pleterski’s fraud trial adjourned until next week due to medical issue - CBC",
+          "source_url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOTjI2NFVNMDQ5ZG1KN2lzOE54S1NFX2ZZb0d6aDJBcmtsaE5ZT2RhZ0UyN3BOME1remg0WmlwMTN0MXhwcDFJbk12bUR0TU43X01GMDVmNkRZRnJQZVRrejc3SHh3Q3IxS1U0VTZ6SXRjVzZpNzZwYnZaaFRqUVNKTl9wRTBOZVZsYV9EOUNuSUdxVk1nc0c1V3lyTXRUdnBkM1c5NTlBOFNMSnFZWktBeVZ4RGNxWkJXVVdpY2ZXRHFqVTVZTEU1dTlkY1F1ZUhOcGc?oc=5",
+          "publication_date": "2026-10-20T07:00:00+00:00",
+          "source_count": 2
+        },
+        {
+          "group_id": "report-d633f3a12921dc7c2c4e",
+          "title": "'Crypto King' Aiden Pleterski found guilty of fraud at Toronto jury trial | Hanomansing Live - Yahoo News Canada",
+          "source_url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9tQUhxTDlIdWdIbng4LXJNMjI3QmlYLVcwU1NIMXY4QkNHX25LdzN3S1ZEMVFKM3pzOG95TndUODVmaHFYcmdVVlNfbWJpVFFvTDlYbVYzM21UTV9yN1BLcHFDNmF4eFBaX1BPMTdETVRBRFMzdzVuLUhrOTdhNVE?oc=5",
+          "publication_date": "2026-10-30T00:03:00+00:00",
+          "source_count": 2
+        }
+      ],
+      "reasons": [
+        "5 shared descriptive headline terms",
+        "Overlapping scam method: Investment & crypto scams",
+        "Published within ten days"
+      ],
+      "priority": 8,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
+      "id": "candidate:report-39055d44e862e2ede21d:report-6c8b842a1521d817f344",
+      "group_ids": [
+        "report-39055d44e862e2ede21d",
         "report-6c8b842a1521d817f344"
       ],
       "headlines": [
         {
-          "group_id": "report-2f4b6843bc95cde3a28f",
-          "title": "'Crypto King' Aiden Pleterski addresses jury at his fraud trial for first time, says he's innocent - CBC",
-          "source_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPeFNSR3hPeWhrenozamdfS2l4ZHRiTjV2dVRFNlhNUU9qV0U2V1JYYlNDMTI3MkFtaXpYTHRIYTRsUllmQkF2SkM3UHpEZmhBOFN5WVp0dDhoMWpIVDl6eE9ZUUhYMlFJNm9HOU5kMF9QOHhYRTFmMXFlVXRRMVAtdnpsX1k0UXN5OUNuUG5aaTBXbnFBRnRnZzZqa2JFZkpWRWZZMHo2anlrQQ?oc=5",
-          "publication_date": "2026-10-28T07:00:00+00:00",
+          "group_id": "report-39055d44e862e2ede21d",
+          "title": "What the jury didn't hear at 'Crypto King' Aiden Pleterski’s fraud trial - CBC",
+          "source_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQeXpkRVM2dTQya0J6ZWFRWU5YWjBEcTc1RS04NDFiTjk2ZFh5ZzZyVFcwcy1YUFkzY1R0Y3FGUjM2bEc1Uy1vYzJMVTRYTnJwX0dwYWlJZk91UGFMTUNtUVFBcER3RW9HSnhXTlN4NHU2VFI5OTFlVjB2MU9oMksxcE1ESG92ZXVKYnptTDFvc0toeVdCZUN2djc4bktNM0tvNmpaX0RUcWlQSjM3TG5rRw?oc=5",
+          "publication_date": "2026-10-29T07:00:00+00:00",
           "source_count": 1
         },
         {
@@ -2096,10 +2133,10 @@
       ]
     },
     {
-      "id": "candidate:report-2f4b6843bc95cde3a28f:report-4ed6c222cb0453ea4d67",
+      "id": "candidate:report-2f4b6843bc95cde3a28f:report-39055d44e862e2ede21d",
       "group_ids": [
         "report-2f4b6843bc95cde3a28f",
-        "report-4ed6c222cb0453ea4d67"
+        "report-39055d44e862e2ede21d"
       ],
       "headlines": [
         {
@@ -2110,10 +2147,121 @@
           "source_count": 1
         },
         {
+          "group_id": "report-39055d44e862e2ede21d",
+          "title": "What the jury didn't hear at 'Crypto King' Aiden Pleterski’s fraud trial - CBC",
+          "source_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQeXpkRVM2dTQya0J6ZWFRWU5YWjBEcTc1RS04NDFiTjk2ZFh5ZzZyVFcwcy1YUFkzY1R0Y3FGUjM2bEc1Uy1vYzJMVTRYTnJwX0dwYWlJZk91UGFMTUNtUVFBcER3RW9HSnhXTlN4NHU2VFI5OTFlVjB2MU9oMksxcE1ESG92ZXVKYnptTDFvc0toeVdCZUN2djc4bktNM0tvNmpaX0RUcWlQSjM3TG5rRw?oc=5",
+          "publication_date": "2026-10-29T07:00:00+00:00",
+          "source_count": 1
+        }
+      ],
+      "reasons": [
+        "7 shared descriptive headline terms",
+        "Overlapping scam method: Investment & crypto scams",
+        "Published within ten days"
+      ],
+      "priority": 8,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
+      "id": "candidate:report-39055d44e862e2ede21d:report-4ed6c222cb0453ea4d67",
+      "group_ids": [
+        "report-39055d44e862e2ede21d",
+        "report-4ed6c222cb0453ea4d67"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-39055d44e862e2ede21d",
+          "title": "What the jury didn't hear at 'Crypto King' Aiden Pleterski’s fraud trial - CBC",
+          "source_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQeXpkRVM2dTQya0J6ZWFRWU5YWjBEcTc1RS04NDFiTjk2ZFh5ZzZyVFcwcy1YUFkzY1R0Y3FGUjM2bEc1Uy1vYzJMVTRYTnJwX0dwYWlJZk91UGFMTUNtUVFBcER3RW9HSnhXTlN4NHU2VFI5OTFlVjB2MU9oMksxcE1ESG92ZXVKYnptTDFvc0toeVdCZUN2djc4bktNM0tvNmpaX0RUcWlQSjM3TG5rRw?oc=5",
+          "publication_date": "2026-10-29T07:00:00+00:00",
+          "source_count": 1
+        },
+        {
           "group_id": "report-4ed6c222cb0453ea4d67",
           "title": "Canada 'Crypto King' Aiden Pleterski's Ponzi-Fraud Trial Goes to Jury - bloomingbit",
           "source_url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9CZ3EzN1c0aVhPdUltOEpicm9GQXBUUF9DeW5zaTdHZHpxR2xoNFRweW5MdmZRcWFuWkpLX01hZHJKMHJ0REREY2xYZ1ZKNV80QmRoYg?oc=5",
           "publication_date": "2026-10-28T07:00:00+00:00",
+          "source_count": 1
+        }
+      ],
+      "reasons": [
+        "6 shared descriptive headline terms",
+        "Overlapping scam method: Investment & crypto scams",
+        "Published within ten days"
+      ],
+      "priority": 8,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
+      "id": "candidate:report-39055d44e862e2ede21d:report-b58a8d4914d1a3d157c9",
+      "group_ids": [
+        "report-39055d44e862e2ede21d",
+        "report-b58a8d4914d1a3d157c9"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-39055d44e862e2ede21d",
+          "title": "What the jury didn't hear at 'Crypto King' Aiden Pleterski’s fraud trial - CBC",
+          "source_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQeXpkRVM2dTQya0J6ZWFRWU5YWjBEcTc1RS04NDFiTjk2ZFh5ZzZyVFcwcy1YUFkzY1R0Y3FGUjM2bEc1Uy1vYzJMVTRYTnJwX0dwYWlJZk91UGFMTUNtUVFBcER3RW9HSnhXTlN4NHU2VFI5OTFlVjB2MU9oMksxcE1ESG92ZXVKYnptTDFvc0toeVdCZUN2djc4bktNM0tvNmpaX0RUcWlQSjM3TG5rRw?oc=5",
+          "publication_date": "2026-10-29T07:00:00+00:00",
+          "source_count": 1
+        },
+        {
+          "group_id": "report-b58a8d4914d1a3d157c9",
+          "title": "'Crypto King' Aiden Pleterski tells jury he's innocent in closing statement at fraud trial - CBC",
+          "source_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPeFNSR3hPeWhrenozamdfS2l4ZHRiTjV2dVRFNlhNUU9qV0U2V1JYYlNDMTI3MkFtaXpYTHRIYTRsUllmQkF2SkM3UHpEZmhBOFN5WVp0dDhoMWpIVDl6eE9ZUUhYMlFJNm9HOU5kMF9QOHhYRTFmMXFlVXRRMVAtdnpsX1k0UXN5OUNuUG5aaTBXbnFBRnRnZzZqa2JFZkpWRWZZMHo2anlrQQ?oc=5",
+          "publication_date": "2026-10-28T19:10:07+00:00",
+          "source_count": 1
+        }
+      ],
+      "reasons": [
+        "7 shared descriptive headline terms",
+        "Overlapping scam method: Investment & crypto scams",
+        "Published within ten days"
+      ],
+      "priority": 8,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
+      "id": "candidate:report-6c8b842a1521d817f344:report-b58a8d4914d1a3d157c9",
+      "group_ids": [
+        "report-6c8b842a1521d817f344",
+        "report-b58a8d4914d1a3d157c9"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-6c8b842a1521d817f344",
+          "title": "‘Crypto King’ Aiden Pleterski’s fraud trial adjourned until next week due to medical issue - CBC",
+          "source_url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOTjI2NFVNMDQ5ZG1KN2lzOE54S1NFX2ZZb0d6aDJBcmtsaE5ZT2RhZ0UyN3BOME1remg0WmlwMTN0MXhwcDFJbk12bUR0TU43X01GMDVmNkRZRnJQZVRrejc3SHh3Q3IxS1U0VTZ6SXRjVzZpNzZwYnZaaFRqUVNKTl9wRTBOZVZsYV9EOUNuSUdxVk1nc0c1V3lyTXRUdnBkM1c5NTlBOFNMSnFZWktBeVZ4RGNxWkJXVVdpY2ZXRHFqVTVZTEU1dTlkY1F1ZUhOcGc?oc=5",
+          "publication_date": "2026-10-20T07:00:00+00:00",
+          "source_count": 2
+        },
+        {
+          "group_id": "report-b58a8d4914d1a3d157c9",
+          "title": "'Crypto King' Aiden Pleterski tells jury he's innocent in closing statement at fraud trial - CBC",
+          "source_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPeFNSR3hPeWhrenozamdfS2l4ZHRiTjV2dVRFNlhNUU9qV0U2V1JYYlNDMTI3MkFtaXpYTHRIYTRsUllmQkF2SkM3UHpEZmhBOFN5WVp0dDhoMWpIVDl6eE9ZUUhYMlFJNm9HOU5kMF9QOHhYRTFmMXFlVXRRMVAtdnpsX1k0UXN5OUNuUG5aaTBXbnFBRnRnZzZqa2JFZkpWRWZZMHo2anlrQQ?oc=5",
+          "publication_date": "2026-10-28T19:10:07+00:00",
           "source_count": 1
         }
       ],
@@ -2170,29 +2318,29 @@
       ]
     },
     {
-      "id": "candidate:report-2f4b6843bc95cde3a28f:report-39055d44e862e2ede21d",
+      "id": "candidate:report-4ed6c222cb0453ea4d67:report-b58a8d4914d1a3d157c9",
       "group_ids": [
-        "report-2f4b6843bc95cde3a28f",
-        "report-39055d44e862e2ede21d"
+        "report-4ed6c222cb0453ea4d67",
+        "report-b58a8d4914d1a3d157c9"
       ],
       "headlines": [
         {
-          "group_id": "report-2f4b6843bc95cde3a28f",
-          "title": "'Crypto King' Aiden Pleterski addresses jury at his fraud trial for first time, says he's innocent - CBC",
-          "source_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPeFNSR3hPeWhrenozamdfS2l4ZHRiTjV2dVRFNlhNUU9qV0U2V1JYYlNDMTI3MkFtaXpYTHRIYTRsUllmQkF2SkM3UHpEZmhBOFN5WVp0dDhoMWpIVDl6eE9ZUUhYMlFJNm9HOU5kMF9QOHhYRTFmMXFlVXRRMVAtdnpsX1k0UXN5OUNuUG5aaTBXbnFBRnRnZzZqa2JFZkpWRWZZMHo2anlrQQ?oc=5",
+          "group_id": "report-4ed6c222cb0453ea4d67",
+          "title": "Canada 'Crypto King' Aiden Pleterski's Ponzi-Fraud Trial Goes to Jury - bloomingbit",
+          "source_url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9CZ3EzN1c0aVhPdUltOEpicm9GQXBUUF9DeW5zaTdHZHpxR2xoNFRweW5MdmZRcWFuWkpLX01hZHJKMHJ0REREY2xYZ1ZKNV80QmRoYg?oc=5",
           "publication_date": "2026-10-28T07:00:00+00:00",
           "source_count": 1
         },
         {
-          "group_id": "report-39055d44e862e2ede21d",
-          "title": "What the jury didn't hear at 'Crypto King' Aiden Pleterski’s fraud trial - CBC",
-          "source_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQeXpkRVM2dTQya0J6ZWFRWU5YWjBEcTc1RS04NDFiTjk2ZFh5ZzZyVFcwcy1YUFkzY1R0Y3FGUjM2bEc1Uy1vYzJMVTRYTnJwX0dwYWlJZk91UGFMTUNtUVFBcER3RW9HSnhXTlN4NHU2VFI5OTFlVjB2MU9oMksxcE1ESG92ZXVKYnptTDFvc0toeVdCZUN2djc4bktNM0tvNmpaX0RUcWlQSjM3TG5rRw?oc=5",
-          "publication_date": "2026-10-29T07:00:00+00:00",
+          "group_id": "report-b58a8d4914d1a3d157c9",
+          "title": "'Crypto King' Aiden Pleterski tells jury he's innocent in closing statement at fraud trial - CBC",
+          "source_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPeFNSR3hPeWhrenozamdfS2l4ZHRiTjV2dVRFNlhNUU9qV0U2V1JYYlNDMTI3MkFtaXpYTHRIYTRsUllmQkF2SkM3UHpEZmhBOFN5WVp0dDhoMWpIVDl6eE9ZUUhYMlFJNm9HOU5kMF9QOHhYRTFmMXFlVXRRMVAtdnpsX1k0UXN5OUNuUG5aaTBXbnFBRnRnZzZqa2JFZkpWRWZZMHo2anlrQQ?oc=5",
+          "publication_date": "2026-10-28T19:10:07+00:00",
           "source_count": 1
         }
       ],
       "reasons": [
-        "7 shared descriptive headline terms",
+        "6 shared descriptive headline terms",
         "Overlapping scam method: Investment & crypto scams",
         "Published within ten days"
       ],
@@ -2207,30 +2355,67 @@
       ]
     },
     {
-      "id": "candidate:report-428fd9e3aabcfd90c710:report-f45a57948bab2a2739d9",
+      "id": "candidate:report-4ed6c222cb0453ea4d67:report-6c8b842a1521d817f344",
       "group_ids": [
-        "report-428fd9e3aabcfd90c710",
-        "report-f45a57948bab2a2739d9"
+        "report-4ed6c222cb0453ea4d67",
+        "report-6c8b842a1521d817f344"
       ],
       "headlines": [
         {
-          "group_id": "report-428fd9e3aabcfd90c710",
-          "title": "Ontario senior bilked out of $900K after falling victim to crypto scam that used AI deepfake of PM Carney - CTV News",
-          "source_url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPVks5QzR5ZnhvaEV3TzJFYkNHQzFZeXlRNThYT1dWVGwteGVKbVB6R3ZDeWdOVEJuRFhLYWUzd0pBeW1LbkIwWjRIWWxiU21rVll4WDY5WWpQTFRnd1FPWnNsa3FpMVlGWE9PanI4NEpHVFJTcUszcVYzLWgyN2RkUW5PVFB3cTVuZFlZT2RFek55bXNNN09nbFMzdWZQaWdlQndiVVNOZlRBd3ZUaEdPSHhVVGVDOGlqbFo5YWthTEQtODJ2U2FnbzlHMkV6OGJoeWhMYjdJMkI?oc=5",
-          "publication_date": "2026-06-26T07:00:00+00:00",
+          "group_id": "report-4ed6c222cb0453ea4d67",
+          "title": "Canada 'Crypto King' Aiden Pleterski's Ponzi-Fraud Trial Goes to Jury - bloomingbit",
+          "source_url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9CZ3EzN1c0aVhPdUltOEpicm9GQXBUUF9DeW5zaTdHZHpxR2xoNFRweW5MdmZRcWFuWkpLX01hZHJKMHJ0REREY2xYZ1ZKNV80QmRoYg?oc=5",
+          "publication_date": "2026-10-28T07:00:00+00:00",
           "source_count": 1
         },
         {
-          "group_id": "report-f45a57948bab2a2739d9",
-          "title": "An Ontario senior lost $900,000 in a crypto scam that used an AI deepfake of Mark Carney - Toronto Life",
-          "source_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQLVhoYk9oU3BCNTZrSGgtN21xVE9pV3VZTXllMmpWanNXaTRTNWpxWWlpZk9IQTdiTGNaMmdkWU9hc3F0UVpNVzE1aEVXZFFpcGlfTnBwNGExZFQ4QmxpaDkxVU1DVlZkYVZLZzc1Vy14Skh6dFNVTGtCcnkxeFJleTNTX1V1NkN2QmlVdlFIYmRCVEVncnBKSHk1ZU1RRzV1YXVZUDJMWlowSFdRaGtueWs3YlZ4d2c?oc=5",
-          "publication_date": "2026-06-26T07:00:00+00:00",
+          "group_id": "report-6c8b842a1521d817f344",
+          "title": "‘Crypto King’ Aiden Pleterski’s fraud trial adjourned until next week due to medical issue - CBC",
+          "source_url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOTjI2NFVNMDQ5ZG1KN2lzOE54S1NFX2ZZb0d6aDJBcmtsaE5ZT2RhZ0UyN3BOME1remg0WmlwMTN0MXhwcDFJbk12bUR0TU43X01GMDVmNkRZRnJQZVRrejc3SHh3Q3IxS1U0VTZ6SXRjVzZpNzZwYnZaaFRqUVNKTl9wRTBOZVZsYV9EOUNuSUdxVk1nc0c1V3lyTXRUdnBkM1c5NTlBOFNMSnFZWktBeVZ4RGNxWkJXVVdpY2ZXRHFqVTVZTEU1dTlkY1F1ZUhOcGc?oc=5",
+          "publication_date": "2026-10-20T07:00:00+00:00",
+          "source_count": 2
+        }
+      ],
+      "reasons": [
+        "5 shared descriptive headline terms",
+        "Overlapping scam method: Investment & crypto scams",
+        "Published within ten days"
+      ],
+      "priority": 8,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
+      "id": "candidate:report-2f4b6843bc95cde3a28f:report-4ed6c222cb0453ea4d67",
+      "group_ids": [
+        "report-2f4b6843bc95cde3a28f",
+        "report-4ed6c222cb0453ea4d67"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-2f4b6843bc95cde3a28f",
+          "title": "'Crypto King' Aiden Pleterski addresses jury at his fraud trial for first time, says he's innocent - CBC",
+          "source_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPeFNSR3hPeWhrenozamdfS2l4ZHRiTjV2dVRFNlhNUU9qV0U2V1JYYlNDMTI3MkFtaXpYTHRIYTRsUllmQkF2SkM3UHpEZmhBOFN5WVp0dDhoMWpIVDl6eE9ZUUhYMlFJNm9HOU5kMF9QOHhYRTFmMXFlVXRRMVAtdnpsX1k0UXN5OUNuUG5aaTBXbnFBRnRnZzZqa2JFZkpWRWZZMHo2anlrQQ?oc=5",
+          "publication_date": "2026-10-28T07:00:00+00:00",
+          "source_count": 1
+        },
+        {
+          "group_id": "report-4ed6c222cb0453ea4d67",
+          "title": "Canada 'Crypto King' Aiden Pleterski's Ponzi-Fraud Trial Goes to Jury - bloomingbit",
+          "source_url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9CZ3EzN1c0aVhPdUltOEpicm9GQXBUUF9DeW5zaTdHZHpxR2xoNFRweW5MdmZRcWFuWkpLX01hZHJKMHJ0REREY2xYZ1ZKNV80QmRoYg?oc=5",
+          "publication_date": "2026-10-28T07:00:00+00:00",
           "source_count": 1
         }
       ],
       "reasons": [
         "6 shared descriptive headline terms",
-        "Overlapping scam method: Digital fraud & cybercrime, Investment & crypto scams",
+        "Overlapping scam method: Investment & crypto scams",
         "Published within ten days"
       ],
       "priority": 8,
@@ -2244,104 +2429,30 @@
       ]
     },
     {
-      "id": "candidate:report-3fcb2c44741a689c8dcf:report-704137a359640a273a32",
+      "id": "candidate:report-2f4b6843bc95cde3a28f:report-6c8b842a1521d817f344",
       "group_ids": [
-        "report-3fcb2c44741a689c8dcf",
-        "report-704137a359640a273a32"
+        "report-2f4b6843bc95cde3a28f",
+        "report-6c8b842a1521d817f344"
       ],
       "headlines": [
         {
-          "group_id": "report-3fcb2c44741a689c8dcf",
-          "title": "Toronto-born ex-Blue Jay charged over Ontario youth baseball program fraud - TSN",
-          "source_url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQc09JTkY0ZzVtM05JOFpjaU1GZzdiRkR5S0sxMWpRSkVfWVdWWnlNZWR0a0FYS3J2a21yVVVWSGxYLTJJUFI0S2RVaTJ2SVlWNEJjS1BPZS1YbGFSZDZtdVppTS11Z2FIR2NkajBvYWs2S0ZMa0E5VnUwX0liR0NnX2prTzFXbU44ZVFWTERsWV92cnpHZnhUVXE5SFhBTFBNWlJR?oc=5",
+          "group_id": "report-2f4b6843bc95cde3a28f",
+          "title": "'Crypto King' Aiden Pleterski addresses jury at his fraud trial for first time, says he's innocent - CBC",
+          "source_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPeFNSR3hPeWhrenozamdfS2l4ZHRiTjV2dVRFNlhNUU9qV0U2V1JYYlNDMTI3MkFtaXpYTHRIYTRsUllmQkF2SkM3UHpEZmhBOFN5WVp0dDhoMWpIVDl6eE9ZUUhYMlFJNm9HOU5kMF9QOHhYRTFmMXFlVXRRMVAtdnpsX1k0UXN5OUNuUG5aaTBXbnFBRnRnZzZqa2JFZkpWRWZZMHo2anlrQQ?oc=5",
+          "publication_date": "2026-10-28T07:00:00+00:00",
+          "source_count": 1
+        },
+        {
+          "group_id": "report-6c8b842a1521d817f344",
+          "title": "‘Crypto King’ Aiden Pleterski’s fraud trial adjourned until next week due to medical issue - CBC",
+          "source_url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOTjI2NFVNMDQ5ZG1KN2lzOE54S1NFX2ZZb0d6aDJBcmtsaE5ZT2RhZ0UyN3BOME1remg0WmlwMTN0MXhwcDFJbk12bUR0TU43X01GMDVmNkRZRnJQZVRrejc3SHh3Q3IxS1U0VTZ6SXRjVzZpNzZwYnZaaFRqUVNKTl9wRTBOZVZsYV9EOUNuSUdxVk1nc0c1V3lyTXRUdnBkM1c5NTlBOFNMSnFZWktBeVZ4RGNxWkJXVVdpY2ZXRHFqVTVZTEU1dTlkY1F1ZUhOcGc?oc=5",
           "publication_date": "2026-10-20T07:00:00+00:00",
-          "source_count": 1
-        },
-        {
-          "group_id": "report-704137a359640a273a32",
-          "title": "A former Blue Jay who ran a kids’ baseball training camp has been charged with fraud - Toronto Life",
-          "source_url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBFZzZZbW9IZ3VOSnp6QzF5eGhwX1ozVmxVZ3UxbGNrNXVFdXhDVHc3LXlkbkJHNUJEbURMa3JQY3lxM3VLd0dyaHBqOXZ4Yy1oOG9hY2hCRi1SQ0tBN2xuR3Z3dW5SeUNydVgwZFo5bWp4WVhaVUl4UQ?oc=5",
-          "publication_date": "2026-10-21T07:00:00+00:00",
-          "source_count": 1
+          "source_count": 2
         }
       ],
       "reasons": [
-        "5 shared descriptive headline terms",
-        "Same source-mentioned place",
-        "Published within ten days"
-      ],
-      "priority": 8,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
-      "id": "candidate:report-704137a359640a273a32:report-c6590ddf6f96fa6dc425",
-      "group_ids": [
-        "report-704137a359640a273a32",
-        "report-c6590ddf6f96fa6dc425"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-704137a359640a273a32",
-          "title": "A former Blue Jay who ran a kids’ baseball training camp has been charged with fraud - Toronto Life",
-          "source_url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBFZzZZbW9IZ3VOSnp6QzF5eGhwX1ozVmxVZ3UxbGNrNXVFdXhDVHc3LXlkbkJHNUJEbURMa3JQY3lxM3VLd0dyaHBqOXZ4Yy1oOG9hY2hCRi1SQ0tBN2xuR3Z3dW5SeUNydVgwZFo5bWp4WVhaVUl4UQ?oc=5",
-          "publication_date": "2026-10-21T07:00:00+00:00",
-          "source_count": 1
-        },
-        {
-          "group_id": "report-c6590ddf6f96fa6dc425",
-          "title": "Former Blue Jay, wife charged with fraud linked to Ontario youth baseball program fees: police - CBC",
-          "source_url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNVm01UHpSdTNQdTllM2lJZ1JHdlNLVHRZYnBWcFliR3hkSUpCVHgtS2liTVZzd1RNRzI0dndQdWFibXdxUTVmaW5rNjUxci1TZ01jYk84YUVxUUxEM2M0b2FYYm9QY3d2b3pvdkdKajRIUTV4MzV4dmF6NzJyNVNuWUs2VWhwSy1tajFoQVpKbm5Vdk0?oc=5",
-          "publication_date": "2026-10-20T07:00:00+00:00",
-          "source_count": 1
-        }
-      ],
-      "reasons": [
-        "5 shared descriptive headline terms",
-        "Overlapping scam method: Fraud investigations & enforcement",
-        "Published within ten days"
-      ],
-      "priority": 8,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
-      "id": "candidate:report-704137a359640a273a32:report-9ed2fcabf2b110ad5e5f",
-      "group_ids": [
-        "report-704137a359640a273a32",
-        "report-9ed2fcabf2b110ad5e5f"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-704137a359640a273a32",
-          "title": "A former Blue Jay who ran a kids’ baseball training camp has been charged with fraud - Toronto Life",
-          "source_url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBFZzZZbW9IZ3VOSnp6QzF5eGhwX1ozVmxVZ3UxbGNrNXVFdXhDVHc3LXlkbkJHNUJEbURMa3JQY3lxM3VLd0dyaHBqOXZ4Yy1oOG9hY2hCRi1SQ0tBN2xuR3Z3dW5SeUNydVgwZFo5bWp4WVhaVUl4UQ?oc=5",
-          "publication_date": "2026-10-21T07:00:00+00:00",
-          "source_count": 1
-        },
-        {
-          "group_id": "report-9ed2fcabf2b110ad5e5f",
-          "title": "Former Toronto Blue Jay, wife accused in $60K youth baseball fraud - CTV News",
-          "source_url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOVVFreEhobU5pc2N5N21lRWVVWjBDSG96QUdWM0FlWHNwVlFyX1lTNTJPencwVE90ZkFTdUtvbkdGRS1FM2JSYWpmZnJiYjNNMkp1WW5wd1dlNU9ua3ZhMm5xYjMtd2tGdWVmUU11VHRUaXQ4QjYzRkEwWkJBTW53dmtIT0FOejNHTkhGWFB5QnlwSFg5QzByT2RFMlFwVU42V05za2ZGYUlNNXR4ZTFxTmdKalV4X2pkU2RGUQ?oc=5",
-          "publication_date": "2026-10-20T14:44:08+00:00",
-          "source_count": 1
-        }
-      ],
-      "reasons": [
-        "5 shared descriptive headline terms",
-        "Same source-mentioned place",
+        "6 shared descriptive headline terms",
+        "Overlapping scam method: Investment & crypto scams",
         "Published within ten days"
       ],
       "priority": 8,
@@ -2453,6 +2564,413 @@
       "reasons": [
         "5 shared descriptive headline terms",
         "Overlapping scam method: Investment & crypto scams",
+        "Published within ten days"
+      ],
+      "priority": 8,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
+      "id": "candidate:report-0029f35724755361f2a2:report-d1c8901a78309fba833f",
+      "group_ids": [
+        "report-0029f35724755361f2a2",
+        "report-d1c8901a78309fba833f"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-0029f35724755361f2a2",
+          "title": "’Crypto King’ Aiden Pleterski will represent himself at his fraud trial next week - Radio-Canada",
+          "source_url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNQnc5V1RoTjB6VmsteVBLTDNyZWNSR2RxdEhqQkpsNmVJVHVwZEt3azJZUElBaG1LQmhUQ1BmaFFSb010UXpWYmRWa2Y3djlkclZEaXlPTGpSUHBvTUwzdjZBQnZHYnozX1lXN21mUDZJbmRaaW5OX3VWb0dqUWkwb1hjY1dVQnhOdUFJd0hvNWtZRzdORzV6eENJc2x2RFlHc205eHNzYm1ZTnByalVNX3Uydkl0emVZaV9rc185eDNCd1ZkTlE?oc=5",
+          "publication_date": "2026-09-28T07:00:00+00:00",
+          "source_count": 2
+        },
+        {
+          "group_id": "report-d1c8901a78309fba833f",
+          "title": "Canadian 'Crypto King' Aiden Pleterski to Represent Himself in Fraud Trial - Bitcoin News",
+          "source_url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQUlBJYVFTclhyejliZFdzMnZHS2toOEpsc1ExQThneHVqdmV0M19JQmZtaUVRdm9pUlZDaGFsbGc1M0swb3JRLTA5TVdmT0c3SEVOY3lBRUpzNVpBVkVOajVsMVZZSHdzOFZZTkNoSkxhVmduTGk0UUZCQk9Udl9TcEx2NUlVd2ExNU16UG9YX2RZM2k5ZVpidi1PblVTWXhVTXBQRFFvSlFEQmpONGI4Yms1UnZFSXVRVi0w?oc=5",
+          "publication_date": "2026-09-30T07:00:00+00:00",
+          "source_count": 1
+        }
+      ],
+      "reasons": [
+        "7 shared descriptive headline terms",
+        "Overlapping scam method: Investment & crypto scams",
+        "Published within ten days"
+      ],
+      "priority": 8,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
+      "id": "candidate:report-012b66e7b9cc15bec4bf:report-d1c8901a78309fba833f",
+      "group_ids": [
+        "report-012b66e7b9cc15bec4bf",
+        "report-d1c8901a78309fba833f"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-012b66e7b9cc15bec4bf",
+          "title": "Canadian ‘crypto king’ set to represent himself at fraud trial - TradingView",
+          "source_url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQZmh1UzFPMXk0aUhQUWhzMUpkYXFiQlZtSTU4YlpLcVBscFlaOGluSFROa1lTb0EyMFRvd1FjY2J6NUpobTVHVlZIRkw4RWlxQ1V1V3Z4bHUxbWdjXzlUTndYT2c3T253d0J4X3Z3NHBOYWtvcE1wbHBiem9fOER1ZHNtaXhUWFFlYkxiRDhlaFQyMFRZVkRkWHFpRkItbWF2cEZOSlVaaUFhUU9COEZ4TkJ0N0ZlQkxnc2hudlJHNVVuQQ?oc=5",
+          "publication_date": "2026-09-28T07:00:00+00:00",
+          "source_count": 1
+        },
+        {
+          "group_id": "report-d1c8901a78309fba833f",
+          "title": "Canadian 'Crypto King' Aiden Pleterski to Represent Himself in Fraud Trial - Bitcoin News",
+          "source_url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQUlBJYVFTclhyejliZFdzMnZHS2toOEpsc1ExQThneHVqdmV0M19JQmZtaUVRdm9pUlZDaGFsbGc1M0swb3JRLTA5TVdmT0c3SEVOY3lBRUpzNVpBVkVOajVsMVZZSHdzOFZZTkNoSkxhVmduTGk0UUZCQk9Udl9TcEx2NUlVd2ExNU16UG9YX2RZM2k5ZVpidi1PblVTWXhVTXBQRFFvSlFEQmpONGI4Yms1UnZFSXVRVi0w?oc=5",
+          "publication_date": "2026-09-30T07:00:00+00:00",
+          "source_count": 1
+        }
+      ],
+      "reasons": [
+        "5 shared descriptive headline terms",
+        "Overlapping scam method: Investment & crypto scams",
+        "Published within ten days"
+      ],
+      "priority": 8,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
+      "id": "candidate:report-d1c8901a78309fba833f:report-d67111cf2ca6723ae2a6",
+      "group_ids": [
+        "report-d1c8901a78309fba833f",
+        "report-d67111cf2ca6723ae2a6"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-d1c8901a78309fba833f",
+          "title": "Canadian 'Crypto King' Aiden Pleterski to Represent Himself in Fraud Trial - Bitcoin News",
+          "source_url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQUlBJYVFTclhyejliZFdzMnZHS2toOEpsc1ExQThneHVqdmV0M19JQmZtaUVRdm9pUlZDaGFsbGc1M0swb3JRLTA5TVdmT0c3SEVOY3lBRUpzNVpBVkVOajVsMVZZSHdzOFZZTkNoSkxhVmduTGk0UUZCQk9Udl9TcEx2NUlVd2ExNU16UG9YX2RZM2k5ZVpidi1PblVTWXhVTXBQRFFvSlFEQmpONGI4Yms1UnZFSXVRVi0w?oc=5",
+          "publication_date": "2026-09-30T07:00:00+00:00",
+          "source_count": 1
+        },
+        {
+          "group_id": "report-d67111cf2ca6723ae2a6",
+          "title": "Canada's 'Crypto King' Aiden Pleterski to Represent Himself at Fraud Trial - Decrypt",
+          "source_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPV0xzOXUyMFBFMmpZeHI5aGxESjB6dk5TLUZ3VkZGUk00akQzVXZ1YktMUmtxSHJQS2M3OUFzOFpRY3k2N2pKMFRzUUdQZjc0SGU1QVlwTHJYamNrMXBwMlBsQ3pVV0d5LTdPZnFTb1lGY0ZJVFNDZko3aXVvRTYyTDZJMnNySzBqMVlTQ3o3bEd6U0xMN2ZvWkl6ZTJwQQ?oc=5",
+          "publication_date": "2026-09-29T07:00:00+00:00",
+          "source_count": 1
+        }
+      ],
+      "reasons": [
+        "7 shared descriptive headline terms",
+        "Overlapping scam method: Investment & crypto scams",
+        "Published within ten days"
+      ],
+      "priority": 8,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
+      "id": "candidate:report-0029f35724755361f2a2:report-d67111cf2ca6723ae2a6",
+      "group_ids": [
+        "report-0029f35724755361f2a2",
+        "report-d67111cf2ca6723ae2a6"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-0029f35724755361f2a2",
+          "title": "’Crypto King’ Aiden Pleterski will represent himself at his fraud trial next week - Radio-Canada",
+          "source_url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNQnc5V1RoTjB6VmsteVBLTDNyZWNSR2RxdEhqQkpsNmVJVHVwZEt3azJZUElBaG1LQmhUQ1BmaFFSb010UXpWYmRWa2Y3djlkclZEaXlPTGpSUHBvTUwzdjZBQnZHYnozX1lXN21mUDZJbmRaaW5OX3VWb0dqUWkwb1hjY1dVQnhOdUFJd0hvNWtZRzdORzV6eENJc2x2RFlHc205eHNzYm1ZTnByalVNX3Uydkl0emVZaV9rc185eDNCd1ZkTlE?oc=5",
+          "publication_date": "2026-09-28T07:00:00+00:00",
+          "source_count": 2
+        },
+        {
+          "group_id": "report-d67111cf2ca6723ae2a6",
+          "title": "Canada's 'Crypto King' Aiden Pleterski to Represent Himself at Fraud Trial - Decrypt",
+          "source_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPV0xzOXUyMFBFMmpZeHI5aGxESjB6dk5TLUZ3VkZGUk00akQzVXZ1YktMUmtxSHJQS2M3OUFzOFpRY3k2N2pKMFRzUUdQZjc0SGU1QVlwTHJYamNrMXBwMlBsQ3pVV0d5LTdPZnFTb1lGY0ZJVFNDZko3aXVvRTYyTDZJMnNySzBqMVlTQ3o3bEd6U0xMN2ZvWkl6ZTJwQQ?oc=5",
+          "publication_date": "2026-09-29T07:00:00+00:00",
+          "source_count": 1
+        }
+      ],
+      "reasons": [
+        "7 shared descriptive headline terms",
+        "Overlapping scam method: Investment & crypto scams",
+        "Published within ten days"
+      ],
+      "priority": 8,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
+      "id": "candidate:report-012b66e7b9cc15bec4bf:report-d67111cf2ca6723ae2a6",
+      "group_ids": [
+        "report-012b66e7b9cc15bec4bf",
+        "report-d67111cf2ca6723ae2a6"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-012b66e7b9cc15bec4bf",
+          "title": "Canadian ‘crypto king’ set to represent himself at fraud trial - TradingView",
+          "source_url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQZmh1UzFPMXk0aUhQUWhzMUpkYXFiQlZtSTU4YlpLcVBscFlaOGluSFROa1lTb0EyMFRvd1FjY2J6NUpobTVHVlZIRkw4RWlxQ1V1V3Z4bHUxbWdjXzlUTndYT2c3T253d0J4X3Z3NHBOYWtvcE1wbHBiem9fOER1ZHNtaXhUWFFlYkxiRDhlaFQyMFRZVkRkWHFpRkItbWF2cEZOSlVaaUFhUU9COEZ4TkJ0N0ZlQkxnc2hudlJHNVVuQQ?oc=5",
+          "publication_date": "2026-09-28T07:00:00+00:00",
+          "source_count": 1
+        },
+        {
+          "group_id": "report-d67111cf2ca6723ae2a6",
+          "title": "Canada's 'Crypto King' Aiden Pleterski to Represent Himself at Fraud Trial - Decrypt",
+          "source_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPV0xzOXUyMFBFMmpZeHI5aGxESjB6dk5TLUZ3VkZGUk00akQzVXZ1YktMUmtxSHJQS2M3OUFzOFpRY3k2N2pKMFRzUUdQZjc0SGU1QVlwTHJYamNrMXBwMlBsQ3pVV0d5LTdPZnFTb1lGY0ZJVFNDZko3aXVvRTYyTDZJMnNySzBqMVlTQ3o3bEd6U0xMN2ZvWkl6ZTJwQQ?oc=5",
+          "publication_date": "2026-09-29T07:00:00+00:00",
+          "source_count": 1
+        }
+      ],
+      "reasons": [
+        "5 shared descriptive headline terms",
+        "Overlapping scam method: Investment & crypto scams",
+        "Published within ten days"
+      ],
+      "priority": 8,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
+      "id": "candidate:report-0029f35724755361f2a2:report-012b66e7b9cc15bec4bf",
+      "group_ids": [
+        "report-0029f35724755361f2a2",
+        "report-012b66e7b9cc15bec4bf"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-0029f35724755361f2a2",
+          "title": "’Crypto King’ Aiden Pleterski will represent himself at his fraud trial next week - Radio-Canada",
+          "source_url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNQnc5V1RoTjB6VmsteVBLTDNyZWNSR2RxdEhqQkpsNmVJVHVwZEt3azJZUElBaG1LQmhUQ1BmaFFSb010UXpWYmRWa2Y3djlkclZEaXlPTGpSUHBvTUwzdjZBQnZHYnozX1lXN21mUDZJbmRaaW5OX3VWb0dqUWkwb1hjY1dVQnhOdUFJd0hvNWtZRzdORzV6eENJc2x2RFlHc205eHNzYm1ZTnByalVNX3Uydkl0emVZaV9rc185eDNCd1ZkTlE?oc=5",
+          "publication_date": "2026-09-28T07:00:00+00:00",
+          "source_count": 2
+        },
+        {
+          "group_id": "report-012b66e7b9cc15bec4bf",
+          "title": "Canadian ‘crypto king’ set to represent himself at fraud trial - TradingView",
+          "source_url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQZmh1UzFPMXk0aUhQUWhzMUpkYXFiQlZtSTU4YlpLcVBscFlaOGluSFROa1lTb0EyMFRvd1FjY2J6NUpobTVHVlZIRkw4RWlxQ1V1V3Z4bHUxbWdjXzlUTndYT2c3T253d0J4X3Z3NHBOYWtvcE1wbHBiem9fOER1ZHNtaXhUWFFlYkxiRDhlaFQyMFRZVkRkWHFpRkItbWF2cEZOSlVaaUFhUU9COEZ4TkJ0N0ZlQkxnc2hudlJHNVVuQQ?oc=5",
+          "publication_date": "2026-09-28T07:00:00+00:00",
+          "source_count": 1
+        }
+      ],
+      "reasons": [
+        "5 shared descriptive headline terms",
+        "Overlapping scam method: Investment & crypto scams",
+        "Published within ten days"
+      ],
+      "priority": 8,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
+      "id": "candidate:report-428fd9e3aabcfd90c710:report-f45a57948bab2a2739d9",
+      "group_ids": [
+        "report-428fd9e3aabcfd90c710",
+        "report-f45a57948bab2a2739d9"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-428fd9e3aabcfd90c710",
+          "title": "Ontario senior bilked out of $900K after falling victim to crypto scam that used AI deepfake of PM Carney - CTV News",
+          "source_url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPVks5QzR5ZnhvaEV3TzJFYkNHQzFZeXlRNThYT1dWVGwteGVKbVB6R3ZDeWdOVEJuRFhLYWUzd0pBeW1LbkIwWjRIWWxiU21rVll4WDY5WWpQTFRnd1FPWnNsa3FpMVlGWE9PanI4NEpHVFJTcUszcVYzLWgyN2RkUW5PVFB3cTVuZFlZT2RFek55bXNNN09nbFMzdWZQaWdlQndiVVNOZlRBd3ZUaEdPSHhVVGVDOGlqbFo5YWthTEQtODJ2U2FnbzlHMkV6OGJoeWhMYjdJMkI?oc=5",
+          "publication_date": "2026-06-26T07:00:00+00:00",
+          "source_count": 1
+        },
+        {
+          "group_id": "report-f45a57948bab2a2739d9",
+          "title": "An Ontario senior lost $900,000 in a crypto scam that used an AI deepfake of Mark Carney - Toronto Life",
+          "source_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQLVhoYk9oU3BCNTZrSGgtN21xVE9pV3VZTXllMmpWanNXaTRTNWpxWWlpZk9IQTdiTGNaMmdkWU9hc3F0UVpNVzE1aEVXZFFpcGlfTnBwNGExZFQ4QmxpaDkxVU1DVlZkYVZLZzc1Vy14Skh6dFNVTGtCcnkxeFJleTNTX1V1NkN2QmlVdlFIYmRCVEVncnBKSHk1ZU1RRzV1YXVZUDJMWlowSFdRaGtueWs3YlZ4d2c?oc=5",
+          "publication_date": "2026-06-26T07:00:00+00:00",
+          "source_count": 1
+        }
+      ],
+      "reasons": [
+        "6 shared descriptive headline terms",
+        "Overlapping scam method: Digital fraud & cybercrime, Investment & crypto scams",
+        "Published within ten days"
+      ],
+      "priority": 8,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
+      "id": "candidate:report-374cac619a49b836b67e:report-8b561afdf90ed24741dc",
+      "group_ids": [
+        "report-374cac619a49b836b67e",
+        "report-8b561afdf90ed24741dc"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-374cac619a49b836b67e",
+          "title": "Ontario’s ‘Crypto King’ arrested and charged with fraud, laundering - CityNews Toronto",
+          "source_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNSVY3bFU1bmwza1pIRGl6S2RBQnlHSzlzd253V2tyX09kcUxRb3lQelpuTXlkUGJpbWNoQlk2QWFoVVBmcnVBa1d2Zll1UE5GTlJ3TEhGb3A2d2pZSWxFWm8xZW9YSHdDMWhJcWFnc0gyb21hcEZIcXlYbDdfZm5LWFJlWU9XSFJFUnJxekZISm9sUzFkcGZfeEJ0b043Zw?oc=5",
+          "publication_date": "2024-05-15T07:00:00+00:00",
+          "source_count": 1
+        },
+        {
+          "group_id": "report-8b561afdf90ed24741dc",
+          "title": "Ontario’s 'Crypto King' arrested, charged with fraud | RCI - Radio-Canada",
+          "source_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQR0o1Wm1HeGtHR3F0UUo3WkNhLUlwaEpuTXdXanF0a0dhZnR5SklvTzhLYlFHTXJpU1dxMERFYVExUXUwazFRam5LTXhZSXJHaVVrcXhxaDlyV0hoYU42c0RxRnEtS0czUWN1TUtqRmFZMmE5RnZkNFpoLTFYZlBBcUdadklHMktYcEdoNVNyUXJVa2pZYjhMVjJHVzd5b3d3Vnd1NVo1MDVYVkNGMk00a1dNRDM?oc=5",
+          "publication_date": "2024-05-15T07:00:00+00:00",
+          "source_count": 1
+        }
+      ],
+      "reasons": [
+        "5 shared descriptive headline terms",
+        "Overlapping scam method: Fraud investigations & enforcement, Investment & crypto scams",
+        "Published within ten days"
+      ],
+      "priority": 8,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
+      "id": "candidate:report-3fcb2c44741a689c8dcf:report-704137a359640a273a32",
+      "group_ids": [
+        "report-3fcb2c44741a689c8dcf",
+        "report-704137a359640a273a32"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-3fcb2c44741a689c8dcf",
+          "title": "Toronto-born ex-Blue Jay charged over Ontario youth baseball program fraud - TSN",
+          "source_url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQc09JTkY0ZzVtM05JOFpjaU1GZzdiRkR5S0sxMWpRSkVfWVdWWnlNZWR0a0FYS3J2a21yVVVWSGxYLTJJUFI0S2RVaTJ2SVlWNEJjS1BPZS1YbGFSZDZtdVppTS11Z2FIR2NkajBvYWs2S0ZMa0E5VnUwX0liR0NnX2prTzFXbU44ZVFWTERsWV92cnpHZnhUVXE5SFhBTFBNWlJR?oc=5",
+          "publication_date": "2026-10-20T07:00:00+00:00",
+          "source_count": 1
+        },
+        {
+          "group_id": "report-704137a359640a273a32",
+          "title": "A former Blue Jay who ran a kids’ baseball training camp has been charged with fraud - Toronto Life",
+          "source_url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBFZzZZbW9IZ3VOSnp6QzF5eGhwX1ozVmxVZ3UxbGNrNXVFdXhDVHc3LXlkbkJHNUJEbURMa3JQY3lxM3VLd0dyaHBqOXZ4Yy1oOG9hY2hCRi1SQ0tBN2xuR3Z3dW5SeUNydVgwZFo5bWp4WVhaVUl4UQ?oc=5",
+          "publication_date": "2026-10-21T07:00:00+00:00",
+          "source_count": 1
+        }
+      ],
+      "reasons": [
+        "5 shared descriptive headline terms",
+        "Same source-mentioned place",
+        "Published within ten days"
+      ],
+      "priority": 8,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
+      "id": "candidate:report-704137a359640a273a32:report-c6590ddf6f96fa6dc425",
+      "group_ids": [
+        "report-704137a359640a273a32",
+        "report-c6590ddf6f96fa6dc425"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-704137a359640a273a32",
+          "title": "A former Blue Jay who ran a kids’ baseball training camp has been charged with fraud - Toronto Life",
+          "source_url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBFZzZZbW9IZ3VOSnp6QzF5eGhwX1ozVmxVZ3UxbGNrNXVFdXhDVHc3LXlkbkJHNUJEbURMa3JQY3lxM3VLd0dyaHBqOXZ4Yy1oOG9hY2hCRi1SQ0tBN2xuR3Z3dW5SeUNydVgwZFo5bWp4WVhaVUl4UQ?oc=5",
+          "publication_date": "2026-10-21T07:00:00+00:00",
+          "source_count": 1
+        },
+        {
+          "group_id": "report-c6590ddf6f96fa6dc425",
+          "title": "Former Blue Jay, wife charged with fraud linked to Ontario youth baseball program fees: police - CBC",
+          "source_url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNVm01UHpSdTNQdTllM2lJZ1JHdlNLVHRZYnBWcFliR3hkSUpCVHgtS2liTVZzd1RNRzI0dndQdWFibXdxUTVmaW5rNjUxci1TZ01jYk84YUVxUUxEM2M0b2FYYm9QY3d2b3pvdkdKajRIUTV4MzV4dmF6NzJyNVNuWUs2VWhwSy1tajFoQVpKbm5Vdk0?oc=5",
+          "publication_date": "2026-10-20T07:00:00+00:00",
+          "source_count": 1
+        }
+      ],
+      "reasons": [
+        "5 shared descriptive headline terms",
+        "Overlapping scam method: Fraud investigations & enforcement",
+        "Published within ten days"
+      ],
+      "priority": 8,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
+      "id": "candidate:report-704137a359640a273a32:report-9ed2fcabf2b110ad5e5f",
+      "group_ids": [
+        "report-704137a359640a273a32",
+        "report-9ed2fcabf2b110ad5e5f"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-704137a359640a273a32",
+          "title": "A former Blue Jay who ran a kids’ baseball training camp has been charged with fraud - Toronto Life",
+          "source_url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBFZzZZbW9IZ3VOSnp6QzF5eGhwX1ozVmxVZ3UxbGNrNXVFdXhDVHc3LXlkbkJHNUJEbURMa3JQY3lxM3VLd0dyaHBqOXZ4Yy1oOG9hY2hCRi1SQ0tBN2xuR3Z3dW5SeUNydVgwZFo5bWp4WVhaVUl4UQ?oc=5",
+          "publication_date": "2026-10-21T07:00:00+00:00",
+          "source_count": 1
+        },
+        {
+          "group_id": "report-9ed2fcabf2b110ad5e5f",
+          "title": "Former Toronto Blue Jay, wife accused in $60K youth baseball fraud - CTV News",
+          "source_url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOVVFreEhobU5pc2N5N21lRWVVWjBDSG96QUdWM0FlWHNwVlFyX1lTNTJPencwVE90ZkFTdUtvbkdGRS1FM2JSYWpmZnJiYjNNMkp1WW5wd1dlNU9ua3ZhMm5xYjMtd2tGdWVmUU11VHRUaXQ4QjYzRkEwWkJBTW53dmtIT0FOejNHTkhGWFB5QnlwSFg5QzByT2RFMlFwVU42V05za2ZGYUlNNXR4ZTFxTmdKalV4X2pkU2RGUQ?oc=5",
+          "publication_date": "2026-10-20T14:44:08+00:00",
+          "source_count": 1
+        }
+      ],
+      "reasons": [
+        "5 shared descriptive headline terms",
+        "Same source-mentioned place",
         "Published within ten days"
       ],
       "priority": 8,
@@ -3428,30 +3946,30 @@
       ]
     },
     {
-      "id": "candidate:report-6c8b842a1521d817f344:report-d633f3a12921dc7c2c4e",
+      "id": "candidate:report-78f55fcd8a73043c0734:report-c9e2fc0e21d31f470f4c",
       "group_ids": [
-        "report-6c8b842a1521d817f344",
-        "report-d633f3a12921dc7c2c4e"
+        "report-78f55fcd8a73043c0734",
+        "report-c9e2fc0e21d31f470f4c"
       ],
       "headlines": [
         {
-          "group_id": "report-6c8b842a1521d817f344",
-          "title": "‘Crypto King’ Aiden Pleterski’s fraud trial adjourned until next week due to medical issue - CBC",
-          "source_url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOTjI2NFVNMDQ5ZG1KN2lzOE54S1NFX2ZZb0d6aDJBcmtsaE5ZT2RhZ0UyN3BOME1remg0WmlwMTN0MXhwcDFJbk12bUR0TU43X01GMDVmNkRZRnJQZVRrejc3SHh3Q3IxS1U0VTZ6SXRjVzZpNzZwYnZaaFRqUVNKTl9wRTBOZVZsYV9EOUNuSUdxVk1nc0c1V3lyTXRUdnBkM1c5NTlBOFNMSnFZWktBeVZ4RGNxWkJXVVdpY2ZXRHFqVTVZTEU1dTlkY1F1ZUhOcGc?oc=5",
-          "publication_date": "2026-10-20T07:00:00+00:00",
-          "source_count": 2
+          "group_id": "report-78f55fcd8a73043c0734",
+          "title": "Indigo employees’ personal information breached as part of ransomware attack on retailer - The Globe and Mail",
+          "source_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQMlU1WkJueEhGQjN3bFcyaEZ1NmJFeXlJQmtFZElnTlcwbzlBTFVJb3RxQTNJalNCdlQ1SC1Va2RhcGFPSGdnOU1Qdm9hWlV5MW9KSUJTbVlLV1d4eGNMZEZqazNHa1hjelJhOFlLVW5QVXRxcEMtV2lNRzB1ZEduNVNuRFMtaG8yZWJDNEY3UjhaWTJudjZ1bXZzTTQ5TUFBaXZQSGsyTQ?oc=5",
+          "publication_date": "2023-02-24T08:00:00+00:00",
+          "source_count": 1
         },
         {
-          "group_id": "report-d633f3a12921dc7c2c4e",
-          "title": "'Crypto King' Aiden Pleterski found guilty of fraud at Toronto jury trial | Hanomansing Live - Yahoo News Canada",
-          "source_url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9tQUhxTDlIdWdIbng4LXJNMjI3QmlYLVcwU1NIMXY4QkNHX25LdzN3S1ZEMVFKM3pzOG95TndUODVmaHFYcmdVVlNfbWJpVFFvTDlYbVYzM21UTV9yN1BLcHFDNmF4eFBaX1BPMTdETVRBRFMzdzVuLUhrOTdhNVE?oc=5",
-          "publication_date": "2026-10-30T00:03:00+00:00",
-          "source_count": 2
+          "group_id": "report-c9e2fc0e21d31f470f4c",
+          "title": "Indigo says ransomware attack breached data of current and former employees - Global News",
+          "source_url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQamxzVmhNSzRNdnZ6eWx4VVNTajZqcXlzdjRKWTh3R05iaUxhQS1aRVptX3ZGZEFhVk1mTVZCc0pDMngzcVYzVXZmeFdILUtyTTc0LUtwME1YcE1mcWhwVGhETnJ1clBaMnM4XzljRTZDZVZGLUVfSEplV1FVcmRScWlNMDRRaFhTSGc?oc=5",
+          "publication_date": "2023-02-24T08:00:00+00:00",
+          "source_count": 1
         }
       ],
       "reasons": [
         "5 shared descriptive headline terms",
-        "Overlapping scam method: Investment & crypto scams",
+        "Overlapping scam method: Digital fraud & cybercrime",
         "Published within ten days"
       ],
       "priority": 8,
@@ -3576,154 +4094,6 @@
       ]
     },
     {
-      "id": "candidate:report-78f55fcd8a73043c0734:report-c9e2fc0e21d31f470f4c",
-      "group_ids": [
-        "report-78f55fcd8a73043c0734",
-        "report-c9e2fc0e21d31f470f4c"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-78f55fcd8a73043c0734",
-          "title": "Indigo employees’ personal information breached as part of ransomware attack on retailer - The Globe and Mail",
-          "source_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQMlU1WkJueEhGQjN3bFcyaEZ1NmJFeXlJQmtFZElnTlcwbzlBTFVJb3RxQTNJalNCdlQ1SC1Va2RhcGFPSGdnOU1Qdm9hWlV5MW9KSUJTbVlLV1d4eGNMZEZqazNHa1hjelJhOFlLVW5QVXRxcEMtV2lNRzB1ZEduNVNuRFMtaG8yZWJDNEY3UjhaWTJudjZ1bXZzTTQ5TUFBaXZQSGsyTQ?oc=5",
-          "publication_date": "2023-02-24T08:00:00+00:00",
-          "source_count": 1
-        },
-        {
-          "group_id": "report-c9e2fc0e21d31f470f4c",
-          "title": "Indigo says ransomware attack breached data of current and former employees - Global News",
-          "source_url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQamxzVmhNSzRNdnZ6eWx4VVNTajZqcXlzdjRKWTh3R05iaUxhQS1aRVptX3ZGZEFhVk1mTVZCc0pDMngzcVYzVXZmeFdILUtyTTc0LUtwME1YcE1mcWhwVGhETnJ1clBaMnM4XzljRTZDZVZGLUVfSEplV1FVcmRScWlNMDRRaFhTSGc?oc=5",
-          "publication_date": "2023-02-24T08:00:00+00:00",
-          "source_count": 1
-        }
-      ],
-      "reasons": [
-        "5 shared descriptive headline terms",
-        "Overlapping scam method: Digital fraud & cybercrime",
-        "Published within ten days"
-      ],
-      "priority": 8,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
-      "id": "candidate:report-0029f35724755361f2a2:report-012b66e7b9cc15bec4bf",
-      "group_ids": [
-        "report-0029f35724755361f2a2",
-        "report-012b66e7b9cc15bec4bf"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-0029f35724755361f2a2",
-          "title": "’Crypto King’ Aiden Pleterski will represent himself at his fraud trial next week - Radio-Canada",
-          "source_url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNQnc5V1RoTjB6VmsteVBLTDNyZWNSR2RxdEhqQkpsNmVJVHVwZEt3azJZUElBaG1LQmhUQ1BmaFFSb010UXpWYmRWa2Y3djlkclZEaXlPTGpSUHBvTUwzdjZBQnZHYnozX1lXN21mUDZJbmRaaW5OX3VWb0dqUWkwb1hjY1dVQnhOdUFJd0hvNWtZRzdORzV6eENJc2x2RFlHc205eHNzYm1ZTnByalVNX3Uydkl0emVZaV9rc185eDNCd1ZkTlE?oc=5",
-          "publication_date": "2026-09-28T07:00:00+00:00",
-          "source_count": 2
-        },
-        {
-          "group_id": "report-012b66e7b9cc15bec4bf",
-          "title": "Canadian ‘crypto king’ set to represent himself at fraud trial - TradingView",
-          "source_url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQZmh1UzFPMXk0aUhQUWhzMUpkYXFiQlZtSTU4YlpLcVBscFlaOGluSFROa1lTb0EyMFRvd1FjY2J6NUpobTVHVlZIRkw4RWlxQ1V1V3Z4bHUxbWdjXzlUTndYT2c3T253d0J4X3Z3NHBOYWtvcE1wbHBiem9fOER1ZHNtaXhUWFFlYkxiRDhlaFQyMFRZVkRkWHFpRkItbWF2cEZOSlVaaUFhUU9COEZ4TkJ0N0ZlQkxnc2hudlJHNVVuQQ?oc=5",
-          "publication_date": "2026-09-28T07:00:00+00:00",
-          "source_count": 1
-        }
-      ],
-      "reasons": [
-        "5 shared descriptive headline terms",
-        "Overlapping scam method: Investment & crypto scams",
-        "Published within ten days"
-      ],
-      "priority": 8,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
-      "id": "candidate:report-0029f35724755361f2a2:report-d67111cf2ca6723ae2a6",
-      "group_ids": [
-        "report-0029f35724755361f2a2",
-        "report-d67111cf2ca6723ae2a6"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-0029f35724755361f2a2",
-          "title": "’Crypto King’ Aiden Pleterski will represent himself at his fraud trial next week - Radio-Canada",
-          "source_url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNQnc5V1RoTjB6VmsteVBLTDNyZWNSR2RxdEhqQkpsNmVJVHVwZEt3azJZUElBaG1LQmhUQ1BmaFFSb010UXpWYmRWa2Y3djlkclZEaXlPTGpSUHBvTUwzdjZBQnZHYnozX1lXN21mUDZJbmRaaW5OX3VWb0dqUWkwb1hjY1dVQnhOdUFJd0hvNWtZRzdORzV6eENJc2x2RFlHc205eHNzYm1ZTnByalVNX3Uydkl0emVZaV9rc185eDNCd1ZkTlE?oc=5",
-          "publication_date": "2026-09-28T07:00:00+00:00",
-          "source_count": 2
-        },
-        {
-          "group_id": "report-d67111cf2ca6723ae2a6",
-          "title": "Canada's 'Crypto King' Aiden Pleterski to Represent Himself at Fraud Trial - Decrypt",
-          "source_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPV0xzOXUyMFBFMmpZeHI5aGxESjB6dk5TLUZ3VkZGUk00akQzVXZ1YktMUmtxSHJQS2M3OUFzOFpRY3k2N2pKMFRzUUdQZjc0SGU1QVlwTHJYamNrMXBwMlBsQ3pVV0d5LTdPZnFTb1lGY0ZJVFNDZko3aXVvRTYyTDZJMnNySzBqMVlTQ3o3bEd6U0xMN2ZvWkl6ZTJwQQ?oc=5",
-          "publication_date": "2026-09-29T07:00:00+00:00",
-          "source_count": 1
-        }
-      ],
-      "reasons": [
-        "7 shared descriptive headline terms",
-        "Overlapping scam method: Investment & crypto scams",
-        "Published within ten days"
-      ],
-      "priority": 8,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
-      "id": "candidate:report-0029f35724755361f2a2:report-d1c8901a78309fba833f",
-      "group_ids": [
-        "report-0029f35724755361f2a2",
-        "report-d1c8901a78309fba833f"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-0029f35724755361f2a2",
-          "title": "’Crypto King’ Aiden Pleterski will represent himself at his fraud trial next week - Radio-Canada",
-          "source_url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNQnc5V1RoTjB6VmsteVBLTDNyZWNSR2RxdEhqQkpsNmVJVHVwZEt3azJZUElBaG1LQmhUQ1BmaFFSb010UXpWYmRWa2Y3djlkclZEaXlPTGpSUHBvTUwzdjZBQnZHYnozX1lXN21mUDZJbmRaaW5OX3VWb0dqUWkwb1hjY1dVQnhOdUFJd0hvNWtZRzdORzV6eENJc2x2RFlHc205eHNzYm1ZTnByalVNX3Uydkl0emVZaV9rc185eDNCd1ZkTlE?oc=5",
-          "publication_date": "2026-09-28T07:00:00+00:00",
-          "source_count": 2
-        },
-        {
-          "group_id": "report-d1c8901a78309fba833f",
-          "title": "Canadian 'Crypto King' Aiden Pleterski to Represent Himself in Fraud Trial - Bitcoin News",
-          "source_url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQUlBJYVFTclhyejliZFdzMnZHS2toOEpsc1ExQThneHVqdmV0M19JQmZtaUVRdm9pUlZDaGFsbGc1M0swb3JRLTA5TVdmT0c3SEVOY3lBRUpzNVpBVkVOajVsMVZZSHdzOFZZTkNoSkxhVmduTGk0UUZCQk9Udl9TcEx2NUlVd2ExNU16UG9YX2RZM2k5ZVpidi1PblVTWXhVTXBQRFFvSlFEQmpONGI4Yms1UnZFSXVRVi0w?oc=5",
-          "publication_date": "2026-09-30T07:00:00+00:00",
-          "source_count": 1
-        }
-      ],
-      "reasons": [
-        "7 shared descriptive headline terms",
-        "Overlapping scam method: Investment & crypto scams",
-        "Published within ten days"
-      ],
-      "priority": 8,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
       "id": "candidate:report-08e38c6fd8fe945dc640:report-165fcd0c3da973273020",
       "group_ids": [
         "report-08e38c6fd8fe945dc640",
@@ -3780,117 +4150,6 @@
           "source_url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOdXZ4ZlNPYkZrNDB4bmdaSFlDbkViQ2ZwSWFVejRZMXRCYUZYSEtHYWtNOVc0dDB1UGl1dnR3NUt3R0VxWldHYmYtWk5GZ2NKVjVWdzNlczJPdTFDTEFWVXBnZkdnM3Z0dmM0a0Z5RmdOa2JXWFM4SHI1eS1YeVpfaEItU01kU1hVUzdrcmRTemhOSWJrOWoyZWxtbVlpbEZka0lKYWltMXhWVGZSbWhDWk5fMjBnV1hmOWI2dFcxaTUyNkRTMTkwZnFWWkJMVTJHYmdaaw?oc=5",
           "publication_date": "2021-11-26T08:00:00+00:00",
           "source_count": 1
-        }
-      ],
-      "reasons": [
-        "6 shared descriptive headline terms",
-        "Overlapping scam method: Investment & crypto scams",
-        "Published within ten days"
-      ],
-      "priority": 8,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
-      "id": "candidate:report-4ed6c222cb0453ea4d67:report-6c8b842a1521d817f344",
-      "group_ids": [
-        "report-4ed6c222cb0453ea4d67",
-        "report-6c8b842a1521d817f344"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-4ed6c222cb0453ea4d67",
-          "title": "Canada 'Crypto King' Aiden Pleterski's Ponzi-Fraud Trial Goes to Jury - bloomingbit",
-          "source_url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9CZ3EzN1c0aVhPdUltOEpicm9GQXBUUF9DeW5zaTdHZHpxR2xoNFRweW5MdmZRcWFuWkpLX01hZHJKMHJ0REREY2xYZ1ZKNV80QmRoYg?oc=5",
-          "publication_date": "2026-10-28T07:00:00+00:00",
-          "source_count": 1
-        },
-        {
-          "group_id": "report-6c8b842a1521d817f344",
-          "title": "‘Crypto King’ Aiden Pleterski’s fraud trial adjourned until next week due to medical issue - CBC",
-          "source_url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOTjI2NFVNMDQ5ZG1KN2lzOE54S1NFX2ZZb0d6aDJBcmtsaE5ZT2RhZ0UyN3BOME1remg0WmlwMTN0MXhwcDFJbk12bUR0TU43X01GMDVmNkRZRnJQZVRrejc3SHh3Q3IxS1U0VTZ6SXRjVzZpNzZwYnZaaFRqUVNKTl9wRTBOZVZsYV9EOUNuSUdxVk1nc0c1V3lyTXRUdnBkM1c5NTlBOFNMSnFZWktBeVZ4RGNxWkJXVVdpY2ZXRHFqVTVZTEU1dTlkY1F1ZUhOcGc?oc=5",
-          "publication_date": "2026-10-20T07:00:00+00:00",
-          "source_count": 2
-        }
-      ],
-      "reasons": [
-        "5 shared descriptive headline terms",
-        "Overlapping scam method: Investment & crypto scams",
-        "Published within ten days"
-      ],
-      "priority": 8,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
-      "id": "candidate:report-6c8b842a1521d817f344:report-b58a8d4914d1a3d157c9",
-      "group_ids": [
-        "report-6c8b842a1521d817f344",
-        "report-b58a8d4914d1a3d157c9"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-6c8b842a1521d817f344",
-          "title": "‘Crypto King’ Aiden Pleterski’s fraud trial adjourned until next week due to medical issue - CBC",
-          "source_url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOTjI2NFVNMDQ5ZG1KN2lzOE54S1NFX2ZZb0d6aDJBcmtsaE5ZT2RhZ0UyN3BOME1remg0WmlwMTN0MXhwcDFJbk12bUR0TU43X01GMDVmNkRZRnJQZVRrejc3SHh3Q3IxS1U0VTZ6SXRjVzZpNzZwYnZaaFRqUVNKTl9wRTBOZVZsYV9EOUNuSUdxVk1nc0c1V3lyTXRUdnBkM1c5NTlBOFNMSnFZWktBeVZ4RGNxWkJXVVdpY2ZXRHFqVTVZTEU1dTlkY1F1ZUhOcGc?oc=5",
-          "publication_date": "2026-10-20T07:00:00+00:00",
-          "source_count": 2
-        },
-        {
-          "group_id": "report-b58a8d4914d1a3d157c9",
-          "title": "'Crypto King' Aiden Pleterski tells jury he's innocent in closing statement at fraud trial - CBC",
-          "source_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPeFNSR3hPeWhrenozamdfS2l4ZHRiTjV2dVRFNlhNUU9qV0U2V1JYYlNDMTI3MkFtaXpYTHRIYTRsUllmQkF2SkM3UHpEZmhBOFN5WVp0dDhoMWpIVDl6eE9ZUUhYMlFJNm9HOU5kMF9QOHhYRTFmMXFlVXRRMVAtdnpsX1k0UXN5OUNuUG5aaTBXbnFBRnRnZzZqa2JFZkpWRWZZMHo2anlrQQ?oc=5",
-          "publication_date": "2026-10-28T19:10:07+00:00",
-          "source_count": 1
-        }
-      ],
-      "reasons": [
-        "6 shared descriptive headline terms",
-        "Overlapping scam method: Investment & crypto scams",
-        "Published within ten days"
-      ],
-      "priority": 8,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
-      "id": "candidate:report-39055d44e862e2ede21d:report-6c8b842a1521d817f344",
-      "group_ids": [
-        "report-39055d44e862e2ede21d",
-        "report-6c8b842a1521d817f344"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-39055d44e862e2ede21d",
-          "title": "What the jury didn't hear at 'Crypto King' Aiden Pleterski’s fraud trial - CBC",
-          "source_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQeXpkRVM2dTQya0J6ZWFRWU5YWjBEcTc1RS04NDFiTjk2ZFh5ZzZyVFcwcy1YUFkzY1R0Y3FGUjM2bEc1Uy1vYzJMVTRYTnJwX0dwYWlJZk91UGFMTUNtUVFBcER3RW9HSnhXTlN4NHU2VFI5OTFlVjB2MU9oMksxcE1ESG92ZXVKYnptTDFvc0toeVdCZUN2djc4bktNM0tvNmpaX0RUcWlQSjM3TG5rRw?oc=5",
-          "publication_date": "2026-10-29T07:00:00+00:00",
-          "source_count": 1
-        },
-        {
-          "group_id": "report-6c8b842a1521d817f344",
-          "title": "‘Crypto King’ Aiden Pleterski’s fraud trial adjourned until next week due to medical issue - CBC",
-          "source_url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOTjI2NFVNMDQ5ZG1KN2lzOE54S1NFX2ZZb0d6aDJBcmtsaE5ZT2RhZ0UyN3BOME1remg0WmlwMTN0MXhwcDFJbk12bUR0TU43X01GMDVmNkRZRnJQZVRrejc3SHh3Q3IxS1U0VTZ6SXRjVzZpNzZwYnZaaFRqUVNKTl9wRTBOZVZsYV9EOUNuSUdxVk1nc0c1V3lyTXRUdnBkM1c5NTlBOFNMSnFZWktBeVZ4RGNxWkJXVVdpY2ZXRHFqVTVZTEU1dTlkY1F1ZUhOcGc?oc=5",
-          "publication_date": "2026-10-20T07:00:00+00:00",
-          "source_count": 2
         }
       ],
       "reasons": [
@@ -3970,43 +4229,6 @@
       "reasons": [
         "5 shared descriptive headline terms",
         "Same source-mentioned place",
-        "Published within ten days"
-      ],
-      "priority": 8,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
-      "id": "candidate:report-374cac619a49b836b67e:report-8b561afdf90ed24741dc",
-      "group_ids": [
-        "report-374cac619a49b836b67e",
-        "report-8b561afdf90ed24741dc"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-374cac619a49b836b67e",
-          "title": "Ontario’s ‘Crypto King’ arrested and charged with fraud, laundering - CityNews Toronto",
-          "source_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNSVY3bFU1bmwza1pIRGl6S2RBQnlHSzlzd253V2tyX09kcUxRb3lQelpuTXlkUGJpbWNoQlk2QWFoVVBmcnVBa1d2Zll1UE5GTlJ3TEhGb3A2d2pZSWxFWm8xZW9YSHdDMWhJcWFnc0gyb21hcEZIcXlYbDdfZm5LWFJlWU9XSFJFUnJxekZISm9sUzFkcGZfeEJ0b043Zw?oc=5",
-          "publication_date": "2024-05-15T07:00:00+00:00",
-          "source_count": 1
-        },
-        {
-          "group_id": "report-8b561afdf90ed24741dc",
-          "title": "Ontario’s 'Crypto King' arrested, charged with fraud | RCI - Radio-Canada",
-          "source_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQR0o1Wm1HeGtHR3F0UUo3WkNhLUlwaEpuTXdXanF0a0dhZnR5SklvTzhLYlFHTXJpU1dxMERFYVExUXUwazFRam5LTXhZSXJHaVVrcXhxaDlyV0hoYU42c0RxRnEtS0czUWN1TUtqRmFZMmE5RnZkNFpoLTFYZlBBcUdadklHMktYcEdoNVNyUXJVa2pZYjhMVjJHVzd5b3d3Vnd1NVo1MDVYVkNGMk00a1dNRDM?oc=5",
-          "publication_date": "2024-05-15T07:00:00+00:00",
-          "source_count": 1
-        }
-      ],
-      "reasons": [
-        "5 shared descriptive headline terms",
-        "Overlapping scam method: Fraud investigations & enforcement, Investment & crypto scams",
         "Published within ten days"
       ],
       "priority": 8,
@@ -5093,228 +5315,6 @@
       ]
     },
     {
-      "id": "candidate:report-39055d44e862e2ede21d:report-4ed6c222cb0453ea4d67",
-      "group_ids": [
-        "report-39055d44e862e2ede21d",
-        "report-4ed6c222cb0453ea4d67"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-39055d44e862e2ede21d",
-          "title": "What the jury didn't hear at 'Crypto King' Aiden Pleterski’s fraud trial - CBC",
-          "source_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQeXpkRVM2dTQya0J6ZWFRWU5YWjBEcTc1RS04NDFiTjk2ZFh5ZzZyVFcwcy1YUFkzY1R0Y3FGUjM2bEc1Uy1vYzJMVTRYTnJwX0dwYWlJZk91UGFMTUNtUVFBcER3RW9HSnhXTlN4NHU2VFI5OTFlVjB2MU9oMksxcE1ESG92ZXVKYnptTDFvc0toeVdCZUN2djc4bktNM0tvNmpaX0RUcWlQSjM3TG5rRw?oc=5",
-          "publication_date": "2026-10-29T07:00:00+00:00",
-          "source_count": 1
-        },
-        {
-          "group_id": "report-4ed6c222cb0453ea4d67",
-          "title": "Canada 'Crypto King' Aiden Pleterski's Ponzi-Fraud Trial Goes to Jury - bloomingbit",
-          "source_url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9CZ3EzN1c0aVhPdUltOEpicm9GQXBUUF9DeW5zaTdHZHpxR2xoNFRweW5MdmZRcWFuWkpLX01hZHJKMHJ0REREY2xYZ1ZKNV80QmRoYg?oc=5",
-          "publication_date": "2026-10-28T07:00:00+00:00",
-          "source_count": 1
-        }
-      ],
-      "reasons": [
-        "6 shared descriptive headline terms",
-        "Overlapping scam method: Investment & crypto scams",
-        "Published within ten days"
-      ],
-      "priority": 8,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
-      "id": "candidate:report-39055d44e862e2ede21d:report-b58a8d4914d1a3d157c9",
-      "group_ids": [
-        "report-39055d44e862e2ede21d",
-        "report-b58a8d4914d1a3d157c9"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-39055d44e862e2ede21d",
-          "title": "What the jury didn't hear at 'Crypto King' Aiden Pleterski’s fraud trial - CBC",
-          "source_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQeXpkRVM2dTQya0J6ZWFRWU5YWjBEcTc1RS04NDFiTjk2ZFh5ZzZyVFcwcy1YUFkzY1R0Y3FGUjM2bEc1Uy1vYzJMVTRYTnJwX0dwYWlJZk91UGFMTUNtUVFBcER3RW9HSnhXTlN4NHU2VFI5OTFlVjB2MU9oMksxcE1ESG92ZXVKYnptTDFvc0toeVdCZUN2djc4bktNM0tvNmpaX0RUcWlQSjM3TG5rRw?oc=5",
-          "publication_date": "2026-10-29T07:00:00+00:00",
-          "source_count": 1
-        },
-        {
-          "group_id": "report-b58a8d4914d1a3d157c9",
-          "title": "'Crypto King' Aiden Pleterski tells jury he's innocent in closing statement at fraud trial - CBC",
-          "source_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPeFNSR3hPeWhrenozamdfS2l4ZHRiTjV2dVRFNlhNUU9qV0U2V1JYYlNDMTI3MkFtaXpYTHRIYTRsUllmQkF2SkM3UHpEZmhBOFN5WVp0dDhoMWpIVDl6eE9ZUUhYMlFJNm9HOU5kMF9QOHhYRTFmMXFlVXRRMVAtdnpsX1k0UXN5OUNuUG5aaTBXbnFBRnRnZzZqa2JFZkpWRWZZMHo2anlrQQ?oc=5",
-          "publication_date": "2026-10-28T19:10:07+00:00",
-          "source_count": 1
-        }
-      ],
-      "reasons": [
-        "7 shared descriptive headline terms",
-        "Overlapping scam method: Investment & crypto scams",
-        "Published within ten days"
-      ],
-      "priority": 8,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
-      "id": "candidate:report-4ed6c222cb0453ea4d67:report-b58a8d4914d1a3d157c9",
-      "group_ids": [
-        "report-4ed6c222cb0453ea4d67",
-        "report-b58a8d4914d1a3d157c9"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-4ed6c222cb0453ea4d67",
-          "title": "Canada 'Crypto King' Aiden Pleterski's Ponzi-Fraud Trial Goes to Jury - bloomingbit",
-          "source_url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9CZ3EzN1c0aVhPdUltOEpicm9GQXBUUF9DeW5zaTdHZHpxR2xoNFRweW5MdmZRcWFuWkpLX01hZHJKMHJ0REREY2xYZ1ZKNV80QmRoYg?oc=5",
-          "publication_date": "2026-10-28T07:00:00+00:00",
-          "source_count": 1
-        },
-        {
-          "group_id": "report-b58a8d4914d1a3d157c9",
-          "title": "'Crypto King' Aiden Pleterski tells jury he's innocent in closing statement at fraud trial - CBC",
-          "source_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPeFNSR3hPeWhrenozamdfS2l4ZHRiTjV2dVRFNlhNUU9qV0U2V1JYYlNDMTI3MkFtaXpYTHRIYTRsUllmQkF2SkM3UHpEZmhBOFN5WVp0dDhoMWpIVDl6eE9ZUUhYMlFJNm9HOU5kMF9QOHhYRTFmMXFlVXRRMVAtdnpsX1k0UXN5OUNuUG5aaTBXbnFBRnRnZzZqa2JFZkpWRWZZMHo2anlrQQ?oc=5",
-          "publication_date": "2026-10-28T19:10:07+00:00",
-          "source_count": 1
-        }
-      ],
-      "reasons": [
-        "6 shared descriptive headline terms",
-        "Overlapping scam method: Investment & crypto scams",
-        "Published within ten days"
-      ],
-      "priority": 8,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
-      "id": "candidate:report-012b66e7b9cc15bec4bf:report-d1c8901a78309fba833f",
-      "group_ids": [
-        "report-012b66e7b9cc15bec4bf",
-        "report-d1c8901a78309fba833f"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-012b66e7b9cc15bec4bf",
-          "title": "Canadian ‘crypto king’ set to represent himself at fraud trial - TradingView",
-          "source_url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQZmh1UzFPMXk0aUhQUWhzMUpkYXFiQlZtSTU4YlpLcVBscFlaOGluSFROa1lTb0EyMFRvd1FjY2J6NUpobTVHVlZIRkw4RWlxQ1V1V3Z4bHUxbWdjXzlUTndYT2c3T253d0J4X3Z3NHBOYWtvcE1wbHBiem9fOER1ZHNtaXhUWFFlYkxiRDhlaFQyMFRZVkRkWHFpRkItbWF2cEZOSlVaaUFhUU9COEZ4TkJ0N0ZlQkxnc2hudlJHNVVuQQ?oc=5",
-          "publication_date": "2026-09-28T07:00:00+00:00",
-          "source_count": 1
-        },
-        {
-          "group_id": "report-d1c8901a78309fba833f",
-          "title": "Canadian 'Crypto King' Aiden Pleterski to Represent Himself in Fraud Trial - Bitcoin News",
-          "source_url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQUlBJYVFTclhyejliZFdzMnZHS2toOEpsc1ExQThneHVqdmV0M19JQmZtaUVRdm9pUlZDaGFsbGc1M0swb3JRLTA5TVdmT0c3SEVOY3lBRUpzNVpBVkVOajVsMVZZSHdzOFZZTkNoSkxhVmduTGk0UUZCQk9Udl9TcEx2NUlVd2ExNU16UG9YX2RZM2k5ZVpidi1PblVTWXhVTXBQRFFvSlFEQmpONGI4Yms1UnZFSXVRVi0w?oc=5",
-          "publication_date": "2026-09-30T07:00:00+00:00",
-          "source_count": 1
-        }
-      ],
-      "reasons": [
-        "5 shared descriptive headline terms",
-        "Overlapping scam method: Investment & crypto scams",
-        "Published within ten days"
-      ],
-      "priority": 8,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
-      "id": "candidate:report-d1c8901a78309fba833f:report-d67111cf2ca6723ae2a6",
-      "group_ids": [
-        "report-d1c8901a78309fba833f",
-        "report-d67111cf2ca6723ae2a6"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-d1c8901a78309fba833f",
-          "title": "Canadian 'Crypto King' Aiden Pleterski to Represent Himself in Fraud Trial - Bitcoin News",
-          "source_url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQUlBJYVFTclhyejliZFdzMnZHS2toOEpsc1ExQThneHVqdmV0M19JQmZtaUVRdm9pUlZDaGFsbGc1M0swb3JRLTA5TVdmT0c3SEVOY3lBRUpzNVpBVkVOajVsMVZZSHdzOFZZTkNoSkxhVmduTGk0UUZCQk9Udl9TcEx2NUlVd2ExNU16UG9YX2RZM2k5ZVpidi1PblVTWXhVTXBQRFFvSlFEQmpONGI4Yms1UnZFSXVRVi0w?oc=5",
-          "publication_date": "2026-09-30T07:00:00+00:00",
-          "source_count": 1
-        },
-        {
-          "group_id": "report-d67111cf2ca6723ae2a6",
-          "title": "Canada's 'Crypto King' Aiden Pleterski to Represent Himself at Fraud Trial - Decrypt",
-          "source_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPV0xzOXUyMFBFMmpZeHI5aGxESjB6dk5TLUZ3VkZGUk00akQzVXZ1YktMUmtxSHJQS2M3OUFzOFpRY3k2N2pKMFRzUUdQZjc0SGU1QVlwTHJYamNrMXBwMlBsQ3pVV0d5LTdPZnFTb1lGY0ZJVFNDZko3aXVvRTYyTDZJMnNySzBqMVlTQ3o3bEd6U0xMN2ZvWkl6ZTJwQQ?oc=5",
-          "publication_date": "2026-09-29T07:00:00+00:00",
-          "source_count": 1
-        }
-      ],
-      "reasons": [
-        "7 shared descriptive headline terms",
-        "Overlapping scam method: Investment & crypto scams",
-        "Published within ten days"
-      ],
-      "priority": 8,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
-      "id": "candidate:report-012b66e7b9cc15bec4bf:report-d67111cf2ca6723ae2a6",
-      "group_ids": [
-        "report-012b66e7b9cc15bec4bf",
-        "report-d67111cf2ca6723ae2a6"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-012b66e7b9cc15bec4bf",
-          "title": "Canadian ‘crypto king’ set to represent himself at fraud trial - TradingView",
-          "source_url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQZmh1UzFPMXk0aUhQUWhzMUpkYXFiQlZtSTU4YlpLcVBscFlaOGluSFROa1lTb0EyMFRvd1FjY2J6NUpobTVHVlZIRkw4RWlxQ1V1V3Z4bHUxbWdjXzlUTndYT2c3T253d0J4X3Z3NHBOYWtvcE1wbHBiem9fOER1ZHNtaXhUWFFlYkxiRDhlaFQyMFRZVkRkWHFpRkItbWF2cEZOSlVaaUFhUU9COEZ4TkJ0N0ZlQkxnc2hudlJHNVVuQQ?oc=5",
-          "publication_date": "2026-09-28T07:00:00+00:00",
-          "source_count": 1
-        },
-        {
-          "group_id": "report-d67111cf2ca6723ae2a6",
-          "title": "Canada's 'Crypto King' Aiden Pleterski to Represent Himself at Fraud Trial - Decrypt",
-          "source_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPV0xzOXUyMFBFMmpZeHI5aGxESjB6dk5TLUZ3VkZGUk00akQzVXZ1YktMUmtxSHJQS2M3OUFzOFpRY3k2N2pKMFRzUUdQZjc0SGU1QVlwTHJYamNrMXBwMlBsQ3pVV0d5LTdPZnFTb1lGY0ZJVFNDZko3aXVvRTYyTDZJMnNySzBqMVlTQ3o3bEd6U0xMN2ZvWkl6ZTJwQQ?oc=5",
-          "publication_date": "2026-09-29T07:00:00+00:00",
-          "source_count": 1
-        }
-      ],
-      "reasons": [
-        "5 shared descriptive headline terms",
-        "Overlapping scam method: Investment & crypto scams",
-        "Published within ten days"
-      ],
-      "priority": 8,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
       "id": "candidate:report-5853093e3de4700a6862:report-91d10bbd18899a742fd8",
       "group_ids": [
         "report-5853093e3de4700a6862",
@@ -6014,6 +6014,154 @@
       ]
     },
     {
+      "id": "candidate:report-8289cd0ca0516b42ebd7:report-b70defa49164f1de1059",
+      "group_ids": [
+        "report-8289cd0ca0516b42ebd7",
+        "report-b70defa49164f1de1059"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-8289cd0ca0516b42ebd7",
+          "title": "US, UK and Canada Freeze $12M in Crypto Phishing Operation - CoinMarketCap",
+          "source_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQLXhodGJNSDBrODJtc2xmX20tOV9HNnktYVVNeU1tcUFJbHl1X0xZbW9OZ01iTnhvbW8zeHFXUE9wMk53SVdpLVlYdjQ5eU1pTXpGOUREVTV6YU5rR2NyeFgxOGFkclAybnFibGIxbUZMeG9fOEIwWTAwOUFHbGIxSTAzRWEzdmNQanpjR1VON3dFaUNrMnFGOEMzSUp6MlctcU4xTWlaQQ?oc=5",
+          "publication_date": "2026-11-10T13:07:00+00:00",
+          "source_count": 1
+        },
+        {
+          "group_id": "report-b70defa49164f1de1059",
+          "title": "US, UK and Canada Freeze $12M in Crypto Phishing Operation - CoinMarketCap",
+          "source_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQLXhodGJNSDBrODJtc2xmX20tOV9HNnktYVVNeU1tcUFJbHl1X0xZbW9OZ01iTnhvbW8zeHFXUE9wMk53SVdpLVlYdjQ5eU1pTXpGOUREVTV6YU5rR2NyeFgxOGFkclAybnFibGIxbUZMeG9fOEIwWTAwOUFHbGIxSTAzRWEzdmNQanpjR1VON3dFaUNrMnFGOEMzSUp6MlctcU4xTWlaQQ?oc=5",
+          "publication_date": "2026-10-10T12:55:44+00:00",
+          "source_count": 1
+        }
+      ],
+      "reasons": [
+        "6 shared descriptive headline terms",
+        "Overlapping scam method: Bank impersonation & phishing, Investment & crypto scams",
+        "Published within 45 days"
+      ],
+      "priority": 7,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
+      "id": "candidate:report-6c8b842a1521d817f344:report-fb5b82e1f5408dd917cf",
+      "group_ids": [
+        "report-6c8b842a1521d817f344",
+        "report-fb5b82e1f5408dd917cf"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-6c8b842a1521d817f344",
+          "title": "‘Crypto King’ Aiden Pleterski’s fraud trial adjourned until next week due to medical issue - CBC",
+          "source_url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOTjI2NFVNMDQ5ZG1KN2lzOE54S1NFX2ZZb0d6aDJBcmtsaE5ZT2RhZ0UyN3BOME1remg0WmlwMTN0MXhwcDFJbk12bUR0TU43X01GMDVmNkRZRnJQZVRrejc3SHh3Q3IxS1U0VTZ6SXRjVzZpNzZwYnZaaFRqUVNKTl9wRTBOZVZsYV9EOUNuSUdxVk1nc0c1V3lyTXRUdnBkM1c5NTlBOFNMSnFZWktBeVZ4RGNxWkJXVVdpY2ZXRHFqVTVZTEU1dTlkY1F1ZUhOcGc?oc=5",
+          "publication_date": "2026-10-20T07:00:00+00:00",
+          "source_count": 2
+        },
+        {
+          "group_id": "report-fb5b82e1f5408dd917cf",
+          "title": "Investor who gave 'Crypto King' Aiden Pleterski $150K+ testifies at fraud trial — victims got back 7.5 cents per dollar - Yahoo! Finance Canada",
+          "source_url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNOWtpX2hMWUUyaHp5QVpWYkhrcFZZVnVHVTJrX3plN1ZXNkRmQTBLVVp2ZVhZZ0RyMXlLT1NENTJheGFKdkRBWW5McHpJUUtWTVFKQWdtOWRRX0o3OHZjc1pNZXRwQi1EOHdXNU0ybGxJVlhZeFBienBNbVEwQjVhek9sUW52elE?oc=5",
+          "publication_date": "2026-10-08T07:00:00+00:00",
+          "source_count": 1
+        }
+      ],
+      "reasons": [
+        "5 shared descriptive headline terms",
+        "Overlapping scam method: Investment & crypto scams",
+        "Published within 45 days"
+      ],
+      "priority": 7,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
+      "id": "candidate:report-629f1f6c4f14b2c8818d:report-8b5de12095f62a4b0d0a",
+      "group_ids": [
+        "report-629f1f6c4f14b2c8818d",
+        "report-8b5de12095f62a4b0d0a"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-629f1f6c4f14b2c8818d",
+          "title": "Ontario man loses $90,000 to crypto investment scam - Inside Halton",
+          "source_url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPMjBLbGpQRWlPRjdfSHRXdXdieExEYkFaX2htWkpsd3VSUFZvSllEWXhLVHNMeU1ma1l1TVg5SEJhelBlN0owOUptQ1BuamtzR3VMc01iMkpvLTBCUmF1YVV4NjcwMGlaaVVycW9hb003WFRHRDMycm5OdXZoTV9MRnFCZ0FxZ29HaFY5SnBFQWlNc29wck9kTklCRjNqUzJNaXhPbHFaa0Y4UThSZ3ZpSXQwS19sYlFzbGpNdWhQUndtUQ?oc=5",
+          "publication_date": "2025-11-14T08:00:00+00:00",
+          "source_count": 1
+        },
+        {
+          "group_id": "report-8b5de12095f62a4b0d0a",
+          "title": "Ontario victim loses $90K US to Ford deepfake crypto scam - Inside Halton",
+          "source_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQcWU4NVNtNHlvOVdnVmpGVkxyY1FDRTJKQVByczZEYU1ZMzdFRlZZZEpfTnlMVmZja3JPc0FZT0VtRXVHcVpoMmtUb3p3dUFPanowR21qSzBpaHFjcUpwZmhkUDhKOW02LUpFMDR3SE9VcXpHVEIweE9iR0NTWXE3QWJQaTJXUzdFd2tuNjJsTDRxMlMxSHZNbDhRalFSR29CNUh4eFNrYjRjM3hHeTNYeFM3YjNXM00?oc=5",
+          "publication_date": "2025-10-14T07:00:00+00:00",
+          "source_count": 1
+        }
+      ],
+      "reasons": [
+        "5 shared descriptive headline terms",
+        "Overlapping scam method: Investment & crypto scams",
+        "Published within 45 days"
+      ],
+      "priority": 7,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
+      "id": "candidate:report-2198959a52777b9df56f:report-629f1f6c4f14b2c8818d",
+      "group_ids": [
+        "report-2198959a52777b9df56f",
+        "report-629f1f6c4f14b2c8818d"
+      ],
+      "headlines": [
+        {
+          "group_id": "report-2198959a52777b9df56f",
+          "title": "Ontario man loses $750,000 in retirement savings to investment scam operating out of U.K. - CTV News",
+          "source_url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOR215LUJ3QzdaTElCLTRoaDJaZzVRdGdTM0pKRDN6UTZ3NV9GRGczMjFZVi0zREpwWkRqRFZ4NF80dEl1ZWd4U0tZcmJwOVdaUG9vZWU4cUdWNy1Xd25VM2EzUmhELTNWUC14VEZWOEpFamRlNG9aS1FHWlo5b0NhLS1EN0xXb2NId08wQi03akJuaC14S2V0QVhNRnViTVdYWWNEdEhoVVNITC1OdHVacjM5eU83NXJvMXlNZFdTUjExaEE?oc=5",
+          "publication_date": "2025-12-10T08:00:00+00:00",
+          "source_count": 1
+        },
+        {
+          "group_id": "report-629f1f6c4f14b2c8818d",
+          "title": "Ontario man loses $90,000 to crypto investment scam - Inside Halton",
+          "source_url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPMjBLbGpQRWlPRjdfSHRXdXdieExEYkFaX2htWkpsd3VSUFZvSllEWXhLVHNMeU1ma1l1TVg5SEJhelBlN0owOUptQ1BuamtzR3VMc01iMkpvLTBCUmF1YVV4NjcwMGlaaVVycW9hb003WFRHRDMycm5OdXZoTV9MRnFCZ0FxZ29HaFY5SnBFQWlNc29wck9kTklCRjNqUzJNaXhPbHFaa0Y4UThSZ3ZpSXQwS19sYlFzbGpNdWhQUndtUQ?oc=5",
+          "publication_date": "2025-11-14T08:00:00+00:00",
+          "source_count": 1
+        }
+      ],
+      "reasons": [
+        "5 shared descriptive headline terms",
+        "Overlapping scam method: Investment & crypto scams",
+        "Published within 45 days"
+      ],
+      "priority": 7,
+      "status": "unverified_suggested_connection",
+      "review_steps": [
+        "Read both original articles, not only titles",
+        "Determine whether accounts share a victim, transaction, or official case identifier",
+        "Check publication vs incident dates, geography and quoted amounts",
+        "Document conflicting evidence and individual institution roles",
+        "Only an editor can add a sourced relationship to a reviewed event"
+      ]
+    },
+    {
       "id": "candidate:report-013cbf9ef1252db14726:report-07b08225fd1625b58776",
       "group_ids": [
         "report-013cbf9ef1252db14726",
@@ -6074,43 +6222,6 @@
       "reasons": [
         "5 shared descriptive headline terms",
         "Same source-mentioned place",
-        "Published within 45 days"
-      ],
-      "priority": 7,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
-      "id": "candidate:report-6c8b842a1521d817f344:report-fb5b82e1f5408dd917cf",
-      "group_ids": [
-        "report-6c8b842a1521d817f344",
-        "report-fb5b82e1f5408dd917cf"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-6c8b842a1521d817f344",
-          "title": "‘Crypto King’ Aiden Pleterski’s fraud trial adjourned until next week due to medical issue - CBC",
-          "source_url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOTjI2NFVNMDQ5ZG1KN2lzOE54S1NFX2ZZb0d6aDJBcmtsaE5ZT2RhZ0UyN3BOME1remg0WmlwMTN0MXhwcDFJbk12bUR0TU43X01GMDVmNkRZRnJQZVRrejc3SHh3Q3IxS1U0VTZ6SXRjVzZpNzZwYnZaaFRqUVNKTl9wRTBOZVZsYV9EOUNuSUdxVk1nc0c1V3lyTXRUdnBkM1c5NTlBOFNMSnFZWktBeVZ4RGNxWkJXVVdpY2ZXRHFqVTVZTEU1dTlkY1F1ZUhOcGc?oc=5",
-          "publication_date": "2026-10-20T07:00:00+00:00",
-          "source_count": 2
-        },
-        {
-          "group_id": "report-fb5b82e1f5408dd917cf",
-          "title": "Investor who gave 'Crypto King' Aiden Pleterski $150K+ testifies at fraud trial — victims got back 7.5 cents per dollar - Yahoo! Finance Canada",
-          "source_url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNOWtpX2hMWUUyaHp5QVpWYkhrcFZZVnVHVTJrX3plN1ZXNkRmQTBLVVp2ZVhZZ0RyMXlLT1NENTJheGFKdkRBWW5McHpJUUtWTVFKQWdtOWRRX0o3OHZjc1pNZXRwQi1EOHdXNU0ybGxJVlhZeFBienBNbVEwQjVhek9sUW52elE?oc=5",
-          "publication_date": "2026-10-08T07:00:00+00:00",
-          "source_count": 1
-        }
-      ],
-      "reasons": [
-        "5 shared descriptive headline terms",
-        "Overlapping scam method: Investment & crypto scams",
         "Published within 45 days"
       ],
       "priority": 7,
@@ -6307,43 +6418,6 @@
       ]
     },
     {
-      "id": "candidate:report-629f1f6c4f14b2c8818d:report-8b5de12095f62a4b0d0a",
-      "group_ids": [
-        "report-629f1f6c4f14b2c8818d",
-        "report-8b5de12095f62a4b0d0a"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-629f1f6c4f14b2c8818d",
-          "title": "Ontario man loses $90,000 to crypto investment scam - Inside Halton",
-          "source_url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPMjBLbGpQRWlPRjdfSHRXdXdieExEYkFaX2htWkpsd3VSUFZvSllEWXhLVHNMeU1ma1l1TVg5SEJhelBlN0owOUptQ1BuamtzR3VMc01iMkpvLTBCUmF1YVV4NjcwMGlaaVVycW9hb003WFRHRDMycm5OdXZoTV9MRnFCZ0FxZ29HaFY5SnBFQWlNc29wck9kTklCRjNqUzJNaXhPbHFaa0Y4UThSZ3ZpSXQwS19sYlFzbGpNdWhQUndtUQ?oc=5",
-          "publication_date": "2025-11-14T08:00:00+00:00",
-          "source_count": 1
-        },
-        {
-          "group_id": "report-8b5de12095f62a4b0d0a",
-          "title": "Ontario victim loses $90K US to Ford deepfake crypto scam - Inside Halton",
-          "source_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQcWU4NVNtNHlvOVdnVmpGVkxyY1FDRTJKQVByczZEYU1ZMzdFRlZZZEpfTnlMVmZja3JPc0FZT0VtRXVHcVpoMmtUb3p3dUFPanowR21qSzBpaHFjcUpwZmhkUDhKOW02LUpFMDR3SE9VcXpHVEIweE9iR0NTWXE3QWJQaTJXUzdFd2tuNjJsTDRxMlMxSHZNbDhRalFSR29CNUh4eFNrYjRjM3hHeTNYeFM3YjNXM00?oc=5",
-          "publication_date": "2025-10-14T07:00:00+00:00",
-          "source_count": 1
-        }
-      ],
-      "reasons": [
-        "5 shared descriptive headline terms",
-        "Overlapping scam method: Investment & crypto scams",
-        "Published within 45 days"
-      ],
-      "priority": 7,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
       "id": "candidate:report-12ec905f60fb89e23da6:report-cb0769fe6ed3b1efad02",
       "group_ids": [
         "report-12ec905f60fb89e23da6",
@@ -6405,43 +6479,6 @@
       "reasons": [
         "Same organization explicitly named: RBC",
         "Published within ten days"
-      ],
-      "priority": 7,
-      "status": "unverified_suggested_connection",
-      "review_steps": [
-        "Read both original articles, not only titles",
-        "Determine whether accounts share a victim, transaction, or official case identifier",
-        "Check publication vs incident dates, geography and quoted amounts",
-        "Document conflicting evidence and individual institution roles",
-        "Only an editor can add a sourced relationship to a reviewed event"
-      ]
-    },
-    {
-      "id": "candidate:report-2198959a52777b9df56f:report-629f1f6c4f14b2c8818d",
-      "group_ids": [
-        "report-2198959a52777b9df56f",
-        "report-629f1f6c4f14b2c8818d"
-      ],
-      "headlines": [
-        {
-          "group_id": "report-2198959a52777b9df56f",
-          "title": "Ontario man loses $750,000 in retirement savings to investment scam operating out of U.K. - CTV News",
-          "source_url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOR215LUJ3QzdaTElCLTRoaDJaZzVRdGdTM0pKRDN6UTZ3NV9GRGczMjFZVi0zREpwWkRqRFZ4NF80dEl1ZWd4U0tZcmJwOVdaUG9vZWU4cUdWNy1Xd25VM2EzUmhELTNWUC14VEZWOEpFamRlNG9aS1FHWlo5b0NhLS1EN0xXb2NId08wQi03akJuaC14S2V0QVhNRnViTVdYWWNEdEhoVVNITC1OdHVacjM5eU83NXJvMXlNZFdTUjExaEE?oc=5",
-          "publication_date": "2025-12-10T08:00:00+00:00",
-          "source_count": 1
-        },
-        {
-          "group_id": "report-629f1f6c4f14b2c8818d",
-          "title": "Ontario man loses $90,000 to crypto investment scam - Inside Halton",
-          "source_url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPMjBLbGpQRWlPRjdfSHRXdXdieExEYkFaX2htWkpsd3VSUFZvSllEWXhLVHNMeU1ma1l1TVg5SEJhelBlN0owOUptQ1BuamtzR3VMc01iMkpvLTBCUmF1YVV4NjcwMGlaaVVycW9hb003WFRHRDMycm5OdXZoTV9MRnFCZ0FxZ29HaFY5SnBFQWlNc29wck9kTklCRjNqUzJNaXhPbHFaa0Y4UThSZ3ZpSXQwS19sYlFzbGpNdWhQUndtUQ?oc=5",
-          "publication_date": "2025-11-14T08:00:00+00:00",
-          "source_count": 1
-        }
-      ],
-      "reasons": [
-        "5 shared descriptive headline terms",
-        "Overlapping scam method: Investment & crypto scams",
-        "Published within 45 days"
       ],
       "priority": 7,
       "status": "unverified_suggested_connection",
