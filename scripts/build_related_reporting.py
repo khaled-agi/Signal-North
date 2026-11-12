@@ -22,8 +22,27 @@ GENERIC={"canada","canadian","scam","fraud","scams","frauds","bank","banks",
          "investor","investors","money","report","reports","reporting",
          "alleged","online","police","investigation","million","thousand"}
 
+ENTITY_NAMES={}
+
+def load_entities(groups):
+    """Attach organisation ids found by build_intelligence_graph.py, which
+    matches headlines against official-register names and curated aliases."""
+    path=DATA/"headline_entities.json"
+    try:payload=json.loads(path.read_text("utf-8"))
+    except (OSError,ValueError):return 0
+    mapping=payload.get("articles") or {}
+    ENTITY_NAMES.update(payload.get("names") or {})
+    attached=0
+    for item in groups:
+        ids=mapping.get(item.get("id"))
+        if ids:
+            item["_entity_ids"]=ids;attached+=1
+    return attached
+
 def facts(item):
     entity=set(item.get("banks_mentioned_in_headline") or [])|set(item.get("organizations_mentioned_in_headline") or [])
+    # Prefer canonical organisation ids so "TD" and "TD Bank" agree.
+    if item.get("_entity_ids"):entity=set(item["_entity_ids"])
     return {
       "entities":entity,
       "themes":set(item.get("fraud_themes") or []),
@@ -41,13 +60,13 @@ def assess(a,b):
     themes=left["themes"]&right["themes"]
     words=left["words"]&right["words"]
     geo=bool(left["place"] and right["place"] and left["place"]==right["place"])
-    if not (entities or (len(words)>=5 and (themes or geo))):return None
+    if not (entities or (len(words)>=5 and (themes or geo)) or (len(words)>=4 and themes and geo)):return None
     # Different named entities may be reporting the same multi-institution
     # story; flag for comparison but do not merge or impute responsibility.
     score=4*bool(entities)+min(4,len(words))+2*bool(themes)+2*geo+(2 if delta<=10 else 1 if delta<=45 else 0)
     if score<7:return None
     reasons=[]
-    if entities:reasons.append("Same organization explicitly named: "+", ".join(sorted(entities)[:3]))
+    if entities:reasons.append("Same organization explicitly named: "+", ".join(sorted(ENTITY_NAMES.get(e,e) for e in entities)[:3]))
     if len(words)>=3:reasons.append(str(len(words))+" shared descriptive headline terms")
     if themes:reasons.append("Overlapping scam method: "+", ".join(sorted(themes)[:2]))
     if geo:reasons.append("Same source-mentioned place")
@@ -102,12 +121,14 @@ def main():
     p=DATA/"reporting_groups.json"
     grouped=json.loads(p.read_text("utf-8"))
     groups=grouped.get("groups",[])
+    entity_linked=load_entities(groups)
     results,checks=generate(groups)
     output={
       "generated_at":datetime.now(timezone.utc).isoformat(timespec="seconds"),
       "reporting_groups_analyzed":len(groups),
       "groups_with_suggested_connections":len(results),
       "candidate_comparisons":checks,
+      "groups_with_official_entity_matches":entity_linked,
       "methodology":"Possible links by overlap in named organizations, descriptive headline words, scam themes, source-mentioned city and timing. These are NOT confirmed same incidents, causal relationships, accused parties or corroborated facts. Review original sources.",
       "connections":results
     }

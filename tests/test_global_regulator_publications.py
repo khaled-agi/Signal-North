@@ -8,6 +8,7 @@ from scripts.collect_global_regulator_publications import (
     REGULATORS, parse_results, original_official_link, query_url_params, ACTIONS,
 )
 from scripts.collect_global import scan_mas
+from scripts.collect_global_regulator_publications import parse_news_index, retain, collect_one
 
 class EnforcementDiscoveryTests(unittest.TestCase):
     def test_original_regulator_domain_only(self):
@@ -80,5 +81,50 @@ class EnforcementDiscoveryTests(unittest.TestCase):
         self.assertEqual(rows[0]["published_at"],"2026-10-29")
         self.assertEqual(rows[0]["evidence_tier"],"official_enforcement_index")
         self.assertEqual(rows[0]["penalty_amount"],None)
+
+class NewsIndexFallbackTests(unittest.TestCase):
+    AGENCY=("GB","United Kingdom","FCA","fca.org.uk")
+
+    def feed(self,items):
+        body="".join(
+            f"<item><title>{t}</title><link>https://news.google.com/rss/articles/{i}</link>"
+            f"<pubDate>{d}</pubDate><source url=\"{src}\">{pub}</source></item>"
+            for i,(t,d,src,pub) in enumerate(items))
+        return ("<rss><channel>"+body+"</channel></rss>").encode()
+
+    def test_only_agency_domain_sources_with_action_titles(self):
+        now=datetime.now(timezone.utc)
+        d=(now-timedelta(days=2)).strftime("%a, %d %b %Y %H:%M:%S GMT")
+        raw=self.feed([
+            ("FCA fines Example Bank £5m for AML failings - FCA","%s"%d,"https://www.fca.org.uk","FCA"),
+            ("FCA fines Example Bank £5m - The Guardian",d,"https://www.theguardian.com","The Guardian"),
+            ("FCA publishes annual report - FCA",d,"https://www.fca.org.uk","FCA"),
+            ("Fake FCA fine notice - FCA",d,"https://fca.org.uk.evil.example","FCA"),
+        ])
+        rows=parse_news_index(raw,self.AGENCY,now)
+        self.assertEqual(len(rows),1)
+        self.assertEqual(rows[0]["title"],"FCA fines Example Bank £5m for AML failings")
+        self.assertEqual(rows[0]["evidence_tier"],"official_domain_publication_lead_via_news_index")
+        self.assertIsNone(rows[0]["published_at"])
+        self.assertEqual(len(retain(rows)),1)
+        forged=dict(rows[0],verified_source_domain="evil.example")
+        self.assertEqual(retain([forged]),[])
+
+    def test_gdelt_rate_limit_still_collects_news_index(self):
+        now=datetime.now(timezone.utc)
+        d=(now-timedelta(days=1)).strftime("%a, %d %b %Y %H:%M:%S GMT")
+        limited=Mock(status_code=429,headers={},content=b"",text="")
+        ok=Mock(status_code=200,content=self.feed([("FCA fines Firm Ltd for market abuse - FCA",d,"https://www.fca.org.uk","FCA")]))
+        ok.raise_for_status.return_value=None
+        session=Mock()
+        session.get.side_effect=lambda url,**kw: limited if "gdelt" in url else ok
+        import scripts.collect_global_regulator_publications as mod
+        original=mod.time.sleep;mod.time.sleep=lambda s:None
+        try:rows,health=collect_one(self.AGENCY,session)
+        finally:mod.time.sleep=original
+        self.assertEqual(len(rows),1)
+        self.assertEqual(health["status"],"ok")
+        self.assertEqual(health["errors"]["gdelt"],"rate_limited")
+
 
 if __name__=="__main__":unittest.main()

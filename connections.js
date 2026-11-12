@@ -18,10 +18,12 @@
    try{localStorage.setItem(reviewStorageKey,JSON.stringify(d))}catch(e){console.warn("Local review storage unavailable",e)}
  }
 
- const kindName={enforcement:"Regulator decision",incident:"Source-reviewed reported case",headline:"Unverified headline"};
+ const kindName={enforcement:"Regulator decision",incident:"Source-reviewed reported case",headline:"Unverified headline",regulator_publication:"Regulator publication (unreviewed)"};
+ const matchBasis={exact_official_name:"exact official name",official_name_without_legal_or_bank_suffix:"official name without legal suffix",curated_alias:"reviewed brand alias"};
  const labels={subject_of_enforcement:"Subject of published regulatory action",
  customer_financial_institution:"Customer's reported bank",institution_impersonated:"Institution reportedly impersonated",
- bank_not_identified:"Bank not identified",mentioned_in_headline_only:"Named in news headline only"};
+ bank_not_identified:"Bank not identified",mentioned_in_headline_only:"Named in news headline only",
+ official_entity_name_in_headline:"Official name appears in headline",official_entity_name_in_regulator_publication:"Named in a regulator publication title"};
  const normalize=v=>String(v||"").toLowerCase().trim();
  function updatePicker(keep=true){
    const q=normalize(el("connectSearch").value);
@@ -34,6 +36,7 @@
  function evidenceRow(r){
   const kind=kindName[r.kind]||"Source";
   const amount=r.kind==="enforcement"&&r.penalty_cad!=null?"Regulatory penalty: "+money(r.penalty_cad):
+   r.kind==="enforcement"&&r.penalty_amount!=null?"Regulatory penalty: "+(r.penalty_currency||"")+" "+Number(r.penalty_amount).toLocaleString("en-CA",{maximumFractionDigits:2}):
    r.kind==="incident"&&r.amount_cad!=null?
     (({victim_reported_loss:"Reported customer loss",unauthorized_credit_exposure:"Unauthorized credit exposure",recovered_amount:"Funds recovered"})[r.amount_type]||"Reported amount")+": "+money(r.amount_cad):
     r.amount_text?.length?"Quoted headline amount: "+r.amount_text.join(", "):"";
@@ -41,31 +44,32 @@
    '<div class="evidence-name">'+esc(r.title||"Public notice")+'</div><div class="evidence-meta">'+esc(labels[r.role]||r.role||"Published source")+' · '+esc(r.source||"Publisher")+'</div>'+
    (amount?'<div class="evidence-amount">'+esc(amount)+'</div>':"")+
    (r.kind==="incident"&&r.recovery_status?'<div class="evidence-meta">Reported recovery: '+esc(r.recovery_status)+'</div>':"")+
+   (r.match_basis?'<div class="evidence-meta">Linked because the title contains “'+esc(r.matched_name||"")+'” ('+esc(matchBasis[r.match_basis]||r.match_basis)+') · name match only</div>':"")+
    '<div class="evidence-bottom">'+safeLink(r.source_url,"Original publication")+
    (r.kind==="incident"?'<button type="button" class="report-variations" data-reviewed-open="'+esc(r.id)+'">Examine structured evidence →</button>':"")+
-   (r.kind==="headline"?"<span class='evidence-caveat'>No institutional responsibility established</span>":"")+'</div></article>';
+   (r.kind==="headline"||r.kind==="regulator_publication"?"<span class='evidence-caveat'>No institutional responsibility established</span>":"")+'</div></article>';
  }
  function activityChart(records){
   const grouped={};
   for(const r of records){
    const year=String(r.date||"").slice(0,4);
    if(!/^\d{4}$/.test(year))continue;
-   grouped[year]??={enforcement:0,incident:0,headline:0};
+   grouped[year]??={enforcement:0,incident:0,headline:0,regulator_publication:0};
    grouped[year][r.kind]=(grouped[year][r.kind]||0)+1;
   }
   const years=Object.keys(grouped).sort().slice(-6);
   const max=Math.max(1,...years.map(y=>Object.values(grouped[y]).reduce((a,b)=>a+b,0)));
   return '<div class="evidence-trend">'+years.map(y=>{
-   const g=grouped[y],total=g.enforcement+g.incident+g.headline;
+   const g=grouped[y],total=g.enforcement+g.incident+g.headline+g.regulator_publication;
    return '<div class="trend-row"><span>'+y+'</span><div class="trend-track">'+
-    ["enforcement","incident","headline"].map(k=>'<div class="trend-segment trend-'+k+'" style="width:'+(100*g[k]/max).toFixed(2)+'%"></div>').join("")+
+    ["enforcement","regulator_publication","incident","headline"].map(k=>'<div class="trend-segment trend-'+k+'" style="width:'+(100*g[k]/max).toFixed(2)+'%"></div>').join("")+
     '</div><strong>'+total+'</strong></div>';
   }).join("")+'</div>';
  }
  function officialSections(x){
   const o=x.official_data||{}, reports=o.bank_disclosures||[], fintrac=o.fintrac_notices||[], fcac=o.fcac_notices||[];
-  const osfi=o.osfi,amf=o.amf_registrations||[],obsi=o.obsi_firm_complaints||[],ciro=o.ciro_concluded_cases||[],fdic=o.fdic,fdicFailures=o.fdic_failure_events||[],ncua=o.ncua,occ=o.occ,occActions=o.occ_institution_actions||[],occIndividuals=o.occ_individual_matters||[];
-  if(!osfi&&!fdic&&!ncua&&!occ&&!occActions.length&&!occIndividuals.length&&!fdicFailures.length&&!amf.length&&!obsi.length&&!ciro.length&&!reports.length&&!fintrac.length&&!fcac.length)return '';
+  const osfi=o.osfi,amf=o.amf_registrations||[],obsi=o.obsi_firm_complaints||[],ciro=o.ciro_concluded_cases||[],fdic=o.fdic,fdicFailures=o.fdic_failure_events||[],ncua=o.ncua,occ=o.occ,occActions=o.occ_institution_actions||[],occIndividuals=o.occ_individual_matters||[],sanctions=o.sanctions_designations||[];
+  if(!sanctions.length&&!osfi&&!fdic&&!ncua&&!occ&&!occActions.length&&!occIndividuals.length&&!fdicFailures.length&&!amf.length&&!obsi.length&&!ciro.length&&!reports.length&&!fintrac.length&&!fcac.length)return '';
   const head='<div class="connection-timeline-title"><h4>Official institution data</h4><span class="small">Different sources and denominators · never sum the figures</span></div>';
   const identity=osfi?'<div class="evidence-entry"><strong>OSFI regulated institution</strong><div class="small">'+esc(osfi.name)+' · '+esc(osfi.group||osfi.industry||"Federal institution registry")+'</div>'+safeLink(osfi.source_url,"Official OSFI directory")+'</div>':'';
   const complaintRows=reports.map(r=>'<article class="evidence-entry"><div class="evidence-top"><strong>'+esc(r.year)+' · '+esc(r.office||"Complaints office")+'</strong><span>'+Number(r.metric_value).toLocaleString("en-CA")+' records</span></div><div class="small">'+esc(r.scope||r.metric_name)+'</div>'+
@@ -92,7 +96,11 @@
    '<div class="small">'+esc(r.type_description||"Enforcement action")+(r.individual_party?' · Named individual: '+esc(r.individual_party):' · Institution action')+'</div>'+
    '<div class="small">Subjects: '+esc((r.subject_matters||[]).join(", ")||"No specific topics published")+(r.termination_date?' · Terminated: '+esc(r.termination_date):'')+'</div>'+
    safeLink(r.source_url,"Original OCC action search")+'</article>').join('');
+  const sanctionRows=sanctions.map(r=>'<article class="evidence-entry"><div class="evidence-top"><strong>'+esc(r.list)+'</strong><span>'+esc(r.date_designated||"Designation date not listed")+'</span></div>'+
+   '<div class="small">'+esc(r.regime||"Programme not listed")+' · '+esc(r.measures||"")+' · list ID '+esc(r.id)+'</div>'+
+   '<div class="small">Exact name match to a published sanctions designation; confirm identifiers before relying on it.</div>'+safeLink(r.source_url,"Official sanctions list")+'</article>').join('');
   return head+identity+fdicIdentity+ncuaIdentity+occIdentity+quebec+
+   (sanctions.length?'<details class="supporting-reviewed-details" open><summary>Sanctions list designations · '+sanctions.length+'</summary>'+sanctionRows+'</details>':'')+
     (occCases.length?'<details class="supporting-reviewed-details"><summary>OCC actions · '+occActions.length+' institution / '+occIndividuals.length+' individual-related (separate)</summary>'+occRows+'</details>':'')+
 
    (fdicFailures.length?'<details class="supporting-reviewed-details"><summary>FDIC bank resolution events · '+fdicFailures.length+'</summary>'+failureRows+'</details>':'')+
@@ -112,15 +120,15 @@
   const themes=(x.themes||[]).slice(0,6);
   el("connectContent").innerHTML=
    '<div class="connection-title"><div><div class="eyebrow">CANONICAL INSTITUTION · PUBLIC-SOURCE RESEARCH</div><h3>'+esc(x.name)+'</h3><div class="small">Alias names linked for research: '+esc((x.aliases||[]).join(", "))+'</div></div><div class="small">Last observed evidence: '+esc(date(x.recent_activity))+'</div></div>'+
-   '<div class="connection-metrics"><div><strong>'+x.counts.enforcement+'</strong><span>Published regulator actions</span></div><div><strong>'+x.counts.incidents+'</strong><span>Source-reviewed reported incidents</span></div><div><strong>'+x.counts.headlines+'</strong><span>Unverified name mentions</span></div></div>'+
+   '<div class="connection-metrics"><div><strong>'+x.counts.enforcement+'</strong><span>Published regulator actions</span></div><div><strong>'+(x.counts.regulator_publications||0)+'</strong><span>Regulator publications naming it</span></div><div><strong>'+x.counts.incidents+'</strong><span>Source-reviewed reported incidents</span></div><div><strong>'+x.counts.headlines+'</strong><span>Unverified name mentions</span></div></div>'+
    officialSections(x)+
    '<div class="connection-insight-grid"><div><h4>Evidence by publication year</h4>'+activityChart(items)+
-   '<div class="evidence-legend"><span class="legend-reg">Regulator</span><span class="legend-case">Reported case</span><span class="legend-headline">Headline only</span></div></div>'+
+   '<div class="evidence-legend"><span class="legend-reg">Regulator</span><span class="legend-pub">Regulator publication</span><span class="legend-case">Reported case</span><span class="legend-headline">Headline only</span></div></div>'+
    '<div><h4>Topics to investigate, not proven failures</h4>'+
     (themes.length?themes.map(t=>'<div class="theme-row"><span>'+esc(t.name)+'</span><strong>'+t.matching_records+' matched records</strong></div>').join(""):'<div class="small">Insufficient source text to identify recurring topics.</div>')+
    '<p class="evidence-footnote">Themes are keyword co-occurrences. A story about an impersonated institution does not establish its controls were deficient.</p></div></div>'+
    (penalties.length?'<div class="evidence-penalties"><strong>Published regulatory penalties by notice year</strong><span>'+penalties.slice(0,7).map(([y,a])=>esc(y)+": "+esc(money(a))).join(" · ")+'</span><small>Not customer fraud losses and not necessarily the year of the underlying violation</small></div>':"")+
-   '<div class="connection-timeline-title"><h4>Linked evidence timeline</h4><span class="small">Showing '+shown.length+' of '+(x.counts.enforcement+x.counts.incidents+x.counts.headlines)+' source links</span></div>'+
+   '<div class="connection-timeline-title"><h4>Linked evidence timeline</h4><span class="small">Showing '+shown.length+' of '+(x.counts.enforcement+x.counts.incidents+x.counts.headlines+(x.counts.regulator_publications||0))+' source links</span></div>'+
    '<div class="connection-timeline">'+shown.map(evidenceRow).join("")+'</div>'+
    (items.length>state.visible?'<button id="connectionsMore" type="button" class="connection-more">Show more source-linked records ↓</button>':"")+
    '<p class="evidence-footnote">News links here are headline-level mentions and may not describe a fraud case or wrongdoing by this institution. Original articles require review before case-level conclusions.</p>';

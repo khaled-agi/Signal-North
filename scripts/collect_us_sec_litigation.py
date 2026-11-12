@@ -72,6 +72,15 @@ def atomic(path,obj):
   tmp=f.name
  os.replace(tmp,path)
 
+def user_agent():
+ """SEC fair-access policy requires 'Organization Name contact@email'.
+
+ Requests without a contact email are answered with HTTP 403, so the value
+ comes from the SEC_USER_AGENT repository variable rather than being invented.
+ """
+ ua=" ".join(os.getenv("SEC_USER_AGENT","").split())
+ return ua if re.search(r"[^\s@]+@[^\s@]+\.[a-z]{2,}",ua,re.I) else None
+
 def main():
  now=datetime.now(timezone.utc).isoformat(timespec="seconds")
  old={"records":[]}
@@ -80,8 +89,14 @@ def main():
   except (OSError,ValueError):pass
  records={r["id"]:r for r in old.get("records",[])}
  status={"checked_at":now,"rss_source":RSS,"fallback_page":HTML}
+ ua=user_agent()
+ if not ua:
+  status.update({"status":"needs_configuration","error_type":"MissingContactUserAgent",
+                 "detail":"Set repository variable SEC_USER_AGENT to 'Signal North research you@example.com'; SEC returns 403 without a contact email."})
+  print("SEC litigation collector skipped: SEC_USER_AGENT with contact email not configured",flush=True)
+  atomic(HEALTH,status);return
  session=requests.Session()
- session.headers.update({"User-Agent":"SignalNorthResearch public-source-monitor/1.0 contact https://github.com/khaled-agi/Signal-North","Accept":"application/rss+xml,application/xml,text/html"})
+ session.headers.update({"User-Agent":ua,"Accept":"application/rss+xml,application/xml,text/html","Accept-Encoding":"gzip, deflate"})
  try:
   try:
    response=session.get(RSS,timeout=40);response.raise_for_status()
