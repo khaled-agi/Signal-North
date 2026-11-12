@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#f5f8fb">
+<meta name="sn-build" content="__BUILD_SHA__">
 <meta name="description" content="Signal North — explore fraud reporting, source-reviewed incidents and regulatory enforcement across Canada, the United States and selected global jurisdictions.">
 <title>Signal North · Financial Crime Intelligence</title>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
@@ -21,6 +22,8 @@
 <link rel="stylesheet" href="./global.css?v=__BUILD_SHA__">
 <link href="https://cdn.jsdelivr.net/npm/maplibre-gl@6.9.0/dist/maplibre-gl.css" rel="stylesheet">
 <link rel="stylesheet" href="./product_redesign.css?v=__BUILD_SHA__">
+<link rel="stylesheet" href="./explore.css?v=__BUILD_SHA__">
+<link rel="stylesheet" href="./map_layers.css?v=__BUILD_SHA__">
 </head>
 <body>
 <div class="layout">
@@ -464,6 +467,7 @@
 </div>
 </div>
 <div id="overlay" class="overlay hidden"><div class="drawer"><button id="close" class="close" aria-label="Close panel">×</button><div id="drawerBody"></div></div></div>
+<script src="./loader.js?v=__BUILD_SHA__"></script>
 <script src="./geography.js?v=__BUILD_SHA__" defer></script>
 <script src="./app.js?v=__BUILD_SHA__" defer></script>
 <script src="./map_upgrade.js?v=__BUILD_SHA__" defer></script>
@@ -493,5 +497,7 @@
 <script src="./us_regulatory_signals.js?v=__BUILD_SHA__" defer></script>
 <script src="./primary_regulatory_signals.js?v=__BUILD_SHA__" defer></script>
 <script src="./reviewed.js?v=__BUILD_SHA__" defer></script>
+<script src="./map_layers.js?v=__BUILD_SHA__" defer></script>
+<script src="./explore.js?v=__BUILD_SHA__" defer></script>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" async crossorigin="" onload="window.dispatchEvent(new Event('signalnorth:mapready'))"></script>
 </body></html>

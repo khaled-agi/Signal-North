@@ -119,7 +119,7 @@
   const penalties=Object.entries(x.annual_penalties_cad||{}).sort((a,b)=>b[0].localeCompare(a[0]));
   const themes=(x.themes||[]).slice(0,6);
   el("connectContent").innerHTML=
-   '<div class="connection-title"><div><div class="eyebrow">CANONICAL INSTITUTION · PUBLIC-SOURCE RESEARCH</div><h3>'+esc(x.name)+'</h3><div class="small">Alias names linked for research: '+esc((x.aliases||[]).join(", "))+'</div></div><div class="small">Last observed evidence: '+esc(date(x.recent_activity))+'</div></div>'+
+   '<div class="connection-title"><div><div class="eyebrow">CANONICAL INSTITUTION · PUBLIC-SOURCE RESEARCH</div><h3>'+esc(x.name)+'</h3><div class="small">Alias names linked for research: '+esc((x.aliases||[]).join(", "))+'</div><button type="button" class="connection-profile-link" data-sn-open="i:'+esc(x.id)+'">Open full profile →</button></div><div class="small">Last observed evidence: '+esc(date(x.recent_activity))+'</div></div>'+
    '<div class="connection-metrics"><div><strong>'+x.counts.enforcement+'</strong><span>Published regulator actions</span></div><div><strong>'+(x.counts.regulator_publications||0)+'</strong><span>Regulator publications naming it</span></div><div><strong>'+x.counts.incidents+'</strong><span>Source-reviewed reported incidents</span></div><div><strong>'+x.counts.headlines+'</strong><span>Unverified name mentions</span></div></div>'+
    officialSections(x)+
    '<div class="connection-insight-grid"><div><h4>Evidence by publication year</h4>'+activityChart(items)+

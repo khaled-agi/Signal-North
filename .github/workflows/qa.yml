@@ -62,6 +62,7 @@ jobs:
           python -m unittest discover -s tests -p test_bank_collector.py
           python -m unittest discover -s tests -p test_cross_source_graph.py
           python -m unittest discover -s tests -p test_entity_linking.py
+          python -m unittest discover -s tests -p test_explore_index.py
           python -m unittest discover -s tests -p test_obsi_firm_data.py
           python -m unittest discover -s tests -p test_ciro_named.py
           python -m unittest discover -s tests -p test_us_institutions.py

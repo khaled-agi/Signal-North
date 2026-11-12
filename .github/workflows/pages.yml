@@ -38,7 +38,10 @@ jobs:
         run: python -m pip install -r requirements.txt
       - name: Validate application syntax
         run: |
-          python -m py_compile scripts/collect.py scripts/collect_news.py scripts/collect_sources.py scripts/build_article_index.py scripts/build_story_groups.py scripts/build_related_reporting.py scripts/build_reviewed_events.py scripts/build_intelligence_graph.py scripts/entity_resolution.py scripts/collect_publishers.py scripts/build_theme_trends.py scripts/collect_global.py scripts/build_world_registry.py scripts/world_country_lenses.py scripts/region_query_lenses.py scripts/empty_country_recovery.py scripts/collect_world_news.py scripts/collect_direct_country_sources.py scripts/collect_cfpb_complaints.py scripts/collect_cfpb_history.py scripts/collect_cafc_open_data.py scripts/collect_global_regulator_publications.py scripts/collect_community.py
+          python -m py_compile scripts/collect.py scripts/collect_news.py scripts/collect_sources.py scripts/build_article_index.py scripts/build_story_groups.py scripts/build_related_reporting.py scripts/build_reviewed_events.py scripts/build_intelligence_graph.py scripts/entity_resolution.py scripts/build_explore_index.py scripts/collect_publishers.py scripts/build_theme_trends.py scripts/collect_global.py scripts/build_world_registry.py scripts/world_country_lenses.py scripts/region_query_lenses.py scripts/empty_country_recovery.py scripts/collect_world_news.py scripts/collect_direct_country_sources.py scripts/collect_cfpb_complaints.py scripts/collect_cfpb_history.py scripts/collect_cafc_open_data.py scripts/collect_global_regulator_publications.py scripts/collect_community.py
+          node --check loader.js
+          node --check explore.js
+          node --check map_layers.js
           node --check geography.js
           node --check app.js
           node --check intel.js
@@ -80,6 +83,7 @@ jobs:
           python -m unittest discover -s tests -p test_bank_collector.py
           python -m unittest discover -s tests -p test_cross_source_graph.py
           python -m unittest discover -s tests -p test_entity_linking.py
+          python -m unittest discover -s tests -p test_explore_index.py
           python -m unittest discover -s tests -p test_obsi_firm_data.py
           python -m unittest discover -s tests -p test_ciro_named.py
           python -m unittest discover -s tests -p test_us_institutions.py
@@ -202,6 +206,8 @@ jobs:
         run: python scripts/build_reviewed_events.py
       - name: Generate annual scam theme patterns
         run: python scripts/build_theme_trends.py
+      - name: Build search index and profile pages data
+        run: python scripts/build_explore_index.py
       - name: Commit public history and run status
         if: always()
         run: |
@@ -233,7 +239,7 @@ jobs:
       - name: Assemble cache-busted static website
         run: |
           mkdir -p _site/data
-          cp index.html styles.css light.css editorial.css connections.css research.css network.css refine.css global.css reviewed.css product_redesign.css map_upgrade.js geography.js app.js supporting_intelligence.js community_signals.js intel.js workspace.js connections.js research.js network.js global.js reviewed.js cfpb.js cafc.js obsi.js obsi_history.js obsi_firms.js bank_disclosures.js canadian_sources.js canadian_provincial.js ciro_sector.js ciro_named.js canadian_regulatory_leads.js canadian_verified_enforcement.js osfi_register.js fintrac_official.js us_fdic.js us_regulatory_signals.js primary_regulatory_signals.js .nojekyll _site/
+          cp loader.js explore.js explore.css map_layers.js map_layers.css index.html styles.css light.css editorial.css connections.css research.css network.css refine.css global.css reviewed.css product_redesign.css map_upgrade.js geography.js app.js supporting_intelligence.js community_signals.js intel.js workspace.js connections.js research.js network.js global.js reviewed.js cfpb.js cafc.js obsi.js obsi_history.js obsi_firms.js bank_disclosures.js canadian_sources.js canadian_provincial.js ciro_sector.js ciro_named.js canadian_regulatory_leads.js canadian_verified_enforcement.js osfi_register.js fintrac_official.js us_fdic.js us_regulatory_signals.js primary_regulatory_signals.js .nojekyll _site/
           cp data/events.json data/status.json data/news.json data/news_status.json data/fraud_stats.json data/bank_disclosures.json data/incidents.json _site/data/
           if [ -f data/news_archive.json ]; then cp data/news_archive.json _site/data/; fi
           if [ -f data/archive_status.json ]; then cp data/archive_status.json _site/data/; fi
@@ -264,6 +270,18 @@ jobs:
           python scripts/verify_new_official_signals.py
           python scripts/verify_us_site_bundle.py
           python scripts/verify_canadian_site_bundle.py
+          mkdir -p _site/assets && cp assets/world-countries.geo.json _site/assets/
+          if [ -d data/explore ]; then cp -r data/explore _site/data/; fi
+          # Publish compact JSON (no indentation) to cut parse time and size.
+          python - <<'PY'
+          import json, pathlib
+          for path in pathlib.Path("_site/data").rglob("*.json"):
+              try:
+                  data = json.loads(path.read_text("utf-8"))
+              except ValueError:
+                  continue
+              path.write_text(json.dumps(data, ensure_ascii=False, separators=(",", ":")), "utf-8")
+          PY
           sed -i "s/__BUILD_SHA__/${GITHUB_SHA}/g" _site/index.html
       - name: Configure Pages
         uses: actions/configure-pages@v5
