@@ -1,6 +1,16 @@
 "use strict";
 const $ = selector => document.querySelector(selector);
 const state = {events:[],news:[],status:{},map:null,layer:null,tab:"overview",mapMode:"all",mapCountMode:"groups",mapTopic:"",mapYearFrom:"",mapYearTo:"",mapProvince:"",mapMonth:"",clientFocus:"",mapMarkers:new Map(),incidents:[],entityAliases:[],rawHeadlineCount:0,globalEvents:[],worldNews:[],worldRegLeads:[],worldNewsStatus:{},worldCountries:[],globalHealth:{},mapCountry:"",mapAgency:"",globalPattern:"",basemap:null,basemapMode:null,mapSideVisible:12,mapDetailId:null,mapSelectedContext:null};
+// Canada-first, remembered per visitor. "world" keeps the worldwide view.
+(()=>{let scope="CA";try{scope=localStorage.getItem("sn.mapScope")||"CA";}catch(_){}
+ state.mapScope=scope==="world"?"world":"CA";state.mapCountry=state.mapScope==="world"?"":"CA";state.mapShowNews=null;
+ const sel=document.getElementById("mapCountry");
+ if(sel&&state.mapCountry){sel.insertAdjacentHTML("beforeend",'<option value="CA">Canada</option>');sel.value="CA";}})();
+function saveMapScope(scope){state.mapScope=scope;try{localStorage.setItem("sn.mapScope",scope);}catch(_){}
+ document.querySelectorAll("#worldView,#mapReset").forEach(b=>b.classList.toggle("is-scope",(b.id==="worldView")===(scope==="world")));}
+// News bubbles: on by default when looking at a country, off for the world view
+// (country shading shows official actions there). The visitor can override.
+function newsBubblesOn(){return state.mapShowNews==null?Boolean(state.mapCountry):state.mapShowNews;}
 const provinces = {ON:"Ontario",QC:"Québec",BC:"British Columbia",AB:"Alberta",NB:"New Brunswick",NS:"Nova Scotia",MB:"Manitoba",SK:"Saskatchewan",NL:"Newfoundland & Labrador",PE:"Prince Edward Island"};
 function escapeHTML(value){return String(value??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
 function currency(value){if(value==null)return "Not reported";const x=Number(value);return x>=1e6?"$"+(x/1e6).toLocaleString("en-CA",{maximumFractionDigits:2})+"M":"$"+x.toLocaleString("en-CA",{maximumFractionDigits:0});}
@@ -153,8 +163,10 @@ function renderMapClusters(){
  // is only counted once; marker AREA broadly tracks grouped record count.
  const gridSize=91;
  const clusters=new Map();
+ const showNews=newsBubblesOn();
  for(const x of state.mapRows||[]){
   if(x.lat===null)continue;
+  if(!showNews&&(x.kind==="news"||x.kind==="worldnews"))continue;
   const point=state.map.project(L.latLng(x.lat,x.lon),zoom);
   const key=Math.floor(point.x/gridSize)+"/"+Math.floor(point.y/gridSize);
   if(!clusters.has(key))clusters.set(key,{items:[],x:0,y:0,weights:{news:0,worldnews:0,officiallead:0,reg:0,case:0,global:0}});
@@ -282,7 +294,7 @@ function initMap(){
  }
  if(!state.map){
   $("#map").replaceChildren();
-  state.map=L.map("map",{zoomControl:false,minZoom:2,maxZoom:13,scrollWheelZoom:false,preferCanvas:true}).setView([24,0],2);
+  state.map=L.map("map",{zoomControl:false,minZoom:1,maxZoom:13,scrollWheelZoom:false,preferCanvas:true}).setView(state.mapScope==="world"?[24,0]:[55,-96],state.mapScope==="world"?2:4);
   L.control.zoom({position:"bottomright"}).addTo(state.map);
   setBasemap();
   state.layer=L.layerGroup().addTo(state.map);
@@ -371,6 +383,7 @@ function initMap(){
  }
  // Otherwise preserve the analyst's zoom and location. Only Reset moves
  // back to a national view; reloading/filtering must not unexpectedly jump.
+ window.SignalNorthMapLayers?.update();
  setTimeout(()=>state.map.invalidateSize(),60);
 }
 
@@ -489,19 +502,20 @@ $("#mapFocus").addEventListener("click",()=>{
  $("#mapFocus").textContent=expanded?"⊞ Show evidence":"⤢ Focus map";
  if(state.map)setTimeout(()=>state.map.invalidateSize(),90);
 });
-$("#mapReset").addEventListener("click",()=>{state.mapProvince="";$("#mapProvince").value="";state.mapMonth="";$("#mapMonth").value="";state.mapTopic="";$("#mapTopic").value="";state.mapYearFrom="";$("#mapYearFrom").value="";state.mapYearTo="";$("#mapYearTo").value="";state.clientFocus="";state.mapCountry="CA";$("#mapCountry").value="CA";state.mapAgency="";$("#mapAgency").value="";state.globalPattern="";state.mapMode="all";document.querySelectorAll("[data-mapmode]").forEach(b=>b.classList.toggle("active",b.dataset.mapmode==="all"));$("#mapStorySearch").value="";state.mapSideVisible=12;initMap();if(state.map)state.map.setView([55,-96],4);});
+$("#mapReset").addEventListener("click",()=>{saveMapScope("CA");state.mapShowNews=null;state.mapProvince="";$("#mapProvince").value="";state.mapMonth="";$("#mapMonth").value="";state.mapTopic="";$("#mapTopic").value="";state.mapYearFrom="";$("#mapYearFrom").value="";state.mapYearTo="";$("#mapYearTo").value="";state.clientFocus="";state.mapCountry="CA";$("#mapCountry").value="CA";state.mapAgency="";$("#mapAgency").value="";state.globalPattern="";state.mapMode="all";document.querySelectorAll("[data-mapmode]").forEach(b=>b.classList.toggle("active",b.dataset.mapmode==="all"));$("#mapStorySearch").value="";state.mapSideVisible=12;initMap();if(state.map)state.map.setView([55,-96],4);});
 $("#mapCountry").addEventListener("change",e=>{
  state.mapCountry=e.target.value;state.mapProvince="";$("#mapProvince").value="";state.globalPattern="";
  state.mapSideVisible=12;initMap();
 });
 $("#mapAgency").addEventListener("change",e=>{state.mapAgency=e.target.value;state.mapSideVisible=12;initMap();});
 $("#worldView").addEventListener("click",()=>{
+ saveMapScope("world");state.mapShowNews=null;
  state.mapCountry="";$("#mapCountry").value="";state.mapAgency="";$("#mapAgency").value="";
  state.mapProvince="";$("#mapProvince").value="";state.mapMonth="";$("#mapMonth").value="";
  state.mapTopic="";$("#mapTopic").value="";state.mapYearFrom="";$("#mapYearFrom").value="";
  state.mapYearTo="";$("#mapYearTo").value="";state.globalPattern="";state.clientFocus="";
  state.mapMode="all";document.querySelectorAll("[data-mapmode]").forEach(b=>b.classList.toggle("active",b.dataset.mapmode==="all"));
- initMap();if(state.map)state.map.setView([24,0],2);
+ initMap();if(state.map)state.map.fitBounds([[-52,-165],[74,172]]);
 });
 $("#mapProvince").addEventListener("change",e=>{
  state.mapProvince=e.target.value;
@@ -575,3 +589,34 @@ window.addEventListener("signalnorth:newsready",event=>{state.news=event.detail?
 window.addEventListener("signalnorth:incidentsready",event=>{state.incidents=event.detail?.incidents||[];renderMetrics();initMap();});
 window.addEventListener("signalnorth:mapready", () => { if(state.events.length) initMap(); });
 load();
+// "Show on map" from a profile page: country, organization or scam pattern.
+window.addEventListener("signalnorth:mapfocus",e=>{
+ const d=e.detail||{};
+ switchTab("overview");
+ state.mapProvince="";$("#mapProvince").value="";state.mapMonth="";$("#mapMonth").value="";
+ state.mapAgency="";$("#mapAgency").value="";state.globalPattern="";state.mapMode="all";
+ document.querySelectorAll("[data-mapmode]").forEach(b=>b.classList.toggle("active",b.dataset.mapmode==="all"));
+ state.clientFocus=d.client||"";
+ state.mapTopic=d.topic||"";if($("#mapTopic"))$("#mapTopic").value=state.mapTopic;
+ if(d.country!==undefined){state.mapCountry=d.country;if($("#mapCountry"))$("#mapCountry").value=d.country;}
+ else if(d.client||d.topic){state.mapCountry="";if($("#mapCountry"))$("#mapCountry").value="";}
+ state.mapShowNews=d.client||d.topic?true:null;
+ state.mapSideVisible=12;initMap();syncNewsToggle();
+ if(state.map&&!d.country&&!(state.mapRows||[]).some(x=>x.lat!==null))state.map.setView([24,0],2);
+ $("#map")?.scrollIntoView({behavior:"smooth",block:"center"});
+});
+function syncNewsToggle(){
+ const b=$("#mapNewsToggle");if(!b)return;
+ const on=newsBubblesOn();b.setAttribute("aria-pressed",String(on));b.classList.toggle("active",on);
+ b.textContent=on?"News bubbles shown":"News bubbles hidden";
+}
+(()=>{
+ const toolbar=document.querySelector(".map-primary-toolbar");if(!toolbar)return;
+ const b=document.createElement("button");b.id="mapNewsToggle";b.type="button";b.className="map-news-toggle";
+ b.title="Headline mentions are unverified. Hide them to see official actions only.";
+ toolbar.insertBefore(b,$("#mapCountry"));
+ b.addEventListener("click",()=>{state.mapShowNews=!newsBubblesOn();syncNewsToggle();renderMapClusters();});
+ for(const id of ["#worldView","#mapReset","#mapCountry"])$(id)?.addEventListener(id==="#mapCountry"?"change":"click",()=>setTimeout(syncNewsToggle,0));
+ syncNewsToggle();saveMapScope(state.mapScope);
+})();
+

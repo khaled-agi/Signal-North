@@ -9,6 +9,8 @@ on:
       - '*.css'
       - 'scripts/build_intelligence_graph.py'
       - 'scripts/entity_resolution.py'
+      - 'scripts/build_explore_index.py'
+      - 'assets/**'
       - 'scripts/build_article_index.py'
       - 'scripts/build_story_groups.py'
       - 'scripts/build_related_reporting.py'
@@ -44,6 +46,7 @@ jobs:
           python scripts/build_related_reporting.py
           python scripts/build_reviewed_events.py
           python scripts/build_theme_trends.py
+          python scripts/build_explore_index.py
           python -m unittest discover -s tests -p 'test_logic.py'
       - name: Test actual rendered dashboard
         run: python tests/smoke_site.py

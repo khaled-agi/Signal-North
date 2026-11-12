@@ -80,3 +80,6 @@
 .news-sources div{padding:4px 0 0 8px}
 .news-sources a{color:#0b7681}
 @media(max-width:760px){.review-edit{grid-template-columns:1fr}.connection-review-note{padding:0 15px}}
+
+.connection-profile-link{margin-top:10px;background:none;border:0;padding:0;font:600 13px/1.2 var(--sans,"Figtree",sans-serif);color:#146e77;cursor:pointer}
+.connection-profile-link:hover{text-decoration:underline}

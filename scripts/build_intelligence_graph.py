@@ -427,7 +427,9 @@ def generate():
   if not looks_like_organisation(name):continue  # individuals are never indexed
   entry=ensure(name)
   if not entry:continue
-  entry.setdefault("jurisdiction",ev.get("country_code"))
+  # The regulator's country is where it acted, not the organisation's home.
+  acted=entry.setdefault("enforcement_countries",[])
+  if ev.get("country_code") and ev["country_code"] not in acted:acted.append(ev["country_code"])
   entry["counts"]["enforcement"]+=1
   entry["evidence"].append(global_enforcement_reference(ev))
   global_linked+=1
