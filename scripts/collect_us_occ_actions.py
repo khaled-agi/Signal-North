@@ -76,9 +76,31 @@ def normalize(raw):
   "interpretation":"The action type and subject party govern legal interpretation. Individual actions are not institutional findings; terminated orders may no longer apply.",
  }
 
+def path_terms(term):
+ # The OCC API routes the search term as a path segment; a literal period
+ # (e.g. "U.S. Bank") is treated as a file extension and returns 404.
+ # Try the period percent-encoded first, then a period-free spelling.
+ encoded=quote(term,safe="").replace(".","%2E")
+ dotless=quote(" ".join(term.replace("."," ").split()),safe="")
+ return [encoded] if "." not in term else [encoded,dotless]
+
 def collect_one(session,term,key):
- url=BASE+quote(term,safe="")
- response=session.get(url,params={"api_key":key},headers={"Accept":"application/json","User-Agent":"SignalNorthResearch/1.0 (official OCC bank enforcement research)"},timeout=35)
+ last=None
+ for segment in path_terms(term):
+  try:return fetch_term(session,BASE+segment,key)
+  except requests.HTTPError as exc:
+   last=exc
+   if exc.response is None or exc.response.status_code!=404:raise
+ raise last
+
+def fetch_term(session,url,key):
+ for attempt in range(3):
+  response=session.get(url,params={"api_key":key},headers={"Accept":"application/json","User-Agent":"SignalNorthResearch/1.0 (official OCC bank enforcement research)"},timeout=35)
+  if response.status_code!=429 or attempt==2:break
+  # api.data.gov rate limit: honour Retry-After, otherwise back off.
+  try:wait=min(30.0,float(response.headers.get("Retry-After") or 0))
+  except ValueError:wait=0
+  time.sleep(wait or 5*(attempt+1))
  response.raise_for_status()
  if len(response.content)>MAX_RESPONSE_BYTES:raise ValueError("OCC response size unexpected")
  data=response.json()
@@ -120,7 +142,8 @@ def main():
    health[term]={"status":"failed_last_good_preserved" if old.get("records") else "unavailable",
                  "last_attempt":now,"error_type":type(e).__name__,"detail":str(e)[:160]}
    print(f"OCC {term}: {type(e).__name__}",flush=True)
-  time.sleep(0.2)
+  # DEMO_KEY allows very few requests per hour per IP; pace accordingly.
+  time.sleep(0.2 if key!="DEMO_KEY" else 2.0)
  # Never publish a partial results list as a complete official dataset.
  if len(records)>=MIN_VALID:
   atomic(OUT,{
@@ -135,6 +158,7 @@ def main():
  atomic(HEALTH,{"updated_at":now,"source_url":"https://api.occ.gov/",
    "successful_queries_this_run":succeeded,"tested_queries":sampled,
    "count":len(records),"source_health":health,
+   "api_key_mode":"shared_DEMO_KEY_rate_limited_set_OCC_API_KEY_secret" if key=="DEMO_KEY" else "repository_secret",
    "status":"success" if len(records)>=MIN_VALID else "failed_last_good_preserved" if OUT.exists() else "unavailable"})
  print(f"OCC original action snapshot: {len(records)} records, {succeeded}/{len(sampled)} successful searches",flush=True)
 
