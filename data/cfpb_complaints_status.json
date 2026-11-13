@@ -1,52 +1,46 @@
 {
-  "last_attempt_at": "2026-11-12T23:49:07+00:00",
+  "last_attempt_at": "2026-11-13T06:05:09+00:00",
   "source": "CFPB public Consumer Complaint Database",
   "endpoint": "https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/",
-  "status": "ok",
+  "status": "partial_error",
   "sample_limit_per_call": 100,
   "retention_days": 90,
   "methodology": "Bounded rotating published complaint samples, including bank products. NOT a representative sample, findings, or company misconduct rates. No narratives or ZIP codes.",
-  "latest_window_total": 1978363,
-  "total_basis": "CFPB exact all-product query total (if supplied); not sampled bank counts",
+  "latest_window_total": null,
+  "total_basis": "not_available",
   "requested_product_queries": [
-    "Money transfer, virtual currency, or money service",
-    "Mortgage",
-    "Vehicle loan or lease"
+    "Checking or savings account",
+    "Credit card",
+    "Money transfer, virtual currency, or money service"
   ],
   "queries": {
     "all_recent": {
-      "status": "ok",
-      "returned": 100,
-      "exact_window_total": 1978363,
-      "filter": "all products",
-      "note": "This is one capped search page, NOT all complaints in category"
+      "status": "error",
+      "error_type": "ReadTimeout",
+      "filter": "all products"
+    },
+    "Checking or savings account": {
+      "status": "error",
+      "error_type": "ReadTimeout",
+      "filter": "Checking or savings account"
+    },
+    "Credit card": {
+      "status": "error",
+      "error_type": "ReadTimeout",
+      "filter": "Credit card"
     },
     "Money transfer, virtual currency, or money service": {
       "status": "ok",
       "returned": 100,
-      "exact_window_total": 9262,
+      "exact_window_total": 9135,
       "filter": "Money transfer, virtual currency, or money service",
-      "note": "This is one capped search page, NOT all complaints in category"
-    },
-    "Mortgage": {
-      "status": "ok",
-      "returned": 100,
-      "exact_window_total": 8130,
-      "filter": "Mortgage",
-      "note": "This is one capped search page, NOT all complaints in category"
-    },
-    "Vehicle loan or lease": {
-      "status": "ok",
-      "returned": 100,
-      "exact_window_total": 6160,
-      "filter": "Vehicle loan or lease",
       "note": "This is one capped search page, NOT all complaints in category"
     }
   },
-  "last_success_at": "2026-11-12T23:49:07+00:00",
-  "query_received_from": "2026-08-14",
-  "returned_in_latest_request": 400,
-  "queries_succeeded": 4,
+  "last_success_at": "2026-11-13T06:05:09+00:00",
+  "query_received_from": "2026-08-15",
+  "returned_in_latest_request": 100,
+  "queries_succeeded": 1,
   "queries_attempted": 4,
   "stored_records": 2500,
   "companies_in_stored_sample": 156,
