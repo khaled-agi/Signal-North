@@ -15,7 +15,7 @@
     "2023": 419,
     "2024": 328,
     "2025": 482,
-    "2026": 890
+    "2026": 892
   },
   "themes": [
     {
@@ -1434,10 +1434,10 @@
         "2023": 9,
         "2024": 6,
         "2025": 6,
-        "2026": 22
+        "2026": 23
       },
-      "total_headlines": 77,
-      "publisher_count": 28,
+      "total_headlines": 78,
+      "publisher_count": 29,
       "examples": [
         {
           "id": "d5a22e8e5b34735d7aff",
@@ -1446,6 +1446,17 @@
           "publisher": "Yahoo! Finance Canada",
           "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxONDFQcUtuYXBqeEZheUo1Z2VMakl1aXRlV2I3dndmTlFOSVZuZl9lN1l2QzdJRi1CeDJCaFNwY0I0OU4wc0RRallUVmxHcV9SY1lEdkQzZVYxSk9RdTE0UDdCV2VGUl95Z01xUXNldTY0VnBFQThodld6dTJSMGtxUEZldjdEM3Z3bHZVRVdrc0w?oc=5",
           "geography": "Ottawa, Ontario",
+          "source_channels": [
+            "recent"
+          ]
+        },
+        {
+          "id": "8c021e0c01a09c34bf80",
+          "title": "Ontario court certifies class-action suit against TD Bank regarding money laundering - Investment Executive",
+          "date": "2026-11-05T08:00:00+00:00",
+          "publisher": "Investment Executive",
+          "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNT01nUl9HZmhxMjdQdXZuV1BRQkprLUU5WXVmeWFBcDJSYmJvMENHR0ZCbFFHZ0FFRW9hSTRwaEF0R1pFTUxQdHI2X2JRSkFyc2pJLXBxa0hRT1oxTzgxc19hLUJNZWJMZkhYb1A3Z2o5YzZkUjJqVk5DelFMcnMzeHczaklXLXN5eWtZUDRBMGg0bXkyUHM5WElxZnd5NmJ1RDlPcUg2SkZCM0R0RnlIbHg5d2xha1pjWkNTWThnblB0cEE0Uk9qMUprQXNfSEg3SkNv?oc=5",
+          "geography": null,
           "source_channels": [
             "recent"
           ]
@@ -1689,17 +1700,6 @@
           "publisher": "CTV News",
           "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQQV9uRVJOb0Z1bkZUeFBxNW92Yy1yLVo1bno1cFExdHA2R1R3bFI0d2dkNHphZEZ2OUQzSEc2Z0VCTFVEbDFXTEVIVTV1Mm1zQ0tEbG5hRS1neTBKMksyU2YxcnpYNnkxejFSSzRrYndlck1ucVVXNjNEdzIxZWdwOXBZcFNpY24tZ3hHMmI0TEEzejR3RWs1dG9MSnB6ZFVtamlJYkpBcDVPMUpXMkxjbXhUcXZ0RVE?oc=5",
           "geography": "Montreal, Quebec",
-          "source_channels": [
-            "historical"
-          ]
-        },
-        {
-          "id": "d47a69c30125ebb91b35",
-          "title": "B.C. man charged with money laundering after Lethbridge online investment scam - Global News",
-          "date": "2025-12-02T08:00:00+00:00",
-          "publisher": "Global News",
-          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNWWdKZ1VfeGluNnhJWThvUml0cldsb1BOZ3ZybkgzbGRObUVZcGNVYm9STUszYnliNUlFMmpvcFdJOFRNMHdZai15N1lJV2hyclVJXzVVUlRKdlNXWGx3RVptVmFCaDBGZVhhM0pZOUJJSUJTTk16NFNNUW5RaEotdDlpX01YOU93QzRFYk42RQ?oc=5",
-          "geography": null,
           "source_channels": [
             "historical"
           ]
@@ -3142,12 +3142,12 @@
         "2023": 1,
         "2024": 3,
         "2025": 3,
-        "2026": 6
+        "2026": 7
       }
     }
   ],
-  "generated_at": "2026-11-14T14:56:50+00:00",
-  "articles_analyzed": 2791,
+  "generated_at": "2026-11-14T19:52:41+00:00",
+  "articles_analyzed": 2793,
   "methodology": "MULTI-LABEL keyword classification of unique article TITLES by publication year; multiple theme counts can arise from one headline. Year-to-year article counts reflect discovery methods, changing news coverage, and archived source availability, NOT measured changes in fraud incidence. Bank/platform mentions are not accusations and never counted as confirmed enforcement.",
   "scope": "Canadian financial-crime news discovery",
   "data_quality": "Headlines only; no full-article automated fact checking. Counts can change as the archive expands."
