@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-13T21:02:13+00:00",
+  "generated_at": "2026-11-14T01:27:45+00:00",
   "methodology": "Institution names are canonically grouped using explicit aliases. Headline entries are conservative reporting groups, not distinct or independently verified fraud incidents; multiple publisher headlines are retained under each group. An institution mention is not proof of wrongdoing.",
   "source_counts": {
     "enforcement": 98,
     "reviewed_incidents": 6,
-    "unverified_report_groups": 2766,
+    "unverified_report_groups": 2768,
     "osfi_institution_rows": 345,
     "fintrac_index_notices": 90,
     "bank_disclosure_records": 15,
@@ -13,7 +13,7 @@
     "obsi_firm_records": 91,
     "ciro_confirmed_cases": 5,
     "amf_quebec_entity_rows": 945,
-    "us_fdic_active_entities": 4212,
+    "us_fdic_active_entities": 4208,
     "us_fdic_failure_events": 4117,
     "us_ncua_credit_union_entities": 4214,
     "us_occ_enforcement_actions": 2311,
@@ -37900,49 +37900,6 @@
           "city": "Mount Sterling",
           "active": true,
           "fed_rssd": "786210",
-          "source_url": "https://banks.data.fdic.gov/bankfind-suite/",
-          "source_kind": "official_FDIC_active_institution_register"
-        },
-        "counts": {
-          "fintrac_public_notices": 0,
-          "fcac_index_notices": 0,
-          "bank_disclosure_years": 0,
-          "obsi_firm_years": 0,
-          "ciro_concluded_cases": 0,
-          "fdic_failures": 0,
-          "occ_institution_actions": 0,
-          "occ_individual_matters": 0
-        }
-      },
-      "evidence_count_shown": 0
-    },
-    {
-      "id": "us-fdic-2718",
-      "name": "Citizens Bank of Kentucky, Inc. (US · KY)",
-      "legal_name": "Citizens Bank of Kentucky, Inc.",
-      "jurisdiction": "US",
-      "country": "US",
-      "aliases": [
-        "Citizens Bank of Kentucky, Inc.",
-        "Citizens Bank of Kentucky, Inc. FDIC 2718"
-      ],
-      "counts": {
-        "enforcement": 0,
-        "incidents": 0,
-        "headlines": 0
-      },
-      "evidence": [],
-      "themes": [],
-      "annual_penalties_cad": {},
-      "recent_activity": null,
-      "official_data": {
-        "fdic": {
-          "cert": "2718",
-          "legal_name": "Citizens Bank of Kentucky, Inc.",
-          "state": "KY",
-          "city": "Paintsville",
-          "active": true,
-          "fed_rssd": "495419",
           "source_url": "https://banks.data.fdic.gov/bankfind-suite/",
           "source_kind": "official_FDIC_active_institution_register"
         },
@@ -107143,49 +107100,6 @@
           "city": "Eastpointe",
           "active": true,
           "fed_rssd": "113740",
-          "source_url": "https://banks.data.fdic.gov/bankfind-suite/",
-          "source_kind": "official_FDIC_active_institution_register"
-        },
-        "counts": {
-          "fintrac_public_notices": 0,
-          "fcac_index_notices": 0,
-          "bank_disclosure_years": 0,
-          "obsi_firm_years": 0,
-          "ciro_concluded_cases": 0,
-          "fdic_failures": 0,
-          "occ_institution_actions": 0,
-          "occ_individual_matters": 0
-        }
-      },
-      "evidence_count_shown": 0
-    },
-    {
-      "id": "us-fdic-15035",
-      "name": "Riverwind Bank (US · AR)",
-      "legal_name": "Riverwind Bank",
-      "jurisdiction": "US",
-      "country": "US",
-      "aliases": [
-        "Riverwind Bank",
-        "Riverwind Bank FDIC 15035"
-      ],
-      "counts": {
-        "enforcement": 0,
-        "incidents": 0,
-        "headlines": 0
-      },
-      "evidence": [],
-      "themes": [],
-      "annual_penalties_cad": {},
-      "recent_activity": null,
-      "official_data": {
-        "fdic": {
-          "cert": "15035",
-          "legal_name": "Riverwind Bank",
-          "state": "AR",
-          "city": "Augusta",
-          "active": true,
-          "fed_rssd": "855143",
           "source_url": "https://banks.data.fdic.gov/bankfind-suite/",
           "source_kind": "official_FDIC_active_institution_register"
         },
@@ -182194,49 +182108,6 @@
       "evidence_count_shown": 0
     },
     {
-      "id": "us-fdic-35214",
-      "name": "First Reliance Bank (US · SC)",
-      "legal_name": "First Reliance Bank",
-      "jurisdiction": "US",
-      "country": "US",
-      "aliases": [
-        "First Reliance Bank",
-        "First Reliance Bank FDIC 35214"
-      ],
-      "counts": {
-        "enforcement": 0,
-        "incidents": 0,
-        "headlines": 0
-      },
-      "evidence": [],
-      "themes": [],
-      "annual_penalties_cad": {},
-      "recent_activity": null,
-      "official_data": {
-        "fdic": {
-          "cert": "35214",
-          "legal_name": "First Reliance Bank",
-          "state": "SC",
-          "city": "Florence",
-          "active": true,
-          "fed_rssd": "2839790",
-          "source_url": "https://banks.data.fdic.gov/bankfind-suite/",
-          "source_kind": "official_FDIC_active_institution_register"
-        },
-        "counts": {
-          "fintrac_public_notices": 0,
-          "fcac_index_notices": 0,
-          "bank_disclosure_years": 0,
-          "obsi_firm_years": 0,
-          "ciro_concluded_cases": 0,
-          "fdic_failures": 0,
-          "occ_institution_actions": 0,
-          "occ_individual_matters": 0
-        }
-      },
-      "evidence_count_shown": 0
-    },
-    {
       "id": "us-fdic-35220",
       "name": "Wyoming Community Bank (US · WY)",
       "legal_name": "Wyoming Community Bank",
@@ -197743,49 +197614,6 @@
           "city": "Birmingham",
           "active": true,
           "fed_rssd": "3720608",
-          "source_url": "https://banks.data.fdic.gov/bankfind-suite/",
-          "source_kind": "official_FDIC_active_institution_register"
-        },
-        "counts": {
-          "fintrac_public_notices": 0,
-          "fcac_index_notices": 0,
-          "bank_disclosure_years": 0,
-          "obsi_firm_years": 0,
-          "ciro_concluded_cases": 0,
-          "fdic_failures": 0,
-          "occ_institution_actions": 0,
-          "occ_individual_matters": 0
-        }
-      },
-      "evidence_count_shown": 0
-    },
-    {
-      "id": "us-fdic-58789",
-      "name": "Grand River Bank (US · MI)",
-      "legal_name": "Grand River Bank",
-      "jurisdiction": "US",
-      "country": "US",
-      "aliases": [
-        "Grand River Bank",
-        "Grand River Bank FDIC 58789"
-      ],
-      "counts": {
-        "enforcement": 0,
-        "incidents": 0,
-        "headlines": 0
-      },
-      "evidence": [],
-      "themes": [],
-      "annual_penalties_cad": {},
-      "recent_activity": null,
-      "official_data": {
-        "fdic": {
-          "cert": "58789",
-          "legal_name": "Grand River Bank",
-          "state": "MI",
-          "city": "Grandville",
-          "active": true,
-          "fed_rssd": "3812147",
           "source_url": "https://banks.data.fdic.gov/bankfind-suite/",
           "source_kind": "official_FDIC_active_institution_register"
         },
