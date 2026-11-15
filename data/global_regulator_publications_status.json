@@ -1,38 +1,38 @@
 {
-  "last_completed_at": "2026-11-15T19:40:28+00:00",
+  "last_completed_at": "2026-11-15T23:53:42+00:00",
   "regulators_configured": 30,
   "regulators_attempted": 30,
   "countries_with_publication_leads": 0,
   "leads_count": 0,
   "agencies": {
     "SG:MAS": {
-      "status": "empty",
-      "accepted": 0,
-      "checked_at": "2026-11-14T19:51:15+00:00",
+      "status": "error",
+      "error_type": "HTTPError",
+      "checked_at": "2026-11-15T23:53:32+00:00",
       "source_domain": "mas.gov.sg",
       "country_code": "SG",
       "regulator": "MAS"
     },
     "NZ:FMA": {
-      "status": "empty",
-      "accepted": 0,
-      "checked_at": "2026-11-14T19:51:10+00:00",
+      "status": "error",
+      "error_type": "HTTPError",
+      "checked_at": "2026-11-15T23:53:32+00:00",
       "source_domain": "fma.govt.nz",
       "country_code": "NZ",
       "regulator": "FMA"
     },
     "CH:FINMA": {
-      "status": "empty",
-      "accepted": 0,
-      "checked_at": "2026-11-14T19:51:12+00:00",
+      "status": "error",
+      "error_type": "HTTPError",
+      "checked_at": "2026-11-15T23:53:32+00:00",
       "source_domain": "finma.ch",
       "country_code": "CH",
       "regulator": "FINMA"
     },
     "IE:Central Bank of Ireland": {
-      "status": "empty",
-      "accepted": 0,
-      "checked_at": "2026-11-14T19:51:33+00:00",
+      "status": "error",
+      "error_type": "HTTPError",
+      "checked_at": "2026-11-15T23:53:42+00:00",
       "source_domain": "centralbank.ie",
       "country_code": "IE",
       "regulator": "Central Bank of Ireland"
@@ -40,7 +40,7 @@
     "AU:AUSTRAC": {
       "status": "error",
       "error_type": "HTTPError",
-      "checked_at": "2026-11-14T19:51:20+00:00",
+      "checked_at": "2026-11-15T23:53:42+00:00",
       "source_domain": "austrac.gov.au",
       "country_code": "AU",
       "regulator": "AUSTRAC"
@@ -48,7 +48,7 @@
     "HK:HKMA": {
       "status": "error",
       "error_type": "HTTPError",
-      "checked_at": "2026-11-14T19:51:25+00:00",
+      "checked_at": "2026-11-15T23:53:42+00:00",
       "source_domain": "hkma.gov.hk",
       "country_code": "HK",
       "regulator": "HKMA"
