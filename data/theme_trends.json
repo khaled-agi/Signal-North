@@ -13,7 +13,7 @@
     "2021": 188,
     "2022": 303,
     "2023": 419,
-    "2024": 328,
+    "2024": 439,
     "2025": 482,
     "2026": 892
   },
@@ -25,12 +25,12 @@
         "2021": 8,
         "2022": 16,
         "2023": 28,
-        "2024": 27,
+        "2024": 36,
         "2025": 48,
         "2026": 89
       },
-      "total_headlines": 219,
-      "publisher_count": 67,
+      "total_headlines": 228,
+      "publisher_count": 68,
       "examples": [
         {
           "id": "d23b37a9d46983356b5f",
@@ -306,12 +306,12 @@
         "2021": 6,
         "2022": 18,
         "2023": 33,
-        "2024": 10,
+        "2024": 18,
         "2025": 39,
         "2026": 28
       },
-      "total_headlines": 143,
-      "publisher_count": 40,
+      "total_headlines": 151,
+      "publisher_count": 42,
       "examples": [
         {
           "id": "e172412427280961dd33",
@@ -587,12 +587,12 @@
         "2021": 8,
         "2022": 12,
         "2023": 18,
-        "2024": 14,
+        "2024": 20,
         "2025": 20,
         "2026": 45
       },
-      "total_headlines": 124,
-      "publisher_count": 40,
+      "total_headlines": 130,
+      "publisher_count": 42,
       "examples": [
         {
           "id": "d23b37a9d46983356b5f",
@@ -871,12 +871,12 @@
         "2021": 3,
         "2022": 14,
         "2023": 36,
-        "2024": 10,
+        "2024": 24,
         "2025": 7,
         "2026": 18
       },
-      "total_headlines": 93,
-      "publisher_count": 28,
+      "total_headlines": 107,
+      "publisher_count": 32,
       "examples": [
         {
           "id": "b3500a6e002d03891ae2",
@@ -1146,298 +1146,18 @@
       ]
     },
     {
-      "name": "Bank impersonation & phishing",
-      "year_counts": {
-        "2020": 3,
-        "2021": 3,
-        "2022": 9,
-        "2023": 12,
-        "2024": 5,
-        "2025": 17,
-        "2026": 34
-      },
-      "total_headlines": 83,
-      "publisher_count": 31,
-      "examples": [
-        {
-          "id": "07938675871d02f054a8",
-          "title": "Spoofing scam involving RCMP phone numbers",
-          "date": "2026-11-10T18:38:54+00:00",
-          "publisher": "Royal Canadian Mounted Police",
-          "url": "https://rcmp.ca/en/nb/news/2026/11/4358672",
-          "geography": null,
-          "source_channels": [
-            "rcmp_official_rss"
-          ]
-        },
-        {
-          "id": "57ade50e6bb90c70b116",
-          "title": "US, UK and Canada Freeze $12M in Crypto Phishing Operation - CoinMarketCap",
-          "date": "2026-11-10T13:07:00+00:00",
-          "publisher": "CoinMarketCap",
-          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQLXhodGJNSDBrODJtc2xmX20tOV9HNnktYVVNeU1tcUFJbHl1X0xZbW9OZ01iTnhvbW8zeHFXUE9wMk53SVdpLVlYdjQ5eU1pTXpGOUREVTV6YU5rR2NyeFgxOGFkclAybnFibGIxbUZMeG9fOEIwWTAwOUFHbGIxSTAzRWEzdmNQanpjR1VON3dFaUNrMnFGOEMzSUp6MlctcU4xTWlaQQ?oc=5",
-          "geography": null,
-          "source_channels": [
-            "recent"
-          ]
-        },
-        {
-          "id": "688d6b111f45290ab2c3",
-          "title": "Parkland RCMP advise of phone number and caller ID spoofing scam calls",
-          "date": "2026-11-09T19:44:39+00:00",
-          "publisher": "Royal Canadian Mounted Police",
-          "url": "https://rcmp.ca/en/alberta/news/2026/11/4358644",
-          "geography": null,
-          "source_channels": [
-            "rcmp_official_rss"
-          ]
-        },
-        {
-          "id": "4f75015f7045128d0dc3",
-          "title": "Enoch RCMP advise of phone number and caller ID spoofing scam calls",
-          "date": "2026-11-09T19:34:10+00:00",
-          "publisher": "Royal Canadian Mounted Police",
-          "url": "https://rcmp.ca/en/alberta/news/2026/11/4358642",
-          "geography": null,
-          "source_channels": [
-            "rcmp_official_rss"
-          ]
-        },
-        {
-          "id": "6485bbba7f0e7e0e69b3",
-          "title": "Red Deer RCMP advise of phone number \"spoofing\" and shares tips to prevent identity theft",
-          "date": "2026-11-04T19:23:44+00:00",
-          "publisher": "Royal Canadian Mounted Police",
-          "url": "https://rcmp.ca/en/alberta/news/2026/10/4358521",
-          "geography": null,
-          "source_channels": [
-            "rcmp_official_rss"
-          ]
-        },
-        {
-          "id": "1b417fcc9b01c3f6d3dd",
-          "title": "U.S., U.K., Canada Target Crypto Phishing in Joint Operation - CoinMarketCap",
-          "date": "2026-11-04T05:43:14+00:00",
-          "publisher": "CoinMarketCap",
-          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQMWhYMkJkbWYyT1ZoaTNoY3dwTmRYbTNheVNla0NCNnZtb3FDempfekNpRGpzQVZIQndaQW42b0lxSTB2SWdIYW02VU95a0lUWEJjQ0lxNzUtVzZsd3ExajdGY09La1h1dG9YRUV3bVRMVE1yS2hfY0dldkE4dXR1SHByY1p0dEY3Y3hLTlZqeGlwSURpcTl3eW5yOTc?oc=5",
-          "geography": null,
-          "source_channels": [
-            "recent"
-          ]
-        },
-        {
-          "id": "31e6a3cf8f2702b5efd9",
-          "title": "Toronto Police Warn AI Scams Now Impersonate Banks and Telcos - iPhone in Canada",
-          "date": "2026-10-30T17:09:31+00:00",
-          "publisher": "iPhone in Canada",
-          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNeml4WVZGRE5zbndUbTBVMWhoZ0pXc2d5eTc4Vl9lT0Z0UXBIcmxTTW9zdzV1UVY3ZHdvdVdCSE5xTW9ZdGZzdWNZUFBaOHB2bTVqM1NLbkkwdlVQMTljRXp6QnZfam0xYW5XZ0xCUjFIOWZ6TlFwVDJmYnZIdXlWckE1WEFncmt5ZW5NVkNGV1BfNU5VQjdJ?oc=5",
-          "geography": "Toronto, Ontario",
-          "source_channels": [
-            "recent"
-          ]
-        },
-        {
-          "id": "cc893a311588c6101a0c",
-          "title": "Wood Buffalo RCMP investigates ‘spoofing’, shares tips to protect against identity theft",
-          "date": "2026-10-29T17:29:52+00:00",
-          "publisher": "Royal Canadian Mounted Police",
-          "url": "https://rcmp.ca/en/alberta/news/2026/10/4358319",
-          "geography": null,
-          "source_channels": [
-            "rcmp_official_rss"
-          ]
-        },
-        {
-          "id": "b4ecf8f51fd775609685",
-          "title": "Calgary man charged with bank fraud, impersonating police - CTV News",
-          "date": "2026-10-28T07:00:00+00:00",
-          "publisher": "CTV News",
-          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQRl93b3hCWEVFejU1NXpfendySmNaRjFHRk1TaTRRRFVUaHg2b3QyM3hDRXdER1ZDcW9nVElUcFRETXRhbDJIeU51bHNKYndSUHV2M25zb05fVV93UVpxT2VMNHpfdXhfdHB3MjFsaVVTR0pRblFERnV2ajFHTmlvNnVZYklMS2hGd0p2b2I4dlN5cUNNcGF4Z0ZLQ3Y?oc=5",
-          "geography": "Calgary, Alberta",
-          "source_channels": [
-            "recent"
-          ]
-        },
-        {
-          "id": "0657d88b3629ff9516fd",
-          "title": "Calgary police warn about phone fraud scams involving police impersonation - CTV News",
-          "date": "2026-10-26T19:01:30+00:00",
-          "publisher": "CTV News",
-          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPS2lMRkJaX0ZkQjJvdkpDLWZHcTFtTV9rV202OTcwU1JUU0QtMzM4S1NLQVNlb3lIMUxpXzNSOWRXaVVvOG96Y3NVMERQVGZUM0UtcU1FdzVQOHpnOERiOTZPNFNBREE2dFVBb21zTWhMTmpSN3RManhYSE5VR3cwa0VDTmVRZnBiRWdSRXY5bXNDWHRhWS0xa1pEdjlPTV9rU0loVXFkWnVyWG54Zk9EQkFLdXM?oc=5",
-          "geography": "Calgary, Alberta",
-          "source_channels": [
-            "recent"
-          ]
-        },
-        {
-          "id": "6d3545769ab380f9a4f9",
-          "title": "Fraudsters impersonating Saskatchewan RCMP in email scam - CTV News",
-          "date": "2026-10-14T07:00:00+00:00",
-          "publisher": "CTV News",
-          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNci10dUNCQ01CQW80MEd6YnEwakd3eEljZHE5b25VOE1iR29GRWlRdHJhNmYtdmJPM0xtcllwendYQ0JRN0RSN0tsYVV4X2N2b0IyZTFtcnVIaFJTcG1FUHpySlZmakZ5OFAtX2JScTFqcElvUmRlNEpIeFlhTkJhQloyZlExRktZX0w2Qk1QbUdZd21ic1BQUzJKTllKRkE?oc=5",
-          "geography": null,
-          "source_channels": [
-            "recent"
-          ]
-        },
-        {
-          "id": "dfa085587e5a2e86cbee",
-          "title": "RCMP warn of new gold 'safekeeping' scam as bank-impersonation losses hit $28.6M in 2026 - Money.ca",
-          "date": "2026-10-14T07:00:00+00:00",
-          "publisher": "Money.ca",
-          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9UUzhuMm03TjdiMkgwX3dZdzdzWnN1elV5RzBCWmRFUEc5dTllQzZxUXZ0RWZ2TXM4YXpJMWRqQV9WXzB2TUhIU1puVkFNM0NLOXdNS21CenBzMG0xTkowMDA1VURHVkN0S2JXeXFtb05DUngzZ3JpaXRONk0xUQ?oc=5",
-          "geography": null,
-          "source_channels": [
-            "recent"
-          ]
-        },
-        {
-          "id": "1e1794a09401865af403",
-          "title": "US, UK and Canada Freeze $12M in Crypto Phishing Operation - CoinMarketCap",
-          "date": "2026-10-10T12:55:44+00:00",
-          "publisher": "CoinMarketCap",
-          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQLXhodGJNSDBrODJtc2xmX20tOV9HNnktYVVNeU1tcUFJbHl1X0xZbW9OZ01iTnhvbW8zeHFXUE9wMk53SVdpLVlYdjQ5eU1pTXpGOUREVTV6YU5rR2NyeFgxOGFkclAybnFibGIxbUZMeG9fOEIwWTAwOUFHbGIxSTAzRWEzdmNQanpjR1VON3dFaUNrMnFGOEMzSUp6MlctcU4xTWlaQQ?oc=5",
-          "geography": null,
-          "source_channels": [
-            "historical"
-          ]
-        },
-        {
-          "id": "b2c6a4f1182234716edf",
-          "title": "Gold scammers impersonating police officers: N.S. RCMP - Yahoo News Canada",
-          "date": "2026-10-06T07:00:00+00:00",
-          "publisher": "Yahoo News Canada",
-          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOTHd5V2dVbHd0QjZvRk90ZEE2UEpzOHNuY0lVUnVkRWdQeFFXaUM3TnNIU0Ntd3RJdFVEbVhoOWdBRzd2T3VmTUxoYWlPb3lqN2Jjb3ZhRkhqSjhnZldYR0lqMmNyNk5nRjlyVWw4U1RoQVFocXk3X2w0WE16WnIwcFRZZHFVM1pCUm9FTg?oc=5",
-          "geography": null,
-          "source_channels": [
-            "historical"
-          ]
-        },
-        {
-          "id": "2e28a8612a6ee9874eef",
-          "title": "A Markham Mailbox and a Spoofed Construction Firm: How a B.C. Coal Terminal Traced an Alleged $6.2 Million Fraud Into an Apparent Chinese Money Laundering Network Spanning Canada's Biggest Banks - The Bureau | Sam Cooper",
-          "date": "2026-09-25T07:00:00+00:00",
-          "publisher": "The Bureau | Sam Cooper",
-          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBIYXJUdGxvUEdELTJBMkoxcHdMTmVwR1JweXRBd0xSTzdNV0dJTllTdDBDeE5BaTBaSDBDU0FsU3V2WGVKcURvWm5EcG5EVXRPMG1Ibm85UWRmZTF5OEdSelkwZENCdG1NZE85YXJMbzlZNXNzUkRBelhrTjRDUQ?oc=5",
-          "geography": null,
-          "source_channels": [
-            "historical"
-          ]
-        },
-        {
-          "id": "7aed5cc7931271b62335",
-          "title": "Fraudsters are impersonating the Canadian Anti-Fraud Centre — here’s how to protect yourself - Inside Halton",
-          "date": "2026-08-24T07:00:00+00:00",
-          "publisher": "Inside Halton",
-          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNY0tiQkRoWTBuUlRWMWlhbFhuY2FnODNqbENGVTBYbFhYbHFqVV9IY0c4NW1KTE5ERURkOEZUUFB6UHYtR2ZYVmVOMHdDYlI1TjRoMkJsRGVuZ041MkpGTDM3RjVYYlFFZjNkQUJvUEVzRW56NDA3TFF2U1FtM3NqcGdXVEl2QVY3N3J0SXRIYWhSMkdQVkpwS042VF9talNScTdHV01BUkFWUmIzWldQV20xclhlZw?oc=5",
-          "geography": null,
-          "source_channels": [
-            "historical"
-          ]
-        },
-        {
-          "id": "3117ea369b3df1b75893",
-          "title": "Fraudster impersonating Nova Scotia Securities Commission - Investment Executive",
-          "date": "2026-08-21T07:00:00+00:00",
-          "publisher": "Investment Executive",
-          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOa2VIVlA3cExITXN4dk00S05neURzMElYUDRVNVotMFFaVGY5NVY4Wlp3MV84S1BGNkx2S0pLS3k4cmtYcVhLTVVYNjlGdVpvV09TYktSTF9PdWNLVDB5TlR5dVk3U1haWE1hcVZMemVEUi1fb25HdGRyVkY1V0VNTDlwbFJ0OGxZdUFya2Z4dnRNX3FfbFY3OGszSHhoZGNEYTNjYmw1UlJLQkVXUThV?oc=5",
-          "geography": null,
-          "source_channels": [
-            "historical"
-          ]
-        },
-        {
-          "id": "636bdf8671d9e3b3e5df",
-          "title": "N.S. Securities Commission warning of impersonation scam - CityNews Halifax",
-          "date": "2026-08-21T07:00:00+00:00",
-          "publisher": "CityNews Halifax",
-          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQNkh6aTJyMWlmaDFGTWY4RnVyN3FyajkxY1ByaHNIRm94NWd6Z1FDYXFlT05abXFzRkF6elpkcG9xR2Fua3NMVHZmaUtzd1EyNHBXbWFiSUJQZEd4a3lMVGpIeUFfT1JDM1B3NHhfaVZRSXUzTmpJZV96WktqSmEtMENPVWF0NzJPS0s1VllYVTBsdnNMNzc0Nl85cFJfaElDV0dwU0FhZTBPLVU?oc=5",
-          "geography": "Halifax, Nova Scotia",
-          "source_channels": [
-            "historical"
-          ]
-        },
-        {
-          "id": "2539f5d8e21fde6e9d39",
-          "title": "Scammer impersonating VPD chief steals more than $100K from Sunshine Coast resident - CTV News",
-          "date": "2026-08-12T07:00:00+00:00",
-          "publisher": "CTV News",
-          "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPMll1eS1oeDB2TU50ZFI1WlBjQXliLUZ0bXZFXy1xV1FmMXpMc01lOTMxOEdCQ2huSjlxVmdLbE5KQzcteUV2dG9MVDJRNDlGU0xMbzFSeHRua0dnY20yUjRHTlNJR1A0YVE5YTNTWUhZUEVNTnlXb0RfTnp5U0tLeUtQdXlnakNfT2V4cVZIWkJBb2V0SDl3Y0MyUmE0RTJuTkJrTGMzMmt2YkZaMzdnOEs0T2dTVTJNS1luZkdMOUNhUQ?oc=5",
-          "geography": null,
-          "source_channels": [
-            "historical"
-          ]
-        },
-        {
-          "id": "3a5078bb46858bffaeec",
-          "title": "Ontario cabinet minister calls for ‘all-out ban on AI deepfakes and impersonations’ - CP24",
-          "date": "2026-08-12T07:00:00+00:00",
-          "publisher": "CP24",
-          "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPalAwSUd3amRQUGRQSkNodmhKVzN0WVNSS1RHOHBGNEFUR0VLUVJMV0hSU0hCeElCWWh5UkJrMS1fRVotQnBrUVdZa2ZQakxlZm1RRFBhSTU1aTlxMWtoRlVjaE9RdW4yM3BzaDYwc2syQTRnVUJfd0k0YUIzNXZwcldITGJoZmhlMTd3M3daOTBOMDh4aTRtRzV4OG82Zm5Wb1AycEZKV2FSemVHb0RwZlllVi1WeFBBZldJWE9rQXR3VzhiWnNv?oc=5",
-          "geography": null,
-          "source_channels": [
-            "historical"
-          ]
-        },
-        {
-          "id": "e2fb91e5d2e4a3d59c25",
-          "title": "RCMP warn of fraudulent letters impersonating police - CityNews Vancouver",
-          "date": "2026-07-16T07:00:00+00:00",
-          "publisher": "CityNews Vancouver",
-          "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE04SEdsRnNuYnhZb0xxRXcwbnZfaXNqYkhtRVpFZ1lJSXZlbHdYTFZXU19vMURHYTVybHljQ0JLRU9MU0FNTzdzNjZTeTJFOXl2enNZRmFEVXgwRWxxME53WDVRQW1GVnluS3lXeWF5Umd0Zw?oc=5",
-          "geography": "Vancouver, British Columbia",
-          "source_channels": [
-            "historical"
-          ]
-        },
-        {
-          "id": "9165caa9035978f951ab",
-          "title": "Scammers impersonate bank investigator, deputy chief in $10K fraud: Vancouver police - CTV News",
-          "date": "2026-07-14T07:00:00+00:00",
-          "publisher": "CTV News",
-          "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPNmwwaGMtVmhvdXhsRkZvQVF2WDNRWE1jSGxjNjlTRVNUU0JnWUFsS3BUbnRTcVc3UGRKcXNQUVBuVFRjZHNjcVI2eEJfOFYwZjNfNzBzeFdGN25paVZvRkdXYjVuSHA1Vy01Rmk5cm9mamNON0ZaRTRnTXZacW1HRk5fTVJ0akxmQnNBcFRyNTBReG5VRlJnSTdQSzRtSWxhajNWajZlM2FYeDJjZGhDcHlPTUdLMnpKMDlBUjFyYi0?oc=5",
-          "geography": "Vancouver, British Columbia",
-          "source_channels": [
-            "historical"
-          ]
-        },
-        {
-          "id": "39b13348af2ff0ed2042",
-          "title": "Mounties in B.C. warn of fraudsters impersonating police for payment - CityNews Vancouver",
-          "date": "2026-05-01T07:00:00+00:00",
-          "publisher": "CityNews Vancouver",
-          "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFB1VldTZWtoMmJLRW9WZUR4Ujh0YjYydkpuOE9PY2tTSTkwSFVvcTl5R3M1dXJselUtNmNIeVBTYnl0ZHdXek9meDA0WjFTQWQ3TjNISWZoaGhpMVdsclUtdllHZkEwQlJLSUFMRzB1bmh1bEpkNG9mRw?oc=5",
-          "geography": "Vancouver, British Columbia",
-          "source_channels": [
-            "historical"
-          ]
-        },
-        {
-          "id": "c33e1ce32dc7c36eb23f",
-          "title": "Charges laid in bank impersonation scheme that saw Calgarians lose $1.3M - CTV News",
-          "date": "2026-04-22T07:00:00+00:00",
-          "publisher": "CTV News",
-          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNOWdNc09JZzUyVmxqYnU2Ri1hbl81VmRZbzRETlE5UnNQVE8zUW4tOXZHZ3h2SDJ3RS1RLTZkcXNKWGF1eEN5dEFBdEZFZ1hBZDJkcFU3cWl0cFc4M08zLVViYWdQaXl4dmNzR1lsUTg3R0JXcWoyNWRzVTlYSU5jMzgtTDdUaHVyRENmVm1hWmZ6UzRFcVNjdkxmNEk0eFlfbERmMG9mUDEzdEdURkNr?oc=5",
-          "geography": null,
-          "source_channels": [
-            "historical"
-          ]
-        }
-      ]
-    },
-    {
       "name": "Money mules & laundering",
       "year_counts": {
         "2020": 4,
         "2021": 19,
         "2022": 11,
         "2023": 9,
-        "2024": 6,
+        "2024": 15,
         "2025": 6,
         "2026": 23
       },
-      "total_headlines": 78,
-      "publisher_count": 29,
+      "total_headlines": 87,
+      "publisher_count": 35,
       "examples": [
         {
           "id": "d5a22e8e5b34735d7aff",
@@ -1707,17 +1427,297 @@
       ]
     },
     {
+      "name": "Bank impersonation & phishing",
+      "year_counts": {
+        "2020": 3,
+        "2021": 3,
+        "2022": 9,
+        "2023": 12,
+        "2024": 6,
+        "2025": 17,
+        "2026": 34
+      },
+      "total_headlines": 84,
+      "publisher_count": 32,
+      "examples": [
+        {
+          "id": "07938675871d02f054a8",
+          "title": "Spoofing scam involving RCMP phone numbers",
+          "date": "2026-11-10T18:38:54+00:00",
+          "publisher": "Royal Canadian Mounted Police",
+          "url": "https://rcmp.ca/en/nb/news/2026/11/4358672",
+          "geography": null,
+          "source_channels": [
+            "rcmp_official_rss"
+          ]
+        },
+        {
+          "id": "57ade50e6bb90c70b116",
+          "title": "US, UK and Canada Freeze $12M in Crypto Phishing Operation - CoinMarketCap",
+          "date": "2026-11-10T13:07:00+00:00",
+          "publisher": "CoinMarketCap",
+          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQLXhodGJNSDBrODJtc2xmX20tOV9HNnktYVVNeU1tcUFJbHl1X0xZbW9OZ01iTnhvbW8zeHFXUE9wMk53SVdpLVlYdjQ5eU1pTXpGOUREVTV6YU5rR2NyeFgxOGFkclAybnFibGIxbUZMeG9fOEIwWTAwOUFHbGIxSTAzRWEzdmNQanpjR1VON3dFaUNrMnFGOEMzSUp6MlctcU4xTWlaQQ?oc=5",
+          "geography": null,
+          "source_channels": [
+            "recent"
+          ]
+        },
+        {
+          "id": "688d6b111f45290ab2c3",
+          "title": "Parkland RCMP advise of phone number and caller ID spoofing scam calls",
+          "date": "2026-11-09T19:44:39+00:00",
+          "publisher": "Royal Canadian Mounted Police",
+          "url": "https://rcmp.ca/en/alberta/news/2026/11/4358644",
+          "geography": null,
+          "source_channels": [
+            "rcmp_official_rss"
+          ]
+        },
+        {
+          "id": "4f75015f7045128d0dc3",
+          "title": "Enoch RCMP advise of phone number and caller ID spoofing scam calls",
+          "date": "2026-11-09T19:34:10+00:00",
+          "publisher": "Royal Canadian Mounted Police",
+          "url": "https://rcmp.ca/en/alberta/news/2026/11/4358642",
+          "geography": null,
+          "source_channels": [
+            "rcmp_official_rss"
+          ]
+        },
+        {
+          "id": "6485bbba7f0e7e0e69b3",
+          "title": "Red Deer RCMP advise of phone number \"spoofing\" and shares tips to prevent identity theft",
+          "date": "2026-11-04T19:23:44+00:00",
+          "publisher": "Royal Canadian Mounted Police",
+          "url": "https://rcmp.ca/en/alberta/news/2026/10/4358521",
+          "geography": null,
+          "source_channels": [
+            "rcmp_official_rss"
+          ]
+        },
+        {
+          "id": "1b417fcc9b01c3f6d3dd",
+          "title": "U.S., U.K., Canada Target Crypto Phishing in Joint Operation - CoinMarketCap",
+          "date": "2026-11-04T05:43:14+00:00",
+          "publisher": "CoinMarketCap",
+          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQMWhYMkJkbWYyT1ZoaTNoY3dwTmRYbTNheVNla0NCNnZtb3FDempfekNpRGpzQVZIQndaQW42b0lxSTB2SWdIYW02VU95a0lUWEJjQ0lxNzUtVzZsd3ExajdGY09La1h1dG9YRUV3bVRMVE1yS2hfY0dldkE4dXR1SHByY1p0dEY3Y3hLTlZqeGlwSURpcTl3eW5yOTc?oc=5",
+          "geography": null,
+          "source_channels": [
+            "recent"
+          ]
+        },
+        {
+          "id": "31e6a3cf8f2702b5efd9",
+          "title": "Toronto Police Warn AI Scams Now Impersonate Banks and Telcos - iPhone in Canada",
+          "date": "2026-10-30T17:09:31+00:00",
+          "publisher": "iPhone in Canada",
+          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNeml4WVZGRE5zbndUbTBVMWhoZ0pXc2d5eTc4Vl9lT0Z0UXBIcmxTTW9zdzV1UVY3ZHdvdVdCSE5xTW9ZdGZzdWNZUFBaOHB2bTVqM1NLbkkwdlVQMTljRXp6QnZfam0xYW5XZ0xCUjFIOWZ6TlFwVDJmYnZIdXlWckE1WEFncmt5ZW5NVkNGV1BfNU5VQjdJ?oc=5",
+          "geography": "Toronto, Ontario",
+          "source_channels": [
+            "recent"
+          ]
+        },
+        {
+          "id": "cc893a311588c6101a0c",
+          "title": "Wood Buffalo RCMP investigates ‘spoofing’, shares tips to protect against identity theft",
+          "date": "2026-10-29T17:29:52+00:00",
+          "publisher": "Royal Canadian Mounted Police",
+          "url": "https://rcmp.ca/en/alberta/news/2026/10/4358319",
+          "geography": null,
+          "source_channels": [
+            "rcmp_official_rss"
+          ]
+        },
+        {
+          "id": "b4ecf8f51fd775609685",
+          "title": "Calgary man charged with bank fraud, impersonating police - CTV News",
+          "date": "2026-10-28T07:00:00+00:00",
+          "publisher": "CTV News",
+          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQRl93b3hCWEVFejU1NXpfendySmNaRjFHRk1TaTRRRFVUaHg2b3QyM3hDRXdER1ZDcW9nVElUcFRETXRhbDJIeU51bHNKYndSUHV2M25zb05fVV93UVpxT2VMNHpfdXhfdHB3MjFsaVVTR0pRblFERnV2ajFHTmlvNnVZYklMS2hGd0p2b2I4dlN5cUNNcGF4Z0ZLQ3Y?oc=5",
+          "geography": "Calgary, Alberta",
+          "source_channels": [
+            "recent"
+          ]
+        },
+        {
+          "id": "0657d88b3629ff9516fd",
+          "title": "Calgary police warn about phone fraud scams involving police impersonation - CTV News",
+          "date": "2026-10-26T19:01:30+00:00",
+          "publisher": "CTV News",
+          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPS2lMRkJaX0ZkQjJvdkpDLWZHcTFtTV9rV202OTcwU1JUU0QtMzM4S1NLQVNlb3lIMUxpXzNSOWRXaVVvOG96Y3NVMERQVGZUM0UtcU1FdzVQOHpnOERiOTZPNFNBREE2dFVBb21zTWhMTmpSN3RManhYSE5VR3cwa0VDTmVRZnBiRWdSRXY5bXNDWHRhWS0xa1pEdjlPTV9rU0loVXFkWnVyWG54Zk9EQkFLdXM?oc=5",
+          "geography": "Calgary, Alberta",
+          "source_channels": [
+            "recent"
+          ]
+        },
+        {
+          "id": "6d3545769ab380f9a4f9",
+          "title": "Fraudsters impersonating Saskatchewan RCMP in email scam - CTV News",
+          "date": "2026-10-14T07:00:00+00:00",
+          "publisher": "CTV News",
+          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNci10dUNCQ01CQW80MEd6YnEwakd3eEljZHE5b25VOE1iR29GRWlRdHJhNmYtdmJPM0xtcllwendYQ0JRN0RSN0tsYVV4X2N2b0IyZTFtcnVIaFJTcG1FUHpySlZmakZ5OFAtX2JScTFqcElvUmRlNEpIeFlhTkJhQloyZlExRktZX0w2Qk1QbUdZd21ic1BQUzJKTllKRkE?oc=5",
+          "geography": null,
+          "source_channels": [
+            "recent"
+          ]
+        },
+        {
+          "id": "dfa085587e5a2e86cbee",
+          "title": "RCMP warn of new gold 'safekeeping' scam as bank-impersonation losses hit $28.6M in 2026 - Money.ca",
+          "date": "2026-10-14T07:00:00+00:00",
+          "publisher": "Money.ca",
+          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9UUzhuMm03TjdiMkgwX3dZdzdzWnN1elV5RzBCWmRFUEc5dTllQzZxUXZ0RWZ2TXM4YXpJMWRqQV9WXzB2TUhIU1puVkFNM0NLOXdNS21CenBzMG0xTkowMDA1VURHVkN0S2JXeXFtb05DUngzZ3JpaXRONk0xUQ?oc=5",
+          "geography": null,
+          "source_channels": [
+            "recent"
+          ]
+        },
+        {
+          "id": "1e1794a09401865af403",
+          "title": "US, UK and Canada Freeze $12M in Crypto Phishing Operation - CoinMarketCap",
+          "date": "2026-10-10T12:55:44+00:00",
+          "publisher": "CoinMarketCap",
+          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQLXhodGJNSDBrODJtc2xmX20tOV9HNnktYVVNeU1tcUFJbHl1X0xZbW9OZ01iTnhvbW8zeHFXUE9wMk53SVdpLVlYdjQ5eU1pTXpGOUREVTV6YU5rR2NyeFgxOGFkclAybnFibGIxbUZMeG9fOEIwWTAwOUFHbGIxSTAzRWEzdmNQanpjR1VON3dFaUNrMnFGOEMzSUp6MlctcU4xTWlaQQ?oc=5",
+          "geography": null,
+          "source_channels": [
+            "historical"
+          ]
+        },
+        {
+          "id": "b2c6a4f1182234716edf",
+          "title": "Gold scammers impersonating police officers: N.S. RCMP - Yahoo News Canada",
+          "date": "2026-10-06T07:00:00+00:00",
+          "publisher": "Yahoo News Canada",
+          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOTHd5V2dVbHd0QjZvRk90ZEE2UEpzOHNuY0lVUnVkRWdQeFFXaUM3TnNIU0Ntd3RJdFVEbVhoOWdBRzd2T3VmTUxoYWlPb3lqN2Jjb3ZhRkhqSjhnZldYR0lqMmNyNk5nRjlyVWw4U1RoQVFocXk3X2w0WE16WnIwcFRZZHFVM1pCUm9FTg?oc=5",
+          "geography": null,
+          "source_channels": [
+            "historical"
+          ]
+        },
+        {
+          "id": "2e28a8612a6ee9874eef",
+          "title": "A Markham Mailbox and a Spoofed Construction Firm: How a B.C. Coal Terminal Traced an Alleged $6.2 Million Fraud Into an Apparent Chinese Money Laundering Network Spanning Canada's Biggest Banks - The Bureau | Sam Cooper",
+          "date": "2026-09-25T07:00:00+00:00",
+          "publisher": "The Bureau | Sam Cooper",
+          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBIYXJUdGxvUEdELTJBMkoxcHdMTmVwR1JweXRBd0xSTzdNV0dJTllTdDBDeE5BaTBaSDBDU0FsU3V2WGVKcURvWm5EcG5EVXRPMG1Ibm85UWRmZTF5OEdSelkwZENCdG1NZE85YXJMbzlZNXNzUkRBelhrTjRDUQ?oc=5",
+          "geography": null,
+          "source_channels": [
+            "historical"
+          ]
+        },
+        {
+          "id": "7aed5cc7931271b62335",
+          "title": "Fraudsters are impersonating the Canadian Anti-Fraud Centre — here’s how to protect yourself - Inside Halton",
+          "date": "2026-08-24T07:00:00+00:00",
+          "publisher": "Inside Halton",
+          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNY0tiQkRoWTBuUlRWMWlhbFhuY2FnODNqbENGVTBYbFhYbHFqVV9IY0c4NW1KTE5ERURkOEZUUFB6UHYtR2ZYVmVOMHdDYlI1TjRoMkJsRGVuZ041MkpGTDM3RjVYYlFFZjNkQUJvUEVzRW56NDA3TFF2U1FtM3NqcGdXVEl2QVY3N3J0SXRIYWhSMkdQVkpwS042VF9talNScTdHV01BUkFWUmIzWldQV20xclhlZw?oc=5",
+          "geography": null,
+          "source_channels": [
+            "historical"
+          ]
+        },
+        {
+          "id": "3117ea369b3df1b75893",
+          "title": "Fraudster impersonating Nova Scotia Securities Commission - Investment Executive",
+          "date": "2026-08-21T07:00:00+00:00",
+          "publisher": "Investment Executive",
+          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOa2VIVlA3cExITXN4dk00S05neURzMElYUDRVNVotMFFaVGY5NVY4Wlp3MV84S1BGNkx2S0pLS3k4cmtYcVhLTVVYNjlGdVpvV09TYktSTF9PdWNLVDB5TlR5dVk3U1haWE1hcVZMemVEUi1fb25HdGRyVkY1V0VNTDlwbFJ0OGxZdUFya2Z4dnRNX3FfbFY3OGszSHhoZGNEYTNjYmw1UlJLQkVXUThV?oc=5",
+          "geography": null,
+          "source_channels": [
+            "historical"
+          ]
+        },
+        {
+          "id": "636bdf8671d9e3b3e5df",
+          "title": "N.S. Securities Commission warning of impersonation scam - CityNews Halifax",
+          "date": "2026-08-21T07:00:00+00:00",
+          "publisher": "CityNews Halifax",
+          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQNkh6aTJyMWlmaDFGTWY4RnVyN3FyajkxY1ByaHNIRm94NWd6Z1FDYXFlT05abXFzRkF6elpkcG9xR2Fua3NMVHZmaUtzd1EyNHBXbWFiSUJQZEd4a3lMVGpIeUFfT1JDM1B3NHhfaVZRSXUzTmpJZV96WktqSmEtMENPVWF0NzJPS0s1VllYVTBsdnNMNzc0Nl85cFJfaElDV0dwU0FhZTBPLVU?oc=5",
+          "geography": "Halifax, Nova Scotia",
+          "source_channels": [
+            "historical"
+          ]
+        },
+        {
+          "id": "2539f5d8e21fde6e9d39",
+          "title": "Scammer impersonating VPD chief steals more than $100K from Sunshine Coast resident - CTV News",
+          "date": "2026-08-12T07:00:00+00:00",
+          "publisher": "CTV News",
+          "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPMll1eS1oeDB2TU50ZFI1WlBjQXliLUZ0bXZFXy1xV1FmMXpMc01lOTMxOEdCQ2huSjlxVmdLbE5KQzcteUV2dG9MVDJRNDlGU0xMbzFSeHRua0dnY20yUjRHTlNJR1A0YVE5YTNTWUhZUEVNTnlXb0RfTnp5U0tLeUtQdXlnakNfT2V4cVZIWkJBb2V0SDl3Y0MyUmE0RTJuTkJrTGMzMmt2YkZaMzdnOEs0T2dTVTJNS1luZkdMOUNhUQ?oc=5",
+          "geography": null,
+          "source_channels": [
+            "historical"
+          ]
+        },
+        {
+          "id": "3a5078bb46858bffaeec",
+          "title": "Ontario cabinet minister calls for ‘all-out ban on AI deepfakes and impersonations’ - CP24",
+          "date": "2026-08-12T07:00:00+00:00",
+          "publisher": "CP24",
+          "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPalAwSUd3amRQUGRQSkNodmhKVzN0WVNSS1RHOHBGNEFUR0VLUVJMV0hSU0hCeElCWWh5UkJrMS1fRVotQnBrUVdZa2ZQakxlZm1RRFBhSTU1aTlxMWtoRlVjaE9RdW4yM3BzaDYwc2syQTRnVUJfd0k0YUIzNXZwcldITGJoZmhlMTd3M3daOTBOMDh4aTRtRzV4OG82Zm5Wb1AycEZKV2FSemVHb0RwZlllVi1WeFBBZldJWE9rQXR3VzhiWnNv?oc=5",
+          "geography": null,
+          "source_channels": [
+            "historical"
+          ]
+        },
+        {
+          "id": "e2fb91e5d2e4a3d59c25",
+          "title": "RCMP warn of fraudulent letters impersonating police - CityNews Vancouver",
+          "date": "2026-07-16T07:00:00+00:00",
+          "publisher": "CityNews Vancouver",
+          "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE04SEdsRnNuYnhZb0xxRXcwbnZfaXNqYkhtRVpFZ1lJSXZlbHdYTFZXU19vMURHYTVybHljQ0JLRU9MU0FNTzdzNjZTeTJFOXl2enNZRmFEVXgwRWxxME53WDVRQW1GVnluS3lXeWF5Umd0Zw?oc=5",
+          "geography": "Vancouver, British Columbia",
+          "source_channels": [
+            "historical"
+          ]
+        },
+        {
+          "id": "9165caa9035978f951ab",
+          "title": "Scammers impersonate bank investigator, deputy chief in $10K fraud: Vancouver police - CTV News",
+          "date": "2026-07-14T07:00:00+00:00",
+          "publisher": "CTV News",
+          "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPNmwwaGMtVmhvdXhsRkZvQVF2WDNRWE1jSGxjNjlTRVNUU0JnWUFsS3BUbnRTcVc3UGRKcXNQUVBuVFRjZHNjcVI2eEJfOFYwZjNfNzBzeFdGN25paVZvRkdXYjVuSHA1Vy01Rmk5cm9mamNON0ZaRTRnTXZacW1HRk5fTVJ0akxmQnNBcFRyNTBReG5VRlJnSTdQSzRtSWxhajNWajZlM2FYeDJjZGhDcHlPTUdLMnpKMDlBUjFyYi0?oc=5",
+          "geography": "Vancouver, British Columbia",
+          "source_channels": [
+            "historical"
+          ]
+        },
+        {
+          "id": "39b13348af2ff0ed2042",
+          "title": "Mounties in B.C. warn of fraudsters impersonating police for payment - CityNews Vancouver",
+          "date": "2026-05-01T07:00:00+00:00",
+          "publisher": "CityNews Vancouver",
+          "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFB1VldTZWtoMmJLRW9WZUR4Ujh0YjYydkpuOE9PY2tTSTkwSFVvcTl5R3M1dXJselUtNmNIeVBTYnl0ZHdXek9meDA0WjFTQWQ3TjNISWZoaGhpMVdsclUtdllHZkEwQlJLSUFMRzB1bmh1bEpkNG9mRw?oc=5",
+          "geography": "Vancouver, British Columbia",
+          "source_channels": [
+            "historical"
+          ]
+        },
+        {
+          "id": "c33e1ce32dc7c36eb23f",
+          "title": "Charges laid in bank impersonation scheme that saw Calgarians lose $1.3M - CTV News",
+          "date": "2026-04-22T07:00:00+00:00",
+          "publisher": "CTV News",
+          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNOWdNc09JZzUyVmxqYnU2Ri1hbl81VmRZbzRETlE5UnNQVE8zUW4tOXZHZ3h2SDJ3RS1RLTZkcXNKWGF1eEN5dEFBdEZFZ1hBZDJkcFU3cWl0cFc4M08zLVViYWdQaXl4dmNzR1lsUTg3R0JXcWoyNWRzVTlYSU5jMzgtTDdUaHVyRENmVm1hWmZ6UzRFcVNjdkxmNEk0eFlfbERmMG9mUDEzdEdURkNr?oc=5",
+          "geography": null,
+          "source_channels": [
+            "historical"
+          ]
+        }
+      ]
+    },
+    {
       "name": "Jobs, rentals & marketplace",
       "year_counts": {
         "2020": 2,
         "2021": 6,
         "2022": 6,
         "2023": 19,
-        "2024": 7,
+        "2024": 13,
         "2025": 9,
         "2026": 6
       },
-      "total_headlines": 55,
+      "total_headlines": 61,
       "publisher_count": 15,
       "examples": [
         {
@@ -1886,6 +1886,39 @@
           ]
         },
         {
+          "id": "90b4fe54bf97b3e1a5e3",
+          "title": "Fake smartphone scam prompts Facebook Marketplace advice from Coquitlam RCMP - CTV News",
+          "date": "2024-12-31T08:00:00+00:00",
+          "publisher": "CTV News",
+          "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNOXBnSk5XT25WdnhEQTBUb2YtZUp0WDVla2s3T3RjV1pLRXdweHdQYXI5UHFsbWJVRk1ZcGpabUtqcm10VURSZTJoUmdkcmNNcm5FR1gwVnB2UnJLbDJVenFEa19KNEZMXzl6UTFFS2g1Rk1pSFptWmhWZ1BCbmtSQ2FjNFhabHNjQ3h2OF8wU0d2bU10WXA0aVRlb3JVdHFFSkRXVEtKNkJsb1EwQzluVl9PclhzOHFkaHc?oc=5",
+          "geography": null,
+          "source_channels": [
+            "historical"
+          ]
+        },
+        {
+          "id": "601cc9b9a38574110b1a",
+          "title": "How a convicted con artist may have exploited Airbnb's ID checks in rental scams - CTV News",
+          "date": "2024-12-17T08:00:00+00:00",
+          "publisher": "CTV News",
+          "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNRlNNVVVaM3FjN2RFM25HRlNGQ0RVeXhKYnFBTEpiNm1MMUpabEREb2NiY0Z6OXYtRl9JZTZJM3dpbm5kRUpTb0dPekZsZzd4WEpGU1RNc2djLWR5WE96MTYwNHVlcjlPMFM3SVlzWm1ZNmhZOTJEbXRNZEY1bjVCQ0RkYUhZbnBBZ29hdHpqS0pYZS1VY1U1S0kxX182VkdPYzlvd3lRUjN4aUJxRS1GOVBwRmZsSTJwUWc?oc=5",
+          "geography": null,
+          "source_channels": [
+            "historical"
+          ]
+        },
+        {
+          "id": "3e9b6cf4092f61836740",
+          "title": "OPP issues warning about Facebook Marketplace scams - CTV News",
+          "date": "2024-10-02T07:00:00+00:00",
+          "publisher": "CTV News",
+          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQc1VLMFUzWDk1aEswZk9lUEQyVUQ0QlNxQkhXSTVBQzh3aTFJd0NnVy11U2V6MDcyeTU4S2NnM1RjbkZwdVdUSVZvX0hITUNfX0pjcDJsYjVOYXZzYlROR0NUeUFfWTlFWldCS0w0eHVtN1lxVjR3ODdpOGVrSDhaWExDckdyWlBxaUNRcnJ3SmFLb3gw?oc=5",
+          "geography": null,
+          "source_channels": [
+            "historical"
+          ]
+        },
+        {
           "id": "934bee3d1b32f3655cac",
           "title": "35 people in Kitchener, Ont., out total of $40K, say police about one of latest online rental scams - CBC",
           "date": "2024-09-23T07:00:00+00:00",
@@ -1903,6 +1936,17 @@
           "publisher": "CTV News",
           "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxObjN3VUp6Q3d6aFZJanMyeTFxX3hDVUE1UFJNdVItOUppSW5STEtqd0pCVUdBRzdleXNYNXU5TkNZcEdaaTdOYnBnbjc4Q0IyUk9pUzR5dWRhYnFpU0tyNW1ocGJvUjFyUmZnbEFpclFBLW9ObWlPLVlvb196QXRZMkhoLXJ4YTl6aVNWNkhFSnpoWTBEdlc5WFpKVFo0Rjd2NElHU1RXTFdKNE5aMF8tZVo2QzJ6Y2lKb3ZRR0pSV0FIOG52NlJENDhB?oc=5",
           "geography": "Kitchener, Ontario",
+          "source_channels": [
+            "historical"
+          ]
+        },
+        {
+          "id": "702fe9d70727c3c69dc3",
+          "title": "New scam on Facebook Marketplace raises red flags: Kelowna RCMP - Global News",
+          "date": "2024-08-21T07:00:00+00:00",
+          "publisher": "Global News",
+          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPcE15c0NDWXRic1REampqUHJWcGlETTdiV25LTzU5dFVLc0t0d2h3T1NvQ1NGenRUaEtWUFRUc2dzSzZuNTFBX3Fvak52Vzd5LVlDMkRqUl9La1hZX29kX0pzT2l2U3lyU1lEbkg5Q3NZZ2lxVlAxYWs1c0VaTGtKNnR2SVBGOG1pdkVid3Q5aw?oc=5",
+          "geography": null,
           "source_channels": [
             "historical"
           ]
@@ -1930,55 +1974,11 @@
           ]
         },
         {
-          "id": "5d9c49207f6ee6f9bea4",
-          "title": "Woman who lost $1,000, leaving her short for her bills, among rental scam victims in Kenora, Ont. - CBC",
-          "date": "2024-04-05T07:00:00+00:00",
+          "id": "e1d5fe603b6ad2997b5e",
+          "title": "Scams selling fake jobs to foreign workers may be operating outside Canada - CBC",
+          "date": "2024-07-17T07:00:00+00:00",
           "publisher": "CBC",
-          "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQbDdFeXZnSF9lMEFEVXd4NzZPSC1PSWRydlRJQ0k4NVJGWEZaZXIyOUpwb21lVG9IdzlzNXMxVHJydzVCT0V5ZHVtRU9tS3dWblR3VEdOZ0xobFgyTEs3clVHUFdiV1dBSUVyTU5nNUo3MkxraGIyeVhpYTBhSU5fUEZSZHREdw?oc=5",
-          "geography": null,
-          "source_channels": [
-            "historical"
-          ]
-        },
-        {
-          "id": "32221284ad292281572a",
-          "title": "Ottawa police warn of Facebook Marketplace fraud - CTV News",
-          "date": "2024-03-29T07:00:00+00:00",
-          "publisher": "CTV News",
-          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPbV9rMmxnTlZlZVJIcEFHcUVMdTZEbG9kdXNSb3hrcHFLaFpIb0FNZVhYekZvTVV4SFpJQ3pxdW5oTm9LdzU3R2U4ZENoR2N5T29KZk9fU1hKZEdGMjdla1NGZDNHZGtUUTc1OS10dlRPUzFlWjduOHRjTHRXT08wRVRpRjNKZWxPWGZvTzVGSC0?oc=5",
-          "geography": "Ottawa, Ontario",
-          "source_channels": [
-            "historical"
-          ]
-        },
-        {
-          "id": "5946a18c1abedb7427d4",
-          "title": "Tech company name used in job scam targeting Ontario residents - insauga.com",
-          "date": "2024-01-19T08:00:00+00:00",
-          "publisher": "insauga.com",
-          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNNmtiY2E4b1JFcV85TnRUOGpiU0xXbkF2Z19RVjVVdWlvdjJJNHlyZEVieEJnQjBvUVRScTVBRTlYcDdSc0lVeV9DWWxHdUFpeXl6c3hOQll0ZU9KZ2IwWDItVkUtbmd0emgxSXhWR19YTndYTW1iVk5Jc1IzczRHYWNzekVuay01d19Wd2pxRXQ?oc=5",
-          "geography": null,
-          "source_channels": [
-            "historical"
-          ]
-        },
-        {
-          "id": "4b6da532e09370a1f4e7",
-          "title": "Uptick in rental scams prompts warning from Lethbridge police - Global News",
-          "date": "2023-12-14T08:00:00+00:00",
-          "publisher": "Global News",
-          "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNZEhOaXlxSzF0Ymd6QkNJdTNVRUREbTg1b3UyTGRCSHhBaWxNeVZGVVhBamxUb1N2YkpfdkZ1ZDduVkZNM0tnZm5JZUYxMjk4UklNeFQ0b2xIdTVmdU1Sc1B6RHhaeUw2U0VOTUxBUy03dXdnN3B0MHR1TGM5X0FJV3cyRmdlcnctcmc?oc=5",
-          "geography": null,
-          "source_channels": [
-            "historical"
-          ]
-        },
-        {
-          "id": "10fd28059f6dacd5f65f",
-          "title": "Job scams skyrocket in 2023, targeting vulnerable employment seekers - Global News",
-          "date": "2023-12-12T08:00:00+00:00",
-          "publisher": "Global News",
-          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9JV1hHZFRzQlkxNFdFZmFtTkNJNVlPUy1Lcjc0bktQSURMLTE2Y0pxMmRVbWRDRk5XWE4xNV9uWF9tWGlqZXhleEt0WERiYVlGck52STlkRUM0b3hCVHo0TFZ2NDlPT3JlNmgtM1l3?oc=5",
+          "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNTEtmV19qaFh3MC1mTHIxRFZuQWpyeGowNDNFVHNYOVRYME1EOHpMOWZxNV9LZlA0WFpaSC0wcmhJR2dUN1BqaGdlZkdQT0REc3FwelozbDMzMTdDY1EyVElHeGZ4RXpzVG1vc3pteW5iR09PbVMtQUxHNWpkNkx6amhR?oc=5",
           "geography": null,
           "source_channels": [
             "historical"
@@ -1993,11 +1993,11 @@
         "2021": 0,
         "2022": 4,
         "2023": 5,
-        "2024": 7,
+        "2024": 8,
         "2025": 16,
         "2026": 15
       },
-      "total_headlines": 53,
+      "total_headlines": 54,
       "publisher_count": 16,
       "examples": [
         {
@@ -2275,12 +2275,12 @@
         "2021": 4,
         "2022": 5,
         "2023": 3,
-        "2024": 6,
+        "2024": 7,
         "2025": 2,
         "2026": 16
       },
-      "total_headlines": 38,
-      "publisher_count": 13,
+      "total_headlines": 39,
+      "publisher_count": 14,
       "examples": [
         {
           "id": "03b0dbe3095f0e47936b",
@@ -2536,12 +2536,12 @@
           ]
         },
         {
-          "id": "61dfb8102d17dca92607",
-          "title": "Woman pleads guilty in Inuit identity fraud case, charges dropped against daughters - CityNews Ottawa",
-          "date": "2024-02-09T08:00:00+00:00",
-          "publisher": "CityNews Ottawa",
-          "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQdFlLYklGbDkyazZUZkVMbG9WRVJyaWJPOV95NDB6eVBVZ1p1QVVfdFMxdHRlUW14WjVHbG9GRnd3bWc0ZXhyNE1SNjZVVU9jTHNsRkt5WmNUMlhHcnhJWTlpME03ZmxJdjFZY1doWkY0WHJFVUpNaS05RmItckxKVlRyWjIzVWlQbTlvTWVzY1UyUzJoMjVyTXpsTlc1MHBxU0p4aW16STlVQjVYc0pEWE5DdUt4QzVZU1c5MmoxZw?oc=5",
-          "geography": "Ottawa, Ontario",
+          "id": "0e099be3ef9f2403d9bf",
+          "title": "Four of six accused post bail on Halifax identity theft charges - PNI Atlantic News",
+          "date": "2024-03-18T07:00:00+00:00",
+          "publisher": "PNI Atlantic News",
+          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPcExobUZRTS1SNl83dXRmdGZmMmNMZkJKaEVsb3VlcDhHVmdjRDRHU2pEalRsalVXTjZZSjlUMHU3Q29Td0JFWUhFc2dBamgzT1V1Mi0tWTRvN3ltVXN2cFpNQzV2a0k4ejhZVE95SmFlaVktazAwcm5maHV0YXYweFJlMURyV28yQWlIdmlqNEhFMmRBVE1WVVZaU0d2SXloZU4yOS1UWkdCQXkxVVJLR0RQbVE?oc=5",
+          "geography": "Halifax, Nova Scotia",
           "source_channels": [
             "historical"
           ]
@@ -2555,12 +2555,12 @@
         "2021": 8,
         "2022": 4,
         "2023": 8,
-        "2024": 3,
+        "2024": 9,
         "2025": 6,
         "2026": 3
       },
-      "total_headlines": 32,
-      "publisher_count": 15,
+      "total_headlines": 38,
+      "publisher_count": 17,
       "examples": [
         {
           "id": "337f63c6a1c1ca9bdfac",
@@ -2663,6 +2663,28 @@
           ]
         },
         {
+          "id": "0fdf36cf31298a0c6529",
+          "title": "EU’s ex justice chief suspected of laundering money thru lottery, Canada’s Fintrac using AI assistants - LinkedIn",
+          "date": "2024-12-04T08:00:00+00:00",
+          "publisher": "LinkedIn",
+          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQaDlzZDJtdnF4Q0hVSmc5UkFrLUlveDlOZFVnLWxrT0t0NHJlR2hEVFlQMl9tTFhSdHpORXZ1YUJZdjNYeGFXckUzbXRrSS1YNkJkLTlFck1UNHdlTnBpa0lzdTNGLWRTbmhQMk9NblA1bG0ta0RGT050QV9hY0hXRVQxbHo2aE5SYTBtNTViWDVVUzAySGlyRnhOTDhmUQ?oc=5",
+          "geography": null,
+          "source_channels": [
+            "historical"
+          ]
+        },
+        {
+          "id": "6576afc58e033a6a1d88",
+          "title": "Canada's gambling industry sees surge in digital fraud: Report - sigma.world",
+          "date": "2024-10-21T06:25:35+00:00",
+          "publisher": "sigma.world",
+          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQZmpyOFJ5RFRsTEdGN3N5Yy1pVXpZcjdBa2tMLURKdW5pekNsOThGYmdjSE9QWkc4Wmp2WkF4SF8xSUpfOEdnS0l5MEVDSzF0RlJSRUdEcnlJS3VKbGlBUHd6Q0d0N1FFWW1TMDlYU3BxX0V1dHI4emhVZW1IRkcySVBhbTV6VXNpS0poN3Zmbw?oc=5",
+          "geography": null,
+          "source_channels": [
+            "historical"
+          ]
+        },
+        {
           "id": "75877ef3d9041459e33b",
           "title": "Multimillion-dollar casino fraud investigation leads to arrest in Ontario - insauga.com",
           "date": "2024-03-08T08:00:00+00:00",
@@ -2685,12 +2707,56 @@
           ]
         },
         {
+          "id": "6cae1bdf0cc54511550b",
+          "title": "Toronto-area man accused of stealing, laundering cash at Niagara casino: OPP - Global News",
+          "date": "2024-02-01T08:00:00+00:00",
+          "publisher": "Global News",
+          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPUDJOSVc5SzQtUG43cVRJc1ZiUlU0MUppX0RwQWZBbG9MX1V5VktCd01pODkwVE9UNC1YY2RCTDAwT253dkw1WS1OaXlycU5Ga1VlWGNMSjdyTTM2QUo0UXUtdXNVLUg5R050c2FFVjFFUWZrZG9oMEd0VVYwVUdSbURsdXZUOU5IYmlBNlNISWRvNEozTEtj?oc=5",
+          "geography": "Toronto, Ontario",
+          "source_channels": [
+            "historical"
+          ]
+        },
+        {
           "id": "0d29dfa5b26d68afd984",
           "title": "Ontario Police Arrest Two for iGaming Fraud - Canadian Gaming Business",
           "date": "2024-01-30T08:00:00+00:00",
           "publisher": "Canadian Gaming Business",
           "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQSk1nYURCb2ZaYy1GUlp2NzFNSW83U3FzY21BOGxwVWpWdl8yaFRRSHp5MGRmblAtYkI4b3hFbkNrX2Z0dlJFSzdiVjNvVEM0OWlZT25pYzhxTkpmZjNQYWNtdjBYMWpzOGFUOWtVZllUTEgySEhfUVdWeHo5SVhoTnVUTDlxTG8?oc=5",
           "geography": null,
+          "source_channels": [
+            "historical"
+          ]
+        },
+        {
+          "id": "9cd06b73a51f9ae4ba57",
+          "title": "Two charged in fraud investigation involving Ontario’s gambling website - CityNews Toronto",
+          "date": "2024-01-26T08:00:00+00:00",
+          "publisher": "CityNews Toronto",
+          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQYXRrdTVGTmRsOU5iNFg3dTltNGhhZUtlOEdaME00UnEzNkIxcFF6NF9ZUXhIcURtSkhXRFFOS0x3R00xQTJ1Y1RkQXFwOC1GY0xHbzdSbm1HQ3NSZ09wbUZLb1Y3ZEdiM3ZhTzFRb3NQZnNTY0JKYU9VRktlZDBqNEg4RWRhX2M1VS1DT1d2WWVDV2hO?oc=5",
+          "geography": "Toronto, Ontario",
+          "source_channels": [
+            "historical"
+          ]
+        },
+        {
+          "id": "96b0ac958ec561eda918",
+          "title": "Ontario regulator fines Niagara Falls casino $70K, alleging it failed to minimize money laundering risk - CBC",
+          "date": "2024-01-25T08:00:00+00:00",
+          "publisher": "CBC",
+          "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQa0lmWkJ2M19WbHRjSFdzdXNGR0JCRjJvdTFlbjVDZGZGa3Z5RHZLTDBneFJTQTZGWDRhY1hTenBrZkp1LXlheFZjQTUzQ1BTRjZkVUtmRHFEUnZqV2JxUVVjMzJMSmJSNHJ4ZF9qSjRQSUp0QkFGMmhpY0ZRSkZNV3R1eFN6UQ?oc=5",
+          "geography": null,
+          "source_channels": [
+            "historical"
+          ]
+        },
+        {
+          "id": "d213878e6719c8e618d2",
+          "title": "WARMINGTON: Fallsview casino fined $70Gs amid money-laundering controversy - Toronto Sun",
+          "date": "2024-01-24T08:00:00+00:00",
+          "publisher": "Toronto Sun",
+          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOTU5IUE9rNU1BdnZrNWVUOEpPZEVtQlNXSV9qSE5SaTM0QWZ2SHFBaFpwTjBpTXJ4aUFORkkyZXZ4ZzFaLTUtYnZkRGFvdVRvd0ZMRGgxTEVyd3BDS2s2RnlpWUt5WldWWkhQMUZYbUs0dUwwajVFblBoY2F1NkZzT1otbVR1MFdZT2Vjb256MEMwOV8tS2RmYTVMelVfb2RiZXZWeW1iZDBhVmpzN3Fv?oc=5",
+          "geography": "Toronto, Ontario",
           "source_channels": [
             "historical"
           ]
@@ -2760,72 +2826,6 @@
           "source_channels": [
             "historical"
           ]
-        },
-        {
-          "id": "da63936326ea87f2da99",
-          "title": "5 charged in connection with illegal activity at Woodbine Casino - CBC",
-          "date": "2023-04-04T07:00:00+00:00",
-          "publisher": "CBC",
-          "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQNkdXWGZHcHdOcW85LTFmOG1aQVNmcXNSbmRaZHlzWWNjSzczV1hMZDdEQXBCT3VHdVFhbzdfc3FYWlF2R0UybXd1OVYtRXNFNk5WWnRoYVR6Tng4UzhJczBqS3Q0NGtzZFhHTWxra0tNMGhwaXJDYW9LSFJIb0JfLXV5UEpwWUR4MFE?oc=5",
-          "geography": null,
-          "source_channels": [
-            "historical"
-          ]
-        },
-        {
-          "id": "78f1aef12b6dd5ce0687",
-          "title": "Brampton man charged after multiple elderly victims defrauded in lottery scam - CTV News",
-          "date": "2023-02-07T08:00:00+00:00",
-          "publisher": "CTV News",
-          "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPeDNDUEpwWURWLTNFbTNhOVZWUWFydkU2R2VTUzNUUnZodWVOLXlpMGF0aGxyUVROR2pUMnEzRHVuUUNYMUFpMk1aYkhxZ2hZMF9SY0x6QzZTZVA4c2o0RWlnSjZveDZhUTVPYWE5UWV5d1FWdnpzTERicnloMnJBWWZqVmxvZlhTaTVpeUMwc0VlenVHTWVpcTVVN29nbzJIVGNQSUV6d2NteVpEVG96VlVGZ2VSMDhs?oc=5",
-          "geography": null,
-          "source_channels": [
-            "historical"
-          ]
-        },
-        {
-          "id": "bded86d5068cc81f74e6",
-          "title": "Quebec casinos, gaming halls still vulnerable to money laundering by organized crime, experts say - CBC",
-          "date": "2022-10-11T07:00:00+00:00",
-          "publisher": "CBC",
-          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPdnd3RjViMHpILWVFR0JrQmR0UE13NzRKaXJvU21VVXRScXFmU21PbEstMGRXWDU1S281R3JlRG5vMlpERWUxbVgwcEs1VGpQUXVYcVR4aVNORVdhMVFjMUNhNHQ4T0lJeUZHTTJRMkZZWXlQbHJMc3FUR19UYk1Ec0pXTW50OFdId2pWZGJNSFFHOEhDWHNYMlJwZ2sxVU1uOGJuek9JMWM?oc=5",
-          "geography": null,
-          "source_channels": [
-            "historical"
-          ]
-        },
-        {
-          "id": "ef780ecf6613a1ddeb16",
-          "title": "Kitsilano apartment bought with casino money laundering proceeds, officials allege - Vancouver Is Awesome",
-          "date": "2022-08-12T07:00:00+00:00",
-          "publisher": "Vancouver Is Awesome",
-          "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOTnBEd1d1VVJ3aEtXNE9PakxnUlFaQW1oU3UyQkhSbkVRMlhtSmo5YjRKR1pxUDJURFdIUEhDV0lLYlFjcDFEUDdaOC1EWnhmU0hfS0JreDBZeVJodFlrWXBBaDd1ekEwV2Y1MU9DWWRCdzU3SThFejBsNF9pTlJUX0s0cWl2aXNNVFBxcTl6MXZXOXdMRE12eXBKS1NfODZIZWxCdWx6TVlfTEdLVFk5aVhoUUZmUzlOY09rWk5tSDM5Q202NjRBX1pEUkI?oc=5",
-          "geography": "Vancouver, British Columbia",
-          "source_channels": [
-            "historical"
-          ]
-        },
-        {
-          "id": "d5cdc6b9cdcb393fee0c",
-          "title": "‘Fraudulent player accounts’ used by teen to target online gambling in Ontario, police allege - Global News",
-          "date": "2022-07-14T07:00:00+00:00",
-          "publisher": "Global News",
-          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPejNxdGNlcHR5MzRpV1NnWkJBLWJ0TWxUZWNUbUNMZUNsN2JFSE12Q3phSVYyVlk2dHBZZVlqaV9xU3dkYWNUYTgzZXplQTNiODBLdFRVX0gta3hHclZ5U1JrLU1mZzJ1LUQxTms4WHozd0lKLUhBZTMyTm9xQjZqbkpCNlRqb3ozTUtpbUc4TmNWSXVkMFJ2XzdvdDF4c240cU16YXpiOGh6aUxzTFRz?oc=5",
-          "geography": null,
-          "source_channels": [
-            "historical"
-          ]
-        },
-        {
-          "id": "9b34444ed080f7555cc9",
-          "title": "Fraud and financial crime ‘not tolerated’ at Ontario casinos: OLG - Niagara Falls Review",
-          "date": "2022-07-06T07:00:00+00:00",
-          "publisher": "Niagara Falls Review",
-          "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPeVhmY3VEMjBkMlpvcy1LaFBpX2xhRVRTSVozZDVTZjQwdHN2TjU1T3V6WmhKRDRUX1hCeHZRMmNWZS1fUmlJRVUwUDVySlBuOC1aaU1ReFpwRUlIc0drTWUzY0JYLUdEX0xPM2E1NFdWb2lVLUh1Q25jS2ZMenEwTnp4bDNrZWlwTGtTVHhEWFk3WTk3Mm5pOGg5Z1FzSm9oRnEyU19Nc0hnaWdZN0o5bURlR2FKZ2VMYXZsZm5ZRy1ZZTZnUkxjQlNxbkpWeW9HZ2xueEM4TFVkc1BpOFdCei0yQ056MTA1YzJaN1RB?oc=5",
-          "geography": null,
-          "source_channels": [
-            "historical"
-          ]
         }
       ]
     },
@@ -2836,12 +2836,12 @@
         "2021": 1,
         "2022": 1,
         "2023": 1,
-        "2024": 4,
+        "2024": 6,
         "2025": 5,
         "2026": 0
       },
-      "total_headlines": 13,
-      "publisher_count": 6,
+      "total_headlines": 15,
+      "publisher_count": 8,
       "examples": [
         {
           "id": "cf1a2ccc9f3246edd917",
@@ -2926,6 +2926,28 @@
           "date": "2024-05-11T07:00:00+00:00",
           "publisher": "CBC",
           "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOM2xQQktvdkJuR3Q5YlpTMTBtdTdTWmhSTTVRZE1KYWVjckJkblhBelZZVjBEUHp6bjN1b1JON0M4MllVT1dqOFJCakd6Sk0tZXowbDFfSUlXQ2dkYTRpQ3FLakFneXlYUm42dTRQOWE5cjZLbklfVUV3a1FpVXFtZjRsbGRTb1NKcUF3dU93NUlKTzFqOVdVX0pB?oc=5",
+          "geography": null,
+          "source_channels": [
+            "historical"
+          ]
+        },
+        {
+          "id": "b76cf681457c805f8593",
+          "title": "Scam alert: Cyber security expert warns of possible e-transfer scam that can cause 'chaos' for victims - Yahoo News Canada",
+          "date": "2024-05-06T07:00:00+00:00",
+          "publisher": "Yahoo News Canada",
+          "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPdFEwc0tScmk0RGlvUy1pZERfbnFYM21HSzk2OWppZ1B5UF9jY1RHaUpJczkzZ1BnM25GcVFxXzJib2ZHTDA3d2xZVS1OYXhXRTlMNjhMNlRyVGpvdDNLZDJCbHJXb2lVWGZDX3VLdzA0YlZ3WjRGWUZGcW4zTlRZWE9DYmtEWjVOSUhBbXllWmhGZFd2ZzBDLTY1UkNhc3ZDMmhXa1oxVWt4OEt1TUxyRjdTYVh2em4tcURUaFpzM0tpX1htRUwwdE9lUnVXeHdvNVlwbTl1aw?oc=5",
+          "geography": null,
+          "source_channels": [
+            "historical"
+          ]
+        },
+        {
+          "id": "ac6b75b6c90dfb827aee",
+          "title": "Claim of etransfer theft prompts class-action suit against BMO - NewmarketToday.ca",
+          "date": "2024-03-18T07:00:00+00:00",
+          "publisher": "NewmarketToday.ca",
+          "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOOFJMOTBXQkZaWjNtczU0OHBpdDVTNGxtb2xXU2hsOTJZMkNHMmpBelZtcHItcEJKUXV5SHJ5ZDdHUjluX3lMMVA0RmVhanBBSXhBU2J1Z0wtdWJVNm92OWxPa2tNc3dxQWVSXzBBTVpXZV9rQ2o4ME9ROC1pc1Rrc2FFb2xLcWU4NzU2SUJBS3Nfby1TRW5Yb05VU1hBOEc4Qmo1Rk9UMnV5WGMwc2VOZg?oc=5",
           "geography": null,
           "source_channels": [
             "historical"
@@ -3080,7 +3102,7 @@
         "2021": 0,
         "2022": 1,
         "2023": 1,
-        "2024": 1,
+        "2024": 3,
         "2025": 0,
         "2026": 2
       }
@@ -3092,7 +3114,7 @@
         "2021": 0,
         "2022": 0,
         "2023": 1,
-        "2024": 0,
+        "2024": 3,
         "2025": 0,
         "2026": 0
       }
@@ -3140,14 +3162,14 @@
         "2021": 1,
         "2022": 1,
         "2023": 1,
-        "2024": 3,
+        "2024": 4,
         "2025": 3,
         "2026": 7
       }
     }
   ],
-  "generated_at": "2026-11-15T05:54:53+00:00",
-  "articles_analyzed": 2793,
+  "generated_at": "2026-11-15T13:48:21+00:00",
+  "articles_analyzed": 2904,
   "methodology": "MULTI-LABEL keyword classification of unique article TITLES by publication year; multiple theme counts can arise from one headline. Year-to-year article counts reflect discovery methods, changing news coverage, and archived source availability, NOT measured changes in fraud incidence. Bank/platform mentions are not accusations and never counted as confirmed enforcement.",
   "scope": "Canadian financial-crime news discovery",
   "data_quality": "Headlines only; no full-article automated fact checking. Counts can change as the archive expands."

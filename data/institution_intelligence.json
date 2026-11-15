@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-15T05:54:53+00:00",
+  "generated_at": "2026-11-15T13:48:22+00:00",
   "methodology": "Institution names are canonically grouped using explicit aliases. Headline entries are conservative reporting groups, not distinct or independently verified fraud incidents; multiple publisher headlines are retained under each group. An institution mention is not proof of wrongdoing.",
   "source_counts": {
     "enforcement": 98,
     "reviewed_incidents": 6,
-    "unverified_report_groups": 2770,
+    "unverified_report_groups": 2881,
     "osfi_institution_rows": 345,
     "fintrac_index_notices": 90,
     "bank_disclosure_records": 15,
@@ -87,7 +87,7 @@
       "counts": {
         "enforcement": 3,
         "incidents": 1,
-        "headlines": 15
+        "headlines": 16
       },
       "evidence": [
         {
@@ -373,6 +373,37 @@
           "location": null,
           "evidence": "regulator_published_action",
           "role": "subject_of_enforcement"
+        },
+        {
+          "kind": "headline",
+          "id": "report-780effafda19858e074c",
+          "date": "2024-10-11T07:00:00+00:00",
+          "title": "U.S. Case Reveals TD Bank's Role in Laundering $670 Million Through $18 Trillion Unmonitored Transactions, Hit with Record $3 Billion Fine - The Bureau | Sam Cooper",
+          "source_url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1OVFVLN2VER2I2b2NGbjRoY1JxNmt0dkw2TnJiZDk3Z1lmeEVtTjhNT094Vm5LTENZZEdhVUktMzFqYlNvVWFWRHNHRFNTTkt4azB0emt0UXdWdjRRR2NsUEFDeEtUR1JBZTBBdmZR?oc=5",
+          "source": "The Bureau | Sam Cooper",
+          "category": "Financial crime watch",
+          "source_count": 1,
+          "source_channels": [
+            "historical"
+          ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "U.S. Case Reveals TD Bank's Role in Laundering $670 Million Through $18 Trillion Unmonitored Transactions, Hit with Record $3 Billion Fine - The Bureau | Sam Cooper",
+              "publisher": "The Bureau | Sam Cooper",
+              "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1OVFVLN2VER2I2b2NGbjRoY1JxNmt0dkw2TnJiZDk3Z1lmeEVtTjhNT094Vm5LTENZZEdhVUktMzFqYlNvVWFWRHNHRFNTTkt4azB0emt0UXdWdjRRR2NsUEFDeEtUR1JBZTBBdmZR?oc=5",
+              "published_at": "2024-10-11T07:00:00+00:00",
+              "discovery_channel": "historical"
+            }
+          ],
+          "amount_text": [
+            "$670 Million",
+            "$18 ",
+            "$3 Billion"
+          ],
+          "location": null,
+          "evidence": "unverified_headline",
+          "role": "mentioned_in_headline_only"
         },
         {
           "kind": "headline",
@@ -720,7 +751,7 @@
           "occ_individual_matters": 0
         }
       },
-      "evidence_count_shown": 19
+      "evidence_count_shown": 20
     },
     {
       "id": "rbc",
@@ -1741,7 +1772,7 @@
       "counts": {
         "enforcement": 1,
         "incidents": 0,
-        "headlines": 5
+        "headlines": 7
       },
       "evidence": [
         {
@@ -1838,6 +1869,60 @@
           "amount_text": [
             "$1.5M"
           ],
+          "location": null,
+          "evidence": "unverified_headline",
+          "role": "mentioned_in_headline_only"
+        },
+        {
+          "kind": "headline",
+          "id": "report-3686f6428ca77b69a2d3",
+          "date": "2024-03-18T07:00:00+00:00",
+          "title": "Claim of etransfer theft prompts class-action suit against BMO - NewmarketToday.ca",
+          "source_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOOFJMOTBXQkZaWjNtczU0OHBpdDVTNGxtb2xXU2hsOTJZMkNHMmpBelZtcHItcEJKUXV5SHJ5ZDdHUjluX3lMMVA0RmVhanBBSXhBU2J1Z0wtdWJVNm92OWxPa2tNc3dxQWVSXzBBTVpXZV9rQ2o4ME9ROC1pc1Rrc2FFb2xLcWU4NzU2SUJBS3Nfby1TRW5Yb05VU1hBOEc4Qmo1Rk9UMnV5WGMwc2VOZg?oc=5",
+          "source": "NewmarketToday.ca",
+          "category": "Financial crime watch",
+          "source_count": 1,
+          "source_channels": [
+            "historical"
+          ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "Claim of etransfer theft prompts class-action suit against BMO - NewmarketToday.ca",
+              "publisher": "NewmarketToday.ca",
+              "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOOFJMOTBXQkZaWjNtczU0OHBpdDVTNGxtb2xXU2hsOTJZMkNHMmpBelZtcHItcEJKUXV5SHJ5ZDdHUjluX3lMMVA0RmVhanBBSXhBU2J1Z0wtdWJVNm92OWxPa2tNc3dxQWVSXzBBTVpXZV9rQ2o4ME9ROC1pc1Rrc2FFb2xLcWU4NzU2SUJBS3Nfby1TRW5Yb05VU1hBOEc4Qmo1Rk9UMnV5WGMwc2VOZg?oc=5",
+              "published_at": "2024-03-18T07:00:00+00:00",
+              "discovery_channel": "historical"
+            }
+          ],
+          "amount_text": [],
+          "location": null,
+          "evidence": "unverified_headline",
+          "role": "mentioned_in_headline_only"
+        },
+        {
+          "kind": "headline",
+          "id": "report-c9fffbb9cf2736b72775",
+          "date": "2024-03-05T08:00:00+00:00",
+          "title": "Customers voice concerns with BMO security measures after scammers gain access to their accounts - CTV News",
+          "source_url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQdjg2MDI3emZxTDA5TFNWeER5TWFudHdDM2wtbHV1d1hrSjFFeV9uSV9KNDUzY042ZEZuZ3YtWUttME1YaWtUSmNlanVUZ2daNmZWQnRDTnFrZm5KVm56SGl1TDAtSnBzOE5mY29lNm5ndU9OdTg2VkZ1MTdqTGtiQk5TbHFlbzQ2ZzFCNGhrU2NpemdKRVhXSWhMT1NlT0xXWHlFV2xnYmc0S2F2VHd2X0IwVWxaa3VFS1ljaS1mMjVBZ3huZmVvQXBTbUpVNUU0?oc=5",
+          "source": "CTV News",
+          "category": "Scam and victim reports",
+          "source_count": 1,
+          "source_channels": [
+            "historical"
+          ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "Customers voice concerns with BMO security measures after scammers gain access to their accounts - CTV News",
+              "publisher": "CTV News",
+              "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQdjg2MDI3emZxTDA5TFNWeER5TWFudHdDM2wtbHV1d1hrSjFFeV9uSV9KNDUzY042ZEZuZ3YtWUttME1YaWtUSmNlanVUZ2daNmZWQnRDTnFrZm5KVm56SGl1TDAtSnBzOE5mY29lNm5ndU9OdTg2VkZ1MTdqTGtiQk5TbHFlbzQ2ZzFCNGhrU2NpemdKRVhXSWhMT1NlT0xXWHlFV2xnYmc0S2F2VHd2X0IwVWxaa3VFS1ljaS1mMjVBZ3huZmVvQXBTbUpVNUU0?oc=5",
+              "published_at": "2024-03-05T08:00:00+00:00",
+              "discovery_channel": "historical"
+            }
+          ],
+          "amount_text": [],
           "location": null,
           "evidence": "unverified_headline",
           "role": "mentioned_in_headline_only"
@@ -1984,7 +2069,7 @@
           "occ_individual_matters": 0
         }
       },
-      "evidence_count_shown": 6
+      "evidence_count_shown": 8
     },
     {
       "id": "scotiabank",
@@ -2254,6 +2339,195 @@
         }
       },
       "evidence_count_shown": 6
+    },
+    {
+      "id": "binance",
+      "name": "Binance",
+      "aliases": [
+        "Binance",
+        "Binance Holdings Limited"
+      ],
+      "counts": {
+        "enforcement": 1,
+        "incidents": 0,
+        "headlines": 4
+      },
+      "evidence": [
+        {
+          "kind": "headline",
+          "id": "report-0d47befdf75abfd06022",
+          "date": "2024-05-11T07:00:00+00:00",
+          "title": "Canada fines Binance $4.38m for breach of money laundering laws - TheCable",
+          "source_url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQV3JFbV9faEdoYWtKNmpsU2w5YWZTVGloTFZsOVhpUmpQZHpoWHV5V0lCQ29OVHludWlHTTl1NER6Y3NiVV91QlRQWk43U1NwWEhyQ3R4SHhlV3hSUE1Wa0ZHMjUwMGVsQ1FvdnFGT1JNUk9XQ2dGcnVkcS1zY2VVX0pHOG9KbUQ5Mmg1a2VXS2s?oc=5",
+          "source": "TheCable",
+          "category": "AML and laundering",
+          "source_count": 1,
+          "source_channels": [
+            "historical"
+          ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "Canada fines Binance $4.38m for breach of money laundering laws - TheCable",
+              "publisher": "TheCable",
+              "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQV3JFbV9faEdoYWtKNmpsU2w5YWZTVGloTFZsOVhpUmpQZHpoWHV5V0lCQ29OVHludWlHTTl1NER6Y3NiVV91QlRQWk43U1NwWEhyQ3R4SHhlV3hSUE1Wa0ZHMjUwMGVsQ1FvdnFGT1JNUk9XQ2dGcnVkcS1zY2VVX0pHOG9KbUQ5Mmg1a2VXS2s?oc=5",
+              "published_at": "2024-05-11T07:00:00+00:00",
+              "discovery_channel": "historical"
+            }
+          ],
+          "amount_text": [
+            "$4.38m"
+          ],
+          "location": null,
+          "evidence": "unverified_headline",
+          "role": "mentioned_in_headline_only"
+        },
+        {
+          "kind": "headline",
+          "id": "report-20cc007e212ebff35d0b",
+          "date": "2024-05-09T07:00:00+00:00",
+          "title": "FinTRAC fines crypto firm Binance $6-million over anti-money laundering shortfalls - The Globe and Mail",
+          "source_url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNUFFBeThiWVplMDQyM0FtcEQ2SlZpZ0dONGJzZnpuTVVaNXJFaWtjaXRycEk4SEZHSmY2Qkp6c0JqVDYyMUMwVW9VS0RhamhwSWhtbElUVHZPdmF2Wnk4TTNYX1JmOGpjcXN3Vk1pemVlVXFOYVk4MUVZb0ozdmczRUpBdkRYNWdicERLNEtkeWQybUtxWG1SdkxPd010ME43Y3FnSmVSUE9tMF9sYWEzREdvUTYtWk1TNkpmeQ?oc=5",
+          "source": "The Globe and Mail",
+          "category": "AML and laundering",
+          "source_count": 1,
+          "source_channels": [
+            "historical"
+          ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "FinTRAC fines crypto firm Binance $6-million over anti-money laundering shortfalls - The Globe and Mail",
+              "publisher": "The Globe and Mail",
+              "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNUFFBeThiWVplMDQyM0FtcEQ2SlZpZ0dONGJzZnpuTVVaNXJFaWtjaXRycEk4SEZHSmY2Qkp6c0JqVDYyMUMwVW9VS0RhamhwSWhtbElUVHZPdmF2Wnk4TTNYX1JmOGpjcXN3Vk1pemVlVXFOYVk4MUVZb0ozdmczRUpBdkRYNWdicERLNEtkeWQybUtxWG1SdkxPd010ME43Y3FnSmVSUE9tMF9sYWEzREdvUTYtWk1TNkpmeQ?oc=5",
+              "published_at": "2024-05-09T07:00:00+00:00",
+              "discovery_channel": "historical"
+            }
+          ],
+          "amount_text": [
+            "$6"
+          ],
+          "location": null,
+          "evidence": "unverified_headline",
+          "role": "mentioned_in_headline_only"
+        },
+        {
+          "kind": "headline",
+          "id": "report-65ca40fe6124f1dd5041",
+          "date": "2024-05-09T07:00:00+00:00",
+          "title": "Canada fines Binance $4.38 mln for money laundering violations - Reuters",
+          "source_url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPYUQ0Z0tZMlFnZmVvaFRqbV84M0NCd1Z6Y1A4N1h2MmdPM1R3REVLdTJLZHpiYU9sY2N4UUlfWWFPNklLN3hpQ2VpbXdhR0E0eGt3d2QzT0dHazRWdnNqMjJKN2dWSjRYc2VFd3V3V1dsNllrcGloV0VoYm9BYnBtcmZ0U1VaWGIzQm13enNfeWtRNmZkYXNaNTkzTWJRRzdZY20tQ2VB?oc=5",
+          "source": "Reuters",
+          "category": "AML and laundering",
+          "source_count": 1,
+          "source_channels": [
+            "historical"
+          ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "Canada fines Binance $4.38 mln for money laundering violations - Reuters",
+              "publisher": "Reuters",
+              "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPYUQ0Z0tZMlFnZmVvaFRqbV84M0NCd1Z6Y1A4N1h2MmdPM1R3REVLdTJLZHpiYU9sY2N4UUlfWWFPNklLN3hpQ2VpbXdhR0E0eGt3d2QzT0dHazRWdnNqMjJKN2dWSjRYc2VFd3V3V1dsNllrcGloV0VoYm9BYnBtcmZ0U1VaWGIzQm13enNfeWtRNmZkYXNaNTkzTWJRRzdZY20tQ2VB?oc=5",
+              "published_at": "2024-05-09T07:00:00+00:00",
+              "discovery_channel": "historical"
+            }
+          ],
+          "amount_text": [
+            "$4.38 "
+          ],
+          "location": null,
+          "evidence": "unverified_headline",
+          "role": "mentioned_in_headline_only"
+        },
+        {
+          "kind": "enforcement",
+          "id": "99393fab1d720acfa37e",
+          "date": "2024-05-09",
+          "event_date": null,
+          "title": "Binance Holdings Limited: FINTRAC administrative monetary penalty",
+          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2024-05-09-eng",
+          "source": "FINTRAC",
+          "category": "AML enforcement",
+          "status": "penalty appealed",
+          "penalty_cad": 6002000.0,
+          "location": null,
+          "evidence": "regulator_published_action",
+          "role": "subject_of_enforcement"
+        },
+        {
+          "kind": "headline",
+          "id": "report-b973a2c87b4fbdb22174",
+          "date": "2023-09-25T07:00:00+00:00",
+          "title": "Ontario Resident Falls Victim to Impersonators in a Daring Crypto ATM Scam - Binance",
+          "source_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFAtczdkLUxmVzU1elFyX085TDRVQWF0akRPSUIxUkRfcjNVSF9LUm5tOTVha1lXTHQ0eGcySGZDRTlwMVM5VXBaUGo2cGFfOUNZc25KbW5aSTRucldiWEE?oc=5",
+          "source": "Binance",
+          "category": "Investment fraud",
+          "source_count": 1,
+          "source_channels": [
+            "historical"
+          ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "Ontario Resident Falls Victim to Impersonators in a Daring Crypto ATM Scam - Binance",
+              "publisher": "Binance",
+              "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFAtczdkLUxmVzU1elFyX085TDRVQWF0akRPSUIxUkRfcjNVSF9LUm5tOTVha1lXTHQ0eGcySGZDRTlwMVM5VXBaUGo2cGFfOUNZc25KbW5aSTRucldiWEE?oc=5",
+              "published_at": "2023-09-25T07:00:00+00:00",
+              "discovery_channel": "historical"
+            }
+          ],
+          "amount_text": [],
+          "location": null,
+          "evidence": "unverified_headline",
+          "role": "mentioned_in_headline_only"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 4,
+          "interpretation": "shared keyword, not established causation"
+        },
+        {
+          "name": "Investment and crypto scams",
+          "matching_records": 2,
+          "interpretation": "shared keyword, not established causation"
+        },
+        {
+          "name": "Impersonation / social engineering",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {
+        "2024": 6002000.0
+      },
+      "recent_activity": "2024-05-11T07:00:00+00:00",
+      "official_data": {
+        "fintrac_notices": [
+          {
+            "record_id": "bebd39ba990db4d1f4c8",
+            "date": "2024-05-09",
+            "penalty_cad": 6002000.0,
+            "violation_count": 2,
+            "status_summary": "appealed_or_appeal_reported",
+            "source_url": "https://fintrac-canafe.canada.ca/pen/4-eng",
+            "source_kind": "official_FINTRAC_index"
+          }
+        ],
+        "counts": {
+          "fintrac_public_notices": 1,
+          "fcac_index_notices": 0,
+          "bank_disclosure_years": 0,
+          "obsi_firm_years": 0,
+          "ciro_concluded_cases": 0,
+          "fdic_failures": 0,
+          "occ_institution_actions": 0,
+          "occ_individual_matters": 0
+        }
+      },
+      "evidence_count_shown": 5
     },
     {
       "id": "cibc",
@@ -2712,108 +2986,6 @@
             "date": "2025-08-28",
             "penalty_cad": 1075000.0,
             "violation_count": 3,
-            "status_summary": "appealed_or_appeal_reported",
-            "source_url": "https://fintrac-canafe.canada.ca/pen/4-eng",
-            "source_kind": "official_FINTRAC_index"
-          }
-        ],
-        "counts": {
-          "fintrac_public_notices": 1,
-          "fcac_index_notices": 0,
-          "bank_disclosure_years": 0,
-          "obsi_firm_years": 0,
-          "ciro_concluded_cases": 0,
-          "fdic_failures": 0,
-          "occ_institution_actions": 0,
-          "occ_individual_matters": 0
-        }
-      },
-      "evidence_count_shown": 2
-    },
-    {
-      "id": "binance",
-      "name": "Binance",
-      "aliases": [
-        "Binance",
-        "Binance Holdings Limited"
-      ],
-      "counts": {
-        "enforcement": 1,
-        "incidents": 0,
-        "headlines": 1
-      },
-      "evidence": [
-        {
-          "kind": "enforcement",
-          "id": "99393fab1d720acfa37e",
-          "date": "2024-05-09",
-          "event_date": null,
-          "title": "Binance Holdings Limited: FINTRAC administrative monetary penalty",
-          "source_url": "https://fintrac-canafe.canada.ca/pen/amps/pen-2024-05-09-eng",
-          "source": "FINTRAC",
-          "category": "AML enforcement",
-          "status": "penalty appealed",
-          "penalty_cad": 6002000.0,
-          "location": null,
-          "evidence": "regulator_published_action",
-          "role": "subject_of_enforcement"
-        },
-        {
-          "kind": "headline",
-          "id": "report-b973a2c87b4fbdb22174",
-          "date": "2023-09-25T07:00:00+00:00",
-          "title": "Ontario Resident Falls Victim to Impersonators in a Daring Crypto ATM Scam - Binance",
-          "source_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFAtczdkLUxmVzU1elFyX085TDRVQWF0akRPSUIxUkRfcjNVSF9LUm5tOTVha1lXTHQ0eGcySGZDRTlwMVM5VXBaUGo2cGFfOUNZc25KbW5aSTRucldiWEE?oc=5",
-          "source": "Binance",
-          "category": "Investment fraud",
-          "source_count": 1,
-          "source_channels": [
-            "historical"
-          ],
-          "variation_count": 1,
-          "headline_variations": [
-            {
-              "title": "Ontario Resident Falls Victim to Impersonators in a Daring Crypto ATM Scam - Binance",
-              "publisher": "Binance",
-              "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFAtczdkLUxmVzU1elFyX085TDRVQWF0akRPSUIxUkRfcjNVSF9LUm5tOTVha1lXTHQ0eGcySGZDRTlwMVM5VXBaUGo2cGFfOUNZc25KbW5aSTRucldiWEE?oc=5",
-              "published_at": "2023-09-25T07:00:00+00:00",
-              "discovery_channel": "historical"
-            }
-          ],
-          "amount_text": [],
-          "location": null,
-          "evidence": "unverified_headline",
-          "role": "mentioned_in_headline_only"
-        }
-      ],
-      "themes": [
-        {
-          "name": "Money laundering controls",
-          "matching_records": 1,
-          "interpretation": "shared keyword, not established causation"
-        },
-        {
-          "name": "Impersonation / social engineering",
-          "matching_records": 1,
-          "interpretation": "shared keyword, not established causation"
-        },
-        {
-          "name": "Investment and crypto scams",
-          "matching_records": 1,
-          "interpretation": "shared keyword, not established causation"
-        }
-      ],
-      "annual_penalties_cad": {
-        "2024": 6002000.0
-      },
-      "recent_activity": "2024-05-09",
-      "official_data": {
-        "fintrac_notices": [
-          {
-            "record_id": "bebd39ba990db4d1f4c8",
-            "date": "2024-05-09",
-            "penalty_cad": 6002000.0,
-            "violation_count": 2,
             "status_summary": "appealed_or_appeal_reported",
             "source_url": "https://fintrac-canafe.canada.ca/pen/4-eng",
             "source_kind": "official_FINTRAC_index"
@@ -8583,9 +8755,63 @@
       "counts": {
         "enforcement": 0,
         "incidents": 0,
-        "headlines": 4
+        "headlines": 7
       },
       "evidence": [
+        {
+          "kind": "headline",
+          "id": "report-5c41d9b21eb0f9cf1cbd",
+          "date": "2024-06-13T07:00:00+00:00",
+          "title": "Laval police arrest three suspects in Desjardins data theft - Montreal Gazette",
+          "source_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOVzBidVpUTmVmUUdmUGc0c3VaQnlMYmJWWTg3dnlRUFdhMlZCT2htcktyZF9Bbk15d0NLT1czSkZWcmZfWXpXc2MxUC1KbjN1ZEZQX1RnaDNQVHVyNlZ5WWtCNkljVUtROHVabW1BNFRyNmhZTHZUc1lTMklndGpMeHA1dmpKT3BaYjNhcHAwMVNVanFKblBxWQ?oc=5",
+          "source": "Montreal Gazette",
+          "category": "Financial crime watch",
+          "source_count": 1,
+          "source_channels": [
+            "historical"
+          ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "Laval police arrest three suspects in Desjardins data theft - Montreal Gazette",
+              "publisher": "Montreal Gazette",
+              "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOVzBidVpUTmVmUUdmUGc0c3VaQnlMYmJWWTg3dnlRUFdhMlZCT2htcktyZF9Bbk15d0NLT1czSkZWcmZfWXpXc2MxUC1KbjN1ZEZQX1RnaDNQVHVyNlZ5WWtCNkljVUtROHVabW1BNFRyNmhZTHZUc1lTMklndGpMeHA1dmpKT3BaYjNhcHAwMVNVanFKblBxWQ?oc=5",
+              "published_at": "2024-06-13T07:00:00+00:00",
+              "discovery_channel": "historical"
+            }
+          ],
+          "amount_text": [],
+          "location": "Montreal, Quebec",
+          "evidence": "unverified_headline",
+          "role": "mentioned_in_headline_only"
+        },
+        {
+          "kind": "headline",
+          "id": "report-65d1bcf7131d2ef33426",
+          "date": "2024-06-13T07:00:00+00:00",
+          "title": "SQ arrest four more suspects in Desjardins data breach - CityNews Montreal",
+          "source_url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQNkJrOHRaUW9oaThmUlAtM2ZvTkJKZjR2bGFRcllsNHZfSkFybnFVQUxiZVRlZWhWZXBXUTNhWEJIbkIyX05XOXJyVERSS0p3OHp1VlhraVFaT21UWUJDQXNJTWJBLURtcjVjZEJWN1J5Q2ZnNENGd3hkcDAxNkNqa19lSkJWNkdqMjlOUlJ1dkE1ekRmekJlaF9qZEpSMHpfMUE?oc=5",
+          "source": "CityNews Montreal",
+          "category": "Cyber and account compromise",
+          "source_count": 1,
+          "source_channels": [
+            "historical"
+          ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "SQ arrest four more suspects in Desjardins data breach - CityNews Montreal",
+              "publisher": "CityNews Montreal",
+              "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQNkJrOHRaUW9oaThmUlAtM2ZvTkJKZjR2bGFRcllsNHZfSkFybnFVQUxiZVRlZWhWZXBXUTNhWEJIbkIyX05XOXJyVERSS0p3OHp1VlhraVFaT21UWUJDQXNJTWJBLURtcjVjZEJWN1J5Q2ZnNENGd3hkcDAxNkNqa19lSkJWNkdqMjlOUlJ1dkE1ekRmekJlaF9qZEpSMHpfMUE?oc=5",
+              "published_at": "2024-06-13T07:00:00+00:00",
+              "discovery_channel": "historical"
+            }
+          ],
+          "amount_text": [],
+          "location": "Montreal, Quebec",
+          "evidence": "unverified_headline",
+          "role": "mentioned_in_headline_only"
+        },
         {
           "kind": "headline",
           "id": "report-a1492b370ef50a08cfbd",
@@ -8671,6 +8897,35 @@
         },
         {
           "kind": "headline",
+          "id": "report-e32e92ac87c7e93a7216",
+          "date": "2024-06-12T07:00:00+00:00",
+          "title": "Quebec police arrest three in $9-million fraud, data theft case involving Desjardins - Times Colonist",
+          "source_url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxObHRNY1V1b2hVLWQ2cHlla0Z5UVFKbHdlWi1CSWtWeHctNFo0cmd3eS1tVHVQT1k1MUExTFhNYzNPdHJQcnVTV1pwVmNjMWRFUzlCQ0dDaERDUks3NWpxWlJpY1FoRVM5QVBKYnB5cEk2T29VT25OZG9DZi1YZXVKcFRSXzRtNThYMUg1a0pnTDc1TkQ3X1ZRT3lleUNCbWpTNGo0WVJ1WWtMcGhBd0gtRkpnWFpxellEVnhjbFR5R1hIb041cTdTbm9yNGJzOFE?oc=5",
+          "source": "Times Colonist",
+          "category": "Reported fraud",
+          "source_count": 1,
+          "source_channels": [
+            "historical"
+          ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "Quebec police arrest three in $9-million fraud, data theft case involving Desjardins - Times Colonist",
+              "publisher": "Times Colonist",
+              "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxObHRNY1V1b2hVLWQ2cHlla0Z5UVFKbHdlWi1CSWtWeHctNFo0cmd3eS1tVHVQT1k1MUExTFhNYzNPdHJQcnVTV1pwVmNjMWRFUzlCQ0dDaERDUks3NWpxWlJpY1FoRVM5QVBKYnB5cEk2T29VT25OZG9DZi1YZXVKcFRSXzRtNThYMUg1a0pnTDc1TkQ3X1ZRT3lleUNCbWpTNGo0WVJ1WWtMcGhBd0gtRkpnWFpxellEVnhjbFR5R1hIb041cTdTbm9yNGJzOFE?oc=5",
+              "published_at": "2024-06-12T07:00:00+00:00",
+              "discovery_channel": "historical"
+            }
+          ],
+          "amount_text": [
+            "$9"
+          ],
+          "location": null,
+          "evidence": "unverified_headline",
+          "role": "mentioned_in_headline_only"
+        },
+        {
+          "kind": "headline",
           "id": "report-3f109f5c36207d96a3e8",
           "date": "2022-06-17T07:00:00+00:00",
           "title": "Quebec court approves $200.9M settlement against Desjardins over data breach - CBC",
@@ -8701,7 +8956,7 @@
       ],
       "themes": [],
       "annual_penalties_cad": {},
-      "recent_activity": "2024-06-12T07:00:00+00:00",
+      "recent_activity": "2024-06-13T07:00:00+00:00",
       "official_data": {
         "amf_registrations": [
           {
@@ -8728,7 +8983,7 @@
           "occ_individual_matters": 0
         }
       },
-      "evidence_count_shown": 4
+      "evidence_count_shown": 7
     },
     {
       "id": "institution-7abb4d5e461e",

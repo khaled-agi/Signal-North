@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-11-15T05:54:53+00:00",
+  "generated_at": "2026-11-15T13:48:22+00:00",
   "methodology": "Priority scores determine what an analyst reviews first, NOT bank risk or culpability. These are not verified incidents.",
-  "total_candidates": 1348,
+  "total_candidates": 1392,
   "items": [
     {
       "article_id": "report-d18ecc6ddc5684e4e27a",
@@ -453,6 +453,28 @@
       "next_step": "Open original reporting, confirm event vs publication date, institution role, victim loss vs exposure vs recovery, and any corroborating police/regulator evidence."
     },
     {
+      "article_id": "report-780effafda19858e074c",
+      "headline": "U.S. Case Reveals TD Bank's Role in Laundering $670 Million Through $18 Trillion Unmonitored Transactions, Hit with Record $3 Billion Fine - The Bureau | Sam Cooper",
+      "date": "2024-10-11T07:00:00+00:00",
+      "source_url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1OVFVLN2VER2I2b2NGbjRoY1JxNmt0dkw2TnJiZDk3Z1lmeEVtTjhNT094Vm5LTENZZEdhVUktMzFqYlNvVWFWRHNHRFNTTkt4azB0emt0UXdWdjRRR2NsUEFDeEtUR1JBZTBBdmZR?oc=5",
+      "publisher": "The Bureau | Sam Cooper",
+      "priority": 5,
+      "priority_basis": [
+        "named bank in headline",
+        "currency or amount in headline"
+      ],
+      "banks": [
+        "TD"
+      ],
+      "amount_text": [
+        "$670 Million",
+        "$18 ",
+        "$3 Billion"
+      ],
+      "review_status": "unreviewed_headline_only",
+      "next_step": "Open original reporting, confirm event vs publication date, institution role, victim loss vs exposure vs recovery, and any corroborating police/regulator evidence."
+    },
+    {
       "article_id": "report-021b35aba5096440aa93",
       "headline": "RBC customers outraged over partial refund after unauthorized withdrawals - Global News",
       "date": "2024-09-09T07:00:00+00:00",
@@ -487,6 +509,44 @@
       "amount_text": [
         "$8.9"
       ],
+      "review_status": "unreviewed_headline_only",
+      "next_step": "Open original reporting, confirm event vs publication date, institution role, victim loss vs exposure vs recovery, and any corroborating police/regulator evidence."
+    },
+    {
+      "article_id": "report-e32e92ac87c7e93a7216",
+      "headline": "Quebec police arrest three in $9-million fraud, data theft case involving Desjardins - Times Colonist",
+      "date": "2024-06-12T07:00:00+00:00",
+      "source_url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxObHRNY1V1b2hVLWQ2cHlla0Z5UVFKbHdlWi1CSWtWeHctNFo0cmd3eS1tVHVQT1k1MUExTFhNYzNPdHJQcnVTV1pwVmNjMWRFUzlCQ0dDaERDUks3NWpxWlJpY1FoRVM5QVBKYnB5cEk2T29VT25OZG9DZi1YZXVKcFRSXzRtNThYMUg1a0pnTDc1TkQ3X1ZRT3lleUNCbWpTNGo0WVJ1WWtMcGhBd0gtRkpnWFpxellEVnhjbFR5R1hIb041cTdTbm9yNGJzOFE?oc=5",
+      "publisher": "Times Colonist",
+      "priority": 5,
+      "priority_basis": [
+        "named bank in headline",
+        "currency or amount in headline"
+      ],
+      "banks": [
+        "Desjardins"
+      ],
+      "amount_text": [
+        "$9"
+      ],
+      "review_status": "unreviewed_headline_only",
+      "next_step": "Open original reporting, confirm event vs publication date, institution role, victim loss vs exposure vs recovery, and any corroborating police/regulator evidence."
+    },
+    {
+      "article_id": "report-c9fffbb9cf2736b72775",
+      "headline": "Customers voice concerns with BMO security measures after scammers gain access to their accounts - CTV News",
+      "date": "2024-03-05T08:00:00+00:00",
+      "source_url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQdjg2MDI3emZxTDA5TFNWeER5TWFudHdDM2wtbHV1d1hrSjFFeV9uSV9KNDUzY042ZEZuZ3YtWUttME1YaWtUSmNlanVUZ2daNmZWQnRDTnFrZm5KVm56SGl1TDAtSnBzOE5mY29lNm5ndU9OdTg2VkZ1MTdqTGtiQk5TbHFlbzQ2ZzFCNGhrU2NpemdKRVhXSWhMT1NlT0xXWHlFV2xnYmc0S2F2VHd2X0IwVWxaa3VFS1ljaS1mMjVBZ3huZmVvQXBTbUpVNUU0?oc=5",
+      "publisher": "CTV News",
+      "priority": 5,
+      "priority_basis": [
+        "named bank in headline",
+        "possible victim story"
+      ],
+      "banks": [
+        "BMO"
+      ],
+      "amount_text": [],
       "review_status": "unreviewed_headline_only",
       "next_step": "Open original reporting, confirm event vs publication date, institution role, victim loss vs exposure vs recovery, and any corroborating police/regulator evidence."
     },
@@ -749,7 +809,7 @@
     {
       "article_id": "report-4bc26b67b10975e73cc1",
       "headline": "UK scam victim gets nearly $21,000 back from her bank. Canadian hit by same scam gets nothing - Yahoo Finance UK",
-      "date": "2026-11-03T08:23:00+00:00",
+      "date": "2026-11-03T08:00:00+00:00",
       "source_url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQb0hoTmxlYUNDWm8wM3I2bEdfWk5vdVhsTjRQOXl5RGhpOThnNXc0Rkpma0o2bm4zcTlvbGtJblJZM1k2NktMbmgwVUhsbFJEUDhKMXdqZFB3UVphR1JoTUxYZGlYRmpHejA0NThkUXVHQUN4SmRyandTc3MycmNaSQ?oc=5",
       "publisher": "Yahoo Finance UK",
       "priority": 4,
@@ -4500,60 +4560,6 @@
       "banks": [],
       "amount_text": [
         "$355K"
-      ],
-      "review_status": "unreviewed_headline_only",
-      "next_step": "Open original reporting, confirm event vs publication date, institution role, victim loss vs exposure vs recovery, and any corroborating police/regulator evidence."
-    },
-    {
-      "article_id": "report-0503e27178e529d7c120",
-      "headline": "Edmontonians lost $1.9M in investment scams featuring AI versions of Trudeau, Musk: EPS - CTV News",
-      "date": "2024-12-06T08:00:00+00:00",
-      "source_url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPbU9uSm9CTThFenhLLU15TDRLcEtwdEU5U2Y4YnBxekYwb2k4em8yeHg5NGpPenc5LWwtTTZPWXhhR1o3Qko4RFlIeWJaUlJLc3VFZHFoNWdZR3BtSTlHanQ4bjFFVVVrMWNiVnd6LXhvUG1OLXhLM2g3V09uWU5Ka0ZGWTB6OU1jRi1HSWpGUXItdGxDSWJGYVBVUWZOMGpERllqLTlYNmVIQ3UtR2FONnJYZVF5Tnp3aWM3czJfSkJDQQ?oc=5",
-      "publisher": "CTV News",
-      "priority": 4,
-      "priority_basis": [
-        "currency or amount in headline",
-        "possible victim story"
-      ],
-      "banks": [],
-      "amount_text": [
-        "$1.9M"
-      ],
-      "review_status": "unreviewed_headline_only",
-      "next_step": "Open original reporting, confirm event vs publication date, institution role, victim loss vs exposure vs recovery, and any corroborating police/regulator evidence."
-    },
-    {
-      "article_id": "report-70a7c7ca7ddfb3066323",
-      "headline": "$9.8M stolen from FACTOR bank account, Canadian provider of music grants alleges - CBC",
-      "date": "2024-11-29T08:00:00+00:00",
-      "source_url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNaTRSWHNtRHlfRzVzaUR6VXdza21nSGRCWEV6UVExZ3dDMVhENms2NG9weE5na0dTRXVTZFpSRzNiR0VSYmU0MUVNN3Bmb081Z1QtSHZQM0Mtbm5GVUt3WExiNjdvOW4zVmtETDdKM2ppaGRIeWFuZXhDYjFsdFVCaEFPNHl3Z0tl?oc=5",
-      "publisher": "CBC",
-      "priority": 4,
-      "priority_basis": [
-        "currency or amount in headline",
-        "possible victim story"
-      ],
-      "banks": [],
-      "amount_text": [
-        "$9.8M"
-      ],
-      "review_status": "unreviewed_headline_only",
-      "next_step": "Open original reporting, confirm event vs publication date, institution role, victim loss vs exposure vs recovery, and any corroborating police/regulator evidence."
-    },
-    {
-      "article_id": "report-22071d9d66e2ea18a3ca",
-      "headline": "Woman arrested in Taylor Swift ticket fraud case scammed fans out of $70K, police say - CBC",
-      "date": "2024-11-26T08:00:00+00:00",
-      "source_url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQazdiZk9ZOUFCLWpGblNvMTlYdlQwNnhESllDYlNKM1kzYjZRRVI5Nkg2RHVNU0xkY25FOTVYcE9vZEZLMlNLLUxIakhKTzlaUDdoMmpwbE9MeG0wLUJ3YmlvQnFuX1RTUzQ0WXRKQkxvcV85WnhHWEQtVUIwZWp1dEhiWWtQUlZV?oc=5",
-      "publisher": "CBC",
-      "priority": 4,
-      "priority_basis": [
-        "currency or amount in headline",
-        "possible victim story"
-      ],
-      "banks": [],
-      "amount_text": [
-        "$70K"
       ],
       "review_status": "unreviewed_headline_only",
       "next_step": "Open original reporting, confirm event vs publication date, institution role, victim loss vs exposure vs recovery, and any corroborating police/regulator evidence."
