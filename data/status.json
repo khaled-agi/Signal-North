@@ -1,9 +1,9 @@
 {
-  "last_attempt_at": "2026-11-16T15:26:56+00:00",
+  "last_attempt_at": "2026-11-16T23:50:04+00:00",
   "sources": {
     "FINTRAC": {
-      "status": "failed",
-      "error": "HTTPSConnectionPool(host='fintrac-canafe.canada.ca', port=443): Max retries exceeded with url: /pen/4-eng (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)')))",
+      "status": "ok",
+      "scanned": 93,
       "url": "https://fintrac-canafe.canada.ca/pen/4-eng"
     },
     "FCAC": {
@@ -14,5 +14,5 @@
   },
   "previous_records": 98,
   "stored_records": 98,
-  "last_completed_at": "2026-11-16T15:26:58+00:00"
+  "last_completed_at": "2026-11-16T23:50:07+00:00"
 }
