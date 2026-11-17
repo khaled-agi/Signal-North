@@ -264,7 +264,7 @@
     ' · Indexed '+html(String(x.first_observed_at||"").slice(0,10))+'</div>'+
     '<strong>'+html(x.title)+'</strong>'+
     '<div class="world-reporting-details">Regulator website · Publication lead, decision status not reviewed'+
-     (url?' · <a href="'+html(url)+'" target="_blank" rel="noopener noreferrer">Official original URL ↗</a>':"")+
+     (url?' · <a href="'+html(url)+'" target="_blank" rel="noopener noreferrer">'+(x.evidence_tier==="official_domain_publication_lead_via_news_index"?"Agency notice via news index ↗":"Official original URL ↗")+'</a>':"")+
     '</div></article>';
   }).join(""):'<div class="empty">No matching original-domain regulator publications collected yet. This is not evidence of no enforcement. Official index records remain visible separately.</div>';
   get("worldRegShown").textContent=shown.length+" of "+filtered.length+" matching original-domain publications shown";

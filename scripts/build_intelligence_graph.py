@@ -12,11 +12,14 @@ from __future__ import annotations
 import hashlib
 import json
 import re
+import sys
 from collections import Counter, defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 
 DATA=Path(__file__).resolve().parents[1]/"data"
+sys.path.insert(0,str(Path(__file__).resolve().parent))
+from entity_resolution import EntityMatcher, core_name, fold, looks_like_organisation  # noqa: E402
 
 BANKS={
  "rbc":{"name":"Royal Bank of Canada","aliases":["Royal Bank of Canada","RBC"]},
@@ -44,26 +47,71 @@ BANKS={
  "bclc":{"name":"BCLC","aliases":["BCLC","British Columbia Lottery Corporation"]},
  "atlantic-lottery":{"name":"Atlantic Lottery","aliases":["Atlantic Lottery","Atlantic Lottery Corporation"]},
  "cne-casino":{"name":"CNE Casino","aliases":["CNE Casino"]},
+ # Canadian institutions frequently named in fraud reporting.
+ "atb":{"name":"ATB Financial","aliases":["ATB Financial","Alberta Treasury Branches"]},
+ "vancity":{"name":"Vancity","aliases":["Vancity","Vancouver City Savings Credit Union"]},
+ "meridian-cu":{"name":"Meridian Credit Union","aliases":["Meridian Credit Union","Meridian Credit Union Limited"]},
+ "eq-bank":{"name":"EQ Bank / Equitable Bank","aliases":["EQ Bank","Equitable Bank"]},
+ "koho":{"name":"KOHO","aliases":["KOHO","KOHO Financial"]},
+ "questrade":{"name":"Questrade","aliases":["Questrade","Questrade Inc."]},
+ "interac":{"name":"Interac","aliases":["Interac","Interac Corp."]},
+ # International banks, payment networks and crypto platforms. Brand-level
+ # nodes: a US/UK regulated subsidiary keeps its own register identity.
+ "bank-of-america":{"name":"Bank of America","aliases":["Bank of America","Bank of America, N.A."]},
+ "jpmorgan":{"name":"JPMorgan Chase","aliases":["JPMorgan Chase","JPMorgan","JP Morgan","JPMorgan Chase Bank"]},
+ "wells-fargo":{"name":"Wells Fargo","aliases":["Wells Fargo","Wells Fargo Bank"]},
+ "citi":{"name":"Citigroup / Citibank","aliases":["Citigroup","Citibank"]},
+ "hsbc":{"name":"HSBC","aliases":["HSBC","HSBC Bank"]},
+ "barclays":{"name":"Barclays","aliases":["Barclays","Barclays Bank"]},
+ "santander":{"name":"Santander","aliases":["Santander","Banco Santander","Santander Bank"]},
+ "lloyds":{"name":"Lloyds Banking Group","aliases":["Lloyds Bank","Lloyds Banking Group"]},
+ "natwest":{"name":"NatWest","aliases":["NatWest","NatWest Group"]},
+ "standard-chartered":{"name":"Standard Chartered","aliases":["Standard Chartered"]},
+ "ubs":{"name":"UBS","aliases":["UBS","UBS Group"]},
+ "deutsche-bank":{"name":"Deutsche Bank","aliases":["Deutsche Bank","Deutsche Bank AG"]},
+ "danske":{"name":"Danske Bank","aliases":["Danske Bank"]},
+ "anz":{"name":"ANZ","aliases":["ANZ","ANZ Bank"]},
+ "westpac":{"name":"Westpac","aliases":["Westpac"]},
+ "commbank":{"name":"Commonwealth Bank of Australia","aliases":["Commonwealth Bank","Commonwealth Bank of Australia","CommBank"]},
+ "revolut":{"name":"Revolut","aliases":["Revolut"]},
+ "monzo":{"name":"Monzo","aliases":["Monzo","Monzo Bank"]},
+ "paypal":{"name":"PayPal","aliases":["PayPal"]},
+ "zelle":{"name":"Zelle","aliases":["Zelle"]},
+ "western-union":{"name":"Western Union","aliases":["Western Union"]},
+ "moneygram":{"name":"MoneyGram","aliases":["MoneyGram"]},
+ "mastercard":{"name":"Mastercard","aliases":["Mastercard"]},
+ "amex":{"name":"American Express","aliases":["American Express","Amex","American Express National Bank"]},
+ "kraken":{"name":"Kraken","aliases":["Kraken","Payward"]},
+ "okx":{"name":"OKX","aliases":["OKX"]},
+ "bybit":{"name":"Bybit","aliases":["Bybit"]},
+ "ftx":{"name":"FTX","aliases":["FTX","FTX Trading"]},
+ "tether":{"name":"Tether","aliases":["Tether"]},
 
 }
 def normalize(x):
- s=re.sub(r"[^a-z0-9]+"," ",str(x or "").casefold()).strip()
- return re.sub(r"^the ","",s)
+ # Accent-folded so "Ltée", "Québec" and "Fédération" compare consistently.
+ return re.sub(r"^the ","",fold(x))
 
 ALIASES={}
+CORE_ALIASES={}
 for key,b in BANKS.items():
  for alias in b["aliases"]:
   n=normalize(alias)
   # Normalize exact official names only; do NOT substring match e.g. RBC inside a family name.
   if n not in ALIASES or len(n)>len(ALIASES[n]):
    ALIASES[n]=key
+  CORE_ALIASES.setdefault(core_name(alias),key)
 
 def bank_key(name):
  n=normalize(name)
  if not n:return None
  if n in ALIASES:return ALIASES[n]
+ # "VIP Realty Inc" (FINTRAC) and "VIP Realty Inc." / "VIP Realty Ltd" in other
+ # feeds are one organisation name once legal-form suffixes are removed.
+ core=core_name(name) or n
+ if core in CORE_ALIASES:return CORE_ALIASES[core]
  # Unrecognized but explicitly named official institution (e.g. credit union).
- return "institution-"+hashlib.sha256(n.encode()).hexdigest()[:12]
+ return "institution-"+hashlib.sha256(core.encode()).hexdigest()[:12]
 
 def institution_name(key,raw):
  return BANKS[key]["name"] if key in BANKS else str(raw).strip()
@@ -99,8 +147,33 @@ def reference(kind,item):
   "variation_count":item.get("variation_count",1),
   "headline_variations":item.get("headline_variations",[]),
   "amount_text":item.get("amount_strings_in_headline",[]),
-  "location":item.get("map_location"),"evidence":"unverified_headline",
+  "location":item.get("map_location") or item.get("country"),"evidence":"unverified_headline",
   "role":"mentioned_in_headline_only"}
+
+def regulator_lead_reference(item,source):
+ return {"kind":"regulator_publication","id":item.get("id"),
+  "date":item.get("publication_date") or item.get("first_observed_at"),
+  "title":item.get("title"),"source_url":item.get("source_url") or item.get("url"),
+  "source":item.get("regulator") or item.get("agency") or source,
+  "category":item.get("category") or "Regulator publication",
+  "location":item.get("country") or item.get("jurisdiction"),
+  "evidence":item.get("evidence_tier") or item.get("source_kind") or "official_publication_lead",
+  "role":"official_entity_name_in_regulator_publication"}
+
+def global_enforcement_reference(item):
+ return {"kind":"enforcement","id":item.get("id"),"date":item.get("published_at"),
+  "event_date":item.get("event_at"),"title":item.get("title"),
+  "source_url":item.get("source_url"),"source":item.get("regulator"),
+  "category":item.get("category"),"status":item.get("status"),
+  "penalty_cad":None,"penalty_amount":item.get("penalty_amount"),
+  "penalty_currency":item.get("penalty_currency"),
+  "location":item.get("country"),"evidence":"regulator_published_action",
+  "role":"subject_of_enforcement"}
+
+def strip_publisher(title,publisher):
+ title=str(title or "");publisher=str(publisher or "").strip()
+ if publisher and title.endswith(" - "+publisher):return title[:-(len(publisher)+3)]
+ return title
 
 # Themes are an analyst keyword routing aid, not factual findings against institutions.
 THEMES={
@@ -138,9 +211,10 @@ def generate():
   if key not in by_key:
    by_key[key]={"id":key,"name":institution_name(key,name),
     "aliases":BANKS.get(key,{}).get("aliases",[name]),
-    "counts":{"enforcement":0,"incidents":0,"headlines":0},
+    "counts":{"enforcement":0,"incidents":0,"headlines":0,"regulator_publications":0},
     "evidence":[],"themes":[],"annual_penalties_cad":{},
     "recent_activity":None}
+  by_key[key].setdefault("_names",set()).add(str(name).strip())
   return by_key[key]
 
  for event in events:
@@ -157,18 +231,6 @@ def generate():
   if not entry:continue
   entry["counts"]["incidents"]+=1
   entry["evidence"].append(reference("incident",inc))
- for art in articles:
-  # Only explicit banks_mentioned_in_headline qualifies for a tentative link.
-  keys=set()
-  for name in (art.get("banks_mentioned_in_headline",[])+art.get("organizations_mentioned_in_headline",[])):
-   key=bank_key(name)
-   if key:keys.add(key)
-  for key in sorted(keys):
-   name=BANKS[key]["name"] if key in BANKS else next((a for a in art.get("banks_mentioned_in_headline",[])+art.get("organizations_mentioned_in_headline",[]) if bank_key(a)==key),"")
-   entry=ensure(name)
-   if not entry:continue
-   entry["counts"]["headlines"]+=1  # One grouped report; not one incident or source
-   entry["evidence"].append(reference("headline",art))
  # Official institution context, FINTRAC penalty notices and bank complaints
  # are separate source-specific measures, not extra entries in regulator-event
  # or headline counters. No attempt is made to infer bank complaints from CAFC.
@@ -253,10 +315,11 @@ def generate():
    name=str(row.get("institution") or "").strip()
    if not name:return None
    by_key[key]={
+    "_names":{name},
     "id":key,"name":name+" (US · "+str(row.get("state") or "FDIC")+")",
     "legal_name":name,"jurisdiction":"US","country":"US",
     "aliases":[name,name+" FDIC "+cert],
-    "counts":{"enforcement":0,"incidents":0,"headlines":0},
+    "counts":{"enforcement":0,"incidents":0,"headlines":0,"regulator_publications":0},
     "evidence":[],"themes":[],"annual_penalties_cad":{},
     "recent_activity":None,
    }
@@ -281,7 +344,7 @@ def generate():
     rawname=str(failure.get("institution") or "FDIC historical record")
     by_key[key]={"id":key,"name":rawname+" (historical FDIC resolution)",
       "jurisdiction":"US","country":"US","aliases":[rawname],
-      "counts":{"enforcement":0,"incidents":0,"headlines":0},
+      "counts":{"enforcement":0,"incidents":0,"headlines":0,"regulator_publications":0},
       "evidence":[],"themes":[],"annual_penalties_cad":{},
       "recent_activity":None}
    entry=by_key[key]
@@ -305,10 +368,11 @@ def generate():
   key="us-ncua-"+charter
   if key not in by_key:
    by_key[key]={
+    "_names":{name},
     "id":key,"name":name+" (US credit union · "+str(cu.get("state") or "NCUA")+")",
     "legal_name":name,"jurisdiction":"US","country":"US",
     "aliases":[name,name+" NCUA "+charter],
-    "counts":{"enforcement":0,"incidents":0,"headlines":0},
+    "counts":{"enforcement":0,"incidents":0,"headlines":0,"regulator_publications":0},
     "evidence":[],"themes":[],"annual_penalties_cad":{},
     "recent_activity":None,
    }
@@ -328,10 +392,11 @@ def generate():
   key="us-occ-"+charter
   if key not in by_key:
    by_key[key]={
+    "_names":{name},
     "id":key,"name":name+" (OCC charter "+charter+")",
     "legal_name":name,"jurisdiction":"US","country":"US",
     "aliases":[name+" OCC "+charter],
-    "counts":{"enforcement":0,"incidents":0,"headlines":0},
+    "counts":{"enforcement":0,"incidents":0,"headlines":0,"regulator_publications":0},
     "evidence":[],"themes":[],"annual_penalties_cad":{},"recent_activity":None,
    }
   entry=by_key[key]
@@ -348,6 +413,127 @@ def generate():
   official["occ"]={"charter":charter,"legal_name":name,
     "source_url":"https://apps.occ.gov/EASearch",
     "note":"OCC charter identifier. No speculative FDIC CERT or Canadian entity merge."}
+
+ # ------------------------------------------------------------------
+ # Cross-source linking. Everything above is keyed by official identity;
+ # below, news headlines and regulator publications are connected to those
+ # identities when they name an organisation exactly as an official source
+ # lists it. A name match is a research lead, never a finding.
+ # ------------------------------------------------------------------
+ global_events=load("global_enforcement.json","events")
+ global_linked=0
+ for ev in global_events:
+  name=ev.get("institution")
+  if not looks_like_organisation(name):continue  # individuals are never indexed
+  entry=ensure(name)
+  if not entry:continue
+  entry.setdefault("jurisdiction",ev.get("country_code"))
+  entry["counts"]["enforcement"]+=1
+  entry["evidence"].append(global_enforcement_reference(ev))
+  global_linked+=1
+
+ sanctions={};pending={};pending_names={}
+ def designate(primary,names,payload):
+  key=bank_key(primary)
+  if not key:return
+  sanctions.setdefault(key,[]).append(payload)
+  pending.setdefault(key,str(primary).strip())
+  pending_names.setdefault(key,set()).update(n for n in names if n)
+ uk_groups={}
+ for row in uk_sanctions:
+  uid=row.get("uk_unique_id") or row.get("name")
+  uk_groups.setdefault(uid,[]).append(row)
+ for uid,rows in uk_groups.items():
+  primary=next((r for r in rows if str(r.get("name_type","")).casefold().startswith("primary")),rows[0])
+  designate(primary.get("name"),[r.get("name") for r in rows],{
+   "list":"UK FCDO sanctions list","id":uid,"regime":primary.get("regime"),
+   "date_designated":primary.get("date_designated"),"measures":primary.get("sanctions_imposed"),
+   "source_url":primary.get("source_url") or "https://www.gov.uk/government/publications/the-uk-sanctions-list"})
+ for row in ofac_entities:
+  designate(row.get("name"),[row.get("name")],{
+   "list":"US OFAC SDN list","id":row.get("ofac_ent_num"),
+   "regime":", ".join(row.get("sanctions_programs") or []) or None,
+   "date_designated":None,"measures":"OFAC SDN designation",
+   "source_url":row.get("source_url") or "https://ofac.treasury.gov/sanctions-list-service"})
+
+ matcher=EntityMatcher()
+ for key,b in BANKS.items():
+  for alias in b["aliases"]:matcher.add(key,alias,curated=True)
+ for key,entry in by_key.items():
+  if key in BANKS:continue
+  # US register names ("West Shore Bank") are matched in full only: shortened
+  # forms of small-bank names are usually just place names.
+  us_register=key.startswith("us-")
+  for n in entry.get("_names",()):
+   if looks_like_organisation(n):matcher.add(key,n,allow_variant=not us_register)
+ for key,names in pending_names.items():
+  for n in names:matcher.add(key,n)
+ matcher.compile()
+
+ def resolve(key):
+  if key in by_key:return by_key[key]
+  if key in pending:return ensure(pending[key])
+  if key in BANKS:return ensure(BANKS[key]["name"])
+  return None
+
+ world=load("world_reporting.json","leads")
+ reg_leads=load("global_regulator_publications.json","leads")
+ official_hits={}
+ article_entities={}
+ stats={"headlines_scanned":0,"headlines_linked":0,"links_from_curated_extraction":0,
+        "links_from_official_name_match":0,"regulator_publications_scanned":0,
+        "regulator_publications_linked":0,"global_enforcement_linked":global_linked}
+ def link_headline(art,channel=None):
+  stats["headlines_scanned"]+=1
+  found={}
+  for name in (art.get("banks_mentioned_in_headline") or [])+(art.get("organizations_mentioned_in_headline") or []):
+   key=bank_key(name)
+   if key:found.setdefault(key,("mentioned_in_headline_only",None,name))
+  for hit in matcher.find(strip_publisher(art.get("title"),art.get("publisher"))):
+   if hit["key"] not in found:
+    found[hit["key"]]=("official_entity_name_in_headline",hit["basis"],hit["phrase"])
+  linked=False
+  for key,(role,basis,phrase) in sorted(found.items()):
+   entry=resolve(key) if role!="mentioned_in_headline_only" else ensure(BANKS[key]["name"] if key in BANKS else phrase)
+   if not entry:continue
+   ref=reference("headline",art)
+   if channel and not ref.get("source_channels"):ref["source_channels"]=[channel]
+   if role!="mentioned_in_headline_only":
+    ref["role"]=role;ref["match_basis"]=basis;ref["matched_name"]=phrase
+    stats["links_from_official_name_match"]+=1
+    official_hits.setdefault(art.get("id"),[]).append(entry["name"])
+   else:
+    stats["links_from_curated_extraction"]+=1
+   entry["counts"]["headlines"]+=1  # One grouped report; not one incident or source
+   if art.get("id"):article_entities.setdefault(art["id"],set()).add(entry["id"])
+   entry["evidence"].append(ref)
+   linked=True
+  stats["headlines_linked"]+=linked
+ for art in articles:link_headline(art)
+ for art in world:link_headline(art,"worldwide news search")
+ for source,items in (("Regulator website",reg_leads),("SEC litigation release",sec_litigation)):
+  for item in items:
+   stats["regulator_publications_scanned"]+=1
+   hits=matcher.find(item.get("title"))
+   for hit in hits:
+    entry=resolve(hit["key"])
+    if not entry:continue
+    ref=regulator_lead_reference(item,source)
+    ref["match_basis"]=hit["basis"];ref["matched_name"]=hit["phrase"]
+    entry["counts"]["regulator_publications"]+=1
+    entry["evidence"].append(ref)
+   stats["regulator_publications_linked"]+=bool(hits)
+ # Sanctions designations attach to any node whose official name resolves to
+ # the same organisation key. Unlinked designations stay in the list views.
+ for entry in by_key.values():
+  seen=set()
+  for n in entry.get("_names",()):
+   for d in sanctions.get(bank_key(n),[]):
+    ident=(d["list"],d["id"])
+    if ident in seen:continue
+    seen.add(ident)
+    entry.setdefault("official_data",{}).setdefault("sanctions_designations",[]).append(d)
+ stats["ambiguous_names_skipped"]=len(matcher.ambiguous)
  for entry in by_key.values():
   official=entry.setdefault("official_data",{})
   official["counts"]={"fintrac_public_notices":len(official.get("fintrac_notices",[])),
@@ -357,7 +543,8 @@ def generate():
      "ciro_concluded_cases":len(official.get("ciro_concluded_cases",[])),
      "fdic_failures":len(official.get("fdic_failure_events",[])),
      "occ_institution_actions":len(official.get("occ_institution_actions",[])),
-     "occ_individual_matters":len(official.get("occ_individual_matters",[]))}
+     "occ_individual_matters":len(official.get("occ_individual_matters",[])),
+     "sanctions_designations":len(official.get("sanctions_designations",[]))}
   if official.get("bank_disclosures"):
    official["bank_disclosures"].sort(key=lambda x:x.get("year",0),reverse=True)
   if official.get("fintrac_notices"):
@@ -379,11 +566,19 @@ def generate():
    limited.append(rec)
   entry["evidence"]=limited
   entry["evidence_count_shown"]=len(limited)
+  entry.pop("_names",None)
+ def source_types(e):
+  kinds={k for k,v in e["counts"].items() if v}
+  kinds|={k for k,v in e.get("official_data",{}).items() if k!="counts" and v}
+  return kinds
+ stats["institutions_with_2plus_source_types"]=sum(len(source_types(e))>=2 for e in by_key.values())
+ stats["institutions_with_news_and_official_record"]=sum(
+  bool(e["counts"]["headlines"]) and bool(source_types(e)-{"headlines"}) for e in by_key.values())
  ranked=sorted(by_key.values(),key=lambda e:(e["counts"]["enforcement"]+e["counts"]["incidents"],e["counts"]["headlines"]),reverse=True)
  DATA.mkdir(parents=True,exist_ok=True)
  graph={
   "generated_at":datetime.now(timezone.utc).isoformat(timespec="seconds"),
-  "methodology":"Institution names are canonically grouped using explicit aliases. Headline entries are conservative reporting groups, not distinct or independently verified fraud incidents; multiple publisher headlines are retained under each group. An institution mention is not proof of wrongdoing.",
+  "methodology":"Institution names are canonically grouped using explicit aliases and legal-suffix-insensitive official names. Headlines and regulator publications link to an organisation only when they contain its full official name (or curated alias) and that name is unambiguous; individuals are never name-matched. Headline entries are conservative reporting groups, not distinct or independently verified fraud incidents; multiple publisher headlines are retained under each group. An institution mention is not proof of wrongdoing.",
   "source_counts":{"enforcement":len(events),"reviewed_incidents":len(incidents),"unverified_report_groups":len(articles),
     "osfi_institution_rows":len(osfi),"fintrac_index_notices":len(fintrac),
     "bank_disclosure_records":len(bank_disclosures),"fcac_manual_sample":len(fcac),
@@ -391,15 +586,27 @@ def generate():
     "us_fdic_active_entities":len(fdic_banks),"us_fdic_failure_events":len(fdic_failures),
     "us_ncua_credit_union_entities":len(ncua_credit_unions),
     "us_occ_enforcement_actions":len(occ_actions),"us_ofac_sdn_entity_designations":len(ofac_entities),
-    "us_sec_litigation_publications":len(sec_litigation),"uk_sanctions_entity_designations":len(uk_sanctions)},
+    "us_sec_litigation_publications":len(sec_litigation),"uk_sanctions_entity_designations":len(uk_sanctions),
+    "global_enforcement_events":len(global_events),"world_reporting_headlines":len(world),
+    "regulator_publication_leads":len(reg_leads)},
+  "linking":stats,
   "sector_context":{"obsi_banking":obsi_sector,"note":"OBSI annual sector totals must not be attributed to individual institutions."},
   "institutions":ranked
  }
- (DATA/"institution_intelligence.json").write_text(json.dumps(graph,ensure_ascii=False,indent=2)+"\n","utf-8")
+ (DATA/"institution_intelligence.json").write_text(json.dumps(graph,ensure_ascii=False,separators=(",",":"))+"\n","utf-8")
 
+ # Entity ids per reporting group, consumed by build_related_reporting.py so
+ # stories naming the same organisation can be suggested for comparison.
+ (DATA/"headline_entities.json").write_text(json.dumps({
+  "generated_at":graph["generated_at"],
+  "methodology":"Organisation ids whose official name or curated alias appears in the headline. Name presence only.",
+  "names":{k:by_key[k]["name"] for ids in article_entities.values() for k in ids if k in by_key},
+  "articles":{k:sorted(v) for k,v in article_entities.items()}},ensure_ascii=False,separators=(",",":"))+"\n","utf-8")
  queue=[]
  for article in articles:
   priority=research_priority(article)
+  named=official_hits.get(article.get("id"),[])
+  if named and not article.get("banks_mentioned_in_headline"):priority=min(9,priority+3)
   if priority<2:continue
   queue.append({
    "article_id":article.get("id"),
@@ -407,9 +614,11 @@ def generate():
    "source_url":article.get("url"),"publisher":article.get("publisher"),
    "priority":priority,"priority_basis":[x for x,yes in (
     ("named bank in headline",bool(article.get("banks_mentioned_in_headline"))),
+    ("organisation named in official records",bool(named)),
     ("currency or amount in headline",bool(article.get("amount_strings_in_headline"))),
     ("possible victim story",bool(article.get("headline_case_candidate")))) if yes],
    "banks":article.get("banks_mentioned_in_headline",[]),
+   "official_entities":named,
    "amount_text":article.get("amount_strings_in_headline",[]),
    "review_status":"unreviewed_headline_only",
    "next_step":"Open original reporting, confirm event vs publication date, institution role, victim loss vs exposure vs recovery, and any corroborating police/regulator evidence."
@@ -425,7 +634,7 @@ def generate():
  },ensure_ascii=False,indent=2)+"\n","utf-8")
  print(json.dumps({"institutions":len(ranked),"official_records":len(events),
                    "reviewed_incidents":len(incidents),"headline_leads":len(articles),
-                   "review_candidates":len(queue),"sample":ranked[:5] and
+                   "review_candidates":len(queue),"linking":stats,"sample":ranked[:5] and
                     [{"institution":x["name"],**x["counts"]} for x in ranked[:5]]},indent=2))
 
 if __name__=="__main__":

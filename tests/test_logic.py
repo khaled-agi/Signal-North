@@ -51,7 +51,7 @@ class FinancialAmountTests(unittest.TestCase):
    output=json.loads((p/"institution_intelligence.json").read_text())
    rbc=next(x for x in output["institutions"] if x["id"]=="rbc")
    first=next(x for x in output["institutions"] if x["id"]=="first-nations-bank")
-   self.assertEqual(rbc["counts"],{"enforcement":1,"incidents":1,"headlines":1})
+   self.assertEqual(rbc["counts"],{"enforcement":1,"incidents":1,"headlines":1,"regulator_publications":0})
    self.assertEqual(rbc["annual_penalties_cad"]["2024"],4250000)
    self.assertEqual(first["counts"]["headlines"],0)
    case=next(x for x in rbc["evidence"] if x["kind"]=="incident")

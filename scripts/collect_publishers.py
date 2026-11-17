@@ -12,7 +12,7 @@ import xml.etree.ElementTree as ET
 from datetime import datetime,timezone
 from email.utils import parsedate_to_datetime
 from pathlib import Path
-from urllib.parse import urlparse
+from urllib.parse import urlparse,urlencode
 import requests
 
 from collect_news import headline_claims,headline_location,classify,normalize
@@ -26,7 +26,31 @@ FEEDS={
  "Financial Post":("https://financialpost.com/feed/","financialpost.com"),
  "National Post":("https://nationalpost.com/feed/","nationalpost.com"),
 }
-HEADERS={"User-Agent":"SignalNorthResearch/0.5 (+https://github.com/khaled-agi/Signal-North; headline metadata only)"}
+HEADERS={"User-Agent":"SignalNorthResearch/0.5 (+https://github.com/khaled-agi/Signal-North; headline metadata only)",
+         "Accept":"application/rss+xml,application/atom+xml,application/xml;q=0.9,*/*;q=0.5"}
+# Postmedia (Financial Post, National Post) serves an HTML bot-check page instead
+# of RSS to CI runners. Fall back to a Google News search restricted to the
+# publisher's domain; the publisher is verified from the RSS <source url>.
+NEWS_INDEX="https://news.google.com/rss/search"
+FALLBACK_TERMS="(fraud OR scam OR \"money laundering\" OR fraude OR charged OR penalty)"
+
+def fallback_url(hostname):
+ return NEWS_INDEX+"?"+urlencode({"q":f"site:{hostname} {FALLBACK_TERMS} when:30d","hl":"en-CA","gl":"CA","ceid":"CA:en"})
+
+def looks_like_feed(content):
+ head=content[:600].lstrip().lower()
+ return head.startswith(b"<?xml") or b"<rss" in head or b"<feed" in head
+
+def index_rows(xml,hostname):
+ root=ET.fromstring(xml)
+ for x in root.findall(".//channel/item"):
+  src=x.find("source")
+  host=(urlparse((src.get("url") if src is not None else "") or "").hostname or "").lower()
+  if not (host==hostname or host.endswith("."+hostname)):continue
+  title=normalize(x.findtext("title"))
+  publisher=normalize(src.text if src is not None else "")
+  if publisher and title.endswith(" - "+publisher):title=title[:-(len(publisher)+3)].strip()
+  yield title,normalize(x.findtext("link")),parse_date(x.findtext("pubDate"))
 
 def stamp():return datetime.now(timezone.utc).isoformat(timespec="seconds")
 
@@ -61,21 +85,31 @@ def run():
  health={"completed_at":None,"sources":{}}
  for name,(feed,hostname) in FEEDS.items():
   try:
-   r=requests.get(feed,headers=HEADERS,timeout=30)
-   r.raise_for_status()
-   rows=list(feed_rows(r.content))
+   method="publisher_rss"
+   try:
+    r=requests.get(feed,headers=HEADERS,timeout=30)
+    r.raise_for_status()
+    if not looks_like_feed(r.content):raise ValueError("publisher feed returned non-XML (likely bot check)")
+    rows=list(feed_rows(r.content))
+    allowed_hosts=(hostname,)
+   except (requests.RequestException,ValueError,ET.ParseError) as primary:
+    fb=requests.get(fallback_url(hostname),headers={"User-Agent":"Mozilla/5.0 (compatible; SignalNorthResearch/0.5)"},timeout=30)
+    fb.raise_for_status()
+    rows=list(index_rows(fb.content,hostname))
+    method="news_index_site_search";primary_error=str(primary)[:160]
+    allowed_hosts=("news.google.com",)
    count=0
    for title,link,published in rows[:120]:
     if not title or not CRIME.search(title) or not published:continue
     u=urlparse(link)
-    if u.scheme!="https" or not (u.hostname==hostname or u.hostname.endswith("."+hostname)):continue
+    if u.scheme!="https" or not any(u.hostname==h or (u.hostname or "").endswith("."+h) for h in allowed_hosts):continue
     key=hashlib.sha256((name.casefold()+"|"+title.casefold()).encode()).hexdigest()[:20]
     before=found.get(key,{})
     geo=headline_location(title)
     found[key]={
      "id":key,"title":title,"url":link,"publisher":name,
      "published_at":published,"date_basis":"publisher_rss_publication",
-     "discovery_source":"publisher_rss","topics":["Canadian publisher financial crime coverage"],
+     "discovery_source":method,"verified_publisher_domain":hostname,"topics":["Canadian publisher financial crime coverage"],
      "category":classify(title),"evidence_status":"unverified_news_lead",
      "institution":None,"reported_loss":None,
      "content_kind":"news_lead",
@@ -85,7 +119,8 @@ def run():
      "notice":"Public article title and source metadata only. The linked full article has not been checked for bank responsibility or actual losses."
     }
     count+=1
-   health["sources"][name]={"status":"ok","feed_items":len(rows),"accepted":count,"url":feed}
+   health["sources"][name]={"status":"ok","feed_items":len(rows),"accepted":count,"url":feed,"method":method}
+   if method!="publisher_rss":health["sources"][name]["primary_error"]=primary_error
   except Exception as exc:
    health["sources"][name]={"status":"failed","error":str(exc)[:250],"url":feed}
  all_records=sorted(found.values(),key=lambda x:x.get("published_at") or "",reverse=True)[:1400]

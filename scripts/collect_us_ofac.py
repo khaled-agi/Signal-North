@@ -17,7 +17,13 @@ from datetime import datetime,timezone
 from pathlib import Path
 import requests
 
-URL="https://www.treasury.gov/ofac/downloads/sdn.csv"
+# Treasury moved SDN downloads to the Sanctions List Service (2024). The legacy
+# treasury.gov path now redirects or serves HTML, which parsed as 1-column rows.
+URLS=(
+ "https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/SDN.CSV",
+ "https://www.treasury.gov/ofac/downloads/sdn.csv",
+)
+URL=URLS[0]
 OUT=Path("data/us_ofac_sdn_entities.json")
 HEALTH=Path("data/us_ofac_source_health.json")
 MAX_BYTES=20_000_000
@@ -36,7 +42,11 @@ def parse(data, minimum=5000):
  total=0
  excluded={}
  for row in reader:
-  if not row:continue
+  # The SDN export ends with a lone EOF control character (\x1a); skip blank,
+  # whitespace-only or control-character-only trailer rows.
+  if not row or not "".join(row).strip(" \t\r\n\x1a\x00"):continue
+  if text.lstrip()[:15].lower().startswith(("<!doctype","<html")):
+   raise ValueError("OFAC endpoint returned HTML instead of CSV")
   total+=1
   if len(row)!=12:raise ValueError(f"Unexpected OFAC SDN row columns: {len(row)}")
   ent,name,kind,program,*remainder=row
@@ -72,6 +82,17 @@ def atomic(path,obj):
   tmp=f.name
  os.replace(tmp,path)
 
+def download(url):
+ r=requests.get(url,timeout=90,stream=True,allow_redirects=True,
+                headers={"User-Agent":"SignalNorthPublicResearch/1.0 (+https://github.com/khaled-agi/Signal-North)","Accept":"text/csv,*/*"})
+ r.raise_for_status()
+ chunks=[];size=0
+ for part in r.iter_content(65536):
+  size+=len(part)
+  if size>MAX_BYTES:raise ValueError("OFAC file exceeds safe capacity")
+  chunks.append(part)
+ return b"".join(chunks)
+
 def main():
  now=datetime.now(timezone.utc).isoformat(timespec="seconds")
  if OUT.exists():
@@ -82,18 +103,20 @@ def main():
   except (ValueError,OSError):pass
  health={"source_url":URL,"last_attempt":now}
  try:
-  r=requests.get(URL,timeout=60,stream=True,headers={"User-Agent":"SignalNorthPublicResearch/1.0","Accept":"text/csv"})
-  r.raise_for_status()
-  chunks=[];size=0
-  for part in r.iter_content(65536):
-   size+=len(part)
-   if size>MAX_BYTES:raise ValueError("OFAC file exceeds safe capacity")
-   chunks.append(part)
-  binary=b"".join(chunks)
-  records,stats=parse(binary)
+  errors=[]
+  for url in URLS:
+   try:
+    binary=download(url)
+    records,stats=parse(binary)
+    health["source_url"]=url
+    break
+   except Exception as exc:
+    errors.append(f"{url}: {type(exc).__name__}: {str(exc)[:120]}")
+  else:
+   raise ValueError(" | ".join(errors)[:400])
   atomic(OUT,{
    "source":"U.S. Treasury Office of Foreign Assets Control / SDN List",
-   "source_url":URL,"retrieved_at":now,"sha256":hashlib.sha256(binary).hexdigest(),
+   "source_url":health["source_url"],"retrieved_at":now,"sha256":hashlib.sha256(binary).hexdigest(),
    "record_count":len(records),"source_stats":stats,
    "methodology":"Only source-listed organization/group entries (not people, vessels, or aircraft). Does NOT infer financial-sector status, criminal convictions, or automatic bank matches. Current list only, not a history of additions/removals.",
    "records":records,
