@@ -1,5 +1,5 @@
 {
-  "last_completed_at": "2026-11-16T23:49:24+00:00",
+  "last_completed_at": "2026-11-17T07:30:50+00:00",
   "regulators_configured": 30,
   "regulators_attempted": 30,
   "countries_with_publication_leads": 0,
@@ -198,9 +198,9 @@
       "regulator": "CVM"
     },
     "ES:CNMV": {
-      "status": "error",
-      "error_type": "HTTPError",
-      "checked_at": "2026-11-15T19:40:16+00:00",
+      "status": "empty",
+      "accepted": 0,
+      "checked_at": "2026-11-17T07:30:33+00:00",
       "source_domain": "cnmv.es",
       "country_code": "ES",
       "regulator": "CNMV"
@@ -208,15 +208,15 @@
     "NL:AFM": {
       "status": "error",
       "error_type": "HTTPError",
-      "checked_at": "2026-11-15T19:40:16+00:00",
+      "checked_at": "2026-11-17T07:30:28+00:00",
       "source_domain": "afm.nl",
       "country_code": "NL",
       "regulator": "AFM"
     },
     "NO:Finanstilsynet": {
-      "status": "error",
-      "error_type": "HTTPError",
-      "checked_at": "2026-11-15T19:40:16+00:00",
+      "status": "empty",
+      "accepted": 0,
+      "checked_at": "2026-11-17T07:30:35+00:00",
       "source_domain": "finanstilsynet.no",
       "country_code": "NO",
       "regulator": "Finanstilsynet"
@@ -224,7 +224,7 @@
     "BE:FSMA": {
       "status": "error",
       "error_type": "HTTPError",
-      "checked_at": "2026-11-15T19:40:28+00:00",
+      "checked_at": "2026-11-17T07:30:43+00:00",
       "source_domain": "fsma.be",
       "country_code": "BE",
       "regulator": "FSMA"
@@ -232,7 +232,7 @@
     "CA:FINTRAC": {
       "status": "error",
       "error_type": "HTTPError",
-      "checked_at": "2026-11-15T19:40:28+00:00",
+      "checked_at": "2026-11-17T07:30:50+00:00",
       "source_domain": "fintrac-canafe.canada.ca",
       "country_code": "CA",
       "regulator": "FINTRAC"
@@ -240,7 +240,7 @@
     "KR:FSC": {
       "status": "error",
       "error_type": "HTTPError",
-      "checked_at": "2026-11-15T19:40:28+00:00",
+      "checked_at": "2026-11-17T07:30:50+00:00",
       "source_domain": "fsc.go.kr",
       "country_code": "KR",
       "regulator": "FSC"
