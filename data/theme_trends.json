@@ -15,7 +15,7 @@
     "2023": 419,
     "2024": 439,
     "2025": 482,
-    "2026": 904
+    "2026": 905
   },
   "themes": [
     {
@@ -307,11 +307,22 @@
         "2023": 33,
         "2024": 18,
         "2025": 39,
-        "2026": 29
+        "2026": 30
       },
-      "total_headlines": 152,
+      "total_headlines": 153,
       "publisher_count": 43,
       "examples": [
+        {
+          "id": "c20c23a787b2fe331ffc",
+          "title": "Grandparent scam courier pleads guilty after Winnipeg seniors lose more than $50K - CBC",
+          "date": "2026-11-18T21:37:13+00:00",
+          "publisher": "CBC",
+          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPaFN4X2NfMnJ2bU9vZDFEX1NfSkFCYUQ4X3J6MzFuQ0gyOUhUNkEwdGJweDFuNzV0OGtrWkVwQldxVF9aTnZCZTN2SVhRQ1JEOEJ4ejlOaE5NazAxU29hSXpZMS1SUEFFWnVFdmRQTzFyWExzZGVfOWRzcUZYSTk3d08tbGkzeWt6MTBRelBxTk9rZw?oc=5",
+          "geography": "Winnipeg, Manitoba",
+          "source_channels": [
+            "recent"
+          ]
+        },
         {
           "id": "c6695ba48e2712ed0877",
           "title": "Will Canada’s New Anti-Fraud Rules Protect Seniors? - Everything Zoomer",
@@ -408,8 +419,7 @@
           "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQeENPZmpxMGZDVFc3UDZTbWVYRE5MMDhUSVF1UGtFNE1GYXpvZkR3dXNEU2JWS19VSHE2aXRxUjk0dVVIZmlRYnpRUmJoMTdJeDhWdmxaeFlIMi1ja3NWUTBCcGZfczR1ZFNXRHY3Wk1hTnNCY3RoU2pyVkJMejJtM1ZQQkpGTWlDTU5lQ3BaS3Z4RXloLTBVQUhoR2Jmck96M210cHFuQ285dTNLRHlIR3ZCSG9mTVU?oc=5",
           "geography": "Oshawa, Ontario",
           "source_channels": [
-            "historical",
-            "recent"
+            "historical"
           ]
         },
         {
@@ -561,17 +571,6 @@
           "date": "2026-05-09T07:00:00+00:00",
           "publisher": "Yahoo! Finance Canada",
           "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxORzE5T1ZEbVprTE9ZS29qekJNNjNxaU5la2NnNFRrMlFfNnk2QXpNMjgwYnJocmFmaGk1MmF1cHJPcDI1T2lNYmh0UUtNX0gtc1NkT0NibURUTF9IUUF0cjBlaVgyN0R6SEhmQmFMTmdwMDJQUzVNZjltc0pzdms4R2dMUGo4eXFMc2trTQ?oc=5",
-          "geography": null,
-          "source_channels": [
-            "historical"
-          ]
-        },
-        {
-          "id": "863cd59066efcb50ddaa",
-          "title": "Barrie Seniors lose $1,000 in courier-style credit card fraud - CTV News",
-          "date": "2026-03-21T07:00:00+00:00",
-          "publisher": "CTV News",
-          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPM25OOGs5S1JsQnRmLVlSSDJBS1BTZm9jZi0ydm9Hb3pHNUthc19PQ3NrYkMyLUFYRXd2YzBxczFtb2EzN3VlSmRxSEU5S3NsSlJoYjRXZ1JwaGZ3LVNBaGNBUEw1RWl2aElwTTRUTkxicm5qemxQcVJsVHUtYm53VUV3ZGV4azhwT09ibTBPaU9ZZDltcVE?oc=5",
           "geography": null,
           "source_channels": [
             "historical"
@@ -3166,8 +3165,8 @@
       }
     }
   ],
-  "generated_at": "2026-11-18T16:23:39+00:00",
-  "articles_analyzed": 2916,
+  "generated_at": "2026-11-18T23:04:26+00:00",
+  "articles_analyzed": 2917,
   "methodology": "MULTI-LABEL keyword classification of unique article TITLES by publication year; multiple theme counts can arise from one headline. Year-to-year article counts reflect discovery methods, changing news coverage, and archived source availability, NOT measured changes in fraud incidence. Bank/platform mentions are not accusations and never counted as confirmed enforcement.",
   "scope": "Canadian financial-crime news discovery",
   "data_quality": "Headlines only; no full-article automated fact checking. Counts can change as the archive expands."
