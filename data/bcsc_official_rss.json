@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19T12:45:50+00:00",
+  "generated_at": "2026-11-19T21:18:34+00:00",
   "records": [
     {
       "id": "0279734eec95cf9200c3",
@@ -33,19 +33,41 @@
       "summary": "Graham Leslie Harris [Notice of Hearing]",
       "classification": "official_hearing_or_order_notice",
       "note": "An RSS hearing notice may be an allegation, not an adjudicated sanction."
+    },
+    {
+      "id": "276cca6b538132a990b7",
+      "agency": "BCSC",
+      "type": "disciplined_list",
+      "title": "Gasarch, Zhiying Yvonne",
+      "url": "https://www.bcsc.bc.ca/enforcement/administrative-enforcement/administrative-sanctions/disciplined-list/2026/gasarch-zhiying-yvonne",
+      "publication_text": "Wed, 18 Nov 2026 07:00:00 Z",
+      "summary": "Disciplined List Gasarch, Zhiying Yvonne",
+      "classification": "official_disciplinary_publication",
+      "note": "An RSS hearing notice may be an allegation, not an adjudicated sanction."
+    },
+    {
+      "id": "598f44a9ea03debaa0ef",
+      "agency": "BCSC",
+      "type": "disciplined_list",
+      "title": "Posen, Shimshon Refoel (Shimmy)",
+      "url": "https://www.bcsc.bc.ca/enforcement/administrative-enforcement/administrative-sanctions/disciplined-list/2026/posen-shimshon-refoel-shimmy",
+      "publication_text": "Mon, 02 Nov 2026 07:00:00 Z",
+      "summary": "Disciplined List Posen, Shimshon Refoel (Shimmy)",
+      "classification": "official_disciplinary_publication",
+      "note": "An RSS hearing notice may be an allegation, not an adjudicated sanction."
     }
   ],
   "health": {
     "disciplined_list": {
-      "status": "failed_last_good_preserved",
-      "error_type": "ValueError",
-      "last_attempt": "2026-11-19T12:45:50+00:00",
+      "status": "success",
+      "count_new_feed_items": 2,
+      "last_success": "2026-11-19T21:18:34+00:00",
       "url": "https://www.bcsc.bc.ca/rss/disciplined-list"
     },
     "hearing_notices": {
       "status": "success",
       "count_new_feed_items": 1,
-      "last_success": "2026-11-19T12:45:50+00:00",
+      "last_success": "2026-11-19T21:18:34+00:00",
       "url": "https://www.bcsc.bc.ca/rss/notices-of-hearing-and-temporary-orders"
     }
   },

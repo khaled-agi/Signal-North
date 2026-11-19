@@ -15,7 +15,7 @@
     "2023": 419,
     "2024": 439,
     "2025": 482,
-    "2026": 906
+    "2026": 907
   },
   "themes": [
     {
@@ -27,9 +27,9 @@
         "2023": 28,
         "2024": 36,
         "2025": 48,
-        "2026": 90
+        "2026": 91
       },
-      "total_headlines": 229,
+      "total_headlines": 230,
       "publisher_count": 68,
       "examples": [
         {
@@ -126,6 +126,17 @@
           "date": "2026-11-15T14:00:00+00:00",
           "publisher": "Yahoo! Finance Canada",
           "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNcjVqcl9Lb3Q0VU11UVFndG1IbXpuMUlXSkxvemExaWYzd01zT203Qmp3bmdyUXNqZ0x2bEFJcWxkeUVpbUhBNnpxMkNYT0Z6Um5BTTR5WnQteDdJUHVLNzQ4Nk1NT2JObzVHdElBQlRYSExUeUJJWTZfSENWQ01QbWJIT0JvLWM?oc=5",
+          "geography": null,
+          "source_channels": [
+            "recent"
+          ]
+        },
+        {
+          "id": "6b000833593f81e902b2",
+          "title": "Localcoin Joins RCMP-Led Maple Disruption 2.0 to Stop Fraud at the Bitcoin ATM - Yahoo! Finance Canada",
+          "date": "2026-11-11T17:02:00+00:00",
+          "publisher": "Yahoo! Finance Canada",
+          "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNOENaektKMlFmMWZtMWlvMFF6YUZtNXpkQ245bWtmcFZNdWx6ckhZemM2Yl9tai1XaHdjSUU3bnBsbmpEUmU2QXhuNkpnVjBnajlYXzBaMVRkQVhlaW5mMEQ2RThYV0FtSlc2Tk95Z2NsajI3aWRMNEh0SktfaE5lZU9UdGNLZw?oc=5",
           "geography": null,
           "source_channels": [
             "recent"
@@ -280,17 +291,6 @@
           "date": "2026-10-29T07:00:00+00:00",
           "publisher": "BBC",
           "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5wZ21XVDFZdkRRTFFNSUd4OHdjRlcwV3Z5aDhUOWFvMS12WUg1Qk42SWpSdUJmUUY3dVF0RmsxU0IzMnhsV0NOLU9WTDZ1cndiUm5Sd3FtSTd5eU1rVUE?oc=5",
-          "geography": null,
-          "source_channels": [
-            "recent"
-          ]
-        },
-        {
-          "id": "83eac7077c38f16554b3",
-          "title": "Canada crypto fraud case heads to jury in Pleterski trial - Traders Union",
-          "date": "2026-10-28T21:39:29+00:00",
-          "publisher": "Traders Union",
-          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNT2hUOGlfVkExNVF1ZXhxRk5jNFVwckdHRm1WU1p1VTMyekRfS3ZycXN1YTdXdzY4MHVHX2F4N3ZkT1FDUktiNDJDVDB2YnFpTFZjWDRBTkR3YjBjWWFDOXVNYURLWGhGUVNUY1VRMnEtNWpkeDBhTmFMMnZXVEJhTXJFenFWLXgxTTFwQWphVmVuTzVFcFZYRFFGcndZS3dX?oc=5",
           "geography": null,
           "source_channels": [
             "recent"
@@ -3165,8 +3165,8 @@
       }
     }
   ],
-  "generated_at": "2026-11-19T12:49:02+00:00",
-  "articles_analyzed": 2918,
+  "generated_at": "2026-11-19T21:19:29+00:00",
+  "articles_analyzed": 2919,
   "methodology": "MULTI-LABEL keyword classification of unique article TITLES by publication year; multiple theme counts can arise from one headline. Year-to-year article counts reflect discovery methods, changing news coverage, and archived source availability, NOT measured changes in fraud incidence. Bank/platform mentions are not accusations and never counted as confirmed enforcement.",
   "scope": "Canadian financial-crime news discovery",
   "data_quality": "Headlines only; no full-article automated fact checking. Counts can change as the archive expands."
