@@ -27,9 +27,9 @@
         "2023": 28,
         "2024": 36,
         "2025": 48,
-        "2026": 92
+        "2026": 91
       },
-      "total_headlines": 231,
+      "total_headlines": 230,
       "publisher_count": 69,
       "examples": [
         {
@@ -587,9 +587,9 @@
         "2023": 18,
         "2024": 20,
         "2025": 20,
-        "2026": 47
+        "2026": 48
       },
-      "total_headlines": 132,
+      "total_headlines": 133,
       "publisher_count": 42,
       "examples": [
         {
@@ -620,6 +620,17 @@
           "date": "2026-11-10T15:32:57+00:00",
           "publisher": "miltonnow.ca",
           "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPUU9CMnVEclZRNjh1cG1FTUpnSjQwWU1pSW1NMlFEVW55N2hFekVNbGNQbG9MMXk2MjhDT1BsMHBReUNhSHJFbHdScldER3UtMWYzdXpIWkVJMWM0cU52cVU2X3RTQ1FnQ1d4VG1jZzlQWHhhdjB2X21kYkJCQjJJYXVIWTlWQWNXeUhYS21jVUdiMy16RjNkTHp3OUJZUVBwNktVdW85UmNSVGRZUHV1TmhYUEJBSUxBdHlYVkZ3?oc=5",
+          "geography": null,
+          "source_channels": [
+            "recent"
+          ]
+        },
+        {
+          "id": "bf186ed4e3cdb31b16d8",
+          "title": "Ex-secretary of Serbian Orthodox Diocese of Canada charged with fraud after more than $200K redirected: police (Jovan Marjanac) - Reddit",
+          "date": "2026-11-07T08:00:00+00:00",
+          "publisher": "Reddit",
+          "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNbGp6SDZQbEhYTm1pWG9lOUdFSFNnd1JybDQtOWM0ZkhxaVYwNVBUMDNyTElqZnNPSlFoMTFuVGVoTmhOeHd0aXBhVkJNcXI3bUxMb2hiSlh3dmhGOXI0dmxqYW84QjFVa2d1TThTSkNvWTAtLTEzbE9fNUVmMENhTml0R05MY0xvRWlKcjNGQ2dicGtLeEthbUduWXRqd19zcG8yLXdTRnVKUQ?oc=5",
           "geography": null,
           "source_channels": [
             "recent"
@@ -845,17 +856,6 @@
           "publisher": "CBC",
           "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBxdjkzakY0OVg1cTQ3bG43dmx5SkNKVGRxZGh6cHctVFZzb2YxOVc1S3lfY3RHMTNGdVhpMXl6VWNLbThLUldlOGc4c0FZMzd5TGdwMTZYMV96SFJyWjAyZTFBQjVsT1hldVlyYlRyZjBvX3FuTjRBNUhTdXlPQUU?oc=5",
           "geography": null,
-          "source_channels": [
-            "historical"
-          ]
-        },
-        {
-          "id": "4b6db71cbc8c88859f90",
-          "title": "Ottawa man charged with fraudulent sale of shipping containers - Cornwall Standard Freeholder",
-          "date": "2026-09-09T07:00:00+00:00",
-          "publisher": "Cornwall Standard Freeholder",
-          "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOZE1PXzhIN2NHclFrVWFIMHQ0S3dSbl9RVloyQjRibC10b1ItREt1RHpQZ0V0d1ZGZHQxekdZMmVKTXBfV2hCV1hOcW55VGZUaWxTaUNyRXhqNV9ZVjMxbnJyWnVkZzMzUWVsdHM5UVlIUTRwX0JyZEtpeHhpb2czd2RKX3lCbkVBWkE?oc=5",
-          "geography": "Ottawa, Ontario",
           "source_channels": [
             "historical"
           ]
@@ -3165,7 +3165,7 @@
       }
     }
   ],
-  "generated_at": "2026-11-18T23:04:26+00:00",
+  "generated_at": "2026-11-19T04:06:14+00:00",
   "articles_analyzed": 2917,
   "methodology": "MULTI-LABEL keyword classification of unique article TITLES by publication year; multiple theme counts can arise from one headline. Year-to-year article counts reflect discovery methods, changing news coverage, and archived source availability, NOT measured changes in fraud incidence. Bank/platform mentions are not accusations and never counted as confirmed enforcement.",
   "scope": "Canadian financial-crime news discovery",
