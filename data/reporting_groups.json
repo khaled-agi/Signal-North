@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T10:23:40+00:00",
+  "generated_at": "2026-11-20T18:47:55+00:00",
   "original_index_headlines": 2923,
   "reporting_groups": 2897,
   "multi_report_groups": 24,
@@ -7,6 +7,68 @@
   "headline_variation_groups": 39,
   "methodology": "Display-only high-similarity headline grouping within ten days; original article index preserved. Publisher-specific title wording and original links are retained in each detail view. Groups are not independently verified fraud incidents.",
   "groups": [
+    {
+      "id": "report-2819869fe0ca1c2ba2de",
+      "title": "Canadians suing Meta over investment scam ads - Money.ca",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPaHM0VThhYVN4ZVYxYXIzYmdnS1ZOcFA4aE5hS2FKUXQ2eWpFand3ZU1sRGo1ekd0VXFoM2FfaF96REtSQ1NseXJBMHJNcG45aEppWlVmVzQ4ZEN4VHhQVnVOdGRwNTJPYXpkLTFkZjhId0tEMlN2SXhuMTNEanZRU202emx5Z0dySmFJM19Gdkk0Nms?oc=5",
+      "publisher": "Money.ca",
+      "published_at": "2026-11-20T11:30:12+00:00",
+      "first_seen_at": "2026-11-20T18:47:41+00:00",
+      "last_observed_at": "2026-11-20T18:47:42+00:00",
+      "topics": [
+        "Investment schemes",
+        "Scams and victims"
+      ],
+      "category": "Investment fraud",
+      "evidence_status": "unverified_grouped_reporting",
+      "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "organizations_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
+      "institution": null,
+      "reported_loss": null,
+      "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness.",
+      "article_links": [
+        {
+          "title": "Canadians suing Meta over investment scam ads - Money.ca",
+          "publisher": "Money.ca",
+          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPaHM0VThhYVN4ZVYxYXIzYmdnS1ZOcFA4aE5hS2FKUXQ2eWpFand3ZU1sRGo1ekd0VXFoM2FfaF96REtSQ1NseXJBMHJNcG45aEppWlVmVzQ4ZEN4VHhQVnVOdGRwNTJPYXpkLTFkZjhId0tEMlN2SXhuMTNEanZRU202emx5Z0dySmFJM19Gdkk0Nms?oc=5",
+          "published_at": "2026-11-20T11:30:12+00:00",
+          "discovery_channel": "recent"
+        }
+      ],
+      "number_of_article_links": 1,
+      "source_channels": [
+        "recent"
+      ],
+      "review_status": "requires_source_review",
+      "index_note": "Article discovery record, not a confirmed individual incident or bank loss.",
+      "article_ids": [
+        "664dbdd441826af4d476"
+      ],
+      "fraud_themes": [
+        "Investment & crypto scams"
+      ],
+      "headline_variations": [
+        {
+          "title": "Canadians suing Meta over investment scam ads - Money.ca",
+          "publisher": "Money.ca",
+          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPaHM0VThhYVN4ZVYxYXIzYmdnS1ZOcFA4aE5hS2FKUXQ2eWpFand3ZU1sRGo1ekd0VXFoM2FfaF96REtSQ1NseXJBMHJNcG45aEppWlVmVzQ4ZEN4VHhQVnVOdGRwNTJPYXpkLTFkZjhId0tEMlN2SXhuMTNEanZRU202emx5Z0dySmFJM19Gdkk0Nms?oc=5",
+          "published_at": "2026-11-20T11:30:12+00:00",
+          "discovery_channel": "recent"
+        }
+      ],
+      "variation_count": 1,
+      "source_count": 1,
+      "underlying_headline_count": 1,
+      "geographic_relevance": "geography_unresolved",
+      "geographic_relevance_basis": "Headline alone does not establish incident geography. No inference from publisher domain.",
+      "grouping_basis": "conservative_headline_similarity_within_10_days",
+      "grouping_disclaimer": "Grouped reporting is not independently verified as one event; similarity does not prove the same underlying victim, incident, loss or misconduct."
+    },
     {
       "id": "report-6942feccbbc81e9126d2",
       "title": "Former TD Employee Avoids Prison in Quebec Bank Fraud - cwibc.co.id",
@@ -73,7 +135,7 @@
       "publisher": "Yahoo News Canada",
       "published_at": "2026-11-19T20:36:19+00:00",
       "first_seen_at": "2026-11-19T21:19:10+00:00",
-      "last_observed_at": "2026-11-20T10:23:31+00:00",
+      "last_observed_at": "2026-11-20T18:47:44+00:00",
       "topics": [
         "Social media scam reports"
       ],
@@ -211,7 +273,7 @@
       "publisher": "iPhone in Canada",
       "published_at": "2026-11-19T19:50:45+00:00",
       "first_seen_at": "2026-11-20T02:32:57+00:00",
-      "last_observed_at": "2026-11-20T10:23:29+00:00",
+      "last_observed_at": "2026-11-20T18:47:43+00:00",
       "topics": [
         "Fraud research and reports"
       ],
@@ -270,7 +332,7 @@
       "publisher": "India Today",
       "published_at": "2026-11-19T18:02:44+00:00",
       "first_seen_at": "2026-11-20T02:32:54+00:00",
-      "last_observed_at": "2026-11-20T10:23:28+00:00",
+      "last_observed_at": "2026-11-20T18:47:41+00:00",
       "topics": [
         "Scams and victims"
       ],
@@ -329,7 +391,7 @@
       "publisher": "The News Mill",
       "published_at": "2026-11-19T16:10:45+00:00",
       "first_seen_at": "2026-11-19T21:19:06+00:00",
-      "last_observed_at": "2026-11-20T10:23:28+00:00",
+      "last_observed_at": "2026-11-20T18:47:41+00:00",
       "topics": [
         "Scams and victims"
       ],
@@ -506,7 +568,7 @@
       "publisher": "CBC",
       "published_at": "2026-11-18T21:37:13+00:00",
       "first_seen_at": "2026-11-18T23:03:59+00:00",
-      "last_observed_at": "2026-11-20T10:23:28+00:00",
+      "last_observed_at": "2026-11-20T18:47:41+00:00",
       "topics": [
         "Scams and victims"
       ],
@@ -574,7 +636,7 @@
       "publisher": "CBC",
       "published_at": "2026-11-18T17:09:42+00:00",
       "first_seen_at": "2026-11-18T23:03:59+00:00",
-      "last_observed_at": "2026-11-20T10:23:28+00:00",
+      "last_observed_at": "2026-11-20T18:47:41+00:00",
       "topics": [
         "Scams and victims"
       ],
@@ -882,7 +944,7 @@
       "publisher": "CTV News",
       "published_at": "2026-11-17T22:31:27+00:00",
       "first_seen_at": "2026-11-17T23:49:43+00:00",
-      "last_observed_at": "2026-11-20T10:23:31+00:00",
+      "last_observed_at": "2026-11-20T18:47:44+00:00",
       "topics": [
         "Police investigations",
         "Social media scam reports"
@@ -1003,7 +1065,7 @@
       "publisher": "CBC",
       "published_at": "2026-11-17T21:21:08+00:00",
       "first_seen_at": "2026-11-17T23:49:43+00:00",
-      "last_observed_at": "2026-11-20T10:23:28+00:00",
+      "last_observed_at": "2026-11-20T18:47:41+00:00",
       "topics": [
         "Scams and victims"
       ],
@@ -1115,6 +1177,65 @@
       "grouping_disclaimer": "Grouped reporting is not independently verified as one event; similarity does not prove the same underlying victim, incident, loss or misconduct."
     },
     {
+      "id": "report-e6554c924350a4d71646",
+      "title": "Koho says it’s going after fraudsters who used a tech glitch to falsely credit accounts - The Logic",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1FVUhNRXJsRHRmQ3B0NTFLVVA1dXRNd01fSnpWQk1VaUUzamRva0dONkxNTlBvdlVEYjRJdzFzUGNTamQwaHpkZngwRHVvTlJ5OVRTcEo2SUF6Zw?oc=5",
+      "publisher": "The Logic",
+      "published_at": "2026-11-17T18:47:56+00:00",
+      "first_seen_at": "2026-11-18T16:23:18+00:00",
+      "last_observed_at": "2026-11-20T18:47:43+00:00",
+      "topics": [
+        "Digital banking and fintech"
+      ],
+      "category": "Reported fraud",
+      "evidence_status": "unverified_grouped_reporting",
+      "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "organizations_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
+      "institution": null,
+      "reported_loss": null,
+      "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness.",
+      "article_links": [
+        {
+          "title": "Koho says it’s going after fraudsters who used a tech glitch to falsely credit accounts - The Logic",
+          "publisher": "The Logic",
+          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1FVUhNRXJsRHRmQ3B0NTFLVVA1dXRNd01fSnpWQk1VaUUzamRva0dONkxNTlBvdlVEYjRJdzFzUGNTamQwaHpkZngwRHVvTlJ5OVRTcEo2SUF6Zw?oc=5",
+          "published_at": "2026-11-17T18:47:56+00:00",
+          "discovery_channel": "recent"
+        }
+      ],
+      "number_of_article_links": 1,
+      "source_channels": [
+        "recent"
+      ],
+      "review_status": "requires_source_review",
+      "index_note": "Article discovery record, not a confirmed individual incident or bank loss.",
+      "article_ids": [
+        "ac7bdaff404540ded1e3"
+      ],
+      "fraud_themes": [],
+      "headline_variations": [
+        {
+          "title": "Koho says it’s going after fraudsters who used a tech glitch to falsely credit accounts - The Logic",
+          "publisher": "The Logic",
+          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1FVUhNRXJsRHRmQ3B0NTFLVVA1dXRNd01fSnpWQk1VaUUzamRva0dONkxNTlBvdlVEYjRJdzFzUGNTamQwaHpkZngwRHVvTlJ5OVRTcEo2SUF6Zw?oc=5",
+          "published_at": "2026-11-17T18:47:56+00:00",
+          "discovery_channel": "recent"
+        }
+      ],
+      "variation_count": 1,
+      "source_count": 1,
+      "underlying_headline_count": 1,
+      "geographic_relevance": "geography_unresolved",
+      "geographic_relevance_basis": "Headline alone does not establish incident geography. No inference from publisher domain.",
+      "grouping_basis": "conservative_headline_similarity_within_10_days",
+      "grouping_disclaimer": "Grouped reporting is not independently verified as one event; similarity does not prove the same underlying victim, incident, loss or misconduct."
+    },
+    {
       "id": "report-cac0a11f7cb69dcde096",
       "title": "75 young people arrested for social media contract crimes: Montreal police - CTV News",
       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPaXdpQ0lSTlNRUFVTREU1RDFMTUpWQjVxdUFaTGd3YjljM3JYVHJlUFdmNXQ3OUZHM1RYZ2dlZVhFdVk1OHR6TVBjSHVpY3B1dUVpczllbzFNYUFhQ3Q0YVk4RFpPUm8xci1naFZ1R2sxQW4yMVVrYVhjeG9KckZ0LTlmWXJ4bW1fVmZJRFhHWU85VkJYZkZNaG9JYWRQd0xHNG0tUHZhaWYzVWwwaExWWEJaWUQ?oc=5",
@@ -1185,7 +1306,7 @@
       "publisher": "CP24",
       "published_at": "2026-11-17T17:01:44+00:00",
       "first_seen_at": "2026-11-17T23:49:43+00:00",
-      "last_observed_at": "2026-11-20T10:23:28+00:00",
+      "last_observed_at": "2026-11-20T18:47:41+00:00",
       "topics": [
         "Police investigations"
       ],
@@ -1321,7 +1442,7 @@
       "publisher": "PR Newswire Canada",
       "published_at": "2026-11-17T16:00:00+00:00",
       "first_seen_at": "2026-11-17T17:02:42+00:00",
-      "last_observed_at": "2026-11-20T10:23:31+00:00",
+      "last_observed_at": "2026-11-20T18:47:44+00:00",
       "topics": [
         "Fraud research and reports",
         "Social media scam reports"
@@ -1398,8 +1519,8 @@
       "amount_strings_in_headline": [],
       "headline_case_candidate": false,
       "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
-      "first_seen_at": "2026-11-20T10:23:34+00:00",
-      "last_observed_at": "2026-11-20T10:23:34+00:00",
+      "first_seen_at": "2026-11-20T18:47:50+00:00",
+      "last_observed_at": "2026-11-20T18:47:50+00:00",
       "notice": "Article metadata / headline discovery only. Any mentioned bank, sum or location is not independently corroborated.",
       "article_links": [
         {
@@ -1508,7 +1629,7 @@
       "publisher": "Yahoo! Finance Canada",
       "published_at": "2026-11-17T13:00:00+00:00",
       "first_seen_at": "2026-11-17T23:49:46+00:00",
-      "last_observed_at": "2026-11-20T02:32:59+00:00",
+      "last_observed_at": "2026-11-20T18:47:44+00:00",
       "topics": [
         "Social media scam reports"
       ],
@@ -1561,22 +1682,24 @@
       "grouping_disclaimer": "Grouped reporting is not independently verified as one event; similarity does not prove the same underlying victim, incident, loss or misconduct."
     },
     {
-      "id": "report-e6554c924350a4d71646",
-      "title": "Koho says it’s going after fraudsters who used a tech glitch to falsely credit accounts - The Logic",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1FVUhNRXJsRHRmQ3B0NTFLVVA1dXRNd01fSnpWQk1VaUUzamRva0dONkxNTlBvdlVEYjRJdzFzUGNTamQwaHpkZngwRHVvTlJ5OVRTcEo2SUF6Zw?oc=5",
-      "publisher": "The Logic",
-      "published_at": "2026-11-17T10:45:00+00:00",
-      "first_seen_at": "2026-11-18T16:23:18+00:00",
-      "last_observed_at": "2026-11-20T10:23:29+00:00",
+      "id": "report-0e5413b52a107d073c76",
+      "title": "7 arrests. Police seize $16 million in cash, real estate, and vehicles from Alberta, BC money laundering operation - Todayville",
+      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxON0hsazNUWGVuQkpqeXp1all5WVVyTUItRmdhbzhQVEppeXN2NFFVX18xZHBUaVJBYXpBT3Q2VTlRT0s0OWFIdVVka3ZiQzRVOHdjV0lHMGlrbk14UU1nVFBZX2JrMHVFeVVEclFURi1qUGFxbG5YVEhRTWlfVllZLUFzOWttZHg0elMwNFEwYVdETFgtVDNaMWM0b01fNm9HQjM1MmZYaGI4VnhlTHFzeS11c2VMNXFMSk16cHVFdTFzb21SYjhHdnh4eXY0TU1KVklMdTdSNkVPbGR3ZGRB?oc=5",
+      "publisher": "Todayville",
+      "published_at": "2026-11-17T08:00:00+00:00",
+      "first_seen_at": "2026-10-29T21:42:52+00:00",
+      "last_observed_at": "2026-11-20T18:47:41+00:00",
       "topics": [
-        "Digital banking and fintech"
+        "Money laundering"
       ],
-      "category": "Reported fraud",
+      "category": "AML and laundering",
       "evidence_status": "unverified_grouped_reporting",
       "geographic_accuracy": "not_geocoded",
       "banks_mentioned_in_headline": [],
       "organizations_mentioned_in_headline": [],
-      "amount_strings_in_headline": [],
+      "amount_strings_in_headline": [
+        "$16 million"
+      ],
       "headline_case_candidate": false,
       "content_kind": "news_lead",
       "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
@@ -1585,10 +1708,10 @@
       "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness.",
       "article_links": [
         {
-          "title": "Koho says it’s going after fraudsters who used a tech glitch to falsely credit accounts - The Logic",
-          "publisher": "The Logic",
-          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1FVUhNRXJsRHRmQ3B0NTFLVVA1dXRNd01fSnpWQk1VaUUzamRva0dONkxNTlBvdlVEYjRJdzFzUGNTamQwaHpkZngwRHVvTlJ5OVRTcEo2SUF6Zw?oc=5",
-          "published_at": "2026-11-17T10:45:00+00:00",
+          "title": "7 arrests. Police seize $16 million in cash, real estate, and vehicles from Alberta, BC money laundering operation - Todayville",
+          "publisher": "Todayville",
+          "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxON0hsazNUWGVuQkpqeXp1all5WVVyTUItRmdhbzhQVEppeXN2NFFVX18xZHBUaVJBYXpBT3Q2VTlRT0s0OWFIdVVka3ZiQzRVOHdjV0lHMGlrbk14UU1nVFBZX2JrMHVFeVVEclFURi1qUGFxbG5YVEhRTWlfVllZLUFzOWttZHg0elMwNFEwYVdETFgtVDNaMWM0b01fNm9HQjM1MmZYaGI4VnhlTHFzeS11c2VMNXFMSk16cHVFdTFzb21SYjhHdnh4eXY0TU1KVklMdTdSNkVPbGR3ZGRB?oc=5",
+          "published_at": "2026-11-17T08:00:00+00:00",
           "discovery_channel": "recent"
         }
       ],
@@ -1599,23 +1722,25 @@
       "review_status": "requires_source_review",
       "index_note": "Article discovery record, not a confirmed individual incident or bank loss.",
       "article_ids": [
-        "ac7bdaff404540ded1e3"
+        "033b81d557de2902d608"
       ],
-      "fraud_themes": [],
+      "fraud_themes": [
+        "Money mules & laundering"
+      ],
       "headline_variations": [
         {
-          "title": "Koho says it’s going after fraudsters who used a tech glitch to falsely credit accounts - The Logic",
-          "publisher": "The Logic",
-          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1FVUhNRXJsRHRmQ3B0NTFLVVA1dXRNd01fSnpWQk1VaUUzamRva0dONkxNTlBvdlVEYjRJdzFzUGNTamQwaHpkZngwRHVvTlJ5OVRTcEo2SUF6Zw?oc=5",
-          "published_at": "2026-11-17T10:45:00+00:00",
+          "title": "7 arrests. Police seize $16 million in cash, real estate, and vehicles from Alberta, BC money laundering operation - Todayville",
+          "publisher": "Todayville",
+          "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxON0hsazNUWGVuQkpqeXp1all5WVVyTUItRmdhbzhQVEppeXN2NFFVX18xZHBUaVJBYXpBT3Q2VTlRT0s0OWFIdVVka3ZiQzRVOHdjV0lHMGlrbk14UU1nVFBZX2JrMHVFeVVEclFURi1qUGFxbG5YVEhRTWlfVllZLUFzOWttZHg0elMwNFEwYVdETFgtVDNaMWM0b01fNm9HQjM1MmZYaGI4VnhlTHFzeS11c2VMNXFMSk16cHVFdTFzb21SYjhHdnh4eXY0TU1KVklMdTdSNkVPbGR3ZGRB?oc=5",
+          "published_at": "2026-11-17T08:00:00+00:00",
           "discovery_channel": "recent"
         }
       ],
       "variation_count": 1,
       "source_count": 1,
       "underlying_headline_count": 1,
-      "geographic_relevance": "geography_unresolved",
-      "geographic_relevance_basis": "Headline alone does not establish incident geography. No inference from publisher domain.",
+      "geographic_relevance": "canadian_location_or_reference",
+      "geographic_relevance_basis": "Canadian geographic clue in title or curated headline city reference; not verified incident location.",
       "grouping_basis": "conservative_headline_similarity_within_10_days",
       "grouping_disclaimer": "Grouped reporting is not independently verified as one event; similarity does not prove the same underlying victim, incident, loss or misconduct."
     },
@@ -1626,9 +1751,10 @@
       "publisher": "The 420.in",
       "published_at": "2026-11-17T02:17:25+00:00",
       "first_seen_at": "2026-11-17T17:02:41+00:00",
-      "last_observed_at": "2026-11-20T10:23:30+00:00",
+      "last_observed_at": "2026-11-20T18:47:43+00:00",
       "topics": [
         "Crypto investment and exchange",
+        "Investment schemes",
         "Securities investigations"
       ],
       "category": "Investment fraud",
@@ -1893,7 +2019,7 @@
       "publisher": "U.Today",
       "published_at": "2026-11-16T15:18:05+00:00",
       "first_seen_at": "2026-11-16T23:50:07+00:00",
-      "last_observed_at": "2026-11-20T10:23:31+00:00",
+      "last_observed_at": "2026-11-20T18:47:44+00:00",
       "topics": [
         "Crypto investment and exchange",
         "Scams and victims",
@@ -1956,7 +2082,7 @@
       "publisher": "www.tokenpost.com",
       "published_at": "2026-11-16T15:09:49+00:00",
       "first_seen_at": "2026-11-16T23:50:11+00:00",
-      "last_observed_at": "2026-11-20T10:23:31+00:00",
+      "last_observed_at": "2026-11-20T18:47:44+00:00",
       "topics": [
         "Crypto investment and exchange",
         "Securities investigations"
@@ -2080,7 +2206,7 @@
       "publisher": "PR Newswire Canada",
       "published_at": "2026-11-16T15:05:00+00:00",
       "first_seen_at": "2026-11-16T23:50:12+00:00",
-      "last_observed_at": "2026-11-20T10:23:31+00:00",
+      "last_observed_at": "2026-11-20T18:47:44+00:00",
       "topics": [
         "Crypto investment and exchange",
         "Securities investigations"
@@ -2203,7 +2329,7 @@
       "publisher": "Reddit",
       "published_at": "2026-11-16T05:04:31+00:00",
       "first_seen_at": "2026-11-17T23:49:43+00:00",
-      "last_observed_at": "2026-11-20T02:32:54+00:00",
+      "last_observed_at": "2026-11-20T18:47:41+00:00",
       "topics": [
         "Police investigations"
       ],
@@ -2567,7 +2693,7 @@
       "publisher": "Everything Zoomer",
       "published_at": "2026-11-13T21:37:13+00:00",
       "first_seen_at": "2026-11-17T17:02:39+00:00",
-      "last_observed_at": "2026-11-20T10:23:29+00:00",
+      "last_observed_at": "2026-11-20T18:47:43+00:00",
       "topics": [
         "Bank and customer fraud",
         "Fraud research and reports"
@@ -2813,7 +2939,7 @@
       "publisher": "The Globe and Mail",
       "published_at": "2026-11-13T11:00:00+00:00",
       "first_seen_at": "2026-11-20T02:32:55+00:00",
-      "last_observed_at": "2026-11-20T02:32:55+00:00",
+      "last_observed_at": "2026-11-20T18:47:41+00:00",
       "topics": [
         "Money laundering"
       ],
@@ -2937,75 +3063,13 @@
       "grouping_disclaimer": "Grouped reporting is not independently verified as one event; similarity does not prove the same underlying victim, incident, loss or misconduct."
     },
     {
-      "id": "report-a1c8dc3cc2c6e4a5c540",
-      "title": "Quebec man gets 4-year prison term, nearly $1 million in fines for tax fraud - CTV News",
-      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNTS1KUFBSeEFJV2ZycU1zTlFDWEpWU1JTZ3E0WUxYcGVKZmtmWWJITklsSVhjZjJpc3hmajlvb091bmhRcGp0Z1Y1LUQ0UDJ6d1ZfSlI2eGl0ZEh3dzdCM3RzX0t6NUlEdWhWQ1piejFralJFQXRCVzR6SU5GZXhWSEk5M080cFlXMUN2TlU4MGlQSXpGcFhmOWNqQ0tMQ0s3cmp0YktUWmd6SFFVSkFOSVhhU3RUZw?oc=5",
-      "publisher": "CTV News",
-      "published_at": "2026-11-12T20:47:16+00:00",
-      "first_seen_at": "2026-11-14T01:27:25+00:00",
-      "last_observed_at": "2026-11-20T10:23:28+00:00",
-      "topics": [
-        "Police investigations",
-        "Social media scam reports"
-      ],
-      "category": "Reported fraud",
-      "evidence_status": "unverified_grouped_reporting",
-      "geographic_accuracy": "not_geocoded",
-      "banks_mentioned_in_headline": [],
-      "organizations_mentioned_in_headline": [],
-      "amount_strings_in_headline": [
-        "$1 million"
-      ],
-      "headline_case_candidate": true,
-      "content_kind": "news_lead",
-      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
-      "institution": null,
-      "reported_loss": null,
-      "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness.",
-      "article_links": [
-        {
-          "title": "Quebec man gets 4-year prison term, nearly $1 million in fines for tax fraud - CTV News",
-          "publisher": "CTV News",
-          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNTS1KUFBSeEFJV2ZycU1zTlFDWEpWU1JTZ3E0WUxYcGVKZmtmWWJITklsSVhjZjJpc3hmajlvb091bmhRcGp0Z1Y1LUQ0UDJ6d1ZfSlI2eGl0ZEh3dzdCM3RzX0t6NUlEdWhWQ1piejFralJFQXRCVzR6SU5GZXhWSEk5M080cFlXMUN2TlU4MGlQSXpGcFhmOWNqQ0tMQ0s3cmp0YktUWmd6SFFVSkFOSVhhU3RUZw?oc=5",
-          "published_at": "2026-11-12T20:47:16+00:00",
-          "discovery_channel": "recent"
-        }
-      ],
-      "number_of_article_links": 1,
-      "source_channels": [
-        "recent"
-      ],
-      "review_status": "requires_source_review",
-      "index_note": "Article discovery record, not a confirmed individual incident or bank loss.",
-      "article_ids": [
-        "cc8bfeab537691cadcf9"
-      ],
-      "fraud_themes": [],
-      "headline_variations": [
-        {
-          "title": "Quebec man gets 4-year prison term, nearly $1 million in fines for tax fraud - CTV News",
-          "publisher": "CTV News",
-          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNTS1KUFBSeEFJV2ZycU1zTlFDWEpWU1JTZ3E0WUxYcGVKZmtmWWJITklsSVhjZjJpc3hmajlvb091bmhRcGp0Z1Y1LUQ0UDJ6d1ZfSlI2eGl0ZEh3dzdCM3RzX0t6NUlEdWhWQ1piejFralJFQXRCVzR6SU5GZXhWSEk5M080cFlXMUN2TlU4MGlQSXpGcFhmOWNqQ0tMQ0s3cmp0YktUWmd6SFFVSkFOSVhhU3RUZw?oc=5",
-          "published_at": "2026-11-12T20:47:16+00:00",
-          "discovery_channel": "recent"
-        }
-      ],
-      "variation_count": 1,
-      "source_count": 1,
-      "underlying_headline_count": 1,
-      "geographic_relevance": "canadian_location_or_reference",
-      "geographic_relevance_basis": "Canadian geographic clue in title or curated headline city reference; not verified incident location.",
-      "grouping_basis": "conservative_headline_similarity_within_10_days",
-      "grouping_disclaimer": "Grouped reporting is not independently verified as one event; similarity does not prove the same underlying victim, incident, loss or misconduct."
-    },
-    {
       "id": "report-24a55bec5152b1bdd102",
       "title": "Fraudster sentenced over £1m jewellery scam - Yahoo News Canada",
       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPek5NckdESV9VVzJVS3BoZC1zbkVVWUZqbXF2d0RSZmJLWnVhaHpNOXRtN1B1Tm55SHZBaUpQTFZROEJTcHBBaDZSY01SWDdyUjdNVFM5RWppNndzdm00N2MxekhMVnhzbnFaYTYxY1dzdzh4aXFDQ3F0MHlFa0RpdXN4UXY?oc=5",
       "publisher": "Yahoo News Canada",
       "published_at": "2026-11-12T17:58:59+00:00",
       "first_seen_at": "2026-11-13T14:28:46+00:00",
-      "last_observed_at": "2026-11-20T10:23:28+00:00",
+      "last_observed_at": "2026-11-20T18:47:41+00:00",
       "topics": [
         "Scams and victims"
       ],
@@ -3046,72 +3110,6 @@
           "publisher": "Yahoo News Canada",
           "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPek5NckdESV9VVzJVS3BoZC1zbkVVWUZqbXF2d0RSZmJLWnVhaHpNOXRtN1B1Tm55SHZBaUpQTFZROEJTcHBBaDZSY01SWDdyUjdNVFM5RWppNndzdm00N2MxekhMVnhzbnFaYTYxY1dzdzh4aXFDQ3F0MHlFa0RpdXN4UXY?oc=5",
           "published_at": "2026-11-12T17:58:59+00:00",
-          "discovery_channel": "recent"
-        }
-      ],
-      "variation_count": 1,
-      "source_count": 1,
-      "underlying_headline_count": 1,
-      "geographic_relevance": "canadian_location_or_reference",
-      "geographic_relevance_basis": "Canadian geographic clue in title or curated headline city reference; not verified incident location.",
-      "grouping_basis": "conservative_headline_similarity_within_10_days",
-      "grouping_disclaimer": "Grouped reporting is not independently verified as one event; similarity does not prove the same underlying victim, incident, loss or misconduct."
-    },
-    {
-      "id": "report-b1f94c8f2fb9588de185",
-      "title": "Regina police lay charges for internal theft, fraud at business exceeding $1 million - CTV News",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQN2hSc2VXYUd6TkM2OG1GYS1WRXBGLTd0QzROYzdkcFlPYTRPYWpMY3lvMk9hVHVCRmZDTFlGd05Hdk85NTZyR1Z3NkhQSkpmUGV2REJNc1lEVlc0bkRSc0lOdnhQNDBOcWRna251SkdVSWY2U2xJdTZVZHVQczU2bUdFUUtoVTBFLUplekpaem5QbHd5OEFEdE5UQnE3NXhXcG1hRzF1VmVzWXExRnJJd1BHT2pfM1RURFU5YzNB?oc=5",
-      "publisher": "CTV News",
-      "published_at": "2026-11-12T17:07:42+00:00",
-      "first_seen_at": "2026-11-12T18:36:58+00:00",
-      "last_observed_at": "2026-11-20T10:23:28+00:00",
-      "topics": [
-        "Police investigations"
-      ],
-      "category": "Reported fraud",
-      "evidence_status": "unverified_grouped_reporting",
-      "geographic_accuracy": "headline_only",
-      "banks_mentioned_in_headline": [],
-      "organizations_mentioned_in_headline": [],
-      "amount_strings_in_headline": [
-        "$1 million"
-      ],
-      "headline_case_candidate": false,
-      "content_kind": "news_lead",
-      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
-      "institution": null,
-      "reported_loss": null,
-      "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness.",
-      "map_location": "Regina, Saskatchewan",
-      "map_latitude": 50.4452,
-      "map_longitude": -104.6189,
-      "map_province": "SK",
-      "map_role": "headline city mention only; incident location unverified",
-      "article_links": [
-        {
-          "title": "Regina police lay charges for internal theft, fraud at business exceeding $1 million - CTV News",
-          "publisher": "CTV News",
-          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQN2hSc2VXYUd6TkM2OG1GYS1WRXBGLTd0QzROYzdkcFlPYTRPYWpMY3lvMk9hVHVCRmZDTFlGd05Hdk85NTZyR1Z3NkhQSkpmUGV2REJNc1lEVlc0bkRSc0lOdnhQNDBOcWRna251SkdVSWY2U2xJdTZVZHVQczU2bUdFUUtoVTBFLUplekpaem5QbHd5OEFEdE5UQnE3NXhXcG1hRzF1VmVzWXExRnJJd1BHT2pfM1RURFU5YzNB?oc=5",
-          "published_at": "2026-11-12T17:07:42+00:00",
-          "discovery_channel": "recent"
-        }
-      ],
-      "number_of_article_links": 1,
-      "source_channels": [
-        "recent"
-      ],
-      "review_status": "requires_source_review",
-      "index_note": "Article discovery record, not a confirmed individual incident or bank loss.",
-      "article_ids": [
-        "6f9a432ffa5002d4f08c"
-      ],
-      "fraud_themes": [],
-      "headline_variations": [
-        {
-          "title": "Regina police lay charges for internal theft, fraud at business exceeding $1 million - CTV News",
-          "publisher": "CTV News",
-          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQN2hSc2VXYUd6TkM2OG1GYS1WRXBGLTd0QzROYzdkcFlPYTRPYWpMY3lvMk9hVHVCRmZDTFlGd05Hdk85NTZyR1Z3NkhQSkpmUGV2REJNc1lEVlc0bkRSc0lOdnhQNDBOcWRna251SkdVSWY2U2xJdTZVZHVQczU2bUdFUUtoVTBFLUplekpaem5QbHd5OEFEdE5UQnE3NXhXcG1hRzF1VmVzWXExRnJJd1BHT2pfM1RURFU5YzNB?oc=5",
-          "published_at": "2026-11-12T17:07:42+00:00",
           "discovery_channel": "recent"
         }
       ],
@@ -3198,73 +3196,13 @@
       "grouping_disclaimer": "Grouped reporting is not independently verified as one event; similarity does not prove the same underlying victim, incident, loss or misconduct."
     },
     {
-      "id": "report-dba82a74fb168a7ef576",
-      "title": "Two men suspected of fraud wanted by OPP - CTV News",
-      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxORk9uV29wcnp2OEtvQzBwNEdzbUU0Q1F4SEMyV0RJOUVCa25hZlRMNU9QeDdJTURGWGRyV3hkT1M0VnRnXy1QczFmbzU3ajZUakJIR2xUMFo2c3poaXpLRDgzX2ozczl0X2hxZXRXRVZXZGtFT0FCNmpraEVZdlE1U29yM1p1Nndvak9vTld4d0c0ZTA?oc=5",
-      "publisher": "CTV News",
-      "published_at": "2026-11-12T13:49:55+00:00",
-      "first_seen_at": "2026-11-12T23:53:25+00:00",
-      "last_observed_at": "2026-11-20T10:23:28+00:00",
-      "topics": [
-        "Police investigations",
-        "Social media scam reports"
-      ],
-      "category": "Reported fraud",
-      "evidence_status": "unverified_grouped_reporting",
-      "geographic_accuracy": "not_geocoded",
-      "banks_mentioned_in_headline": [],
-      "organizations_mentioned_in_headline": [],
-      "amount_strings_in_headline": [],
-      "headline_case_candidate": false,
-      "content_kind": "news_lead",
-      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
-      "institution": null,
-      "reported_loss": null,
-      "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness.",
-      "article_links": [
-        {
-          "title": "Two men suspected of fraud wanted by OPP - CTV News",
-          "publisher": "CTV News",
-          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxORk9uV29wcnp2OEtvQzBwNEdzbUU0Q1F4SEMyV0RJOUVCa25hZlRMNU9QeDdJTURGWGRyV3hkT1M0VnRnXy1QczFmbzU3ajZUakJIR2xUMFo2c3poaXpLRDgzX2ozczl0X2hxZXRXRVZXZGtFT0FCNmpraEVZdlE1U29yM1p1Nndvak9vTld4d0c0ZTA?oc=5",
-          "published_at": "2026-11-12T13:49:55+00:00",
-          "discovery_channel": "recent"
-        }
-      ],
-      "number_of_article_links": 1,
-      "source_channels": [
-        "recent"
-      ],
-      "review_status": "requires_source_review",
-      "index_note": "Article discovery record, not a confirmed individual incident or bank loss.",
-      "article_ids": [
-        "62226a915a9f7dede360"
-      ],
-      "fraud_themes": [],
-      "headline_variations": [
-        {
-          "title": "Two men suspected of fraud wanted by OPP - CTV News",
-          "publisher": "CTV News",
-          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxORk9uV29wcnp2OEtvQzBwNEdzbUU0Q1F4SEMyV0RJOUVCa25hZlRMNU9QeDdJTURGWGRyV3hkT1M0VnRnXy1QczFmbzU3ajZUakJIR2xUMFo2c3poaXpLRDgzX2ozczl0X2hxZXRXRVZXZGtFT0FCNmpraEVZdlE1U29yM1p1Nndvak9vTld4d0c0ZTA?oc=5",
-          "published_at": "2026-11-12T13:49:55+00:00",
-          "discovery_channel": "recent"
-        }
-      ],
-      "variation_count": 1,
-      "source_count": 1,
-      "underlying_headline_count": 1,
-      "geographic_relevance": "geography_unresolved",
-      "geographic_relevance_basis": "Headline alone does not establish incident geography. No inference from publisher domain.",
-      "grouping_basis": "conservative_headline_similarity_within_10_days",
-      "grouping_disclaimer": "Grouped reporting is not independently verified as one event; similarity does not prove the same underlying victim, incident, loss or misconduct."
-    },
-    {
       "id": "report-23c5fc30fa27af0d9367",
       "title": "His face was used to scam people. Now victims are coming after him. - Yahoo News Canada",
       "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFA1Y0hJUkdsUXhZMDBFamdDbmtVUmJJLVpfaDFfYmRtVGJzaXE1b2VNbjU0bWg3QS1YNmJtc3Z2TE9PYmxfNkVSSGg5UDJOU2R5MzdVbDJTYUw5WjRIcHlodmFnOHg1b1FKRWV1N2RCeWd1LTBw?oc=5",
       "publisher": "Yahoo News Canada",
       "published_at": "2026-11-12T13:03:39+00:00",
       "first_seen_at": "2026-11-12T18:36:58+00:00",
-      "last_observed_at": "2026-11-20T10:23:28+00:00",
+      "last_observed_at": "2026-11-20T18:47:41+00:00",
       "topics": [
         "Scams and victims"
       ],
@@ -3376,13 +3314,201 @@
       "grouping_disclaimer": "Grouped reporting is not independently verified as one event; similarity does not prove the same underlying victim, incident, loss or misconduct."
     },
     {
+      "id": "report-a1c8dc3cc2c6e4a5c540",
+      "title": "Quebec man gets 4-year prison term, nearly $1 million in fines for tax fraud - CTV News",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNTS1KUFBSeEFJV2ZycU1zTlFDWEpWU1JTZ3E0WUxYcGVKZmtmWWJITklsSVhjZjJpc3hmajlvb091bmhRcGp0Z1Y1LUQ0UDJ6d1ZfSlI2eGl0ZEh3dzdCM3RzX0t6NUlEdWhWQ1piejFralJFQXRCVzR6SU5GZXhWSEk5M080cFlXMUN2TlU4MGlQSXpGcFhmOWNqQ0tMQ0s3cmp0YktUWmd6SFFVSkFOSVhhU3RUZw?oc=5",
+      "publisher": "CTV News",
+      "published_at": "2026-11-12T08:00:00+00:00",
+      "first_seen_at": "2026-11-14T01:27:25+00:00",
+      "last_observed_at": "2026-11-20T18:47:41+00:00",
+      "topics": [
+        "Police investigations",
+        "Social media scam reports"
+      ],
+      "category": "Reported fraud",
+      "evidence_status": "unverified_grouped_reporting",
+      "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "organizations_mentioned_in_headline": [],
+      "amount_strings_in_headline": [
+        "$1 million"
+      ],
+      "headline_case_candidate": true,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
+      "institution": null,
+      "reported_loss": null,
+      "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness.",
+      "article_links": [
+        {
+          "title": "Quebec man gets 4-year prison term, nearly $1 million in fines for tax fraud - CTV News",
+          "publisher": "CTV News",
+          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNTS1KUFBSeEFJV2ZycU1zTlFDWEpWU1JTZ3E0WUxYcGVKZmtmWWJITklsSVhjZjJpc3hmajlvb091bmhRcGp0Z1Y1LUQ0UDJ6d1ZfSlI2eGl0ZEh3dzdCM3RzX0t6NUlEdWhWQ1piejFralJFQXRCVzR6SU5GZXhWSEk5M080cFlXMUN2TlU4MGlQSXpGcFhmOWNqQ0tMQ0s3cmp0YktUWmd6SFFVSkFOSVhhU3RUZw?oc=5",
+          "published_at": "2026-11-12T08:00:00+00:00",
+          "discovery_channel": "recent"
+        }
+      ],
+      "number_of_article_links": 1,
+      "source_channels": [
+        "recent"
+      ],
+      "review_status": "requires_source_review",
+      "index_note": "Article discovery record, not a confirmed individual incident or bank loss.",
+      "article_ids": [
+        "cc8bfeab537691cadcf9"
+      ],
+      "fraud_themes": [],
+      "headline_variations": [
+        {
+          "title": "Quebec man gets 4-year prison term, nearly $1 million in fines for tax fraud - CTV News",
+          "publisher": "CTV News",
+          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNTS1KUFBSeEFJV2ZycU1zTlFDWEpWU1JTZ3E0WUxYcGVKZmtmWWJITklsSVhjZjJpc3hmajlvb091bmhRcGp0Z1Y1LUQ0UDJ6d1ZfSlI2eGl0ZEh3dzdCM3RzX0t6NUlEdWhWQ1piejFralJFQXRCVzR6SU5GZXhWSEk5M080cFlXMUN2TlU4MGlQSXpGcFhmOWNqQ0tMQ0s3cmp0YktUWmd6SFFVSkFOSVhhU3RUZw?oc=5",
+          "published_at": "2026-11-12T08:00:00+00:00",
+          "discovery_channel": "recent"
+        }
+      ],
+      "variation_count": 1,
+      "source_count": 1,
+      "underlying_headline_count": 1,
+      "geographic_relevance": "canadian_location_or_reference",
+      "geographic_relevance_basis": "Canadian geographic clue in title or curated headline city reference; not verified incident location.",
+      "grouping_basis": "conservative_headline_similarity_within_10_days",
+      "grouping_disclaimer": "Grouped reporting is not independently verified as one event; similarity does not prove the same underlying victim, incident, loss or misconduct."
+    },
+    {
+      "id": "report-b1f94c8f2fb9588de185",
+      "title": "Regina police lay charges for internal theft, fraud at business exceeding $1 million - CTV News",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQN2hSc2VXYUd6TkM2OG1GYS1WRXBGLTd0QzROYzdkcFlPYTRPYWpMY3lvMk9hVHVCRmZDTFlGd05Hdk85NTZyR1Z3NkhQSkpmUGV2REJNc1lEVlc0bkRSc0lOdnhQNDBOcWRna251SkdVSWY2U2xJdTZVZHVQczU2bUdFUUtoVTBFLUplekpaem5QbHd5OEFEdE5UQnE3NXhXcG1hRzF1VmVzWXExRnJJd1BHT2pfM1RURFU5YzNB?oc=5",
+      "publisher": "CTV News",
+      "published_at": "2026-11-12T08:00:00+00:00",
+      "first_seen_at": "2026-11-12T18:36:58+00:00",
+      "last_observed_at": "2026-11-20T18:47:41+00:00",
+      "topics": [
+        "Police investigations"
+      ],
+      "category": "Reported fraud",
+      "evidence_status": "unverified_grouped_reporting",
+      "geographic_accuracy": "headline_only",
+      "banks_mentioned_in_headline": [],
+      "organizations_mentioned_in_headline": [],
+      "amount_strings_in_headline": [
+        "$1 million"
+      ],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
+      "institution": null,
+      "reported_loss": null,
+      "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness.",
+      "map_location": "Regina, Saskatchewan",
+      "map_latitude": 50.4452,
+      "map_longitude": -104.6189,
+      "map_province": "SK",
+      "map_role": "headline city mention only; incident location unverified",
+      "article_links": [
+        {
+          "title": "Regina police lay charges for internal theft, fraud at business exceeding $1 million - CTV News",
+          "publisher": "CTV News",
+          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQN2hSc2VXYUd6TkM2OG1GYS1WRXBGLTd0QzROYzdkcFlPYTRPYWpMY3lvMk9hVHVCRmZDTFlGd05Hdk85NTZyR1Z3NkhQSkpmUGV2REJNc1lEVlc0bkRSc0lOdnhQNDBOcWRna251SkdVSWY2U2xJdTZVZHVQczU2bUdFUUtoVTBFLUplekpaem5QbHd5OEFEdE5UQnE3NXhXcG1hRzF1VmVzWXExRnJJd1BHT2pfM1RURFU5YzNB?oc=5",
+          "published_at": "2026-11-12T08:00:00+00:00",
+          "discovery_channel": "recent"
+        }
+      ],
+      "number_of_article_links": 1,
+      "source_channels": [
+        "recent"
+      ],
+      "review_status": "requires_source_review",
+      "index_note": "Article discovery record, not a confirmed individual incident or bank loss.",
+      "article_ids": [
+        "6f9a432ffa5002d4f08c"
+      ],
+      "fraud_themes": [],
+      "headline_variations": [
+        {
+          "title": "Regina police lay charges for internal theft, fraud at business exceeding $1 million - CTV News",
+          "publisher": "CTV News",
+          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQN2hSc2VXYUd6TkM2OG1GYS1WRXBGLTd0QzROYzdkcFlPYTRPYWpMY3lvMk9hVHVCRmZDTFlGd05Hdk85NTZyR1Z3NkhQSkpmUGV2REJNc1lEVlc0bkRSc0lOdnhQNDBOcWRna251SkdVSWY2U2xJdTZVZHVQczU2bUdFUUtoVTBFLUplekpaem5QbHd5OEFEdE5UQnE3NXhXcG1hRzF1VmVzWXExRnJJd1BHT2pfM1RURFU5YzNB?oc=5",
+          "published_at": "2026-11-12T08:00:00+00:00",
+          "discovery_channel": "recent"
+        }
+      ],
+      "variation_count": 1,
+      "source_count": 1,
+      "underlying_headline_count": 1,
+      "geographic_relevance": "canadian_location_or_reference",
+      "geographic_relevance_basis": "Canadian geographic clue in title or curated headline city reference; not verified incident location.",
+      "grouping_basis": "conservative_headline_similarity_within_10_days",
+      "grouping_disclaimer": "Grouped reporting is not independently verified as one event; similarity does not prove the same underlying victim, incident, loss or misconduct."
+    },
+    {
+      "id": "report-dba82a74fb168a7ef576",
+      "title": "Two men suspected of fraud wanted by OPP - CTV News",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxORk9uV29wcnp2OEtvQzBwNEdzbUU0Q1F4SEMyV0RJOUVCa25hZlRMNU9QeDdJTURGWGRyV3hkT1M0VnRnXy1QczFmbzU3ajZUakJIR2xUMFo2c3poaXpLRDgzX2ozczl0X2hxZXRXRVZXZGtFT0FCNmpraEVZdlE1U29yM1p1Nndvak9vTld4d0c0ZTA?oc=5",
+      "publisher": "CTV News",
+      "published_at": "2026-11-12T08:00:00+00:00",
+      "first_seen_at": "2026-11-12T23:53:25+00:00",
+      "last_observed_at": "2026-11-20T18:47:41+00:00",
+      "topics": [
+        "Police investigations",
+        "Social media scam reports"
+      ],
+      "category": "Reported fraud",
+      "evidence_status": "unverified_grouped_reporting",
+      "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "organizations_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": false,
+      "content_kind": "news_lead",
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
+      "institution": null,
+      "reported_loss": null,
+      "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness.",
+      "article_links": [
+        {
+          "title": "Two men suspected of fraud wanted by OPP - CTV News",
+          "publisher": "CTV News",
+          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxORk9uV29wcnp2OEtvQzBwNEdzbUU0Q1F4SEMyV0RJOUVCa25hZlRMNU9QeDdJTURGWGRyV3hkT1M0VnRnXy1QczFmbzU3ajZUakJIR2xUMFo2c3poaXpLRDgzX2ozczl0X2hxZXRXRVZXZGtFT0FCNmpraEVZdlE1U29yM1p1Nndvak9vTld4d0c0ZTA?oc=5",
+          "published_at": "2026-11-12T08:00:00+00:00",
+          "discovery_channel": "recent"
+        }
+      ],
+      "number_of_article_links": 1,
+      "source_channels": [
+        "recent"
+      ],
+      "review_status": "requires_source_review",
+      "index_note": "Article discovery record, not a confirmed individual incident or bank loss.",
+      "article_ids": [
+        "62226a915a9f7dede360"
+      ],
+      "fraud_themes": [],
+      "headline_variations": [
+        {
+          "title": "Two men suspected of fraud wanted by OPP - CTV News",
+          "publisher": "CTV News",
+          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxORk9uV29wcnp2OEtvQzBwNEdzbUU0Q1F4SEMyV0RJOUVCa25hZlRMNU9QeDdJTURGWGRyV3hkT1M0VnRnXy1QczFmbzU3ajZUakJIR2xUMFo2c3poaXpLRDgzX2ozczl0X2hxZXRXRVZXZGtFT0FCNmpraEVZdlE1U29yM1p1Nndvak9vTld4d0c0ZTA?oc=5",
+          "published_at": "2026-11-12T08:00:00+00:00",
+          "discovery_channel": "recent"
+        }
+      ],
+      "variation_count": 1,
+      "source_count": 1,
+      "underlying_headline_count": 1,
+      "geographic_relevance": "geography_unresolved",
+      "geographic_relevance_basis": "Headline alone does not establish incident geography. No inference from publisher domain.",
+      "grouping_basis": "conservative_headline_similarity_within_10_days",
+      "grouping_disclaimer": "Grouped reporting is not independently verified as one event; similarity does not prove the same underlying victim, incident, loss or misconduct."
+    },
+    {
       "id": "report-7c2f3f392fdd2af4cb55",
       "title": "Construction company owner charged after $56K home construction project left unfinished in Ajax: police - CTV News",
       "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxOcG5mQ2ZtbEVrc2g1dHB5eUdUV180d3FBVmZLY29iUTFwZDcxRHA5VXZ1emtLTGhYVFdmUVdBRTZiT1pXSFFPTV9QYXp2UG9fS0RrMG9TYzYzOFhmcldwZjRfRmVWUnZoYzRoYk9GWXY4VERfQnFlNUJSZ3pyOWRLVUpjUXhEZW9lTVpPYkFiaWVrWTc0QUhFa0FjXzF5S05ZN2RhRzFXN3YzY2FoWUREYU1qSWNncVFBN0lubXprRk9LQjRjRVVZODR5TFZHZXhhZGRwSzB5NDJhZlBIZnZkQnZYLUhpMjlpUGc?oc=5",
       "publisher": "CTV News",
       "published_at": "2026-11-12T08:00:00+00:00",
       "first_seen_at": "2026-11-12T18:36:58+00:00",
-      "last_observed_at": "2026-11-20T10:23:28+00:00",
+      "last_observed_at": "2026-11-20T18:47:41+00:00",
       "topics": [
         "Police investigations"
       ],
@@ -3443,7 +3569,7 @@
       "publisher": "Yahoo! Finance Canada",
       "published_at": "2026-11-11T17:02:00+00:00",
       "first_seen_at": "2026-11-19T21:19:06+00:00",
-      "last_observed_at": "2026-11-20T10:23:28+00:00",
+      "last_observed_at": "2026-11-20T18:47:41+00:00",
       "topics": [
         "Scams and victims"
       ],
@@ -3825,7 +3951,7 @@
       "publisher": "Tech Times",
       "published_at": "2026-11-10T10:38:15+00:00",
       "first_seen_at": "2026-11-10T10:57:22+00:00",
-      "last_observed_at": "2026-11-20T10:23:29+00:00",
+      "last_observed_at": "2026-11-20T18:47:41+00:00",
       "topics": [
         "Bank and customer fraud",
         "Digital banking and fintech",
@@ -3946,7 +4072,7 @@
       "publisher": "CTV News",
       "published_at": "2026-11-10T08:00:00+00:00",
       "first_seen_at": "2026-11-10T23:41:28+00:00",
-      "last_observed_at": "2026-11-20T10:23:28+00:00",
+      "last_observed_at": "2026-11-20T18:47:41+00:00",
       "topics": [
         "Scams and victims"
       ],
@@ -4005,7 +4131,7 @@
       "publisher": "Canadian HR Reporter",
       "published_at": "2026-11-10T08:00:00+00:00",
       "first_seen_at": "2026-11-10T18:36:14+00:00",
-      "last_observed_at": "2026-11-20T10:23:28+00:00",
+      "last_observed_at": "2026-11-20T18:47:41+00:00",
       "topics": [
         "Police investigations"
       ],
@@ -4371,7 +4497,7 @@
       "publisher": "RED FM Canada",
       "published_at": "2026-11-09T08:00:00+00:00",
       "first_seen_at": "2026-11-18T16:23:17+00:00",
-      "last_observed_at": "2026-11-19T12:48:37+00:00",
+      "last_observed_at": "2026-11-20T18:47:41+00:00",
       "topics": [
         "Police investigations"
       ],
@@ -4651,7 +4777,7 @@
       "publisher": "CTV News",
       "published_at": "2026-11-08T08:00:00+00:00",
       "first_seen_at": "2026-11-10T02:39:29+00:00",
-      "last_observed_at": "2026-11-20T02:32:54+00:00",
+      "last_observed_at": "2026-11-20T18:47:41+00:00",
       "topics": [
         "Police investigations"
       ],
@@ -4710,7 +4836,7 @@
       "publisher": "Money.ca",
       "published_at": "2026-11-08T08:00:00+00:00",
       "first_seen_at": "2026-11-08T12:10:02+00:00",
-      "last_observed_at": "2026-11-20T10:23:28+00:00",
+      "last_observed_at": "2026-11-20T18:47:41+00:00",
       "topics": [
         "Bank and customer fraud",
         "Fraud research and reports",
@@ -4771,7 +4897,7 @@
       "publisher": "Yahoo! Finance Canada",
       "published_at": "2026-11-08T08:00:00+00:00",
       "first_seen_at": "2026-11-08T18:04:14+00:00",
-      "last_observed_at": "2026-11-20T10:23:28+00:00",
+      "last_observed_at": "2026-11-20T18:47:41+00:00",
       "topics": [
         "Bank and customer fraud",
         "Scams and victims"
@@ -4835,7 +4961,7 @@
       "publisher": "CBC",
       "published_at": "2026-11-08T08:00:00+00:00",
       "first_seen_at": "2026-11-08T18:04:14+00:00",
-      "last_observed_at": "2026-11-20T10:23:28+00:00",
+      "last_observed_at": "2026-11-20T18:47:41+00:00",
       "topics": [
         "Scams and victims"
       ],
@@ -4894,7 +5020,7 @@
       "publisher": "CityNews Montreal",
       "published_at": "2026-11-08T08:00:00+00:00",
       "first_seen_at": "2026-11-12T18:36:58+00:00",
-      "last_observed_at": "2026-11-20T10:23:28+00:00",
+      "last_observed_at": "2026-11-20T18:47:41+00:00",
       "topics": [
         "Police investigations"
       ],
@@ -5080,7 +5206,7 @@
       "publisher": "CTV News",
       "published_at": "2026-11-07T08:00:00+00:00",
       "first_seen_at": "2026-11-07T20:28:02+00:00",
-      "last_observed_at": "2026-11-20T10:23:28+00:00",
+      "last_observed_at": "2026-11-20T18:47:41+00:00",
       "topics": [
         "Scams and victims"
       ],
@@ -5917,7 +6043,7 @@
       "headline_case_candidate": false,
       "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "first_seen_at": "2026-11-05T17:37:25+00:00",
-      "last_observed_at": "2026-11-20T10:23:34+00:00",
+      "last_observed_at": "2026-11-20T18:47:51+00:00",
       "notice": "Article metadata / headline discovery only. Any mentioned bank, sum or location is not independently corroborated.",
       "article_links": [
         {
@@ -10606,7 +10732,7 @@
       "publisher": "BBC",
       "published_at": "2026-10-29T07:00:00+00:00",
       "first_seen_at": "2026-10-29T21:42:54+00:00",
-      "last_observed_at": "2026-11-20T10:23:30+00:00",
+      "last_observed_at": "2026-11-20T18:47:43+00:00",
       "topics": [
         "Crypto investment and exchange",
         "Police investigations",
@@ -10750,7 +10876,7 @@
       "publisher": "CBC",
       "published_at": "2026-10-29T07:00:00+00:00",
       "first_seen_at": "2026-10-29T16:49:05+00:00",
-      "last_observed_at": "2026-11-20T10:23:30+00:00",
+      "last_observed_at": "2026-11-20T18:47:43+00:00",
       "topics": [
         "Crypto investment and exchange"
       ],
@@ -11974,7 +12100,7 @@
       "publisher": "bloomingbit",
       "published_at": "2026-10-28T07:00:00+00:00",
       "first_seen_at": "2026-10-28T23:27:33+00:00",
-      "last_observed_at": "2026-11-20T10:23:30+00:00",
+      "last_observed_at": "2026-11-20T18:47:43+00:00",
       "topics": [
         "Crypto investment and exchange",
         "Social media scam reports"
@@ -12414,7 +12540,7 @@
       "publisher": "CBC",
       "published_at": "2026-10-28T07:00:00+00:00",
       "first_seen_at": "2026-10-28T23:27:33+00:00",
-      "last_observed_at": "2026-11-20T10:23:30+00:00",
+      "last_observed_at": "2026-11-20T18:47:43+00:00",
       "topics": [
         "Crypto investment and exchange"
       ],
@@ -12608,7 +12734,7 @@
       "publisher": "Rossland Telegraph",
       "published_at": "2026-10-28T07:00:00+00:00",
       "first_seen_at": "2026-10-28T19:25:33+00:00",
-      "last_observed_at": "2026-11-20T02:32:57+00:00",
+      "last_observed_at": "2026-11-20T18:47:43+00:00",
       "topics": [
         "Fraud research and reports",
         "Social media scam reports"
@@ -13487,7 +13613,7 @@
       "publisher": "CBC",
       "published_at": "2026-10-27T07:00:00+00:00",
       "first_seen_at": "2026-10-28T19:25:33+00:00",
-      "last_observed_at": "2026-11-20T10:23:29+00:00",
+      "last_observed_at": "2026-11-20T18:47:43+00:00",
       "topics": [
         "Fraud research and reports",
         "Social media scam reports"
@@ -13795,7 +13921,7 @@
       "publisher": "CBC",
       "published_at": "2026-10-27T07:00:00+00:00",
       "first_seen_at": "2026-10-27T17:50:25+00:00",
-      "last_observed_at": "2026-11-20T10:23:29+00:00",
+      "last_observed_at": "2026-11-20T18:47:43+00:00",
       "topics": [
         "Bank and customer fraud",
         "Fraud research and reports",
@@ -14025,69 +14151,6 @@
           "title": "Etobicoke man charged with fraud after posing as immigration lawyer, police say - Toronto Star",
           "publisher": "Toronto Star",
           "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNVDFhMmRnNGVYTFdqdXZRWUNOV0QzRE5iWnJ4Sm83MXNEMGFIb1lidDJ3VzdJVlhnNTlHdlhiRFhTWWNDaTRud0c3UXZhRmdBSndGWnJabnpfRkgtR3hnY2tuUWxxLWtoQUk3dFJoUEY5WDZ0ZEtGOGxHeGxtZDNVYnJBR0Jna0ZfQzBZbTF5VEgyempfMjNBaFNWX29KMHRQSlFaOFdxbHFFOUkwcjFtai1YS1FFZ2lQUmFmT19TRnQ1dmF6Q3ptVlNPTFJxRE5wN19SSXY1WTF3ZG1rYkNJZ3N2Vmk5NWFsSFVrcThnVklLOTQ?oc=5",
-          "published_at": "2026-10-27T07:00:00+00:00",
-          "discovery_channel": "recent"
-        }
-      ],
-      "variation_count": 1,
-      "source_count": 1,
-      "underlying_headline_count": 1,
-      "geographic_relevance": "canadian_location_or_reference",
-      "geographic_relevance_basis": "Canadian geographic clue in title or curated headline city reference; not verified incident location.",
-      "grouping_basis": "conservative_headline_similarity_within_10_days",
-      "grouping_disclaimer": "Grouped reporting is not independently verified as one event; similarity does not prove the same underlying victim, incident, loss or misconduct."
-    },
-    {
-      "id": "report-6eaa7f6ccbd75e18db65",
-      "title": "7 arrests. Police seize $16 million in cash, real estate, and vehicles from Alberta, BC money laundering operation - Todayville",
-      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxObGF4WXM2b29GX3FuLXR6TFl0SE90NVV4blVWWkhIOTR3VFBrQm9lY0VnemozMVZ5Um0zcGRFYkVxM0xjSFhMaExwUXBhb2l6OTJrbmkyUG1BTUFlQVNQck1aTDZEWWJvZVZORmhxMmNpYTMyVWNvNElXTmlPUDd3RW1teWloTnl0eHh4YkRCYzhoNGwyZlhDem5Yakl1d255S2lEQ3lUQmlEY040cnk1QUdFMnQyMVFEUmNfNURvb0trRU1DM0JzZnJOSjJ6aldMeDRF?oc=5",
-      "publisher": "Todayville",
-      "published_at": "2026-10-27T07:00:00+00:00",
-      "first_seen_at": "2026-10-29T21:42:52+00:00",
-      "last_observed_at": "2026-11-03T03:55:44+00:00",
-      "topics": [
-        "Money laundering"
-      ],
-      "category": "AML and laundering",
-      "evidence_status": "unverified_grouped_reporting",
-      "geographic_accuracy": "not_geocoded",
-      "banks_mentioned_in_headline": [],
-      "organizations_mentioned_in_headline": [],
-      "amount_strings_in_headline": [
-        "$16 million"
-      ],
-      "headline_case_candidate": false,
-      "content_kind": "news_lead",
-      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
-      "institution": null,
-      "reported_loss": null,
-      "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness.",
-      "article_links": [
-        {
-          "title": "7 arrests. Police seize $16 million in cash, real estate, and vehicles from Alberta, BC money laundering operation - Todayville",
-          "publisher": "Todayville",
-          "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxObGF4WXM2b29GX3FuLXR6TFl0SE90NVV4blVWWkhIOTR3VFBrQm9lY0VnemozMVZ5Um0zcGRFYkVxM0xjSFhMaExwUXBhb2l6OTJrbmkyUG1BTUFlQVNQck1aTDZEWWJvZVZORmhxMmNpYTMyVWNvNElXTmlPUDd3RW1teWloTnl0eHh4YkRCYzhoNGwyZlhDem5Yakl1d255S2lEQ3lUQmlEY040cnk1QUdFMnQyMVFEUmNfNURvb0trRU1DM0JzZnJOSjJ6aldMeDRF?oc=5",
-          "published_at": "2026-10-27T07:00:00+00:00",
-          "discovery_channel": "recent"
-        }
-      ],
-      "number_of_article_links": 1,
-      "source_channels": [
-        "recent"
-      ],
-      "review_status": "requires_source_review",
-      "index_note": "Article discovery record, not a confirmed individual incident or bank loss.",
-      "article_ids": [
-        "bad21d9a1e8cf30d071f"
-      ],
-      "fraud_themes": [
-        "Money mules & laundering"
-      ],
-      "headline_variations": [
-        {
-          "title": "7 arrests. Police seize $16 million in cash, real estate, and vehicles from Alberta, BC money laundering operation - Todayville",
-          "publisher": "Todayville",
-          "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxObGF4WXM2b29GX3FuLXR6TFl0SE90NVV4blVWWkhIOTR3VFBrQm9lY0VnemozMVZ5Um0zcGRFYkVxM0xjSFhMaExwUXBhb2l6OTJrbmkyUG1BTUFlQVNQck1aTDZEWWJvZVZORmhxMmNpYTMyVWNvNElXTmlPUDd3RW1teWloTnl0eHh4YkRCYzhoNGwyZlhDem5Yakl1d255S2lEQ3lUQmlEY040cnk1QUdFMnQyMVFEUmNfNURvb0trRU1DM0JzZnJOSjJ6aldMeDRF?oc=5",
           "published_at": "2026-10-27T07:00:00+00:00",
           "discovery_channel": "recent"
         }
@@ -14720,7 +14783,7 @@
       "publisher": "Wealth Professional",
       "published_at": "2026-10-26T07:00:00+00:00",
       "first_seen_at": "2026-10-26T16:54:46+00:00",
-      "last_observed_at": "2026-11-20T10:23:29+00:00",
+      "last_observed_at": "2026-11-20T18:47:43+00:00",
       "topics": [
         "Fraud research and reports"
       ],
@@ -17094,7 +17157,7 @@
       "publisher": "Radio-Canada",
       "published_at": "2026-10-22T07:00:00+00:00",
       "first_seen_at": "2026-10-24T01:47:46+00:00",
-      "last_observed_at": "2026-11-20T10:23:31+00:00",
+      "last_observed_at": "2026-11-20T18:47:44+00:00",
       "topics": [
         "Fraud research and reports",
         "Social media scam reports"
@@ -23882,65 +23945,6 @@
       "underlying_headline_count": 1,
       "geographic_relevance": "canadian_location_or_reference",
       "geographic_relevance_basis": "Canadian geographic clue in title or curated headline city reference; not verified incident location.",
-      "grouping_basis": "conservative_headline_similarity_within_10_days",
-      "grouping_disclaimer": "Grouped reporting is not independently verified as one event; similarity does not prove the same underlying victim, incident, loss or misconduct."
-    },
-    {
-      "id": "report-186bf027f5f449215458",
-      "title": "Father Joe LeClair, popular priest who defrauded his church, is dead - CBC",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNV3ljQURXcmdPZFVNak05OHRUTm91V3p2aXBjaVBjdG1IZWhyZndGOWpSYV9NbmpqbkRyQXBtTDBIWGFMa29WSzZWdlpSUjRMNTlvNFlidkQ3X0JxLUkwc29wdWlickZIb2FsWXg5ZXFKM2NwUXBJcUVMRElxQmdETlFKZ0l3aFczSkdRdTRBaVJ6bXNuSHgw?oc=5",
-      "publisher": "CBC",
-      "published_at": "2026-10-09T07:00:00+00:00",
-      "first_seen_at": "2026-11-02T05:31:24+00:00",
-      "last_observed_at": "2026-11-04T06:56:09+00:00",
-      "topics": [
-        "Fraud research and reports"
-      ],
-      "category": "Reported fraud",
-      "evidence_status": "unverified_grouped_reporting",
-      "geographic_accuracy": "not_geocoded",
-      "banks_mentioned_in_headline": [],
-      "organizations_mentioned_in_headline": [],
-      "amount_strings_in_headline": [],
-      "headline_case_candidate": true,
-      "content_kind": "news_lead",
-      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
-      "institution": null,
-      "reported_loss": null,
-      "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness.",
-      "article_links": [
-        {
-          "title": "Father Joe LeClair, popular priest who defrauded his church, is dead - CBC",
-          "publisher": "CBC",
-          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNV3ljQURXcmdPZFVNak05OHRUTm91V3p2aXBjaVBjdG1IZWhyZndGOWpSYV9NbmpqbkRyQXBtTDBIWGFMa29WSzZWdlpSUjRMNTlvNFlidkQ3X0JxLUkwc29wdWlickZIb2FsWXg5ZXFKM2NwUXBJcUVMRElxQmdETlFKZ0l3aFczSkdRdTRBaVJ6bXNuSHgw?oc=5",
-          "published_at": "2026-10-09T07:00:00+00:00",
-          "discovery_channel": "recent"
-        }
-      ],
-      "number_of_article_links": 1,
-      "source_channels": [
-        "recent"
-      ],
-      "review_status": "requires_source_review",
-      "index_note": "Article discovery record, not a confirmed individual incident or bank loss.",
-      "article_ids": [
-        "517b1a1d2d484fc0bef8"
-      ],
-      "fraud_themes": [],
-      "headline_variations": [
-        {
-          "title": "Father Joe LeClair, popular priest who defrauded his church, is dead - CBC",
-          "publisher": "CBC",
-          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNV3ljQURXcmdPZFVNak05OHRUTm91V3p2aXBjaVBjdG1IZWhyZndGOWpSYV9NbmpqbkRyQXBtTDBIWGFMa29WSzZWdlpSUjRMNTlvNFlidkQ3X0JxLUkwc29wdWlickZIb2FsWXg5ZXFKM2NwUXBJcUVMRElxQmdETlFKZ0l3aFczSkdRdTRBaVJ6bXNuSHgw?oc=5",
-          "published_at": "2026-10-09T07:00:00+00:00",
-          "discovery_channel": "recent"
-        }
-      ],
-      "variation_count": 1,
-      "source_count": 1,
-      "underlying_headline_count": 1,
-      "geographic_relevance": "geography_unresolved",
-      "geographic_relevance_basis": "Headline alone does not establish incident geography. No inference from publisher domain.",
       "grouping_basis": "conservative_headline_similarity_within_10_days",
       "grouping_disclaimer": "Grouped reporting is not independently verified as one event; similarity does not prove the same underlying victim, incident, loss or misconduct."
     },
@@ -39215,8 +39219,8 @@
       "amount_strings_in_headline": [],
       "headline_case_candidate": false,
       "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
-      "first_seen_at": "2026-11-20T10:23:34+00:00",
-      "last_observed_at": "2026-11-20T10:23:34+00:00",
+      "first_seen_at": "2026-11-20T18:47:51+00:00",
+      "last_observed_at": "2026-11-20T18:47:51+00:00",
       "notice": "Article metadata / headline discovery only. Any mentioned bank, sum or location is not independently corroborated.",
       "article_links": [
         {
@@ -42321,8 +42325,8 @@
       "amount_strings_in_headline": [],
       "headline_case_candidate": false,
       "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
-      "first_seen_at": "2026-11-20T10:23:34+00:00",
-      "last_observed_at": "2026-11-20T10:23:34+00:00",
+      "first_seen_at": "2026-11-20T18:47:51+00:00",
+      "last_observed_at": "2026-11-20T18:47:51+00:00",
       "notice": "Article metadata / headline discovery only. Any mentioned bank, sum or location is not independently corroborated.",
       "article_links": [
         {
@@ -43557,8 +43561,8 @@
       "amount_strings_in_headline": [],
       "headline_case_candidate": false,
       "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
-      "first_seen_at": "2026-11-20T10:23:34+00:00",
-      "last_observed_at": "2026-11-20T10:23:34+00:00",
+      "first_seen_at": "2026-11-20T18:47:51+00:00",
+      "last_observed_at": "2026-11-20T18:47:51+00:00",
       "notice": "Article metadata / headline discovery only. Any mentioned bank, sum or location is not independently corroborated.",
       "article_links": [
         {
@@ -44619,8 +44623,8 @@
       "amount_strings_in_headline": [],
       "headline_case_candidate": false,
       "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
-      "first_seen_at": "2026-11-20T10:23:34+00:00",
-      "last_observed_at": "2026-11-20T10:23:34+00:00",
+      "first_seen_at": "2026-11-20T18:47:51+00:00",
+      "last_observed_at": "2026-11-20T18:47:51+00:00",
       "notice": "Article metadata / headline discovery only. Any mentioned bank, sum or location is not independently corroborated.",
       "article_links": [
         {
@@ -44922,8 +44926,8 @@
       "amount_strings_in_headline": [],
       "headline_case_candidate": false,
       "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
-      "first_seen_at": "2026-11-20T10:23:34+00:00",
-      "last_observed_at": "2026-11-20T10:23:34+00:00",
+      "first_seen_at": "2026-11-20T18:47:51+00:00",
+      "last_observed_at": "2026-11-20T18:47:51+00:00",
       "notice": "Article metadata / headline discovery only. Any mentioned bank, sum or location is not independently corroborated.",
       "article_links": [
         {
@@ -46300,8 +46304,8 @@
       "amount_strings_in_headline": [],
       "headline_case_candidate": false,
       "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
-      "first_seen_at": "2026-11-20T10:23:34+00:00",
-      "last_observed_at": "2026-11-20T10:23:34+00:00",
+      "first_seen_at": "2026-11-20T18:47:51+00:00",
+      "last_observed_at": "2026-11-20T18:47:51+00:00",
       "notice": "Article metadata / headline discovery only. Any mentioned bank, sum or location is not independently corroborated.",
       "article_links": [
         {
