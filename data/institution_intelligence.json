@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-20T18:48:04+00:00",
+  "generated_at": "2026-11-21T00:44:25+00:00",
   "methodology": "Institution names are canonically grouped using explicit aliases. Headline entries are conservative reporting groups, not distinct or independently verified fraud incidents; multiple publisher headlines are retained under each group. An institution mention is not proof of wrongdoing.",
   "source_counts": {
     "enforcement": 98,
     "reviewed_incidents": 6,
-    "unverified_report_groups": 2897,
+    "unverified_report_groups": 2898,
     "osfi_institution_rows": 345,
     "fintrac_index_notices": 90,
     "bank_disclosure_records": 15,
@@ -13,7 +13,7 @@
     "obsi_firm_records": 91,
     "ciro_confirmed_cases": 5,
     "amf_quebec_entity_rows": 945,
-    "us_fdic_active_entities": 4208,
+    "us_fdic_active_entities": 4206,
     "us_fdic_failure_events": 4117,
     "us_ncua_credit_union_entities": 4214,
     "us_occ_enforcement_actions": 2311,
@@ -83328,49 +83328,6 @@
       "evidence_count_shown": 0
     },
     {
-      "id": "us-fdic-10809",
-      "name": "First State Bank of Van Orin (US · IL)",
-      "legal_name": "First State Bank of Van Orin",
-      "jurisdiction": "US",
-      "country": "US",
-      "aliases": [
-        "First State Bank of Van Orin",
-        "First State Bank of Van Orin FDIC 10809"
-      ],
-      "counts": {
-        "enforcement": 0,
-        "incidents": 0,
-        "headlines": 0
-      },
-      "evidence": [],
-      "themes": [],
-      "annual_penalties_cad": {},
-      "recent_activity": null,
-      "official_data": {
-        "fdic": {
-          "cert": "10809",
-          "legal_name": "First State Bank of Van Orin",
-          "state": "IL",
-          "city": "Van Orin",
-          "active": true,
-          "fed_rssd": "472148",
-          "source_url": "https://banks.data.fdic.gov/bankfind-suite/",
-          "source_kind": "official_FDIC_active_institution_register"
-        },
-        "counts": {
-          "fintrac_public_notices": 0,
-          "fcac_index_notices": 0,
-          "bank_disclosure_years": 0,
-          "obsi_firm_years": 0,
-          "ciro_concluded_cases": 0,
-          "fdic_failures": 0,
-          "occ_institution_actions": 0,
-          "occ_individual_matters": 0
-        }
-      },
-      "evidence_count_shown": 0
-    },
-    {
       "id": "us-fdic-10816",
       "name": "Grand Rivers Community Bank (US · IL)",
       "legal_name": "Grand Rivers Community Bank",
@@ -148644,49 +148601,6 @@
       "evidence_count_shown": 0
     },
     {
-      "id": "us-fdic-26181",
-      "name": "Texas National Bank of Jacksonville (US · TX)",
-      "legal_name": "Texas National Bank of Jacksonville",
-      "jurisdiction": "US",
-      "country": "US",
-      "aliases": [
-        "Texas National Bank of Jacksonville",
-        "Texas National Bank of Jacksonville FDIC 26181"
-      ],
-      "counts": {
-        "enforcement": 0,
-        "incidents": 0,
-        "headlines": 0
-      },
-      "evidence": [],
-      "themes": [],
-      "annual_penalties_cad": {},
-      "recent_activity": null,
-      "official_data": {
-        "fdic": {
-          "cert": "26181",
-          "legal_name": "Texas National Bank of Jacksonville",
-          "state": "TX",
-          "city": "Jacksonville",
-          "active": true,
-          "fed_rssd": "739355",
-          "source_url": "https://banks.data.fdic.gov/bankfind-suite/",
-          "source_kind": "official_FDIC_active_institution_register"
-        },
-        "counts": {
-          "fintrac_public_notices": 0,
-          "fcac_index_notices": 0,
-          "bank_disclosure_years": 0,
-          "obsi_firm_years": 0,
-          "ciro_concluded_cases": 0,
-          "fdic_failures": 0,
-          "occ_institution_actions": 0,
-          "occ_individual_matters": 0
-        }
-      },
-      "evidence_count_shown": 0
-    },
-    {
       "id": "us-fdic-26185",
       "name": "CHARTER WEST BANK (US · NE)",
       "legal_name": "CHARTER WEST BANK",
@@ -163222,13 +163136,13 @@
     },
     {
       "id": "us-fdic-29679",
-      "name": "Anthem Bank & Trust (US · LA)",
-      "legal_name": "Anthem Bank & Trust",
+      "name": "Anthem Private Bank & Trust (US · LA)",
+      "legal_name": "Anthem Private Bank & Trust",
       "jurisdiction": "US",
       "country": "US",
       "aliases": [
-        "Anthem Bank & Trust",
-        "Anthem Bank & Trust FDIC 29679"
+        "Anthem Private Bank & Trust",
+        "Anthem Private Bank & Trust FDIC 29679"
       ],
       "counts": {
         "enforcement": 0,
@@ -163242,7 +163156,7 @@
       "official_data": {
         "fdic": {
           "cert": "29679",
-          "legal_name": "Anthem Bank & Trust",
+          "legal_name": "Anthem Private Bank & Trust",
           "state": "LA",
           "city": "Plaquemine",
           "active": true,
