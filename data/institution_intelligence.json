@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-22T09:36:53+00:00",
+  "generated_at": "2026-11-22T17:23:22+00:00",
   "methodology": "Institution names are canonically grouped using explicit aliases. Headline entries are conservative reporting groups, not distinct or independently verified fraud incidents; multiple publisher headlines are retained under each group. An institution mention is not proof of wrongdoing.",
   "source_counts": {
     "enforcement": 98,
     "reviewed_incidents": 6,
-    "unverified_report_groups": 2907,
+    "unverified_report_groups": 3070,
     "osfi_institution_rows": 345,
     "fintrac_index_notices": 90,
     "bank_disclosure_records": 15,
@@ -87,7 +87,7 @@
       "counts": {
         "enforcement": 3,
         "incidents": 1,
-        "headlines": 15
+        "headlines": 16
       },
       "evidence": [
         {
@@ -231,6 +231,35 @@
           "role": "mentioned_in_headline_only"
         },
         {
+          "kind": "headline",
+          "id": "report-068f89a17bd419476e4d",
+          "date": "2025-10-15T07:00:00+00:00",
+          "title": "Timmins woman scammed out of $10K by TD Bank impersonator - CTV News",
+          "source_url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPcW8tcEJ3MExWU0E3WmFDVU80VjZVbW8zRHlfVGFRLWwwR2hyTDN2aFYtTlJFVm1PZzZ4aHNEM184S1FkOGpvRHVaMDNSZ2dySm1PS3Ffdl9VREtLRFlVbE9jc2c1WUlfSUlXRHA2YkU4eXMtNUVoUEJvUzEteHh0QkdfaVZEUlJfMGJSZTJtUE5wQ2J4bTItdkhTenoyNnk0RDF3cEQtdGc?oc=5",
+          "source": "CTV News",
+          "category": "Scam and victim reports",
+          "source_count": 1,
+          "source_channels": [
+            "historical"
+          ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "Timmins woman scammed out of $10K by TD Bank impersonator - CTV News",
+              "publisher": "CTV News",
+              "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPcW8tcEJ3MExWU0E3WmFDVU80VjZVbW8zRHlfVGFRLWwwR2hyTDN2aFYtTlJFVm1PZzZ4aHNEM184S1FkOGpvRHVaMDNSZ2dySm1PS3Ffdl9VREtLRFlVbE9jc2c1WUlfSUlXRHA2YkU4eXMtNUVoUEJvUzEteHh0QkdfaVZEUlJfMGJSZTJtUE5wQ2J4bTItdkhTenoyNnk0RDF3cEQtdGc?oc=5",
+              "published_at": "2025-10-15T07:00:00+00:00",
+              "discovery_channel": "historical"
+            }
+          ],
+          "amount_text": [
+            "$10K"
+          ],
+          "location": null,
+          "evidence": "unverified_headline",
+          "role": "mentioned_in_headline_only"
+        },
+        {
           "kind": "enforcement",
           "id": "419a348fce684e397726",
           "date": "2025-09-29",
@@ -253,16 +282,23 @@
           "source_url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxObEN3S091TkExWHp4V2tLU2dXOVpESWY4ZlhwSTlQOU4telQxVHJjN0ZPZUVncDJZam9GdHRZdWxDd2ZEZ2VZamxaN00xNTdtUHc2WldrbGFXSEIyUTktaGZMQWJUendEM3pvcmtGVkdORG1kOW1teTRxdGhaOGptMWtEem1IWkxpQ1ZKalRzUXd0NWZWZzZ4RzRqRm5hdTV0NXZZWE13TllaWGdyeXR0VkJ5V3ZidGlGUWFCTmM4cDJGbVVEVzY2STUxQXRkbGZVU3ZjRDBBcFNIdDUxNnBuTA?oc=5",
           "source": "Radio-Canada",
           "category": "Scam and victim reports",
-          "source_count": 1,
+          "source_count": 2,
           "source_channels": [
             "historical"
           ],
-          "variation_count": 1,
+          "variation_count": 2,
           "headline_variations": [
             {
               "title": "TD Bank joins Anti-Scam Coalition, but tells customer she’s responsible for $10,000 lost in phone scam - Radio-Canada",
               "publisher": "Radio-Canada",
               "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxObEN3S091TkExWHp4V2tLU2dXOVpESWY4ZlhwSTlQOU4telQxVHJjN0ZPZUVncDJZam9GdHRZdWxDd2ZEZ2VZamxaN00xNTdtUHc2WldrbGFXSEIyUTktaGZMQWJUendEM3pvcmtGVkdORG1kOW1teTRxdGhaOGptMWtEem1IWkxpQ1ZKalRzUXd0NWZWZzZ4RzRqRm5hdTV0NXZZWE13TllaWGdyeXR0VkJ5V3ZidGlGUWFCTmM4cDJGbVVEVzY2STUxQXRkbGZVU3ZjRDBBcFNIdDUxNnBuTA?oc=5",
+              "published_at": "2025-09-22T07:00:00+00:00",
+              "discovery_channel": "historical"
+            },
+            {
+              "title": "TD Bank joins Anti-Scam Coalition, but tells customer she's responsible for $10,000 lost in phone scam - CBC",
+              "publisher": "CBC",
+              "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE8yVG41aTQtSlk0U1FvVG1CeHhnVkxQVURkTTFUN0ZUTlRQLTJkSV9FNFJsNV8wSG00NmNaQUZhc2tpTHUzUHVYZlZWNVVMYjNQYWZweGhsZjFzSVJPUi1pS1NZa1dUTTJjSDNxUWRlcw?oc=5",
               "published_at": "2025-09-22T07:00:00+00:00",
               "discovery_channel": "historical"
             }
@@ -602,6 +638,11 @@
           "name": "Investment and crypto scams",
           "matching_records": 1,
           "interpretation": "shared keyword, not established causation"
+        },
+        {
+          "name": "Impersonation / social engineering",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
         }
       ],
       "annual_penalties_cad": {
@@ -724,7 +765,7 @@
           "occ_individual_matters": 0
         }
       },
-      "evidence_count_shown": 19
+      "evidence_count_shown": 20
     },
     {
       "id": "rbc",
@@ -736,7 +777,7 @@
       "counts": {
         "enforcement": 2,
         "incidents": 1,
-        "headlines": 29
+        "headlines": 33
       },
       "evidence": [
         {
@@ -845,33 +886,6 @@
           ],
           "amount_text": [],
           "location": null,
-          "evidence": "unverified_headline",
-          "role": "mentioned_in_headline_only"
-        },
-        {
-          "kind": "headline",
-          "id": "report-7fb99199968f9dcd336c",
-          "date": "2026-10-15T07:00:00+00:00",
-          "title": "Plus d’une centaine de clients de la RBC victimes d’une fraude - Le Journal de Montréal",
-          "source_url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOMWVnWlZnckxPdVNvOGZqYm5kZEFCcEpONEROaUZ3anhNY1J2N0dxOWc4SFk0RHZ3MlB5Y3VlWU1JUGx5LUFfTjRpWlh3ektCNndEUEpMSnE4SHZSQ0o3VWlJQTctbUVBVnhTal9heFRwMldMU1Jza0ZXbnlFb0xOSHR3cXpqdDZlZV8wV1pPWXpwMnFRQ0hURk9hWC1zT2wwcXpraQ?oc=5",
-          "source": "Le Journal de Montréal",
-          "category": "Reported fraud",
-          "source_count": 1,
-          "source_channels": [
-            "recent"
-          ],
-          "variation_count": 1,
-          "headline_variations": [
-            {
-              "title": "Plus d’une centaine de clients de la RBC victimes d’une fraude - Le Journal de Montréal",
-              "publisher": "Le Journal de Montréal",
-              "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOMWVnWlZnckxPdVNvOGZqYm5kZEFCcEpONEROaUZ3anhNY1J2N0dxOWc4SFk0RHZ3MlB5Y3VlWU1JUGx5LUFfTjRpWlh3ektCNndEUEpMSnE4SHZSQ0o3VWlJQTctbUVBVnhTal9heFRwMldMU1Jza0ZXbnlFb0xOSHR3cXpqdDZlZV8wV1pPWXpwMnFRQ0hURk9hWC1zT2wwcXpraQ?oc=5",
-              "published_at": "2026-10-15T07:00:00+00:00",
-              "discovery_channel": "recent"
-            }
-          ],
-          "amount_text": [],
-          "location": "Montréal, Québec",
           "evidence": "unverified_headline",
           "role": "mentioned_in_headline_only"
         },
@@ -1043,6 +1057,87 @@
           "amount_text": [
             "$1.7M"
           ],
+          "location": null,
+          "evidence": "unverified_headline",
+          "role": "mentioned_in_headline_only"
+        },
+        {
+          "kind": "headline",
+          "id": "report-41d8a10d1d49d1406ec8",
+          "date": "2025-10-07T07:00:00+00:00",
+          "title": "RBC Employee Charged After Mark Carney Profile Access: When Misconduct Justifies Termination for Cause - Samfiru Tumarkin LLP",
+          "source_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNaGZ0YVpWV3J6SjNSd092cFNoTlhEM2p6ck93Ym4tRGxNTVJHTWd2WkZ0TndtaVJGLUFVZlh0LWdEb1dMV0hHUHNBblRMaGQ1MXNSNG41VW9tN3hvQnFjTi1NSkVlbElZc1l2cVZqdGd6cVlzWDZ2LW1UdFdoWUFld2NOaVc?oc=5",
+          "source": "Samfiru Tumarkin LLP",
+          "category": "Financial crime watch",
+          "source_count": 1,
+          "source_channels": [
+            "historical"
+          ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "RBC Employee Charged After Mark Carney Profile Access: When Misconduct Justifies Termination for Cause - Samfiru Tumarkin LLP",
+              "publisher": "Samfiru Tumarkin LLP",
+              "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNaGZ0YVpWV3J6SjNSd092cFNoTlhEM2p6ck93Ym4tRGxNTVJHTWd2WkZ0TndtaVJGLUFVZlh0LWdEb1dMV0hHUHNBblRMaGQ1MXNSNG41VW9tN3hvQnFjTi1NSkVlbElZc1l2cVZqdGd6cVlzWDZ2LW1UdFdoWUFld2NOaVc?oc=5",
+              "published_at": "2025-10-07T07:00:00+00:00",
+              "discovery_channel": "historical"
+            }
+          ],
+          "amount_text": [],
+          "location": null,
+          "evidence": "unverified_headline",
+          "role": "mentioned_in_headline_only"
+        },
+        {
+          "kind": "headline",
+          "id": "report-108c2242f7bdf07ca960",
+          "date": "2025-09-25T07:00:00+00:00",
+          "title": "Former RBC employee charged with fraud, identity theft for accessing Mark Carney’s personal data - National Post",
+          "source_url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOM0I1UVNKbFRCN3JlWTZ4VXlWSFRsbG5RNk1OaGM5MG9lT3hoYlp6S1ozSXZMbDJxNDgyeVVDMnpHTzN0enBaZmNoaDJfam1ZVVRRSEY2Njc5THZyOWNsRk9idDhQMVVMOG1nRWg1ZzMxdEMzS3pfVzNiaHo0Tk5yWnItQlYyQQ?oc=5",
+          "source": "National Post",
+          "category": "Reported fraud",
+          "source_count": 1,
+          "source_channels": [
+            "historical"
+          ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "Former RBC employee charged with fraud, identity theft for accessing Mark Carney’s personal data - National Post",
+              "publisher": "National Post",
+              "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOM0I1UVNKbFRCN3JlWTZ4VXlWSFRsbG5RNk1OaGM5MG9lT3hoYlp6S1ozSXZMbDJxNDgyeVVDMnpHTzN0enBaZmNoaDJfam1ZVVRRSEY2Njc5THZyOWNsRk9idDhQMVVMOG1nRWg1ZzMxdEMzS3pfVzNiaHo0Tk5yWnItQlYyQQ?oc=5",
+              "published_at": "2025-09-25T07:00:00+00:00",
+              "discovery_channel": "historical"
+            }
+          ],
+          "amount_text": [],
+          "location": null,
+          "evidence": "unverified_headline",
+          "role": "mentioned_in_headline_only"
+        },
+        {
+          "kind": "headline",
+          "id": "report-4c830b89b886b8d35abf",
+          "date": "2025-09-25T07:00:00+00:00",
+          "title": "RBC employee charged with accessing Prime Minister’s personal data - Canadian HR Reporter",
+          "source_url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNNFJuV3QtbUpEQUJfWlJtekQxZGNfdUU0YTE0U1JvWGJlYmc0YlViWlZUZG93d1JlLTRjc3BxZnNfX3hKWHl1NVB0a3NXWlNFNGpkc2ZHLU04R0toaU9wUVRoTzMzNU1VM3NMU0l4ZG9wNVMzdU4wRUJIaHhZRHJjWkR5eUs2eTZOcXFrNzdxM0JxdEw5STlCTlNMYUNOMDd2RzNfQndOQ244MTFTMVhWUjhpdEFBWTFEd2hnSmlWamtsejQ?oc=5",
+          "source": "Canadian HR Reporter",
+          "category": "Financial crime watch",
+          "source_count": 1,
+          "source_channels": [
+            "historical"
+          ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "RBC employee charged with accessing Prime Minister’s personal data - Canadian HR Reporter",
+              "publisher": "Canadian HR Reporter",
+              "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNNFJuV3QtbUpEQUJfWlJtekQxZGNfdUU0YTE0U1JvWGJlYmc0YlViWlZUZG93d1JlLTRjc3BxZnNfX3hKWHl1NVB0a3NXWlNFNGpkc2ZHLU04R0toaU9wUVRoTzMzNU1VM3NMU0l4ZG9wNVMzdU4wRUJIaHhZRHJjWkR5eUs2eTZOcXFrNzdxM0JxdEw5STlCTlNMYUNOMDd2RzNfQndOQ244MTFTMVhWUjhpdEFBWTFEd2hnSmlWamtsejQ?oc=5",
+              "published_at": "2025-09-25T07:00:00+00:00",
+              "discovery_channel": "historical"
+            }
+          ],
+          "amount_text": [],
           "location": null,
           "evidence": "unverified_headline",
           "role": "mentioned_in_headline_only"
@@ -1265,6 +1360,60 @@
           "amount_text": [
             "$300m"
           ],
+          "location": null,
+          "evidence": "unverified_headline",
+          "role": "mentioned_in_headline_only"
+        },
+        {
+          "kind": "headline",
+          "id": "report-03c58fd1d6034efbde44",
+          "date": "2025-02-21T19:15:52+00:00",
+          "title": "Eight common crypto scams and how to spot them - RBC Wealth Management",
+          "source_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPeEJ4WXd5dEZSYkRLRnJkUnlfcFpEdjNuSUc5NXRiaFJVOEFWRUFFVU9TZ1RYaGhUVFVIZzZadTV4ZE1iTUZBajc4Sm5BbjVVMmp6R09BUWhiaHc2Um1ONFV4RGswMGpuQXNMcFFfakQxdzNhQU5mUVlFRUdVdUVMb2JRZGdYdXZoWm5RMUhpdFU4X1hwa2pEV0Z6WUxNZw?oc=5",
+          "source": "RBC Wealth Management",
+          "category": "Investment fraud",
+          "source_count": 1,
+          "source_channels": [
+            "historical"
+          ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "Eight common crypto scams and how to spot them - RBC Wealth Management",
+              "publisher": "RBC Wealth Management",
+              "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPeEJ4WXd5dEZSYkRLRnJkUnlfcFpEdjNuSUc5NXRiaFJVOEFWRUFFVU9TZ1RYaGhUVFVIZzZadTV4ZE1iTUZBajc4Sm5BbjVVMmp6R09BUWhiaHc2Um1ONFV4RGswMGpuQXNMcFFfakQxdzNhQU5mUVlFRUdVdUVMb2JRZGdYdXZoWm5RMUhpdFU4X1hwa2pEV0Z6WUxNZw?oc=5",
+              "published_at": "2025-02-21T19:15:52+00:00",
+              "discovery_channel": "historical"
+            }
+          ],
+          "amount_text": [],
+          "location": null,
+          "evidence": "unverified_headline",
+          "role": "mentioned_in_headline_only"
+        },
+        {
+          "kind": "headline",
+          "id": "report-c15e9c0eb4c193cd2332",
+          "date": "2025-02-08T08:00:00+00:00",
+          "title": "RBC Place, White Oaks Mall warn of scams targeting vendors and artisans - CBC",
+          "source_url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOTlpVYU5kU1EyWWJTNjVrV3BJdTVZR2I1RFRMZDRsS0psSlZ2cFY3c2FfTEZLcDdzSjRjczdRX3lqY1pKeFdlZEwxZy1KRmNaUW5qQm4xcFpneW5zck5jbkczVFhvVXFmNUNrdjNjNWhETnlyQzFjOFNIbERGMWYtMERZeVBFWVVrTmw3QVNkUEZLVEVmU3Z5NHkyT1pMWVhoVklGcHpRX3dGQmpTSFFtSEJSR0pXQVBSVGc?oc=5",
+          "source": "CBC",
+          "category": "Scam and victim reports",
+          "source_count": 1,
+          "source_channels": [
+            "historical"
+          ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "RBC Place, White Oaks Mall warn of scams targeting vendors and artisans - CBC",
+              "publisher": "CBC",
+              "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOTlpVYU5kU1EyWWJTNjVrV3BJdTVZR2I1RFRMZDRsS0psSlZ2cFY3c2FfTEZLcDdzSjRjczdRX3lqY1pKeFdlZEwxZy1KRmNaUW5qQm4xcFpneW5zck5jbkczVFhvVXFmNUNrdjNjNWhETnlyQzFjOFNIbERGMWYtMERZeVBFWVVrTmw3QVNkUEZLVEVmU3Z5NHkyT1pMWVhoVklGcHpRX3dGQmpTSFFtSEJSR0pXQVBSVGc?oc=5",
+              "published_at": "2025-02-08T08:00:00+00:00",
+              "discovery_channel": "historical"
+            }
+          ],
+          "amount_text": [],
           "location": null,
           "evidence": "unverified_headline",
           "role": "mentioned_in_headline_only"
@@ -1588,12 +1737,12 @@
       ],
       "themes": [
         {
-          "name": "Impersonation / social engineering",
-          "matching_records": 2,
+          "name": "Identity / account takeover",
+          "matching_records": 3,
           "interpretation": "shared keyword, not established causation"
         },
         {
-          "name": "Identity / account takeover",
+          "name": "Impersonation / social engineering",
           "matching_records": 2,
           "interpretation": "shared keyword, not established causation"
         },
@@ -1603,12 +1752,12 @@
           "interpretation": "shared keyword, not established causation"
         },
         {
-          "name": "Consumer protection",
-          "matching_records": 1,
+          "name": "Investment and crypto scams",
+          "matching_records": 2,
           "interpretation": "shared keyword, not established causation"
         },
         {
-          "name": "Investment and crypto scams",
+          "name": "Consumer protection",
           "matching_records": 1,
           "interpretation": "shared keyword, not established causation"
         },
@@ -1732,7 +1881,7 @@
           "occ_individual_matters": 0
         }
       },
-      "evidence_count_shown": 32
+      "evidence_count_shown": 36
     },
     {
       "id": "bmo",
@@ -2056,7 +2205,7 @@
       "counts": {
         "enforcement": 0,
         "incidents": 1,
-        "headlines": 5
+        "headlines": 6
       },
       "evidence": [
         {
@@ -2125,6 +2274,35 @@
             }
           ],
           "amount_text": [],
+          "location": null,
+          "evidence": "unverified_headline",
+          "role": "mentioned_in_headline_only"
+        },
+        {
+          "kind": "headline",
+          "id": "report-e13f4f9b46349c57af29",
+          "date": "2025-07-23T07:00:00+00:00",
+          "title": "Scotiabank impersonation scam costs woman $14K, case reviewed - CHCH",
+          "source_url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPWXFDdEZVcjZ0eVhsUHVBYVhnWXJqX25KM25sZVozc0psb1FXY180a3Z3dExFTmZSRlZlZnFWYnVqRjIxRWs5SmhvbzRMYXMyLTZYZThUSDR4SGpuUTJyeFJ3SkY3VVZBTlFsUG1GVDFLSkhEdVlRTHNHRklyUVBGNEd5RlFCb2NXZktRekJ4ZHhXU0JuOWc?oc=5",
+          "source": "CHCH",
+          "category": "Scam and victim reports",
+          "source_count": 1,
+          "source_channels": [
+            "historical"
+          ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "Scotiabank impersonation scam costs woman $14K, case reviewed - CHCH",
+              "publisher": "CHCH",
+              "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPWXFDdEZVcjZ0eVhsUHVBYVhnWXJqX25KM25sZVozc0psb1FXY180a3Z3dExFTmZSRlZlZnFWYnVqRjIxRWs5SmhvbzRMYXMyLTZYZThUSDR4SGpuUTJyeFJ3SkY3VVZBTlFsUG1GVDFLSkhEdVlRTHNHRklyUVBGNEd5RlFCb2NXZktRekJ4ZHhXU0JuOWc?oc=5",
+              "published_at": "2025-07-23T07:00:00+00:00",
+              "discovery_channel": "historical"
+            }
+          ],
+          "amount_text": [
+            "$14K"
+          ],
           "location": null,
           "evidence": "unverified_headline",
           "role": "mentioned_in_headline_only"
@@ -2220,6 +2398,11 @@
           "name": "Identity / account takeover",
           "matching_records": 2,
           "interpretation": "shared keyword, not established causation"
+        },
+        {
+          "name": "Impersonation / social engineering",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
         }
       ],
       "annual_penalties_cad": {},
@@ -2311,7 +2494,7 @@
           "occ_individual_matters": 0
         }
       },
-      "evidence_count_shown": 6
+      "evidence_count_shown": 7
     },
     {
       "id": "binance",
@@ -8957,6 +9140,290 @@
         }
       },
       "evidence_count_shown": 7
+    },
+    {
+      "id": "kucoin",
+      "name": "KuCoin",
+      "aliases": [
+        "KuCoin"
+      ],
+      "counts": {
+        "enforcement": 0,
+        "incidents": 0,
+        "headlines": 2
+      },
+      "evidence": [
+        {
+          "kind": "headline",
+          "id": "report-3575e165f6a11e12cc5e",
+          "date": "2025-09-25T07:00:00+00:00",
+          "title": "Fintrac imposes largest ever penalty on KuCoin operator - CTV News",
+          "source_url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQV0NLeVZKUFFxX3R0WUlXMFd1T0pUR09KYk9qM241a3ozZkpnaER6aWJMQ084NEthbW9QTzQyLVh6TlVqX1NvMXBacHVtcE9DUk40QzFuNzMxeDBRYXRxdGFSdWxLc2pxZlNKdTItaHZULWo1Q0RYNEZNQ2ZjNUY0a3NfZWJnbEZIcm9KMnhKeG1URE1TN0FNcGZ4ai00endva2VWQi1HRjl6Q1Q4VnZVWWNzcmh1YS01dWUw?oc=5",
+          "source": "CTV News",
+          "category": "Financial crime watch",
+          "source_count": 1,
+          "source_channels": [
+            "historical"
+          ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "Fintrac imposes largest ever penalty on KuCoin operator - CTV News",
+              "publisher": "CTV News",
+              "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQV0NLeVZKUFFxX3R0WUlXMFd1T0pUR09KYk9qM241a3ozZkpnaER6aWJMQ084NEthbW9QTzQyLVh6TlVqX1NvMXBacHVtcE9DUk40QzFuNzMxeDBRYXRxdGFSdWxLc2pxZlNKdTItaHZULWo1Q0RYNEZNQ2ZjNUY0a3NfZWJnbEZIcm9KMnhKeG1URE1TN0FNcGZ4ai00endva2VWQi1HRjl6Q1Q4VnZVWWNzcmh1YS01dWUw?oc=5",
+              "published_at": "2025-09-25T07:00:00+00:00",
+              "discovery_channel": "historical"
+            }
+          ],
+          "amount_text": [],
+          "location": null,
+          "evidence": "unverified_headline",
+          "role": "mentioned_in_headline_only"
+        },
+        {
+          "kind": "headline",
+          "id": "report-739d65beeb9418b1e181",
+          "date": "2025-09-25T07:00:00+00:00",
+          "title": "FinTRAC issues nearly $20-million penalty against crypto exchange KuCoin - The Globe and Mail",
+          "source_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPVmpjVzlHWHlDS0RTbkNSQVpjSmtzblNwXy10ZnFyajA5LUg3bEFkR01EZGdZUW9SdmppY2xBekFZelRESnZzMkFiSVVUZk85RjB0RWRaNm0tcVJkeF9WS2ozYWRialhrWEFMNnVrdE5OaTZHajZUMEdHODRQRGIteVVMRWs4SlBNUGMzTi1RZktheVlDWUlTRS1SNE5KSmxQRFFjbVpablhQbkpBV0hYLWpQbWc?oc=5",
+          "source": "The Globe and Mail",
+          "category": "Investment fraud",
+          "source_count": 1,
+          "source_channels": [
+            "historical"
+          ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "FinTRAC issues nearly $20-million penalty against crypto exchange KuCoin - The Globe and Mail",
+              "publisher": "The Globe and Mail",
+              "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPVmpjVzlHWHlDS0RTbkNSQVpjSmtzblNwXy10ZnFyajA5LUg3bEFkR01EZGdZUW9SdmppY2xBekFZelRESnZzMkFiSVVUZk85RjB0RWRaNm0tcVJkeF9WS2ozYWRialhrWEFMNnVrdE5OaTZHajZUMEdHODRQRGIteVVMRWs4SlBNUGMzTi1RZktheVlDWUlTRS1SNE5KSmxQRFFjbVpablhQbkpBV0hYLWpQbWc?oc=5",
+              "published_at": "2025-09-25T07:00:00+00:00",
+              "discovery_channel": "historical"
+            }
+          ],
+          "amount_text": [
+            "$20"
+          ],
+          "location": null,
+          "evidence": "unverified_headline",
+          "role": "mentioned_in_headline_only"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 2,
+          "interpretation": "shared keyword, not established causation"
+        },
+        {
+          "name": "Investment and crypto scams",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {},
+      "recent_activity": "2025-09-25T07:00:00+00:00",
+      "official_data": {
+        "counts": {
+          "fintrac_public_notices": 0,
+          "fcac_index_notices": 0,
+          "bank_disclosure_years": 0,
+          "obsi_firm_years": 0,
+          "ciro_concluded_cases": 0,
+          "fdic_failures": 0,
+          "occ_institution_actions": 0,
+          "occ_individual_matters": 0
+        }
+      },
+      "evidence_count_shown": 2
+    },
+    {
+      "id": "cryptomus",
+      "name": "Cryptomus",
+      "aliases": [
+        "Cryptomus"
+      ],
+      "counts": {
+        "enforcement": 0,
+        "incidents": 0,
+        "headlines": 1
+      },
+      "evidence": [
+        {
+          "kind": "headline",
+          "id": "report-c524f94f6070d2ee72e7",
+          "date": "2025-11-20T08:00:00+00:00",
+          "title": "B.C.-incorporated crypto exchange Cryptomus appeals record $177M penalty - CBC",
+          "source_url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPa3ltLUhrS0c3dm1FbWRQWEhwSUJpcVJEdUZRQkI3dnBRWjJTRGkzTUw2NHBjWUNoX0RSWnBLREphaTQ1QnRuZzJsV01PZ0lCaHk2dDZnaUdEc0pNeFAxdWhzLTRaNHdnX1lIa2Rwb1VDenk4YXhtaTRrLVQyV2dmVXRSZk5fZXI2RHItXzd2TDg2SW5hakFjNjdnTXc5MGdVdmlRVg?oc=5",
+          "source": "CBC",
+          "category": "Investment fraud",
+          "source_count": 1,
+          "source_channels": [
+            "historical"
+          ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "B.C.-incorporated crypto exchange Cryptomus appeals record $177M penalty - CBC",
+              "publisher": "CBC",
+              "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPa3ltLUhrS0c3dm1FbWRQWEhwSUJpcVJEdUZRQkI3dnBRWjJTRGkzTUw2NHBjWUNoX0RSWnBLREphaTQ1QnRuZzJsV01PZ0lCaHk2dDZnaUdEc0pNeFAxdWhzLTRaNHdnX1lIa2Rwb1VDenk4YXhtaTRrLVQyV2dmVXRSZk5fZXI2RHItXzd2TDg2SW5hakFjNjdnTXc5MGdVdmlRVg?oc=5",
+              "published_at": "2025-11-20T08:00:00+00:00",
+              "discovery_channel": "historical"
+            }
+          ],
+          "amount_text": [
+            "$177M"
+          ],
+          "location": null,
+          "evidence": "unverified_headline",
+          "role": "mentioned_in_headline_only"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Investment and crypto scams",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {},
+      "recent_activity": "2025-11-20T08:00:00+00:00",
+      "official_data": {
+        "counts": {
+          "fintrac_public_notices": 0,
+          "fcac_index_notices": 0,
+          "bank_disclosure_years": 0,
+          "obsi_firm_years": 0,
+          "ciro_concluded_cases": 0,
+          "fdic_failures": 0,
+          "occ_institution_actions": 0,
+          "occ_individual_matters": 0
+        }
+      },
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "wealthsimple-brand",
+      "name": "Wealthsimple",
+      "aliases": [
+        "Wealthsimple"
+      ],
+      "counts": {
+        "enforcement": 0,
+        "incidents": 0,
+        "headlines": 1
+      },
+      "evidence": [
+        {
+          "kind": "headline",
+          "id": "report-6ef96557967340bcb2ba",
+          "date": "2025-09-08T07:00:00+00:00",
+          "title": "Wealthsimple exec apologizes to customers after data breach, says no account details were misused - The Globe and Mail",
+          "source_url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNSS1fZDk0Nm80MFh3ajUyZnNZSDhUYkRSTkNIRDlHRGpkcmQtWW5aMlBEXy1na0lWdDZPckY2N2RMRXZZc2UtZFh5U3lLVUVBblpGTTVnOVNVcnVSYVBBZDNKSzN5T1BMUkQ3NDIxUU53M2J2ZnRwdkxyOVVHMDNkdEM3YWkzUGI0eW5SRzRHUmsxZVBfdF9LYzVobHRwaUNnQW9oLQ?oc=5",
+          "source": "The Globe and Mail",
+          "category": "Cyber and account compromise",
+          "source_count": 1,
+          "source_channels": [
+            "historical"
+          ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "Wealthsimple exec apologizes to customers after data breach, says no account details were misused - The Globe and Mail",
+              "publisher": "The Globe and Mail",
+              "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNSS1fZDk0Nm80MFh3ajUyZnNZSDhUYkRSTkNIRDlHRGpkcmQtWW5aMlBEXy1na0lWdDZPckY2N2RMRXZZc2UtZFh5U3lLVUVBblpGTTVnOVNVcnVSYVBBZDNKSzN5T1BMUkQ3NDIxUU53M2J2ZnRwdkxyOVVHMDNkdEM3YWkzUGI0eW5SRzRHUmsxZVBfdF9LYzVobHRwaUNnQW9oLQ?oc=5",
+              "published_at": "2025-09-08T07:00:00+00:00",
+              "discovery_channel": "historical"
+            }
+          ],
+          "amount_text": [],
+          "location": null,
+          "evidence": "unverified_headline",
+          "role": "mentioned_in_headline_only"
+        }
+      ],
+      "themes": [],
+      "annual_penalties_cad": {},
+      "recent_activity": "2025-09-08T07:00:00+00:00",
+      "official_data": {
+        "counts": {
+          "fintrac_public_notices": 0,
+          "fcac_index_notices": 0,
+          "bank_disclosure_years": 0,
+          "obsi_firm_years": 0,
+          "ciro_concluded_cases": 0,
+          "fdic_failures": 0,
+          "occ_institution_actions": 0,
+          "occ_individual_matters": 0
+        }
+      },
+      "evidence_count_shown": 1
+    },
+    {
+      "id": "cne-casino",
+      "name": "CNE Casino",
+      "aliases": [
+        "CNE Casino"
+      ],
+      "counts": {
+        "enforcement": 0,
+        "incidents": 0,
+        "headlines": 1
+      },
+      "evidence": [
+        {
+          "kind": "headline",
+          "id": "report-15b4d83653e0cac021dd",
+          "date": "2025-09-04T07:00:00+00:00",
+          "title": "CNE Casino fined $199K for failing to comply with money laundering, terrorist financing risk assessment rules - CBC",
+          "source_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQWkFNRG1EUWIxLWZHQ2d0amF5MDFTaTVMa1UycTlSRW9GQVc4VzJBdTlaaGpFbjlnaWF4aG12U2J2NVZMSTk3MHZxLUt5bUFuUWp4MGE2VGh1OW5DeHYzbTR4ZUF0NHdkMzZ6UFlrcF90THFXaWNYN2VVLS1vX1hhYU0wb3NOaFR2Xzc3S1djY2dGS0V4cjNWNG9NUy0yeGlu?oc=5",
+          "source": "CBC",
+          "category": "AML and laundering",
+          "source_count": 1,
+          "source_channels": [
+            "historical"
+          ],
+          "variation_count": 1,
+          "headline_variations": [
+            {
+              "title": "CNE Casino fined $199K for failing to comply with money laundering, terrorist financing risk assessment rules - CBC",
+              "publisher": "CBC",
+              "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQWkFNRG1EUWIxLWZHQ2d0amF5MDFTaTVMa1UycTlSRW9GQVc4VzJBdTlaaGpFbjlnaWF4aG12U2J2NVZMSTk3MHZxLUt5bUFuUWp4MGE2VGh1OW5DeHYzbTR4ZUF0NHdkMzZ6UFlrcF90THFXaWNYN2VVLS1vX1hhYU0wb3NOaFR2Xzc3S1djY2dGS0V4cjNWNG9NUy0yeGlu?oc=5",
+              "published_at": "2025-09-04T07:00:00+00:00",
+              "discovery_channel": "historical"
+            }
+          ],
+          "amount_text": [
+            "$199K"
+          ],
+          "location": null,
+          "evidence": "unverified_headline",
+          "role": "mentioned_in_headline_only"
+        }
+      ],
+      "themes": [
+        {
+          "name": "Money laundering controls",
+          "matching_records": 1,
+          "interpretation": "shared keyword, not established causation"
+        }
+      ],
+      "annual_penalties_cad": {},
+      "recent_activity": "2025-09-04T07:00:00+00:00",
+      "official_data": {
+        "counts": {
+          "fintrac_public_notices": 0,
+          "fcac_index_notices": 0,
+          "bank_disclosure_years": 0,
+          "obsi_firm_years": 0,
+          "ciro_concluded_cases": 0,
+          "fdic_failures": 0,
+          "occ_institution_actions": 0,
+          "occ_individual_matters": 0
+        }
+      },
+      "evidence_count_shown": 1
     },
     {
       "id": "institution-7abb4d5e461e",
