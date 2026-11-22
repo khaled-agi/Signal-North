@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-21T21:51:52+00:00",
+  "generated_at": "2026-11-22T02:02:37+00:00",
   "methodology": "Institution names are canonically grouped using explicit aliases. Headline entries are conservative reporting groups, not distinct or independently verified fraud incidents; multiple publisher headlines are retained under each group. An institution mention is not proof of wrongdoing.",
   "source_counts": {
     "enforcement": 98,
     "reviewed_incidents": 6,
-    "unverified_report_groups": 2898,
+    "unverified_report_groups": 2904,
     "osfi_institution_rows": 345,
     "fintrac_index_notices": 90,
     "bank_disclosure_records": 15,
@@ -87,7 +87,7 @@
       "counts": {
         "enforcement": 3,
         "incidents": 1,
-        "headlines": 16
+        "headlines": 15
       },
       "evidence": [
         {
@@ -146,33 +146,6 @@
           "location": "Qualicum Beach, British Columbia",
           "evidence": "reported_by_news",
           "role": "customer_financial_institution"
-        },
-        {
-          "kind": "headline",
-          "id": "report-194a6f8a120316b73b31",
-          "date": "2026-10-14T07:00:00+00:00",
-          "title": "TD Bank Investors Advance Suit Over Money Laundering Issues - Bloomberg Law News",
-          "source_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQSzV1bTYydlpNUWt6OEE2Q2diNzZWOXFYa0tOTUgwZE16NGhWZWd2aWxrRFB5VHJxUFJlQ081TkYyYTZGTzdCZW5FMnEtMG9EMUdwcWdjaWw2a3V6bDdmZzduX0V5SkJFYUtsNDd0aFBrRDdfT1luS0RPenlvRFRYSW4zVjhHSW5MbHdKUlNsWW9YMTR5XzBJSkdGUVFIUk9rYWtubGJxcw?oc=5",
-          "source": "Bloomberg Law News",
-          "category": "AML and laundering",
-          "source_count": 1,
-          "source_channels": [
-            "recent"
-          ],
-          "variation_count": 1,
-          "headline_variations": [
-            {
-              "title": "TD Bank Investors Advance Suit Over Money Laundering Issues - Bloomberg Law News",
-              "publisher": "Bloomberg Law News",
-              "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQSzV1bTYydlpNUWt6OEE2Q2diNzZWOXFYa0tOTUgwZE16NGhWZWd2aWxrRFB5VHJxUFJlQ081TkYyYTZGTzdCZW5FMnEtMG9EMUdwcWdjaWw2a3V6bDdmZzduX0V5SkJFYUtsNDd0aFBrRDdfT1luS0RPenlvRFRYSW4zVjhHSW5MbHdKUlNsWW9YMTR5XzBJSkdGUVFIUk9rYWtubGJxcw?oc=5",
-              "published_at": "2026-10-14T07:00:00+00:00",
-              "discovery_channel": "recent"
-            }
-          ],
-          "amount_text": [],
-          "location": null,
-          "evidence": "unverified_headline",
-          "role": "mentioned_in_headline_only"
         },
         {
           "kind": "headline",
@@ -617,7 +590,7 @@
       "themes": [
         {
           "name": "Money laundering controls",
-          "matching_records": 6,
+          "matching_records": 5,
           "interpretation": "shared keyword, not established causation"
         },
         {
@@ -751,7 +724,7 @@
           "occ_individual_matters": 0
         }
       },
-      "evidence_count_shown": 20
+      "evidence_count_shown": 19
     },
     {
       "id": "rbc",
