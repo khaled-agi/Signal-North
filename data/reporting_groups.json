@@ -1,12 +1,73 @@
 {
-  "generated_at": "2026-11-24T12:18:57+00:00",
-  "original_index_headlines": 3105,
-  "reporting_groups": 3075,
-  "multi_report_groups": 28,
-  "groups_with_multiple_sources": 43,
-  "headline_variation_groups": 45,
+  "generated_at": "2026-11-24T22:48:58+00:00",
+  "original_index_headlines": 3107,
+  "reporting_groups": 3076,
+  "multi_report_groups": 29,
+  "groups_with_multiple_sources": 44,
+  "headline_variation_groups": 46,
   "methodology": "Display-only high-similarity headline grouping within ten days; original article index preserved. Publisher-specific title wording and original links are retained in each detail view. Groups are not independently verified fraud incidents.",
   "groups": [
+    {
+      "id": "report-af829edaedabe87380a9",
+      "title": "Ontario vows to restore frozen OSAP by New Year if fraud bill passes",
+      "url": "https://globalnews.ca/news/12164387/ontario-vows-restore-frozen-osap-new-year-fraud-bill-passes/",
+      "publisher": "Global News Canada",
+      "published_at": "2026-11-24T18:55:31+00:00",
+      "date_basis": "publisher_rss_publication",
+      "discovery_source": "publisher_rss",
+      "topics": [
+        "Canadian publisher financial crime coverage"
+      ],
+      "category": "Reported fraud",
+      "evidence_status": "unverified_grouped_reporting",
+      "institution": null,
+      "reported_loss": null,
+      "content_kind": "news_lead",
+      "geographic_accuracy": "not_geocoded",
+      "banks_mentioned_in_headline": [],
+      "organizations_mentioned_in_headline": [],
+      "amount_strings_in_headline": [],
+      "headline_case_candidate": false,
+      "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
+      "first_seen_at": "2026-11-24T22:48:55+00:00",
+      "last_observed_at": "2026-11-24T22:48:55+00:00",
+      "notice": "Public article title and source metadata only. The linked full article has not been checked for bank responsibility or actual losses.",
+      "article_links": [
+        {
+          "title": "Ontario vows to restore frozen OSAP by New Year if fraud bill passes",
+          "publisher": "Global News Canada",
+          "url": "https://globalnews.ca/news/12164387/ontario-vows-restore-frozen-osap-new-year-fraud-bill-passes/",
+          "published_at": "2026-11-24T18:55:31+00:00",
+          "discovery_channel": "publisher_rss"
+        }
+      ],
+      "number_of_article_links": 1,
+      "source_channels": [
+        "publisher_rss"
+      ],
+      "review_status": "requires_source_review",
+      "index_note": "Article discovery record, not a confirmed individual incident or bank loss.",
+      "article_ids": [
+        "c3a5b89602f0c3c4de6f"
+      ],
+      "fraud_themes": [],
+      "headline_variations": [
+        {
+          "title": "Ontario vows to restore frozen OSAP by New Year if fraud bill passes",
+          "publisher": "Global News Canada",
+          "url": "https://globalnews.ca/news/12164387/ontario-vows-restore-frozen-osap-new-year-fraud-bill-passes/",
+          "published_at": "2026-11-24T18:55:31+00:00",
+          "discovery_channel": "publisher_rss"
+        }
+      ],
+      "variation_count": 1,
+      "source_count": 1,
+      "underlying_headline_count": 1,
+      "geographic_relevance": "canadian_location_or_reference",
+      "geographic_relevance_basis": "Canadian geographic clue in title or curated headline city reference; not verified incident location.",
+      "grouping_basis": "conservative_headline_similarity_within_10_days",
+      "grouping_disclaimer": "Grouped reporting is not independently verified as one event; similarity does not prove the same underlying victim, incident, loss or misconduct."
+    },
     {
       "id": "report-07280eaeb703ace063b9",
       "title": "Black Friday sales are now underway but watch out for AI created scam websites, say experts - CTV News",
@@ -938,7 +999,7 @@
       "headline_case_candidate": true,
       "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "first_seen_at": "2026-11-21T00:44:08+00:00",
-      "last_observed_at": "2026-11-24T12:18:49+00:00",
+      "last_observed_at": "2026-11-24T22:48:52+00:00",
       "notice": "Article metadata / headline discovery only. Any mentioned bank, sum or location is not independently corroborated.",
       "article_links": [
         {
@@ -4652,7 +4713,7 @@
       "grouping_disclaimer": "Grouped reporting is not independently verified as one event; similarity does not prove the same underlying victim, incident, loss or misconduct."
     },
     {
-      "id": "report-8b8421510614a308876c",
+      "id": "report-c6bd8e81fa3434318d1a",
       "title": "Former CRA employee sentenced in relation to breach of trust and fraud - Indo-Canadian Voice",
       "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNREJ4R3FrYTAtQ3BTa1hmTFg4VXRnSkVwZlBWc09FZkdoRXl0TTd0N0JicVNPR0ZlQ21oMVhFVnlaaFB4MV92Wk1yT2drZmpiNEdlUHU4U01vd0psZ1hGM3lmd1g5eVFiam1Od2ttSXRtbzkyLTlmc09WZXItaDA3RF9BX3VxTnB5S2g3RllkdnlXMklLMGtLZG1oYw?oc=5",
       "publisher": "Indo-Canadian Voice",
@@ -4676,24 +4737,12 @@
       "notice": "Headline discovery only. Open and assess the original publication before attributing loss, guilt or operational weakness.",
       "article_links": [
         {
-          "title": "Former CRA employee sentenced in relation to breach of trust and fraud - Indo-Canadian Voice",
-          "publisher": "Indo-Canadian Voice",
-          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNREJ4R3FrYTAtQ3BTa1hmTFg4VXRnSkVwZlBWc09FZkdoRXl0TTd0N0JicVNPR0ZlQ21oMVhFVnlaaFB4MV92Wk1yT2drZmpiNEdlUHU4U01vd0psZ1hGM3lmd1g5eVFiam1Od2ttSXRtbzkyLTlmc09WZXItaDA3RF9BX3VxTnB5S2g3RllkdnlXMklLMGtLZG1oYw?oc=5",
-          "published_at": "2026-11-16T18:09:35+00:00",
-          "discovery_channel": "recent"
-        }
-      ],
-      "number_of_article_links": 1,
-      "source_channels": [
-        "recent"
-      ],
-      "review_status": "requires_source_review",
-      "index_note": "Article discovery record, not a confirmed individual incident or bank loss.",
-      "article_ids": [
-        "80bec7a0b61d5da34dfa"
-      ],
-      "fraud_themes": [],
-      "headline_variations": [
+          "title": "Former CRA employee sentenced in relation to Breach of Trust and Fraud",
+          "publisher": "Royal Canadian Mounted Police",
+          "url": "https://rcmp.ca/en/news/2026/11/4359009",
+          "published_at": "2026-11-23T17:24:46+00:00",
+          "discovery_channel": "rcmp_official_rss"
+        },
         {
           "title": "Former CRA employee sentenced in relation to breach of trust and fraud - Indo-Canadian Voice",
           "publisher": "Indo-Canadian Voice",
@@ -4702,9 +4751,37 @@
           "discovery_channel": "recent"
         }
       ],
-      "variation_count": 1,
-      "source_count": 1,
-      "underlying_headline_count": 1,
+      "number_of_article_links": 2,
+      "source_channels": [
+        "rcmp_official_rss",
+        "recent"
+      ],
+      "review_status": "requires_source_review",
+      "index_note": "Article discovery record, not a confirmed individual incident or bank loss.",
+      "article_ids": [
+        "c2ee650b96a9fa9803b6",
+        "80bec7a0b61d5da34dfa"
+      ],
+      "fraud_themes": [],
+      "headline_variations": [
+        {
+          "title": "Former CRA employee sentenced in relation to Breach of Trust and Fraud",
+          "publisher": "Royal Canadian Mounted Police",
+          "url": "https://rcmp.ca/en/news/2026/11/4359009",
+          "published_at": "2026-11-23T17:24:46+00:00",
+          "discovery_channel": "rcmp_official_rss"
+        },
+        {
+          "title": "Former CRA employee sentenced in relation to breach of trust and fraud - Indo-Canadian Voice",
+          "publisher": "Indo-Canadian Voice",
+          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNREJ4R3FrYTAtQ3BTa1hmTFg4VXRnSkVwZlBWc09FZkdoRXl0TTd0N0JicVNPR0ZlQ21oMVhFVnlaaFB4MV92Wk1yT2drZmpiNEdlUHU4U01vd0psZ1hGM3lmd1g5eVFiam1Od2ttSXRtbzkyLTlmc09WZXItaDA3RF9BX3VxTnB5S2g3RllkdnlXMklLMGtLZG1oYw?oc=5",
+          "published_at": "2026-11-16T18:09:35+00:00",
+          "discovery_channel": "recent"
+        }
+      ],
+      "variation_count": 2,
+      "source_count": 2,
+      "underlying_headline_count": 2,
       "geographic_relevance": "canadian_location_or_reference",
       "geographic_relevance_basis": "Canadian geographic clue in title or curated headline city reference; not verified incident location.",
       "grouping_basis": "conservative_headline_similarity_within_10_days",
@@ -9232,7 +9309,7 @@
       "headline_case_candidate": false,
       "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
       "first_seen_at": "2026-11-05T17:37:25+00:00",
-      "last_observed_at": "2026-11-24T12:18:51+00:00",
+      "last_observed_at": "2026-11-24T22:48:54+00:00",
       "notice": "Article metadata / headline discovery only. Any mentioned bank, sum or location is not independently corroborated.",
       "article_links": [
         {
@@ -40127,8 +40204,8 @@
       "amount_strings_in_headline": [],
       "headline_case_candidate": false,
       "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
-      "first_seen_at": "2026-11-24T12:18:51+00:00",
-      "last_observed_at": "2026-11-24T12:18:51+00:00",
+      "first_seen_at": "2026-11-24T22:48:54+00:00",
+      "last_observed_at": "2026-11-24T22:48:54+00:00",
       "notice": "Article metadata / headline discovery only. Any mentioned bank, sum or location is not independently corroborated.",
       "article_links": [
         {
@@ -43233,8 +43310,8 @@
       "amount_strings_in_headline": [],
       "headline_case_candidate": false,
       "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
-      "first_seen_at": "2026-11-24T12:18:51+00:00",
-      "last_observed_at": "2026-11-24T12:18:51+00:00",
+      "first_seen_at": "2026-11-24T22:48:54+00:00",
+      "last_observed_at": "2026-11-24T22:48:54+00:00",
       "notice": "Article metadata / headline discovery only. Any mentioned bank, sum or location is not independently corroborated.",
       "article_links": [
         {
@@ -44469,8 +44546,8 @@
       "amount_strings_in_headline": [],
       "headline_case_candidate": false,
       "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
-      "first_seen_at": "2026-11-24T12:18:51+00:00",
-      "last_observed_at": "2026-11-24T12:18:51+00:00",
+      "first_seen_at": "2026-11-24T22:48:54+00:00",
+      "last_observed_at": "2026-11-24T22:48:54+00:00",
       "notice": "Article metadata / headline discovery only. Any mentioned bank, sum or location is not independently corroborated.",
       "article_links": [
         {
@@ -45531,8 +45608,8 @@
       "amount_strings_in_headline": [],
       "headline_case_candidate": false,
       "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
-      "first_seen_at": "2026-11-24T12:18:51+00:00",
-      "last_observed_at": "2026-11-24T12:18:51+00:00",
+      "first_seen_at": "2026-11-24T22:48:54+00:00",
+      "last_observed_at": "2026-11-24T22:48:54+00:00",
       "notice": "Article metadata / headline discovery only. Any mentioned bank, sum or location is not independently corroborated.",
       "article_links": [
         {
@@ -45834,8 +45911,8 @@
       "amount_strings_in_headline": [],
       "headline_case_candidate": false,
       "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
-      "first_seen_at": "2026-11-24T12:18:51+00:00",
-      "last_observed_at": "2026-11-24T12:18:51+00:00",
+      "first_seen_at": "2026-11-24T22:48:54+00:00",
+      "last_observed_at": "2026-11-24T22:48:54+00:00",
       "notice": "Article metadata / headline discovery only. Any mentioned bank, sum or location is not independently corroborated.",
       "article_links": [
         {
@@ -47212,8 +47289,8 @@
       "amount_strings_in_headline": [],
       "headline_case_candidate": false,
       "extraction_provenance": "headline only; bank role, incident date, amount type and currency not verified",
-      "first_seen_at": "2026-11-24T12:18:51+00:00",
-      "last_observed_at": "2026-11-24T12:18:51+00:00",
+      "first_seen_at": "2026-11-24T22:48:54+00:00",
+      "last_observed_at": "2026-11-24T22:48:54+00:00",
       "notice": "Article metadata / headline discovery only. Any mentioned bank, sum or location is not independently corroborated.",
       "article_links": [
         {
