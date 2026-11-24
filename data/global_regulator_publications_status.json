@@ -1,5 +1,5 @@
 {
-  "last_completed_at": "2026-11-23T14:17:20+00:00",
+  "last_completed_at": "2026-11-24T01:53:49+00:00",
   "regulators_configured": 30,
   "regulators_attempted": 30,
   "countries_with_publication_leads": 0,
@@ -56,7 +56,7 @@
     "DE:BaFin": {
       "status": "error",
       "error_type": "HTTPError",
-      "checked_at": "2026-11-22T09:35:34+00:00",
+      "checked_at": "2026-11-24T01:53:35+00:00",
       "source_domain": "bafin.de",
       "country_code": "DE",
       "regulator": "BaFin"
@@ -64,7 +64,7 @@
     "IN:SEBI": {
       "status": "error",
       "error_type": "HTTPError",
-      "checked_at": "2026-11-22T09:35:34+00:00",
+      "checked_at": "2026-11-24T01:53:35+00:00",
       "source_domain": "sebi.gov.in",
       "country_code": "IN",
       "regulator": "SEBI"
@@ -72,7 +72,7 @@
     "FR:AMF": {
       "status": "error",
       "error_type": "HTTPError",
-      "checked_at": "2026-11-22T09:35:34+00:00",
+      "checked_at": "2026-11-24T01:53:35+00:00",
       "source_domain": "amf-france.org",
       "country_code": "FR",
       "regulator": "AMF"
@@ -80,15 +80,15 @@
     "ZA:FSCA": {
       "status": "empty",
       "accepted": 0,
-      "checked_at": "2026-11-22T09:35:46+00:00",
+      "checked_at": "2026-11-24T01:53:47+00:00",
       "source_domain": "fsca.co.za",
       "country_code": "ZA",
       "regulator": "FSCA"
     },
     "IN:RBI": {
-      "status": "error",
-      "error_type": "HTTPError",
-      "checked_at": "2026-11-22T09:35:45+00:00",
+      "status": "empty",
+      "accepted": 0,
+      "checked_at": "2026-11-24T01:53:49+00:00",
       "source_domain": "rbi.org.in",
       "country_code": "IN",
       "regulator": "RBI"
@@ -96,7 +96,7 @@
     "JP:FSA": {
       "status": "empty",
       "accepted": 0,
-      "checked_at": "2026-11-22T09:35:48+00:00",
+      "checked_at": "2026-11-24T01:53:49+00:00",
       "source_domain": "fsa.go.jp",
       "country_code": "JP",
       "regulator": "FSA"
