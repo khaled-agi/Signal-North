@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-24T22:49:07+00:00",
+  "generated_at": "2026-11-25T05:21:42+00:00",
   "methodology": "Institution names are canonically grouped using explicit aliases. Headline entries are conservative reporting groups, not distinct or independently verified fraud incidents; multiple publisher headlines are retained under each group. An institution mention is not proof of wrongdoing.",
   "source_counts": {
     "enforcement": 98,
     "reviewed_incidents": 6,
-    "unverified_report_groups": 3076,
+    "unverified_report_groups": 3084,
     "osfi_institution_rows": 345,
     "fintrac_index_notices": 90,
     "bank_disclosure_records": 15,
@@ -13,7 +13,7 @@
     "obsi_firm_records": 91,
     "ciro_confirmed_cases": 5,
     "amf_quebec_entity_rows": 945,
-    "us_fdic_active_entities": 4206,
+    "us_fdic_active_entities": 4204,
     "us_fdic_failure_events": 4117,
     "us_ncua_credit_union_entities": 4214,
     "us_occ_enforcement_actions": 2311,
@@ -46914,49 +46914,6 @@
           "city": "Hinton",
           "active": true,
           "fed_rssd": "320052",
-          "source_url": "https://banks.data.fdic.gov/bankfind-suite/",
-          "source_kind": "official_FDIC_active_institution_register"
-        },
-        "counts": {
-          "fintrac_public_notices": 0,
-          "fcac_index_notices": 0,
-          "bank_disclosure_years": 0,
-          "obsi_firm_years": 0,
-          "ciro_concluded_cases": 0,
-          "fdic_failures": 0,
-          "occ_institution_actions": 0,
-          "occ_individual_matters": 0
-        }
-      },
-      "evidence_count_shown": 0
-    },
-    {
-      "id": "us-fdic-4048",
-      "name": "SpiritBank (US · OK)",
-      "legal_name": "SpiritBank",
-      "jurisdiction": "US",
-      "country": "US",
-      "aliases": [
-        "SpiritBank",
-        "SpiritBank FDIC 4048"
-      ],
-      "counts": {
-        "enforcement": 0,
-        "incidents": 0,
-        "headlines": 0
-      },
-      "evidence": [],
-      "themes": [],
-      "annual_penalties_cad": {},
-      "recent_activity": null,
-      "official_data": {
-        "fdic": {
-          "cert": "4048",
-          "legal_name": "SpiritBank",
-          "state": "OK",
-          "city": "Tulsa",
-          "active": true,
-          "fed_rssd": "142955",
           "source_url": "https://banks.data.fdic.gov/bankfind-suite/",
           "source_kind": "official_FDIC_active_institution_register"
         },
@@ -121020,13 +120977,13 @@
     },
     {
       "id": "us-fdic-16910",
-      "name": "22nd State Banking Company (US · AL)",
-      "legal_name": "22nd State Banking Company",
+      "name": "22nd State Banking Company, National Association (US · AL)",
+      "legal_name": "22nd State Banking Company, National Association",
       "jurisdiction": "US",
       "country": "US",
       "aliases": [
-        "22nd State Banking Company",
-        "22nd State Banking Company FDIC 16910"
+        "22nd State Banking Company, National Association",
+        "22nd State Banking Company, National Association FDIC 16910"
       ],
       "counts": {
         "enforcement": 0,
@@ -121040,7 +120997,7 @@
       "official_data": {
         "fdic": {
           "cert": "16910",
-          "legal_name": "22nd State Banking Company",
+          "legal_name": "22nd State Banking Company, National Association",
           "state": "AL",
           "city": "Mobile",
           "active": true,
@@ -149797,49 +149754,6 @@
           "city": "Newark",
           "active": true,
           "fed_rssd": "304913",
-          "source_url": "https://banks.data.fdic.gov/bankfind-suite/",
-          "source_kind": "official_FDIC_active_institution_register"
-        },
-        "counts": {
-          "fintrac_public_notices": 0,
-          "fcac_index_notices": 0,
-          "bank_disclosure_years": 0,
-          "obsi_firm_years": 0,
-          "ciro_concluded_cases": 0,
-          "fdic_failures": 0,
-          "occ_institution_actions": 0,
-          "occ_individual_matters": 0
-        }
-      },
-      "evidence_count_shown": 0
-    },
-    {
-      "id": "us-fdic-26393",
-      "name": "The Pittsfield Co-operative Bank (US · MA)",
-      "legal_name": "The Pittsfield Co-operative Bank",
-      "jurisdiction": "US",
-      "country": "US",
-      "aliases": [
-        "The Pittsfield Co-operative Bank",
-        "The Pittsfield Co-operative Bank FDIC 26393"
-      ],
-      "counts": {
-        "enforcement": 0,
-        "incidents": 0,
-        "headlines": 0
-      },
-      "evidence": [],
-      "themes": [],
-      "annual_penalties_cad": {},
-      "recent_activity": null,
-      "official_data": {
-        "fdic": {
-          "cert": "26393",
-          "legal_name": "The Pittsfield Co-operative Bank",
-          "state": "MA",
-          "city": "Pittsfield",
-          "active": true,
-          "fed_rssd": "1000276",
           "source_url": "https://banks.data.fdic.gov/bankfind-suite/",
           "source_kind": "official_FDIC_active_institution_register"
         },
@@ -180703,13 +180617,13 @@
     },
     {
       "id": "us-fdic-34860",
-      "name": "New Republic Bank (US · NC)",
-      "legal_name": "New Republic Bank",
+      "name": "Claret Bank (US · NC)",
+      "legal_name": "Claret Bank",
       "jurisdiction": "US",
       "country": "US",
       "aliases": [
-        "New Republic Bank",
-        "New Republic Bank FDIC 34860"
+        "Claret Bank",
+        "Claret Bank FDIC 34860"
       ],
       "counts": {
         "enforcement": 0,
@@ -180723,7 +180637,7 @@
       "official_data": {
         "fdic": {
           "cert": "34860",
-          "legal_name": "New Republic Bank",
+          "legal_name": "Claret Bank",
           "state": "NC",
           "city": "Roanoke Rapids",
           "active": true,
@@ -202203,13 +202117,13 @@
     },
     {
       "id": "us-fdic-90140",
-      "name": "Adams Community Bank (US · MA)",
-      "legal_name": "Adams Community Bank",
+      "name": "Trailmark Bank (US · MA)",
+      "legal_name": "Trailmark Bank",
       "jurisdiction": "US",
       "country": "US",
       "aliases": [
-        "Adams Community Bank",
-        "Adams Community Bank FDIC 90140"
+        "Trailmark Bank",
+        "Trailmark Bank FDIC 90140"
       ],
       "counts": {
         "enforcement": 0,
@@ -202223,9 +202137,9 @@
       "official_data": {
         "fdic": {
           "cert": "90140",
-          "legal_name": "Adams Community Bank",
+          "legal_name": "Trailmark Bank",
           "state": "MA",
-          "city": "Adams",
+          "city": "Pittsfield",
           "active": true,
           "fed_rssd": "343903",
           "source_url": "https://banks.data.fdic.gov/bankfind-suite/",
