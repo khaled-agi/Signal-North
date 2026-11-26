@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-26T08:04:35+00:00",
+  "updated_at": "2026-11-26T18:21:08+00:00",
   "source": "CFPB Consumer Complaint Database API",
   "earliest_possible_month": "2011-12",
   "months": [
@@ -91,7 +91,7 @@
       "sample_basis": "Most recently indexed <=100 public complaints for month; NOT full issue/product counts",
       "source": "CFPB Consumer Complaint Database API",
       "source_url": "https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/",
-      "last_checked_at": "2026-11-16T23:49:37+00:00"
+      "last_checked_at": "2026-11-26T18:21:14+00:00"
     },
     {
       "month": "2012-01",
@@ -111,7 +111,7 @@
       "sample_basis": "Most recently indexed <=100 public complaints for month; NOT full issue/product counts",
       "source": "CFPB Consumer Complaint Database API",
       "source_url": "https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/",
-      "last_checked_at": "2026-11-16T23:49:36+00:00"
+      "last_checked_at": "2026-11-26T18:21:13+00:00"
     },
     {
       "month": "2012-02",
@@ -131,7 +131,7 @@
       "sample_basis": "Most recently indexed <=100 public complaints for month; NOT full issue/product counts",
       "source": "CFPB Consumer Complaint Database API",
       "source_url": "https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/",
-      "last_checked_at": "2026-11-16T23:49:34+00:00"
+      "last_checked_at": "2026-11-26T18:21:12+00:00"
     },
     {
       "month": "2012-03",
@@ -233,7 +233,7 @@
       "sample_basis": "Most recently indexed <=100 public complaints for month; NOT full issue/product counts",
       "source": "CFPB Consumer Complaint Database API",
       "source_url": "https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/",
-      "last_checked_at": "2026-11-16T23:49:34+00:00"
+      "last_checked_at": "2026-11-26T18:21:11+00:00"
     },
     {
       "month": "2012-04",
@@ -253,7 +253,7 @@
       "sample_basis": "Most recently indexed <=100 public complaints for month; NOT full issue/product counts",
       "source": "CFPB Consumer Complaint Database API",
       "source_url": "https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/",
-      "last_checked_at": "2026-11-16T23:49:33+00:00"
+      "last_checked_at": "2026-11-26T18:21:10+00:00"
     },
     {
       "month": "2012-05",
@@ -4189,6 +4189,26 @@
       "source": "CFPB Consumer Complaint Database API",
       "source_url": "https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/",
       "last_checked_at": "2026-11-17T07:30:56+00:00"
+    },
+    {
+      "month": "2026-10",
+      "date_received_min": "2026-10-01",
+      "date_received_max_exclusive": "2026-11-01",
+      "exact_published_complaint_total": null,
+      "monthly_total_status": "unverified_date_scope",
+      "api_returned_count": 100,
+      "api_returned_date_min": "2026-11-01",
+      "api_returned_date_max": "2026-11-01",
+      "api_hits_outside_requested_month": 100,
+      "scope_warning": "CFPB page date scope not verified; count withheld",
+      "sample_size": 0,
+      "page_limit": 100,
+      "sample_issue_breakdown": [],
+      "sample_product_breakdown": [],
+      "sample_basis": "Most recently indexed <=100 public complaints for month; NOT full issue/product counts",
+      "source": "CFPB Consumer Complaint Database API",
+      "source_url": "https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/",
+      "last_checked_at": "2026-11-26T18:21:15+00:00"
     }
   ],
   "methodology": "Only month totals with exact API counts are population counts. Each month's issue and product categories reflect up to 100 most recently indexed complaints and are nonrepresentative. Not all historical months have been downloaded."
