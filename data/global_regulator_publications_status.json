@@ -1,38 +1,38 @@
 {
-  "last_completed_at": "2026-11-27T01:54:21+00:00",
+  "last_completed_at": "2026-11-27T10:43:54+00:00",
   "regulators_configured": 30,
   "regulators_attempted": 30,
   "countries_with_publication_leads": 0,
   "leads_count": 0,
   "agencies": {
     "SG:MAS": {
-      "status": "empty",
-      "accepted": 0,
-      "checked_at": "2026-11-25T15:58:06+00:00",
+      "status": "error",
+      "error_type": "HTTPError",
+      "checked_at": "2026-11-27T10:43:45+00:00",
       "source_domain": "mas.gov.sg",
       "country_code": "SG",
       "regulator": "MAS"
     },
     "NZ:FMA": {
-      "status": "empty",
-      "accepted": 0,
-      "checked_at": "2026-11-25T15:58:10+00:00",
+      "status": "error",
+      "error_type": "HTTPError",
+      "checked_at": "2026-11-27T10:43:45+00:00",
       "source_domain": "fma.govt.nz",
       "country_code": "NZ",
       "regulator": "FMA"
     },
     "CH:FINMA": {
-      "status": "empty",
-      "accepted": 0,
-      "checked_at": "2026-11-25T15:58:11+00:00",
+      "status": "error",
+      "error_type": "HTTPError",
+      "checked_at": "2026-11-27T10:43:45+00:00",
       "source_domain": "finma.ch",
       "country_code": "CH",
       "regulator": "FINMA"
     },
     "IE:Central Bank of Ireland": {
-      "status": "empty",
-      "accepted": 0,
-      "checked_at": "2026-11-25T15:58:26+00:00",
+      "status": "error",
+      "error_type": "HTTPError",
+      "checked_at": "2026-11-27T10:43:53+00:00",
       "source_domain": "centralbank.ie",
       "country_code": "IE",
       "regulator": "Central Bank of Ireland"
@@ -40,15 +40,15 @@
     "AU:AUSTRAC": {
       "status": "error",
       "error_type": "HTTPError",
-      "checked_at": "2026-11-25T15:58:16+00:00",
+      "checked_at": "2026-11-27T10:43:54+00:00",
       "source_domain": "austrac.gov.au",
       "country_code": "AU",
       "regulator": "AUSTRAC"
     },
     "HK:HKMA": {
-      "status": "empty",
-      "accepted": 0,
-      "checked_at": "2026-11-25T15:58:23+00:00",
+      "status": "error",
+      "error_type": "HTTPError",
+      "checked_at": "2026-11-27T10:43:54+00:00",
       "source_domain": "hkma.gov.hk",
       "country_code": "HK",
       "regulator": "HKMA"
