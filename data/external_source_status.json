@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-11-26T18:21:55+00:00",
+  "started_at": "2026-11-27T01:55:11+00:00",
   "collectors": {
     "GDELT DOC": {
       "status": "scheduled_daily",
@@ -13,7 +13,7 @@
     "RCMP British Columbia": {
       "status": "ok",
       "scanned": 20,
-      "accepted": 1
+      "accepted": 0
     },
     "RCMP Alberta": {
       "status": "ok",
@@ -47,6 +47,6 @@
     }
   },
   "coverage_note": "RSS and GDELT coverage are neither exhaustive nor verified incident data.",
-  "completed_at": "2026-11-26T18:21:59+00:00",
-  "record_count": 408
+  "completed_at": "2026-11-27T01:55:15+00:00",
+  "record_count": 406
 }
