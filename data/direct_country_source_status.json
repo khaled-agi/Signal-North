@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-27T19:52:18+00:00",
+  "updated_at": "2026-11-28T02:34:57+00:00",
   "sources_configured": 5,
   "sources_attempted": 5,
   "sources_with_results": 2,
@@ -7,19 +7,19 @@
   "stored_leads": 4,
   "sources": {
     "gh-citi-business": {
-      "status": "empty",
+      "status": "error",
       "accepted": 0,
-      "checked_at": "2026-11-27T19:52:18+00:00",
-      "feed_http_status": 200,
+      "checked_at": "2026-11-28T02:34:57+00:00",
+      "error_type": "HTTPError",
       "source_kind": "newspaper",
       "country_code": "GH",
       "name": "Citi Newsroom Business"
     },
     "gh-citi-general": {
-      "status": "empty",
+      "status": "error",
       "accepted": 0,
-      "checked_at": "2026-11-27T19:52:18+00:00",
-      "feed_http_status": 200,
+      "checked_at": "2026-11-28T02:34:57+00:00",
+      "error_type": "HTTPError",
       "source_kind": "newspaper",
       "country_code": "GH",
       "name": "Citi Newsroom General"
@@ -27,7 +27,7 @@
     "ch-finma-news": {
       "status": "ok",
       "accepted": 1,
-      "checked_at": "2026-11-27T19:52:18+00:00",
+      "checked_at": "2026-11-28T02:34:57+00:00",
       "feed_http_status": 200,
       "source_kind": "regulator",
       "country_code": "CH",
@@ -36,7 +36,7 @@
     "ch-finma-sanctions": {
       "status": "ok",
       "accepted": 1,
-      "checked_at": "2026-11-27T19:52:18+00:00",
+      "checked_at": "2026-11-28T02:34:57+00:00",
       "feed_http_status": 200,
       "source_kind": "regulator",
       "country_code": "CH",
@@ -45,7 +45,7 @@
     "in-sebi": {
       "status": "error",
       "accepted": 0,
-      "checked_at": "2026-11-27T19:52:18+00:00",
+      "checked_at": "2026-11-28T02:34:57+00:00",
       "error_type": "ConnectionError",
       "source_kind": "regulator",
       "country_code": "IN",
